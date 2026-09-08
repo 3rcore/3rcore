@@ -94,6 +94,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     '/servicios/email-marketing', '/servicios/marketing-clinicas',
     '/servicios/posicionamiento-ia', '/servicios/marketing-abogados',
     '/servicios/marketing-inmobiliarias', '/servicios/marketing-ecommerce',
+    // 8-set-2026: estas tres se crearon el 2-set con `noindex: locale !== 'es'`
+    // en su layout, pero nadie las añadió aquí, así que el sitemap listaba
+    // seis URLs (3 verticales × /en y /us) marcadas noindex. Pedirle a Google
+    // que rastree lo que a la vez se le prohíbe indexar gasta rastreo y manda
+    // una señal contradictoria.
+    '/servicios/marketing-clinicas-dentales',
+    '/servicios/marketing-clinicas-esteticas',
+    '/servicios/marketing-veterinarias',
   ]
 
   // 28-ago-2026: /us recupera /blogs. Antes se excluía porque servía los mismos

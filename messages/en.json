@@ -342,7 +342,7 @@
       },
       "q6": {
         "question": "Where are you located and what are your business hours?",
-        "answer": "Our main office is at Alameda de la Paz 187, first floor, Urb. El Remanso, La Molina, Lima 15024, Peru. We are open Monday to Friday from 9 a.m. to 6 p.m., serving clients in both Peru and the USA."
+        "answer": "Our studio is at Alameda de la Paz 187, first floor, Urb. El Remanso, La Molina, Lima 15024, Peru, and U.S. clients contract through our U.S. subsidiary. We are open Monday to Friday, 9 a.m. to 6 p.m. — Eastern Time or one hour behind depending on daylight saving — so the U.S. business day and ours are the same day."
       }
     },
     "contact": {
@@ -647,9 +647,9 @@
     "spanishseo": "Spanish SEO services for U.S. businesses: native keyword research, hreflang repair and Spanish pages from $500 per month",
     "posicionamientoia": "Generative engine optimization for U.S. brands: get cited by ChatGPT, Perplexity and Copilot",
     "abogados": "Marketing digital para estudios de abogados",
-    "clinicasdentales": "Agencia de marketing digital para clínicas dentales en Lima, Perú",
-    "clinicasesteticas": "Agencia de marketing digital para clínicas estéticas en Lima, Perú",
-    "veterinarias": "Agencia de marketing digital para veterinarias en Lima, Perú"
+    "clinicasdentales": "Digital marketing agency for dental clinics and dental practices in the United States",
+    "clinicasesteticas": "Digital marketing agency for aesthetic clinics and medspas in the United States",
+    "veterinarias": "Digital marketing agency for veterinary clinics and animal hospitals in the United States"
   },
   "HomeFAQ": {
     "badge": "Frequently Asked Questions",
@@ -660,11 +660,11 @@
         "answer": "We design websites, manage your social media, run Google Ads campaigns, position your brand on Google through SEO and develop your visual identity (branding). We work as your external marketing team: strategy + execution + monthly data-driven reports."
       },
       "q2": {
-        "question": "Do you serve clients outside Lima or only in Peru?",
-        "answer": "We serve clients across Peru and the United States. We work remotely with video meetings and online reports. If your brand is outside Lima, no problem: 60% of our projects run 100% remotely."
+        "question": "Do you work with U.S. clients remotely?",
+        "answer": "Yes. Our team is in Lima and works U.S. business hours, and U.S. clients contract through our U.S. subsidiary. Everything runs remotely with video meetings and online reports: 60% of our projects are 100% remote."
       },
       "q3": {
-        "question": "How much does it cost to hire a digital marketing agency in Lima?",
+        "question": "How much does it cost to hire a digital marketing agency?",
         "answer": "It depends on the service and scope. As reference for US clients: our SEO plan starts at $500/month; Google Ads campaigns from $800/month + ad spend; social media management from $800/month; websites from $850. In our first meeting we deliver a tailored quote."
       },
       "q4": {
@@ -680,7 +680,7 @@
         "answer": "Both. If you already have branding, we respect it and build on top. If you start from scratch, our Branding team creates your logo, visual identity, brand book and every piece needed for your business to compete strongly online."
       },
       "q7": {
-        "question": "How do I choose the best digital marketing agency in Lima?",
+        "question": "How do I choose the best digital marketing agency for my business?",
         "answer": "Five filters that actually matter: 1) verifiable portfolio of projects similar to yours, 2) monthly reports with real metrics (not vanity metrics), 3) signed NDA and account ownership (your Google Ads, GA4 and social accounts stay yours), 4) a director joins the conversation, not just a junior account manager, and 5) real Google reviews and published case studies. At 3R Core we tick all 5."
       },
       "q8": {
@@ -688,8 +688,8 @@
         "answer": "For small, very specific projects a freelancer can work. For a full strategy (brand + web + social + ads + SEO) an agency gives you coordination, a multidisciplinary team, continuity if someone leaves and a real process. Quick math: hiring 4 freelancers (designer, dev, community, ads specialist) usually costs the same or more than an agency, with zero coordination between them."
       },
       "q9": {
-        "question": "How much should I invest monthly in digital marketing in Peru?",
-        "answer": "As a 2026 Lima reference: startups $750–1,400/month (covers social + basic ads), SMBs $1,500–3,600 (integrated strategy with social, ads, SEO and web improvements), mid-size companies $3,600–9,000 (full marketing with content production and CRO). What matters is not the budget itself but that ROI is positive by month 3."
+        "question": "How much should I invest monthly in digital marketing?",
+        "answer": "As a 2026 reference: startups $750–1,400/month (covers social + basic ads), SMBs $1,500–3,600 (integrated strategy with social, ads, SEO and web improvements), mid-size companies $3,600–9,000 (full marketing with content production and CRO). What matters is not the budget itself but that ROI is positive by month 3."
       },
       "q10": {
         "question": "What happens to my Google Ads, Meta Ads and Analytics accounts if I leave the agency?",
@@ -698,11 +698,11 @@
     }
   },
   "HomeSEO": {
-    "seoTitle": "Digital marketing agency in Lima with 360° vision",
-    "p1": "3R Core is a digital marketing agency based in Lima, Peru, specialized in giving your brand everything it needs to grow online: a well-designed website, social media that communicates, profitable Google Ads campaigns and SEO positioning that makes you appear when your customers search for what you offer.",
+    "seoTitle": "Digital marketing agency for U.S. brands with 360° vision",
+    "p1": "3R Core is a digital marketing agency for U.S. brands, with our team based in Lima, Peru, specialized in giving your brand everything it needs to grow online: a well-designed website, social media that communicates, profitable Google Ads campaigns and SEO positioning that makes you appear when your customers search for what you offer.",
     "p2": "Unlike traditional agencies, we work with a multidisciplinary team where every client has direct contact with the directors. This means faster decisions, sharper strategies and clear monthly reports with real metrics: clicks, conversions, cost per lead, ROI and Google rankings.",
-    "p3": "Our services cover the full digital marketing value chain in Peru: professional web design and development (corporate sites, landing pages, e-commerce on Shopify and WooCommerce), social media management with editorial grid and post design, Google Ads SEM campaigns and organic SEO positioning so your brand dominates search results.",
-    "p4": "If you are looking for a digital agency in Lima that understands both Peruvian business tradition and the new rules of digital marketing, let's talk. We invite you to a free initial meeting where we listen to your business, review your goals and craft a tailored proposal.",
+    "p3": "Our services cover the full digital marketing value chain: professional web design and development (corporate sites, landing pages, e-commerce on Shopify and WooCommerce), social media management with editorial grid and post design, Google Ads SEM campaigns and organic SEO positioning so your brand dominates search results.",
+    "p4": "If you are looking for a digital agency that works your hours and understands the new rules of digital marketing, let's talk. We invite you to a free initial meeting where we listen to your business, review your goals and craft a tailored proposal.",
     "relatedTitle": "Explore our services"
   },
   "BrandingFAQ": {
@@ -718,7 +718,7 @@
         "answer": "We deliver a full branding project in 7 business days, with a clear milestone timeline: discovery, proposals, refinement and final delivery with all editable files. If the scope grows (corporate rebranding, extensive manuals, special applications) we agree on a longer timeline before kickoff."
       },
       "q3": {
-        "question": "How much does designing my brand identity in Lima cost?",
+        "question": "How much does designing my brand identity cost?",
         "answer": "Branding projects at 3R Core start at $500 USD for US clients and scale according to corporate scope. We deliver a formal quote with detailed deliverables after an initial discovery session."
       },
       "q4": {
@@ -734,7 +734,7 @@
         "answer": "Yes, we do rebranding and brand refresh. We audit the current identity, preserve valuable assets and modernize what no longer works. It's a more careful intervention because we must protect existing brand recognition."
       },
       "q7": {
-        "question": "How do I choose a branding agency in Lima?",
+        "question": "How do I choose a branding agency?",
         "answer": "Always ask for 3 things before signing: 1) portfolio of projects in industries similar to yours, 2) written deliverables list (how many files, what formats, brand book length), and 3) timeline with clear milestones. A serious agency proposes a discovery session BEFORE quoting; a sloppy one throws a price without asking anything about your business."
       },
       "q8": {
@@ -752,8 +752,8 @@
     }
   },
   "BrandingSEO": {
-    "seoTitle": "Branding Agency in Lima: visual identity with purpose",
-    "p1": "Corporate branding is much more than designing a beautiful logo: it is building the visual and narrative system that turns your brand into something memorable, recognizable and different from the competition. At 3R Core we design complete brand identities for companies and startups in Lima, Peru and the United States.",
+    "seoTitle": "Branding Agency for U.S. Brands: visual identity with purpose",
+    "p1": "Corporate branding is much more than designing a beautiful logo: it is building the visual and narrative system that turns your brand into something memorable, recognizable and different from the competition. At 3R Core we design complete brand identities for companies and startups in the United States.",
     "p2": "Our branding process starts with a deep discovery session where we listen to your story, value proposition and ideal customer. From there we build the strategic foundation and design every visual piece: logo, color palette, typography, iconography, stationery and digital applications.",
     "p3": "Well-executed branding directly impacts your digital marketing: it makes social media content creation easier, improves your website's visual coherence, makes your Google Ads campaigns more effective and projects professionalism at every customer touchpoint.",
     "p4": "If your brand is already in market and needs a refresh, we also do rebranding while preserving accumulated brand equity. Let's talk: the first meeting is free and from it we build the brief to quote your project.",
@@ -761,10 +761,10 @@
   },
   "WebDevFAQ": {
     "badge": "Frequently Asked Questions",
-    "title": "Web design & development in Lima — What you should know",
+    "title": "Web design & development for U.S. brands — What you should know",
     "faqs": {
       "q1": {
-        "question": "How much does a professional website cost in Peru?",
+        "question": "How much does a professional website cost for a small business?",
         "answer": "A professional landing page starts at $850 USD. A corporate site with 5–8 sections from $1,200. An e-commerce on Shopify or WooCommerce from $1,750 depending on catalog, payment gateways and integrations. Every quote is tailored after an initial meeting."
       },
       "q2": {
@@ -790,7 +790,7 @@
     }
   },
   "WebDevSEO": {
-    "seoTitle": "Web design and development for U.S. brands, built in Lima",
+    "seoTitle": "Web design and development for U.S. brands",
     "p1": "A website is the only marketing asset you own rather than rent. Advertising stops existing the moment you stop paying; the site keeps working. That is why we build from what it has to produce — leads, orders, calls — instead of from how many sections it should have.",
     "p2": "Most sites underperform for three reasons that have nothing to do with design: they load slowly on a phone, they were never instrumented so nobody knows which page produces revenue, and the copy describes the company instead of answering the question the visitor arrived with. A redesign that ignores those changes the look and not the result.",
     "p3": "Everything we build ships instrumented. Analytics, tag management and conversion events are configured before launch and live in your accounts, so the first month of traffic already teaches you something. Sites handed over without tracking waste their most informative period, and that period does not come back.",
@@ -841,13 +841,13 @@
       },
       "q10": {
         "question": "When does an agency make sense vs managing Google Ads in-house?",
-        "answer": "Agency: when you spend less than $4,500/month, when you don't have a certified specialist in-house, or when you run multiple campaigns (Search + Performance Max + Shopping + YouTube). In-house: when you spend more than $9,000/month and operations justify a dedicated full-time Performance Manager. Most SMBs in Peru fall in the first case."
+        "answer": "Agency: when you spend less than $4,500/month, when you don't have a certified specialist in-house, or when you run multiple campaigns (Search + Performance Max + Shopping + YouTube). In-house: when you spend more than $9,000/month and operations justify a dedicated full-time Performance Manager. Most SMBs fall in the first case."
       }
     }
   },
   "GoogleAdsSEO": {
-    "seoTitle": "Google Ads Agency in Lima: SEM campaigns with measurable ROI",
-    "p1": "Google Ads (formerly Google AdWords) is the fastest way to appear on Google when a customer searches for exactly what you sell. At 3R Core we design, launch and optimize SEM campaigns in Lima, Peru for companies that need to generate leads or sales in a predictable, measurable way.",
+    "seoTitle": "Google Ads Agency for U.S. Brands: SEM campaigns with measurable ROI",
+    "p1": "Google Ads (formerly Google AdWords) is the fastest way to appear on Google when a customer searches for exactly what you sell. At 3R Core we design, launch and optimize SEM campaigns for U.S. companies that need to generate leads or sales in a predictable, measurable way.",
     "p2": "We work with accounts of all sizes: from startups with $400 monthly budget to mid-sized companies with five-figure investments. What we never compromise on is rigor: keyword research, ad copy, geo-targeting, exclusions, aligned landing pages and properly installed conversion tracking.",
     "p3": "We manage the full Google Ads ecosystem: Search Ads (best for capturing active demand), Performance Max (Google's AI-powered bet), YouTube Video Ads, Display, Shopping for e-commerce and Remarketing to recover visitors who left without buying.",
     "p4": "Each client receives a monthly dashboard with clicks, cost per lead, conversions and ROAS. If your current campaign spends without converting, we run a free audit: we tell you exactly where your investment is leaking and prepare the proposal to take control.",
@@ -858,7 +858,7 @@
     "title": "Social media management that moves the needle",
     "faqs": {
       "q1": {
-        "question": "How much does an agency charge for social media management in Lima?",
+        "question": "How much does an agency charge for social media management?",
         "answer": "Social media management plans at 3R Core start at $800/month for US clients (TikTok + Instagram + Facebook + LinkedIn with 8–12 pieces) and scale according to frequency, platforms and audiovisual production. We deliver a detailed proposal in our first meeting."
       },
       "q2": {
@@ -890,7 +890,7 @@
         "answer": "At 3R Core we work 8–12 pieces per month on each network we manage: TikTok, LinkedIn, Instagram and Facebook. It's the cadence that combines consistency, quality and results without saturating your audience. Frequency matters less than consistency: 8–12 pieces/month for 12 months beats 30/month abandoned by month four."
       },
       "q9": {
-        "question": "How do I choose a social media agency in Lima?",
+        "question": "How do I choose a social media agency?",
         "answer": "Filter by: 1) check THEIR own social accounts (if abandoned, bad sign), 2) ask to see a client's monthly editorial calendar (with confidential data redacted), 3) ask how many clients each community manager handles (more than 12 = diluted attention), and 4) confirm they deliver reports with real metrics (reach, engagement, conversions), not just screenshots."
       },
       "q10": {
@@ -900,8 +900,8 @@
     }
   },
   "SocialMediaSEO": {
-    "seoTitle": "Social Media Management in Lima: community, content and conversion",
-    "p1": "Social media is not optional: it's the first place where your potential customer researches you before contacting you. At 3R Core we provide professional social media management in Lima, Peru, with strategy, design, copy and monthly reports so your brand doesn't just post, but grows.",
+    "seoTitle": "Social Media Management for U.S. Brands: community, content and conversion",
+    "p1": "Social media is not optional: it's the first place where your potential customer researches you before contacting you. At 3R Core we provide professional social media management for U.S. brands, with strategy, design, copy and monthly reports so your brand doesn't just post, but grows.",
     "p2": "Our community management service covers Instagram, Facebook, TikTok, LinkedIn, YouTube and X. We design the monthly editorial grid, produce posts (graphics, Reels, carousels), write the copy with brand tone, schedule publications and reply to direct messages and comments.",
     "p3": "Unlike a freelancer, we work with a team: strategist, graphic designer, video editor, copywriter and community manager. Each client has a content plan adapted to their industry: a gastronomy brand doesn't communicate the same way as a dental clinic or a construction company.",
     "p4": "If your brand already has social media but growth has stagnated, we run a free audit: we review your metrics, identify what kind of content works, what's missing and build a clear plan to grow engagement, reach and conversions. Request it by reaching out.",
@@ -958,15 +958,15 @@
   "MetaAdsLanding": {
     "hero": {
       "badge": "Meta Ads · Facebook & Instagram",
-      "title": "A Meta Ads agency in Lima that turns followers into customers",
+      "title": "A Meta Ads agency that turns followers into customers",
       "subtitle": "Facebook and Instagram campaigns with advanced targeting, retargeting and creatives built to sell. We optimize for ROAS, not likes.",
       "cta": "Request a proposal"
     },
     "intro": {
       "title": "Facebook and Instagram advertising focused on sales",
-      "p1": "At 3R Core we manage Meta Ads campaigns for companies in Lima and across Peru that want to stop \"boosting posts\" and start buying results. Facebook and Instagram are still where Peruvian consumers spend most of their time, and with Meta Ads Manager we can put your offer in front of the right audience, at the right moment, with the right message.",
+      "p1": "At 3R Core we manage Meta Ads campaigns for U.S. companies that want to stop “boosting posts” and start buying results. Facebook and Instagram are still where your customers spend most of their time, and with Meta Ads Manager we can put your offer in front of the right audience, at the right moment, with the right message.",
       "p2": "Every account starts with a full-funnel structure: prospecting campaigns to reach new audiences, retargeting to re-engage people who visited your site or interacted with your profile, and conversion or messaging campaigns that drive direct sales over WhatsApp. We set up the Meta Pixel and the Conversions API to measure every result even with iOS limitations.",
-      "p3": "We work with local businesses, e-commerce, real estate, clinics and consumer brands. Whether you sell from a catalog, generate leads or close on WhatsApp, we adapt the strategy to your buying cycle and a realistic ad budget for the Peruvian market."
+      "p3": "We work with local businesses, e-commerce, real estate, clinics and consumer brands. Whether you sell from a catalog, generate leads or close on WhatsApp, we adapt the strategy to your buying cycle and a realistic ad budget for your market."
     },
     "benefits": {
       "badge": "What's included",
@@ -982,7 +982,7 @@
         },
         {
           "title": "Scroll-stopping creatives",
-          "description": "Ad design in reel, carousel, image and story formats, with copy written for the Peruvian consumer."
+          "description": "Ad design in reel, carousel, image and story formats, with copy written for your audience."
         },
         {
           "title": "Pixel and Conversions API",
@@ -1030,7 +1030,7 @@
     "title": "Frequently asked questions",
     "faqs": {
       "q1": {
-        "question": "How much should I invest in Meta Ads to start in Peru?",
+        "question": "How much should I invest in Meta Ads to start?",
         "answer": "We recommend a minimum ad budget of about $420/month for actionable data, plus a management fee from $420. In very competitive niches it's better to start with $700+ in ad spend to exit the algorithm's learning phase faster."
       },
       "q2": {
@@ -1039,7 +1039,7 @@
       },
       "q3": {
         "question": "Does Meta Ads work for selling on WhatsApp?",
-        "answer": "Yes. Click-to-WhatsApp campaigns send users straight to your chat and are very effective for services and consultative sales in Peru. We measure cost per conversation started and per sale."
+        "answer": "Yes. Click-to-WhatsApp campaigns send users straight to your chat and are very effective for services and consultative sales. We measure cost per conversation started and per sale."
       },
       "q4": {
         "question": "Do I need a website or is my Instagram enough?",
@@ -1055,7 +1055,7 @@
       },
       "q7": {
         "question": "Do you design the creatives?",
-        "answer": "Yes, we produce image, carousel, reel and story ads with copy written for the Peruvian consumer. We can also work with your material or with UGC creators."
+        "answer": "Yes, we produce image, carousel, reel and story ads with copy written for your audience. We can also work with your material or with UGC creators."
       },
       "q8": {
         "question": "When will I see results?",
@@ -1064,25 +1064,25 @@
     }
   },
   "MetaAdsSEO": {
-    "seoTitle": "Meta Ads agency in Lima focused on results",
-    "p1": "As a Meta Ads agency in Lima, at 3R Core we understand that Facebook and Instagram hold much of the Peruvian consumer's attention. That's why we build campaigns that chase sales, leads and WhatsApp conversations rather than likes, with a funnel structure that separates prospecting new customers from retargeting people who already know you.",
+    "seoTitle": "Meta Ads agency for U.S. brands focused on results",
+    "p1": "As a Meta Ads agency, at 3R Core we understand that Facebook and Instagram hold much of your customer's attention. That's why we build campaigns that chase sales, leads and conversations rather than likes, with a funnel structure that separates prospecting new customers from retargeting people who already know you.",
     "p2": "Our methodology starts with solid measurement: we install and verify the Meta Pixel alongside the Conversions API to recover the data that iOS privacy restrictions tend to hide. With that foundation, the algorithm optimizes better and you get reliable ROAS reports month after month.",
-    "p3": "Creative is the other pillar. We design reel, carousel and story ads with hooks built for the Peruvian user's scroll, and we test different sales angles until we find those that lower cost per result. We blend brand content with UGC creator material when the niche allows.",
+    "p3": "Creative is the other pillar. We design reel, carousel and story ads with hooks built for the way your audience scrolls, and we test different sales angles until we find those that lower cost per result. We blend brand content with UGC creator material when the niche allows.",
     "p4": "We run Meta Ads integrated with Google Ads and TikTok Ads so budget isn't cannibalized and every result is attributed correctly. If your business lives on WhatsApp, we prioritize messaging campaigns; if you sell online, we activate dynamic catalogs and cart retargeting.",
     "p5": "Every account has an owner who reviews performance several times a week, refreshes creatives and adjusts audiences and budgets. We don't leave campaigns on autopilot: constant optimization is what separates a profitable investment from an expense.",
-    "p6": "If you're looking for a Meta Ads agency in Lima that talks business and not just vanity metrics, at 3R Core we support you from strategy to scaling, with full transparency on where your budget goes and what return it generates.",
+    "p6": "If you're looking for a Meta Ads agency that talks business and not just vanity metrics, at 3R Core we support you from strategy to scaling, with full transparency on where your budget goes and what return it generates.",
     "relatedTitle": "Related services"
   },
   "TikTokAdsLanding": {
     "hero": {
       "badge": "TikTok Ads · Video that sells",
-      "title": "A TikTok Ads agency in Lima for brands that want to grow fast",
-      "subtitle": "Native video, Spark Ads and UGC creator campaigns that reach the hardest Peruvian audience to catch: the one that no longer watches TV.",
+      "title": "A TikTok Ads agency for brands that want to grow fast",
+      "subtitle": "Native video, Spark Ads and UGC creator campaigns that reach the hardest audience to catch: the one that no longer watches TV.",
       "cta": "I want to run TikTok Ads"
     },
     "intro": {
-      "title": "TikTok advertising built for the Peruvian consumer",
-      "p1": "TikTok is no longer just \"the dancing app\" — it has become a key discovery and shopping channel in Peru. At 3R Core we design and manage TikTok Ads campaigns that use the vertical video format to reach young and adult audiences who barely consume traditional media anymore.",
+      "title": "TikTok advertising built for your customer",
+      "p1": "TikTok is no longer just “the dancing app” — it has become a key discovery and shopping channel. At 3R Core we design and manage TikTok Ads campaigns that use the vertical video format to reach young and adult audiences who barely consume traditional media anymore.",
       "p2": "We don't upload a Facebook ad to TikTok and hope it works. We create content that feels native to the platform: hooks in the first three seconds, trending sound, captions and a script built to sell without looking like a commercial. We use Spark Ads to amplify organic posts and UGC content from real creators that builds trust.",
       "p3": "We set up the TikTok Pixel and conversion events to measure sales, leads and messages, and integrate the campaigns into your funnel alongside Meta Ads and Google Ads so budget isn't cannibalized and every result is attributed correctly."
     },
@@ -1100,7 +1100,7 @@
         },
         {
           "title": "UGC creator content",
-          "description": "We connect with Peruvian creators to generate authentic content that converts better than brand ads."
+          "description": "We work with UGC creators to generate authentic content that converts better than brand ads."
         },
         {
           "title": "Interest targeting",
@@ -1148,8 +1148,8 @@
     "title": "Frequently asked questions",
     "faqs": {
       "q1": {
-        "question": "Is TikTok Ads right for my business in Peru?",
-        "answer": "TikTok works very well for consumer brands, e-commerce, food, fashion, education and services that can be told in video. If your audience is 18 to 45 and consumes vertical video, it's a high-potential channel with still-low competition in Peru."
+        "question": "Is TikTok Ads right for my business?",
+        "answer": "TikTok works very well for consumer brands, e-commerce, food, fashion, education and services that can be told in video. If your audience is 18 to 45 and consumes vertical video, it's a high-potential channel."
       },
       "q2": {
         "question": "How much does it cost to start on TikTok Ads?",
@@ -1157,7 +1157,7 @@
       },
       "q3": {
         "question": "Do you film the videos?",
-        "answer": "We can script and direct production, work with Peruvian UGC creators or adapt material you already have. What matters is that the video feels native to TikTok, not a recycled commercial."
+        "answer": "We can script and direct production, work with UGC creators or adapt material you already have. What matters is that the video feels native to TikTok, not a recycled commercial."
       },
       "q4": {
         "question": "What are Spark Ads?",
@@ -1182,8 +1182,8 @@
     }
   },
   "TikTokAdsSEO": {
-    "seoTitle": "TikTok Ads agency in Lima specialized in video",
-    "p1": "At 3R Core we're a TikTok Ads agency in Lima that understands the platform's logic: here the most polished ad doesn't win — the video that hooks in the first three seconds and feels part of the feed does. We design native video campaigns that reach the Peruvian audience that barely consumes traditional media anymore.",
+    "seoTitle": "TikTok Ads agency specialized in video",
+    "p1": "At 3R Core we're a TikTok Ads agency that understands the platform's logic: here the most polished ad doesn't win — the video that hooks in the first three seconds and feels part of the feed does. We design native video campaigns that reach the audience that barely consumes traditional media anymore.",
     "p2": "We use Spark Ads to amplify organic posts and UGC content from real creators, which builds more trust than a commercial. We script hooks, leverage trending sounds and test several angles until we find the one that converts at the lowest cost.",
     "p3": "Measurement is non-negotiable: we install the TikTok Pixel and configure conversion events to track real sales, leads and messages, not just views. That way we know which video drives business and can scale it with confidence.",
     "p4": "TikTok saturates creatives fast, so we keep a steady production rhythm and refresh videos every one or two weeks. This discipline avoids ad fatigue and sustains performance over time.",
@@ -1194,7 +1194,7 @@
   "PerformanceLanding": {
     "hero": {
       "badge": "Performance Marketing · Data-driven",
-      "title": "Performance marketing in Lima measured in revenue, not impressions",
+      "title": "Performance marketing measured in revenue, not impressions",
       "subtitle": "Coordinated multichannel acquisition across Google, Meta and TikTok, with end-to-end measurement and constant CAC/ROAS optimization.",
       "cta": "Scale my acquisition"
     },
@@ -1202,7 +1202,7 @@
       "title": "Customer acquisition focused on return",
       "p1": "Performance marketing is the discipline of investing in digital advertising only when we can measure, attribute and improve every dollar spent. At 3R Core we don't run channels in isolation: we coordinate Google Ads, Meta Ads and TikTok Ads as a single acquisition system, keeping them from competing and correctly attributing where your sales and leads come from.",
       "p2": "It all starts with measurement. We set up Google Analytics 4, Google Tag Manager, each platform's pixels and offline conversion tracking (for example, WhatsApp closings or calls) to get a real picture of cost of acquisition (CAC), return on ad spend (ROAS) and, when the business allows, customer lifetime value (LTV).",
-      "p3": "With that data we make decisions: we reallocate budget to the channel that performs, improve landing pages with CRO so more visits convert, and build a sustainable growth model. We work with e-commerce, B2B companies and service businesses in Lima and the provinces that want to grow without burning budget."
+      "p3": "With that data we make decisions: we reallocate budget to the channel that performs, improve landing pages with CRO so more visits convert, and build a sustainable growth model. We work with e-commerce, B2B companies and service businesses that want to grow without burning budget."
     },
     "benefits": {
       "badge": "What's included",
@@ -1300,19 +1300,19 @@
     }
   },
   "PerformanceSEO": {
-    "seoTitle": "Performance marketing in Lima focused on return",
-    "p1": "Performance marketing is the natural evolution of digital advertising: instead of investing blindly, every dollar is measured, attributed and optimized. At 3R Core we apply this discipline for companies in Lima and Peru that want to grow predictably and not depend on the luck of a one-off campaign.",
+    "seoTitle": "Performance marketing for U.S. brands focused on return",
+    "p1": "Performance marketing is the natural evolution of digital advertising: instead of investing blindly, every dollar is measured, attributed and optimized. At 3R Core we apply this discipline for U.S. companies that want to grow predictably and not depend on the luck of a one-off campaign.",
     "p2": "The first thing we solve is measurement. Without a correct setup of Google Analytics 4, Google Tag Manager, each platform's pixels and offline conversion tracking, any optimization is guesswork. That's why we dedicate the kickoff to building the data infrastructure that supports everything else.",
     "p3": "With measurement in place, we coordinate Google Ads, Meta Ads and TikTok Ads as a single acquisition system. Each channel plays a role within the funnel and budget is assigned by real performance, not trends. We manage by cost of acquisition (CAC) and return on ad spend (ROAS).",
     "p4": "Profitable advertising also depends on your site converting. That's why CRO is part of the service: we analyze landing pages, the form, speed and trust signals so more visitors become customers and cost of acquisition drops.",
     "p5": "We leverage your first-party data to build quality audiences and do smart retargeting, especially relevant in an increasingly privacy-focused context. Every decision is made with data and documented in clear reports.",
-    "p6": "If you're looking for performance marketing in Lima that speaks the language of business — CAC, ROAS and sustainable growth — at 3R Core we build a measurable, transparent and scalable acquisition engine with you.",
+    "p6": "If you're looking for performance marketing that speaks the language of business — CAC, ROAS and sustainable growth — at 3R Core we build a measurable, transparent and scalable acquisition engine with you.",
     "relatedTitle": "Related services"
   },
   "EmailMarketingLanding": {
     "hero": {
       "badge": "Email Marketing · Automation",
-      "title": "Email marketing and automation in Lima that sells while you sleep",
+      "title": "Email marketing and automation that sells while you sleep",
       "subtitle": "Automated flows, newsletters and segmentation that turn your contact base into the most profitable channel in your business.",
       "cta": "Activate my email marketing"
     },
@@ -1320,7 +1320,7 @@
       "title": "The highest-ROI channel in digital marketing",
       "p1": "Year after year, email marketing remains one of the highest-return channels per dollar invested. The difference is that it's no longer about blasting one email to your whole list: at 3R Core we build automation systems that send the right message to the right person based on what they did (or didn't do) on your site or store.",
       "p2": "We design key automated flows: welcome for new subscribers, abandoned cart recovery, post-purchase to drive repeat sales and reviews, and reactivation of inactive customers. Each flow is written, designed and segmented for your brand and integrated with platforms like Mailchimp, Klaviyo, Brevo or the CRM you already use.",
-      "p3": "We also manage your one-off campaigns and newsletters, taking care of deliverability (so your emails reach the inbox and not spam), segmentation and compliance with Peru's data protection rules. The goal: turn your database from a dormant list into an asset that sells on its own."
+      "p3": "We also manage your one-off campaigns and newsletters, taking care of deliverability (so your emails reach the inbox and not spam), segmentation and compliance with U.S. email rules. The goal: turn your database from a dormant list into an asset that sells on its own."
     },
     "benefits": {
       "badge": "What's included",
@@ -1404,8 +1404,8 @@
         "answer": "No. A small but well-segmented list with active flows outperforms a huge, dormant one. We also help you grow the base with forms and capture."
       },
       "q6": {
-        "question": "Does this comply with data protection in Peru?",
-        "answer": "Yes. We work with consent and an unsubscribe option in every email, aligned with Peru's Personal Data Protection Law and international best practices."
+        "question": "Does this comply with U.S. email regulations?",
+        "answer": "Yes. We work with consent and an unsubscribe option in every email, aligned with the CAN-SPAM Act and international best practices."
       },
       "q7": {
         "question": "Do you write and design the emails?",
@@ -1418,26 +1418,26 @@
     }
   },
   "EmailMarketingSEO": {
-    "seoTitle": "Email marketing and automation agency in Lima",
-    "p1": "Email marketing is, year after year, one of the most profitable channels in digital marketing, yet many Peruvian companies waste it by sending mass emails with no strategy. At 3R Core we turn your contact base into an asset that sells, through automation and smart segmentation.",
+    "seoTitle": "Email marketing and automation agency for U.S. brands",
+    "p1": "Email marketing is, year after year, one of the most profitable channels in digital marketing, yet many companies waste it by sending mass emails with no strategy. At 3R Core we turn your contact base into an asset that sells, through automation and smart segmentation.",
     "p2": "Instead of the classic single blast to the whole list, we build flows that react to user behavior: a welcome email when someone subscribes, a recovery sequence when they abandon the cart, post-purchase messages to drive repeat sales and reviews, and reactivation campaigns for dormant customers.",
     "p3": "We treat deliverability as a priority. We set up domain authentication (SPF, DKIM and DMARC) and apply sending best practices so your emails reach the primary inbox and not the spam folder, protecting your brand's reputation.",
     "p4": "We integrate the email platform (Klaviyo, Mailchimp, Brevo or another) with your site or store to sync data and personalize messages based on what each contact did. Behavior- and interest-based segmentation is what makes an email feel relevant, not intrusive.",
-    "p5": "Everything runs in compliance with Peru's Personal Data Protection Law: clear consent and an unsubscribe option in every send. Profitable marketing is also responsible marketing.",
+    "p5": "Everything runs in compliance with the CAN-SPAM Act: clear consent and an unsubscribe option in every send. Profitable marketing is also responsible marketing.",
     "p6": "If you want your database to stop being a dormant list and start generating sales automatically, at 3R Core we design, run and optimize your email marketing with reports on opens, clicks and attributed revenue.",
     "relatedTitle": "Related services"
   },
   "MarketingClinicasLanding": {
     "hero": {
       "badge": "Healthcare · Patient acquisition",
-      "title": "Digital marketing for clinics and medical offices in Lima",
+      "title": "Digital marketing for clinics and medical practices",
       "subtitle": "We bring real patients to your clinic, practice or specialty with Google Ads, local SEO and campaigns that respect healthcare advertising rules.",
       "cta": "I want more patients"
     },
     "intro": {
       "title": "More booked appointments, not just more followers",
-      "p1": "Peruvian patients research on Google and social media before choosing where to get care. At 3R Core we help clinics, medical offices and healthcare professionals in Lima and the provinces show up at that decision moment, with a strategy that prioritizes booked appointments over vanity metrics.",
-      "p2": "We combine high-intent Google Ads (\"dermatologist in Miraflores\", \"dental clinic San Isidro\") with local SEO and an optimized Google Business Profile to appear on the map when someone searches near your location. We add specialty landing pages and Meta Ads campaigns for elective treatments, always measuring cost per appointment.",
+      "p1": "Patients research on Google and social media before choosing where to get care. At 3R Core we help clinics, medical practices and healthcare professionals show up at that decision moment, with a strategy that prioritizes booked appointments over vanity metrics.",
+      "p2": "We combine high-intent Google Ads (“dermatologist near me”, “dental clinic downtown”) with local SEO and an optimized Google Business Profile to appear on the map when someone searches near your location. We add specialty landing pages and Meta Ads campaigns for elective treatments, always measuring cost per appointment.",
       "p3": "We know healthcare has rules: we make sure advertising complies with Google and Meta policies for the sector, avoid improper promises and protect your brand's reputation. The result is a steady flow of qualified patients and a dashboard showing where every contact came from."
     },
     "benefits": {
@@ -1450,7 +1450,7 @@
         },
         {
           "title": "Local SEO and Google Maps",
-          "description": "We optimize your site and Google Business Profile to appear on the map in your district."
+          "description": "We optimize your site and Google Business Profile to appear on the map in your service area."
         },
         {
           "title": "Specialty landing pages",
@@ -1480,7 +1480,7 @@
         },
         {
           "title": "Local presence",
-          "description": "We optimize your Google Business Profile, reviews and local SEO by district."
+          "description": "We optimize your Google Business Profile, reviews and local SEO by service area."
         },
         {
           "title": "Campaigns and landings",
@@ -1511,11 +1511,11 @@
       },
       "q3": {
         "question": "How much does it cost to acquire a patient?",
-        "answer": "It varies by specialty and competition in your district. That's why we measure cost per booked appointment and optimize toward it, so you know exactly what each patient costs and whether it's profitable."
+        "answer": "It varies by specialty and competition in your service area. That's why we measure cost per booked appointment and optimize toward it, so you know exactly what each patient costs and whether it's profitable."
       },
       "q4": {
         "question": "Is Google Business Profile important for a clinic?",
-        "answer": "Very much. Most patients search \"near me\" or by district. A well-optimized listing, with reviews and photos, is key to appearing on the map and generating calls and visits."
+        "answer": "Very much. Most patients search “near me” or by neighborhood. A well-optimized listing, with reviews and photos, is key to appearing on the map and generating calls and visits."
       },
       "q5": {
         "question": "Do I need a website or is social enough?",
@@ -1536,27 +1536,27 @@
     }
   },
   "MarketingClinicasSEO": {
-    "seoTitle": "Digital marketing for clinics in Lima focused on patients",
-    "p1": "Peruvian patients research before choosing where to get care: they search Google, read reviews and compare options on social. At 3R Core we design digital marketing strategies for clinics and medical offices in Lima that put your service in front of that patient at the exact decision moment, always prioritizing booked appointments.",
-    "p2": "Our approach combines high-intent Google Ads — searches by specialty and district — with local SEO and an optimized Google Business Profile to appear on the map. When someone searches for a dermatologist in Miraflores or a dental clinic in San Isidro, we want them to find you.",
+    "seoTitle": "Digital marketing for clinics focused on patients",
+    "p1": "Patients research before choosing where to get care: they search Google, read reviews and compare options on social. At 3R Core we design digital marketing strategies for clinics and medical practices that put your service in front of that patient at the exact decision moment, always prioritizing booked appointments.",
+    "p2": "Our approach combines high-intent Google Ads — searches by specialty and location — with local SEO and an optimized Google Business Profile to appear on the map. When someone searches for a dermatologist or a dental clinic near them, we want them to find you.",
     "p3": "For elective and aesthetic treatments we add Meta Ads campaigns on Facebook and Instagram with local targeting, and route all traffic to specialty landing pages with a form and WhatsApp button. Each channel is measured by its cost per appointment, not vanity metrics.",
     "p4": "Healthcare has strict advertising rules. We know Google and Meta policies for the sector and design compliant campaigns, avoiding improper promises and protecting your clinic's reputation and account.",
     "p5": "Trust is decisive in healthcare, so we also work on reviews and local presence so your clinic projects solidity. A patient who sees good reviews and a complete listing is far more likely to book.",
-    "p6": "If you're looking for digital marketing for clinics in Lima that translates into more appointments and not just more followers, at 3R Core we build a measurable patient acquisition system, with a dashboard showing where each contact comes from.",
+    "p6": "If you're looking for digital marketing for clinics that translates into more appointments and not just more followers, at 3R Core we build a measurable patient acquisition system, with a dashboard showing where each contact comes from.",
     "relatedTitle": "Related services"
   },
   "MarketingInmobiliariasLanding": {
     "hero": {
       "badge": "Real Estate · Lead generation",
-      "title": "Digital marketing for real estate in Lima that fills your sales room",
+      "title": "Digital marketing for real estate that fills your sales pipeline",
       "subtitle": "We capture qualified leads for your apartment and land projects with Meta Ads, Google Ads and a funnel connected to your CRM and WhatsApp.",
       "cta": "I want more qualified leads"
     },
     "intro": {
       "title": "Real estate leads that actually reach the reservation",
       "p1": "Selling an apartment or lot isn't an impulse purchase: it's a long process, with a high ticket and many players. At 3R Core we design real estate marketing funnels that don't just generate forms, but qualified leads your sales team can turn into sales-room visits and reservations.",
-      "p2": "We combine Meta Ads to spark interest and reach potential buyers by area, budget and life stage, with Google Ads to capture active demand from people already searching \"apartments in Surco\" or \"projects in Lima\". Every campaign leads to a project landing page with the information the Peruvian buyer needs: location, sizes, starting prices, financing and the good-payer bonus.",
-      "p3": "We connect the forms to your CRM and WhatsApp so no lead goes cold, and we measure the whole funnel: cost per lead, cost per qualified lead and, when the CRM allows, cost per reservation. We work with developers and brokers in Lima and the provinces who want a predictable flow of opportunities."
+      "p2": "We combine Meta Ads to spark interest and reach potential buyers by area, budget and life stage, with Google Ads to capture active demand from people already searching “homes for sale near me” or “new construction homes”. Every campaign leads to a project landing page with the information the buyer needs: location, floor plans, starting prices and financing options.",
+      "p3": "We connect the forms to your CRM so no lead goes cold, and we measure the whole funnel: cost per lead, cost per qualified lead and, when the CRM allows, cost per reservation. We work with developers and brokers who want a predictable flow of opportunities."
     },
     "benefits": {
       "badge": "What's included",
@@ -1564,7 +1564,7 @@
       "items": [
         {
           "title": "Meta Ads by project and area",
-          "description": "Prospecting and retargeting campaigns segmented by district, budget and buyer life stage."
+          "description": "Prospecting and retargeting campaigns segmented by area, budget and buyer life stage."
         },
         {
           "title": "Active-demand Google Ads",
@@ -1641,7 +1641,7 @@
       },
       "q6": {
         "question": "Do you build the project landing pages?",
-        "answer": "Yes, we design conversion-optimized landing pages with the info Peruvian buyers look for: location, sizes, starting prices, financing, good-payer bonus and clear forms."
+        "answer": "Yes, we design conversion-optimized landing pages with the info buyers look for: location, floor plans, starting prices, financing options and clear forms."
       },
       "q7": {
         "question": "Does it work for lots and not just apartments?",
@@ -1654,25 +1654,25 @@
     }
   },
   "MarketingInmobiliariasSEO": {
-    "seoTitle": "Digital marketing for real estate in Lima that generates opportunities",
-    "p1": "Selling a property isn't an impulse purchase: it's a high-ticket decision involving a whole family and a process that can take months. At 3R Core we design digital marketing strategies for real estate in Lima and Peru that generate qualified leads, not just forms that never reach the sales room.",
-    "p2": "We combine Meta Ads, ideal to spark interest and reach potential buyers by area, budget and life stage, with Google Ads to capture people already actively searching for apartments or projects in a specific district. Each channel plays a role by project stage.",
-    "p3": "All traffic reaches project landing pages designed to convert, with the info Peruvian buyers need: location, sizes, starting prices, financing options and the good-payer bonus. A clear form and WhatsApp button speed up first contact.",
+    "seoTitle": "Digital marketing for real estate that generates opportunities",
+    "p1": "Selling a property isn't an impulse purchase: it's a high-ticket decision involving a whole family and a process that can take months. At 3R Core we design digital marketing strategies for U.S. real estate agents and developers that generate qualified leads, not just forms that never reach the sales desk.",
+    "p2": "We combine Meta Ads, ideal to spark interest and reach potential buyers by area, budget and life stage, with Google Ads to capture people already actively searching for homes or new developments in a specific area. Each channel plays a role by project stage.",
+    "p3": "All traffic reaches project landing pages designed to convert, with the info buyers need: location, floor plans, starting prices and financing options. A clear form and a direct call button speed up first contact.",
     "p4": "We connect leads directly to your CRM and WhatsApp so none goes cold. We know that in real estate, response speed defines conversion, so we structure follow-up with your sales team.",
     "p5": "We measure the whole funnel: cost per lead, cost per qualified lead and, when the CRM allows, cost per reservation. With that data we reallocate budget toward the projects and channels that perform best.",
-    "p6": "If you're looking for digital marketing for real estate in Lima that fills your sales room with real opportunities, at 3R Core we build a measurable, scalable funnel with clear reports your sales management will understand.",
+    "p6": "If you're looking for digital marketing for real estate that fills your pipeline with real opportunities, at 3R Core we build a measurable, scalable funnel with clear reports your sales management will understand.",
     "relatedTitle": "Related services"
   },
   "MarketingEcommerceLanding": {
     "hero": {
       "badge": "E-commerce · Scale your sales",
-      "title": "Digital marketing for e-commerce in Peru that scales your sales",
+      "title": "Digital marketing for e-commerce that scales your sales",
       "subtitle": "Google Shopping, Meta Ads with catalog, email marketing and CRO working together to lower your cost of acquisition and raise your ROAS.",
       "cta": "Scale my online store"
     },
     "intro": {
       "title": "A growth system for your online store",
-      "p1": "Having a store on Shopify, WooCommerce or VTEX is just the starting point. The hard part is getting profitable traffic consistently. At 3R Core we build an e-commerce marketing system in Peru where every channel plays a role: acquisition, recovery and retention, all measured in sales and ROAS.",
+      "p1": "Having a store on Shopify, WooCommerce or BigCommerce is just the starting point. The hard part is getting profitable traffic consistently. At 3R Core we build an e-commerce marketing system where every channel plays a role: acquisition, recovery and retention, all measured in sales and ROAS.",
       "p2": "For acquisition we use Google Shopping and Performance Max to capture demand from people searching for your products, and Meta Ads and TikTok Ads with dynamic catalog to discover new customers and retarget those who viewed a product or abandoned the cart. We sync your product feed so ads show real stock and price.",
       "p3": "But advertising alone isn't enough: we improve your conversion rate with CRO (product pages, checkout, speed and trust) and activate email marketing flows to recover carts and drive repeat purchases. This way, every ad dollar goes further because the store converts better and customers come back."
     },
@@ -1739,7 +1739,7 @@
     "faqs": {
       "q1": {
         "question": "Which e-commerce platforms do you work with?",
-        "answer": "We work with Shopify, WooCommerce, VTEX and others. We set up the product feed, analytics and pixels on whichever you use; if you don't have a store yet, we can also help you build one."
+        "answer": "We work with Shopify, WooCommerce, BigCommerce and others. We set up the product feed, analytics and pixels on whichever you use; if you don't have a store yet, we can also help you build one."
       },
       "q2": {
         "question": "What is Google Shopping and why do I need it?",
@@ -1772,13 +1772,13 @@
     }
   },
   "MarketingEcommerceSEO": {
-    "seoTitle": "Digital marketing for e-commerce in Peru that scales sales",
-    "p1": "Setting up a store on Shopify, WooCommerce or VTEX is just the beginning; the real challenge is getting profitable traffic consistently. At 3R Core we build digital marketing systems for e-commerce in Peru where every channel plays a clear role: acquisition, recovery and retention, all measured in sales and ROAS.",
+    "seoTitle": "Digital marketing for e-commerce that scales sales",
+    "p1": "Setting up a store on Shopify, WooCommerce or BigCommerce is just the beginning; the real challenge is getting profitable traffic consistently. At 3R Core we build digital marketing systems for e-commerce where every channel plays a clear role: acquisition, recovery and retention, all measured in sales and ROAS.",
     "p2": "For acquisition we leverage Google Shopping and Performance Max to capture people searching for your products, alongside Meta Ads and TikTok Ads with dynamic catalog to discover new customers and retarget those who viewed a product or abandoned the cart. We sync your feed so ads show real stock and price.",
     "p3": "Advertising alone isn't enough: if the store doesn't convert, every click is wasted money. That's why CRO is central to the service. We optimize product pages, checkout, load speed and trust signals so a higher share of visits ends in purchase.",
     "p4": "Email marketing closes the loop. We activate abandoned cart, post-purchase and reactivation flows that recover sales that would otherwise be lost and increase each customer's lifetime value, with very low investment relative to its return.",
     "p5": "Everything is managed with a focus on return. We set up GA4 and e-commerce events to attribute revenue by channel and make data-driven decisions: scale what performs, pause what doesn't and reallocate budget toward the most profitable products.",
-    "p6": "If you're looking for digital marketing for e-commerce in Peru that translates into sales and a healthy ROAS, at 3R Core we integrate advertising, CRO and email marketing into a single growth engine, with clear, actionable monthly reports.",
+    "p6": "If you're looking for digital marketing for e-commerce that translates into sales and a healthy ROAS, at 3R Core we integrate advertising, CRO and email marketing into a single growth engine, with clear, actionable monthly reports.",
     "relatedTitle": "Related services"
   },
   "MoreServices": {
@@ -2653,70 +2653,70 @@
   },
   "MarketingAbogadosLanding": {
     "hero": {
-      "badge": "Marketing jurídico · Lima, Perú",
-      "title": "Marketing digital para estudios de abogados en Lima que se mide en consultas, no en visitas",
-      "subtitle": "Quien busca un abogado no está comparando precios: está resolviendo un problema que le quita el sueño y quiere saber a quién puede confiárselo. Trabajamos la ficha de Google, el posicionamiento local y el contenido que genera esa confianza antes de la primera llamada.",
-      "cta": "Quiero más consultas"
+      "badge": "Legal marketing · U.S. law firms",
+      "title": "Digital marketing for law firms measured in consultations, not visits",
+      "subtitle": "Someone looking for a lawyer is not comparing prices: they are solving a problem that keeps them up at night and they want to know who they can trust with it. We work on the Google Business Profile, local positioning and the content that builds that trust before the first call.",
+      "cta": "I want more consultations"
     },
     "intro": {
-      "title": "¿Por qué el marketing para abogados no se parece al del resto?",
-      "p1": "Porque la decisión es de confianza y no de precio. En casi cualquier otro sector el cliente compara opciones y elige la más conveniente; con un estudio jurídico, la persona llega asustada, con un plazo encima y sin saber distinguir a un buen abogado de uno malo. Elige a quien le transmite que ha resuelto antes un caso como el suyo.",
-      "p2": "Eso cambia dónde se juega el trabajo. La búsqueda casi siempre es local y urgente —«abogado laboral en Lima», «qué hago si me despiden»— y se resuelve en el mapa antes que en la web: la ficha de Google, con sus reseñas y su categoría bien puesta, decide más llamadas que la portada. Es lo primero que ordenamos.",
-      "p3": "Y cambia el contenido. Una página que explica con claridad qué hacer en las primeras 48 horas de un despido capta a alguien que necesita un abogado hoy. Un artículo genérico sobre «la importancia del derecho laboral» no capta a nadie. Escribimos lo primero."
+      "title": "Why marketing for law firms doesn't work like the rest",
+      "p1": "Because the decision is about trust, not price. In almost any other sector the client compares options and picks the most convenient one; with a law firm, the person arrives frightened, with a deadline over their head and no way to tell a good attorney from a bad one. They choose whoever convinces them they have solved a case like theirs before.",
+      "p2": "That changes where the work happens. The search is almost always local and urgent — “employment lawyer near me”, “what to do if I get fired” — and it is settled on the map before the website: your Google Business Profile, with its reviews and the right category, drives more calls than the homepage. That is the first thing we fix.",
+      "p3": "And the content changes. A page that clearly explains what to do in the first 48 hours after a termination captures someone who needs a lawyer today. A generic article about “the importance of employment law” captures no one. We write the first kind."
     },
     "benefits": {
-      "badge": "Qué trabajamos",
-      "title": "Lo que mueve el teléfono de un estudio jurídico",
+      "badge": "What we work on",
+      "title": "What actually makes a law firm's phone ring",
       "items": [
         {
           "title": "Ficha de Google ordenada",
-          "description": "Categoría correcta, áreas de práctica como servicios, horario real, fotos del estudio y respuesta a todas las reseñas. En un negocio local con oficina, el mapa reparte más llamadas que la web entera."
+          "description": "Right category, practice areas listed as services, real hours, photos of the office and a reply to every review. In a local business with an office, the map hands out more calls than the entire website."
         },
         {
-          "title": "Páginas por área de práctica",
-          "description": "Laboral, familia, penal, civil, notarial y corporativo tienen consultas, urgencias y clientes distintos. Una sola página de «servicios legales» no compite con ninguna de ellas; seis páginas específicas sí."
+          "title": "A page per practice area",
+          "description": "Employment, family, criminal, civil, estate and corporate law have different questions, different urgency and different clients. A single “legal services” page competes with none of them; six specific pages do."
         },
         {
           "title": "Contenido que responde la urgencia",
-          "description": "Qué hacer, en qué plazo y con qué documentos. Ese es el contenido que lee alguien con un problema encima, y el que hace que te llame a ti y no al siguiente resultado."
+          "description": "What to do, by when and with which documents. That is the content someone with a problem actually reads, and the reason they call you and not the next result."
         },
         {
-          "title": "Reseñas, que aquí pesan el doble",
-          "description": "Montamos el circuito para pedirlas sin incomodar al cliente y respondemos todas, también las malas. En un servicio de confianza, la reseña es la prueba que sustituye a la recomendación de un conocido."
+          "title": "Reviews, which count double here",
+          "description": "We set up the flow to ask for reviews without putting the client on the spot, and we answer all of them, including the bad ones. In a trust-based service, a review is the proof that replaces a friend's recommendation."
         },
         {
-          "title": "Web rápida y clara en el móvil",
-          "description": "Buena parte de estas búsquedas se hacen desde el teléfono y en un mal momento. Si la web tarda o el teléfono no se puede pulsar, la consulta se va a otro estudio."
+          "title": "A site that is fast and clear on mobile",
+          "description": "A good share of these searches happen from a phone and at a bad moment. If the site is slow or the phone number can't be tapped, the consultation goes to another firm."
         },
         {
-          "title": "Medición de consultas reales",
-          "description": "Contamos llamadas, WhatsApp y formularios enviados, no visitas. Un reporte que celebra el tráfico y no dice cuántas consultas entraron no sirve para decidir nada."
+          "title": "Measuring real consultations",
+          "description": "We count calls, messages and submitted forms, not visits. A report that celebrates traffic without saying how many consultations came in is no basis for a decision."
         }
       ]
     },
     "process": {
-      "badge": "Cómo trabajamos",
-      "title": "Del primer diagnóstico a las primeras consultas",
+      "badge": "How we work",
+      "title": "From the first audit to the first consultations",
       "steps": [
         {
-          "title": "1 · Diagnóstico del estudio",
-          "description": "Qué áreas quieren llenar, cuáles ya funcionan por recomendación y de dónde llegan hoy las consultas. Sin eso, cualquier plan es genérico."
+          "title": "1 · Firm audit",
+          "description": "Which practice areas you want to fill, which ones already run on referrals and where today's consultations come from. Without that, any plan is generic."
         },
         {
           "title": "2 · Ficha de Google primero",
-          "description": "Es lo más rápido y lo que más mueve. Categoría, servicios, fotos, horario y reseñas antes de tocar una sola línea de la web."
+          "description": "It is the fastest lever and the one that moves the most. Category, services, photos, hours and reviews before touching a single line of the website."
         },
         {
-          "title": "3 · Página por área de práctica",
-          "description": "Empezando por la que el estudio quiere llenar, no por la que más se busca: no sirve traer casos que no se quieren tomar."
+          "title": "3 · A page per practice area",
+          "description": "Starting with the practice area the firm wants to fill, not the one with the most search volume: there is no point bringing in cases you don't want to take."
         },
         {
           "title": "4 · Contenido de urgencia, escalonado",
-          "description": "Publicación repartida en el tiempo. Un estudio que publica veinte artículos en una semana no parece más solvente, parece automatizado."
+          "description": "Publishing spread out over time. A firm that publishes twenty articles in one week doesn't look more established, it looks automated."
         },
         {
           "title": "5 · Reporte mensual de consultas",
-          "description": "Cuántas entraron, por qué área y por qué canal. Y qué cambia el mes siguiente."
+          "description": "How many came in, from which practice area and through which channel. And what changes next month."
         }
       ]
     }
@@ -2726,115 +2726,115 @@
     "title": "Marketing para abogados — preguntas frecuentes",
     "faqs": {
       "q1": {
-        "question": "¿Cuánto cuesta el marketing digital para un estudio de abogados en Lima?",
-        "answer": "En 3R Core se cotiza con los mismos precios publicados que el resto de servicios: posicionamiento SEO S/1,800 al mes, gestión de Google Ads S/1,800 al mes más la pauta, y página web desde S/1,800. No cobramos una tarifa distinta por ser un estudio jurídico. Precios netos en soles, sin IGV y sin contratos forzosos; puedes calcular el estimado de tu caso en nuestro cotizador."
+        "question": "How much does digital marketing for a law firm cost?",
+        "answer": "At 3R Core it is quoted with the same published prices as every other service: SEO $500 per month, Google Ads management $800 per month plus ad spend, and websites from $850. We do not charge a different rate for being a law firm. Prices are net, with no mandatory contracts; you can estimate your case in our quote calculator."
       },
       "q2": {
-        "question": "¿Qué da más resultado para un abogado, la web o la ficha de Google?",
-        "answer": "La ficha de Google, casi siempre, y por un margen amplio. La mayoría de búsquedas de abogado son locales y urgentes, y se resuelven en el mapa: la persona ve tres estudios con sus reseñas y llama. Por eso empezamos siempre por la ficha, aunque la web esté por rehacer: es lo que da resultado antes."
+        "question": "What works better for a lawyer, the website or the Google Business Profile?",
+        "answer": "The Google Business Profile, almost always, and by a wide margin. Most searches for a lawyer are local and urgent, and they are settled on the map: the person sees three firms with their reviews and calls. That is why we always start with the profile, even when the website needs rebuilding: it is what produces results first."
       },
       "q3": {
-        "question": "¿Puede un abogado hacer publicidad de sus servicios en Perú?",
-        "answer": "La publicidad de servicios legales está sujeta a las normas deontológicas del colegio profesional correspondiente, que regulan cómo puede comunicarse un abogado. No reproducimos aquí ningún artículo concreto porque esas normas cambian y una cita equivocada te perjudicaría a ti, no a nosotros: antes de lanzar cualquier campaña revisamos contigo el código de ética de tu colegio y ajustamos los mensajes. Lo que sí podemos afirmar es que las prácticas que recomendamos —ficha de Google, contenido informativo y reseñas de clientes reales— son las más conservadoras del abanico."
+        "question": "Can a law firm advertise its services online?",
+        "answer": "Advertising legal services is subject to the professional conduct rules of the state bar that governs your practice. We do not quote any specific rule here because those rules change and a wrong citation would hurt you, not us: before launching any campaign we review your state bar's advertising rules with you and adjust the messaging. What we can say is that the practices we recommend — Google Business Profile, informational content and reviews from real clients — are the most conservative options available."
       },
       "q4": {
-        "question": "¿Debo tener una página por cada área de práctica?",
-        "answer": "Sí, si quieres captar por esas áreas. Alguien que busca «abogado laboral» y alguien que busca «abogado de familia» tienen problemas distintos, urgencias distintas y palabras distintas. Una sola página de «servicios legales» no responde bien a ninguno de los dos, y en resultados de búsqueda pierde contra estudios que sí tienen la página específica."
+        "question": "Should I have a page for each practice area?",
+        "answer": "Yes, if you want to attract clients in those areas. Someone searching “employment lawyer” and someone searching “family lawyer” have different problems, different urgency and different words. A single “legal services” page answers neither of them well, and in search results it loses to firms that do have the specific page."
       },
       "q5": {
-        "question": "¿Cómo consigo reseñas sin incomodar al cliente?",
-        "answer": "Pidiéndolas en el momento correcto: cuando el caso termina bien y el cliente lo acaba de saber. Montamos el circuito para que sea un mensaje breve con el enlace directo, no una petición incómoda en persona. Y se responden todas, incluidas las negativas, porque la respuesta la lee el siguiente cliente potencial."
+        "question": "How do I get reviews without putting the client on the spot?",
+        "answer": "By asking at the right moment: when the case ends well and the client has just found out. We set it up as a short message with a direct link, not an awkward in-person request. And every review is answered, negative ones included, because the reply is read by the next potential client."
       },
       "q6": {
-        "question": "¿Cuánto tarda en llegar la primera consulta?",
-        "answer": "Depende del área y de la competencia que tenga en tu ciudad, y no damos una fecha porque no la controlamos. Lo que suele moverse antes es la ficha de Google, en semanas, porque no depende de posicionar contenido nuevo. El posicionamiento orgánico de páginas nuevas es más lento y va por meses. Cualquiera que te prometa una fecha exacta te está prometiendo algo que no puede cumplir."
+        "question": "How long before the first consultation comes in?",
+        "answer": "It depends on the practice area and the competition in your city, and we do not give a date because we do not control it. What usually moves first is the Google Business Profile, in weeks, because it does not depend on ranking new content. Organic positioning of new pages is slower and runs in months. Anyone promising you an exact date is promising something they cannot deliver."
       },
       "q7": {
-        "question": "¿Trabajan con estudios pequeños o solo con firmas grandes?",
-        "answer": "Con los dos. Un abogado que trabaja solo suele necesitar exactamente lo mismo que una firma, en menor escala: ficha ordenada, una web que cargue rápido y dos o tres páginas de área bien escritas. De hecho, un estudio pequeño con una sola área bien trabajada compite mejor que una firma grande con una web genérica."
+        "question": "Do you work with solo attorneys or only with large firms?",
+        "answer": "Both. A solo attorney usually needs exactly what a firm needs, at a smaller scale: a tidy profile, a website that loads fast and two or three well-written practice-area pages. In fact, a small practice with one area done properly competes better than a large firm with a generic website."
       },
       "q8": {
-        "question": "¿Qué NO recomendamos para un estudio jurídico?",
-        "answer": "Comprar bases de datos de contactos, prometer resultados de casos en la publicidad y publicar contenido que roce el consejo legal sin matices. Lo primero no funciona y molesta; lo segundo puede meterte en un problema con tu colegio; lo tercero genera consultas de gente que espera algo que no dijiste. Preferimos decir esto antes de empezar que discutirlo después."
+        "question": "What do you NOT recommend for a law firm?",
+        "answer": "Buying contact databases, promising case outcomes in advertising and publishing content that edges into legal advice without qualification. The first doesn't work and annoys people; the second can get you into trouble with your bar; the third generates inquiries from people expecting something you never said. We prefer to say this before starting rather than argue about it afterwards."
       }
     }
   },
   "MarketingAbogadosSEO": {
-    "seoTitle": "Marketing digital para abogados y estudios jurídicos en Lima, Perú",
-    "p1": "3R Core hace marketing digital para estudios de abogados en Lima y en todo el Perú: ficha de Google, posicionamiento local por área de práctica y contenido que genera confianza antes de la primera llamada. Se cotiza con los precios publicados de la agencia —SEO S/1,800 al mes, web desde S/1,800— sin contratos forzosos.",
-    "p2": "El marketing jurídico no se parece al del resto de sectores porque la decisión es de confianza y no de precio. Quien busca un abogado llega con un plazo encima y sin saber distinguir a uno bueno de uno malo, así que elige a quien le transmite que ya resolvió un caso como el suyo.",
-    "p3": "Por eso empezamos por la ficha de Google. La mayoría de estas búsquedas son locales y urgentes y se resuelven en el mapa: la persona ve tres estudios con sus reseñas y llama. La ficha, con su categoría correcta, sus áreas de práctica como servicios y sus reseñas respondidas, reparte más llamadas que la portada de la web.",
-    "p4": "Después, una página por área de práctica. Laboral, familia, penal, civil, notarial y corporativo tienen consultas, urgencias y clientes distintos, y una sola página de «servicios legales» no compite con ninguna de ellas.",
-    "p5": "El contenido que funciona es el que responde a la urgencia: qué hacer, en qué plazo y con qué documentos. Ese lo lee alguien que necesita un abogado hoy. Un artículo general sobre la importancia del derecho laboral no lo lee nadie que esté a punto de contratar.",
-    "p6": "Sobre publicidad y normas deontológicas: la comunicación de servicios legales está sujeta a las reglas del colegio profesional correspondiente. No citamos artículos concretos porque esas normas cambian y una cita equivocada perjudicaría al estudio; antes de lanzar campañas las revisamos con el cliente. Las prácticas que recomendamos —ficha de Google, contenido informativo y reseñas reales— son las más conservadoras del abanico.",
+    "seoTitle": "Digital marketing for law firms and legal practices",
+    "p1": "3R Core does digital marketing for law firms: Google Business Profile, local positioning by practice area and content that builds trust before the first call. It is quoted with the agency's published prices — SEO $500 per month, websites from $850 — with no mandatory contracts.",
+    "p2": "Legal marketing is not like other sectors because the decision is about trust, not price. Someone looking for a lawyer arrives with a deadline over their head and no way to tell a good attorney from a bad one, so they choose whoever convinces them they have already solved a case like theirs.",
+    "p3": "That is why we start with the Google Business Profile. Most of these searches are local and urgent and they are settled on the map: the person sees three firms with their reviews and calls. The profile — with the right category, practice areas listed as services and reviews answered — hands out more calls than the website's homepage.",
+    "p4": "Then, one page per practice area. Employment, family, criminal, civil, estate and corporate law have different questions, different urgency and different clients, and a single “legal services” page competes with none of them.",
+    "p5": "The content that works is the content that answers the urgency: what to do, by when and with which documents. That is what someone who needs a lawyer today reads. A general article about the importance of employment law is not read by anyone about to hire.",
+    "p6": "On advertising and professional conduct: communication of legal services is subject to the rules of the state bar that governs your practice. We do not cite specific rules because they change and a wrong citation would hurt the firm; before launching campaigns we review them with the client. The practices we recommend — Google Business Profile, informational content and real reviews — are the most conservative options available.",
     "relatedTitle": "Servicios relacionados"
   },
   "MarketingClinicasDentalesLanding": {
     "hero": {
-      "badge": "Odontología · Captación de pacientes",
-      "title": "Marketing digital para clínicas dentales en Lima",
-      "subtitle": "Atraemos pacientes para tu clínica dental o consultorio odontológico con Google Ads de salud, SEO local y ficha de Google. La gestión parte en S/1,800 al mes más IGV y se reporta en citas agendadas.",
-      "cta": "Quiero más pacientes"
+      "badge": "Dentistry · Patient acquisition",
+      "title": "Digital marketing for dental practices",
+      "subtitle": "We bring patients to your dental practice with healthcare Google Ads, local SEO and Google Business Profile work. Management starts at $800 per month and is reported in booked appointments.",
+      "cta": "I want more patients"
     },
     "intro": {
       "title": "Citas agendadas, no seguidores",
-      "p1": "Quien necesita un dentista lo busca en Google en el momento en que le duele o cuando decide arreglarse la sonrisa. Ahí se define la clínica que gana la cita, y casi nunca es la que tiene más seguidores: es la que aparece en el mapa, responde rápido y explica su precio.",
-      "p2": "En 3R Core combinamos Google Ads de alta intención por tratamiento —implantes, ortodoncia, blanqueamiento— con SEO local y trabajo de ficha de Google, y enviamos ese tráfico a una landing por tratamiento en vez de a la página de inicio.",
-      "p3": "El rubro salud tiene reglas: Google restringe las promesas de resultado y prohíbe segmentar por datos sensibles. Escribimos las campañas dentro de esas reglas desde el primer día, que es la causa más común de que una cuenta dental se caiga."
+      "p1": "Someone who needs a dentist searches Google the moment it hurts, or when they decide to fix their smile. That is where the practice that wins the appointment is decided, and it is almost never the one with the most followers: it is the one that shows up on the map, replies fast and states its price.",
+      "p2": "At 3R Core we combine high-intent Google Ads by treatment — implants, orthodontics, whitening — with local SEO and Google Business Profile work, and we send that traffic to a landing page per treatment instead of to the homepage.",
+      "p3": "Healthcare has rules: Google restricts outcome claims and prohibits targeting by sensitive health data. We write the campaigns inside those rules from day one, which is the most common reason a dental account gets suspended."
     },
     "benefits": {
-      "badge": "Qué incluye",
-      "title": "Nuestro sistema para clínicas dentales",
+      "badge": "What's included",
+      "title": "Our system for dental practices",
       "items": [
         {
           "title": "Google Ads por tratamiento",
-          "description": "Campañas separadas por implantes, ortodoncia, blanqueamiento y urgencias, con palabras clave negativas desde el día uno para no pagar clics que no agendan."
+          "description": "Separate campaigns for implants, orthodontics, whitening and emergencies, with negative keywords from day one so you don't pay for clicks that never book."
         },
         {
           "title": "Ficha de Google Business Profile",
-          "description": "Categoría correcta, horarios reales, fotos del consultorio, servicios listados y respuesta a cada reseña. Es lo que aparece en el mapa cuando alguien busca «dentista en Surco»."
+          "description": "Right category, real hours, photos of the practice, services listed and a reply to every review. It is what shows up on the map when someone searches “dentist near me”."
         },
         {
           "title": "Landing por tratamiento",
-          "description": "Una página por servicio desde S/1,800 más IGV, lista en 1 a 2 semanas, con lo que incluye, cuánto dura, cuánto cuesta y el botón de agendar."
+          "description": "One page per service from $850, ready in 1 to 2 weeks, covering what it includes, how long it takes, what it costs and the booking button."
         },
         {
-          "title": "SEO local por distrito",
-          "description": "Posicionamiento en Google y Google Maps por la zona de influencia real de la clínica, desde S/1,800 al mes más IGV."
+          "title": "Local SEO by service area",
+          "description": "Positioning on Google and Google Maps for the practice's real service area, from $500 per month."
         },
         {
           "title": "Cumplimiento del rubro salud",
-          "description": "Redacción sin promesas de resultado clínico y sin segmentación por condición de salud, que es lo que exigen Google y Meta en esta categoría."
+          "description": "Copy written without clinical outcome promises and without targeting by health condition, which is what Google and Meta require in this category."
         },
         {
           "title": "Reporte de costo por cita",
-          "description": "Cada mes: lo invertido, las citas agendadas y el costo por cita. Sin capturas de alcance ni de impresiones sueltas."
+          "description": "Every month: what was spent, appointments booked and cost per appointment. No screenshots of reach or loose impressions."
         }
       ]
     },
     "process": {
-      "badge": "Cómo trabajamos",
-      "title": "Nuestro proceso con una clínica dental",
+      "badge": "How we work",
+      "title": "Our process with a dental practice",
       "steps": [
         {
-          "title": "Diagnóstico de tratamientos",
-          "description": "Qué tratamientos quiere llenar la clínica, cuál deja más margen y qué compite en su distrito."
+          "title": "Treatment audit",
+          "description": "Which treatments the practice wants to fill, which one carries the best margin and what the competition looks like in its service area."
         },
         {
           "title": "Ficha y presencia local",
-          "description": "Ordenamos la ficha de Google, las categorías, las fotos y las reseñas antes de invertir un sol en publicidad."
+          "description": "We fix the Google Business Profile, the categories, the photos and the reviews before spending a dollar on advertising."
         },
         {
-          "title": "Campañas y landings",
-          "description": "Una campaña y una landing por tratamiento, con el presupuesto separado para que no se mezclen."
+          "title": "Campaigns and landing pages",
+          "description": "One campaign and one landing page per treatment, with separate budgets so they never blend into each other."
         },
         {
-          "title": "Medición por cita",
-          "description": "Se mide el costo por cita agendada durante el primer mes y esa es la línea base sobre la que se ajusta."
+          "title": "Measured per appointment",
+          "description": "Cost per booked appointment is measured during the first month and that becomes the baseline everything is tuned against."
         },
         {
           "title": "Reporte y ajuste",
-          "description": "Reporte mensual en soles y ajuste de presupuesto hacia los tratamientos que sí están agendando."
+          "description": "Monthly report and budget shifted toward the treatments that are actually booking."
         }
       ]
     }
@@ -2844,115 +2844,115 @@
     "title": "Preguntas frecuentes",
     "faqs": {
       "q1": {
-        "question": "¿Cuánto cuesta el marketing digital para una clínica dental en Lima?",
-        "answer": "En 3R Core, la gestión de Google Ads para una clínica dental parte en S/1,800 al mes más IGV, y el SEO mensual también en S/1,800 más IGV. El manejo de redes sociales parte en S/1,500 al mes más IGV. La inversión en anuncios va aparte y la paga la clínica directamente a Google o a Meta."
+        "question": "How much does digital marketing for a dental practice cost?",
+        "answer": "At 3R Core, Google Ads management for a dental practice starts at $800 per month, and monthly SEO at $500. Social media management starts at $800 per month. Ad spend is separate and the practice pays it directly to Google or Meta."
       },
       "q2": {
-        "question": "¿Puedo anunciar mi clínica dental en Google si es del rubro salud?",
-        "answer": "Sí. Google permite anunciar servicios odontológicos en el Perú, pero la categoría de salud tiene restricciones: no se puede prometer un resultado clínico ni segmentar por datos sensibles de salud. La campaña se arma por intención de búsqueda y por zona geográfica."
+        "question": "Can I advertise my dental practice on Google in the healthcare category?",
+        "answer": "Yes. Google allows dental services to be advertised, but the health category has restrictions: you cannot promise a clinical outcome or target sensitive health data. The campaign is built around search intent and service area."
       },
       "q3": {
-        "question": "¿En cuánto tiempo llegan los primeros pacientes?",
-        "answer": "Con Google Ads, las primeras consultas suelen entrar durante la primera semana de campaña. Con SEO local, el efecto se nota entre el tercer y el cuarto mes, porque Google necesita tiempo para reposicionar la clínica y su ficha."
+        "question": "How long before the first patients arrive?",
+        "answer": "With Google Ads, the first inquiries usually come in during the first week of the campaign. With local SEO, the effect shows between the third and fourth month, because Google needs time to reposition the practice and its profile."
       },
       "q4": {
-        "question": "¿3R Core garantiza una cantidad de pacientes al mes?",
-        "answer": "No. 3R Core no garantiza un número de pacientes ni resultados clínicos. Lo que sí se compromete es el trabajo del plan, el reporte mensual con el costo por cita agendada y el ajuste de las campañas según ese dato."
+        "question": "Does 3R Core guarantee a number of patients per month?",
+        "answer": "No. 3R Core does not guarantee a number of patients or clinical outcomes. What we do commit to is the work in the plan, the monthly report with cost per booked appointment, and adjusting the campaigns according to that number."
       },
       "q5": {
-        "question": "¿Cuánto cuesta conseguir un paciente dental en Lima?",
-        "answer": "No hay una cifra fija: depende del tratamiento, del distrito y de la competencia que puje por esa búsqueda. Captar para un blanqueamiento y para un implante no cuesta lo mismo. Se mide con los datos de cada clínica durante el primer mes y recién ahí se fija la meta."
+        "question": "How much does it cost to acquire a dental patient?",
+        "answer": "There is no fixed figure: it depends on the treatment, the service area and the competition bidding on that search. Acquiring a whitening patient and acquiring an implant patient do not cost the same. It is measured with each practice's own data during the first month, and only then is the target set."
       },
       "q6": {
-        "question": "¿Necesito una web nueva o basta con mi ficha de Google y mis redes?",
-        "answer": "Una clínica dental puede empezar a recibir pacientes solo con la ficha de Google bien trabajada. La web se vuelve necesaria cuando se quiere hacer publicidad: los anuncios necesitan una página donde el paciente agende, y esa página decide cuántos clics se convierten en citas."
+        "question": "Do I need a new website or is my Google profile and social media enough?",
+        "answer": "A dental practice can start receiving patients with a well-managed Google Business Profile alone. The website becomes necessary when you want to advertise: ads need a page where the patient books, and that page decides how many clicks turn into appointments."
       },
       "q7": {
-        "question": "¿Trabajan con clínicas dentales fuera de Lima?",
-        "answer": "Sí. 3R Core trabaja desde La Molina, Lima, y atiende clínicas de otras ciudades del Perú de forma remota. El trabajo de ficha de Google y campañas se hace igual; lo que cambia es la configuración geográfica de las campañas."
+        "question": "Do you work with dental practices outside your area?",
+        "answer": "Yes. 3R Core works remotely with practices anywhere in the United States through its U.S. subsidiary. The Google Business Profile work and the campaigns are the same; what changes is the geographic setup of the campaigns."
       },
       "q8": {
-        "question": "¿Los precios incluyen IGV? ¿Emiten factura?",
-        "answer": "Los precios publicados son netos y 3R Core emite factura, donde se suma el IGV del 18%. Una web corporativa de S/4,500 factura S/5,310 en total. El pago se hace en dos partes: 50% al iniciar el proyecto y 50% al entregarlo."
+        "question": "Are prices net? How does billing work?",
+        "answer": "Published prices are net and U.S. clients are invoiced in U.S. dollars through our U.S. subsidiary. Payment is split in two: 50% to start the project and 50% on delivery."
       }
     }
   },
   "MarketingClinicasDentalesSEO": {
-    "seoTitle": "Marketing digital para clínicas dentales en Lima con foco en citas",
-    "p1": "El paciente dental peruano decide en Google. Busca «dentista cerca de mí» cuando le duele, y «cuánto cuesta un implante dental» cuando está evaluando. Son dos momentos distintos y necesitan dos respuestas distintas: la primera se gana con la ficha de Google y las campañas de búsqueda; la segunda, con una página del tratamiento que diga el precio.",
-    "p2": "En 3R Core trabajamos las dos. La gestión de Google Ads para una clínica dental parte en S/1,800 al mes más IGV y el SEO mensual en S/1,800 más IGV, con la inversión publicitaria aparte, que la clínica paga directo a la plataforma y decide cuánto es.",
-    "p3": "Las landing pages por tratamiento cuestan S/1,800 más IGV cada una y están listas en 1 a 2 semanas. Cada una responde lo que el paciente pregunta antes de agendar: qué incluye el tratamiento, cuánto dura, cuánto cuesta y cómo se paga. Enviar el tráfico de una campaña de implantes a la página de inicio es la forma más cara de perder ese clic.",
-    "p4": "El rubro salud tiene reglas propias y son la causa más frecuente de que una cuenta publicitaria dental se caiga. Google restringe el lenguaje que promete resultados y prohíbe construir públicos a partir de condiciones de salud. Nosotros escribimos las campañas dentro de esas reglas desde el primer día.",
-    "p5": "La ficha de Google Business Profile es lo más barato de arreglar y lo que más rinde en este rubro: es lo que ocupa la pantalla cuando alguien busca «dentista en Miraflores» desde el celular. Categoría correcta, horario real, fotos del consultorio y respuesta a cada reseña.",
-    "p6": "Reportamos en costo por cita agendada, no en alcance. Y pedimos a la clínica el dato de tratamiento cerrado desde su propio sistema, porque es lo único que convierte el reporte de clics en un reporte de soles.",
+    "seoTitle": "Digital marketing for dental practices focused on appointments",
+    "p1": "The dental patient decides on Google. They search “dentist near me” when it hurts, and “how much does a dental implant cost” when they are evaluating. Those are two different moments and they need two different answers: the first is won with the Google Business Profile and search campaigns; the second, with a treatment page that states the price.",
+    "p2": "At 3R Core we do both. Google Ads management for a dental practice starts at $800 per month and monthly SEO at $500, with ad spend separate — the practice pays that directly to the platform and decides how much it is.",
+    "p3": "Landing pages per treatment cost $850 each and are ready in 1 to 2 weeks. Each one answers what the patient asks before booking: what the treatment includes, how long it lasts, what it costs and how it is paid. Sending implant campaign traffic to the homepage is the most expensive way to lose that click.",
+    "p4": "Healthcare has its own rules and they are the most frequent reason a dental ad account gets suspended. Google restricts language that promises results and prohibits building audiences from health conditions. We write the campaigns inside those rules from day one.",
+    "p5": "The Google Business Profile is the cheapest thing to fix and the highest-yielding in this category: it is what fills the screen when someone searches “dentist near me” from their phone. Right category, real hours, photos of the practice and a reply to every review.",
+    "p6": "We report cost per booked appointment, not reach. And we ask the practice for closed-treatment data from its own system, because that is the only thing that turns a click report into a revenue report.",
     "relatedTitle": "Servicios relacionados"
   },
   "MarketingClinicasEsteticasLanding": {
     "hero": {
-      "badge": "Estética · Captación de pacientes",
-      "title": "Marketing digital para clínicas estéticas en Lima",
-      "subtitle": "Atraemos pacientes para tu clínica estética o centro de medicina estética con Instagram, Meta Ads y SEO local. Las redes parten en S/1,500 al mes más IGV y se reporta en citas agendadas.",
-      "cta": "Quiero más pacientes"
+      "badge": "Aesthetics · Patient acquisition",
+      "title": "Digital marketing for aesthetic clinics and medspas",
+      "subtitle": "We bring patients to your aesthetic clinic or medspa with Instagram, Meta Ads and local SEO. Social media starts at $800 per month and is reported in booked appointments.",
+      "cta": "I want more patients"
     },
     "intro": {
-      "title": "El tratamiento estético se descubre, no se busca",
-      "p1": "Quien necesita un dentista escribe «dentista cerca de mí». Quien termina agendando una limpieza facial muchas veces no la estaba buscando esa mañana: la vio. Por eso, en el rubro estético, Instagram y TikTok pesan más que la búsqueda, y el reparto del presupuesto es el inverso al de una clínica dental.",
-      "p2": "Eso no significa que Google no sirva. Sirve para los tratamientos que la gente escribe por su nombre: depilación láser, ácido hialurónico, tratamiento para el acné. Lo que hacemos es repartir según cómo se decide cada tratamiento, no aplicar la misma receta a todo.",
-      "p3": "La estética es de las categorías más vigiladas por las plataformas, y la mayoría de los rechazos vienen de la creatividad, no de la configuración. Meta restringe las fotos de antes y después en tratamientos corporales y los mensajes que señalan el cuerpo de quien mira."
+      "title": "An aesthetic treatment is discovered, not searched for",
+      "p1": "Someone who needs a dentist types “dentist near me”. Someone who ends up booking a facial often wasn't looking for one that morning: they saw it. That is why in aesthetics Instagram and TikTok weigh more than search, and the budget split is the opposite of a dental practice's.",
+      "p2": "That doesn't mean Google is useless. It works for the treatments people type by name: laser hair removal, hyaluronic acid, acne treatment. What we do is split the budget by how each treatment is actually decided, instead of applying the same recipe to everything.",
+      "p3": "Aesthetics is one of the most closely policed categories on the platforms, and most rejections come from the creative, not the setup. Meta restricts before-and-after photos for body treatments and messages that point at the viewer's body."
     },
     "benefits": {
-      "badge": "Qué incluye",
-      "title": "Nuestro sistema para clínicas estéticas",
+      "badge": "What's included",
+      "title": "Our system for aesthetic clinics",
       "items": [
         {
           "title": "Contenido para Instagram y TikTok",
-          "description": "Entre 8 y 12 piezas en cada red que se maneje, desde S/1,500 al mes más IGV. En este rubro el video vertical de persona real rinde más que el diseño gráfico."
+          "description": "Between 8 and 12 pieces on each network managed, from $800 per month. In this category, vertical video with a real person outperforms graphic design."
         },
         {
           "title": "Meta Ads por tratamiento",
-          "description": "Campañas separadas por procedimiento, escritas dentro de las reglas de la categoría: sin antes y después, sin señalar el cuerpo y sin prometer resultados."
+          "description": "Separate campaigns per procedure, written inside the category's rules: no before-and-after, no pointing at the viewer's body and no promised results."
         },
         {
-          "title": "Google Ads donde sí se busca",
-          "description": "Solo para los tratamientos que la gente escribe por su nombre. Gestión desde S/1,800 al mes más IGV, con la inversión publicitaria aparte."
+          "title": "Google Ads where people do search",
+          "description": "Only for the treatments people type by name. Management from $800 per month, with ad spend separate."
         },
         {
           "title": "Landing por tratamiento",
-          "description": "Una página por procedimiento desde S/1,800 más IGV, lista en 1 a 2 semanas, con qué es, cuánto dura, quién lo realiza y cómo se agenda."
+          "description": "One page per procedure from $850, ready in 1 to 2 weeks, covering what it is, how long it lasts, who performs it and how to book."
         },
         {
-          "title": "Ficha de Google y reseñas",
-          "description": "Fotos reales del local, horario, tratamientos listados y respuesta a cada reseña. En estética, las reseñas pesan tanto como la publicidad."
+          "title": "Google Business Profile and reviews",
+          "description": "Real photos of the space, hours, treatments listed and a reply to every review. In aesthetics, reviews weigh as much as advertising."
         },
         {
           "title": "Reporte de costo por cita",
-          "description": "Cada mes: lo invertido, las citas agendadas y el costo por cita, más las que efectivamente llegaron."
+          "description": "Every month: what was spent, appointments booked and cost per appointment, plus how many actually showed up."
         }
       ]
     },
     "process": {
-      "badge": "Cómo trabajamos",
-      "title": "Nuestro proceso con una clínica estética",
+      "badge": "How we work",
+      "title": "Our process with an aesthetic clinic",
       "steps": [
         {
-          "title": "Diagnóstico de tratamientos",
-          "description": "Qué procedimientos quiere llenar la clínica, cuál deja más margen y cuáles se buscan por su nombre en Google."
+          "title": "Treatment audit",
+          "description": "Which procedures the clinic wants to fill, which one carries the best margin and which ones people search by name on Google."
         },
         {
           "title": "Contenido y prueba social",
-          "description": "Producción para Instagram y TikTok, con el equipo de la clínica y testimonios en video en vez de antes y después."
+          "description": "Production for Instagram and TikTok, with the clinic's own team and video testimonials instead of before-and-after shots."
         },
         {
-          "title": "Campañas por procedimiento",
-          "description": "Meta Ads para lo que se descubre, Google Ads para lo que se busca. Presupuesto separado por tratamiento."
+          "title": "Campaigns per procedure",
+          "description": "Meta Ads for what gets discovered, Google Ads for what gets searched. Budget separated by treatment."
         },
         {
-          "title": "Medición por cita",
-          "description": "Se mide el costo por cita agendada y cuántas llegaron, porque en estética la diferencia entre agendar y asistir suele ser grande."
+          "title": "Measured per appointment",
+          "description": "We measure cost per booked appointment and how many showed up, because in aesthetics the gap between booking and attending is usually wide."
         },
         {
           "title": "Reporte y ajuste",
-          "description": "Reporte mensual en soles y ajuste hacia los tratamientos que sí están llenando la agenda."
+          "description": "Monthly report and budget shifted toward the treatments actually filling the calendar."
         }
       ]
     }
@@ -2962,115 +2962,115 @@
     "title": "Preguntas frecuentes",
     "faqs": {
       "q1": {
-        "question": "¿Cuánto cuesta el marketing digital para una clínica estética en Lima?",
-        "answer": "En 3R Core, la gestión de campañas para una clínica estética parte en S/1,800 al mes más IGV y el manejo de redes sociales en S/1,500 al mes más IGV. Una landing por tratamiento cuesta S/1,800 más IGV. La inversión publicitaria va aparte y la paga la clínica directamente a Meta o a Google."
+        "question": "How much does digital marketing for an aesthetic clinic cost?",
+        "answer": "At 3R Core, campaign management for an aesthetic clinic starts at $800 per month and social media management at $800 per month. A landing page per treatment costs $850. Ad spend is separate and the clinic pays it directly to Meta or Google."
       },
       "q2": {
-        "question": "¿Puedo poner fotos de antes y después en mis anuncios?",
-        "answer": "En Meta, no: la plataforma restringe las imágenes de antes y después para tratamientos corporales, y es una de las causas más comunes de rechazo de anuncios en el rubro estético. En su lugar se usa explicación del procedimiento, testimonio en video o contenido del equipo de la clínica."
+        "question": "Can I use before-and-after photos in my ads?",
+        "answer": "On Meta, no: the platform restricts before-and-after images for body treatments, and it is one of the most common reasons ads get rejected in this category. Instead we use procedure explainers, video testimonials or content from the clinic's own team."
       },
       "q3": {
-        "question": "¿Qué funciona mejor para una clínica estética: Instagram o Google?",
-        "answer": "Para la mayoría de tratamientos estéticos, Instagram y TikTok funcionan mejor, porque el tratamiento se descubre antes de buscarse. Google funciona para los procedimientos que la gente escribe por su nombre, como depilación láser o ácido hialurónico. Lo habitual es combinar ambos."
+        "question": "What works better for an aesthetic clinic: Instagram or Google?",
+        "answer": "For most aesthetic treatments, Instagram and TikTok work better, because the treatment is discovered before it is searched. Google works for the procedures people type by name, like laser hair removal or hyaluronic acid. The usual approach combines both."
       },
       "q4": {
-        "question": "¿3R Core garantiza una cantidad de pacientes al mes?",
-        "answer": "No. 3R Core no garantiza un número de pacientes ni resultados estéticos. Lo que se compromete es el trabajo del plan, el reporte mensual con el costo por cita agendada y el ajuste de las campañas según ese dato."
+        "question": "Does 3R Core guarantee a number of patients per month?",
+        "answer": "No. 3R Core does not guarantee a number of patients or aesthetic outcomes. What we commit to is the work in the plan, the monthly report with cost per booked appointment, and adjusting the campaigns according to that number."
       },
       "q5": {
-        "question": "¿Cuánto tarda en verse el resultado de las campañas?",
-        "answer": "Con Meta Ads y Google Ads, las primeras consultas suelen entrar durante la primera semana. Con SEO local y trabajo de ficha de Google, el efecto se nota entre el tercer y el cuarto mes."
+        "question": "How long before campaign results show?",
+        "answer": "With Meta Ads and Google Ads, the first inquiries usually come in during the first week. With local SEO and Google Business Profile work, the effect shows between the third and fourth month."
       },
       "q6": {
-        "question": "¿Cuánto cuesta captar un paciente en una clínica estética?",
-        "answer": "No hay un costo estándar: cambia según el tratamiento, el ticket y el distrito. Captar para una limpieza facial de bajo ticket y para un tratamiento de varios miles de soles no cuesta lo mismo ni se mide igual. Se mide con los datos de la clínica durante el primer mes."
+        "question": "How much does it cost to acquire a patient at an aesthetic clinic?",
+        "answer": "There is no standard cost: it changes with the treatment, the ticket size and the service area. Acquiring for a low-ticket facial and for a several-thousand-dollar treatment neither costs the same nor is measured the same way. It is measured with the clinic's own data during the first month."
       },
       "q7": {
-        "question": "¿Trabajan con clínicas estéticas fuera de Lima?",
-        "answer": "Sí. 3R Core trabaja desde La Molina, Lima, y atiende clínicas de otras ciudades del Perú de forma remota. Lo que cambia es la configuración geográfica de las campañas."
+        "question": "Do you work with aesthetic clinics outside your area?",
+        "answer": "Yes. 3R Core works remotely with clinics anywhere in the United States through its U.S. subsidiary. What changes is the geographic setup of the campaigns."
       },
       "q8": {
-        "question": "¿Los precios incluyen IGV? ¿Emiten factura?",
-        "answer": "Los precios publicados son netos y 3R Core emite factura, donde se suma el IGV del 18%. Una landing de S/1,800 factura S/2,124 en total. El pago se hace 50% al iniciar y 50% al entregar."
+        "question": "Are prices net? How does billing work?",
+        "answer": "Published prices are net and U.S. clients are invoiced in U.S. dollars through our U.S. subsidiary. Payment is 50% to start and 50% on delivery."
       }
     }
   },
   "MarketingClinicasEsteticasSEO": {
-    "seoTitle": "Marketing digital para clínicas estéticas en Lima con foco en citas",
-    "p1": "Un tratamiento estético casi nunca se busca: se descubre. Esa sola diferencia cambia todo el reparto del presupuesto respecto a otras clínicas, porque el momento de decisión no ocurre en el buscador sino en el feed. Instagram y TikTok son el canal principal, y Google entra para los procedimientos que la gente sí escribe por su nombre.",
-    "p2": "En 3R Core el manejo de redes sociales para una clínica estética parte en S/1,500 al mes más IGV, con entre 8 y 12 piezas en cada red que se maneje. La gestión de campañas parte en S/1,800 al mes más IGV, con la inversión publicitaria aparte, que la clínica paga directo a la plataforma.",
-    "p3": "En este rubro el video vertical de persona real rinde más que el diseño gráfico, y por eso el contenido de tipo UGC se combina con el manejo de redes cuando el presupuesto lo permite. No es una moda: es el formato con el que se decide un tratamiento estético.",
-    "p4": "La estética es de las categorías más vigiladas por las plataformas. Meta restringe explícitamente las fotos de antes y después en tratamientos corporales, rechaza los anuncios que señalan el cuerpo de quien mira y no permite segmentar por condiciones de salud. Estas reglas no las pone la agencia: las ponen las plataformas, y son la razón principal por la que se cae una cuenta publicitaria del rubro.",
-    "p5": "Las landing pages por tratamiento cuestan S/1,800 más IGV cada una y están listas en 1 a 2 semanas. Cada una responde qué es el procedimiento, cuánto dura, quién lo realiza y cómo se agenda, que es exactamente lo que el paciente quiere saber antes de escribir.",
-    "p6": "Reportamos en costo por cita agendada y en citas que efectivamente llegaron, porque en estética la diferencia entre una cosa y la otra suele ser grande. El dato de tratamiento cerrado lo aporta la clínica desde su sistema y es lo que convierte el reporte en soles.",
+    "seoTitle": "Digital marketing for aesthetic clinics focused on appointments",
+    "p1": "An aesthetic treatment is almost never searched for: it is discovered. That single difference changes the whole budget split compared with other clinics, because the decision moment happens in the feed, not in the search box. Instagram and TikTok are the main channel, and Google comes in for the procedures people do type by name.",
+    "p2": "At 3R Core, social media management for an aesthetic clinic starts at $800 per month, with between 8 and 12 pieces on each network managed. Campaign management starts at $800 per month, with ad spend separate — the clinic pays that directly to the platform.",
+    "p3": "In this category, vertical video with a real person outperforms graphic design, which is why UGC-style content is combined with social media management when the budget allows. It is not a trend: it is the format in which an aesthetic treatment gets decided.",
+    "p4": "Aesthetics is one of the most closely policed categories on the platforms. Meta explicitly restricts before-and-after photos for body treatments, rejects ads that point at the viewer's body and does not allow targeting by health conditions. These rules are not set by the agency: they are set by the platforms, and they are the main reason an ad account in this category gets suspended.",
+    "p5": "Landing pages per treatment cost $850 each and are ready in 1 to 2 weeks. Each one answers what the procedure is, how long it lasts, who performs it and how to book — exactly what the patient wants to know before reaching out.",
+    "p6": "We report cost per booked appointment and appointments that actually showed up, because in aesthetics the gap between the two is usually wide. Closed-treatment data comes from the clinic's own system and is what turns the report into revenue.",
     "relatedTitle": "Servicios relacionados"
   },
   "MarketingVeterinariasLanding": {
     "hero": {
-      "badge": "Veterinarias · Captación de clientes",
-      "title": "Marketing digital para veterinarias en Lima",
-      "subtitle": "Atraemos clientes para tu veterinaria o clínica veterinaria con ficha de Google, SEO local y campañas. El SEO parte en S/1,800 al mes más IGV y la mayor parte del trabajo que rinde está en el mapa.",
-      "cta": "Quiero más clientes"
+      "badge": "Veterinary clinics · Client acquisition",
+      "title": "Digital marketing for veterinary clinics",
+      "subtitle": "We bring clients to your veterinary clinic with Google Business Profile work, local SEO and campaigns. SEO starts at $500 per month and most of the work that pays off happens on the map.",
+      "cta": "I want more clients"
     },
     "intro": {
-      "title": "Casi nadie elige veterinaria por su página web",
-      "p1": "La elige por el mapa. Cuando alguien busca «veterinaria cerca de mí» o «veterinaria 24 horas» desde el celular, lo que ocupa la pantalla es un bloque de fichas con las estrellas, el horario y el botón de llamar. Quien no está bien ahí no existe para esa búsqueda, por buena que sea su web.",
-      "p2": "Por eso en este rubro el trabajo empieza por la ficha de Google Business Profile: categoría correcta, horario real incluido el de emergencias, fotos del local y respuesta a cada reseña. Es lo más barato de arreglar y lo que más rinde.",
-      "p3": "En el rubro veterinario conviven dos búsquedas muy distintas: la urgente, que se decide por cercanía y por quién contesta el teléfono, y la planificada, que se compara por precio y por reseñas. Cada una necesita una respuesta distinta."
+      "title": "Almost nobody picks a vet because of their website",
+      "p1": "They choose from the map. When someone searches “veterinarian near me” or “24 hour vet” from their phone, what fills the screen is a block of business profiles with stars, hours and a call button. Whoever isn't set up properly there does not exist for that search, however good their website is.",
+      "p2": "That is why in this category the work starts with the Google Business Profile: right category, real hours including emergency hours, photos of the clinic and a reply to every review. It is the cheapest thing to fix and the highest-yielding.",
+      "p3": "Two very different searches live side by side in this category: the urgent one, decided by proximity and by who answers the phone, and the planned one, compared on price and reviews. Each needs a different answer."
     },
     "benefits": {
-      "badge": "Qué incluye",
-      "title": "Nuestro sistema para veterinarias",
+      "badge": "What's included",
+      "title": "Our system for veterinary clinics",
       "items": [
         {
           "title": "Ficha de Google Business Profile",
-          "description": "Categoría correcta, horario real incluido el de emergencias, servicios listados uno a uno, fotos del local y respuesta a cada reseña. Es lo que decide una llamada a las once de la noche."
+          "description": "Right category, real hours including emergency hours, services listed one by one, photos of the clinic and a reply to every review. It is what decides an eleven-at-night phone call."
         },
         {
-          "title": "SEO local por distrito",
-          "description": "Posicionamiento por la zona real de la veterinaria: «veterinaria en Surco», «veterinaria en San Borja». Desde S/1,800 al mes más IGV."
+          "title": "Local SEO by service area",
+          "description": "Positioning for the clinic's real service area: “veterinarian near me”, “emergency vet open now”. From $500 per month."
         },
         {
-          "title": "Páginas por servicio con precio",
-          "description": "Vacunación, esterilización, baño y peluquería, consulta general y emergencias. Desde S/1,800 más IGV cada una, listas en 1 a 2 semanas."
+          "title": "Service pages with pricing",
+          "description": "Vaccination, spay and neuter, grooming, general consultation and emergencies. From $850 each, ready in 1 to 2 weeks."
         },
         {
           "title": "Google Ads para urgencias",
-          "description": "Campañas de búsqueda para captar cuando la decisión es inmediata. Gestión desde S/1,800 al mes más IGV, con la inversión aparte."
+          "description": "Search campaigns to capture demand when the decision is immediate. Management from $800 per month, with ad spend separate."
         },
         {
           "title": "Redes sociales",
-          "description": "Desde S/1,500 al mes más IGV. En veterinaria funciona el contenido del día a día de la clínica, no el diseño publicitario."
+          "description": "From $800 per month. In veterinary practices, day-to-day clinic content works better than advertising design."
         },
         {
           "title": "Tienda virtual, cuando aplica",
-          "description": "Si la veterinaria ya vende alimento y accesorios, una tienda de hasta 50 productos cuesta S/2,500 más IGV y convierte una compra puntual en recurrente."
+          "description": "If the clinic already sells food and supplies, a store with up to 50 products costs $700 and turns a one-off purchase into a recurring one."
         }
       ]
     },
     "process": {
-      "badge": "Cómo trabajamos",
-      "title": "Nuestro proceso con una veterinaria",
+      "badge": "How we work",
+      "title": "Our process with a veterinary clinic",
       "steps": [
         {
-          "title": "Diagnóstico de la ficha",
-          "description": "Revisamos la ficha de Google, la categoría, los horarios y las reseñas antes de invertir un sol en publicidad."
+          "title": "Profile audit",
+          "description": "We review the Google Business Profile, the category, the hours and the reviews before spending a dollar on advertising."
         },
         {
           "title": "Presencia local",
-          "description": "Ordenamos la ficha y trabajamos el posicionamiento por los distritos de los que realmente vienen los clientes."
+          "description": "We fix the profile and work the positioning for the neighborhoods clients actually come from."
         },
         {
-          "title": "Páginas de servicio",
-          "description": "Una página por servicio con el precio o el rango, que después sirve como destino de las campañas."
+          "title": "Service pages",
+          "description": "One page per service with the price or the range, which then works as the destination for the campaigns."
         },
         {
-          "title": "Campañas, si hacen falta",
-          "description": "Las campañas entran cuando hay un servicio concreto que llenar, no por defecto."
+          "title": "Campaigns, if they're needed",
+          "description": "Campaigns come in when there is a specific service to fill, not by default."
         },
         {
           "title": "Reporte y ajuste",
-          "description": "Llamadas desde la ficha, citas agendadas y costo por cita cuando hay campañas activas."
+          "description": "Calls from the profile, booked appointments and cost per appointment when campaigns are running."
         }
       ]
     }
@@ -3080,47 +3080,47 @@
     "title": "Preguntas frecuentes",
     "faqs": {
       "q1": {
-        "question": "¿Cuánto cuesta el marketing digital para una veterinaria en Lima?",
-        "answer": "En 3R Core, el SEO local parte en S/1,800 al mes más IGV, la gestión de campañas también en S/1,800 al mes más IGV y el manejo de redes sociales en S/1,500 al mes más IGV. La inversión publicitaria va aparte y la paga la veterinaria directamente a Google o a Meta."
+        "question": "How much does digital marketing for a veterinary clinic cost?",
+        "answer": "At 3R Core, local SEO starts at $500 per month, campaign management at $800 per month and social media management at $800 per month. Ad spend is separate and the clinic pays it directly to Google or Meta."
       },
       "q2": {
-        "question": "¿Necesito una web o me basta con la ficha de Google?",
-        "answer": "Una veterinaria puede empezar a recibir clientes solo con la ficha de Google bien trabajada, porque la mayoría de estas búsquedas se resuelven en el mapa. La web se vuelve necesaria cuando se quiere hacer publicidad o publicar precios de servicios: los anuncios necesitan una página de destino y esa página decide cuántos clics se convierten en citas."
+        "question": "Do I need a website or is the Google Business Profile enough?",
+        "answer": "A veterinary clinic can start receiving clients with a well-managed Google Business Profile alone, because most of these searches are settled on the map. The website becomes necessary when you want to advertise or publish service prices: ads need a destination page and that page decides how many clicks turn into appointments."
       },
       "q3": {
-        "question": "¿Qué es lo primero que debería hacer una veterinaria en Lima?",
-        "answer": "Ordenar la ficha de Google Business Profile: categoría correcta, horario real incluido el de emergencias, fotos del local y respuesta a todas las reseñas. Es lo más barato de arreglar y lo que más rinde, porque es lo que Google enseña cuando alguien busca «veterinaria cerca de mí»."
+        "question": "What should a veterinary clinic do first?",
+        "answer": "Fix the Google Business Profile: right category, real hours including emergency hours, photos of the clinic and a reply to every review. It is the cheapest thing to fix and the highest-yielding, because it is what Google shows when someone searches “veterinarian near me”."
       },
       "q4": {
-        "question": "¿Sirve tener tienda virtual en una veterinaria?",
-        "answer": "Sirve cuando la veterinaria ya vende alimento, accesorios o antiparasitarios en el local, porque convierte una compra puntual en una recurrente. Una tienda de hasta 50 productos cuesta S/2,500 más IGV en 3R Core. Si solo se da servicio clínico, es mejor invertir primero en ficha de Google y páginas de servicio."
+        "question": "Is an online store worth it for a veterinary clinic?",
+        "answer": "It is worth it when the clinic already sells food, supplies or parasite treatments on site, because it turns a one-off purchase into a recurring one. A store with up to 50 products costs $700 at 3R Core. If you only provide clinical services, it is better to invest first in the Google Business Profile and service pages."
       },
       "q5": {
-        "question": "¿3R Core garantiza una cantidad de clientes al mes?",
-        "answer": "No. 3R Core no garantiza un número de clientes. Lo que se compromete es el trabajo del plan, el reporte mensual con las llamadas y citas generadas, y el ajuste de las campañas según ese dato."
+        "question": "Does 3R Core guarantee a number of clients per month?",
+        "answer": "No. 3R Core does not guarantee a number of clients. What we commit to is the work in the plan, the monthly report with the calls and appointments generated, and adjusting the campaigns according to that number."
       },
       "q6": {
-        "question": "¿Cómo se capta a alguien que busca una veterinaria de urgencia?",
-        "answer": "Estando en el mapa y contestando. La búsqueda urgente casi no se gana con contenido: se decide por cercanía, por horario y por quién responde el teléfono. Por eso la ficha de Google con el horario de emergencias bien puesto vale más que cualquier artículo."
+        "question": "How do you capture someone looking for an emergency vet?",
+        "answer": "By being on the map and answering. The urgent search is almost never won with content: it is decided by proximity, by hours and by who picks up the phone. That is why a Google Business Profile with emergency hours set correctly is worth more than any article."
       },
       "q7": {
-        "question": "¿Trabajan con veterinarias fuera de Lima?",
-        "answer": "Sí. 3R Core trabaja desde La Molina, Lima, y atiende negocios de otras ciudades del Perú de forma remota. Lo que cambia es la configuración geográfica de la ficha y de las campañas."
+        "question": "Do you work with veterinary clinics outside your area?",
+        "answer": "Yes. 3R Core works remotely with practices anywhere in the United States through its U.S. subsidiary. What changes is the geographic setup of the profile and the campaigns."
       },
       "q8": {
-        "question": "¿Los precios incluyen IGV? ¿Emiten factura?",
-        "answer": "Los precios publicados son netos y 3R Core emite factura, donde se suma el IGV del 18%. Una tienda virtual de S/2,500 factura S/2,950 en total. El pago se hace 50% al iniciar y 50% al entregar."
+        "question": "Are prices net? How does billing work?",
+        "answer": "Published prices are net and U.S. clients are invoiced in U.S. dollars through our U.S. subsidiary. Payment is 50% to start and 50% on delivery."
       }
     }
   },
   "MarketingVeterinariasSEO": {
-    "seoTitle": "Marketing digital para veterinarias en Lima con foco en el mapa",
-    "p1": "El dueño de una mascota casi nunca compara páginas web de veterinarias: mira el mapa, las estrellas y el horario. Cuando busca «veterinaria cerca de mí» desde el celular, lo que ocupa la pantalla es un bloque de fichas de empresa, y quien no está bien ahí no entra en la decisión.",
-    "p2": "Por eso el trabajo de una veterinaria empieza en la ficha de Google Business Profile y no en la web. Categoría correcta —«veterinario» y «clínica veterinaria» no compiten por lo mismo—, horario real incluido el de emergencias, fotos del local y del equipo, servicios listados uno a uno y respuesta a cada reseña.",
-    "p3": "Ese trabajo va dentro del plan de SEO local, que en 3R Core parte en S/1,800 al mes más IGV e incluye además el posicionamiento por distrito: «veterinaria en Surco», «veterinaria en San Borja», según de dónde vengan realmente los clientes.",
-    "p4": "En el rubro conviven dos búsquedas que no se parecen. La urgente —«veterinaria 24 horas»— se decide por cercanía y por quién contesta, y casi no se puede ganar con contenido. La planificada —«cuánto cuesta esterilizar a un perro»— se compara por precio y por confianza, y esa sí se gana con una página del servicio que diga la cifra.",
-    "p5": "Las páginas por servicio cuestan desde S/1,800 más IGV cada una y están listas en 1 a 2 semanas. Después sirven como destino de las campañas, porque enviar un anuncio de esterilización a la página de inicio es la forma más cara de perder ese clic.",
-    "p6": "Si la veterinaria ya vende alimento, accesorios o antiparasitarios en el local, una tienda virtual de hasta 50 productos cuesta S/2,500 más IGV y convierte una compra puntual en una recurrente. Es lo que separa a un local de barrio de un negocio con ingresos previsibles.",
+    "seoTitle": "Digital marketing for veterinary clinics focused on the map",
+    "p1": "A pet owner almost never compares veterinary websites: they look at the map, the stars and the hours. When they search “veterinarian near me” from their phone, what fills the screen is a block of business profiles, and whoever isn't set up properly there is not part of the decision.",
+    "p2": "That is why the work for a veterinary clinic starts with the Google Business Profile and not the website. Right category — “veterinarian” and “animal hospital” do not compete for the same thing — real hours including emergency hours, photos of the clinic and the team, services listed one by one and a reply to every review.",
+    "p3": "That work sits inside the local SEO plan, which at 3R Core starts at $500 per month and also includes positioning by service area: “veterinarian near me”, “emergency vet open now”, depending on where your clients actually come from.",
+    "p4": "Two searches that look nothing alike live side by side in this category. The urgent one — “24 hour vet” — is decided by proximity and by who answers, and can barely be won with content. The planned one — “how much does it cost to spay a dog” — is compared on price and trust, and that one is won with a service page that states the number.",
+    "p5": "Service pages cost from $850 each and are ready in 1 to 2 weeks. They then work as the destination for the campaigns, because sending a spay-and-neuter ad to the homepage is the most expensive way to lose that click.",
+    "p6": "If the clinic already sells food, supplies or parasite treatments on site, an online store with up to 50 products costs $700 and turns a one-off purchase into a recurring one. It is what separates a neighborhood clinic from a business with predictable revenue.",
     "relatedTitle": "Servicios relacionados"
   }
 }

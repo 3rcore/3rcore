@@ -28,9 +28,21 @@
     "ecommerce": "Marketing digital para tiendas online en Estados Unidos",
     "posicionamientoia": "Posicionamiento en IA (GEO) para negocios hispanos en Estados Unidos",
     "abogados": "Marketing digital para estudios de abogados",
-    "clinicasdentales": "Agencia de marketing digital para clínicas dentales en Lima, Perú",
-    "clinicasesteticas": "Agencia de marketing digital para clínicas estéticas en Lima, Perú",
-    "veterinarias": "Agencia de marketing digital para veterinarias en Lima, Perú"
+    "clinicasdentales": "Agencia de marketing digital para clínicas dentales en Estados Unidos",
+    "clinicasesteticas": "Agencia de marketing digital para clínicas estéticas y medspas en Estados Unidos",
+    "veterinarias": "Agencia de marketing digital para veterinarias en Estados Unidos",
+    "branding": "Agencia de branding corporativo y diseño de identidad de marca para negocios en Estados Unidos",
+    "googleads": "Agencia certificada en Google Ads y campañas SEM para negocios en Estados Unidos",
+    "socialmedia": "Agencia de manejo de redes sociales y community manager para negocios en Estados Unidos",
+    "metaads": "Agencia de Meta Ads (Facebook e Instagram) para negocios en Estados Unidos",
+    "tiktokads": "Agencia de TikTok Ads para negocios en Estados Unidos",
+    "performance": "Agencia de performance marketing y adquisición con ROI para negocios en Estados Unidos",
+    "emailmarketing": "Agencia de email marketing y automatización para negocios en Estados Unidos",
+    "clinicas": "Agencia de marketing digital para clínicas y consultorios en Estados Unidos",
+    "inmobiliarias": "Agencia de marketing digital para inmobiliarias y agentes en Estados Unidos",
+    "ugc": "Agencia de producción de contenido UGC para campañas en Estados Unidos",
+    "influencers": "Agencia de influencer marketing y campañas con creadores para marcas en Estados Unidos",
+    "pr": "Agencia de relaciones públicas, prensa y gestión de reputación para marcas en Estados Unidos"
   },
   "HispanicLanding": {
     "hero": {
@@ -586,7 +598,7 @@
     }
   },
   "PosicionamientoIASEO": {
-    "seoTitle": "Posicionamiento en IA (GEO) en Lima — que ChatGPT, Perplexity y Copilot citen tu empresa",
+    "seoTitle": "Posicionamiento en IA (GEO) para negocios en EE.UU. — que ChatGPT, Perplexity y Copilot citen tu empresa",
     "p1": "3R Core trabaja el posicionamiento en inteligencia artificial —GEO— para negocios hispanos en Estados Unidos: preparamos tu web para que ChatGPT, Perplexity, Copilot, Gemini y Claude la usen como fuente y te nombren cuando alguien pregunta por lo que vendes. Va dentro del servicio de SEO, que cuesta $500 al mes, sin contratos forzosos.",
     "p2": "La diferencia con el SEO clásico es la unidad de trabajo: en Google se posiciona una página y en un asistente se cita un pasaje. El modelo recorta el fragmento que responde la pregunta y lo atribuye, así que una página que tarda tres párrafos en dar el dato pierde la cita aunque esté bien posicionada.",
     "p3": "Lo primero que revisamos es el acceso. GPTBot, OAI-SearchBot, PerplexityBot, ClaudeBot y Google-Extended tienen que poder leer la web, y eso se comprueba comparando los bytes que recibe cada agente contra los de un navegador: un código 200 no prueba nada, porque un cortafuegos puede servirle una pantalla vacía al rastreador y la página completa a una persona.",
@@ -597,15 +609,15 @@
   },
   "MarketingAbogadosLanding": {
     "hero": {
-      "badge": "Marketing jurídico · Lima, Perú",
-      "title": "Marketing digital para estudios de abogados en Lima que se mide en consultas, no en visitas",
+      "badge": "Marketing jurídico · Estados Unidos",
+      "title": "Marketing digital para estudios de abogados que se mide en consultas, no en visitas",
       "subtitle": "Quien busca un abogado no está comparando precios: está resolviendo un problema que le quita el sueño y quiere saber a quién puede confiárselo. Trabajamos la ficha de Google, el posicionamiento local y el contenido que genera esa confianza antes de la primera llamada.",
       "cta": "Quiero más consultas"
     },
     "intro": {
       "title": "¿Por qué el marketing para abogados no se parece al del resto?",
       "p1": "Porque la decisión es de confianza y no de precio. En casi cualquier otro sector el cliente compara opciones y elige la más conveniente; con un estudio jurídico, la persona llega asustada, con un plazo encima y sin saber distinguir a un buen abogado de uno malo. Elige a quien le transmite que ha resuelto antes un caso como el suyo.",
-      "p2": "Eso cambia dónde se juega el trabajo. La búsqueda casi siempre es local y urgente —«abogado laboral en Lima», «qué hago si me despiden»— y se resuelve en el mapa antes que en la web: la ficha de Google, con sus reseñas y su categoría bien puesta, decide más llamadas que la portada. Es lo primero que ordenamos.",
+      "p2": "Eso cambia dónde se juega el trabajo. La búsqueda casi siempre es local y urgente —«abogado laboral cerca de mí», «qué hago si me despiden»— y se resuelve en el mapa antes que en la web: la ficha de Google, con sus reseñas y su categoría bien puesta, decide más llamadas que la portada. Es lo primero que ordenamos.",
       "p3": "Y cambia el contenido. Una página que explica con claridad qué hacer en las primeras 48 horas de un despido capta a alguien que necesita un abogado hoy. Un artículo genérico sobre «la importancia del derecho laboral» no capta a nadie. Escribimos lo primero."
     },
     "benefits": {
@@ -670,7 +682,7 @@
     "title": "Marketing para abogados — preguntas frecuentes",
     "faqs": {
       "q1": {
-        "question": "¿Cuánto cuesta el marketing digital para un estudio de abogados en Lima?",
+        "question": "¿Cuánto cuesta el marketing digital para un estudio de abogados?",
         "answer": "Para clientes en Estados Unidos se cotiza con los precios publicados en dólares: SEO $500 al mes y página web desde $850. No cobramos una tarifa distinta por ser un estudio jurídico. Precios netos, sin contratos forzosos."
       },
       "q2": {
@@ -678,7 +690,7 @@
         "answer": "La ficha de Google, casi siempre, y por un margen amplio. La mayoría de búsquedas de abogado son locales y urgentes, y se resuelven en el mapa: la persona ve tres estudios con sus reseñas y llama. Por eso empezamos siempre por la ficha, aunque la web esté por rehacer: es lo que da resultado antes."
       },
       "q3": {
-        "question": "¿Puede un abogado hacer publicidad de sus servicios en Perú?",
+        "question": "¿Puede un abogado hacer publicidad de sus servicios en Estados Unidos?",
         "answer": "La publicidad de servicios legales está sujeta a las normas deontológicas del colegio profesional correspondiente, que regulan cómo puede comunicarse un abogado. No reproducimos aquí ningún artículo concreto porque esas normas cambian y una cita equivocada te perjudicaría a ti, no a nosotros: antes de lanzar cualquier campaña revisamos contigo el código de ética de tu colegio y ajustamos los mensajes. Lo que sí podemos afirmar es que las prácticas que recomendamos —ficha de Google, contenido informativo y reseñas de clientes reales— son las más conservadoras del abanico."
       },
       "q4": {
@@ -704,13 +716,279 @@
     }
   },
   "MarketingAbogadosSEO": {
-    "seoTitle": "Marketing digital para abogados y estudios jurídicos en Lima, Perú",
-    "p1": "3R Core hace marketing digital para estudios de abogados en Lima y en todo el Perú: ficha de Google, posicionamiento local por área de práctica y contenido que genera confianza antes de la primera llamada. Se cotiza con los precios publicados de la agencia —SEO S/1,800 al mes, web desde S/1,800— sin contratos forzosos.",
+    "seoTitle": "Marketing digital para abogados y estudios jurídicos en Estados Unidos",
+    "p1": "3R Core hace marketing digital para estudios de abogados en Estados Unidos: ficha de Google, posicionamiento local por área de práctica y contenido que genera confianza antes de la primera llamada. Se cotiza con los precios publicados de la agencia —SEO $500 al mes, web desde $850— sin contratos forzosos.",
     "p2": "El marketing jurídico no se parece al del resto de sectores porque la decisión es de confianza y no de precio. Quien busca un abogado llega con un plazo encima y sin saber distinguir a uno bueno de uno malo, así que elige a quien le transmite que ya resolvió un caso como el suyo.",
     "p3": "Por eso empezamos por la ficha de Google. La mayoría de estas búsquedas son locales y urgentes y se resuelven en el mapa: la persona ve tres estudios con sus reseñas y llama. La ficha, con su categoría correcta, sus áreas de práctica como servicios y sus reseñas respondidas, reparte más llamadas que la portada de la web.",
     "p4": "Después, una página por área de práctica. Laboral, familia, penal, civil, notarial y corporativo tienen consultas, urgencias y clientes distintos, y una sola página de «servicios legales» no compite con ninguna de ellas.",
     "p5": "El contenido que funciona es el que responde a la urgencia: qué hacer, en qué plazo y con qué documentos. Ese lo lee alguien que necesita un abogado hoy. Un artículo general sobre la importancia del derecho laboral no lo lee nadie que esté a punto de contratar.",
     "p6": "Sobre publicidad y normas deontológicas: la comunicación de servicios legales está sujeta a las reglas del colegio profesional correspondiente. No citamos artículos concretos porque esas normas cambian y una cita equivocada perjudicaría al estudio; antes de lanzar campañas las revisamos con el cliente. Las prácticas que recomendamos —ficha de Google, contenido informativo y reseñas reales— son las más conservadoras del abanico.",
     "relatedTitle": "Servicios relacionados"
+  },
+  "MarketingClinicasDentalesLanding": {
+    "process": {
+      "steps": [
+        {
+          "title": "Diagnóstico de tratamientos",
+          "description": "Qué tratamientos quiere llenar la clínica, cuál deja más margen y qué compite en su zona de servicio."
+        },
+        {
+          "title": "Ficha y presencia local",
+          "description": "Ordenamos la ficha de Google, las categorías, las fotos y las reseñas antes de invertir un sol en publicidad."
+        },
+        {
+          "title": "Campañas y landings",
+          "description": "Una campaña y una landing por tratamiento, con el presupuesto separado para que no se mezclen."
+        },
+        {
+          "title": "Medición por cita",
+          "description": "Se mide el costo por cita agendada durante el primer mes y esa es la línea base sobre la que se ajusta."
+        },
+        {
+          "title": "Reporte y ajuste",
+          "description": "Reporte mensual y ajuste de presupuesto hacia los tratamientos que sí están agendando."
+        }
+      ]
+    },
+    "benefits": {
+      "items": [
+        {
+          "title": "Google Ads por tratamiento",
+          "description": "Campañas separadas por implantes, ortodoncia, blanqueamiento y urgencias, con palabras clave negativas desde el día uno para no pagar clics que no agendan."
+        },
+        {
+          "title": "Ficha de Google Business Profile",
+          "description": "Categoría correcta, horarios reales, fotos del consultorio, servicios listados y respuesta a cada reseña. Es lo que aparece en el mapa cuando alguien busca «dentista cerca de mí»."
+        },
+        {
+          "title": "Landing por tratamiento",
+          "description": "Una página por servicio desde $850, lista en 1 a 2 semanas, con lo que incluye, cuánto dura, cuánto cuesta y el botón de agendar."
+        },
+        {
+          "title": "SEO local por zona de servicio",
+          "description": "Posicionamiento en Google y Google Maps por la zona de influencia real de la clínica, desde $500 al mes."
+        },
+        {
+          "title": "Cumplimiento del rubro salud",
+          "description": "Redacción sin promesas de resultado clínico y sin segmentación por condición de salud, que es lo que exigen Google y Meta en esta categoría."
+        },
+        {
+          "title": "Reporte de costo por cita",
+          "description": "Cada mes: lo invertido, las citas agendadas y el costo por cita. Sin capturas de alcance ni de impresiones sueltas."
+        }
+      ]
+    },
+    "hero": {
+      "title": "Marketing digital para clínicas dentales en Estados Unidos",
+      "subtitle": "Atraemos pacientes para tu clínica dental o consultorio odontológico con Google Ads de salud, SEO local y ficha de Google. La gestión parte en $800 al mes y se reporta en citas agendadas."
+    }
+  },
+  "MarketingClinicasEsteticasLanding": {
+    "process": {
+      "steps": [
+        {
+          "title": "Diagnóstico de tratamientos",
+          "description": "Qué procedimientos quiere llenar la clínica, cuál deja más margen y cuáles se buscan por su nombre en Google."
+        },
+        {
+          "title": "Contenido y prueba social",
+          "description": "Producción para Instagram y TikTok, con el equipo de la clínica y testimonios en video en vez de antes y después."
+        },
+        {
+          "title": "Campañas por procedimiento",
+          "description": "Meta Ads para lo que se descubre, Google Ads para lo que se busca. Presupuesto separado por tratamiento."
+        },
+        {
+          "title": "Medición por cita",
+          "description": "Se mide el costo por cita agendada y cuántas llegaron, porque en estética la diferencia entre agendar y asistir suele ser grande."
+        },
+        {
+          "title": "Reporte y ajuste",
+          "description": "Reporte mensual y ajuste hacia los tratamientos que sí están llenando la agenda."
+        }
+      ]
+    },
+    "benefits": {
+      "items": [
+        {
+          "title": "Contenido para Instagram y TikTok",
+          "description": "Entre 8 y 12 piezas en cada red que se maneje, desde $800 al mes. En este rubro el video vertical de persona real rinde más que el diseño gráfico."
+        },
+        {
+          "title": "Meta Ads por tratamiento",
+          "description": "Campañas separadas por procedimiento, escritas dentro de las reglas de la categoría: sin antes y después, sin señalar el cuerpo y sin prometer resultados."
+        },
+        {
+          "title": "Google Ads donde sí se busca",
+          "description": "Solo para los tratamientos que la gente escribe por su nombre. Gestión desde $800 al mes, con la inversión publicitaria aparte."
+        },
+        {
+          "title": "Landing por tratamiento",
+          "description": "Una página por procedimiento desde $850, lista en 1 a 2 semanas, con qué es, cuánto dura, quién lo realiza y cómo se agenda."
+        },
+        {
+          "title": "Ficha de Google y reseñas",
+          "description": "Fotos reales del local, horario, tratamientos listados y respuesta a cada reseña. En estética, las reseñas pesan tanto como la publicidad."
+        },
+        {
+          "title": "Reporte de costo por cita",
+          "description": "Cada mes: lo invertido, las citas agendadas y el costo por cita, más las que efectivamente llegaron."
+        }
+      ]
+    },
+    "hero": {
+      "title": "Marketing digital para clínicas estéticas y medspas en Estados Unidos",
+      "subtitle": "Atraemos pacientes para tu clínica estética o centro de medicina estética con Instagram, Meta Ads y SEO local. Las redes parten en $800 al mes y se reporta en citas agendadas."
+    }
+  },
+  "MarketingVeterinariasLanding": {
+    "benefits": {
+      "items": [
+        {
+          "title": "Ficha de Google Business Profile",
+          "description": "Categoría correcta, horario real incluido el de emergencias, servicios listados uno a uno, fotos del local y respuesta a cada reseña. Es lo que decide una llamada a las once de la noche."
+        },
+        {
+          "title": "SEO local por zona de servicio",
+          "description": "Posicionamiento por la zona real de la veterinaria: «veterinaria cerca de mí», «veterinaria de emergencia abierta ahora». Desde $500 al mes."
+        },
+        {
+          "title": "Páginas por servicio con precio",
+          "description": "Vacunación, esterilización, baño y peluquería, consulta general y emergencias. Desde $850 cada una, listas en 1 a 2 semanas."
+        },
+        {
+          "title": "Google Ads para urgencias",
+          "description": "Campañas de búsqueda para captar cuando la decisión es inmediata. Gestión desde $800 al mes, con la inversión aparte."
+        },
+        {
+          "title": "Redes sociales",
+          "description": "Desde $800 al mes. En veterinaria funciona el contenido del día a día de la clínica, no el diseño publicitario."
+        },
+        {
+          "title": "Tienda virtual, cuando aplica",
+          "description": "Si la veterinaria ya vende alimento y accesorios, una tienda de hasta 50 productos cuesta $700 y convierte una compra puntual en recurrente."
+        }
+      ]
+    },
+    "hero": {
+      "title": "Marketing digital para veterinarias en Estados Unidos",
+      "subtitle": "Atraemos clientes para tu veterinaria o clínica veterinaria con ficha de Google, SEO local y campañas. El SEO parte en $500 al mes y la mayor parte del trabajo que rinde está en el mapa."
+    }
+  },
+  "PosicionamientoIALanding": {
+    "benefits": {
+      "items": [
+        {
+          "title": "Dejar entrar a los rastreadores",
+          "description": "GPTBot, OAI-SearchBot, PerplexityBot, ClaudeBot y Google-Extended tienen que poder leer tu web. Lo comprobamos comparando los bytes que recibe cada agente contra los de un navegador: un 200 no basta, porque un cortafuegos puede servirle una pantalla vacía al bot y una web completa a ti."
+        },
+        {
+          "title": "Reescribir para que el pasaje se pueda extraer",
+          "description": "Respuesta directa en las primeras cincuenta palabras después de cada encabezado, encabezados formulados como la pregunta real, y secciones cortas. Un bloque de ochocientas palabras sin subtítulo no tiene nada que un modelo pueda recortar."
+        },
+        {
+          "title": "Poner cifra, unidad, fecha y fuente",
+          "description": "Los asistentes citan datos concretos y verificables, no adjetivos. «Entre $850 y $2,400 según el tipo de proyecto, revisado en agosto de 2026» se cita; «precios muy competitivos» no se cita nunca."
+        },
+        {
+          "title": "Marcar la página con datos estructurados",
+          "description": "Organization, Service, FAQPage y Breadcrumb coherentes con lo que dice el texto. El marcado no inventa autoridad, pero le dice al modelo qué es cada cosa y evita que tu propia web se contradiga."
+        },
+        {
+          "title": "Cubrir las preguntas, no las palabras clave",
+          "description": "Nadie le escribe «agencia marketing digital» a un asistente: le escribe «¿qué agencia me recomiendas para mi negocio y cuánto me va a cobrar?». Trabajamos el mapa de preguntas reales, que es más largo y más específico que el de palabras clave."
+        },
+        {
+          "title": "Medir el canal por separado",
+          "description": "En Google Analytics separamos el tráfico que llega de ChatGPT, Perplexity, Copilot, Gemini y Claude, y lo comparamos con el orgánico en sesiones, permanencia y conversión. Sin esa separación no sabes si el trabajo sirve."
+        }
+      ]
+    },
+    "hero": {
+      "badge": "Posicionamiento en IA · GEO · Estados Unidos"
+    }
+  },
+  "MarketingClinicasDentalesFAQ": {
+    "faqs": {
+      "q1": {
+        "question": "¿Cuánto cuesta el marketing digital para una clínica dental?",
+        "answer": "En 3R Core, la gestión de Google Ads para una clínica dental parte en $800 al mes, y el SEO mensual en $500. El manejo de redes sociales parte en $800 al mes. La inversión en anuncios va aparte y la paga la clínica directamente a Google o a Meta."
+      },
+      "q2": {
+        "answer": "Sí. Google permite anunciar servicios odontológicos, pero la categoría de salud tiene restricciones: no se puede prometer un resultado clínico ni segmentar por datos sensibles de salud. La campaña se arma por intención de búsqueda y por zona geográfica."
+      },
+      "q5": {
+        "question": "¿Cuánto cuesta conseguir un paciente dental?",
+        "answer": "No hay una cifra fija: depende del tratamiento, de la zona y de la competencia que puje por esa búsqueda. Captar para un blanqueamiento y para un implante no cuesta lo mismo. Se mide con los datos de cada clínica durante el primer mes y recién ahí se fija la meta."
+      },
+      "q7": {
+        "question": "¿Trabajan con clínicas dentales fuera de su ciudad?",
+        "answer": "Sí. 3R Core atiende clínicas de cualquier estado de EE.UU. de forma remota, a través de su filial allá. El trabajo de ficha de Google y campañas se hace igual; lo que cambia es la configuración geográfica de las campañas."
+      },
+      "q8": {
+        "question": "¿Los precios son netos? ¿Cómo se factura?",
+        "answer": "Los precios publicados son netos y los clientes de EE.UU. se facturan en dólares a través de nuestra filial estadounidense. El pago se hace en dos partes: 50% al iniciar el proyecto y 50% al entregarlo."
+      }
+    }
+  },
+  "MarketingClinicasDentalesSEO": {
+    "seoTitle": "Marketing digital para clínicas dentales en EE.UU. con foco en citas",
+    "p2": "En 3R Core trabajamos las dos. La gestión de Google Ads para una clínica dental parte en $800 al mes y el SEO mensual en $500, con la inversión publicitaria aparte, que la clínica paga directo a la plataforma y decide cuánto es.",
+    "p3": "Las landing pages por tratamiento cuestan $850 cada una y están listas en 1 a 2 semanas. Cada una responde lo que el paciente pregunta antes de agendar: qué incluye el tratamiento, cuánto dura, cuánto cuesta y cómo se paga. Enviar el tráfico de una campaña de implantes a la página de inicio es la forma más cara de perder ese clic.",
+    "p5": "La ficha de Google Business Profile es lo más barato de arreglar y lo que más rinde en este rubro: es lo que ocupa la pantalla cuando alguien busca «dentista cerca de mí» desde el celular. Categoría correcta, horario real, fotos del consultorio y respuesta a cada reseña.",
+    "p6": "Reportamos en costo por cita agendada, no en alcance. Y pedimos a la clínica el dato de tratamiento cerrado desde su propio sistema, porque es lo único que convierte el reporte de clics en un reporte de dólares."
+  },
+  "MarketingClinicasEsteticasFAQ": {
+    "faqs": {
+      "q1": {
+        "question": "¿Cuánto cuesta el marketing digital para una clínica estética?",
+        "answer": "En 3R Core, la gestión de campañas para una clínica estética parte en $800 al mes y el manejo de redes sociales en $800 al mes. Una landing por tratamiento cuesta $850. La inversión publicitaria va aparte y la paga la clínica directamente a Meta o a Google."
+      },
+      "q6": {
+        "answer": "No hay un costo estándar: cambia según el tratamiento, el ticket y la zona. Captar para una limpieza facial de bajo ticket y para un tratamiento de varios miles de dólares no cuesta lo mismo ni se mide igual. Se mide con los datos de la clínica durante el primer mes."
+      },
+      "q7": {
+        "question": "¿Trabajan con clínicas estéticas fuera de su ciudad?",
+        "answer": "Sí. 3R Core atiende clínicas de cualquier estado de EE.UU. de forma remota, a través de su filial allá. Lo que cambia es la configuración geográfica de las campañas."
+      },
+      "q8": {
+        "question": "¿Los precios son netos? ¿Cómo se factura?",
+        "answer": "Los precios publicados son netos y los clientes de EE.UU. se facturan en dólares a través de nuestra filial estadounidense. El pago se hace 50% al iniciar y 50% al entregar."
+      }
+    }
+  },
+  "MarketingClinicasEsteticasSEO": {
+    "seoTitle": "Marketing digital para clínicas estéticas en EE.UU. con foco en citas",
+    "p2": "En 3R Core el manejo de redes sociales para una clínica estética parte en $800 al mes, con entre 8 y 12 piezas en cada red que se maneje. La gestión de campañas parte en $800 al mes, con la inversión publicitaria aparte, que la clínica paga directo a la plataforma.",
+    "p5": "Las landing pages por tratamiento cuestan $850 cada una y están listas en 1 a 2 semanas. Cada una responde qué es el procedimiento, cuánto dura, quién lo realiza y cómo se agenda, que es exactamente lo que el paciente quiere saber antes de escribir.",
+    "p6": "Reportamos en costo por cita agendada y en citas que efectivamente llegaron, porque en estética la diferencia entre una cosa y la otra suele ser grande. El dato de tratamiento cerrado lo aporta la clínica desde su sistema y es lo que convierte el reporte en dólares."
+  },
+  "MarketingVeterinariasFAQ": {
+    "faqs": {
+      "q1": {
+        "question": "¿Cuánto cuesta el marketing digital para una veterinaria?",
+        "answer": "En 3R Core, el SEO local parte en $500 al mes, la gestión de campañas en $800 al mes y el manejo de redes sociales en $800 al mes. La inversión publicitaria va aparte y la paga la veterinaria directamente a Google o a Meta."
+      },
+      "q3": {
+        "question": "¿Qué es lo primero que debería hacer una veterinaria?"
+      },
+      "q4": {
+        "answer": "Sirve cuando la veterinaria ya vende alimento, accesorios o antiparasitarios en el local, porque convierte una compra puntual en una recurrente. Una tienda de hasta 50 productos cuesta $700 en 3R Core. Si solo se da servicio clínico, es mejor invertir primero en ficha de Google y páginas de servicio."
+      },
+      "q7": {
+        "question": "¿Trabajan con veterinarias fuera de su ciudad?",
+        "answer": "Sí. 3R Core atiende negocios de cualquier estado de EE.UU. de forma remota, a través de su filial allá. Lo que cambia es la configuración geográfica de la ficha y de las campañas."
+      },
+      "q8": {
+        "question": "¿Los precios son netos? ¿Cómo se factura?",
+        "answer": "Los precios publicados son netos y los clientes de EE.UU. se facturan en dólares a través de nuestra filial estadounidense. El pago se hace 50% al iniciar y 50% al entregar."
+      }
+    }
+  },
+  "MarketingVeterinariasSEO": {
+    "seoTitle": "Marketing digital para veterinarias en EE.UU. con foco en el mapa",
+    "p3": "Ese trabajo va dentro del plan de SEO local, que en 3R Core parte en $500 al mes e incluye además el posicionamiento por zona de servicio: «veterinaria cerca de mí», «veterinaria de emergencia abierta ahora», según de dónde vengan realmente los clientes.",
+    "p5": "Las páginas por servicio cuestan desde $850 cada una y están listas en 1 a 2 semanas. Después sirven como destino de las campañas, porque enviar un anuncio de esterilización a la página de inicio es la forma más cara de perder ese clic.",
+    "p6": "Si la veterinaria ya vende alimento, accesorios o antiparasitarios en el local, una tienda virtual de hasta 50 productos cuesta $700 y convierte una compra puntual en una recurrente. Es lo que separa a un local de barrio de un negocio con ingresos previsibles."
   }
 }

@@ -254,14 +254,19 @@ const nextConfig: NextConfig = {
       //   es|en|us    los tres locales reales
       //   api|_next   endpoints y assets del framework
       //   og|icons|images|fonts   estáticos de /public
-      //   admin       el panel, que vive fuera de [locale]
+      //   admin       el CMS del blog, que vive fuera de [locale]
+      //   panel       el panel de operaciones. Va servido por el rewrite a
+      //               3rcore-work.vercel.app, pero en Next los redirects se
+      //               evalúan ANTES que los rewrites: sin esta exclusión
+      //               /panel caía en 308 a /es/panel y devolvía 404 (roto
+      //               desde el 29-ago-2026, cuando se añadió esta regla).
       //   performance-marketing   landing de Google Ads en la raíz: recibe 536
       //                           sesiones de pago en 90 días. Redirigirla
       //                           rompería las campañas.
       //   [^.]*       cualquier cosa con punto es un fichero: robots.txt,
       //               sitemap.xml, llms.txt, favicon.ico, imágenes…
       {
-        source: '/:path((?!es$|es/|en$|en/|us$|us/|api/|_next/|og/|icons/|images/|fonts/|admin$|admin/|performance-marketing$)[^.]*)',
+        source: '/:path((?!es$|es/|en$|en/|us$|us/|api/|_next/|og/|icons/|images/|fonts/|admin$|admin/|panel$|panel/|performance-marketing$)[^.]*)',
         destination: '/es/:path',
         permanent: true,
       },

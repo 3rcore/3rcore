@@ -1,116 +1,120 @@
 'use client'
 
-import { useState, useEffect, useCallback } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import dynamic from 'next/dynamic'
+import { useRouter } from 'next/navigation'
 import { createBrowserClient } from '@/lib/supabase/client'
 import type { BlogPost, BlogCategory } from '@/lib/supabase/types'
-import { useRouter } from 'next/navigation'
-import dynamic from 'next/dynamic'
+import {
+  LOCALES, LOCALE_LABEL, scorePost, scoreColor, slugify, type Locale, type SeoCheck,
+} from '@/lib/admin/seo-score'
 
-const TipTapEditor = dynamic(() => import('./TipTapEditor'), { ssr: false })
+const TipTapEditor = dynamic(() => import('./TipTapEditor'), {
+  ssr: false,
+  loading: () => <div className="skeleton" style={{ height: 340, borderRadius: 'var(--r-lg)' }} aria-hidden />,
+})
 
-function slugify(text: string): string {
-  return text
-    .toLowerCase()
-    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-|-$/g, '')
-}
+const MAX_IMAGE_MB = 5
 
-interface PostEditorProps {
-  post?: BlogPost
-}
-
-export default function PostEditor({ post }: PostEditorProps) {
+/**
+ * Editor de artículo.
+ *
+ * Reorganización respecto a la versión anterior:
+ *  - La lista de comprobación SEO estaba dentro del mismo bloque plegable que
+ *    los campos que califica, así que para ver qué faltaba había que bajar por
+ *    debajo de los campos. Ahora vive en la columna lateral y se actualiza
+ *    mientras escribes.
+ *  - Los ocho campos de SEO eran una pila. Se agrupan en tres pestañas:
+ *    buscador, redes y avanzado.
+ *  - `alert()` para errores y para «título obligatorio». Ahora el error se
+ *    muestra donde ocurre y el campo se enfoca.
+ *  - No había aviso al salir con cambios sin guardar. En un CMS eso es perder
+ *    una hora de trabajo por cambiar de pestaña.
+ *  - ⌘S / Ctrl+S guarda.
+ */
+export default function PostEditor({ post }: { post?: BlogPost }) {
   const router = useRouter()
   const isEdit = !!post
-  const [saving, setSaving] = useState(false)
+
   const [categories, setCategories] = useState<BlogCategory[]>([])
-  const [seoOpen, setSeoOpen] = useState(true)
-  const [previewOpen, setPreviewOpen] = useState(false)
+  const [saving, setSaving] = useState<false | 'draft' | 'publish'>(false)
+  const [error, setError] = useState('')
+  const [seoTab, setSeoTab] = useState<'search' | 'social' | 'advanced'>('search')
+  const [dirty, setDirty] = useState(false)
+  const titleRef = useRef<HTMLTextAreaElement>(null)
 
-  // Form state
-  const [title, setTitle] = useState(post?.title || '')
-  const [slug, setSlug] = useState(post?.slug || '')
-  const [excerpt, setExcerpt] = useState(post?.excerpt || '')
-  const [content, setContent] = useState(post?.content || '')
-  const [featuredImage, setFeaturedImage] = useState(post?.featured_image || '')
-  const [featuredImageAlt, setFeaturedImageAlt] = useState(post?.featured_image_alt || '')
+  const [title, setTitle] = useState(post?.title ?? '')
+  const [slug, setSlug] = useState(post?.slug ?? '')
+  const [slugManual, setSlugManual] = useState(isEdit)
+  const [excerpt, setExcerpt] = useState(post?.excerpt ?? '')
+  const [content, setContent] = useState(post?.content ?? '')
+  const [featuredImage, setFeaturedImage] = useState(post?.featured_image ?? '')
+  const [featuredImageAlt, setFeaturedImageAlt] = useState(post?.featured_image_alt ?? '')
   const [status, setStatus] = useState<'draft' | 'published'>(post?.status === 'published' ? 'published' : 'draft')
-  // 'us' = español para Estados Unidos (es-US). Se añade el 28-ago-2026: hasta
-  // entonces /us servía los posts peruanos y no había forma de escribir para el
-  // mercado hispano de EE.UU. sin que el artículo acabara indexado como Perú.
-  const [locale, setLocale] = useState<'es' | 'en' | 'us'>(post?.locale || 'es')
-  const [categoryId, setCategoryId] = useState(post?.category_id || '')
-  const [authorName, setAuthorName] = useState(post?.author_name || 'Piero Roque')
+  const [locale, setLocale] = useState<Locale>((post?.locale as Locale) ?? 'es')
+  const [categoryId, setCategoryId] = useState(post?.category_id ?? '')
+  const [authorName, setAuthorName] = useState(post?.author_name ?? 'Piero Roque')
 
-  // SEO state
-  const [metaTitle, setMetaTitle] = useState(post?.meta_title || '')
-  const [metaDescription, setMetaDescription] = useState(post?.meta_description || '')
-  const [ogTitle, setOgTitle] = useState(post?.og_title || '')
-  const [ogDescription, setOgDescription] = useState(post?.og_description || '')
-  const [ogImage, setOgImage] = useState(post?.og_image || '')
-  const [canonicalUrl, setCanonicalUrl] = useState(post?.canonical_url || '')
-  const [robots, setRobots] = useState(post?.robots || 'index, follow')
-  const [focusKeyword, setFocusKeyword] = useState(post?.focus_keyword || '')
-
-  const [slugManual, setSlugManual] = useState(false)
+  const [metaTitle, setMetaTitle] = useState(post?.meta_title ?? '')
+  const [metaDescription, setMetaDescription] = useState(post?.meta_description ?? '')
+  const [ogTitle, setOgTitle] = useState(post?.og_title ?? '')
+  const [ogDescription, setOgDescription] = useState(post?.og_description ?? '')
+  const [ogImage, setOgImage] = useState(post?.og_image ?? '')
+  const [canonicalUrl, setCanonicalUrl] = useState(post?.canonical_url ?? '')
+  const [robots, setRobots] = useState(post?.robots ?? 'index, follow')
+  const [focusKeyword, setFocusKeyword] = useState(post?.focus_keyword ?? '')
+  const [uploading, setUploading] = useState(false)
 
   useEffect(() => {
-    const supabase = createBrowserClient()
-    supabase.from('blog_categories').select('*').order('name').then(({ data }) => {
-      setCategories(data || [])
-    })
+    createBrowserClient().from('blog_categories').select('*').order('name')
+      .then(({ data }) => setCategories(data ?? []))
   }, [])
 
-  // Auto-generate slug from title
-  useEffect(() => {
-    if (!slugManual && !isEdit) {
-      setSlug(slugify(title))
-    }
-  }, [title, slugManual, isEdit])
-
-  // Auto-fill SEO from content
+  useEffect(() => { if (!slugManual) setSlug(slugify(title)) }, [title, slugManual])
   useEffect(() => {
     if (!metaTitle && title) setMetaTitle(`${title} | 3R Core`)
     if (!ogTitle && title) setOgTitle(title)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [title])
 
-  const uploadFeaturedImage = useCallback(async () => {
-    const input = document.createElement('input')
-    input.type = 'file'
-    input.accept = 'image/*'
-    input.onchange = async (e) => {
-      const file = (e.target as HTMLInputElement).files?.[0]
-      if (!file) return
+  // El título es un textarea que crece: un artículo puede tener 90 caracteres
+  // y en un input de una línea no se lee entero.
+  useEffect(() => {
+    const el = titleRef.current
+    if (!el) return
+    el.style.height = 'auto'
+    el.style.height = `${el.scrollHeight}px`
+  }, [title])
 
-      const supabase = createBrowserClient()
-      const ext = file.name.split('.').pop()
-      const filename = `featured/${Date.now()}.${ext}`
+  const seo = useMemo(
+    () => scorePost({ title, slug, excerpt, content, featured_image: featuredImage, featured_image_alt: featuredImageAlt, meta_title: metaTitle, meta_description: metaDescription, og_image: ogImage, focus_keyword: focusKeyword }),
+    [title, slug, excerpt, content, featuredImage, featuredImageAlt, metaTitle, metaDescription, ogImage, focusKeyword]
+  )
 
-      const { error } = await supabase.storage.from('blog-images').upload(filename, file, { contentType: file.type })
-      if (error) { alert('Error: ' + error.message); return }
+  const touch = <T,>(setter: (v: T) => void) => (v: T) => { setter(v); setDirty(true) }
 
-      const { data: { publicUrl } } = supabase.storage.from('blog-images').getPublicUrl(filename)
-      setFeaturedImage(publicUrl)
-      if (!ogImage) setOgImage(publicUrl)
-    }
-    input.click()
-  }, [ogImage])
+  useEffect(() => {
+    if (!dirty) return
+    const warn = (e: BeforeUnloadEvent) => { e.preventDefault(); e.returnValue = '' }
+    window.addEventListener('beforeunload', warn)
+    return () => window.removeEventListener('beforeunload', warn)
+  }, [dirty])
 
-  const handleSave = async (publishNow = false) => {
-    if (!title.trim() || !slug.trim()) {
-      alert('Título y slug son obligatorios')
+  const save = useCallback(async (publishNow: boolean) => {
+    if (!title.trim()) {
+      setError('El artículo necesita un título antes de guardarse.')
+      titleRef.current?.focus()
       return
     }
+    if (!slug.trim()) { setError('La URL no puede quedar vacía.'); return }
 
-    setSaving(true)
-    const supabase = createBrowserClient()
+    setSaving(publishNow ? 'publish' : 'draft')
+    setError('')
 
-    const postData = {
-      title,
-      slug,
-      excerpt,
-      content,
+    const payload = {
+      title: title.trim(),
+      slug: slug.trim(),
+      excerpt, content,
       featured_image: featuredImage || null,
       featured_image_alt: featuredImageAlt || null,
       status: publishNow ? 'published' : status,
@@ -128,371 +132,393 @@ export default function PostEditor({ post }: PostEditorProps) {
       ...(publishNow && !post?.published_at ? { published_at: new Date().toISOString() } : {}),
     }
 
-    let error: any
-    if (isEdit) {
-      const res = await (supabase as any).from('blog_posts').update(postData).eq('id', post.id)
-      error = res.error
-    } else {
-      const res = await (supabase as any).from('blog_posts').insert(postData)
-      error = res.error
-    }
+    const sb = createBrowserClient() as any
+    const { error } = isEdit
+      ? await sb.from('blog_posts').update(payload).eq('id', post!.id)
+      : await sb.from('blog_posts').insert(payload)
 
     setSaving(false)
-
     if (error) {
-      alert('Error al guardar: ' + error.message)
+      setError(
+        /duplicate|unique/i.test(error.message)
+          ? `Ya existe un artículo con la URL /${slug} en ${LOCALE_LABEL[locale]}. Cambia la URL.`
+          : `No se pudo guardar: ${error.message}`
+      )
       return
     }
-
+    setDirty(false)
     router.push('/admin/blog')
     router.refresh()
-  }
+  }, [title, slug, excerpt, content, featuredImage, featuredImageAlt, status, locale, metaTitle, metaDescription, ogTitle, ogDescription, ogImage, canonicalUrl, robots, focusKeyword, authorName, categoryId, isEdit, post, router])
 
-  // SEO Score calculation
-  const seoScore = (() => {
-    let score = 0
-    let checks: { label: string; ok: boolean }[] = []
-
-    const check = (label: string, condition: boolean) => {
-      checks.push({ label, ok: condition })
-      if (condition) score++
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 's') { e.preventDefault(); save(false) }
     }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [save])
 
-    check('Meta título definido', !!metaTitle)
-    check('Meta título < 60 caracteres', !!metaTitle && metaTitle.length <= 60)
-    check('Meta descripción definida', !!metaDescription)
-    check('Meta descripción 120-160 caracteres', !!metaDescription && metaDescription.length >= 120 && metaDescription.length <= 160)
-    check('Imagen destacada', !!featuredImage)
-    check('Alt text de imagen', !!featuredImageAlt)
-    check('Keyword de enfoque', !!focusKeyword)
-    check('Keyword en título', !!focusKeyword && title.toLowerCase().includes(focusKeyword.toLowerCase()))
-    check('Keyword en meta descripción', !!focusKeyword && metaDescription.toLowerCase().includes(focusKeyword.toLowerCase()))
-    check('Extracto definido', !!excerpt)
-    check('Slug contiene keyword', !!focusKeyword && slug.includes(slugify(focusKeyword)))
-    check('OG Image definida', !!ogImage || !!featuredImage)
-    check('Contenido > 300 palabras', (content?.replace(/<[^>]*>/g, '').split(/\s+/).length || 0) > 300)
+  const uploadImage = useCallback(() => {
+    const input = document.createElement('input')
+    input.type = 'file'
+    input.accept = 'image/*'
+    input.onchange = async () => {
+      const file = input.files?.[0]
+      if (!file) return
+      if (file.size > MAX_IMAGE_MB * 1024 * 1024) {
+        setError(`La imagen pesa ${(file.size / 1048576).toFixed(1)} MB. El máximo son ${MAX_IMAGE_MB} MB: comprímela antes de subirla.`)
+        return
+      }
+      setUploading(true); setError('')
+      const sb = createBrowserClient()
+      const ext = file.name.split('.').pop()
+      const path = `featured/${Date.now()}.${ext}`
+      const { error } = await sb.storage.from('blog-images').upload(path, file, { contentType: file.type })
+      if (error) { setUploading(false); setError('No se pudo subir la imagen. ' + error.message); return }
+      const { data } = sb.storage.from('blog-images').getPublicUrl(path)
+      setFeaturedImage(data.publicUrl)
+      if (!ogImage) setOgImage(data.publicUrl)
+      setDirty(true); setUploading(false)
+    }
+    input.click()
+  }, [ogImage])
 
-    return { score, total: checks.length, pct: Math.round((score / checks.length) * 100), checks }
-  })()
+  const publicUrl = `3rcore.com/${locale}/blogs/${slug || '…'}`
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-      {/* Main Editor - 2/3 */}
-      <div className="lg:col-span-2 space-y-6">
-        {/* Title */}
-        <div>
-          <input
-            type="text"
+    // La rejilla vive en globals.css: en línea pisaría la media query y el
+    // editor se quedaría en una columna incluso en pantallas anchas.
+    <div className="editor-grid">
+      {/* ══ Columna de escritura ══════════════════════════════════════ */}
+      <div style={{ minWidth: 0 }}>
+        <div style={{ marginBottom: 'var(--s-5)' }}>
+          <label htmlFor="title" className="sr-only">Título del artículo</label>
+          <textarea
+            ref={titleRef}
+            id="title"
+            rows={1}
             value={title}
-            onChange={(e) => setTitle(e.target.value)}
-            placeholder="Título del post"
-            className="w-full bg-transparent text-3xl font-bold text-white placeholder:text-white/20 focus:outline-none border-b border-white/10 pb-4"
+            onChange={(e) => touch(setTitle)(e.target.value.replace(/\n/g, ''))}
+            placeholder="Título del artículo"
+            style={ST.title}
           />
-          <div className="flex items-center gap-2 mt-2">
-            <span className="text-white/30 text-xs">3rcore.com/{locale}/blogs/</span>
+          <div style={ST.slugRow}>
+            <span className="mono" style={{ color: 'var(--ink-4)', flexShrink: 0 }}>3rcore.com/{locale}/blogs/</span>
+            <label htmlFor="slug" className="sr-only">URL del artículo</label>
             <input
-              type="text"
+              id="slug"
               value={slug}
-              onChange={(e) => { setSlug(slugify(e.target.value)); setSlugManual(true) }}
-              className="bg-white/5 border border-white/10 rounded px-2 py-0.5 text-xs text-[#E91E63] focus:outline-none focus:border-[#E91E63] flex-1"
+              onChange={(e) => { touch(setSlug)(slugify(e.target.value)); setSlugManual(true) }}
+              className="mono"
+              style={ST.slugInput}
+              spellCheck={false}
             />
           </div>
         </div>
 
-        {/* Excerpt */}
-        <div>
-          <label className="text-white/40 text-[10px] uppercase tracking-widest block mb-2">Extracto / Resumen</label>
+        <div style={{ marginBottom: 'var(--s-5)' }}>
+          <label htmlFor="excerpt" className="label">Extracto</label>
           <textarea
-            value={excerpt}
-            onChange={(e) => setExcerpt(e.target.value)}
-            placeholder="Breve resumen del post (aparece en la lista de blogs y en búsquedas)"
+            id="excerpt"
+            className="textarea"
             rows={2}
-            className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-[#E91E63] transition-colors resize-none"
+            value={excerpt}
+            onChange={(e) => touch(setExcerpt)(e.target.value)}
+            placeholder="Dos líneas que resuman el artículo. Salen en la lista del blog."
+            style={{ minHeight: 62 }}
           />
         </div>
 
-        {/* WYSIWYG Editor */}
-        <div>
-          <label className="text-white/40 text-[10px] uppercase tracking-widest block mb-2">Contenido</label>
-          <TipTapEditor content={content} onChange={setContent} />
-          <p className="text-white/20 text-xs mt-2">
-            {content?.replace(/<[^>]*>/g, '').split(/\s+/).filter(Boolean).length || 0} palabras
-          </p>
+        <div style={{ marginBottom: 'var(--s-6)' }}>
+          <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: 'var(--s-2)' }}>
+            <span className="label" style={{ marginBottom: 0 }}>Contenido</span>
+            <span className="hint tnum">
+              {seo.words} palabras
+              {seo.words > 0 && seo.words <= 300 && <span style={{ color: 'var(--warn)' }}> · por debajo de 300</span>}
+            </span>
+          </div>
+          <TipTapEditor content={content} onChange={(v: string) => touch(setContent)(v)} />
         </div>
 
-        {/* SEO Panel */}
-        <div className="border border-white/10 rounded-xl overflow-hidden">
-          <button
-            type="button"
-            onClick={() => setSeoOpen(!seoOpen)}
-            className="w-full px-6 py-4 flex items-center justify-between hover:bg-white/5 transition-colors"
-          >
-            <div className="flex items-center gap-3">
-              <span className="text-sm font-bold uppercase tracking-wider">SEO & Metadatos</span>
-              <span className={`text-xs font-bold px-2 py-0.5 rounded-full ${
-                seoScore.pct >= 80 ? 'bg-green-500/20 text-green-400' :
-                seoScore.pct >= 50 ? 'bg-yellow-500/20 text-yellow-400' :
-                'bg-red-500/20 text-red-400'
-              }`}>
-                {seoScore.pct}% ({seoScore.score}/{seoScore.total})
-              </span>
-            </div>
-            <span className="text-white/30">{seoOpen ? '▲' : '▼'}</span>
-          </button>
+        {/* ══ SEO ═══════════════════════════════════════════════════ */}
+        <section aria-labelledby="seo-h">
+          <div className="section-head"><h2 id="seo-h">Cómo se verá en Google y en redes</h2></div>
 
-          {seoOpen && (
-            <div className="px-6 pb-6 space-y-5 border-t border-white/10 pt-5">
-              {/* Focus Keyword */}
+          <div className="seg" role="tablist" aria-label="Secciones de SEO" style={{ marginBottom: 'var(--s-4)' }}>
+            {([['search', 'Buscador'], ['social', 'Redes'], ['advanced', 'Avanzado']] as const).map(([k, label]) => (
+              <button key={k} type="button" role="tab" aria-selected={seoTab === k} aria-pressed={seoTab === k} onClick={() => setSeoTab(k)}>
+                {label}
+              </button>
+            ))}
+          </div>
+
+          {seoTab === 'search' && (
+            <div style={ST.stack}>
+              <Field label="Palabra clave de enfoque" htmlFor="kw"
+                hint="La búsqueda concreta que quieres ganar con este artículo.">
+                <input id="kw" className="input" value={focusKeyword} onChange={(e) => touch(setFocusKeyword)(e.target.value)} placeholder="agencia de marketing digital" />
+              </Field>
+
+              <Field label="Título en Google" htmlFor="mt"
+                counter={<Counter n={metaTitle.length} max={60} />}>
+                <input id="mt" className="input" value={metaTitle} onChange={(e) => touch(setMetaTitle)(e.target.value)} placeholder={`${title || 'Título'} | 3R Core`} />
+              </Field>
+
+              <Field label="Descripción en Google" htmlFor="md"
+                counter={<Counter n={metaDescription.length} min={120} max={160} />}>
+                <textarea id="md" className="textarea" rows={3} value={metaDescription} onChange={(e) => touch(setMetaDescription)(e.target.value)}
+                  placeholder="Lo que se lee bajo el título en los resultados. Entre 120 y 160 caracteres." />
+              </Field>
+
               <div>
-                <label className="text-white/40 text-[10px] uppercase tracking-widest block mb-2">Keyword de enfoque</label>
-                <input
-                  type="text"
-                  value={focusKeyword}
-                  onChange={(e) => setFocusKeyword(e.target.value)}
-                  placeholder="ej: marketing digital lima"
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-white text-sm focus:outline-none focus:border-[#E91E63]"
-                />
-              </div>
-
-              {/* Meta Title */}
-              <div>
-                <label className="text-white/40 text-[10px] uppercase tracking-widest block mb-2">
-                  Meta Título <span className={metaTitle.length > 60 ? 'text-red-400' : 'text-white/20'}>({metaTitle.length}/60)</span>
-                </label>
-                <input
-                  type="text"
-                  value={metaTitle}
-                  onChange={(e) => setMetaTitle(e.target.value)}
-                  placeholder={`${title} | 3R Core`}
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-white text-sm focus:outline-none focus:border-[#E91E63]"
-                />
-              </div>
-
-              {/* Meta Description */}
-              <div>
-                <label className="text-white/40 text-[10px] uppercase tracking-widest block mb-2">
-                  Meta Descripción <span className={metaDescription.length > 160 ? 'text-red-400' : metaDescription.length >= 120 ? 'text-green-400' : 'text-white/20'}>({metaDescription.length}/160)</span>
-                </label>
-                <textarea
-                  value={metaDescription}
-                  onChange={(e) => setMetaDescription(e.target.value)}
-                  placeholder="Descripción que aparece en Google (120-160 caracteres ideal)"
-                  rows={3}
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-white text-sm focus:outline-none focus:border-[#E91E63] resize-none"
-                />
-              </div>
-
-              {/* OG Fields */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label className="text-white/40 text-[10px] uppercase tracking-widest block mb-2">OG Título</label>
-                  <input
-                    type="text"
-                    value={ogTitle}
-                    onChange={(e) => setOgTitle(e.target.value)}
-                    placeholder={title}
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-white text-sm focus:outline-none focus:border-[#E91E63]"
-                  />
-                </div>
-                <div>
-                  <label className="text-white/40 text-[10px] uppercase tracking-widest block mb-2">OG Descripción</label>
-                  <input
-                    type="text"
-                    value={ogDescription}
-                    onChange={(e) => setOgDescription(e.target.value)}
-                    placeholder={metaDescription}
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-white text-sm focus:outline-none focus:border-[#E91E63]"
-                  />
-                </div>
-              </div>
-
-              {/* OG Image */}
-              <div>
-                <label className="text-white/40 text-[10px] uppercase tracking-widest block mb-2">OG Image URL</label>
-                <input
-                  type="text"
-                  value={ogImage}
-                  onChange={(e) => setOgImage(e.target.value)}
-                  placeholder={featuredImage || 'https://...'}
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-white text-sm focus:outline-none focus:border-[#E91E63]"
-                />
-              </div>
-
-              {/* Canonical + Robots */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label className="text-white/40 text-[10px] uppercase tracking-widest block mb-2">URL Canónica</label>
-                  <input
-                    type="text"
-                    value={canonicalUrl}
-                    onChange={(e) => setCanonicalUrl(e.target.value)}
-                    placeholder={`https://3rcore.com/${locale}/blogs/${slug}`}
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-white text-sm focus:outline-none focus:border-[#E91E63]"
-                  />
-                </div>
-                <div>
-                  <label className="text-white/40 text-[10px] uppercase tracking-widest block mb-2">Robots</label>
-                  <select
-                    value={robots}
-                    onChange={(e) => setRobots(e.target.value)}
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-white text-sm focus:outline-none focus:border-[#E91E63] appearance-none"
-                  >
-                    <option value="index, follow" className="bg-[#0D0010]">index, follow</option>
-                    <option value="noindex, follow" className="bg-[#0D0010]">noindex, follow</option>
-                    <option value="index, nofollow" className="bg-[#0D0010]">index, nofollow</option>
-                    <option value="noindex, nofollow" className="bg-[#0D0010]">noindex, nofollow</option>
-                  </select>
-                </div>
-              </div>
-
-              {/* SEO Checklist */}
-              <div className="bg-white/5 rounded-xl p-4 space-y-2">
-                <p className="text-[10px] uppercase tracking-widest text-white/40 mb-3">Checklist SEO</p>
-                {seoScore.checks.map((c, i) => (
-                  <div key={i} className="flex items-center gap-2 text-xs">
-                    <span className={c.ok ? 'text-green-400' : 'text-red-400'}>{c.ok ? '✓' : '✗'}</span>
-                    <span className={c.ok ? 'text-white/60' : 'text-white/40'}>{c.label}</span>
-                  </div>
-                ))}
-              </div>
-
-              {/* Google Preview */}
-              <div>
-                <p className="text-[10px] uppercase tracking-widest text-white/40 mb-3">Vista previa en Google</p>
-                <div className="bg-white rounded-xl p-4">
-                  <p className="text-[#1a0dab] text-lg font-normal leading-tight truncate">
-                    {metaTitle || `${title} | 3R Core`}
-                  </p>
-                  <p className="text-[#006621] text-sm mt-1 truncate">
-                    3rcore.com/{locale}/blogs/{slug}
-                  </p>
-                  <p className="text-[#545454] text-sm mt-1 line-clamp-2">
-                    {metaDescription || excerpt || 'Sin descripción...'}
-                  </p>
-                </div>
+                <span className="label">Previsualización</span>
+                <GooglePreview title={metaTitle || (title ? `${title} | 3R Core` : '')} url={publicUrl} desc={metaDescription || excerpt} />
               </div>
             </div>
           )}
-        </div>
+
+          {seoTab === 'social' && (
+            <div style={ST.stack}>
+              <Field label="Título al compartir" htmlFor="ogt" hint="Si lo dejas vacío se usa el título del artículo.">
+                <input id="ogt" className="input" value={ogTitle} onChange={(e) => touch(setOgTitle)(e.target.value)} placeholder={title} />
+              </Field>
+              <Field label="Descripción al compartir" htmlFor="ogd" hint="Si lo dejas vacío se usa la descripción de Google.">
+                <input id="ogd" className="input" value={ogDescription} onChange={(e) => touch(setOgDescription)(e.target.value)} placeholder={metaDescription} />
+              </Field>
+              <Field label="Imagen al compartir" htmlFor="ogi" hint="Si lo dejas vacío se usa la imagen destacada. 1200 × 630 es la medida que respetan todas las redes.">
+                <input id="ogi" className="input mono" value={ogImage} onChange={(e) => touch(setOgImage)(e.target.value)} placeholder={featuredImage || 'https://…'} />
+              </Field>
+            </div>
+          )}
+
+          {seoTab === 'advanced' && (
+            <div style={ST.stack}>
+              <Field label="URL canónica" htmlFor="canon"
+                hint="Solo si este artículo es una copia de otro que ya existe. En blanco, se canoniza a sí mismo.">
+                <input id="canon" className="input mono" value={canonicalUrl} onChange={(e) => touch(setCanonicalUrl)(e.target.value)} placeholder={`https://${publicUrl}`} />
+              </Field>
+              <Field label="Indexación" htmlFor="robots"
+                hint={robots.startsWith('noindex') ? '⚠ Con noindex este artículo no aparecerá en Google.' : 'index, follow es lo normal para un artículo.'}>
+                <select id="robots" className="select" value={robots} onChange={(e) => touch(setRobots)(e.target.value)}>
+                  <option value="index, follow">index, follow</option>
+                  <option value="noindex, follow">noindex, follow</option>
+                  <option value="index, nofollow">index, nofollow</option>
+                  <option value="noindex, nofollow">noindex, nofollow</option>
+                </select>
+              </Field>
+            </div>
+          )}
+        </section>
       </div>
 
-      {/* Sidebar - 1/3 */}
-      <div className="space-y-6">
-        {/* Publish Box */}
-        <div className="border border-white/10 rounded-xl p-5 space-y-4 sticky top-4">
-          <h3 className="text-sm font-bold uppercase tracking-wider">Publicar</h3>
-
-          <div>
-            <label className="text-white/40 text-[10px] uppercase tracking-widest block mb-2">Estado</label>
-            <select
-              value={status}
-              onChange={(e) => setStatus(e.target.value as 'draft' | 'published')}
-              className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-white text-sm focus:outline-none focus:border-[#E91E63] appearance-none"
-            >
-              <option value="draft" className="bg-[#0D0010]">Borrador</option>
-              <option value="published" className="bg-[#0D0010]">Publicado</option>
-            </select>
-          </div>
-
-          <div>
-            <label className="text-white/40 text-[10px] uppercase tracking-widest block mb-2">Idioma</label>
-            <div className="flex gap-2">
-              {(['es', 'en', 'us'] as const).map((l) => (
-                <button
-                  key={l}
-                  type="button"
-                  onClick={() => setLocale(l)}
-                  className={`flex-1 py-2 rounded-lg text-xs uppercase tracking-wider transition-colors ${
-                    locale === l ? 'bg-[#E91E63]/20 text-[#E91E63] border border-[#E91E63]/30' : 'bg-white/5 text-white/40 border border-white/10'
-                  }`}
-                >
-                  {l === 'es' ? 'Perú' : l === 'en' ? 'English' : 'EE.UU. 🇺🇸'}
-                </button>
-              ))}
+      {/* ══ Columna lateral ═══════════════════════════════════════════ */}
+      <aside style={ST.aside}>
+        <div style={ST.sticky}>
+          {error && (
+            <div className="notice notice--error rise" role="alert" style={{ marginBottom: 'var(--s-4)' }}>
+              {error}
             </div>
-          </div>
+          )}
 
-          <div>
-            <label className="text-white/40 text-[10px] uppercase tracking-widest block mb-2">Categoría</label>
-            <select
-              value={categoryId}
-              onChange={(e) => setCategoryId(e.target.value)}
-              className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-white text-sm focus:outline-none focus:border-[#E91E63] appearance-none"
-            >
-              <option value="" className="bg-[#0D0010]">Sin categoría</option>
-              {categories.filter(c => c.locale === locale).map((c) => (
-                <option key={c.id} value={c.id} className="bg-[#0D0010]">{c.name}</option>
-              ))}
-            </select>
-          </div>
-
-          <div>
-            <label className="text-white/40 text-[10px] uppercase tracking-widest block mb-2">Autor</label>
-            <input
-              type="text"
-              value={authorName}
-              onChange={(e) => setAuthorName(e.target.value)}
-              className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-white text-sm focus:outline-none focus:border-[#E91E63]"
-            />
-          </div>
-
-          <div className="flex gap-2 pt-2">
-            <button
-              type="button"
-              onClick={() => handleSave(false)}
-              disabled={saving}
-              className="flex-1 py-2.5 border border-white/20 rounded-xl text-xs uppercase tracking-widest font-bold hover:bg-white/5 transition-colors disabled:opacity-50"
-            >
-              {saving ? 'Guardando...' : 'Guardar'}
-            </button>
-            <button
-              type="button"
-              onClick={() => handleSave(true)}
-              disabled={saving}
-              className="flex-1 py-2.5 bg-gradient-to-r from-[#E91E63] to-[#9C27B0] rounded-xl text-xs uppercase tracking-widest font-bold hover:opacity-90 transition-opacity disabled:opacity-50"
-            >
-              Publicar
-            </button>
-          </div>
-        </div>
-
-        {/* Featured Image */}
-        <div className="border border-white/10 rounded-xl p-5 space-y-4">
-          <h3 className="text-sm font-bold uppercase tracking-wider">Imagen Destacada</h3>
-
-          {featuredImage ? (
-            <div className="relative">
-              <img src={featuredImage} alt={featuredImageAlt} className="w-full rounded-lg aspect-video object-cover" />
-              <button
-                type="button"
-                onClick={() => { setFeaturedImage(''); setFeaturedImageAlt('') }}
-                className="absolute top-2 right-2 bg-red-500/80 text-white w-6 h-6 rounded-full text-xs flex items-center justify-center hover:bg-red-500"
-              >
-                ✗
+          <section className="sheet" style={{ padding: 'var(--s-5)', marginBottom: 'var(--s-4)' }}>
+            <div style={{ display: 'flex', gap: 'var(--s-2)', marginBottom: 'var(--s-5)' }}>
+              <button type="button" className="btn btn--secondary" style={{ flex: 1 }} onClick={() => save(false)} disabled={!!saving}>
+                {saving === 'draft' ? <><span className="spinner" style={{ width: 14, height: 14 }} />Guardando</> : 'Guardar'}
+              </button>
+              <button type="button" className="btn btn--primary" style={{ flex: 1 }} onClick={() => save(true)} disabled={!!saving}>
+                {saving === 'publish'
+                  ? <><span className="spinner" style={{ width: 14, height: 14, borderColor: 'oklch(1 0 0 / .35)', borderTopColor: 'var(--surface)' }} />Publicando</>
+                  : status === 'published' ? 'Actualizar' : 'Publicar'}
               </button>
             </div>
-          ) : (
-            <button
-              type="button"
-              onClick={uploadFeaturedImage}
-              className="w-full py-8 border-2 border-dashed border-white/10 rounded-xl text-white/30 text-sm hover:border-[#E91E63]/30 hover:text-white/50 transition-colors"
-            >
-              + Subir imagen
-            </button>
-          )}
+            <p className="hint" style={{ marginTop: -14, marginBottom: 'var(--s-5)' }}>
+              {dirty ? 'Hay cambios sin guardar.' : isEdit ? 'Todo guardado.' : 'Aún no se ha guardado.'}
+              {' '}<kbd style={ST.kbd}>⌘S</kbd> guarda.
+            </p>
 
-          <div>
-            <label className="text-white/40 text-[10px] uppercase tracking-widest block mb-2">Alt Text (SEO)</label>
-            <input
-              type="text"
-              value={featuredImageAlt}
-              onChange={(e) => setFeaturedImageAlt(e.target.value)}
-              placeholder="Descripción de la imagen para SEO"
-              className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-white text-sm focus:outline-none focus:border-[#E91E63]"
-            />
-          </div>
+            <Field label="Mercado" hint="Decide en qué versión del sitio sale y con qué categorías puede ir.">
+              <div style={{ display: 'grid', gap: 4 }}>
+                {LOCALES.map((l) => (
+                  <button key={l} type="button" onClick={() => { touch(setLocale)(l); setCategoryId('') }}
+                    aria-pressed={locale === l} style={ST.marketBtn(locale === l)}>
+                    {LOCALE_LABEL[l]}
+                  </button>
+                ))}
+              </div>
+            </Field>
+
+            <Field label="Estado" htmlFor="status">
+              <select id="status" className="select" value={status} onChange={(e) => touch(setStatus)(e.target.value as 'draft' | 'published')}>
+                <option value="draft">Borrador</option>
+                <option value="published">Publicado</option>
+              </select>
+            </Field>
+
+            <Field label="Categoría" htmlFor="cat"
+              hint={categories.filter((c) => c.locale === locale).length === 0 ? `No hay categorías en ${LOCALE_LABEL[locale]}.` : undefined}>
+              <select id="cat" className="select" value={categoryId} onChange={(e) => touch(setCategoryId)(e.target.value)}>
+                <option value="">Sin categoría</option>
+                {categories.filter((c) => c.locale === locale).map((c) => (
+                  <option key={c.id} value={c.id}>{c.name}</option>
+                ))}
+              </select>
+            </Field>
+
+            <Field label="Autor" htmlFor="author" last>
+              <input id="author" className="input" value={authorName} onChange={(e) => touch(setAuthorName)(e.target.value)} />
+            </Field>
+          </section>
+
+          {/* Imagen destacada */}
+          <section className="sheet" style={{ padding: 'var(--s-5)', marginBottom: 'var(--s-4)' }}>
+            <div className="section-head" style={{ marginBottom: 'var(--s-3)' }}><h3>Imagen destacada</h3></div>
+            {featuredImage ? (
+              <div style={{ position: 'relative', marginBottom: 'var(--s-3)' }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={featuredImage} alt={featuredImageAlt || ''} style={{ width: '100%', aspectRatio: '16/9', objectFit: 'cover', borderRadius: 'var(--r)', background: 'var(--surface-sunk)' }} />
+                <button type="button" className="btn btn--sm btn--secondary" onClick={() => { setFeaturedImage(''); setFeaturedImageAlt(''); setDirty(true) }}
+                  style={{ position: 'absolute', top: 8, right: 8 }}>Quitar</button>
+              </div>
+            ) : (
+              <button type="button" onClick={uploadImage} disabled={uploading} style={ST.drop}>
+                {uploading ? <><span className="spinner" style={{ width: 15, height: 15 }} /> Subiendo…</> : `Subir imagen · máx. ${MAX_IMAGE_MB} MB`}
+              </button>
+            )}
+            <Field label="Texto alternativo" htmlFor="alt" last
+              hint="Describe lo que se ve. Lo leen los buscadores y quien usa lector de pantalla.">
+              <input id="alt" className="input" value={featuredImageAlt} onChange={(e) => touch(setFeaturedImageAlt)(e.target.value)}
+                placeholder="Equipo de 3R Core revisando métricas" />
+            </Field>
+          </section>
+
+          {/* Checklist: aquí arriba y siempre visible, que es el punto */}
+          <section className="sheet" style={{ padding: 'var(--s-5)' }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 'var(--s-4)' }}>
+              <h3 style={{ fontSize: 'var(--t-micro)', fontWeight: 700, letterSpacing: '.085em', textTransform: 'uppercase', color: 'var(--ink-3)' }}>Revisión SEO</h3>
+              <span className="meter">
+                <span className="meter__track"><span className="meter__fill" style={{ width: `${seo.pct}%`, background: scoreColor(seo.pct) }} /></span>
+                <span className="meter__n" style={{ color: scoreColor(seo.pct) }}>{seo.score}/{seo.total}</span>
+              </span>
+            </div>
+            <Checklist checks={seo.checks} />
+          </section>
         </div>
-      </div>
+      </aside>
     </div>
   )
+}
+
+/* ── Piezas ────────────────────────────────────────────────────────────── */
+
+function Field({ label, htmlFor, hint, counter, children, last }: {
+  label: string; htmlFor?: string; hint?: string; counter?: React.ReactNode; children: React.ReactNode; last?: boolean
+}) {
+  return (
+    <div style={{ marginBottom: last ? 0 : 'var(--s-4)' }}>
+      <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 8 }}>
+        {htmlFor ? <label className="label" htmlFor={htmlFor}>{label}</label> : <span className="label">{label}</span>}
+        {counter}
+      </div>
+      {children}
+      {hint && <p className="hint" style={{ marginTop: 6 }}>{hint}</p>}
+    </div>
+  )
+}
+
+function Counter({ n, min, max }: { n: number; min?: number; max: number }) {
+  const tone = n === 0 ? 'idle' : n > max ? 'over' : min && n < min ? 'warn' : 'ok'
+  return <span className={`label count count--${tone}`} style={{ marginBottom: 0 }}>{n}/{max}</span>
+}
+
+function Checklist({ checks }: { checks: SeoCheck[] }) {
+  const groups = ['Fundamentos', 'Palabra clave', 'Compartir'] as const
+  return (
+    <div style={{ display: 'grid', gap: 'var(--s-4)' }}>
+      {groups.map((g) => {
+        const items = checks.filter((c) => c.group === g)
+        if (!items.length) return null
+        return (
+          <div key={g}>
+            <p style={{ fontSize: 'var(--t-micro)', fontWeight: 600, color: 'var(--ink-4)', marginBottom: 6, letterSpacing: '.04em' }}>{g}</p>
+            <ul style={{ listStyle: 'none', display: 'grid', gap: 5 }}>
+              {items.map((c) => (
+                <li key={c.id} style={{ display: 'flex', gap: 8, alignItems: 'flex-start' }} title={c.ok ? undefined : c.fix}>
+                  <span aria-hidden style={{ flexShrink: 0, marginTop: 3, color: c.ok ? 'var(--ok)' : 'var(--ink-4)' }}>
+                    {c.ok ? <TickIcon /> : <DotIcon />}
+                  </span>
+                  <span style={{ fontSize: 'var(--t-xs)', lineHeight: 1.45, color: c.ok ? 'var(--ink-3)' : 'var(--ink-2)' }}>
+                    {c.label}
+                    <span className="sr-only">{c.ok ? ' (cumplido)' : ` (pendiente: ${c.fix})`}</span>
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )
+      })}
+    </div>
+  )
+}
+
+function GooglePreview({ title, url, desc }: { title: string; url: string; desc: string }) {
+  const t = title.length > 60 ? title.slice(0, 59).trimEnd() + '…' : title
+  const d = desc.length > 160 ? desc.slice(0, 159).trimEnd() + '…' : desc
+  return (
+    <div style={{ background: 'var(--surface)', border: '1px solid var(--rule)', borderRadius: 'var(--r)', padding: 'var(--s-4)', maxWidth: 600 }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 7, marginBottom: 5 }}>
+        <span aria-hidden style={{ width: 18, height: 18, borderRadius: '50%', background: 'var(--surface-sunk)', border: '1px solid var(--rule)', display: 'grid', placeItems: 'center', fontSize: 8, fontWeight: 700, color: 'var(--ink-3)' }}>3R</span>
+        <span style={{ fontSize: 11, color: 'var(--ink-2)', lineHeight: 1.2 }}>
+          3R Core<br /><span style={{ color: 'var(--ink-3)' }}>{url}</span>
+        </span>
+      </div>
+      <p style={{ color: '#1a0dab', fontSize: 18, lineHeight: 1.3, marginBottom: 3 }}>{t || 'Sin título'}</p>
+      <p style={{ color: 'var(--ink-2)', fontSize: 13, lineHeight: 1.55 }}>{d || 'Sin descripción. Google inventará una a partir del contenido, y suele elegir mal.'}</p>
+    </div>
+  )
+}
+
+function TickIcon() {
+  return <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden><path d="M2.6 7.4 5.4 10l6-6.6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
+}
+function DotIcon() {
+  return <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden><circle cx="7" cy="7" r="3" stroke="currentColor" strokeWidth="1.4" /></svg>
+}
+
+const ST = {
+  title: {
+    width: '100%', background: 'transparent', border: 'none', resize: 'none',
+    fontFamily: 'var(--font-display)', fontSize: 'var(--t-2xl)', fontWeight: 800,
+    letterSpacing: '-0.025em', lineHeight: 1.18, color: 'var(--ink)', overflow: 'hidden',
+  } as React.CSSProperties,
+  slugRow: {
+    display: 'flex', alignItems: 'center', gap: 2, marginTop: 'var(--s-3)',
+    paddingTop: 'var(--s-3)', borderTop: '1px solid var(--rule)', flexWrap: 'wrap',
+  } as React.CSSProperties,
+  slugInput: {
+    flex: '1 1 160px', minWidth: 120, background: 'transparent', border: 'none',
+    color: 'var(--brand-ink)', fontWeight: 600, padding: '7px 0', minHeight: 34,
+  } as React.CSSProperties,
+  stack: { display: 'grid', gap: 'var(--s-4)' } as React.CSSProperties,
+  aside: { minWidth: 0 } as React.CSSProperties,
+  sticky: { position: 'sticky', top: 'calc(58px + var(--s-4))' } as React.CSSProperties,
+  drop: {
+    width: '100%', padding: 'var(--s-6) var(--s-4)', marginBottom: 'var(--s-3)',
+    border: '1px dashed var(--rule-strong)', borderRadius: 'var(--r)',
+    background: 'var(--surface-sunk)', color: 'var(--ink-3)',
+    fontSize: 'var(--t-xs)', fontWeight: 600,
+    display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
+  } as React.CSSProperties,
+  kbd: {
+    fontFamily: 'var(--font-mono)', fontSize: 10, padding: '1px 5px',
+    border: '1px solid var(--rule)', borderRadius: 4, background: 'var(--surface-sunk)', color: 'var(--ink-3)',
+  } as React.CSSProperties,
+  marketBtn: (on: boolean): React.CSSProperties => ({
+    textAlign: 'left', padding: '8px 12px', borderRadius: 'var(--r-sm)',
+    fontSize: 'var(--t-xs)', fontWeight: 600,
+    background: on ? 'var(--brand-soft)' : 'var(--surface-sunk)',
+    border: `1px solid ${on ? 'var(--brand-line)' : 'transparent'}`,
+    color: on ? 'var(--brand-ink)' : 'var(--ink-2)',
+    transition: 'background 120ms var(--ease), color 120ms var(--ease)',
+  }),
 }

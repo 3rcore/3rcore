@@ -10,12 +10,20 @@ import { Montserrat, Poppins, Playfair_Display, Josefin_Sans } from "next/font/g
  *  - Playfair Display (serif display; absorbe Trirong, mismo rol visual
  *    serif-italic en contadores y títulos decorativos)
  */
-export const montserrat = Montserrat({ subsets: ["latin"], display: "swap" })
+export const montserrat = Montserrat({
+  subsets: ["latin"],
+  display: "swap",
+  // `variable` lo necesita el CMS de /admin, que tiene su propio root layout y
+  // su propio CSS: sin una custom property no puede usar las familias del sitio
+  // y caía a la fuente del sistema. Es aditivo — `.className` sigue igual.
+  variable: "--font-montserrat",
+})
 
 export const poppins = Poppins({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   display: "swap",
+  variable: "--font-poppins",
 })
 
 export const playfair = Playfair_Display({

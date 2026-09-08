@@ -1,48 +1,515 @@
 @import 'tailwindcss';
 
+/* ════════════════════════════════════════════════════════════════════════
+   3R Core · Blog CMS — sistema de diseño
+   ────────────────────────────────────────────────────────────────────────
+   Esto es un escritorio editorial, no un panel de métricas. Quien lo usa
+   escribe y revisa artículos de 1.500 palabras durante una hora seguida, de
+   día, en la oficina de La Molina con luz de ventana lateral. Por eso el
+   fondo es papel y no el negro que tenía antes: el negro era el reflejo de
+   categoría («es un admin, va oscuro»), no una decisión sobre la tarea.
+
+   Color: neutros teñidos hacia el magenta de la marca + UN acento. El magenta
+   aparece solo donde decide algo — acción primaria, elemento activo, anillo de
+   foco y el estado «publicado». Todo lo demás es tinta sobre papel.
+
+   La paleta se leyó del sitio en vivo el 8-set-2026:
+   #9C27B0 · #E91E63 · #A21F8A · #FF1A55 sobre ink #16021B. Aquí se traduce a
+   OKLCH para que las mezclas no se ensucien.
+   ════════════════════════════════════════════════════════════════════════ */
+
 :root {
-  --bg: #0a0a0a;
-  --card: #141414;
-  --border: #222;
-  --border-h: #333;
-  --accent: #7c3aed;
-  --accent-h: #8b5cf6;
-  --green: #22c55e;
-  --yellow: #f59e0b;
-  --red: #ef4444;
-  --r: 10px;
+  /* ── Superficies ──────────────────────────────────────────────────────
+     Nunca blanco puro. Todo tiene una gota del tono de marca (croma 0.003
+     a 0.008), que es lo que hace que el conjunto se lea como un material y
+     no como una hoja de cálculo. */
+  --paper:        oklch(0.983 0.005 350);   /* fondo de página */
+  --surface:      oklch(0.998 0.002 350);   /* superficie elevada */
+  --surface-sunk: oklch(0.966 0.007 350);   /* campos, celdas hundidas */
+  --surface-hover:oklch(0.975 0.008 350);
+
+  /* ── Tinta ──────────────────────────────────────────────────────────── */
+  --ink:          oklch(0.235 0.020 350);   /* texto principal */
+  --ink-2:        oklch(0.455 0.016 350);   /* secundario */
+  --ink-3:        oklch(0.610 0.013 350);   /* terciario, etiquetas */
+  --ink-4:        oklch(0.735 0.010 350);   /* placeholder, deshabilitado */
+
+  /* ── Líneas ──────────────────────────────────────────────────────────
+     Casi todo el orden de esta interfaz lo llevan las reglas, no las cajas. */
+  --rule:         oklch(0.905 0.008 350);
+  --rule-strong:  oklch(0.845 0.012 350);
+
+  /* ── Acento: el magenta de 3R Core ────────────────────────────────────
+     #E91E63 vive en oklch(0.597 0.218 5). Se baja un punto de croma para que
+     aguante bloques grandes sin vibrar sobre papel. */
+  --brand:        oklch(0.575 0.205 5);
+  --brand-press:  oklch(0.505 0.190 5);
+  --brand-soft:   oklch(0.945 0.045 5);     /* fondo de estado activo */
+  --brand-line:   oklch(0.860 0.090 5);
+  --brand-ink:    oklch(0.455 0.180 5);     /* magenta legible sobre papel */
+
+  /* El púrpura #9C27B0 solo como segundo registro, nunca como acento suelto */
+  --violet-ink:   oklch(0.430 0.180 323);
+
+  /* ── Semánticos ──────────────────────────────────────────────────────
+     Teñidos, no de librería: el verde y el ámbar llevan una pizca del hue de
+     marca para que convivan con el magenta sin pelearse. */
+  --ok:           oklch(0.505 0.115 158);
+  --ok-soft:      oklch(0.955 0.035 158);
+  --ok-line:      oklch(0.875 0.060 158);
+  --warn:         oklch(0.560 0.115 72);
+  --warn-soft:    oklch(0.960 0.040 72);
+  --warn-line:    oklch(0.880 0.070 72);
+  --danger:       oklch(0.535 0.185 25);
+  --danger-soft:  oklch(0.958 0.035 25);
+  --danger-line:  oklch(0.870 0.070 25);
+
+  /* ── Tipografía ──────────────────────────────────────────────────────
+     Montserrat estructura, Poppins interfaz. Las dos son las de la marca y se
+     cargan self-hosted desde el layout. Escala con razón 1.25. */
+  --font-display: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+  --font-ui:      var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  --font-mono:    ui-monospace, "SF Mono", Menlo, monospace;
+
+  --t-micro: 10.5px;
+  --t-xs:    12px;
+  --t-sm:    13.5px;
+  --t-base:  15px;
+  --t-md:    17px;
+  --t-lg:    21px;
+  --t-xl:    27px;
+  --t-2xl:   34px;
+
+  /* ── Ritmo ───────────────────────────────────────────────────────────
+     Se usa con variación deliberada. El mismo padding en todo es monotonía. */
+  --s-1: 4px;  --s-2: 8px;  --s-3: 12px; --s-4: 16px;
+  --s-5: 22px; --s-6: 30px; --s-7: 42px; --s-8: 60px;
+
+  --r-sm: 6px; --r:  9px;  --r-lg: 13px; --r-full: 999px;
+
+  /* ── Elevación ───────────────────────────────────────────────────────
+     Sombra teñida: una sombra gris sobre papel cálido se ve sucia. */
+  --lift-1: 0 1px 2px oklch(0.235 0.020 350 / 0.05);
+  --lift-2: 0 2px 4px oklch(0.235 0.020 350 / 0.05), 0 8px 20px oklch(0.235 0.020 350 / 0.06);
+  --lift-3: 0 4px 10px oklch(0.235 0.020 350 / 0.07), 0 18px 44px oklch(0.235 0.020 350 / 0.10);
+
+  /* ── Movimiento ──────────────────────────────────────────────────────
+     ease-out exponencial. Sin rebote, sin elástico, nunca sobre propiedades
+     de layout. */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --fast: 120ms;
+  --mid:  200ms;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: #ededed; -webkit-font-smoothing: antialiased; }
-::selection { background: var(--accent); color: white; }
-::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-thumb { background: #333; border-radius: 99px; }
-input, textarea, select, button { font-family: inherit; }
+/* ══ Reset ══════════════════════════════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; padding: 0; }
 
-.input { width:100%; background:var(--card); border:1px solid var(--border); border-radius:var(--r); padding:10px 14px; color:#ededed; font-size:14px; outline:none; transition:border-color .15s; }
-.input:focus { border-color:var(--accent); }
-.input::placeholder { color:#555; }
+html { -webkit-text-size-adjust: 100%; }
 
-.btn { display:inline-flex; align-items:center; justify-content:center; gap:6px; padding:9px 18px; border-radius:var(--r); font-size:13px; font-weight:600; cursor:pointer; transition:all .15s; border:none; white-space:nowrap; }
-.btn:disabled { opacity:.5; cursor:not-allowed; }
-.btn-primary { background:var(--accent); color:white; }
-.btn-primary:hover:not(:disabled) { background:var(--accent-h); }
-.btn-ghost { background:transparent; color:#888; border:1px solid var(--border); }
-.btn-ghost:hover:not(:disabled) { border-color:var(--border-h); color:#ededed; }
+body {
+  font-family: var(--font-ui);
+  font-size: var(--t-base);
+  line-height: 1.6;
+  background: var(--paper);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-variant-numeric: tabular-nums;
+}
 
-.card { background:var(--card); border:1px solid var(--border); border-radius:12px; }
+h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 700; line-height: 1.2; letter-spacing: -0.018em; }
 
-.badge { display:inline-flex; padding:3px 8px; border-radius:6px; font-size:11px; font-weight:600; }
-.badge-g { background:rgba(34,197,94,.1); color:var(--green); }
-.badge-y { background:rgba(245,158,11,.1); color:var(--yellow); }
-.badge-r { background:rgba(239,68,68,.1); color:var(--red); }
-.badge-a { background:rgba(124,58,237,.1); color:var(--accent); }
+input, textarea, select, button { font: inherit; color: inherit; }
+button { background: none; border: none; cursor: pointer; }
+button:disabled { cursor: not-allowed; }
+a { color: inherit; text-decoration: none; }
+img, svg { display: block; max-width: 100%; }
 
-@keyframes fadeUp { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:translateY(0)} }
-.fade-up { animation:fadeUp .25s ease-out; }
-@keyframes spin { to{transform:rotate(360deg)} }
-.spinner { width:24px; height:24px; border:2px solid var(--accent); border-top-color:transparent; border-radius:50%; animation:spin .6s linear infinite; }
+::selection { background: var(--brand-soft); color: var(--brand-ink); }
 
-@media(max-width:768px) { .hide-m{display:none!important} .show-m{display:block!important} }
-.show-m { display:none; }
+::-webkit-scrollbar { width: 11px; height: 11px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--rule-strong); border-radius: var(--r-full); border: 3px solid var(--paper); }
+::-webkit-scrollbar-thumb:hover { background: var(--ink-4); }
+
+/* ══ Foco ═══════════════════════════════════════════════════════════════
+   Un solo anillo para todo lo enfocable. Antes no había ninguno: se navegaba
+   con teclado a ciegas. */
+:focus { outline: none; }
+:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+  border-radius: var(--r-sm);
+}
+
+/* ══ Tipografía de apoyo ════════════════════════════════════════════════ */
+.label {
+  display: block;
+  font-family: var(--font-display);
+  font-size: var(--t-micro);
+  font-weight: 700;
+  letter-spacing: 0.085em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: var(--s-2);
+}
+.hint  { font-size: var(--t-xs); color: var(--ink-3); line-height: 1.5; }
+.mono  { font-family: var(--font-mono); font-size: var(--t-xs); }
+.tnum  { font-variant-numeric: tabular-nums; }
+
+/* Cabecera de sección: etiqueta pequeña + regla que ocupa el resto.
+   Sustituye a envolver cada bloque en una tarjeta. */
+.section-head {
+  display: flex; align-items: center; gap: var(--s-4);
+  margin-bottom: var(--s-4);
+}
+.section-head::after {
+  content: ''; flex: 1; height: 1px; background: var(--rule);
+}
+.section-head > h2, .section-head > h3 {
+  font-size: var(--t-micro); font-weight: 700; letter-spacing: 0.085em;
+  text-transform: uppercase; color: var(--ink-3); white-space: nowrap;
+}
+
+/* ══ Campos ═════════════════════════════════════════════════════════════ */
+.input, .textarea, .select {
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: var(--r);
+  padding: 9px 13px;
+  font-size: var(--t-sm);
+  color: var(--ink);
+  transition: border-color var(--fast) var(--ease), box-shadow var(--fast) var(--ease), background var(--fast) var(--ease);
+}
+.input:hover:not(:disabled), .textarea:hover:not(:disabled), .select:hover:not(:disabled) { border-color: var(--rule-strong); }
+.input:focus-visible, .textarea:focus-visible, .select:focus-visible {
+  outline: none;
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px var(--brand-soft);
+}
+.input::placeholder, .textarea::placeholder { color: var(--ink-4); }
+.input:disabled, .textarea:disabled, .select:disabled { background: var(--surface-sunk); color: var(--ink-4); }
+.textarea { resize: vertical; min-height: 76px; line-height: 1.6; }
+
+.select {
+  appearance: none;
+  padding-right: 34px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M3 4.5L6 8l3-3.5' fill='none' stroke='%239b8a94' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+}
+
+/* Contador de caracteres en su etiqueta: verde en rango, ámbar corto, rojo pasado */
+.count { font-variant-numeric: tabular-nums; font-weight: 600; letter-spacing: 0; text-transform: none; }
+.count--ok   { color: var(--ok); }
+.count--warn { color: var(--warn); }
+.count--over { color: var(--danger); }
+.count--idle { color: var(--ink-4); }
+
+/* ══ Botones ════════════════════════════════════════════════════════════ */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 7px;
+  min-height: 38px;
+  padding: 0 16px;
+  border-radius: var(--r);
+  font-size: var(--t-sm);
+  font-weight: 600;
+  white-space: nowrap;
+  border: 1px solid transparent;
+  transition: background var(--fast) var(--ease), border-color var(--fast) var(--ease),
+              color var(--fast) var(--ease), transform var(--fast) var(--ease), box-shadow var(--fast) var(--ease);
+}
+.btn:active:not(:disabled) { transform: translateY(0.5px); }
+.btn:disabled { opacity: 0.45; }
+
+.btn--primary { background: var(--brand); color: var(--surface); box-shadow: var(--lift-1); }
+.btn--primary:hover:not(:disabled) { background: var(--brand-press); box-shadow: var(--lift-2); }
+
+.btn--secondary { background: var(--surface); color: var(--ink); border-color: var(--rule-strong); }
+.btn--secondary:hover:not(:disabled) { background: var(--surface-hover); border-color: var(--ink-4); }
+
+.btn--ghost { background: transparent; color: var(--ink-2); }
+.btn--ghost:hover:not(:disabled) { background: var(--surface-hover); color: var(--ink); }
+
+.btn--danger { background: transparent; color: var(--danger); border-color: var(--danger-line); }
+.btn--danger:hover:not(:disabled) { background: var(--danger-soft); }
+
+.btn--sm { min-height: 30px; padding: 0 11px; font-size: var(--t-xs); }
+.btn--block { width: 100%; }
+
+/* Icono suelto: 34px de zona táctil aunque el glifo mida 15 */
+.icon-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 34px; height: 34px;
+  border-radius: var(--r-sm);
+  color: var(--ink-3);
+  transition: background var(--fast) var(--ease), color var(--fast) var(--ease);
+}
+.icon-btn:hover:not(:disabled) { background: var(--surface-hover); color: var(--ink); }
+.icon-btn--danger:hover:not(:disabled) { background: var(--danger-soft); color: var(--danger); }
+
+/* ══ Control segmentado ═════════════════════════════════════════════════ */
+.seg {
+  display: inline-flex; gap: 2px;
+  background: var(--surface-sunk);
+  border: 1px solid var(--rule);
+  border-radius: var(--r);
+  padding: 3px;
+}
+.seg > button {
+  display: inline-flex; align-items: center; gap: 6px;
+  min-height: 28px; padding: 0 12px;
+  border-radius: var(--r-sm);
+  font-size: var(--t-xs); font-weight: 600;
+  color: var(--ink-3);
+  transition: background var(--fast) var(--ease), color var(--fast) var(--ease), box-shadow var(--fast) var(--ease);
+}
+.seg > button:hover { color: var(--ink); }
+.seg > button[aria-pressed='true'] {
+  background: var(--surface); color: var(--ink);
+  box-shadow: var(--lift-1);
+}
+.seg > button[aria-pressed='true'] .seg__n { color: var(--brand-ink); }
+.seg__n { font-variant-numeric: tabular-nums; color: var(--ink-4); font-weight: 700; }
+
+/* ══ Estados ════════════════════════════════════════════════════════════
+   Punto + palabra. Sin fondo de color: en una lista larga, veinte píldoras
+   de color compiten con el título, que es lo que se lee. */
+.state { display: inline-flex; align-items: center; gap: 6px; font-size: var(--t-xs); font-weight: 600; color: var(--ink-2); white-space: nowrap; }
+.state::before { content: ''; width: 6px; height: 6px; border-radius: var(--r-full); background: currentColor; flex-shrink: 0; }
+.state--live  { color: var(--ok); }
+.state--draft { color: var(--warn); }
+
+/* Etiqueta con fondo: solo para categoría, que sí es una taxonomía */
+.tag {
+  display: inline-flex; align-items: center;
+  padding: 2px 8px;
+  border-radius: var(--r-sm);
+  background: var(--surface-sunk);
+  border: 1px solid var(--rule);
+  font-size: var(--t-micro); font-weight: 600; letter-spacing: 0.02em;
+  color: var(--ink-2);
+}
+
+/* ══ Medidor SEO ════════════════════════════════════════════════════════
+   Un arco fino, no un número gigante con degradado. */
+.meter { display: inline-flex; align-items: center; gap: 8px; }
+.meter__track { width: 52px; height: 5px; border-radius: var(--r-full); background: var(--rule-strong); overflow: hidden; }
+.meter__fill  { height: 100%; border-radius: var(--r-full); transition: width var(--mid) var(--ease), background var(--mid) var(--ease); }
+.meter__n { font-size: var(--t-xs); font-weight: 700; font-variant-numeric: tabular-nums; }
+
+/* ══ Superficie elevada ═════════════════════════════════════════════════
+   Se usa poco a propósito. Las tarjetas son la respuesta perezosa. */
+.sheet {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: var(--r-lg);
+}
+.sheet__head {
+  display: flex; align-items: center; justify-content: space-between; gap: var(--s-3);
+  padding: var(--s-3) var(--s-5);
+  border-bottom: 1px solid var(--rule);
+}
+
+/* ══ Fila de lista ══════════════════════════════════════════════════════ */
+.row {
+  display: flex; align-items: center; gap: var(--s-4);
+  padding: var(--s-3) var(--s-4);
+  border-bottom: 1px solid var(--rule);
+  transition: background var(--fast) var(--ease);
+}
+.row:last-child { border-bottom: none; }
+.row:hover { background: var(--surface-hover); }
+.row__title { font-weight: 600; font-size: var(--t-sm); color: var(--ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.row__meta  { display: flex; align-items: center; gap: var(--s-2); margin-top: 2px; min-width: 0; }
+
+/* Toda la fila es clicable, pero el enlace real sigue siendo el título: así el
+   lector de pantalla anuncia «Título, enlace» y no una fila entera sin nombre.
+   Los botones de acción se elevan por encima de esta capa. */
+.row__link::after { content: ''; position: absolute; inset: 0; z-index: 0; }
+.row__link:focus-visible { outline: none; }
+.row:has(.row__link:focus-visible) { background: var(--surface-hover); box-shadow: inset 0 0 0 2px var(--brand); }
+
+/* ══ Vacíos ═════════════════════════════════════════════════════════════ */
+.empty { text-align: center; padding: var(--s-8) var(--s-5); }
+.empty__title { font-family: var(--font-display); font-size: var(--t-md); font-weight: 700; color: var(--ink); margin-bottom: var(--s-1); }
+.empty__body  { font-size: var(--t-sm); color: var(--ink-3); max-width: 42ch; margin: 0 auto var(--s-4); }
+
+/* ══ Avisos ═════════════════════════════════════════════════════════════ */
+.notice {
+  display: flex; align-items: flex-start; gap: var(--s-3);
+  padding: var(--s-3) var(--s-4);
+  border-radius: var(--r);
+  border: 1px solid;
+  font-size: var(--t-sm);
+  line-height: 1.5;
+}
+.notice--error { background: var(--danger-soft); border-color: var(--danger-line); color: var(--danger); }
+.notice--ok    { background: var(--ok-soft);     border-color: var(--ok-line);     color: var(--ok); }
+.notice--warn  { background: var(--warn-soft);   border-color: var(--warn-line);   color: var(--warn); }
+
+/* ══ Carga ══════════════════════════════════════════════════════════════ */
+.spinner {
+  width: 18px; height: 18px;
+  border: 2px solid var(--brand-line);
+  border-top-color: var(--brand);
+  border-radius: 50%;
+  animation: spin 620ms linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Esqueleto: se ve la forma de lo que viene, no un spinner centrado */
+.skeleton { background: var(--surface-sunk); border-radius: var(--r-sm); position: relative; overflow: hidden; }
+.skeleton::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(90deg, transparent, oklch(1 0 0 / 0.55), transparent);
+  transform: translateX(-100%);
+  animation: sweep 1.35s var(--ease) infinite;
+}
+@keyframes sweep { to { transform: translateX(100%); } }
+
+/* ══ Entrada ════════════════════════════════════════════════════════════ */
+@keyframes rise { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: none; } }
+.rise { animation: rise 260ms var(--ease) both; }
+
+/* ══ Prosa del editor ═══════════════════════════════════════════════════
+   Es donde se escribe. Medida acotada y jerarquía real: sin esto, un artículo
+   de 1.500 palabras se lee como un log. */
+.prose { font-size: var(--t-base); line-height: 1.72; color: var(--ink); max-width: 68ch; }
+.prose > * + * { margin-top: 1.05em; }
+.prose h2 { font-size: var(--t-lg); margin-top: 1.7em; }
+.prose h3 { font-size: var(--t-md); margin-top: 1.5em; }
+.prose a  { color: var(--brand-ink); text-decoration: underline; text-underline-offset: 2px; }
+.prose ul, .prose ol { padding-left: 1.3em; }
+.prose li + li { margin-top: 0.35em; }
+.prose blockquote { border-left: 2px solid var(--brand-line); padding-left: var(--s-4); color: var(--ink-2); font-style: italic; }
+.prose img { border-radius: var(--r); margin: 1.4em 0; }
+.prose code { font-family: var(--font-mono); font-size: 0.88em; background: var(--surface-sunk); padding: 1px 5px; border-radius: 4px; }
+.prose strong { font-weight: 600; }
+
+
+/* ══ Rejilla del editor ═════════════════════════════════════════════════
+   Una sola columna hasta 1040. El lateral de publicación por debajo de ese
+   ancho quedaba en 240 px y los selectores se comían el texto. */
+.editor-grid { display: grid; gap: var(--s-6); grid-template-columns: minmax(0, 1fr); align-items: start; }
+@media (min-width: 1040px) {
+  .editor-grid { grid-template-columns: minmax(0, 1fr) 336px; gap: var(--s-7); }
+}
+
+
+/* ══ Editor de texto (TipTap) ═══════════════════════════════════════════
+   Antes vivía en un <style jsx global> dentro del componente y estaba pintado
+   para fondo oscuro. Se trae aquí para que haya una sola fuente de estilos y
+   para que herede los tokens del panel. */
+.tt {
+  border: 1px solid var(--rule);
+  border-radius: var(--r-lg);
+  background: var(--surface);
+  overflow: hidden;
+}
+.tt:focus-within { border-color: var(--rule-strong); }
+
+.tt__bar {
+  position: sticky; top: 58px; z-index: 20;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 1px;
+  padding: 6px 8px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--rule);
+}
+.tt__btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 30px; height: 30px; padding: 0 7px;
+  border-radius: var(--r-sm);
+  font-size: var(--t-xs); font-weight: 600;
+  color: var(--ink-2);
+  transition: background var(--fast) var(--ease), color var(--fast) var(--ease);
+}
+.tt__btn:hover:not(:disabled) { background: var(--surface-hover); color: var(--ink); }
+.tt__btn:disabled { color: var(--ink-4); }
+.tt__btn[data-active] { background: var(--brand-soft); color: var(--brand-ink); }
+
+.tt__ask {
+  display: flex; align-items: center; gap: var(--s-2); flex-wrap: wrap;
+  padding: var(--s-3) var(--s-4);
+  background: var(--surface-sunk);
+  border-bottom: 1px solid var(--rule);
+}
+
+/* Superficie de escritura. La medida se acota a 68ch: una línea de 140
+   caracteres se lee mal, y el artículo publicado tampoco será tan ancho. */
+.prose-editor {
+  min-height: 380px;
+  padding: var(--s-6) var(--s-5);
+  font-size: var(--t-base);
+  line-height: 1.75;
+  color: var(--ink);
+  max-width: 70ch;
+  outline: none;
+}
+.prose-editor > * + * { margin-top: 1.05em; }
+.prose-editor h2 { font-family: var(--font-display); font-size: var(--t-lg); font-weight: 700; margin-top: 1.7em; }
+.prose-editor h3 { font-family: var(--font-display); font-size: var(--t-md); font-weight: 700; margin-top: 1.5em; }
+.prose-editor h4 { font-family: var(--font-display); font-size: var(--t-base); font-weight: 700; margin-top: 1.3em; }
+.prose-editor a { color: var(--brand-ink); text-decoration: underline; text-underline-offset: 2px; }
+.prose-editor ul, .prose-editor ol { padding-left: 1.35em; }
+.prose-editor li + li { margin-top: 0.3em; }
+.prose-editor ul li::marker { color: var(--brand-line); }
+.prose-editor ol li::marker { color: var(--ink-3); font-weight: 700; }
+.prose-editor blockquote {
+  border-left: 2px solid var(--brand-line);
+  padding-left: var(--s-4);
+  color: var(--ink-2);
+  font-style: italic;
+}
+.prose-editor img, .prose-editor iframe { border-radius: var(--r); margin: 1.4em 0; max-width: 100%; }
+.prose-editor pre {
+  background: var(--surface-sunk); border: 1px solid var(--rule);
+  border-radius: var(--r); padding: var(--s-4); overflow-x: auto;
+  font-family: var(--font-mono); font-size: 13px; line-height: 1.55;
+}
+.prose-editor code {
+  font-family: var(--font-mono); font-size: 0.88em;
+  background: var(--surface-sunk); padding: 1px 5px; border-radius: 4px; color: var(--brand-ink);
+}
+.prose-editor pre code { background: none; padding: 0; color: inherit; }
+.prose-editor hr { border: none; border-top: 1px solid var(--rule); margin: 2.2em 0; }
+.prose-editor p.is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  color: var(--ink-4);
+  pointer-events: none;
+  float: left;
+  height: 0;
+}
+
+/* ══ Utilidades ═════════════════════════════════════════════════════════ */
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+.truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+@media (max-width: 860px) { .hide-m { display: none !important; } }
+@media (min-width: 861px) { .only-m { display: none !important; } }
+
+
+/* ══ Dedos ══════════════════════════════════════════════════════════════
+   La barra del editor y los segmentados están dimensionados para ratón (30 y
+   28 px). Con el dedo eso es poco: en un puntero grueso crecen a 36. No se
+   toca en escritorio, donde apretarían la barra sin motivo. */
+@media (pointer: coarse) {
+  .tt__btn { min-width: 36px; height: 36px; }
+  .seg > button { min-height: 36px; padding: 0 14px; }
+  .icon-btn { width: 40px; height: 40px; }
+  .btn--sm { min-height: 36px; }
+}
+
+/* ══ Accesibilidad de movimiento ════════════════════════════════════════ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

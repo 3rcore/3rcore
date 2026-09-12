@@ -9,9 +9,9 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
   return generatePageMetadata({
     locale,
     path: '/tiendas-virtuales-lima',
-    titleEs: 'Tiendas Virtuales en Lima — Shopify y WooCommerce | 3R Core',
+    titleEs: 'Agencia de Diseño de Tiendas Virtuales en Lima | 3R Core',
     titleEn: 'Shopify & WooCommerce Development | 3R Core',
-    descriptionEs: 'Creamos tu tienda online en Shopify, WooCommerce o Tiendanube con pagos peruanos (Yape, Culqi, Izipay), catálogo cargado y SEO técnico. Desde S/1,500.',
+    descriptionEs: 'Diseño de tiendas virtuales en Lima (4,7★ en Google): Shopify, WooCommerce o Tiendanube con Yape, Culqi e Izipay y SEO técnico. Desde S/1,500.',
     descriptionEn: 'Online stores built in Lima, Peru for U.S. brands: payment gateway, catalog, tax setup and technical SEO. Bilingual storefronts from $1,750 in USD.',
     titleUs: 'Tiendas Online Shopify y WooCommerce en EE.UU. | 3R Core',
     descriptionUs: 'Creamos tu tienda online en Shopify o WooCommerce con pasarela de pago, catálogo cargado, cálculo de impuestos y SEO técnico. Tienda bilingüe lista para vender en Estados Unidos. Desde $1,750.',
@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
       url: 'https://3rcore.com/og/web-development.jpg',
       width: 1200,
       height: 630,
-      alt: '3R Core - Agencia de Tiendas Virtuales en Lima, Perú',
+      alt: '3R Core - Agencia de Diseño de Tiendas Virtuales en Lima, Perú',
     },
   })
 }
@@ -31,7 +31,7 @@ export default async function TiendasVirtualesLimaLayout({ children, params }: {
   const breadcrumbSchema = generateBreadcrumbSchema(
     [
       { name: isEn ? 'Home' : 'Inicio', path: '' },
-      { name: isEn ? 'Online Store Agency in Lima' : 'Agencia de Tiendas Virtuales en Lima', path: '/tiendas-virtuales-lima' },
+      { name: isEn ? 'Online Store Agency in Lima' : 'Diseño de Tiendas Virtuales en Lima', path: '/tiendas-virtuales-lima' },
     ],
     locale
   )
@@ -39,7 +39,7 @@ export default async function TiendasVirtualesLimaLayout({ children, params }: {
   const serviceSchema = buildServiceSchema({
     locale,
     path: '/tiendas-virtuales-lima',
-    nameEs: 'Agencia de Tiendas Virtuales (E-commerce) en Lima',
+    nameEs: 'Diseño de Tiendas Virtuales (E-commerce) en Lima',
     nameEn: 'Online Store / E-commerce Agency for U.S. Brands',
     descriptionEs: 'Diseño y desarrollo de tiendas virtuales para empresas en Lima y Perú: Shopify, WooCommerce y Tiendanube, pasarelas de pago locales, SEO técnico, velocidad y conversión, con soporte y capacitación.',
     descriptionEn: 'Design and development of online stores for U.S. companies, built by our team in Lima, Peru: Shopify, WooCommerce and Tiendanube, local payment gateways, technical SEO, speed and conversion, with support and training.',

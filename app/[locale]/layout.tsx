@@ -215,7 +215,11 @@ export default async function RootLayout({
         "areaServed": ["PE", "US"]
       }
     ],
+    // 12-sep-2026. La ficha de Google (CID 15241385315569891224) es la entidad que
+    // Google usa en el mapa; enlazarla aquí le confirma que web y ficha son la misma empresa.
+    "hasMap": "https://maps.google.com/?cid=15241385315569891224",
     "sameAs": [
+      "https://maps.google.com/?cid=15241385315569891224",
       "https://www.facebook.com/3Rcore/",
       "https://www.instagram.com/3rcore_/",
       "https://www.linkedin.com/company/3r-core/",

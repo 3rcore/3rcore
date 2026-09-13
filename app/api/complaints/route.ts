@@ -183,7 +183,7 @@ export async function POST(request: Request) {
                     <p style="margin: 0 0 15px 0; font-size: 14px; color: #e5e7eb;">Si tienes alguna consulta adicional, no dudes en contactarnos:</p>
                     <div style="margin: 15px 0;">
                       <p style="margin: 8px 0; font-size: 14px; color: #d1d5db;"> contacto@3rcore.com</p>
-                      <p style="margin: 8px 0; font-size: 14px; color: #d1d5db;"> +51 986 889 147</p>
+                      <p style="margin: 8px 0; font-size: 14px; color: #d1d5db;"> +51 987 216 703</p>
                     </div>
                     <div style="margin-top: 25px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
                       <p style="margin: 0; opacity: 0.6; font-size: 12px; color: #9ca3af;">© 2026 3RCORE. Todos los derechos reservados.</p>

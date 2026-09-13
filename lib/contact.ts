@@ -2,7 +2,7 @@
  * contact — fuente única de los datos de contacto (NAP) de 3R Core.
  *
  * Antes convivían 3 números de WhatsApp hardcodeados en ~11 archivos:
- *   51986889147 → schema LocalBusiness / NAP + home + páginas de servicio,
+ *   51986889147 → schema LocalBusiness / NAP + home + páginas de servicio (hasta el 12-sep-2026),
  *   51987216703 → botón flotante + BlogCTA + captura de pilares,
  *   51969791251 → landing de campañas de paid (/performance-marketing).
  * Esa mezcla rompía la consistencia NAP (local SEO / citations) y la
@@ -19,7 +19,8 @@
  */
 
 // Número del negocio en schema LocalBusiness / NAP / GBP + páginas de servicio.
-export const WA_MAIN = '51986889147'
+// 12-sep-2026: pasa a la línea que atiende (confirmada por Jose el 2-sep), la misma de WA_LEADS.
+export const WA_MAIN = '51987216703'
 
 // Línea de conversión orgánica actual (botón flotante, BlogCTA, pilares).
 export const WA_LEADS = '51987216703'

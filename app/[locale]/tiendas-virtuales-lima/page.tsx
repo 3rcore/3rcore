@@ -12,7 +12,7 @@ interface Props { params: Promise<{ locale: string }> }
 const COPY: Record<string, any> = {
   es: {
     eyebrow: '3R Core · Tiendas Virtuales · Lima · Perú',
-    h1: 'Agencia de Tiendas Virtuales en Lima, Perú',
+    h1: 'Agencia de diseño de tiendas virtuales en Lima, Perú',
     heroH2: 'Tu tienda online en Shopify, WooCommerce o Tiendanube, lista para vender',
     sub: 'Creamos tu tienda online en Shopify, WooCommerce o Tiendanube: pagos locales (Culqi, Niubiz, Izipay, Yape), catálogo cargado, SEO técnico y lista para vender. Desde S/1,500 de implementación, sin plantillas genéricas.',
     cta: 'Cotiza tu tienda online',

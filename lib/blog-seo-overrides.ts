@@ -134,8 +134,36 @@ export const BLOG_SEO_OVERRIDES: Record<string, BlogSeoOverride> = {
   },
 }
 
+/**
+ * Posts de /en (12-sep-2026, orquesta). Search Console 13-ago..9-sep:
+ * «ecommerce platform comparison» posición 5,9 con 193 impresiones y 0 clics;
+ * «spanish seo» 12,7 (163) y «small business website cost» 15,2 (122), también
+ * a 0 clics. El title no empezaba por la búsqueda y las descripciones pasaban de
+ * 160 caracteres. Cada cifra sale del cuerpo del propio artículo, leído en vivo.
+ */
+export const BLOG_SEO_OVERRIDES_EN: Record<string, BlogSeoOverride> = {
+  // Artículo: Shopify $25–$399/mes; WooCommerce gratis + hosting $25–$350/mes.
+  'best-ecommerce-platform-for-small-business': {
+    title: 'Ecommerce Platform Comparison 2026: Shopify vs WooCommerce',
+    description:
+      'Shopify costs $25–$399 a month; WooCommerce is free but hosting runs $25–$350 a month. Fees, SEO and who each platform fits, with no affiliate links.',
+  },
+  // Artículo: «Roughly 40 million U.S. residents speak Spanish at home».
+  'spanish-seo-for-us-businesses': {
+    title: 'Spanish SEO for U.S. Businesses: How to Rank in Spanish',
+    description:
+      'Roughly 40 million U.S. residents speak Spanish at home. How to rank for their searches: es-US hreflang, native keyword research and local pages.',
+  },
+  // Artículo: $850–$10,000; la mayoría entre $1,200 y $2,400.
+  'how-much-does-a-small-business-website-cost': {
+    title: 'Small Business Website Cost in 2026: Real Price Ranges',
+    description:
+      'A small business website costs $850 to $10,000 to build, and most land at $1,200–$2,400. What each band includes and the yearly costs after launch.',
+  },
+}
+
 export function getBlogSeoOverride(slug: string, locale: string): BlogSeoOverride | null {
-  // Solo /es: los posts en inglés son otros y no arrastran este historial.
-  if (locale === 'en') return null
+  // /en tiene su propio mapa: son otros artículos y no arrastran el historial de /es.
+  if (locale === 'en') return BLOG_SEO_OVERRIDES_EN[slug] ?? null
   return BLOG_SEO_OVERRIDES[slug] ?? null
 }

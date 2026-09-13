@@ -4,10 +4,11 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 gsap.registerPlugin(ScrollTrigger);
 
+// Catálogo completo del carrusel: lo sigue usando /us.
 const servicesList = [
   "Páginas web",
   "Tiendas virtuales",
@@ -20,13 +21,23 @@ const servicesList = [
   "Contenido UGC"
 ];
 
+// 13-sep-2026. Planes de reposicionamiento de 3R Core (Piero Roque): el home
+// de /es habla solo de los cuatro servicios que se venden en Perú y el de /en
+// de los tres de EE. UU., en inglés.
+const SERVICES_BY_LOCALE: Record<string, string[]> = {
+  es: ["Google Ads", "Posicionamiento SEO", "Desarrollo web", "Social Media"],
+  en: ["SEO", "Web Development", "Online Stores"],
+};
+
 const StatsAndMarquee = () => {
   const t = useTranslations("CTA");
+  const locale = useLocale();
+  const marqueeServices = SERVICES_BY_LOCALE[locale] ?? servicesList;
 
   // ✅ Cifras confirmadas por el cliente el 31-ago-2026: +1000 marcas,
   // +3 países, +5 años. Deben coincidir con components/sections/home/CTASection.tsx
-  // (la variante que sirve /en): dos portadas de la misma web no pueden dar
-  // números distintos. El «+» iba solo en el primero; ahora va en los tres,
+  // (la variante de la home anterior): dos portadas de la misma web no pueden
+  // dar números distintos. El «+» iba solo en el primero; ahora va en los tres,
   // porque las tres cifras son mínimos, no exactos.
   const stats = [
     { id: 1, endValue: 1000, label: t("labelClients"), prefix: "+" },
@@ -70,7 +81,7 @@ const StatsAndMarquee = () => {
     { scope: containerRef }
   );
 
-  const marqueeItems = [...servicesList, ...servicesList, ...servicesList, ...servicesList];
+  const marqueeItems = [...marqueeServices, ...marqueeServices, ...marqueeServices, ...marqueeServices];
 
   return (
     <section

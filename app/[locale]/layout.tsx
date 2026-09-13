@@ -58,17 +58,23 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
   // Vercel devuelve `no-store` en cada visita.
   setRequestLocale(locale);
 
+  // 13-sep-2026. Planes de reposicionamiento de 3R Core (Piero Roque):
+  //  - /es: de «Agencia de Marketing Digital en Lima, Perú» a «Agencia de SEO,
+  //    SEM y Google Ads». Sin montos: el precio se conversa en la reunión.
+  //  - /en: «SEO, Web Development & Online Stores Agency», para todo EE. UU. y
+  //    sin ninguna referencia a Perú, Lima ni facturación peruana.
+  //  - /us se queda como estaba.
   const title = locale === 'en'
-    ? "Marketing Agency for U.S. Brands | 3R Core"
+    ? "SEO, Web Development & Online Stores Agency | 3R Core"
     : locale === 'us'
       ? "Marketing Digital en Español para EE.UU. | 3R Core"
-      : "Agencia de Marketing Digital en Lima, Perú | 3R Core"
+      : "Agencia de SEO, SEM y Google Ads | 3R Core"
 
   const description = locale === 'en'
-    ? "Websites, SEO and online stores for U.S. brands. Peruvian team, U.S. subsidiary, U.S. hours, fixed scopes in USD. 4.7 stars from 42 reviews."
+    ? "SEO, web development and online stores for businesses across the U.S. In-house team, U.S. business hours and fixed scopes in USD. 4.7 stars from 42 reviews."
     : locale === 'us'
       ? "Marketing en español para negocios hispanos en EE.UU.: video UGC, Google Ads, Meta Ads, SEO y tiendas online. Precios en dólares y reportes cada mes."
-      : "Tiendas virtuales, SEO y Google Ads en Lima. Precios publicados, sin contratos forzosos y reportes cada mes. 4,7★ en 42 reseñas. Cotiza gratis."
+      : "Agencia de SEO, SEM y Google Ads con equipo propio de diseño, programación y posicionamiento. Resultados medibles y reportes cada mes. 4,7★ en 42 reseñas."
 
   return {
     title,
@@ -79,15 +85,15 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
     },
     openGraph: {
       title: locale === 'en'
-        ? "3R Core | Websites, SEO and Online Stores for U.S. Brands"
+        ? "3R Core | SEO, Web Development & Online Stores Agency"
         : locale === 'us'
           ? "3R Core | Marketing Digital en Español para EE.UU."
-          : "3R Core | Agencia de Marketing Digital en Lima",
+          : "3R Core | Agencia de SEO, SEM y Google Ads",
       description: locale === 'en'
-        ? "Websites, SEO and online stores for U.S. brands, built by our team in Lima through our U.S. subsidiary. U.S. hours, fixed scopes in USD."
+        ? "SEO, web development and online stores for businesses across the U.S., with contracts and invoicing through our U.S. subsidiary. U.S. hours, fixed scopes in USD."
         : locale === 'us'
           ? "Marketing digital en español para negocios hispanos en Estados Unidos: video UGC, Google Ads, Meta Ads, SEO y tiendas online. Precios en dólares."
-          : "Agencia de marketing digital en Lima, Perú. Diseño web, manejo de redes sociales, Google Ads, posicionamiento SEO y branding con ROI medible.",
+          : "Agencia de SEO, SEM y Google Ads con equipo propio: posicionamiento en Google, campañas de Google Ads, desarrollo web y social media con resultados medibles.",
       url: `${BASE_URL}/${locale}`,
       siteName: "3R Core",
       locale: locale === 'en' ? 'en_US' : locale === 'us' ? 'es_US' : 'es_PE',
@@ -98,19 +104,25 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
           width: 1200,
           height: 630,
           alt: locale === 'en'
-            ? '3R Core - Websites, SEO and Online Stores'
-            : '3R Core - Agencia de Marketing Digital',
+            ? '3R Core - SEO, Web Development & Online Stores'
+            : locale === 'us'
+              ? '3R Core - Agencia de Marketing Digital'
+              : '3R Core - Agencia de SEO, SEM y Google Ads',
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
       title: locale === 'en'
-        ? "3R Core - Websites, SEO and Online Stores"
-        : "3R Core - Agencia de Marketing Digital",
+        ? "3R Core - SEO, Web Development & Online Stores"
+        : locale === 'us'
+          ? "3R Core - Agencia de Marketing Digital"
+          : "3R Core - Agencia de SEO, SEM y Google Ads",
       description: locale === 'en'
-        ? "Websites, SEO and online stores for U.S. brands — Peruvian team, U.S. subsidiary, fixed scopes in USD."
-        : "Combinamos Experiencia, Visión y Tecnología en estrategias de marketing digital.",
+        ? "SEO, web development and online stores for businesses across the U.S. — in-house team, U.S. subsidiary, fixed scopes in USD."
+        : locale === 'us'
+          ? "Combinamos Experiencia, Visión y Tecnología en estrategias de marketing digital."
+          : "Agencia de SEO, SEM y Google Ads con equipo propio y resultados medibles.",
       images: [`${BASE_URL}/og/default.jpg`],
     },
     metadataBase: new URL(BASE_URL),
@@ -149,7 +161,12 @@ export default async function RootLayout({
     // define y https://schema.org/MarketingAgency devuelve 404. Un @type
     // inventado no aporta y ensucia el grafo. El rubro se expresa con
     // additionalType, que sí es válido.
-    "@type": ["ProfessionalService", "LocalBusiness"],
+    // 13-sep-2026. Plan USA de 3R Core (Piero Roque): el /en no menciona Perú,
+    // Lima ni facturación peruana. En /en el nodo va como Organization y sin los
+    // datos de la sede física (dirección, coordenadas, RUC, horario de oficina,
+    // ficha de Maps y zona de servicio en Lima), atendiendo a Estados Unidos.
+    // /es y /us conservan el LocalBusiness completo.
+    "@type": locale === 'en' ? "Organization" : ["ProfessionalService", "LocalBusiness"],
     "additionalType": "https://www.wikidata.org/wiki/Q679520",
     "@id": `${BASE_URL}/#organization`,
     "name": "3R Core - Agencia de Marketing Digital",
@@ -170,33 +187,58 @@ export default async function RootLayout({
       `${BASE_URL}/og/socialmedia.jpg`,
       `${BASE_URL}/og/google-ads.jpg`
     ],
+    // 13-sep-2026. /es pasa a «agencia de SEO, SEM y Google Ads» (plan Perú).
     "description": locale === 'en'
-      ? "Digital marketing agency in Lima, Peru. We combine Experience, Vision, and Technology into strategies: Branding, Social Media, SEO, Google Ads & Web Development."
-      : "Agencia de marketing digital en Lima, Perú. Combinamos Experiencia, Visión y Tecnología en estrategias: Branding, Social Media, SEO, Google Ads y Desarrollo Web.",
-    // Una sola fuente para el NAP (ver lib/nap.ts): la web llegó a publicar dos
-    // direcciones distintas y eso rompe la coherencia que Google necesita.
-    "address": POSTAL_ADDRESS,
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": -12.0913,
-      "longitude": -76.9494
-    },
+      ? "SEO, web development and online stores agency serving businesses across the United States, with an in-house design, development and SEO team."
+      : locale === 'us'
+        ? "Agencia de marketing digital en Lima, Perú. Combinamos Experiencia, Visión y Tecnología en estrategias: Branding, Social Media, SEO, Google Ads y Desarrollo Web."
+        : "Agencia de SEO, SEM y Google Ads en Lima, Perú, con equipo propio de diseño, programación y posicionamiento: Google Ads, posicionamiento SEO, desarrollo web y social media.",
     "telephone": TEL_MAIN,
     "email": "info@3rcore.com",
-    "identifier": {
-      "@type": "PropertyValue",
-      "propertyID": "RUC",
-      "name": "RUC",
-      "value": "20609008217"
-    },
-    "taxID": "20609008217",
-    "vatID": "20609008217",
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "opens": "09:00",
-      "closes": "18:00"
-    },
+    ...(locale === 'en' ? {} : {
+      // Una sola fuente para el NAP (ver lib/nap.ts): la web llegó a publicar dos
+      // direcciones distintas y eso rompe la coherencia que Google necesita.
+      "address": POSTAL_ADDRESS,
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -12.0913,
+        "longitude": -76.9494
+      },
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "RUC",
+        "name": "RUC",
+        "value": "20609008217"
+      },
+      "taxID": "20609008217",
+      "vatID": "20609008217",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      // 12-sep-2026. La ficha de Google (CID 15241385315569891224) es la entidad que
+      // Google usa en el mapa; enlazarla aquí le confirma que web y ficha son la misma empresa.
+      "hasMap": "https://maps.google.com/?cid=15241385315569891224",
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": -12.0913,
+          "longitude": -76.9494
+        },
+        "geoRadius": 50000
+      },
+      "priceRange": "$$",
+      // 29-ago-2026. Las 17 páginas de /us servían el nodo de Perú tal cual:
+      // declaraban Yape, Plin, BCP e Interbank a un comprador estadounidense, y
+      // más abajo el SEO en soles. /en sí estaba localizado; /us se quedó a medias.
+      "currenciesAccepted": locale === 'es' ? "PEN, USD" : "USD",
+      "paymentAccepted": locale === 'es'
+        ? "Cash, Credit Card, Debit Card, Bank Transfer, Yape, Plin, BCP, Interbank, BBVA, Scotiabank"
+        : "Credit Card, Debit Card, Bank Transfer, ACH, Wire Transfer",
+    }),
     "contactPoint": [
       {
         "@type": "ContactPoint",
@@ -204,7 +246,7 @@ export default async function RootLayout({
         "telephone": TEL_MAIN,
         "email": "info@3rcore.com",
         "availableLanguage": ["Spanish", "English"],
-        "areaServed": ["PE", "US"]
+        "areaServed": locale === 'en' ? ["US"] : ["PE", "US"]
       },
       {
         "@type": "ContactPoint",
@@ -212,48 +254,30 @@ export default async function RootLayout({
         "telephone": TEL_MAIN,
         "email": "info@3rcore.com",
         "availableLanguage": ["Spanish", "English"],
-        "areaServed": ["PE", "US"]
+        "areaServed": locale === 'en' ? ["US"] : ["PE", "US"]
       }
     ],
-    // 12-sep-2026. La ficha de Google (CID 15241385315569891224) es la entidad que
-    // Google usa en el mapa; enlazarla aquí le confirma que web y ficha son la misma empresa.
-    "hasMap": "https://maps.google.com/?cid=15241385315569891224",
     "sameAs": [
-      "https://maps.google.com/?cid=15241385315569891224",
+      ...(locale === 'en' ? [] : ["https://maps.google.com/?cid=15241385315569891224"]),
       "https://www.facebook.com/3Rcore/",
       "https://www.instagram.com/3rcore_/",
       "https://www.linkedin.com/company/3r-core/",
       "https://www.tiktok.com/@3rcore",
-      "https://pe.linkedin.com/company/3r-core"
+      ...(locale === 'en' ? [] : ["https://pe.linkedin.com/company/3r-core"]),
     ],
-    "areaServed": [
-      { "@type": "Country", "name": "Peru" },
-      { "@type": "Country", "name": "United States" },
-      { "@type": "City", "name": "Lima" },
-      { "@type": "AdministrativeArea", "name": "Lima Metropolitana" }
-    ],
-    "serviceArea": {
-      "@type": "GeoCircle",
-      "geoMidpoint": {
-        "@type": "GeoCoordinates",
-        "latitude": -12.0913,
-        "longitude": -76.9494
-      },
-      "geoRadius": 50000
-    },
-    "priceRange": "$$",
+    "areaServed": locale === 'en'
+      ? [{ "@type": "Country", "name": "United States" }]
+      : [
+          { "@type": "Country", "name": "Peru" },
+          { "@type": "Country", "name": "United States" },
+          { "@type": "City", "name": "Lima" },
+          { "@type": "AdministrativeArea", "name": "Lima Metropolitana" }
+        ],
     // Valoración y reseñas del perfil de empresa de Google, las mismas que
     // ReviewsSection pinta en la página (nunca datos inventados y nunca una
     // reseña que la web no muestre).
     "aggregateRating": ratingNodes.aggregateRating,
     "review": ratingNodes.review,
-    // 29-ago-2026. Las 17 páginas de /us servían el nodo de Perú tal cual:
-    // declaraban Yape, Plin, BCP e Interbank a un comprador estadounidense, y
-    // más abajo el SEO en soles. /en sí estaba localizado; /us se quedó a medias.
-    "currenciesAccepted": locale === 'es' ? "PEN, USD" : "USD",
-    "paymentAccepted": locale === 'es'
-      ? "Cash, Credit Card, Debit Card, Bank Transfer, Yape, Plin, BCP, Interbank, BBVA, Scotiabank"
-      : "Credit Card, Debit Card, Bank Transfer, ACH, Wire Transfer",
     "slogan": locale === 'en'
       ? "Experience, Vision & Technology"
       : "Experiencia, Visión y Tecnología",
@@ -369,12 +393,16 @@ export default async function RootLayout({
             "url": localizedUrl('/posicionamiento-seo', locale),
             "serviceType": "SEO / Search Engine Optimization"
           },
-          "priceSpecification": {
-            "@type": "PriceSpecification",
-            "price": locale === 'es' ? 1800 : 500,
-            "priceCurrency": locale === 'es' ? "PEN" : "USD",
-            "valueAddedTaxIncluded": false
-          }
+          // 13-sep-2026. /es y /en ya no publican montos en el home (planes de
+          // Piero Roque): el precio solo se declara en /us, que sí lo enseña.
+          ...(locale === 'us' ? {
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "price": 500,
+              "priceCurrency": "USD",
+              "valueAddedTaxIncluded": false
+            }
+          } : {})
         },
         {
           "@type": "Offer",
@@ -487,17 +515,21 @@ export default async function RootLayout({
   // anunciando a Google un catálogo que la propia web pide no indexar, y
   // repartiendo la señal de navegación entre nueve destinos en vez de tres.
   // Es el mismo fallo que se corrigió en los enlaces HTML, un nivel más abajo.
+  // 13-sep-2026. Planes de reposicionamiento de 3R Core (Piero Roque): el
+  // schema sigue al menú. /en ordena SEO, Web Development y Online Stores y
+  // quita la página «Peruvian Agency for U.S. Brands»; /es lleva Google Ads y
+  // Posicionamiento SEO al frente y deja en Servicios solo Desarrollo web,
+  // Social Media y Branding.
   const navItems = locale === 'en'
     ? [
         { name: "Home", url: `${BASE_URL}/en` },
         { name: "About Us", url: localizedUrl('/nosotros', 'en') },
         { name: "Services", url: localizedUrl('/servicios', 'en') },
-        { name: "Web Design & Development", url: localizedUrl('/servicios/web-development', 'en') },
-        { name: "SEO Positioning", url: localizedUrl('/posicionamiento-seo', 'en') },
-        { name: "E-commerce Development", url: localizedUrl('/tiendas-virtuales-lima', 'en') },
+        { name: "SEO", url: localizedUrl('/posicionamiento-seo', 'en') },
+        { name: "Web Development", url: localizedUrl('/servicios/web-development', 'en') },
+        { name: "Online Stores", url: localizedUrl('/tiendas-virtuales-lima', 'en') },
         { name: "Spanish SEO Services", url: `${BASE_URL}/en/spanish-seo-services` },
         { name: "Hispanic Marketing Agency", url: `${BASE_URL}/en/hispanic-marketing-agency` },
-        { name: "Peruvian Agency for U.S. Brands", url: `${BASE_URL}/en/nearshore-marketing-agency` },
         { name: "Pricing", url: localizedUrl('/precios', 'en') },
         { name: "Blog", url: `${BASE_URL}/en/blogs` },
         { name: "FAQ", url: localizedUrl('/preguntas', 'en') },
@@ -518,15 +550,12 @@ export default async function RootLayout({
     : [
         { name: "Inicio", url: `${BASE_URL}/es` },
         { name: "Nosotros", url: localizedUrl('/nosotros', 'es') },
-        { name: "Servicios", url: localizedUrl('/servicios', 'es') },
-        { name: "Diseño y Desarrollo Web", url: localizedUrl('/servicios/web-development', 'es') },
-        { name: "Manejo de Redes Sociales", url: localizedUrl('/servicios/socialmedia', 'es') },
-        { name: "Branding Corporativo", url: localizedUrl('/servicios/branding', 'es') },
         { name: "Google Ads", url: localizedUrl('/servicios/google-ads', 'es') },
         { name: "Posicionamiento SEO", url: localizedUrl('/posicionamiento-seo', 'es') },
-        { name: "Contenido UGC", url: localizedUrl('/servicios/ugc', 'es') },
-        { name: "Influencer Marketing", url: localizedUrl('/servicios/influencer-marketing', 'es') },
-        { name: "Relaciones Públicas", url: localizedUrl('/servicios/relaciones-publicas', 'es') },
+        { name: "Servicios", url: localizedUrl('/servicios', 'es') },
+        { name: "Desarrollo Web", url: localizedUrl('/servicios/web-development', 'es') },
+        { name: "Social Media", url: localizedUrl('/servicios/socialmedia', 'es') },
+        { name: "Branding", url: localizedUrl('/servicios/branding', 'es') },
         { name: "Blog", url: `${BASE_URL}/es/blogs` },
         { name: "Preguntas Frecuentes", url: localizedUrl('/preguntas', 'es') },
       ]

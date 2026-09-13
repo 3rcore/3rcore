@@ -10,8 +10,16 @@ import type { AppPathname } from "@/i18n/routing";
  * el resto, pero (a) es frágil para el presupuesto de render y (b) los bots de
  * IA que NO ejecutan JS (GEO/AEO) recibían un home casi vacío. Esta sección
  * añade contenido semántico real (H2/H3, ~550 palabras, enlaces internos a los
- * 3 pilares y señales locales de Lima) directamente en el SSR, sin tocar la
- * experiencia animada de HomeClient. Es aditiva y reversible.
+ * pilares y señales locales) directamente en el SSR, sin tocar la experiencia
+ * animada del home. Es aditiva y reversible.
+ *
+ * 13-sep-2026. Planes de reposicionamiento de 3R Core (Piero Roque):
+ *  - /es: agencia de SEO, SEM y Google Ads, con los cuatro servicios del home
+ *    (Google Ads, Posicionamiento SEO, Desarrollo web, Social Media) y sin
+ *    montos: el precio se conversa en la reunión.
+ *  - /en: agencia de SEO, desarrollo web y tiendas online para todo EE. UU.,
+ *    sin ninguna referencia a Perú.
+ *  - /us sin cambios.
  */
 
 type Pillar = { h: string; p: string; href: AppPathname; cta: string }
@@ -30,20 +38,20 @@ const COPY: Record<'es' | 'en' | 'us', {
   quoteCta: string
 }> = {
   es: {
-    eyebrow: 'Agencia de marketing digital en Lima, Perú',
-    h2: 'Tiendas virtuales, SEO y Google Ads que traen clientes, no solo visitas',
+    eyebrow: 'Agencia de SEO, SEM y Google Ads',
+    h2: 'SEO y Google Ads que traen clientes, no solo visitas',
     intro:
-      'En 3R Core ayudamos a negocios y pymes del Perú a vender más por internet con tres pilares que trabajan juntos: creamos tu tienda virtual, te posicionamos en Google con SEO y gestionamos tus campañas de Google Ads. Todo con medición real, reportes mensuales y foco en el retorno de tu inversión (ROI), no en métricas de vanidad.',
+      'En 3R Core ayudamos a negocios y pymes del Perú a conseguir clientes desde Google: te posicionamos en los resultados orgánicos con SEO y gestionamos tus campañas de Google Ads (SEM), con desarrollo web y social media como apoyo. Todo con equipo propio, medición real, reportes mensuales y foco en el retorno de tu inversión (ROI), no en métricas de vanidad.',
     // Párrafo-definición citable (GEO): responde "¿qué es 3R Core?" con datos
     // concretos ya publicados en el sitio, en un solo pasaje autosuficiente.
     definition:
-      '3R Core es una agencia de marketing digital fundada por los hermanos Alejandro y Piero Roque, con oficina en La Molina, Lima (Alameda de la Paz 187, primer piso), que atiende a empresas de todo el Perú y de Estados Unidos. Está especializada en tiendas virtuales sobre Shopify, WooCommerce y Tiendanube (implementación desde S/1,500), posicionamiento SEO (S/1,800/mes) y gestión de Google Ads (desde S/1,800/mes), además de branding, redes sociales y desarrollo web, con precios publicados y sin contratos forzosos.',
+      '3R Core es una agencia de SEO, SEM y Google Ads fundada por los hermanos Alejandro y Piero Roque, con oficina en La Molina, Lima (Alameda de la Paz 187, primer piso), que atiende a empresas de todo el Perú y de Estados Unidos. Con un equipo propio de diseño, programación y posicionamiento trabaja cuatro servicios —Google Ads, posicionamiento SEO, desarrollo web y social media— sin intermediarios y sin contratos forzosos.',
     pillars: [
       {
-        h: 'Tiendas virtuales y e-commerce',
-        p: 'Diseñamos y desarrollamos tu tienda online en Shopify, WooCommerce o Tiendanube, con pasarelas de pago peruanas (Culqi, Niubiz, Izipay, Yape y Mercado Pago), lista para vender desde el primer día. Optimizada para móvil, rápida y pensada para convertir visitas en pedidos.',
-        href: '/tiendas-virtuales-lima',
-        cta: 'Ver tiendas virtuales en Lima',
+        h: 'Google Ads y campañas SEM',
+        p: 'Gestionamos tus campañas de Google Ads (Search, Performance Max, Shopping, YouTube y Remarketing) con intención de compra y presupuesto optimizado, para aparecer justo cuando tu cliente está listo para contratar o comprar.',
+        href: '/servicios/google-ads',
+        cta: 'Ver servicio de Google Ads',
       },
       {
         h: 'Posicionamiento SEO en Google',
@@ -52,24 +60,26 @@ const COPY: Record<'es' | 'en' | 'us', {
         cta: 'Ver servicio de SEO',
       },
       {
-        h: 'Google Ads y campañas SEM',
-        p: 'Gestionamos tus campañas de Google Ads (Search, Performance Max, Shopping, YouTube y Remarketing) con intención de compra y presupuesto optimizado, para aparecer justo cuando tu cliente está listo para contratar o comprar.',
-        href: '/servicios/google-ads',
-        cta: 'Ver servicio de Google Ads',
+        h: 'Desarrollo web',
+        p: 'Webs corporativas y landing pages rápidas, con SEO técnico y formularios que capturan leads.',
+        href: '/servicios/web-development',
+        cta: 'Ver desarrollo web',
+      },
+      {
+        h: 'Social Media',
+        p: 'Estrategia, contenido y gestión de redes que construyen marca y generan comunidad.',
+        href: '/servicios/socialmedia',
+        cta: 'Ver social media',
       },
     ],
     secondaryH3: 'También te acompañamos en',
-    secondary: [
-      { h: 'Diseño y desarrollo web', p: 'Webs corporativas y landing pages rápidas, con SEO técnico y formularios que capturan leads.', href: '/servicios/web-development' },
-      { h: 'Branding e identidad', p: 'Logo, manual de marca y aplicaciones para una marca que se recuerda y vende.', href: '/servicios/branding' },
-      { h: 'Redes sociales', p: 'Estrategia, contenido y gestión de redes que construyen marca y generan comunidad.', href: '/servicios/socialmedia' },
-    ],
-    localH3: 'Marketing digital en Lima y todo el Perú',
+    secondary: [],
+    localH3: 'SEO y Google Ads para empresas de Lima y todo el Perú',
     local:
       'Nuestra oficina está en La Molina (Alameda de la Paz 187, primer piso) y trabajamos con negocios de todos los distritos de Lima —San Isidro, Miraflores, Surco, San Borja, La Victoria, Los Olivos— y de provincias en todo el Perú. Atención de lunes a viernes de 9:00 a 18:00.',
     closing:
-      '¿Tienes un negocio y quieres vender más online? Conversemos: armamos una propuesta a tu medida en la primera reunión, sin compromiso.',
-    quoteCta: 'Calcula el estimado de tu proyecto',
+      '¿Quieres que tus clientes te encuentren en Google? Conversemos: armamos una propuesta a tu medida en la primera reunión, sin compromiso.',
+    quoteCta: 'Agenda una reunión',
   },
   // es-US: mismo idioma que Perú, otro mercado. Sin soles, sin pasarelas
   // peruanas y sin los distritos de Lima como señal local — aquí la señal
@@ -115,29 +125,27 @@ const COPY: Record<'es' | 'en' | 'us', {
     quoteCta: 'Calcula el estimado de tu proyecto',
   },
   en: {
-    // 29-ago-2026. Este bloque era la versión peruana traducida: se anunciaba
-    // como «agency in Lima, Peru», decía «we help businesses in Peru» a un
-    // lector estadounidense y vendía Google Ads, que en EE.UU. NO se vende (su
-    // página va con noindex allí). Se dice de dónde es el equipo —esa es la
-    // regla, no se esconde— pero se habla al mercado al que se vende.
-    eyebrow: 'Digital marketing agency for U.S. businesses',
-    h2: 'Websites, SEO and online stores that bring clients, not just visits',
+    // 29-ago-2026. Este bloque era la versión peruana traducida y vendía Google
+    // Ads, que en EE.UU. NO se vende (su página va con noindex allí).
+    // 13-sep-2026. Plan USA: se habla a todo EE. UU. y sin mencionar Perú.
+    eyebrow: 'SEO, web development & online stores agency',
+    h2: 'SEO, websites and online stores that bring clients, not just visits',
     intro:
-      'At 3R Core we help U.S. businesses sell more online with three services that work together: we build your website, rank you on Google with SEO and build your online store. Our team is in Lima, Peru and works U.S. business hours; U.S. clients contract and invoice through our U.S. subsidiary. Everything with real measurement, monthly reports and a focus on return on investment, not vanity metrics.',
+      'At 3R Core we help businesses across the U.S. sell more online with three services that work together: we rank you on Google with SEO, build your website and build your online store. Our in-house team works U.S. business hours, and U.S. clients contract and invoice through our U.S. subsidiary. Everything with real measurement, monthly reports and a focus on return on investment, not vanity metrics.',
     definition:
-      '3R Core is a digital marketing agency founded by brothers Alejandro and Piero Roque, based in La Molina, Lima, Peru, serving clients in Peru and the United States. For U.S. clients it sells three services: websites (from $850), SEO positioning ($500/month) and online stores on Shopify or WooCommerce (from $1,750), with published pricing and no mandatory contracts. Branding, social media and paid media are part of the catalogue in Peru.',
+      '3R Core is an SEO, web development and online stores agency founded by brothers Alejandro and Piero Roque that serves businesses nationwide across the United States. It works three services: SEO, web development and online stores on Shopify or WooCommerce, built by an in-house design, development and SEO team and with no mandatory contracts.',
     pillars: [
-      {
-        h: 'Web design and development',
-        p: 'Corporate sites, landing pages and bilingual builds, instrumented before launch so the first month of traffic already tells you which page produces revenue. Fast on mobile, structured for search, and handed over in your own accounts.',
-        href: '/servicios/web-development',
-        cta: 'See web development',
-      },
       {
         h: 'SEO that compounds',
         p: 'Technical foundations fixed first, then content written for real search intent and the internal linking that makes it accumulate. Reported on cost per acquisition, not on rank screenshots.',
         href: '/posicionamiento-seo',
         cta: 'See SEO service',
+      },
+      {
+        h: 'Web development',
+        p: 'Corporate sites, landing pages and bilingual builds, instrumented before launch so the first month of traffic already tells you which page produces revenue. Fast on mobile, structured for search, and handed over in your own accounts.',
+        href: '/servicios/web-development',
+        cta: 'See web development',
       },
       {
         h: 'Online stores',
@@ -152,17 +160,25 @@ const COPY: Record<'es' | 'en' | 'us', {
       { h: 'Spanish where it pays', p: 'A real indexable Spanish version — usually the cheapest qualified traffic a U.S. business can reach.', href: '/posicionamiento-seo' },
       { h: 'U.S. payments and sales tax', p: 'Gateway configured and state-level tax calculation working, the piece most commonly left broken.', href: '/tiendas-virtuales-lima' },
     ],
-    localH3: 'Digital marketing in Lima and all of Peru',
+    localH3: 'Serving businesses across the U.S.',
     local:
-      'Our office is in La Molina (Alameda de la Paz 187, primer piso) and we work with businesses across every district of Lima —San Isidro, Miraflores, Surco, San Borja, La Victoria, Los Olivos— and throughout Peru. Open Monday to Friday, 9:00 to 18:00.',
+      'We work with businesses nationwide, on U.S. business hours, with fixed scopes in USD and contracts and invoicing through our U.S. subsidiary.',
     closing:
       'Have a business and want to sell more online? Let’s talk: we build a tailored proposal in the first meeting, no commitment.',
-    quoteCta: 'Estimate your project',
+    quoteCta: 'Book a meeting',
   },
 }
 
 export default function HomeSeoSection({ locale }: { locale: string }) {
   const t = COPY[locale === 'en' ? 'en' : locale === 'us' ? 'us' : 'es']
+
+  const ctaClass =
+    'inline-flex items-center gap-2 px-6 py-3 rounded-full font-bold uppercase tracking-[0.18em] text-[11px] text-white bg-gradient-to-r from-[#E91E63] to-[#9C27B0] hover:-translate-y-0.5 transition-all'
+  const ctaArrow = (
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+      <path d="M1 7h12M13 7L8 2M13 7l-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  )
 
   return (
     <section
@@ -186,7 +202,7 @@ export default function HomeSeoSection({ locale }: { locale: string }) {
           {t.definition}
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
+        <div className={`grid grid-cols-1 ${t.pillars.length === 4 ? 'md:grid-cols-2 xl:grid-cols-4' : 'md:grid-cols-3'} gap-6 mb-14`}>
           {t.pillars.map((p) => (
             <div
               key={p.href}
@@ -207,23 +223,27 @@ export default function HomeSeoSection({ locale }: { locale: string }) {
           ))}
         </div>
 
-        <h3 className="text-[11px] uppercase tracking-[0.3em] text-white/40 font-bold mb-5">
-          {t.secondaryH3}
-        </h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
-          {t.secondary.map((s) => (
-            <div key={s.href} className="border-t border-white/10 pt-5">
-              <h4 className="text-base font-semibold mb-2 text-white/90">{s.h}</h4>
-              <p className="text-white/50 text-sm leading-relaxed mb-3">{s.p}</p>
-              <Link
-                href={s.href}
-                className="text-white/70 text-[11px] font-bold uppercase tracking-[0.18em] underline decoration-[#A21F8A]/50 underline-offset-4 hover:text-white transition-colors"
-              >
-                {locale === 'en' ? 'Learn more' : 'Saber más'}
-              </Link>
+        {t.secondary.length > 0 && (
+          <>
+            <h3 className="text-[11px] uppercase tracking-[0.3em] text-white/40 font-bold mb-5">
+              {t.secondaryH3}
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
+              {t.secondary.map((s) => (
+                <div key={s.href} className="border-t border-white/10 pt-5">
+                  <h4 className="text-base font-semibold mb-2 text-white/90">{s.h}</h4>
+                  <p className="text-white/50 text-sm leading-relaxed mb-3">{s.p}</p>
+                  <Link
+                    href={s.href}
+                    className="text-white/70 text-[11px] font-bold uppercase tracking-[0.18em] underline decoration-[#A21F8A]/50 underline-offset-4 hover:text-white transition-colors"
+                  >
+                    {locale === 'en' ? 'Learn more' : 'Saber más'}
+                  </Link>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </>
+        )}
 
         <div className="rounded-[20px] border border-white/10 bg-white/[0.03] p-7 md:p-9">
           <h3 className="text-lg md:text-xl font-semibold mb-3 text-white">{t.localH3}</h3>
@@ -242,18 +262,22 @@ export default function HomeSeoSection({ locale }: { locale: string }) {
               <Link href="/agencia-marketing-digital-lima" className="text-[#E91E63] underline underline-offset-4 hover:text-white transition-colors">
                 Conoce nuestra agencia de marketing digital en Lima
               </Link>
-              : oficina en La Molina, precios publicados y sin permanencia.
+              : oficina en La Molina y sin permanencia.
             </p>
           )}
-          <Link
-            href="/cotizar"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-bold uppercase tracking-[0.18em] text-[11px] text-white bg-gradient-to-r from-[#E91E63] to-[#9C27B0] hover:-translate-y-0.5 transition-all"
-          >
-            {t.quoteCta}
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-              <path d="M1 7h12M13 7L8 2M13 7l-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </Link>
+          {locale === 'us' ? (
+            <Link href="/cotizar" className={ctaClass}>
+              {t.quoteCta}
+              {ctaArrow}
+            </Link>
+          ) : (
+            // 13-sep-2026. /es y /en no llevan al cotizador (no se publican
+            // montos): el botón baja al formulario de contacto de la home.
+            <a href={locale === 'en' ? '#contact' : '#contacto'} className={ctaClass}>
+              {t.quoteCta}
+              {ctaArrow}
+            </a>
+          )}
         </div>
       </div>
     </section>

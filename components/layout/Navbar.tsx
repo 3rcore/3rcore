@@ -199,26 +199,46 @@ const Navbar = () => {
     "/posicionamiento-seo",
     "/tiendas-virtuales-lima",
   ];
+  // 13-sep-2026. Plan USA de 3R Core (Piero Roque): en /en los tres servicios
+  // van en el orden SEO, Web Development, Online Stores. /us conserva el suyo.
+  const EN_SERVICES: AppPathname[] = [
+    "/posicionamiento-seo",
+    "/servicios/web-development",
+    "/tiendas-virtuales-lima",
+  ];
+  // 13-sep-2026. Plan Perú: Google Ads y Posicionamiento SEO van al frente y del
+  // resto del catálogo solo quedan Desarrollo web, Social Media y Branding.
+  const ES_SERVICES: AppPathname[] = [
+    "/servicios/google-ads",
+    "/posicionamiento-seo",
+    "/servicios/web-development",
+    "/servicios/socialmedia",
+    "/servicios/branding",
+  ];
   // 28-ago-2026. Las páginas ancla de cada mercado estaban con UN solo enlace
   // interno en todo el sitio y las tres seguían "Descubiertas: actualmente sin
   // indexar" dieciséis días después de publicarse. Colgar del menú es lo que
   // les da un enlace desde cada página del sitio, incluidas las que Google sí
   // tiene indexadas. Se quedan fuera de /es a propósito: allí no existen.
+  // 13-sep-2026. Plan USA: el /en no menciona Perú en ninguna parte, así que
+  // «Why a Peruvian agency» (/nearshore-marketing-agency) sale del menú. La
+  // página sigue publicada.
   const MARKET_ANCHORS: Record<string, { href: AppPathname; label: string }[]> = {
     en: [
       { href: "/spanish-seo-services", label: t("services.spanishSeo") },
       { href: "/hispanic-marketing-agency", label: t("services.hispanic") },
-      { href: "/nearshore-marketing-agency", label: t("services.nearshore") },
     ],
     us: [
       { href: "/marketing-para-negocios-hispanos", label: t("services.hispanic") },
     ],
   };
+  const pickServices = (hrefs: AppPathname[]) =>
+    hrefs.map((h) => ALL_SERVICES.find((s) => s.href === h)!);
   const services =
     currentLocale === "es"
-      ? ALL_SERVICES
+      ? pickServices(ES_SERVICES)
       : [
-          ...US_SERVICES.map((h) => ALL_SERVICES.find((s) => s.href === h)!),
+          ...pickServices(currentLocale === "en" ? EN_SERVICES : US_SERVICES),
           ...(MARKET_ANCHORS[currentLocale] ?? []),
         ];
 
@@ -240,31 +260,26 @@ const Navbar = () => {
   ];
 
   // Menú lateral del rediseño de Aymar (aprobado por el cliente, ago-2026).
-  // Solo /es: entradas directas a web/tiendas/SEO con "Marketing digital"
-  // desplegable, casos de éxito y precios. Los textos van fijos en español a
-  // propósito (este menú solo se monta en el mercado peruano); /en y /us
-  // conservan el menú corto con el catálogo reducido de su mercado.
+  // Los textos van fijos en español a propósito (este menú solo se monta en el
+  // mercado peruano); /en y /us conservan su propio menú.
+  // 13-sep-2026. Plan Perú de 3R Core (Piero Roque): Google Ads y
+  // Posicionamiento SEO suben a primer nivel y lo demás se agrupa bajo
+  // «Servicios» (Desarrollo web, Social Media, Branding). Precios no va en el
+  // menú: no se publican montos. Tiendas virtuales y Casos de éxito salen del
+  // menú; sus páginas siguen publicadas.
   const ES_SIDE_LINKS: typeof links = [
     { name: "INICIO", href: "/" },
     { name: "NOSOTROS", href: "/nosotros" },
-    { name: "DESARROLLO DE PÁGINAS WEBS", href: "/servicios/web-development" },
-    { name: "DESARROLLO DE TIENDAS VIRTUALES", href: "/tiendas-virtuales-lima" },
+    { name: "GOOGLE ADS", href: "/servicios/google-ads" },
     { name: "POSICIONAMIENTO SEO", href: "/posicionamiento-seo" },
-    { name: "MARKETING DIGITAL", href: "/servicios", isServices: true },
-    { name: "CASOS DE ÉXITO", href: "/casos-de-exito" },
-    { name: "PRECIOS", href: "/precios" },
+    { name: "SERVICIOS", href: "/servicios", isServices: true },
     { name: "BLOG", href: "/blogs" },
     { name: "CONTÁCTANOS", href: "/", hash: "#contacto", isContact: true },
   ];
-  // El diseño traía /servicios/contenido-ugc, que no existe: la ruta real es
-  // /servicios/ugc.
   const ES_SIDE_SUBLINKS: { href: AppPathname; label: string }[] = [
-    { href: "/servicios/socialmedia", label: "REDES SOCIALES" },
-    { href: "/servicios/ugc", label: "CONTENIDO UGC" },
-    { href: "/servicios/google-ads", label: "GOOGLE ADS" },
+    { href: "/servicios/web-development", label: "DESARROLLO WEB" },
+    { href: "/servicios/socialmedia", label: "SOCIAL MEDIA" },
     { href: "/servicios/branding", label: "BRANDING" },
-    { href: "/servicios/relaciones-publicas", label: "RELACIONES PÚBLICAS" },
-    { href: "/servicios/influencer-marketing", label: "INFLUENCER MARKETING" },
   ];
   // /us: mismo menú que Perú pero con el catálogo de tres servicios de ese
   // mercado (pedido del cliente, 20-ago) — sin desplegable de marketing ni
@@ -285,8 +300,8 @@ const Navbar = () => {
     : currentLocale === "us" ? US_SIDE_LINKS
     : links;
   const sideSublinks = currentLocale === "es" ? ES_SIDE_SUBLINKS : services;
-  // Los menús de /es (10 entradas) y /us (8) usan tipografía y cascada más
-  // compactas para caber en un móvil; /en conserva sus 5 a tamaño original.
+  // Los menús de /es (7 entradas) y /us (8) usan tipografía y cascada más
+  // compactas para caber en un móvil; /en conserva sus 6 a tamaño original.
   const sideItemSize =
     currentLocale === "en"
       ? "text-3xl sm:text-3xl py-4 sm:py-6"

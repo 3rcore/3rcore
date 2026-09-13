@@ -18,7 +18,8 @@
     "subray1": "At 3R CORE MARKETING AGENCY",
     "description": "we are a team of professionals with a 3-generation vision focused on the same goal, highly trained to combine",
     "description2": "Experience, Vision, and Technology",
-    "description3": "into digital marketing strategies, customized to fit your company's needs."
+    "description3": "into digital marketing strategies, customized to fit your company's needs.",
+    "descriptionV2": "At 3R CORE we are a team with a three-generation vision focused on a single goal: highly trained people who combine experience, vision and technology into SEO, web development and online store strategies tailored to your business."
   },
   "Hovers": {
     "ver": "/images/tituloCarru/ServiciosEn.svg",
@@ -94,7 +95,7 @@
       "seo": "SEO",
       "googleAds": "Google Ads / PPC",
       "ecommerce": "Online Stores",
-      "webDesign": "Web Design",
+      "webDesign": "Web Development",
       "ugc": "UGC Content",
       "influencers": "Influencer Marketing",
       "pr": "Public Relations",
@@ -626,7 +627,7 @@
     "servicios": "Services"
   },
   "HiddenH1": {
-    "home": "Peru-based agency serving U.S. brands: websites, SEO and online stores",
+    "home": "SEO, web development and online stores agency serving businesses across the U.S.",
     "branding": "Corporate branding and brand identity design for U.S. brands, from our studio in Lima, Peru",
     "webdev": "Web design and development for U.S. brands, built by our team in Lima, Peru",
     "googleads": "Certified Google Ads and PPC management for U.S. brands, run from Lima, Peru",

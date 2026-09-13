@@ -19,7 +19,7 @@
     "description": "Somos un equipo de profesionales y nativos digitales con una visión de 3 generaciones enfocados en un mismo objetivo, altamente capacitados que conjugan",
     "description2": "la Experiencia, la Visión y la Tecnología",
     "description3": "en estrategias de marketing Digital, personalizadas de acuerdo a tu empresa",
-    "descriptionV2": "En 3R CORE AGENCIA DE MARKETING, somos un equipo con una visión de 3 generaciones enfocados en un mismo objetivo, altamente capacitados que conjugan la experiencia, la Visión y la tecnología enfocados en estrategias de marketing Digital, personalizadas de acuerdo a tu empresa."
+    "descriptionV2": "En 3R CORE somos un equipo con una visión de 3 generaciones enfocados en un mismo objetivo, altamente capacitados, que conjugan la experiencia, la visión y la tecnología en estrategias de SEO, SEM y Google Ads personalizadas de acuerdo a tu empresa."
   },
   "Hovers": {
     "ver": "/images/tituloCarru/Servicios.svg",
@@ -94,9 +94,9 @@
     "clo": "CERRAR",
     "services": {
       "seo": "Posicionamiento SEO",
-      "googleAds": "Google Ads / SEM",
+      "googleAds": "Google Ads",
       "ecommerce": "Tiendas Virtuales",
-      "webDesign": "Diseño Web",
+      "webDesign": "Desarrollo web",
       "ugc": "Contenido UGC",
       "influencers": "Influencer Marketing",
       "pr": "Relaciones Públicas",
@@ -645,7 +645,7 @@
     "servicios": "Servicios"
   },
   "HiddenH1": {
-    "home": "Agencia de tiendas virtuales, posicionamiento SEO y Google Ads en Lima, Perú",
+    "home": "Agencia de SEO, SEM y Google Ads",
     "branding": "Agencia de branding corporativo y diseño de identidad de marca en Lima, Perú",
     "webdev": "Agencia de diseño y desarrollo web en Lima, Perú: tiendas online, landing pages y sitios corporativos",
     "googleads": "Agencia certificada en Google Ads y campañas SEM en Lima, Perú",

@@ -132,27 +132,78 @@ const services: { id: string; title: string; desc: string; price: string; href: 
   }
 ];
 
+type CardOverride = { id: string; title?: string; desc?: string; price?: string };
+
 // En Estados Unidos solo se venden tres servicios (pedido del cliente,
 // 20-ago: «igual que el de Perú, solo que ahí son 3 servicios»). Mismas
 // tarjetas y mismo look, con el catálogo y los precios en dólares que ya
 // publican /us/precios y el bloque semántico del home. El orden es el que
 // dictó el cliente: tiendas, webs, SEO.
-const US_OVERRIDES = [
+const US_OVERRIDES: CardOverride[] = [
   { id: 'ecommerce', desc: 'Shopify o WooCommerce con catálogo, pasarelas de pago y checkout listos para vender en EE. UU.', price: 'DESDE $1,750' },
   { id: 'web', desc: 'Webs corporativas, landings y sitios a medida, en español e inglés, listos para Google.', price: 'DESDE $850' },
   { id: 'seo', desc: 'Auditoría, contenido y enlaces en español e inglés, con reporte mensual de posiciones reales de Google.', price: '$500 / MES' },
 ];
 
+// 13-sep-2026. Plan Perú de 3R Core (Piero Roque): el home muestra solo los
+// cuatro servicios que se quieren vender —Google Ads, Posicionamiento SEO,
+// Desarrollo web y Social Media— y no publica montos: el precio se conversa en
+// la reunión. El resto del catálogo sigue dentro de «Servicios».
+const ES_OVERRIDES: CardOverride[] = [
+  { id: 'ads' },
+  { id: 'seo' },
+  { id: 'web', title: 'Desarrollo web' },
+  { id: 'social', title: 'Social Media' },
+];
+
+// 13-sep-2026. Plan USA: /en sirve esta misma home en inglés con los tres
+// servicios de EE. UU. (SEO, Web Development, Online Stores) y, como la
+// versión en español, sin montos.
+const EN_OVERRIDES: CardOverride[] = [
+  { id: 'seo', title: 'SEO', desc: 'Audits, content and links, with a monthly report of your real Google rankings.' },
+  { id: 'web', title: 'Web Development', desc: 'Corporate websites, landing pages and custom sites, built for Google and easy for you to manage.' },
+  { id: 'ecommerce', title: 'Online Stores', desc: 'Shopify or WooCommerce with catalog, payment gateways and checkout ready to sell across the U.S.' },
+];
+
 export default function ServicesGridSection() {
   const locale = useLocale();
   const isUs = locale === 'us';
-  const cards = isUs
-    ? US_OVERRIDES.map((o) => ({ ...services.find((s) => s.id === o.id)!, ...o }))
-    : services;
+  const isEn = locale === 'en';
+  const overrides = isUs ? US_OVERRIDES : isEn ? EN_OVERRIDES : ES_OVERRIDES;
+  const cards = overrides.map((o) => {
+    const base = services.find((s) => s.id === o.id)!;
+    // Solo /us publica montos en el home.
+    return { ...base, ...o, price: isUs ? o.price ?? base.price : '' };
+  });
+  const head = isEn
+    ? {
+        tag: 'SERVICES',
+        line1: 'Three services,',
+        line2: 'one team',
+        aside: 'Each card leads to its own page. We talk pricing in a meeting, based on your project.',
+        cta: 'SEE SERVICE',
+      }
+    : isUs
+      ? {
+          tag: 'SERVICIOS Y PRECIOS',
+          line1: 'Tres servicios,',
+          line2: 'un solo equipo',
+          aside: 'Cada tarjeta lleva a su pagina, con el precio desde el que arranca. Sin llamadas para averiguar lo basico.',
+          cta: 'VER SERVICIO',
+        }
+      : {
+          tag: 'SERVICIOS',
+          line1: 'Cuatro servicios,',
+          line2: 'un solo equipo',
+          aside: 'Cada tarjeta lleva a su página. El precio lo conversamos en la reunión, según tu proyecto.',
+          cta: 'VER SERVICIO',
+        };
+  const gridCols = cards.length === 4 ? 'md:grid-cols-2 xl:grid-cols-4' : 'md:grid-cols-2 lg:grid-cols-3';
+
   return (
     <section className="w-full text-white py-16 md:py-24 px-6 md:px-12 flex justify-center">
       <div className="max-w-7xl w-full">
-        
+
         {/* Cabecera de la sección */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-16 gap-8">
           <div className="flex flex-col gap-6">
@@ -160,34 +211,34 @@ export default function ServicesGridSection() {
             <div className="flex items-center gap-4 text-[#f4266e] text-xs font-semibold tracking-widest uppercase">
               <span>03</span>
               <div className="w-12 h-[1px] bg-[#f4266e]"></div>
-              <span>SERVICIOS Y PRECIOS</span>
+              <span>{head.tag}</span>
             </div>
-            
+
             {/* Título Principal */}
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tighter">
-              {isUs ? 'Tres servicios,' : 'Nueve servicios,'}<br />
-              <span 
-                className="text-transparent" 
+              {head.line1}<br />
+              <span
+                className="text-transparent"
                 style={{ WebkitTextStroke: '1.5px rgba(255, 255, 255, 0.4)' }}
               >
-                un solo equipo
+                {head.line2}
               </span>
             </h2>
           </div>
 
           {/* Texto Descriptivo Derecho */}
           <div className="lg:w-1/3 text-white/60 text-sm md:text-base font-light leading-relaxed">
-            Cada tarjeta lleva a su pagina, con el precio desde el que arranca. Sin llamadas para averiguar lo basico.
+            {head.aside}
           </div>
         </div>
 
         {/* Contenedor del Grid (Simula bordes interiores con bg-white/10 y gap-[1px]) */}
-        <div className="w-full bg-white/10 border border-white/10 rounded-sm grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1px] overflow-hidden">
-          
+        <div className={`w-full bg-white/10 border border-white/10 rounded-sm grid grid-cols-1 ${gridCols} gap-[1px] overflow-hidden`}>
+
           {/* Tarjetas de Servicios */}
           {cards.map((service) => (
-            <Link 
-              key={service.id} 
+            <Link
+              key={service.id}
               href={service.href}
               className="bg-[#0a0211] p-8 lg:p-10 flex flex-col justify-between hover:bg-white/[0.03] transition-colors duration-300 group min-h-[320px]"
             >
@@ -198,13 +249,15 @@ export default function ServicesGridSection() {
                   {service.desc}
                 </p>
               </div>
-              
+
               <div className="mt-12 flex flex-col gap-3">
-                <span className="text-[#f4266e] text-[10px] font-bold tracking-widest uppercase">
-                  {service.price}
-                </span>
+                {service.price && (
+                  <span className="text-[#f4266e] text-[10px] font-bold tracking-widest uppercase">
+                    {service.price}
+                  </span>
+                )}
                 <span className="text-xs font-bold tracking-widest uppercase flex items-center gap-2 text-white/80 group-hover:text-white transition-colors">
-                  VER SERVICIO
+                  {head.cta}
                   <span className="text-lg font-normal">↗</span>
                 </span>
               </div>
@@ -213,10 +266,10 @@ export default function ServicesGridSection() {
 
           {/* Tarjeta Inferior de Casos de Éxito (solo /es: la página vive
               únicamente en el mercado peruano) */}
-          {!isUs && (
-          <Link 
+          {locale === 'es' && (
+          <Link
             href="/casos-de-exito"
-            className="bg-[#0a0211] p-8 lg:p-10 col-span-1 md:col-span-2 lg:col-span-3 flex flex-col md:flex-row items-start md:items-center justify-between hover:bg-white/[0.03] transition-colors duration-300 group gap-6"
+            className="bg-[#0a0211] p-8 lg:p-10 col-span-1 md:col-span-2 xl:col-span-4 flex flex-col md:flex-row items-start md:items-center justify-between hover:bg-white/[0.03] transition-colors duration-300 group gap-6"
           >
             <div className="flex items-start md:items-center gap-6">
               <svg className="w-8 h-8 text-[#f4266e] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
@@ -227,14 +280,14 @@ export default function ServicesGridSection() {
                 <p className="text-white/60 text-sm font-light">Marcas que ya pasaron por aquí, con lo que se hizo y lo que se entregó.</p>
               </div>
             </div>
-            
+
             <span className="text-xs font-bold tracking-widest uppercase flex items-center gap-2 text-white/80 group-hover:text-white transition-colors flex-shrink-0">
               VER CASOS DE ÉXITO
               <span className="text-lg font-normal">↗</span>
             </span>
           </Link>
           )}
-          
+
         </div>
       </div>
     </section>

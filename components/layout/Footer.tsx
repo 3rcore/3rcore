@@ -15,6 +15,10 @@ const Footer = () => {
   // El footer listaba cuatro servicios fijados a mano. En /en y /us solo se
   // venden web, SEO y tiendas online, así que ofrecer branding, social media
   // y Google Ads allí promete un catálogo que no existe.
+  // 13-sep-2026. Planes de reposicionamiento de 3R Core (Piero Roque): en /es
+  // Google Ads y Posicionamiento SEO van al frente; en /en los tres servicios
+  // van en orden SEO, Web Development, Online Stores y sale «Why a Peruvian
+  // agency», porque el /en no menciona Perú. /us sin cambios.
   const tn = useTranslations('Navbar');
   const locale = useLocale();
   const footerServices: { href: AppPathname; label: string }[] =
@@ -23,22 +27,22 @@ const Footer = () => {
           // El índice de servicios recibía 2 enlaces internos mientras sus
           // propias hijas recibían entre 41 y 71. La jerarquía estaba del revés.
           { href: '/servicios', label: tn('services.todos') },
-          { href: '/servicios/branding', label: tn('services.branding') },
-          { href: '/servicios/socialmedia', label: tn('services.socialMedia') },
           { href: '/servicios/google-ads', label: tn('services.googleAds') },
+          { href: '/posicionamiento-seo', label: tn('services.seo') },
           { href: '/servicios/web-development', label: tn('services.webDesign') },
+          { href: '/servicios/socialmedia', label: tn('services.socialMedia') },
+          { href: '/servicios/branding', label: tn('services.branding') },
         ]
       : locale === 'en'
       ? [
           { href: '/servicios', label: tn('services.todos') },
-          { href: '/servicios/web-development', label: tn('services.webDesign') },
           { href: '/posicionamiento-seo', label: tn('services.seo') },
+          { href: '/servicios/web-development', label: tn('services.webDesign') },
           { href: '/tiendas-virtuales-lima', label: tn('services.ecommerce') },
           // Ver el comentario de MARKET_ANCHORS en Navbar.tsx: estas páginas
           // estaban huérfanas y sin indexar.
           { href: '/spanish-seo-services', label: tn('services.spanishSeo') },
           { href: '/hispanic-marketing-agency', label: tn('services.hispanic') },
-          { href: '/nearshore-marketing-agency', label: tn('services.nearshore') },
         ]
       : [
           { href: '/servicios', label: tn('services.todos') },
@@ -76,14 +80,24 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-bold lg:text-sm 2xl:text-base uppercase tracking-widest mb-6">{ t('agency')}</h3>
             <div className="text-gray-200 text-sm lg:text-xs xl:text-sm leading-relaxed space-y-1">
-              {/* Dirección desde lib/nap.ts: una sola fuente para todo el sitio. */}
+              {locale === 'en' ? (
+                // 13-sep-2026. Plan USA: el /en se presenta para todo EE. UU.,
+                // sin dirección en Perú.
+                <p>
+                  Serving the U.S. Nationwide
+                  <br />
+                  SEO · Web Development · Online Stores
+                </p>
+              ) : (
+                // Dirección desde lib/nap.ts: una sola fuente para todo el sitio.
+                <p>
+                  {NAP.street}
+                  <br />
+                  Urb El Remanso, {NAP.district}. {NAP.region} - Perú
+                </p>
+              )}
               <p>
-                {NAP.street}
-                <br />
-                Urb El Remanso, {NAP.district}. {NAP.region} - Perú
-              </p>
-              <p>
-                { t('A')}<br />9am a 6pm
+                { t('A')}<br />{locale === 'en' ? '9am to 6pm' : '9am a 6pm'}
               </p>
             </div>
           </div>
@@ -113,8 +127,8 @@ const Footer = () => {
               español. En /es sí existían, pero solo en algunas páginas.
               Ahora el correo va en el pie de las 218.
               ⚠️ PENDIENTE DEL CLIENTE: un número de EE.UU. Aquí no se inventa
-              uno: se muestra el peruano diciendo el horario en que se atiende,
-              que es información verdadera y útil. */}
+              uno: se muestra el que atiende, diciendo el horario en que se
+              atiende, que es información verdadera y útil. */}
           <div className="flex flex-col items-start">
             <h3 className="text-white font-bold lg:text-sm 2xl:text-base uppercase tracking-widest mb-6">
               {locale === 'en' ? 'Contact' : 'Contacto'}
@@ -132,7 +146,7 @@ const Footer = () => {
               </li>
               <li className="text-gray-400 text-[11px] leading-snug max-w-[240px]">
                 {locale === 'en'
-                  ? 'Our team is in Lima, Peru and works U.S. Eastern hours.'
+                  ? 'We work U.S. Eastern business hours.'
                   : locale === 'us'
                     ? 'Nuestro equipo está en Lima y atiende en horario del este de EE.UU.'
                     : 'Oficina en La Molina, Lima. Lunes a viernes.'}

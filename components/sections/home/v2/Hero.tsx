@@ -1,14 +1,51 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
+import { WA_LEADS, waUrl } from "@/lib/contact";
 
-// Hero del rediseño de Aymar (aprobado por el cliente, ago-2026). Solo se
-// sirve en /es: los textos fijos van en español a propósito. El h1 del home
-// vive en page.tsx (sr-only), por eso aquí los titulares son <p>.
+// Hero del rediseño de Aymar (aprobado por el cliente, ago-2026). El h1 del
+// home vive en page.tsx (sr-only), por eso aquí los titulares son <p>.
+//
+// 13-sep-2026. Planes de reposicionamiento de 3R Core (Piero Roque):
+//  - /es (Perú): «Agencia de SEO, SEM y Google Ads». El botón principal ya no
+//    lleva al cotizador: no se publican montos, el precio se conversa en la
+//    reunión, así que agenda una reunión por WhatsApp.
+//  - /en (EE. UU.): la portada de /en pasa a ser esta misma, en inglés, con los
+//    tres servicios de ese mercado y sin ninguna referencia a Perú.
+//  - /us conserva sus textos y su botón al cotizador.
 export default function HeroHome() {
   const t = useTranslations("HeroHome");
+  const locale = useLocale();
+
+  const copy =
+    locale === "en"
+      ? {
+          line2: "SEO, Web Development",
+          connector: "&",
+          line3: "Online Stores",
+          tagline: "Serving the U.S. Nationwide - Your success, our success",
+          services: "SEE SERVICES",
+          scroll: "Scroll",
+        }
+      : locale === "es"
+        ? {
+            line2: "Agencia",
+            connector: "de",
+            line3: "SEO, SEM y Google Ads",
+            tagline: "Lima, Perú - Tu éxito, nuestro éxito",
+            services: "VER SERVICIOS",
+            scroll: "Navegar",
+          }
+        : {
+            line2: t("agency2") || "Agencia",
+            connector: t("d") || "de",
+            line3: t("marketing") || "Marketing Digital",
+            tagline: "Lima, Perú - Tu éxito, nuestro éxito",
+            services: "VER SERVICIOS",
+            scroll: "Navegar",
+          };
 
   const handleScrollClick = () => {
     window.scrollTo({
@@ -57,6 +94,9 @@ export default function HeroHome() {
     return () => clearTimeout(t);
   }, []);
 
+  const primaryCtaClass =
+    "bg-gradient-to-r from-[#f4266e]  to-[#a630cd] hover:scale-105 transition-transform duration-300 text-white rounded-full px-10 py-3.5 font-semibold text-xs md:text-xs tracking-wider flex items-center justify-center gap-3 w-full sm:w-auto shadow-lg shadow-pink-500/20";
+
   return (
     <div className="relative w-full min-h-[100svh] md:h-screen bg-[#16021B] overflow-hidden flex items-center">
       <video
@@ -77,11 +117,11 @@ export default function HeroHome() {
 
       {/* Contenedor Principal del Contenido */}
       <div className="relative z-20 w-full mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-center md:justify-between items-start md:items-center h-full gap-10 md:gap-0">
-        
+
         {/* Lado Izquierdo: Textos Principales */}
         <div className="w-full md:w-1/2 flex flex-col justify-center text-left md:mt-16 md:mt-0 items-start">
           <p
-            className="text-4xl sm:text-5xl md:text-7xl lg:text-[6rem] bg-gradient-to-r from-[#a630cd] to-[#f4266e] 
+            className="text-4xl sm:text-5xl md:text-7xl lg:text-[6rem] bg-gradient-to-r from-[#a630cd] to-[#f4266e]
               bg-clip-text text-transparent font-bold tracking-tighter leading-tight"
             style={{ paintOrder: "stroke fill" }}
           >
@@ -89,33 +129,71 @@ export default function HeroHome() {
           </p>
 
           <p className="text-2xl sm:text-3xl md:text-6xl lg:text-[4.5rem] font-medium text-white leading-tight my-1">
-            {t("agency2") || "Agencia"} <span className="italic font-serif font-light">{t("d") || "de"}</span>
+            {copy.line2} <span className="italic font-serif font-light">{copy.connector}</span>
           </p>
 
           <p
-            className="text-3xl sm:text-4xl md:text-7xl lg:text-[6rem] bg-gradient-to-r from-[#f4266e] to-[#a630cd] 
+            className="text-3xl sm:text-4xl md:text-7xl lg:text-[6rem] bg-gradient-to-r from-[#f4266e] to-[#a630cd]
               bg-clip-text text-transparent font-bold tracking-tighter leading-tight"
             style={{ paintOrder: "stroke fill" }}
           >
-            {t("marketing") || "Marketing Digital"}
+            {copy.line3}
           </p>
         </div>
 
         {/* Lado Derecho: Botones y Subtítulo */}
         <div className="w-full md:w-1/2 flex flex-col justify-center items-start md:items-end gap-5 mt-2">
           <p className="text-white text-[11px] md:text-xs tracking-[0.25em] font-semibold uppercase text-left md:text-right">
-            Lima, Perú - Tu éxito, nuestro éxito
+            {copy.tagline}
           </p>
-          
+
           {/* En el diseño original eran <button> sin destino: se cablean como
-              enlaces reales para que el CTA principal lleve al cotizador. */}
+              enlaces reales. */}
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 w-full sm:w-auto">
-            <Link href="/cotizar" className="bg-gradient-to-r from-[#f4266e]  to-[#a630cd] hover:scale-105 transition-transform duration-300 text-white rounded-full px-10 py-3.5 font-semibold text-xs md:text-xs tracking-wider flex items-center justify-center gap-3 w-full sm:w-auto shadow-lg shadow-pink-500/20">
-              COTIZAR MI PROYECTO
-              <span className="text-lg leading-none font-normal">↗</span>
-            </Link>
+            {locale === "es" ? (
+              // Misma línea de leads (WA_LEADS) y mismo evento whatsapp_click
+              // que el botón «Agendar una reunión» de Nosotros.
+              <a
+                href={waUrl(WA_LEADS, "Hola vengo de la página web, quiero agendar una reunión.")}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => {
+                  (window as any).dataLayer = (window as any).dataLayer || [];
+                  (window as any).dataLayer.push({
+                    event: "whatsapp_click",
+                    wa_phone: WA_LEADS,
+                    wa_source: window.location.pathname,
+                  });
+                }}
+                className={primaryCtaClass}
+              >
+                AGENDAR UNA REUNIÓN
+                <span className="text-lg leading-none font-normal">↗</span>
+              </a>
+            ) : locale === "en" ? (
+              // En /en la reunión se pide con el formulario de la propia portada.
+              <a
+                href="#contact"
+                onClick={(e) => {
+                  const target = document.getElementById("contact");
+                  if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+                className={primaryCtaClass}
+              >
+                BOOK A MEETING
+                <span className="text-lg leading-none font-normal">↗</span>
+              </a>
+            ) : (
+              <Link href="/cotizar" className={primaryCtaClass}>
+                COTIZAR MI PROYECTO
+                <span className="text-lg leading-none font-normal">↗</span>
+              </Link>
+            )}
             <Link href="/servicios" className="border border-white/40 hover:bg-white/10 hover:border-white transition-all duration-300 text-white rounded-full px-8 py-3.5 font-bold text-xs md:text-sm tracking-wider flex items-center justify-center gap-3 w-full sm:w-auto">
-              VER SERVICIOS
+              {copy.services}
               <span className="text-lg leading-none font-normal">→</span>
             </Link>
           </div>
@@ -132,12 +210,12 @@ export default function HeroHome() {
           <div className="relative w-6 h-9 md:w-7 md:h-10 border-[1.5px] border-white rounded-full flex items-start justify-center p-1 transition-colors group-hover:border-white">
             <div className="w-1 h-1.5 bg-white/70 rounded-full animate-bounce mt-0.5 group-hover:bg-white"></div>
           </div>
-          
+
           {/* Texto de Navegar con punto rosa */}
           <div className="flex items-center gap-1.5 mt-2">
             <div className="w-1 h-1 bg-[#f4266e] rounded-full"></div>
             <span className="text-white text-[9px] md:text-[10px] font-medium tracking-[0.2em] uppercase transition-colors group-hover:text-white">
-              Navegar
+              {copy.scroll}
             </span>
           </div>
 

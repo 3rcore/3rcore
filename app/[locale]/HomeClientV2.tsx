@@ -1,9 +1,10 @@
 'use client';
 
-// Home del rediseño de Aymar (aprobado por el cliente, ago-2026). Solo lo
-// sirve /es desde page.tsx; /en y /us conservan HomeClient. Mismo esqueleto
-// que HomeClient con las secciones v2: hero de video, grid de servicios con
-// precios, portafolio social y reseñas de Google tras las novedades.
+// Home del rediseño de Aymar (aprobado por el cliente, ago-2026). La sirven
+// los tres idiomas desde page.tsx (/en desde el 13-sep-2026, por el plan USA
+// de 3R Core). Mismo esqueleto que HomeClient con las secciones v2: hero de
+// video, grid de servicios del mercado, portafolio social y reseñas de Google
+// tras las novedades.
 
 import TeamSection from '@/components/sections/home/v2/TeamSection'
 import ContactAnchor from '@/components/layout/ContactAnchor';

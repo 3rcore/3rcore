@@ -4,15 +4,21 @@ import { buildPersonSchemas, buildSpeakableSchema } from "@/lib/seoSchemas"
 
 export const revalidate = 3600
 
+// 13-sep-2026. Planes de reposicionamiento de 3R Core (Piero Roque):
+//  - /es: «Nosotros» deja de apoyarse en lo local (La Molina, Lima, facturación
+//    peruana) y habla de equipo propio y resultados en SEO, SEM y Google Ads.
+//  - /en: agencia de SEO, desarrollo web y tiendas online para todo EE. UU.,
+//    sin ninguna referencia a Perú.
+//  - /us se queda como estaba.
 export async function generateMetadata({ params }: { params: any }): Promise<Metadata> {
   const { locale } = await params
   return generatePageMetadata({
     locale,
     path: '/nosotros',
-    titleEs: 'Nosotros — Agencia de Marketing en Lima | 3R Core',
-    titleEn: 'About Us — A Peruvian Agency Serving the U.S. | 3R Core',
-    descriptionEs: 'Los hermanos Roque y su equipo en La Molina, Lima. Una agencia familiar que trabaja con marcas de Perú y EE.UU. 4,7★ en 42 reseñas de Google.',
-    descriptionEn: '3R Core is a family-run agency in Lima, Peru serving U.S. brands remotely through its U.S. subsidiary, on overlapping business hours and billing in USD.',
+    titleEs: 'Nosotros — Agencia de SEO, SEM y Google Ads | 3R Core',
+    titleEn: 'About Us — SEO, Web Development & Online Stores Agency | 3R Core',
+    descriptionEs: 'Los hermanos Roque y su equipo propio de diseño, programación y posicionamiento: SEO, SEM y Google Ads con resultados medibles. 4,7★ en 42 reseñas de Google.',
+    descriptionEn: '3R Core is a family-run SEO, web development and online stores agency serving businesses across the U.S., on U.S. business hours and billing in USD through its U.S. subsidiary.',
     titleUs: 'Nosotros — Equipo en Lima para EE.UU. | 3R Core',
     descriptionUs: 'Agencia familiar con equipo propio en Lima que atiende a negocios de EE.UU. en horario compatible y factura en dólares a través de su filial.',
   })
@@ -21,6 +27,7 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
 export default async function NosotrosLayout({ children, params }: { children: React.ReactNode; params: any }) {
   const { locale } = await params
   const isEn = locale === 'en'
+  const isUs = locale === 'us'
 
   const aboutSchema = {
     "@context": "https://schema.org",
@@ -29,8 +36,10 @@ export default async function NosotrosLayout({ children, params }: { children: R
     "url": `${BASE_URL}/${locale}/nosotros`,
     "name": isEn ? "About 3R Core" : "Sobre 3R Core",
     "description": isEn
-      ? "3R Core is a family-owned digital marketing agency in Lima, Peru combining Experience, Vision and Technology across branding, social media, SEO, Google Ads and web development."
-      : "3R Core es una agencia familiar de marketing digital en Lima, Perú que combina Experiencia, Visión y Tecnología en branding, social media, SEO, Google Ads y desarrollo web.",
+      ? "3R Core is a family-owned SEO, web development and online stores agency serving businesses across the United States, combining Experience, Vision and Technology."
+      : isUs
+        ? "3R Core es una agencia familiar de marketing digital en Lima, Perú que combina Experiencia, Visión y Tecnología en branding, social media, SEO, Google Ads y desarrollo web."
+        : "3R Core es una agencia familiar de SEO, SEM y Google Ads con equipo propio que combina Experiencia, Visión y Tecnología en Google Ads, posicionamiento SEO, desarrollo web y social media.",
     "mainEntity": { "@id": `${BASE_URL}/#organization` },
     "inLanguage": isEn ? 'en' : 'es',
     "speakable": buildSpeakableSchema(['h1', 'h2', '.hidden-h1', '.about-intro']),
@@ -62,8 +71,9 @@ export default async function NosotrosLayout({ children, params }: { children: R
     locale
   )
 
+  // Solo se pinta en /en y /us: en /es el hero de la v2 trae su propio h1.
   const hiddenH1 = isEn
-    ? 'Digital marketing agency in Lima, Peru — Roque family team: branding, SEO, Google Ads, social media and web development'
+    ? 'SEO, web development and online stores agency serving businesses across the U.S. — the Roque family team'
     : 'Agencia de marketing digital en Lima, Perú — equipo familiar Roque: branding, SEO, Google Ads, redes sociales y desarrollo web'
 
   return (

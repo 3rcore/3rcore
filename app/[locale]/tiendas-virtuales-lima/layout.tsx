@@ -12,14 +12,14 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
     titleEs: 'Agencia de Diseño de Tiendas Virtuales en Lima | 3R Core',
     titleEn: 'Shopify & WooCommerce Development | 3R Core',
     descriptionEs: 'Diseño de tiendas virtuales en Lima (4,7★ en Google): Shopify, WooCommerce o Tiendanube con Yape, Culqi e Izipay y SEO técnico. Desde S/1,500.',
-    descriptionEn: 'Online stores built in Lima, Peru for U.S. brands: payment gateway, catalog, tax setup and technical SEO. Bilingual storefronts from $1,750 in USD.',
+    descriptionEn: 'Online stores built by an in-house team for U.S. brands: payment gateway, catalog, tax setup and technical SEO. Bilingual storefronts from $1,750 in USD.',
     titleUs: 'Tiendas Online Shopify y WooCommerce en EE.UU. | 3R Core',
     descriptionUs: 'Creamos tu tienda online en Shopify o WooCommerce con pasarela de pago, catálogo cargado, cálculo de impuestos y SEO técnico. Tienda bilingüe lista para vender en Estados Unidos. Desde $1,750.',
     ogImage: {
       url: 'https://3rcore.com/og/web-development.jpg',
       width: 1200,
       height: 630,
-      alt: '3R Core - Agencia de Diseño de Tiendas Virtuales en Lima, Perú',
+      alt: locale === 'en' ? '3R Core - E-commerce Development' : '3R Core - Agencia de Diseño de Tiendas Virtuales en Lima, Perú',
     },
   })
 }
@@ -31,7 +31,7 @@ export default async function TiendasVirtualesLimaLayout({ children, params }: {
   const breadcrumbSchema = generateBreadcrumbSchema(
     [
       { name: isEn ? 'Home' : 'Inicio', path: '' },
-      { name: isEn ? 'Online Store Agency in Lima' : 'Diseño de Tiendas Virtuales en Lima', path: '/tiendas-virtuales-lima' },
+      { name: isEn ? 'E-commerce Development' : 'Diseño de Tiendas Virtuales en Lima', path: '/tiendas-virtuales-lima' },
     ],
     locale
   )
@@ -42,7 +42,7 @@ export default async function TiendasVirtualesLimaLayout({ children, params }: {
     nameEs: 'Diseño de Tiendas Virtuales (E-commerce) en Lima',
     nameEn: 'Online Store / E-commerce Agency for U.S. Brands',
     descriptionEs: 'Diseño y desarrollo de tiendas virtuales para empresas en Lima y Perú: Shopify, WooCommerce y Tiendanube, pasarelas de pago locales, SEO técnico, velocidad y conversión, con soporte y capacitación.',
-    descriptionEn: 'Design and development of online stores for U.S. companies, built by our team in Lima, Peru: Shopify, WooCommerce and Tiendanube, local payment gateways, technical SEO, speed and conversion, with support and training.',
+    descriptionEn: 'Design and development of online stores for U.S. companies, built by our in-house team: Shopify, WooCommerce and Tiendanube, payment gateways, technical SEO, speed and conversion, with support and training.',
     serviceType: 'E-commerce development / Online store creation',
     minPriceEs: 1500,
     maxPriceEs: 25000,
@@ -53,23 +53,23 @@ export default async function TiendasVirtualesLimaLayout({ children, params }: {
 
   const faq = buildFAQPageSchema([
     {
-      question: isEn ? 'How much does it cost to build an online store in Peru?' : '¿Cuánto cuesta crear una tienda virtual en Perú?',
+      question: isEn ? 'How much does it cost to build an online store?' : '¿Cuánto cuesta crear una tienda virtual en Perú?',
       answer: isEn
-        ? 'Professional implementation starts from $420 and includes design, catalog upload, payments and setup. A complete e-commerce on Shopify or WooCommerce (large catalog, payment gateway, inventory and admin panel) starts from $1,750, and larger catalogs, integrations or custom development range up to $7,000. The platform monthly cost is separate (Shopify from $39/mo, Tiendanube from ~$24/mo) or hosting for WooCommerce.'
+        ? 'Professional implementation starts from $420 and includes design, catalog upload, payments and setup. A complete e-commerce on Shopify or WooCommerce (large catalog, payment gateway, inventory and admin panel) starts from $1,750, and larger catalogs, integrations or custom development range up to $7,000. The platform monthly cost is separate (Shopify from $39/mo, Tiendanube from ~$24/mo) or hosting for WooCommerce. Figures shown are for reference only.'
         : locale === 'us'
-        ? 'La implementación profesional arranca desde $650 e incluye diseño, carga de catálogo, pagos y configuración sobre Shopify. Un e-commerce completo en Shopify o WooCommerce (catálogo amplio, pasarela de pago, inventario y panel de administración) arranca desde $1,750, y con más integraciones o desarrollo a medida el rango llega hasta $7,000. Aparte está la mensualidad de la plataforma (Shopify desde USD 39/mes) o el hosting si es WooCommerce. El detalle completo está publicado en nuestra página de precios.'
-        : 'La implementación profesional arranca desde S/1,500 e incluye diseño, carga de catálogo, pagos y configuración sobre Shopify o Tiendanube. Un e-commerce completo en Shopify o WooCommerce (catálogo amplio, pasarela de pago, inventario y panel de administración) arranca desde S/6,500, y con más integraciones o desarrollo a medida el rango llega hasta S/25,000. Aparte está la mensualidad de la plataforma (Shopify desde USD 39/mes, Tiendanube desde S/89/mes) o el hosting si es WooCommerce. El detalle completo está publicado en nuestra página de precios.',
+        ? 'La implementación profesional arranca desde $650 e incluye diseño, carga de catálogo, pagos y configuración sobre Shopify. Un e-commerce completo en Shopify o WooCommerce (catálogo amplio, pasarela de pago, inventario y panel de administración) arranca desde $1,750, y con más integraciones o desarrollo a medida el rango llega hasta $7,000. Aparte está la mensualidad de la plataforma (Shopify desde USD 39/mes) o el hosting si es WooCommerce. El detalle completo está publicado en nuestra página de precios. Los montos indicados son referenciales.'
+        : 'La implementación profesional arranca desde S/1,500 e incluye diseño, carga de catálogo, pagos y configuración sobre Shopify o Tiendanube. Un e-commerce completo en Shopify o WooCommerce (catálogo amplio, pasarela de pago, inventario y panel de administración) arranca desde S/6,500, y con más integraciones o desarrollo a medida el rango llega hasta S/25,000. Aparte está la mensualidad de la plataforma (Shopify desde USD 39/mes, Tiendanube desde S/89/mes) o el hosting si es WooCommerce. El detalle completo está publicado en nuestra página de precios. Los montos indicados son referenciales.',
     },
     {
       question: isEn ? 'Shopify, WooCommerce or Tiendanube — which is best for me?' : '¿Shopify, WooCommerce o Tiendanube: cuál me conviene?',
       answer: isEn
-        ? 'As a Shopify, WooCommerce and Tiendanube agency in Peru we are not tied to a single platform — it depends on your case. Shopify is the fastest and most stable to start selling. WooCommerce gives full control and custom integrations. Tiendanube is strong on local payments and accessible plans. In the diagnosis we recommend the right one, without bias.'
+        ? 'As a Shopify, WooCommerce and Tiendanube agency we are not tied to a single platform — it depends on your case. Shopify is the fastest and most stable to start selling. WooCommerce gives full control and custom integrations. Tiendanube is strong on local payments and accessible plans. In the diagnosis we recommend the right one, without bias.'
         : 'Como agencia Shopify, WooCommerce y Tiendanube en Perú no trabajamos casados con una sola plataforma: depende de tu caso. Shopify es la más rápida y estable para vender ya. WooCommerce da control total e integraciones a medida. Tiendanube es fuerte en pagos locales y planes accesibles. En el diagnóstico te recomendamos la correcta, sin sesgo.',
     },
     {
-      question: isEn ? 'Do you integrate Peruvian payments like Yape, Culqi or Niubiz?' : '¿Integran pagos peruanos como Yape, Culqi o Niubiz?',
+      question: isEn ? 'Which payment gateways do you integrate?' : '¿Integran pagos peruanos como Yape, Culqi o Niubiz?',
       answer: isEn
-        ? 'Yes. We configure and test Culqi, Niubiz, Izipay, Yape, PagoEfectivo and Mercado Pago based on your platform, so customers pay the way they are used to in Peru.'
+        ? 'We configure and test Stripe, PayPal, Apple Pay and Google Pay based on your platform, so customers pay the way they are used to in the United States.'
         : 'Sí. Configuramos y probamos Culqi, Niubiz, Izipay, Yape, PagoEfectivo y Mercado Pago según tu plataforma, para que tus clientes paguen como están acostumbrados en Perú.',
     },
     {
@@ -85,9 +85,9 @@ export default async function TiendasVirtualesLimaLayout({ children, params }: {
         : 'La construimos con SEO técnico de base (URLs, schema de producto, velocidad, sitemap). Para posicionar de verdad y competir por búsquedas de compra recomendamos sumar nuestro servicio de posicionamiento SEO y/o campañas de Google Ads y Google Shopping.',
     },
     {
-      question: isEn ? 'Do you work with businesses outside Lima?' : '¿Trabajan con negocios fuera de Lima?',
+      question: isEn ? 'Do you work with businesses anywhere in the U.S.?' : '¿Trabajan con negocios fuera de Lima?',
       answer: isEn
-        ? 'Yes, we work remotely with companies across Peru. The whole process (design, reviews, training) happens over video calls and shared access.'
+        ? 'Yes, we work remotely with brands anywhere in the United States. The whole process (design, reviews, training) happens over video calls and shared access.'
         : 'Sí, trabajamos con empresas de todo el Perú de forma remota. Todo el proceso (diseño, revisiones, capacitación) se hace por videollamada y accesos compartidos.',
     },
   ])
@@ -97,7 +97,7 @@ export default async function TiendasVirtualesLimaLayout({ children, params }: {
     "@type": "WebPage",
     "@id": `${BASE_URL}/${locale}/tiendas-virtuales-lima#webpage`,
     "url": `${BASE_URL}/${locale}/tiendas-virtuales-lima`,
-    "name": isEn ? 'Online Store Agency in Lima — 3R Core' : 'Agencia de Tiendas Virtuales en Lima — 3R Core',
+    "name": isEn ? 'E-commerce Development for U.S. Brands — 3R Core' : 'Agencia de Tiendas Virtuales en Lima — 3R Core',
     "inLanguage": isEn ? 'en' : 'es',
     "isPartOf": { "@id": `${BASE_URL}/#website` },
     "about": { "@id": `${BASE_URL}/#organization` },

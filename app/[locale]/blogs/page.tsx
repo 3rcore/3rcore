@@ -50,7 +50,7 @@ export async function generateMetadata(
   }
   return {
     title: isEn
-      ? `Digital Marketing Blog in Peru — Page ${page} | 3R Core`
+      ? `Marketing Blog — Page ${page} | 3R Core`
       : `Blog de Marketing Digital en Perú — Página ${page} | 3R Core`,
     alternates: { canonical: `${base}?page=${page}` },
     robots: "index, follow",
@@ -230,7 +230,7 @@ export default async function BlogsPage(
                 duplicaba H1 en cada post). */}
             <span className="sr-only">
               {isEn
-                ? " — 3R Core Lima digital marketing blog: SEO, branding, Google Ads, social media and web development"
+                ? " — 3R Core digital marketing blog: SEO, branding, Google Ads, social media and web development"
                 : " — Blog de marketing digital de 3R Core en Lima: SEO, branding, Google Ads, redes sociales y desarrollo web"}
             </span>
           </h1>

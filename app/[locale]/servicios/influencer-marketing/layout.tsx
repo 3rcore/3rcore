@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
     titleEn: 'Influencer Marketing Agency for U.S. Brands | 3R Core',
     titleUs: "Influencer Marketing en Español para EE.UU. | 3R Core",
     descriptionEs: "Campañas con influencers en Perú: selección por audiencia real, contratos, derechos de uso y atribución por enlace. Medimos ventas, no seguidores.",
-    descriptionEn: 'Creator campaigns run from Lima, Peru for U.S. brands: audience-first selection, contracted usage rights and per-creator attribution. Measured in sales.',
+    descriptionEn: 'Creator campaigns for U.S. brands: audience-first selection, contracted usage rights and per-creator attribution. Measured in sales.',
     descriptionUs: "Campañas con creadores hispanohablantes para tu negocio en Estados Unidos: selección por audiencia real, contrato con derechos de uso y atribución por creador. Precios en dólares.",
     ogImage: {
       url: 'https://3rcore.com/og/socialmedia.jpg',

@@ -66,7 +66,7 @@ const SERVICES: Record<ServiceKey, ServiceCTA> = {
   },
   seo: {
     path: '/posicionamiento-seo',
-    es: { eyebrow: 'Posicionamiento SEO', headline: '¿Quieres que Google te encuentre primero?', sub: 'SEO orgánico con estrategia de keywords, contenido y reportes mensuales desde S/1,500. Cotiza tu SEO.', btn: 'Ver servicio de SEO', wa: 'Cotizar mi posicionamiento SEO' },
+    es: { eyebrow: 'Posicionamiento SEO', headline: '¿Quieres que Google te encuentre primero?', sub: 'SEO orgánico con estrategia de keywords, contenido y reportes mensuales desde S/1,500. Los montos indicados son referenciales. Cotiza tu SEO.', btn: 'Ver servicio de SEO', wa: 'Cotizar mi posicionamiento SEO' },
     en: { eyebrow: 'SEO Positioning', headline: 'Want Google to find you first?', sub: 'Organic SEO with keyword strategy, content and monthly reports. Get a quote.', btn: 'See SEO service', wa: 'Quote my SEO' },
   },
   social: {

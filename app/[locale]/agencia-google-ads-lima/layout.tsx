@@ -54,7 +54,7 @@ export default async function GoogleAdsLimaLayout({ children, params }: { childr
       question: isEn ? 'How much does a Google Ads agency in Lima cost?' : '¿Cuánto cobra una agencia Google Ads en Lima?',
       answer: isEn
         ? 'Management fee for US clients starts at $800/month for budgets up to $1,500 in ad spend. From there we charge 15–20% of monthly ad spend with a fee floor. Ad spend is paid directly to Google with your own billing.'
-        : 'El fee de gestión en Lima parte desde S/1,800/mes para budgets de hasta S/3,000 de pauta. A partir de ahí cobramos 15–20 % del gasto publicitario mensual con un piso fijo. La pauta se paga directamente a Google con tu propia facturación.',
+        : 'El fee de gestión en Lima parte desde S/1,800/mes para budgets de hasta S/3,000 de pauta. A partir de ahí cobramos 15–20 % del gasto publicitario mensual con un piso fijo. La pauta se paga directamente a Google con tu propia facturación. Los montos indicados son referenciales.',
     },
     {
       question: isEn ? 'What is the minimum ad spend you recommend?' : '¿Cuál es el budget mínimo recomendado?',

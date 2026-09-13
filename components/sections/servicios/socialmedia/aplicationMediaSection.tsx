@@ -1,8 +1,10 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 export default function MediaApplications() {
 
   const t = useTranslations('SocialMediaHero');
+  // 13-sep-2026. Plan USA: en /en el texto alternativo no nombra Lima.
+  const isEn = useLocale() === "en";
 
 
   return (
@@ -22,7 +24,7 @@ export default function MediaApplications() {
         <div className="relative w-full h-auto mt-4 md:mt-0">
           <img
             src="/images/social/AplicPost3.webp"
-            alt="Grilla de contenidos y aplicaciones de marca en redes sociales - agencia 3R Core Lima"
+            alt={isEn ? "Content grid and brand applications on social media - 3R Core agency" : "Grilla de contenidos y aplicaciones de marca en redes sociales - agencia 3R Core Lima"}
             className="w-full h-auto object-contain max-h-[300px] md:max-h-none"
           />
         </div>

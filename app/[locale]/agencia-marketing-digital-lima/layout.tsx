@@ -16,9 +16,9 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
     // se diferencia por lo que la home no dice: la oficina, las reseñas y que
     // los precios están publicados.
     titleEs: 'Agencia de Marketing Digital en Lima: precios publicados y sin permanencia | 3R Core',
-    titleEn: 'Digital Marketing Agency in Lima, Peru | 3R Core',
+    titleEn: 'Digital Marketing Agency for U.S. Brands | 3R Core',
     descriptionEs: 'Agencia peruana con oficina en La Molina. Precios publicados, sin permanencia y el trabajo es tuyo desde el primer día. 4,7★ en 42 reseñas de Google.',
-    descriptionEn: 'Peruvian agency in La Molina, Lima. Published pricing, no lock-in and you own the work from day one. 4.7 stars from 42 Google reviews.',
+    descriptionEn: 'Digital marketing agency serving businesses across the U.S. Published pricing, no lock-in and you own the work from day one. 4.7 stars from 42 Google reviews.',
     // Solo /es compite en el índice: el slug es español y en /en ese mercado lo
     // ataca /nearshore-marketing-agency. /en y /us quedan noindex,follow para
     // no canibalizar y seguir repartiendo autoridad por sus enlaces internos.
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
       url: 'https://3rcore.com/og/default.jpg',
       width: 1200,
       height: 630,
-      alt: '3R Core - Agencia de Marketing Digital en Lima, Perú',
+      alt: locale === 'en' ? '3R Core - Digital Marketing Agency' : '3R Core - Agencia de Marketing Digital en Lima, Perú',
     },
   })
 }
@@ -42,7 +42,7 @@ export default async function LimaLandingLayout({ children, params }: { children
   const breadcrumbSchema = generateBreadcrumbSchema(
     [
       { name: isEn ? 'Home' : 'Inicio', path: '' },
-      { name: isEn ? 'Digital Marketing Agency in Lima' : 'Agencia de Marketing Digital en Lima', path: '/agencia-marketing-digital-lima' },
+      { name: isEn ? 'Digital Marketing Agency' : 'Agencia de Marketing Digital en Lima', path: '/agencia-marketing-digital-lima' },
     ],
     locale
   )
@@ -50,11 +50,11 @@ export default async function LimaLandingLayout({ children, params }: { children
   const itemList = buildServiceItemList({
     locale,
     items: [
-      { name: isEn ? 'Branding & Visual Identity in Lima' : 'Branding e Identidad de Marca en Lima', path: '/agencia-branding-lima', description: isEn ? 'Logo, brand manual and corporate identity from $500 USD for US clients.' : 'Logotipo, manual de marca e identidad corporativa desde S/500.' },
-      { name: isEn ? 'Social Media Management in Lima' : 'Manejo de Redes Sociales en Lima', path: '/agencia-redes-sociales-lima', description: isEn ? 'Content strategy and community management for Instagram, TikTok, Facebook and LinkedIn from $800/month for US clients.' : 'Estrategia y community management para Instagram, TikTok, Facebook y LinkedIn desde S/1,500/mes.' },
-      { name: isEn ? 'Google Ads in Lima' : 'Google Ads en Lima', path: '/agencia-google-ads-lima', description: isEn ? 'Search, Performance Max, YouTube, Display and Shopping campaigns. Management fee from $800/month for US clients.' : 'Campañas Search, Performance Max, YouTube, Display y Shopping. Fee de gestión desde S/1,800/mes.' },
-      { name: isEn ? 'SEO Lima' : 'SEO en Lima', path: '/agencia-seo-lima', description: isEn ? 'Organic SEO positioning on Google from $500/month for US clients.' : 'Posicionamiento orgánico en Google desde S/1,800/mes.' },
-      { name: isEn ? 'Web Design Lima' : 'Diseño Web Lima', path: '/diseno-web-lima', description: isEn ? 'Landing pages, corporate sites and e-commerce on Shopify, WooCommerce or custom Next.js.' : 'Landing pages, sitios corporativos y e-commerce en Shopify, WooCommerce o Next.js a medida.' },
+      { name: isEn ? 'Branding & Visual Identity' : 'Branding e Identidad de Marca en Lima', path: '/agencia-branding-lima', description: isEn ? 'Logo, brand manual and corporate identity from $500 USD for US clients.' : 'Logotipo, manual de marca e identidad corporativa desde S/500.' },
+      { name: isEn ? 'Social Media Management' : 'Manejo de Redes Sociales en Lima', path: '/agencia-redes-sociales-lima', description: isEn ? 'Content strategy and community management for Instagram, TikTok, Facebook and LinkedIn from $800/month for US clients.' : 'Estrategia y community management para Instagram, TikTok, Facebook y LinkedIn desde S/1,500/mes.' },
+      { name: isEn ? 'Google Ads Management' : 'Google Ads en Lima', path: '/agencia-google-ads-lima', description: isEn ? 'Search, Performance Max, YouTube, Display and Shopping campaigns. Management fee from $800/month for US clients.' : 'Campañas Search, Performance Max, YouTube, Display y Shopping. Fee de gestión desde S/1,800/mes.' },
+      { name: isEn ? 'SEO Positioning' : 'SEO en Lima', path: '/agencia-seo-lima', description: isEn ? 'Organic SEO positioning on Google from $500/month for US clients.' : 'Posicionamiento orgánico en Google desde S/1,800/mes.' },
+      { name: isEn ? 'Web Design' : 'Diseño Web Lima', path: '/diseno-web-lima', description: isEn ? 'Landing pages, corporate sites and e-commerce on Shopify, WooCommerce or custom Next.js.' : 'Landing pages, sitios corporativos y e-commerce en Shopify, WooCommerce o Next.js a medida.' },
     ],
   })
 
@@ -73,7 +73,7 @@ export default async function LimaLandingLayout({ children, params }: { children
     "@type": "WebPage",
     "@id": `${BASE_URL}/${locale}/agencia-marketing-digital-lima#webpage`,
     "url": `${BASE_URL}/${locale}/agencia-marketing-digital-lima`,
-    "name": isEn ? "Digital Marketing Agency in Lima, Peru — 3R Core" : "Agencia de Marketing Digital en Lima — 3R Core",
+    "name": isEn ? "Digital Marketing Agency for U.S. Brands — 3R Core" : "Agencia de Marketing Digital en Lima — 3R Core",
     "inLanguage": isEn ? "en" : "es",
     "isPartOf": { "@id": `${BASE_URL}/#website` },
     "about": { "@id": `${BASE_URL}/#organization` },

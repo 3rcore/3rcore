@@ -79,7 +79,7 @@ export function buildServiciosIndexSchemas(locale: string) {
     "@type": "CollectionPage",
     "@id": `${BASE_URL}/${locale}/servicios#collectionpage`,
     "url": `${BASE_URL}/${locale}/servicios`,
-    "name": isEn ? 'Digital Marketing Services in Lima, Peru' : 'Servicios de Marketing Digital en Lima, Perú',
+    "name": isEn ? 'Digital Marketing Services for U.S. Businesses' : 'Servicios de Marketing Digital en Lima, Perú',
     "inLanguage": isEn ? 'en' : 'es',
     "isPartOf": { "@id": `${BASE_URL}/#website` },
     "about": { "@id": `${BASE_URL}/#organization` },

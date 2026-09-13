@@ -7,7 +7,7 @@ const COPY = {
   es: {
     eyebrow: '3R Core · Branding · Lima · Perú',
     h1: 'Agencia de Branding en Lima, Perú',
-    sub: 'Identidad de marca con propósito: investigación, naming, logotipo, paleta cromática, tipografía, manual de marca y aplicaciones reales. Desde S/500 hasta proyectos enterprise.',
+    sub: 'Identidad de marca con propósito: investigación, naming, logotipo, paleta cromática, tipografía, manual de marca y aplicaciones reales. Desde S/500 hasta proyectos enterprise. Los montos indicados son referenciales.',
     cta: 'Cotiza tu branding',
     contactPath: '/#contacto',
     why: 'Branding con estrategia, no decoración',
@@ -19,6 +19,7 @@ const COPY = {
       { title: 'Identidad completa', price: 'Desde S/4,500', desc: 'Research, naming opcional, sistema visual completo, manual extenso, aplicaciones (tarjetas, IG, papelería, vehículos, señalética) y handoff. 6–8 semanas.' },
       { title: 'Rebranding', price: 'Desde S/8,000', desc: 'Auditoría de marca actual, migración, plan de rollout, aplicaciones priorizadas, comunicado interno y externo. 10–14 semanas.' },
     ],
+    packsNote: 'Los precios son referenciales y varían según el alcance del proyecto.',
     deliverables: 'Entregables por proyecto',
     deliverablesList: [
       'Brief estratégico y workshop con stakeholders',
@@ -116,6 +117,7 @@ export default async function AgenciaBrandingLimaPage({ params }: Props) {
             </li>
           ))}
         </ul>
+        {t.packsNote && <p className="text-white/60 mt-6 max-w-3xl">{t.packsNote}</p>}
       </section>
 
       <section className="px-6 md:px-10 lg:px-20 py-16 max-w-6xl mx-auto border-t border-white/10">

@@ -1,4 +1,4 @@
-import { getReviews } from '@/lib/reviews'
+import { getReviews, reviewsForLocale } from '@/lib/reviews'
 
 /**
  * Bloque de reseñas renderizado en el SERVIDOR.
@@ -14,7 +14,7 @@ import { getReviews } from '@/lib/reviews'
  * toca el carrusel.
  */
 export default async function SsrReviews({ locale }: { locale: string }) {
-  const { rating, count, reviews } = await getReviews()
+  const { rating, count, reviews } = reviewsForLocale(await getReviews(), locale)
   const isEn = locale === 'en'
 
   return (

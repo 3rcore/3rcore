@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
   if (locale !== 'en') return { robots: { index: false, follow: false } }
 
   const title = "Hispanic Marketing Agency for U.S. Brands | 3R Core"
-  const description = "Websites, SEO and online stores in Spanish for U.S. brands, written by a native Spanish team in Lima, Peru through our U.S. subsidiary. SEO $500/mo, sites from $850."
+  const description = "Websites, SEO and online stores in Spanish for U.S. brands, written by a native Spanish-speaking in-house team, contracted through our U.S. subsidiary. SEO $500/mo, sites from $850."
 
   return {
     title,
@@ -53,7 +53,7 @@ export default async function HispanicMarketingAgencyLayout({ children, params }
     nameEs: "Agencia de Marketing Hispano para Marcas de Estados Unidos",
     nameEn: "Hispanic Marketing Agency for U.S. Brands",
     descriptionEs: "Agencia de marketing hispano para marcas de Estados Unidos: webs bilingues, SEO en espanol con investigacion nativa de palabras clave, tiendas Shopify y WooCommerce y ficha de Google en espanol, desde Lima y en horario de EE.UU.",
-    descriptionEn: "Hispanic marketing agency for U.S. brands: bilingual websites with hreflang declared correctly, Spanish SEO built on native Spanish keyword research, Shopify and WooCommerce stores with state-level sales tax, and Google Business Profile managed in Spanish. Delivered from Lima, Peru in overlapping U.S. business hours through a U.S. subsidiary and invoiced in U.S. dollars.",
+    descriptionEn: "Hispanic marketing agency for U.S. brands: bilingual websites with hreflang declared correctly, Spanish SEO built on native Spanish keyword research, Shopify and WooCommerce stores with state-level sales tax, and Google Business Profile managed in Spanish. Delivered by an in-house team in overlapping U.S. business hours, through a U.S. subsidiary and invoiced in U.S. dollars.",
     serviceType: "Hispanic Marketing / Spanish-Language Digital Marketing",
     offerPriceEn: 500,
     // Página de un solo mercado: areaServed sin PE. Por defecto buildServiceSchema

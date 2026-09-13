@@ -14,7 +14,7 @@ import { TEL_MAIN } from "@/lib/contact";
 import { localizedUrl } from "@/lib/metadata";
 import ReactLenis from "lenis/react";
 import Script from "next/script";
-import { getReviews, buildRatingNodes } from "@/lib/reviews"
+import { getReviews, buildRatingNodes, reviewsForLocale } from "@/lib/reviews"
 import { POSTAL_ADDRESS } from "@/lib/nap"
 
 
@@ -153,7 +153,7 @@ export default async function RootLayout({
   // marcado declaraba (0 de 27 páginas). Se leen en el servidor con caché de
   // 24 h; si la API falla se usa el último snapshot verificado.
   const reviewsData = await getReviews();
-  const ratingNodes = buildRatingNodes(reviewsData);
+  const ratingNodes = buildRatingNodes(reviewsForLocale(reviewsData, locale));
 
   const organizationSchema = {
     "@context": "https://schema.org",

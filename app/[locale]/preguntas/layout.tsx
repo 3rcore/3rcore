@@ -11,9 +11,9 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
     locale,
     path: '/preguntas',
     titleEs: 'Preguntas Frecuentes de Marketing Digital | 3R Core',
-    titleEn: 'FAQ — Working With Our Peru-Based Team | 3R Core',
+    titleEn: 'FAQ — How We Work With U.S. Businesses | 3R Core',
     descriptionEs: 'Qué servicios ofrece 3R Core, qué incluye el branding, con qué plataformas web trabaja, qué esperar de Google Ads y dónde está su oficina en Lima.',
-    descriptionEn: 'How a Peruvian agency serves U.S. clients: pricing in USD, time zones, contracts, invoicing through our U.S. subsidiary and who owns the work.',
+    descriptionEn: 'How we serve U.S. clients: pricing in USD, business hours, contracts, invoicing through our U.S. subsidiary and who owns the work.',
     titleUs: 'Preguntas Frecuentes — Marketing en Español | 3R Core',
     descriptionUs: 'Qué servicios ofrece 3R Core, qué incluye el branding, con qué plataformas web trabaja, qué esperar de Google Ads y cuál es su horario de atención.',
   })
@@ -50,7 +50,7 @@ export default async function PreguntasLayout({ children, params }: { children: 
   }
 
   const hiddenH1 = isEn
-    ? 'Frequently asked questions about digital marketing in Lima, Peru — pricing, branding, SEO, Google Ads, social media and web development'
+    ? 'Frequently asked questions about working with 3R Core — pricing, branding, SEO, Google Ads, social media and web development'
     : 'Preguntas frecuentes sobre marketing digital en Lima, Perú — precios, branding, SEO, Google Ads, redes sociales y desarrollo web'
 
   return (

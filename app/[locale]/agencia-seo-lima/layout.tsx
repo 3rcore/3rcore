@@ -54,7 +54,7 @@ export default async function SeoLimaLayout({ children, params }: { children: Re
       question: isEn ? 'How much does an SEO agency in Lima cost?' : '¿Cuánto cuesta una agencia SEO en Lima?',
       answer: isEn
         ? 'Monthly SEO retainers for US clients start at $500 for local businesses and small e-commerce, $1,000 for competitive industries (real estate, legal, health, finance) and from $1,500 for enterprise-level technical SEO with international scope.'
-        : 'Las mensualidades SEO en Lima parten desde S/1,800 para negocios locales y e-commerce pequeños, S/3,000 para sectores competitivos (inmobiliario, legal, salud, finanzas) y desde S/5,000 para SEO técnico enterprise con alcance internacional.',
+        : 'Las mensualidades SEO en Lima parten desde S/1,800 para negocios locales y e-commerce pequeños, S/3,000 para sectores competitivos (inmobiliario, legal, salud, finanzas) y desde S/5,000 para SEO técnico enterprise con alcance internacional. Los montos indicados son referenciales.',
     },
     {
       question: isEn ? 'How long does SEO take to see results in Peru?' : '¿Cuánto tarda el SEO en dar resultados en Perú?',

@@ -7,7 +7,7 @@ const COPY = {
   es: {
     eyebrow: '3R Core · Web · Lima · Perú',
     h1: 'Diseño Web en Lima, Perú',
-    sub: 'Páginas web a medida, sitios corporativos y e-commerce optimizados para velocidad, conversión y SEO. Desde S/1,800 con SEO técnico incluido.',
+    sub: 'Páginas web a medida, sitios corporativos y e-commerce optimizados para velocidad, conversión y SEO. Desde S/1,800 con SEO técnico incluido. Los montos indicados son referenciales.',
     cta: 'Cotiza tu página web',
     contactPath: '/#contacto',
     why: 'Diseño, código y SEO en el mismo equipo',
@@ -19,6 +19,7 @@ const COPY = {
       { title: 'E-commerce Shopify / WooCommerce', price: 'Desde S/6,500', desc: 'Tienda con catálogo, pasarelas Culqi/Niubiz/Izipay, envíos, IGV, descuentos, abandono de carrito y dashboard. 6–10 semanas.' },
       { title: 'Web Next.js a medida', price: 'Desde S/9,500', desc: 'Headless CMS (Sanity, Supabase), animaciones GSAP/Framer, integraciones API, multilenguaje y deploy Vercel. 8–14 semanas.' },
     ],
+    tiersNote: 'Los precios son referenciales y varían según el alcance del proyecto.',
     stack: 'Stack que dominamos',
     stackList: ['Shopify', 'WooCommerce', 'WordPress', 'Next.js', 'Astro', 'Tailwind CSS', 'Supabase', 'Sanity', 'Vercel', 'Cloudflare', 'Figma', 'GSAP'],
     process: 'Proceso de diseño y desarrollo',
@@ -102,6 +103,7 @@ export default async function DisenoWebLimaPage({ params }: Props) {
             </li>
           ))}
         </ul>
+        {t.tiersNote && <p className="text-white/60 mt-6 max-w-3xl">{t.tiersNote}</p>}
       </section>
 
       <section className="px-6 md:px-10 lg:px-20 py-16 max-w-6xl mx-auto border-t border-white/10">

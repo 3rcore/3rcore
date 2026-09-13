@@ -7,7 +7,7 @@ const COPY = {
   es: {
     eyebrow: '3R Core · Google Ads · Lima · Perú',
     h1: 'Agencia Google Ads en Lima, Perú',
-    sub: 'Campañas Search, Performance Max, YouTube, Display y Shopping con tracking real de conversiones y reportes Looker Studio en tiempo real. Fee desde S/1,800/mes.',
+    sub: 'Campañas Search, Performance Max, YouTube, Display y Shopping con tracking real de conversiones y reportes Looker Studio en tiempo real. Fee desde S/1,800/mes. Los montos indicados son referenciales.',
     cta: 'Auditoría gratuita de tu cuenta',
     contactPath: '/#contacto',
     why: 'Una cuenta Google Ads sin tracking serio es dinero quemado',

@@ -342,8 +342,8 @@
         "answer": "Our campaigns are conversion-focused. You will gain higher visibility in top search results, an increase in messages and calls from potential leads, and a better return on investment (ROI)."
       },
       "q6": {
-        "question": "Where are you located and what are your business hours?",
-        "answer": "Our studio is at Alameda de la Paz 187, first floor, Urb. El Remanso, La Molina, Lima 15024, Peru, and U.S. clients contract through our U.S. subsidiary. We are open Monday to Friday, 9 a.m. to 6 p.m. — Eastern Time or one hour behind depending on daylight saving — so the U.S. business day and ours are the same day."
+        "question": "Which areas do you serve and what are your business hours?",
+        "answer": "We serve businesses nationwide across the United States, working remotely with video meetings and online reports, and U.S. clients contract through our U.S. subsidiary. We are available Monday to Friday, 9 a.m. to 6 p.m., on U.S. Eastern business hours, so the U.S. business day and ours are the same day."
       }
     },
     "contact": {
@@ -416,7 +416,7 @@
   "WebHero": {
     "slogan": "We build on the platforms your customers already trust, <shopify>Shopify</shopify> and <woo></woo>, so your site gets the <bold>speed</bold>, <bold>security</bold> and <bold>flexibility</bold> a growing U.S. business needs without a rebuild in eighteen months.",
     "protitle": "Websites built to be measured, not just admired",
-    "prosubtitle": "Designed and developed by our team in Lima, on your business hours",
+    "prosubtitle": "Designed and developed by our in-house team, on your business hours",
     "proIn": "Research",
     "proEs": "Strategy",
     "proAr": "Architecture",
@@ -469,12 +469,12 @@
   "webFAQ": {
     "title": "Frequently asked questions",
     "topBadge": "FAQ · Answers before you ask",
-    "par": "Over five years building websites, more than a thousand brands worked with and presence in three countries. Our team is in Lima, Peru and works U.S. business hours; U.S. clients contract through our U.S. subsidiary.",
+    "par": "Over five years building websites, more than a thousand brands worked with and presence in three countries. Our in-house team works U.S. business hours, and U.S. clients contract through our U.S. subsidiary.",
     "tipar": "Another question? Write to us and you will have an answer the same day.",
     "faqs": {
       "q1": {
         "question": "What does a website cost?",
-        "answer": "A professional landing page starts at $850, a five-to-eight section corporate site from $1,200, and an online store from $1,750. What moves the price is integrations, not page count. You get a fixed scope and a written price after the first call, before any work begins."
+        "answer": "A professional landing page starts at $850, a five-to-eight section corporate site from $1,200, and an online store from $1,750. What moves the price is integrations, not page count. You get a fixed scope and a written price after the first call, before any work begins. Figures shown are for reference only."
       },
       "q2": {
         "question": "How long does it take?",
@@ -490,7 +490,7 @@
       },
       "q5": {
         "question": "Is domain and hosting included?",
-        "answer": "For the first year: domain, SSL certificate and professional hosting are in the package. From year two hosting is billed separately, roughly $10 to $35 per month depending on traffic and platform, or you can move it to your own provider with no penalty."
+        "answer": "For the first year: domain, SSL certificate and professional hosting are in the package. From year two hosting is billed separately, roughly $10 to $35 per month depending on traffic and platform, or you can move it to your own provider with no penalty. Figures shown are for reference only."
       },
       "q6": {
         "question": "Does it include SEO?",
@@ -531,7 +531,7 @@
   "LandingHero": {
     "titleLine1": "SEO that",
     "titleLine2": "compounds",
-    "slogan": "Organic rankings built by a team in Lima that works your hours, so the work ships daily instead of overnight.",
+    "slogan": "Organic rankings built by an in-house team that works your hours, so the work ships daily instead of overnight.",
     "buttonText": "Get a scoped plan",
     "whatsappMessage": "Hi, I would like to talk about SEO for my business"
   },
@@ -589,7 +589,7 @@
   "ThirdLandingSection": {
     "number": "03.",
     "heading": "Why the time zone matters here",
-    "description": "SEO is iterative work: a crawl issue found Tuesday should be fixed Tuesday, not next week. Our team is in Lima, on Eastern Time or one hour behind, so your business day and ours are the same day.",
+    "description": "SEO is iterative work: a crawl issue found Tuesday should be fixed Tuesday, not next week. Our team works U.S. business hours, so your business day and ours are the same day.",
     "quote": {
       "line1": "A question asked at 10am",
       "line2": "is answered at 10:15, not tomorrow."
@@ -615,7 +615,7 @@
     "pricing": {
       "label": "Monthly investment",
       "amount": "$500",
-      "footer": "Compounding work: each month builds on the last."
+      "footer": "Compounding work: each month builds on the last. Figures shown are for reference only."
     }
   },
   "SixLandingSection": {
@@ -628,21 +628,21 @@
   },
   "HiddenH1": {
     "home": "SEO, web development and online stores agency serving businesses across the U.S.",
-    "branding": "Corporate branding and brand identity design for U.S. brands, from our studio in Lima, Peru",
-    "webdev": "Web design and development for U.S. brands, built by our team in Lima, Peru",
-    "googleads": "Certified Google Ads and PPC management for U.S. brands, run from Lima, Peru",
-    "socialmedia": "Social media management and community management for U.S. brands, run from Lima, Peru",
-    "seo": "SEO and organic Google positioning for U.S. businesses, delivered from Lima, Peru",
-    "metaads": "Meta Ads management (Facebook and Instagram) for U.S. brands, run from Lima, Peru",
-    "tiktokads": "TikTok Ads for U.S. brands with in-house UGC creators in Lima, Peru",
-    "performance": "Performance marketing for U.S. brands measured by CAC and ROAS, run from Lima, Peru",
-    "emailmarketing": "Email marketing and automation for U.S. brands, built from Lima, Peru",
-    "clinicas": "Digital marketing for clinics and medical practices in the United States, run from Lima, Peru",
-    "inmobiliarias": "Digital marketing for U.S. real estate agents and developers, run from Lima, Peru",
-    "ecommerce": "Digital marketing for U.S. e-commerce and online stores, run from Lima, Peru",
-    "ugc": "UGC content production for U.S. brands with in-house creators in Lima, Peru",
-    "influencers": "Influencer marketing for U.S. brands with per-creator attribution, run from Lima, Peru",
-    "pr": "Public relations, press coverage and reputation management for U.S. brands, run from Lima, Peru",
+    "branding": "Corporate branding and brand identity design for U.S. brands, by our in-house design team",
+    "webdev": "Web design and development for U.S. brands, built by our in-house team",
+    "googleads": "Certified Google Ads and PPC management for U.S. brands, run by our in-house team",
+    "socialmedia": "Social media management and community management for U.S. brands, run by our in-house team",
+    "seo": "SEO and organic Google positioning for U.S. businesses, delivered by our in-house team",
+    "metaads": "Meta Ads management (Facebook and Instagram) for U.S. brands, run by our in-house team",
+    "tiktokads": "TikTok Ads for U.S. brands with in-house UGC creators",
+    "performance": "Performance marketing for U.S. brands measured by CAC and ROAS, run by our in-house team",
+    "emailmarketing": "Email marketing and automation for U.S. brands, built by our in-house team",
+    "clinicas": "Digital marketing for clinics and medical practices in the United States, run by our in-house team",
+    "inmobiliarias": "Digital marketing for U.S. real estate agents and developers, run by our in-house team",
+    "ecommerce": "Digital marketing for U.S. e-commerce and online stores, run by our in-house team",
+    "ugc": "UGC content production for U.S. brands with in-house creators",
+    "influencers": "Influencer marketing for U.S. brands with per-creator attribution, run by our in-house team",
+    "pr": "Public relations, press coverage and reputation management for U.S. brands, run by our in-house team",
     "nearshore": "Peruvian marketing agency serving U.S. brands remotely through its U.S. subsidiary",
     "hispanic": "Hispanic marketing agency for U.S. brands: websites, SEO and online stores written in Spanish, not translated",
     "spanishseo": "Spanish SEO services for U.S. businesses: native keyword research, hreflang repair and Spanish pages from $500 per month",
@@ -662,7 +662,7 @@
       },
       "q2": {
         "question": "Do you work with U.S. clients remotely?",
-        "answer": "Yes. Our team is in Lima and works U.S. business hours, and U.S. clients contract through our U.S. subsidiary. Everything runs remotely with video meetings and online reports: 60% of our projects are 100% remote."
+        "answer": "Yes. Our in-house team works U.S. business hours, and U.S. clients contract through our U.S. subsidiary. Everything runs remotely with video meetings and online reports: 60% of our projects are 100% remote."
       },
       "q3": {
         "question": "How much does it cost to hire a digital marketing agency?",
@@ -700,7 +700,7 @@
   },
   "HomeSEO": {
     "seoTitle": "Digital marketing agency for U.S. brands with 360° vision",
-    "p1": "3R Core is a digital marketing agency for U.S. brands, with our team based in Lima, Peru, specialized in giving your brand everything it needs to grow online: a well-designed website, social media that communicates, profitable Google Ads campaigns and SEO positioning that makes you appear when your customers search for what you offer.",
+    "p1": "3R Core is a digital marketing agency for U.S. brands, with an in-house team specialized in giving your brand everything it needs to grow online: a well-designed website, social media that communicates, profitable Google Ads campaigns and SEO positioning that makes you appear when your customers search for what you offer.",
     "p2": "Unlike traditional agencies, we work with a multidisciplinary team where every client has direct contact with the directors. This means faster decisions, sharper strategies and clear monthly reports with real metrics: clicks, conversions, cost per lead, ROI and Google rankings.",
     "p3": "Our services cover the full digital marketing value chain: professional web design and development (corporate sites, landing pages, e-commerce on Shopify and WooCommerce), social media management with editorial grid and post design, Google Ads SEM campaigns and organic SEO positioning so your brand dominates search results.",
     "p4": "If you are looking for a digital agency that works your hours and understands the new rules of digital marketing, let's talk. We invite you to a free initial meeting where we listen to your business, review your goals and craft a tailored proposal.",
@@ -720,7 +720,7 @@
       },
       "q3": {
         "question": "How much does designing my brand identity cost?",
-        "answer": "Branding projects at 3R Core start at $500 USD for US clients and scale according to corporate scope. We deliver a formal quote with detailed deliverables after an initial discovery session."
+        "answer": "Branding projects at 3R Core start at $500 USD for US clients and scale according to corporate scope. We deliver a formal quote with detailed deliverables after an initial discovery session. Figures shown are for reference only."
       },
       "q4": {
         "question": "If I only want a logo, can you do that?",
@@ -796,7 +796,7 @@
     "p2": "Most sites underperform for three reasons that have nothing to do with design: they load slowly on a phone, they were never instrumented so nobody knows which page produces revenue, and the copy describes the company instead of answering the question the visitor arrived with. A redesign that ignores those changes the look and not the result.",
     "p3": "Everything we build ships instrumented. Analytics, tag management and conversion events are configured before launch and live in your accounts, so the first month of traffic already teaches you something. Sites handed over without tracking waste their most informative period, and that period does not come back.",
     "p4": "The technical foundation is included and not negotiable: mobile speed, clean URL structure, correct metadata and structured data, and the internal linking that lets content rank later. Retrofitting any of it costs roughly double, which is why it belongs in the build rather than in a later project.",
-    "p5": "We are a Peruvian agency and the work is made by our team in Lima, on Eastern Time or one hour behind. U.S. clients contract and invoice through our U.S. subsidiary. In practice that means the same senior work at a different operating cost, and a design review that happens live instead of by ticket overnight.",
+    "p5": "Our in-house team works U.S. business hours, and U.S. clients contract and invoice through our U.S. subsidiary. In practice that means a design review that happens live, on your working day, instead of by ticket overnight.",
     "p6": "Where the audience justifies it, we build the Spanish version as a real indexable section rather than a translation toggle — for many U.S. businesses that is the cheapest qualified traffic available. Tell us what you sell and to whom, and we will tell you which kind of site that actually calls for.",
     "relatedTitle": "Related services"
   },
@@ -806,7 +806,7 @@
     "faqs": {
       "q1": {
         "question": "How much should I invest in Google Ads to start?",
-        "answer": "We recommend a minimum ad spend of $400/month for actionable data, plus the management fee starting at $800/month. In highly competitive sectors (legal, real estate, healthcare) we suggest starting with $1,000+ in ad spend to stay in the auctions."
+        "answer": "We recommend a minimum ad spend of $400/month for actionable data, plus the management fee starting at $800/month. In highly competitive sectors (legal, real estate, healthcare) we suggest starting with $1,000+ in ad spend to stay in the auctions. Figures shown are for reference only."
       },
       "q2": {
         "question": "What types of Google Ads campaigns do you manage?",
@@ -860,7 +860,7 @@
     "faqs": {
       "q1": {
         "question": "How much does an agency charge for social media management?",
-        "answer": "Social media management plans at 3R Core start at $800/month for US clients (TikTok + Instagram + Facebook + LinkedIn with 8–12 pieces) and scale according to frequency, platforms and audiovisual production. We deliver a detailed proposal in our first meeting."
+        "answer": "Social media management plans at 3R Core start at $800/month for US clients (TikTok + Instagram + Facebook + LinkedIn with 8–12 pieces) and scale according to frequency, platforms and audiovisual production. We deliver a detailed proposal in our first meeting. Figures shown are for reference only."
       },
       "q2": {
         "question": "Which social media platforms do you manage?",
@@ -884,7 +884,7 @@
       },
       "q7": {
         "question": "Freelance community manager or agency: which is better?",
-        "answer": "A freelancer works if you only need posting (1 platform, 8-12 pieces/month) and you already have content produced. An agency makes sense if you need strategy + design + video editing + copy + community management + reporting in a single operation. Quick math: a freelancer's real total cost is usually $360-600; an agency from $540 gives you a full team. For 2+ platforms with video, agency every time."
+        "answer": "A freelancer works if you only need posting (1 platform, 8-12 pieces/month) and you already have content produced. An agency makes sense if you need strategy + design + video editing + copy + community management + reporting in a single operation. Quick math: a freelancer's real total cost is usually $360-600; an agency from $540 gives you a full team. For 2+ platforms with video, agency every time. Figures shown are for reference only."
       },
       "q8": {
         "question": "How many posts per month should I publish on each social network?",
@@ -914,7 +914,7 @@
     "faqs": {
       "q1": {
         "question": "What does SEO cost?",
-        "answer": "From $500 per month, including the technical audit, keyword and intent research, on-page work, content and monthly reporting. No forced contracts — the engagement is monthly and holds on results rather than on a lock-in period. Larger sites with bigger content programs scale from there."
+        "answer": "From $500 per month, including the technical audit, keyword and intent research, on-page work, content and monthly reporting. No forced contracts — the engagement is monthly and holds on results rather than on a lock-in period. Larger sites with bigger content programs scale from there. Figures shown are for reference only."
       },
       "q2": {
         "question": "How long before it works?",
@@ -922,7 +922,7 @@
       },
       "q3": {
         "question": "Who actually does the work?",
-        "answer": "Our team in Lima, Peru, working U.S. business hours. For U.S. clients the commercial side runs through our U.S. subsidiary, so contracting and invoicing work the way you expect. You get a named point of contact, not a rotating pool — context is most of the value in an SEO engagement."
+        "answer": "Our in-house team, working U.S. business hours. For U.S. clients the commercial side runs through our U.S. subsidiary, so contracting and invoicing work the way you expect. You get a named point of contact, not a rotating pool — context is most of the value in an SEO engagement."
       },
       "q4": {
         "question": "Do we keep the work if we stop?",
@@ -947,10 +947,10 @@
     }
   },
   "SEOSEOBlock": {
-    "seoTitle": "SEO for U.S. brands, delivered from Lima, Peru",
+    "seoTitle": "SEO for U.S. brands, delivered by an in-house team",
     "p1": "Search rankings are earned through sustained output: technical problems fixed, pages published for real intent, internal links rebuilt, authority earned. The reason most programs stall is not strategy but volume — that work is expensive at U.S. agency rates, so it gets rationed until it stops compounding.",
-    "p2": "3R Core is a Peruvian agency and we run SEO for U.S. brands from our team in Lima, through our U.S. subsidiary. The point is not cheaper labor: it is the same senior work carrying a different operating cost, so the same budget buys more pages, more fixes and more tests each month. In a channel that rewards consistency, that difference decides outcomes.",
-    "p3": "Time zone is what makes the arrangement work day to day. Lima runs on Eastern Time or one hour behind depending on daylight saving, so a crawl issue found on Tuesday morning is being fixed Tuesday morning. Teams that have tried arrangements twelve hours out recognize immediately how much that changes, because SEO is iterative and every ambiguity otherwise costs two days.",
+    "p2": "3R Core runs SEO for U.S. brands with an in-house team, and U.S. clients contract through our U.S. subsidiary. The point is not cheaper labor: it is the same senior work carrying a different operating cost, so the same budget buys more pages, more fixes and more tests each month. In a channel that rewards consistency, that difference decides outcomes.",
+    "p3": "Shared business hours are what make this run smoothly day to day. Our team works U.S. business hours, so a crawl issue found on Tuesday morning is being fixed Tuesday morning. Teams that have worked with agencies twelve hours away recognize immediately how much that changes, because SEO is iterative and every ambiguity otherwise costs two days.",
     "p4": "The first month goes to the foundation, because content published on a broken site is wasted money. Crawl and index coverage, Core Web Vitals, canonicals, structured data and internal link architecture routinely cap a site well below what its existing content deserves — and fixing them often produces the first visible movement before anything new is written.",
     "p5": "Everything is built in your own properties. Your site, your Search Console, your analytics, your Business Profile. If the engagement ends, the content, the fixes and the documentation stay with you. There is nothing to reclaim, which is how it should be and is not always how it works.",
     "p6": "We also produce in Spanish, which matters more than most U.S. brands realize: the Spanish version of a commercial query in your service area usually faces far less competition than the English one. Tell us your market and we will tell you what six months can realistically look like.",
@@ -1032,7 +1032,7 @@
     "faqs": {
       "q1": {
         "question": "How much should I invest in Meta Ads to start?",
-        "answer": "We recommend a minimum ad budget of about $420/month for actionable data, plus a management fee from $420. In very competitive niches it's better to start with $700+ in ad spend to exit the algorithm's learning phase faster."
+        "answer": "We recommend a minimum ad budget of about $420/month for actionable data, plus a management fee from $420. In very competitive niches it's better to start with $700+ in ad spend to exit the algorithm's learning phase faster. Figures shown are for reference only."
       },
       "q2": {
         "question": "What's the difference between boosting posts and a professional campaign?",
@@ -1154,7 +1154,7 @@
       },
       "q2": {
         "question": "How much does it cost to start on TikTok Ads?",
-        "answer": "We suggest an ad budget from about $420/month plus a management fee from $420. As a less saturated channel, CPMs tend to be competitive versus Meta."
+        "answer": "We suggest an ad budget from about $420/month plus a management fee from $420. As a less saturated channel, CPMs tend to be competitive versus Meta. Figures shown are for reference only."
       },
       "q3": {
         "question": "Do you film the videos?",
@@ -1280,7 +1280,7 @@
       },
       "q4": {
         "question": "What ad budget do you recommend?",
-        "answer": "It depends on your margin and ticket, but we usually start from about $850 monthly ad spend for enough data. The management fee starts at $700 depending on channels and complexity."
+        "answer": "It depends on your margin and ticket, but we usually start from about $850 monthly ad spend for enough data. The management fee starts at $700 depending on channels and complexity. Figures shown are for reference only."
       },
       "q5": {
         "question": "Does it include improving my site or landing pages?",
@@ -1815,7 +1815,7 @@
       "title": "Why UGC beats polished production on cost per result",
       "p1": "UGC is advertising shot to look like organic content: vertical, natural light, a real person talking to camera. It doesn't replace your brand film. It replaces the ad people scroll past.",
       "p2": "The advantage is economic, not aesthetic. A traditional spot costs thousands and yields one asset. The same budget in UGC yields eight to twenty variations — and on platforms that optimize by creative, volume of variations is precisely what drives cost per result down.",
-      "p3": "We work with in-house creators in Lima, not a marketplace. That means we control the brief, the turnaround and the reshoot. If an angle underperforms, we shoot it again without renegotiating rates with a third party — and you get U.S.-agency output at nearshore cost."
+      "p3": "We work with in-house creators, not a marketplace. That means we control the brief, the turnaround and the reshoot. If an angle underperforms, we shoot it again without renegotiating rates with a third party — and you get U.S.-agency output at nearshore cost."
     },
     "benefits": {
       "badge": "What's included",
@@ -1908,14 +1908,14 @@
       },
       "q8": {
         "question": "Do you work with U.S. brands?",
-        "answer": "Yes. We produce in Lima and deliver for brands in the United States and Mexico, in English or Spanish depending on the market. Our team works U.S.-compatible hours, communication runs in English, and invoicing is issued in U.S. dollars. This is the core of our nearshore model: U.S.-standard output without U.S.-agency overhead."
+        "answer": "Yes. We produce and deliver for brands in the United States and Mexico, in English or Spanish depending on the market. Our team works U.S.-compatible hours, communication runs in English, and invoicing is issued in U.S. dollars. This is the core of our nearshore model: U.S.-standard output without U.S.-agency overhead."
       }
     }
   },
   "UgcSEO": {
     "seoTitle": "UGC content production for U.S. brands, produced nearshore",
     "p1": "UGC stopped being an experiment and became the default format for social advertising. The mechanics are straightforward: Meta and TikTok distribute impressions by rewarding retention, and content that looks like content retains better than content that looks like an ad. Producing it continuously, rather than once, is what separates accounts that scale from accounts that plateau.",
-    "p2": "3R Core produces UGC with in-house creators in Lima for brands in the United States. The difference against a marketplace is control: we own the brief, we correct scripts before filming, and we reshoot a failing angle without renegotiating with an intermediary. For the advertiser that means predictable turnaround and a cost per asset that falls as batch volume rises.",
+    "p2": "3R Core produces UGC with in-house creators for brands in the United States. The difference against a marketplace is control: we own the brief, we correct scripts before filming, and we reshoot a failing angle without renegotiating with an intermediary. For the advertiser that means predictable turnaround and a cost per asset that falls as batch volume rises.",
     "p3": "Every batch starts with angles, not cameras. An angle is a hypothesis about why someone buys: solving a problem, breaking an objection, comparing against the alternative, or showing the product in use. We script each angle, film several versions of the hook, and deliver the variations separately so the campaign can decide on data instead of opinion.",
     "p4": "Measurement is part of the deliverable. Files are named by angle and hook, so when you read the campaign report you learn which idea worked, not just which file did. The second batch is then built on evidence: winning angles get reinforced, weak hooks get rewritten, and hypotheses the audience already rejected get dropped.",
     "p5": "Usage rights are documented from the first batch. The creator agreement covers paid usage for the agreed term and platforms, with a renewal option. It's an administrative detail that becomes critical at the worst possible moment — when an asset starts performing and you want to multiply spend behind it.",
@@ -2010,7 +2010,7 @@
       },
       "q4": {
         "question": "What does a creator campaign cost?",
-        "answer": "The range is wide because the variable is the deliverable, not the follower count. A mid-tier U.S. creator typically closes a story-plus-reel package between $300 and $2,500 depending on niche and exclusivity. What's worth budgeting isn't a single activation but a campaign across several creators and several posts, since an isolated mention rarely moves the needle."
+        "answer": "The range is wide because the variable is the deliverable, not the follower count. A mid-tier U.S. creator typically closes a story-plus-reel package between $300 and $2,500 depending on niche and exclusivity. What's worth budgeting isn't a single activation but a campaign across several creators and several posts, since an isolated mention rarely moves the needle. Figures shown are for reference only."
       },
       "q5": {
         "question": "Can I use the creator's content in my ads?",
@@ -2302,14 +2302,14 @@
     "hero": {
       "badge": "Native Spanish team · U.S. subsidiary · U.S. hours",
       "title": "Hispanic marketing agency for U.S. brands, with a native Spanish team",
-      "subtitle": "3R Core is a Peruvian agency that builds websites, SEO and online stores for U.S. brands that want to reach Spanish-speaking customers. The Spanish is written by native speakers in Lima, not translated, and the work runs in overlapping U.S. business hours and is invoiced in U.S. dollars.",
+      "subtitle": "3R Core builds websites, SEO and online stores for U.S. brands that want to reach Spanish-speaking customers. The Spanish is written by native speakers on our in-house team, not translated, and the work runs in overlapping U.S. business hours and is invoiced in U.S. dollars.",
       "cta": "Get a scoped proposal"
     },
     "intro": {
       "title": "What a Hispanic marketing agency actually has to get right",
-      "p1": "Most agencies serving the U.S. Hispanic market start from English and translate. 3R Core starts from Spanish, because Spanish is the working language of the team: our writers, SEO specialists and developers are in Lima, Peru, and Spanish is what they think in. That difference shows up in the two places it matters — the words people actually search for, and the words that make them trust you enough to call.",
+      "p1": "Most agencies serving the U.S. Hispanic market start from English and translate. 3R Core starts from Spanish, because Spanish is the working language of the team: our writers, SEO specialists and developers are native Spanish speakers, and Spanish is what they think in. That difference shows up in the two places it matters — the words people actually search for, and the words that make them trust you enough to call.",
       "p2": "The failure mode is easy to spot once you know it. A translated page ranks for the phrase an English speaker would translate, not the phrase a Spanish speaker types. \"Home insurance\" translated is \"seguro de hogar\"; a lot of U.S. Hispanic customers search \"seguro de casa\". Both are correct Spanish. Only one is the query. Keyword research done in Spanish catches that; translation never does.",
-      "p3": "The second half is operational. Lima runs on Eastern Time, or one hour behind depending on daylight saving, so a brief sent from New York at 9am is being worked at 9am. You get same-day revisions instead of overnight handoffs, and you contract and invoice through our U.S. subsidiary the way you normally would."
+      "p3": "The second half is operational. Our team works U.S. business hours, so a brief sent from New York at 9am is being worked at 9am. You get same-day revisions instead of overnight handoffs, and you contract and invoice through our U.S. subsidiary the way you normally would."
     },
     "benefits": {
       "badge": "What we run for the Hispanic market",
@@ -2374,11 +2374,11 @@
     "faqs": {
       "q1": {
         "question": "What does a Hispanic marketing agency do that a general agency does not?",
-        "answer": "A Hispanic marketing agency does keyword research, writes copy and structures the site in Spanish as the source language rather than translating from English. The practical difference is which queries the pages target: a translated page ranks for the literal translation of the English phrase, which is often not the phrase Spanish-speaking customers actually type. 3R Core works this way because the team in Lima, Peru is native Spanish-speaking."
+        "answer": "A Hispanic marketing agency does keyword research, writes copy and structures the site in Spanish as the source language rather than translating from English. The practical difference is which queries the pages target: a translated page ranks for the literal translation of the English phrase, which is often not the phrase Spanish-speaking customers actually type. 3R Core works this way because its in-house team is native Spanish-speaking."
       },
       "q2": {
-        "question": "Is 3R Core a U.S. agency?",
-        "answer": "No. 3R Core is a Peruvian agency based in Lima, and it serves U.S. brands remotely through its U.S. subsidiary. Clients contract and are invoiced in U.S. dollars the way they normally would, and the work is produced in Lima. We say this plainly because it is the reason the Spanish is native and the reason the same budget buys more output."
+        "question": "How do U.S. brands work with 3R Core?",
+        "answer": "Remotely, through our U.S. subsidiary. Clients contract and are invoiced in U.S. dollars the way they normally would, and the work is produced by our in-house team, which is native Spanish-speaking. That is the reason the Spanish reads as written rather than translated."
       },
       "q3": {
         "question": "How much does Hispanic marketing cost with 3R Core?",
@@ -2398,7 +2398,7 @@
       },
       "q7": {
         "question": "What time zone does the team work in?",
-        "answer": "Lima, Peru runs on Eastern Time, or one hour behind depending on U.S. daylight saving. That means live standups, same-day revisions and no overnight handoff cycle, which is the main practical difference between nearshore and offshore delivery."
+        "answer": "Our team works U.S. business hours. That means live standups, same-day revisions and no overnight handoff cycle, which is the main practical difference between nearshore and offshore delivery."
       },
       "q8": {
         "question": "How long before Spanish SEO produces traffic?",
@@ -2408,26 +2408,26 @@
   },
   "HispanicSEO": {
     "seoTitle": "Hispanic marketing agency for U.S. brands — websites, SEO and online stores in Spanish",
-    "p1": "3R Core is a Hispanic marketing agency for U.S. brands: a Peruvian team in Lima that builds websites, SEO and online stores in Spanish and English, serving U.S. clients through its U.S. subsidiary. The Spanish is written by native speakers rather than translated, and the work runs in overlapping U.S. business hours.",
+    "p1": "3R Core is a Hispanic marketing agency for U.S. brands: an in-house, native Spanish-speaking team that builds websites, SEO and online stores in Spanish and English, serving U.S. clients through its U.S. subsidiary. The Spanish is written by native speakers rather than translated, and the work runs in overlapping U.S. business hours.",
     "p2": "The reason we lead with \"written, not translated\" is that translation is where most Spanish-language projects lose their money. Keyword research done in English and then translated produces a page targeting a phrase that is grammatically correct and commercially irrelevant. Research done in Spanish produces the phrase people type.",
     "p3": "Bilingual sites fail on a second, more mechanical point: hreflang. Each language needs its own URL, and each URL needs to declare the other in both directions. When that declaration is missing or one-sided, Google decides on its own which version to show, and it frequently shows the English page to a Spanish-speaking searcher. This is the single most common defect we find when auditing an existing bilingual site.",
     "p4": "For local businesses, the Google Business Profile decides more of the phone calls than the website does. A profile with its category, services, posts and review replies in Spanish is what makes a Spanish-speaking customer choose you from the map pack. We treat it as part of the SEO engagement rather than an afterthought.",
     "p5": "Reference pricing in U.S. dollars is public and does not require a call to obtain: SEO $500 per month, websites from $850, corporate sites from $1,200 and Shopify or WooCommerce stores from $1,750. Monthly reference budgets run $750–$1,400 for small businesses and $1,500–$3,600 for established SMBs. There are no mandatory contracts.",
-    "p6": "3R Core does not present itself as a U.S. agency. It is a Peruvian agency serving U.S. brands through its U.S. subsidiary, and that is the reason the Spanish is native and the reason a U.S. budget buys more production than it would at a U.S. metro cost base.",
+    "p6": "3R Core serves U.S. brands through its U.S. subsidiary, with an in-house team whose working language is Spanish. That is the reason the Spanish is native rather than translated.",
     "relatedTitle": "Related services"
   },
   "SpanishSeoLanding": {
     "hero": {
       "badge": "Spanish SEO · native research · U.S. hours",
       "title": "Spanish SEO services for U.S. businesses",
-      "subtitle": "Rank in Spanish for the queries your Spanish-speaking customers actually type. Research, structure and copy produced in Spanish by a native team in Lima, Peru, working in overlapping U.S. business hours. $500 per month, no mandatory contract.",
+      "subtitle": "Rank in Spanish for the queries your Spanish-speaking customers actually type. Research, structure and copy produced in Spanish by a native in-house team, working in overlapping U.S. business hours. $500 per month, no mandatory contract. Figures shown are for reference only.",
       "cta": "Get a Spanish SEO proposal"
     },
     "intro": {
       "title": "Why Spanish search is the cheaper half of the same market",
       "p1": "In most U.S. service categories, the English search results are contested by every competitor in the county and the Spanish results are contested by a handful. Same customers, same city, same purchase — a fraction of the competition, because almost nobody has built pages for it. That gap is the entire opportunity, and it closes as more businesses notice it.",
       "p2": "The reason the gap persists is that doing it properly is annoying. It is not translating the site. It is running keyword research in Spanish, discovering that the query set is different from the English one, and then writing pages against those queries with headings that match how the question is asked. Translation software will not surface that, because translation software is answering a different question.",
-      "p3": "3R Core runs this natively. The team in Lima works in Spanish by default, so the research, the headings and the copy come out of the language rather than through it. And because Lima shares business hours with the U.S. East Coast, the loop stays same-day."
+      "p3": "3R Core runs this natively. Our team works in Spanish by default, so the research, the headings and the copy come out of the language rather than through it. And because the team works U.S. business hours, the loop stays same-day."
     },
     "benefits": {
       "badge": "What the engagement includes",
@@ -2496,7 +2496,7 @@
       },
       "q2": {
         "question": "How much do Spanish SEO services cost?",
-        "answer": "At 3R Core, SEO costs $500 USD per month and includes the initial audit, planning, on-page optimization, scaling and a monthly report, with no mandatory contract. If the engagement also requires building Spanish pages from scratch, websites start at $850 and corporate sites at $1,200 (range $1,200–$2,400 depending on scope)."
+        "answer": "At 3R Core, SEO costs $500 USD per month and includes the initial audit, planning, on-page optimization, scaling and a monthly report, with no mandatory contract. If the engagement also requires building Spanish pages from scratch, websites start at $850 and corporate sites at $1,200 (range $1,200–$2,400 depending on scope). Figures shown are for reference only."
       },
       "q3": {
         "question": "Is Spanish SEO easier than English SEO?",
@@ -2520,18 +2520,18 @@
       },
       "q8": {
         "question": "Do you also handle Google Ads in Spanish?",
-        "answer": "In the United States, 3R Core sells three services: websites, SEO and online stores. Google Ads management is part of our catalog in Peru but is not what we lead with for U.S. clients, and we would rather say so than sell a service we are not focused on. If paid search in Spanish is your priority, we will tell you honestly whether we are the right fit on the first call."
+        "answer": "In the United States, 3R Core sells three services: websites, SEO and online stores. Google Ads management is not what we lead with for U.S. clients, and we would rather say so than sell a service we are not focused on. If paid search in Spanish is your priority, we will tell you honestly whether we are the right fit on the first call."
       }
     }
   },
   "SpanishSeoSEO": {
     "seoTitle": "Spanish SEO services for U.S. businesses — $500/month, native research, no mandatory contract",
-    "p1": "3R Core provides Spanish SEO services for U.S. businesses at $500 USD per month: keyword research run in Spanish, pages written against Spanish queries, hreflang and technical repair, Google Business Profile in Spanish and a monthly report with the Spanish traffic split out. There is no mandatory contract.",
+    "p1": "3R Core provides Spanish SEO services for U.S. businesses at $500 USD per month: keyword research run in Spanish, pages written against Spanish queries, hreflang and technical repair, Google Business Profile in Spanish and a monthly report with the Spanish traffic split out. There is no mandatory contract. Figures shown are for reference only.",
     "p2": "Spanish SEO is not translation. The defining step is running keyword research in Spanish and discovering that the query set differs from the English one — sometimes in ways a translator would never produce, because both phrasings are correct Spanish and only one is what people type. Pages are then built against those queries, with headings matching how the question is asked.",
     "p3": "The technical floor is hreflang. Each language version needs its own URL and a reciprocal declaration pointing at the other. When that declaration is absent or one-way, Google chooses for itself and routinely serves the English page to Spanish-speaking searchers, which nullifies the Spanish page. It is the most common defect we find in U.S. bilingual sites and the first thing an audit checks.",
     "p4": "For local businesses, the Google Business Profile decides more calls than the site does. Category, services, posts and review replies in Spanish are what make a Spanish-speaking customer choose you from the map pack, so the profile is part of the engagement rather than an add-on.",
     "p5": "The competitive argument is simple: in most U.S. service categories the English results are contested by everyone and the Spanish results by very few, because almost nobody has built the pages. Same customers, same city, less competition. That advantage is real and it narrows as more businesses notice it.",
-    "p6": "3R Core is a Peruvian agency in Lima serving U.S. clients through its U.S. subsidiary. Spanish is the team's working language, which is why the research and the copy come out of it natively, and Lima shares business hours with the U.S. East Coast, which is why revisions land the same day.",
+    "p6": "3R Core serves U.S. clients through its U.S. subsidiary. Spanish is the team's working language, which is why the research and the copy come out of it natively, and the team works U.S. business hours, which is why revisions land the same day.",
     "relatedTitle": "Related services"
   },
   "PosicionamientoIALanding": {
@@ -2614,7 +2614,7 @@
       },
       "q2": {
         "question": "How much does GEO cost at 3R Core?",
-        "answer": "It is included in the SEO service, which is $500 per month for U.S. clients. We do not bill it separately because the work overlaps: the same rewriting that makes a passage citable also improves the page in Google. Net prices, no mandatory contract."
+        "answer": "It is included in the SEO service, which is $500 per month for U.S. clients. We do not bill it separately because the work overlaps: the same rewriting that makes a passage citable also improves the page in Google. Net prices, no mandatory contract. Figures shown are for reference only."
       },
       "q3": {
         "question": "Can you guarantee appearing in ChatGPT?",
@@ -2644,7 +2644,7 @@
   },
   "PosicionamientoIASEO": {
     "seoTitle": "Generative engine optimization for U.S. brands — get cited by ChatGPT, Perplexity and Copilot",
-    "p1": "3R Core runs generative engine optimization for U.S. businesses: we prepare your site so ChatGPT, Perplexity, Copilot, Gemini and Claude use it as a source and name you when someone asks for what you sell. It is included in the SEO service at $500 per month, with no mandatory contract.",
+    "p1": "3R Core runs generative engine optimization for U.S. businesses: we prepare your site so ChatGPT, Perplexity, Copilot, Gemini and Claude use it as a source and name you when someone asks for what you sell. It is included in the SEO service at $500 per month, with no mandatory contract. Figures shown are for reference only.",
     "p2": "The difference from classic SEO is the unit of work: in Google you rank a page, in an assistant you get a passage cited. The model clips the fragment that answers the question and attributes it, so a page that takes three paragraphs to give the figure loses the citation even when it ranks well.",
     "p3": "The first thing we check is access. GPTBot, OAI-SearchBot, PerplexityBot, ClaudeBot and Google-Extended have to be able to read the site, and that is verified by comparing the bytes each agent receives against a browser: a 200 status proves nothing, because a firewall can serve a blank wall to the crawler and the full page to a person.",
     "p4": "Then comes the shape of the text: a direct answer in the first fifty words after each heading, headings written as the question people actually type, short sections, and data carrying figure, unit, date and source. Assistants cite verifiable facts, not commercial adjectives.",
@@ -2728,7 +2728,7 @@
     "faqs": {
       "q1": {
         "question": "How much does digital marketing for a law firm cost?",
-        "answer": "At 3R Core it is quoted with the same published prices as every other service: SEO $500 per month, Google Ads management $800 per month plus ad spend, and websites from $850. We do not charge a different rate for being a law firm. Prices are net, with no mandatory contracts; you can estimate your case in our quote calculator."
+        "answer": "At 3R Core it is quoted with the same published prices as every other service: SEO $500 per month, Google Ads management $800 per month plus ad spend, and websites from $850. We do not charge a different rate for being a law firm. Prices are net, with no mandatory contracts; you can estimate your case in our quote calculator. Figures shown are for reference only."
       },
       "q2": {
         "question": "What works better for a lawyer, the website or the Google Business Profile?",
@@ -2762,7 +2762,7 @@
   },
   "MarketingAbogadosSEO": {
     "seoTitle": "Digital marketing for law firms and legal practices",
-    "p1": "3R Core does digital marketing for law firms: Google Business Profile, local positioning by practice area and content that builds trust before the first call. It is quoted with the agency's published prices — SEO $500 per month, websites from $850 — with no mandatory contracts.",
+    "p1": "3R Core does digital marketing for law firms: Google Business Profile, local positioning by practice area and content that builds trust before the first call. It is quoted with the agency's published prices — SEO $500 per month, websites from $850 — with no mandatory contracts. Figures shown are for reference only.",
     "p2": "Legal marketing is not like other sectors because the decision is about trust, not price. Someone looking for a lawyer arrives with a deadline over their head and no way to tell a good attorney from a bad one, so they choose whoever convinces them they have already solved a case like theirs.",
     "p3": "That is why we start with the Google Business Profile. Most of these searches are local and urgent and they are settled on the map: the person sees three firms with their reviews and calls. The profile — with the right category, practice areas listed as services and reviews answered — hands out more calls than the website's homepage.",
     "p4": "Then, one page per practice area. Employment, family, criminal, civil, estate and corporate law have different questions, different urgency and different clients, and a single “legal services” page competes with none of them.",
@@ -2774,7 +2774,7 @@
     "hero": {
       "badge": "Dentistry · Patient acquisition",
       "title": "Digital marketing for dental practices",
-      "subtitle": "We bring patients to your dental practice with healthcare Google Ads, local SEO and Google Business Profile work. Management starts at $800 per month and is reported in booked appointments.",
+      "subtitle": "We bring patients to your dental practice with healthcare Google Ads, local SEO and Google Business Profile work. Management starts at $800 per month and is reported in booked appointments. Figures shown are for reference only.",
       "cta": "I want more patients"
     },
     "intro": {
@@ -2797,11 +2797,11 @@
         },
         {
           "title": "Landing por tratamiento",
-          "description": "One page per service from $850, ready in 1 to 2 weeks, covering what it includes, how long it takes, what it costs and the booking button."
+          "description": "One page per service from $850, ready in 1 to 2 weeks, covering what it includes, how long it takes, what it costs and the booking button. Figures shown are for reference only."
         },
         {
           "title": "Local SEO by service area",
-          "description": "Positioning on Google and Google Maps for the practice's real service area, from $500 per month."
+          "description": "Positioning on Google and Google Maps for the practice's real service area, from $500 per month. Figures shown are for reference only."
         },
         {
           "title": "Cumplimiento del rubro salud",
@@ -2846,7 +2846,7 @@
     "faqs": {
       "q1": {
         "question": "How much does digital marketing for a dental practice cost?",
-        "answer": "At 3R Core, Google Ads management for a dental practice starts at $800 per month, and monthly SEO at $500. Social media management starts at $800 per month. Ad spend is separate and the practice pays it directly to Google or Meta."
+        "answer": "At 3R Core, Google Ads management for a dental practice starts at $800 per month, and monthly SEO at $500. Social media management starts at $800 per month. Ad spend is separate and the practice pays it directly to Google or Meta. Figures shown are for reference only."
       },
       "q2": {
         "question": "Can I advertise my dental practice on Google in the healthcare category?",
@@ -2881,8 +2881,8 @@
   "MarketingClinicasDentalesSEO": {
     "seoTitle": "Digital marketing for dental practices focused on appointments",
     "p1": "The dental patient decides on Google. They search “dentist near me” when it hurts, and “how much does a dental implant cost” when they are evaluating. Those are two different moments and they need two different answers: the first is won with the Google Business Profile and search campaigns; the second, with a treatment page that states the price.",
-    "p2": "At 3R Core we do both. Google Ads management for a dental practice starts at $800 per month and monthly SEO at $500, with ad spend separate — the practice pays that directly to the platform and decides how much it is.",
-    "p3": "Landing pages per treatment cost $850 each and are ready in 1 to 2 weeks. Each one answers what the patient asks before booking: what the treatment includes, how long it lasts, what it costs and how it is paid. Sending implant campaign traffic to the homepage is the most expensive way to lose that click.",
+    "p2": "At 3R Core we do both. Google Ads management for a dental practice starts at $800 per month and monthly SEO at $500, with ad spend separate — the practice pays that directly to the platform and decides how much it is. Figures shown are for reference only.",
+    "p3": "Landing pages per treatment cost $850 each and are ready in 1 to 2 weeks. Each one answers what the patient asks before booking: what the treatment includes, how long it lasts, what it costs and how it is paid. Sending implant campaign traffic to the homepage is the most expensive way to lose that click. Figures shown are for reference only.",
     "p4": "Healthcare has its own rules and they are the most frequent reason a dental ad account gets suspended. Google restricts language that promises results and prohibits building audiences from health conditions. We write the campaigns inside those rules from day one.",
     "p5": "The Google Business Profile is the cheapest thing to fix and the highest-yielding in this category: it is what fills the screen when someone searches “dentist near me” from their phone. Right category, real hours, photos of the practice and a reply to every review.",
     "p6": "We report cost per booked appointment, not reach. And we ask the practice for closed-treatment data from its own system, because that is the only thing that turns a click report into a revenue report.",
@@ -2892,7 +2892,7 @@
     "hero": {
       "badge": "Aesthetics · Patient acquisition",
       "title": "Digital marketing for aesthetic clinics and medspas",
-      "subtitle": "We bring patients to your aesthetic clinic or medspa with Instagram, Meta Ads and local SEO. Social media starts at $800 per month and is reported in booked appointments.",
+      "subtitle": "We bring patients to your aesthetic clinic or medspa with Instagram, Meta Ads and local SEO. Social media starts at $800 per month and is reported in booked appointments. Figures shown are for reference only.",
       "cta": "I want more patients"
     },
     "intro": {
@@ -2907,7 +2907,7 @@
       "items": [
         {
           "title": "Contenido para Instagram y TikTok",
-          "description": "Between 8 and 12 pieces on each network managed, from $800 per month. In this category, vertical video with a real person outperforms graphic design."
+          "description": "Between 8 and 12 pieces on each network managed, from $800 per month. In this category, vertical video with a real person outperforms graphic design. Figures shown are for reference only."
         },
         {
           "title": "Meta Ads por tratamiento",
@@ -2915,11 +2915,11 @@
         },
         {
           "title": "Google Ads where people do search",
-          "description": "Only for the treatments people type by name. Management from $800 per month, with ad spend separate."
+          "description": "Only for the treatments people type by name. Management from $800 per month, with ad spend separate. Figures shown are for reference only."
         },
         {
           "title": "Landing por tratamiento",
-          "description": "One page per procedure from $850, ready in 1 to 2 weeks, covering what it is, how long it lasts, who performs it and how to book."
+          "description": "One page per procedure from $850, ready in 1 to 2 weeks, covering what it is, how long it lasts, who performs it and how to book. Figures shown are for reference only."
         },
         {
           "title": "Google Business Profile and reviews",
@@ -2964,7 +2964,7 @@
     "faqs": {
       "q1": {
         "question": "How much does digital marketing for an aesthetic clinic cost?",
-        "answer": "At 3R Core, campaign management for an aesthetic clinic starts at $800 per month and social media management at $800 per month. A landing page per treatment costs $850. Ad spend is separate and the clinic pays it directly to Meta or Google."
+        "answer": "At 3R Core, campaign management for an aesthetic clinic starts at $800 per month and social media management at $800 per month. A landing page per treatment costs $850. Ad spend is separate and the clinic pays it directly to Meta or Google. Figures shown are for reference only."
       },
       "q2": {
         "question": "Can I use before-and-after photos in my ads?",
@@ -2999,10 +2999,10 @@
   "MarketingClinicasEsteticasSEO": {
     "seoTitle": "Digital marketing for aesthetic clinics focused on appointments",
     "p1": "An aesthetic treatment is almost never searched for: it is discovered. That single difference changes the whole budget split compared with other clinics, because the decision moment happens in the feed, not in the search box. Instagram and TikTok are the main channel, and Google comes in for the procedures people do type by name.",
-    "p2": "At 3R Core, social media management for an aesthetic clinic starts at $800 per month, with between 8 and 12 pieces on each network managed. Campaign management starts at $800 per month, with ad spend separate — the clinic pays that directly to the platform.",
+    "p2": "At 3R Core, social media management for an aesthetic clinic starts at $800 per month, with between 8 and 12 pieces on each network managed. Campaign management starts at $800 per month, with ad spend separate — the clinic pays that directly to the platform. Figures shown are for reference only.",
     "p3": "In this category, vertical video with a real person outperforms graphic design, which is why UGC-style content is combined with social media management when the budget allows. It is not a trend: it is the format in which an aesthetic treatment gets decided.",
     "p4": "Aesthetics is one of the most closely policed categories on the platforms. Meta explicitly restricts before-and-after photos for body treatments, rejects ads that point at the viewer's body and does not allow targeting by health conditions. These rules are not set by the agency: they are set by the platforms, and they are the main reason an ad account in this category gets suspended.",
-    "p5": "Landing pages per treatment cost $850 each and are ready in 1 to 2 weeks. Each one answers what the procedure is, how long it lasts, who performs it and how to book — exactly what the patient wants to know before reaching out.",
+    "p5": "Landing pages per treatment cost $850 each and are ready in 1 to 2 weeks. Each one answers what the procedure is, how long it lasts, who performs it and how to book — exactly what the patient wants to know before reaching out. Figures shown are for reference only.",
     "p6": "We report cost per booked appointment and appointments that actually showed up, because in aesthetics the gap between the two is usually wide. Closed-treatment data comes from the clinic's own system and is what turns the report into revenue.",
     "relatedTitle": "Servicios relacionados"
   },
@@ -3010,7 +3010,7 @@
     "hero": {
       "badge": "Veterinary clinics · Client acquisition",
       "title": "Digital marketing for veterinary clinics",
-      "subtitle": "We bring clients to your veterinary clinic with Google Business Profile work, local SEO and campaigns. SEO starts at $500 per month and most of the work that pays off happens on the map.",
+      "subtitle": "We bring clients to your veterinary clinic with Google Business Profile work, local SEO and campaigns. SEO starts at $500 per month and most of the work that pays off happens on the map. Figures shown are for reference only.",
       "cta": "I want more clients"
     },
     "intro": {
@@ -3029,23 +3029,23 @@
         },
         {
           "title": "Local SEO by service area",
-          "description": "Positioning for the clinic's real service area: “veterinarian near me”, “emergency vet open now”. From $500 per month."
+          "description": "Positioning for the clinic's real service area: “veterinarian near me”, “emergency vet open now”. From $500 per month. Figures shown are for reference only."
         },
         {
           "title": "Service pages with pricing",
-          "description": "Vaccination, spay and neuter, grooming, general consultation and emergencies. From $850 each, ready in 1 to 2 weeks."
+          "description": "Vaccination, spay and neuter, grooming, general consultation and emergencies. From $850 each, ready in 1 to 2 weeks. Figures shown are for reference only."
         },
         {
           "title": "Google Ads para urgencias",
-          "description": "Search campaigns to capture demand when the decision is immediate. Management from $800 per month, with ad spend separate."
+          "description": "Search campaigns to capture demand when the decision is immediate. Management from $800 per month, with ad spend separate. Figures shown are for reference only."
         },
         {
           "title": "Redes sociales",
-          "description": "From $800 per month. In veterinary practices, day-to-day clinic content works better than advertising design."
+          "description": "From $800 per month. In veterinary practices, day-to-day clinic content works better than advertising design. Figures shown are for reference only."
         },
         {
           "title": "Tienda virtual, cuando aplica",
-          "description": "If the clinic already sells food and supplies, a store with up to 50 products costs $700 and turns a one-off purchase into a recurring one."
+          "description": "If the clinic already sells food and supplies, a store with up to 50 products costs $700 and turns a one-off purchase into a recurring one. Figures shown are for reference only."
         }
       ]
     },
@@ -3082,7 +3082,7 @@
     "faqs": {
       "q1": {
         "question": "How much does digital marketing for a veterinary clinic cost?",
-        "answer": "At 3R Core, local SEO starts at $500 per month, campaign management at $800 per month and social media management at $800 per month. Ad spend is separate and the clinic pays it directly to Google or Meta."
+        "answer": "At 3R Core, local SEO starts at $500 per month, campaign management at $800 per month and social media management at $800 per month. Ad spend is separate and the clinic pays it directly to Google or Meta. Figures shown are for reference only."
       },
       "q2": {
         "question": "Do I need a website or is the Google Business Profile enough?",
@@ -3094,7 +3094,7 @@
       },
       "q4": {
         "question": "Is an online store worth it for a veterinary clinic?",
-        "answer": "It is worth it when the clinic already sells food, supplies or parasite treatments on site, because it turns a one-off purchase into a recurring one. A store with up to 50 products costs $700 at 3R Core. If you only provide clinical services, it is better to invest first in the Google Business Profile and service pages."
+        "answer": "It is worth it when the clinic already sells food, supplies or parasite treatments on site, because it turns a one-off purchase into a recurring one. A store with up to 50 products costs $700 at 3R Core. If you only provide clinical services, it is better to invest first in the Google Business Profile and service pages. Figures shown are for reference only."
       },
       "q5": {
         "question": "Does 3R Core guarantee a number of clients per month?",
@@ -3118,10 +3118,10 @@
     "seoTitle": "Digital marketing for veterinary clinics focused on the map",
     "p1": "A pet owner almost never compares veterinary websites: they look at the map, the stars and the hours. When they search “veterinarian near me” from their phone, what fills the screen is a block of business profiles, and whoever isn't set up properly there is not part of the decision.",
     "p2": "That is why the work for a veterinary clinic starts with the Google Business Profile and not the website. Right category — “veterinarian” and “animal hospital” do not compete for the same thing — real hours including emergency hours, photos of the clinic and the team, services listed one by one and a reply to every review.",
-    "p3": "That work sits inside the local SEO plan, which at 3R Core starts at $500 per month and also includes positioning by service area: “veterinarian near me”, “emergency vet open now”, depending on where your clients actually come from.",
+    "p3": "That work sits inside the local SEO plan, which at 3R Core starts at $500 per month and also includes positioning by service area: “veterinarian near me”, “emergency vet open now”, depending on where your clients actually come from. Figures shown are for reference only.",
     "p4": "Two searches that look nothing alike live side by side in this category. The urgent one — “24 hour vet” — is decided by proximity and by who answers, and can barely be won with content. The planned one — “how much does it cost to spay a dog” — is compared on price and trust, and that one is won with a service page that states the number.",
-    "p5": "Service pages cost from $850 each and are ready in 1 to 2 weeks. They then work as the destination for the campaigns, because sending a spay-and-neuter ad to the homepage is the most expensive way to lose that click.",
-    "p6": "If the clinic already sells food, supplies or parasite treatments on site, an online store with up to 50 products costs $700 and turns a one-off purchase into a recurring one. It is what separates a neighborhood clinic from a business with predictable revenue.",
+    "p5": "Service pages cost from $850 each and are ready in 1 to 2 weeks. They then work as the destination for the campaigns, because sending a spay-and-neuter ad to the homepage is the most expensive way to lose that click. Figures shown are for reference only.",
+    "p6": "If the clinic already sells food, supplies or parasite treatments on site, an online store with up to 50 products costs $700 and turns a one-off purchase into a recurring one. It is what separates a neighborhood clinic from a business with predictable revenue. Figures shown are for reference only.",
     "relatedTitle": "Servicios relacionados"
   }
 }

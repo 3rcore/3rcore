@@ -72,7 +72,7 @@ export const COPY = {
       { t: 'Pymes', d: 'S/ 5,000 – 12,000 / mes (estrategia integral con redes, Ads, SEO y mejoras web)' },
       { t: 'Empresas medianas', d: 'S/ 12,000 – 30,000 / mes (marketing completo con producción de contenido y CRO)' },
     ],
-    refNote: 'Lo importante no es el presupuesto sino que el ROI sea positivo desde el mes 3.',
+    refNote: 'Lo importante no es el presupuesto sino que el ROI sea positivo desde el mes 3. Los precios son referenciales y varían según el alcance del proyecto.',
 
     zonesH2: 'Dónde atendemos',
     // Fuente: HomeSeoSection (mismos distritos, sin añadir ninguno) + FAQ q6.
@@ -90,7 +90,7 @@ export const COPY = {
     // emite FAQPage aquí: esas mismas preguntas ya están marcadas en sus
     // páginas y duplicar el marcado reparte la señal en vez de sumarla.
     qa: [
-      { q: '¿Cuánto cuesta contratar una agencia de marketing digital en Lima?', a: 'Depende del mix de servicios. Como referencia mensual en Lima: emprendimientos S/ 2,500–4,500, pymes S/ 5,000–12,000 y empresas medianas S/ 12,000–30,000. Por servicio: SEO S/ 1,800/mes, gestión de Google Ads desde S/ 1,800/mes (más pauta), Social Media desde S/ 1,500/mes, branding desde S/ 500 y webs desde S/ 1,800.' },
+      { q: '¿Cuánto cuesta contratar una agencia de marketing digital en Lima?', a: 'Depende del mix de servicios. Como referencia mensual en Lima: emprendimientos S/ 2,500–4,500, pymes S/ 5,000–12,000 y empresas medianas S/ 12,000–30,000. Por servicio: SEO S/ 1,800/mes, gestión de Google Ads desde S/ 1,800/mes (más pauta), Social Media desde S/ 1,500/mes, branding desde S/ 500 y webs desde S/ 1,800. Los montos indicados son referenciales.' },
       { q: '¿Los precios incluyen IGV? ¿Hay contratos forzosos?', a: 'Los precios son netos en soles peruanos; las facturas en Perú suman 18% de IGV. No trabajamos con contratos forzosos: el servicio es mensual, con reportes y resultados progresivos.' },
       { q: '¿Qué resultados puedo esperar de las campañas de Google Ads?', a: 'Nuestras campañas están enfocadas en la conversión. Obtendrás mayor visibilidad en los primeros resultados de búsqueda, un incremento en los mensajes y llamadas de clientes potenciales, y un mejor retorno de inversión (ROI).' },
     ],
@@ -107,11 +107,11 @@ export const COPY = {
     ] as Item[],
   },
   en: {
-    eyebrow: '3R Core · La Molina, Lima · Peru',
-    hero: 'Digital marketing agency in Lima, Peru',
-    sub: 'Digital marketing agency in La Molina, Lima. We combine Experience, Vision and Technology across branding, social media, SEO, Google Ads and web development for companies in Peru and the United States.',
-    zona: 'Alameda de la Paz 187, first floor, Urb. El Remanso, La Molina, Lima 15024, Peru',
-    horario: 'Monday to Friday, 9:00 to 18:00 (Peru time)',
+    eyebrow: '3R Core · Serving the U.S. Nationwide',
+    hero: 'Digital marketing agency for U.S. brands',
+    sub: 'We combine Experience, Vision and Technology across branding, social media, SEO, Google Ads and web development for businesses across the United States.',
+    zona: 'Serving businesses nationwide across the United States',
+    horario: 'Monday to Friday, 9am to 6pm, on U.S. Eastern business hours',
     phone: '+51 987 216 703',
     email: 'info@3rcore.com',
     cta: 'Get a quote',
@@ -144,10 +144,10 @@ export const COPY = {
       { t: 'SMBs', d: '$1,500 – $3,600 / month (full strategy with social, Ads, SEO and web improvements)' },
       { t: 'Mid-market', d: '$3,600 – $9,000 / month (full marketing with content production and CRO)' },
     ],
-    refNote: 'What matters is not the budget but that ROI turns positive from month 3.',
+    refNote: 'What matters is not the budget but that ROI turns positive from month 3. Prices are referential and vary based on project scope.',
 
     zonesH2: 'Where we work',
-    zonesP: 'The office is at Alameda de la Paz 187, first floor, Urb. El Remanso, La Molina, Lima, and we work with businesses across every district of Lima and throughout Peru. We serve clients in both Peru and the USA. Open Monday to Friday, 9:00 to 18:00 Peru time.',
+    zonesP: 'We work remotely with businesses across the United States, on U.S. Eastern business hours. Open Monday to Friday, 9am to 6pm.',
     sectorsP: 'Three industries have their own page because their funnel and cost per contact look nothing like the rest:',
     sectors: [
       { name: 'Clinics and medical practices', desc: 'Healthcare Google Ads, local SEO, Google Business Profile and bilingual patient acquisition campaigns.', href: '/services/healthcare-marketing' },
@@ -157,7 +157,7 @@ export const COPY = {
 
     qaH2: 'Most asked',
     qa: [
-      { q: 'How much does a digital marketing agency cost?', a: 'It depends on the mix of services. Reference monthly ranges: startups $750–$1,400, SMBs $1,500–$3,600 and mid-market $3,600–$9,000. Per service: SEO $500/month, Google Ads management from $800/month (plus ad spend), social media $800/month, branding from $500 and websites from $850.' },
+      { q: 'How much does a digital marketing agency cost?', a: 'It depends on the mix of services. Reference monthly ranges: startups $750–$1,400, SMBs $1,500–$3,600 and mid-market $3,600–$9,000. Per service: SEO $500/month, Google Ads management from $800/month (plus ad spend), social media $800/month, branding from $500 and websites from $850. Figures shown are for reference only.' },
       { q: 'Which web development platforms do you work with?', a: 'We partner with top e-commerce platforms like Shopify and WooCommerce to provide scalable, robust, and high-performance websites (UX/UI) tailored to your business needs.' },
       { q: 'What results can I expect from Google Ads campaigns?', a: 'Our campaigns are conversion-focused. You will gain higher visibility in top search results, an increase in messages and calls from potential leads, and a better return on investment (ROI).' },
     ],

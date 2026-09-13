@@ -1,9 +1,11 @@
 import PizzaCard from "@/components/ui/pizzaCard";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 export default function SocialPortfolio() {
 
   const t = useTranslations('SocialMediaHero');
+  // 13-sep-2026. Plan USA: en /en los textos alternativos no nombran Lima.
+  const isEn = useLocale() === "en";
   
   return (
     <main className="lg:py-10 xl:py-20 px-10 xl:px-4">
@@ -25,7 +27,7 @@ export default function SocialPortfolio() {
           <div className="grid gap-6">
             <PizzaCard
               media={[
-                { type: "image", src: "/images/social/portafolioProye/img1.webp", alt: "Diseño de post para redes sociales - portafolio agencia 3R Core Lima" }
+                { type: "image", src: "/images/social/portafolioProye/img1.webp", alt: isEn ? "Social media post design - 3R Core agency portfolio" : "Diseño de post para redes sociales - portafolio agencia 3R Core Lima" }
               ]}
               showDots={true}
               autoOnHover={false}
@@ -53,7 +55,7 @@ export default function SocialPortfolio() {
             />
             <PizzaCard
               media={[
-                { type: "image", src: "/images/social/portafolioProye/img5.webp", alt: "Contenido Instagram diseñado por agencia de social media en Lima - 3R Core" }
+                { type: "image", src: "/images/social/portafolioProye/img5.webp", alt: isEn ? "Instagram content designed by the 3R Core social media team" : "Contenido Instagram diseñado por agencia de social media en Lima - 3R Core" }
               ]}
               autoOnHover={true}
               className="aspect-[3/4] transition-all duration-500 ease-in-out"
@@ -63,7 +65,7 @@ export default function SocialPortfolio() {
           <div className="grid gap-6">
             <PizzaCard
               media={[
-                { type: "image", src: "/images/social/portafolioProye/img3.webp", alt: "Grilla editorial de contenidos para redes sociales - agencia 3R Core Lima" }
+                { type: "image", src: "/images/social/portafolioProye/img3.webp", alt: isEn ? "Editorial content grid for social media - 3R Core agency" : "Grilla editorial de contenidos para redes sociales - agencia 3R Core Lima" }
               ]}
               autoOnHover={true}
               className="aspect-[3/4] transition-all duration-500 ease-in-out"

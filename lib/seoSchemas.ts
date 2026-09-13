@@ -80,7 +80,9 @@ export function buildServiceSchema(p: ServiceSchemaParams) {
     "description": isEn ? p.descriptionEn : p.descriptionEs,
     "provider": { "@id": `${BASE_URL}/#organization` },
     "serviceType": p.serviceType,
-    "areaServed": (p.areaServed ?? ["PE", "US"]).map((c) => ({ "@type": "Country", "name": c })),
+    // 13-sep-2026. Plan USA: en inglés el área servida es solo Estados Unidos,
+    // también cuando la página pasa ['PE', 'US']. /es y /us no cambian.
+    "areaServed": (p.areaServed ?? ["PE", "US"]).filter((c) => !(isEn && c === "PE")).map((c) => ({ "@type": "Country", "name": c })),
     "audience": (p.audienceTypes ?? ["Small business", "Medium business", "Enterprise"]).map((a) => ({
       "@type": "Audience",
       "audienceType": a,

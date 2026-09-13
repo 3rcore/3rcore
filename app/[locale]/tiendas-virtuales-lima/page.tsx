@@ -88,7 +88,7 @@ const COPY: Record<string, any> = {
     eyebrow: '3R Core · Tiendas Online · Estados Unidos',
     h1: 'Creamos tu tienda online en Estados Unidos',
     heroH2: 'Shopify o WooCommerce, en español e inglés, lista para cobrar',
-    sub: 'Montamos tu tienda con pasarela de pago, catálogo cargado, impuestos por estado configurados y las dos versiones de idioma bien marcadas. Desde $1,750, sin plantillas rellenadas.',
+    sub: 'Montamos tu tienda con pasarela de pago, catálogo cargado, impuestos por estado configurados y las dos versiones de idioma bien marcadas. Desde $1,750, sin plantillas rellenadas. Los montos indicados son referenciales.',
     cta: 'Cotiza tu tienda',
     why: 'Una tienda que vende a tus dos públicos',
     whyDesc: 'La mayoría de tiendas que atienden al cliente hispano en Estados Unidos están solo en inglés, o tienen un botón que traduce el texto sin cambiar la dirección. Google indexa una sola versión, así que la búsqueda en español —que casi nadie está trabajando— se la lleva otro. Construimos las dos versiones como tiendas propias, cada una con sus direcciones, sus fichas de producto y sus correos automáticos, para que el comprador complete todo el recorrido en el idioma en que empezó.',
@@ -102,7 +102,7 @@ const COPY: Record<string, any> = {
     platforms: '¿Shopify o WooCommerce? Te lo decimos sin sesgo',
     platformsIntro: 'No trabajamos casados con una plataforma. La elegimos según tu catálogo, tus integraciones y tu volumen. Esto es lo que pesa de verdad:',
     platformsList: [
-      { title: 'Shopify', desc: 'Lo más rápido para empezar a vender: alojamiento, seguridad y checkout resueltos, y cálculo de impuestos incluido. Ojo con un detalle que casi nadie menciona: si usas una pasarela distinta a la suya, cobran un recargo por transacción sobre lo que ya te cobra tu procesador. Desde $39/mes.' },
+      { title: 'Shopify', desc: 'Lo más rápido para empezar a vender: alojamiento, seguridad y checkout resueltos, y cálculo de impuestos incluido. Ojo con un detalle que casi nadie menciona: si usas una pasarela distinta a la suya, cobran un recargo por transacción sobre lo que ya te cobra tu procesador. Desde $39/mes. Los montos indicados son referenciales.' },
       { title: 'WooCommerce', desc: 'Control total sobre WordPress, sin recargo por transacción de la plataforma y con libertad para integrar lo que necesites. A cambio, el mantenimiento es tuyo: actualizaciones, seguridad y conflictos entre extensiones. Conviene cuando tu producto no encaja en un catálogo estándar.' },
       { title: '¿Cuál te conviene?', desc: 'Con menos de $100,000 al mes de facturación, el recargo de Shopify rara vez justifica cargar con el mantenimiento. Por encima, vale la pena hacer el cálculo con tus cifras reales. Y si nadie va a mantener el sitio dentro de un año, la respuesta es Shopify.' },
     ],
@@ -110,7 +110,7 @@ const COPY: Record<string, any> = {
     platformsMoreLink: '/precios',
     platformsMoreAnchor: 'Ver precios y qué incluye cada plan',
     pricing: '¿Cuánto cuesta montar la tienda?',
-    pricingIntro: 'Precios netos de implementación en dólares. Aparte va la mensualidad de la plataforma y las comisiones de la pasarela, que se pagan directamente a cada proveedor.',
+    pricingIntro: 'Precios netos de implementación en dólares. Aparte va la mensualidad de la plataforma y las comisiones de la pasarela, que se pagan directamente a cada proveedor. Los precios son referenciales y varían según el alcance del proyecto.',
     pricingTiers: [
       { name: 'Tienda inicial', price: 'desde $1,750', platform: 'Shopify', desc: 'Diseño sobre la plataforma, carga inicial de catálogo, pagos e impuestos configurados y capacitación para que la administres tú.' },
       { name: 'Tienda bilingüe', price: 'desde $2,900', platform: 'Shopify o WooCommerce', desc: 'Todo lo anterior más la versión en español como tienda propia: fichas traducidas, marcado correcto y correos automáticos en ambos idiomas.' },
@@ -156,7 +156,7 @@ const COPY: Record<string, any> = {
     eyebrow: '3R Core · E-commerce Development · U.S.',
     h1: 'E-commerce development for U.S. brands',
     heroH2: 'Shopify or WooCommerce, built to sell rather than just to launch',
-    sub: 'Storefronts with payment gateway, loaded catalog, state-level tax setup and purchase tracking configured before the first order. From $1,750, built by our team in Lima.',
+    sub: 'Storefronts with payment gateway, loaded catalog, state-level tax setup and purchase tracking configured before the first order. From $1,750, built by our in-house team. Figures shown are for reference only.',
     cta: 'Get a scoped quote',
     why: 'Most stores launch untracked, and never recover that month',
     whyDesc: 'A store handed over without analytics and purchase tracking wastes its most informative period: the first weeks of real traffic, when you learn which products sell, from which source and where the checkout leaks. That window does not come back. We configure measurement before launch, in your own accounts, so the first month already tells you something — and we build on the platform your catalog actually calls for rather than the one we prefer to work in.',
@@ -170,7 +170,7 @@ const COPY: Record<string, any> = {
     platforms: 'Shopify or WooCommerce, decided on your numbers',
     platformsIntro: 'We build on both and have no stake in which you pick. These are the factors that actually decide it:',
     platformsList: [
-      { title: 'Shopify', desc: 'Fastest route to selling: hosting, security, PCI compliance and checkout handled, tax calculation included. The detail most comparisons omit is the transaction surcharge of 0.5–2% if you use a gateway other than theirs, on top of what your processor charges. From $39/month.' },
+      { title: 'Shopify', desc: 'Fastest route to selling: hosting, security, PCI compliance and checkout handled, tax calculation included. The detail most comparisons omit is the transaction surcharge of 0.5–2% if you use a gateway other than theirs, on top of what your processor charges. From $39/month. Figures shown are for reference only.' },
       { title: 'WooCommerce', desc: 'Full control on WordPress, no platform transaction fee, and freedom to integrate anything. In exchange, maintenance is yours: updates, security and extension conflicts. It is the right answer when your product model does not fit a standard catalog.' },
       { title: 'How to choose', desc: 'Below roughly $100k/month in revenue, the fee difference rarely justifies the maintenance burden. Above it, run the numbers with your negotiated rate. And if nobody will own maintenance in eighteen months, choose Shopify — an unmaintained WooCommerce install becomes a security problem.' },
     ],
@@ -178,7 +178,7 @@ const COPY: Record<string, any> = {
     platformsMoreLink: '/blogs/shopify-vs-woocommerce-for-us-brands',
     platformsMoreAnchor: 'Shopify vs WooCommerce for U.S. brands',
     pricing: 'What an online store costs',
-    pricingIntro: 'Net implementation prices in U.S. dollars. Platform subscription and payment processing fees are separate and paid directly to each provider.',
+    pricingIntro: 'Net implementation prices in U.S. dollars. Platform subscription and payment processing fees are separate and paid directly to each provider. Prices are referential and vary based on project scope.',
     pricingTiers: [
       { name: 'Starter store', price: 'from $1,750', platform: 'Shopify', desc: 'Platform build, initial catalog load, payments and tax configured, tracking live and a recorded handover session.' },
       { name: 'Bilingual store', price: 'from $2,900', platform: 'Shopify or WooCommerce', desc: 'Everything above plus a genuine Spanish storefront: own URLs, translated product pages, correct hreflang and order emails in both languages.' },

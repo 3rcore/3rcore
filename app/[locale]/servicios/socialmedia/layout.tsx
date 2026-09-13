@@ -11,14 +11,14 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
     titleEs: 'Agencia de Redes Sociales en Lima, Perú | 3R Core',
     titleEn: 'Social Media Management for U.S. Brands | 3R Core',
     descriptionEs: 'Manejo profesional de redes sociales en Lima, Perú: TikTok, LinkedIn, Instagram y Facebook. Estrategia, diseño, copy y reportes desde S/1,500.',
-    descriptionEn: 'TikTok, Instagram, Facebook and LinkedIn managed from Lima, Peru for U.S. businesses. Strategy, design, copy and reporting from $800/month in USD.',
+    descriptionEn: 'TikTok, Instagram, Facebook and LinkedIn managed by an in-house team for U.S. businesses. Strategy, design, copy and reporting from $800/month in USD.',
     titleUs: 'Agencia de Redes Sociales en Español para EE.UU. | 3R Core',
     descriptionUs: 'Manejo de redes sociales en español para negocios en Estados Unidos: TikTok, Instagram, Facebook y LinkedIn. Estrategia, diseño, copy y reportes mensuales desde $800 con 8–12 piezas al mes.',
     ogImage: {
       url: 'https://3rcore.com/og/socialmedia.jpg',
       width: 1200,
       height: 630,
-      alt: 'Manejo de Redes Sociales en Lima - 3R Core',
+      alt: locale === 'en' ? '3R Core - Social Media Management' : 'Manejo de Redes Sociales en Lima - 3R Core',
     },
     // En EE.UU. solo se venden web, SEO y tiendas online. Esta página
 

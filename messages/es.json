@@ -509,11 +509,11 @@
       },
       "q7": {
         "question": "¿Cuánto cuesta hacer una página web en Lima, Perú?",
-        "answer": "En 3R Core el diseño y desarrollo web arranca en S/1,800 para landing pages y sitios corporativos de hasta 6 secciones, incluyendo diseño en Figma, desarrollo responsive, SEO técnico básico, formulario de contacto y conexión a Google Analytics. Sitios corporativos completos van de S/4,500 a S/9,000 y los e-commerce desde S/7,500. En la primera reunión te damos una propuesta económica precisa según tu alcance."
+        "answer": "En 3R Core el diseño y desarrollo web arranca en S/1,800 para landing pages y sitios corporativos de hasta 6 secciones, incluyendo diseño en Figma, desarrollo responsive, SEO técnico básico, formulario de contacto y conexión a Google Analytics. Sitios corporativos completos van de S/4,500 a S/9,000 y los e-commerce desde S/7,500. En la primera reunión te damos una propuesta económica precisa según tu alcance. Los montos indicados son referenciales."
       },
       "q8": {
         "question": "¿Cuánto cuesta una tienda online (e-commerce) en Perú?",
-        "answer": "Una tienda online profesional con catálogo hasta 100 productos, pasarela de pago integrada (Culqi, Niubiz, Izipay o Mercado Pago), gestión de inventario y panel de administración arranca desde S/7,500 en Shopify o WooCommerce. Si necesitas integraciones con SUNAT (facturación electrónica), ERP o múltiples métodos de envío, el rango sube según la complejidad. Incluye capacitación para que vos administres la tienda."
+        "answer": "Una tienda online profesional con catálogo hasta 100 productos, pasarela de pago integrada (Culqi, Niubiz, Izipay o Mercado Pago), gestión de inventario y panel de administración arranca desde S/7,500 en Shopify o WooCommerce. Si necesitas integraciones con SUNAT (facturación electrónica), ERP o múltiples métodos de envío, el rango sube según la complejidad. Incluye capacitación para que vos administres la tienda. Los montos indicados son referenciales."
       },
       "q9": {
         "question": "¿Qué es mejor para mi negocio: Shopify o WooCommerce?",
@@ -521,7 +521,7 @@
       },
       "q10": {
         "question": "¿Incluye hosting, dominio y certificado SSL?",
-        "answer": "El primer año incluimos dominio .com o .pe, certificado SSL (Let's Encrypt o equivalente) y hosting profesional sin costo adicional dentro del paquete. A partir del año 2 el hosting se cobra aparte (entre S/30 y S/120 al mes según tráfico y plataforma) o puedes migrarlo a tu propio proveedor sin penalización. Todo queda a tu nombre desde el día uno."
+        "answer": "El primer año incluimos dominio .com o .pe, certificado SSL (Let's Encrypt o equivalente) y hosting profesional sin costo adicional dentro del paquete. A partir del año 2 el hosting se cobra aparte (entre S/30 y S/120 al mes según tráfico y plataforma) o puedes migrarlo a tu propio proveedor sin penalización. Todo queda a tu nombre desde el día uno. Los montos indicados son referenciales."
       }
     }
   },
@@ -735,7 +735,7 @@
       },
       "q3": {
         "question": "¿Cuánto cuesta diseñar la identidad de mi marca en Lima?",
-        "answer": "Los proyectos de branding en 3R Core arrancan desde S/500 para emprendimientos y pueden escalar según el alcance corporativo. Te entregamos cotización formal con detalle de entregables después de una sesión inicial de descubrimiento."
+        "answer": "Los proyectos de branding en 3R Core arrancan desde S/500 para emprendimientos y pueden escalar según el alcance corporativo. Te entregamos cotización formal con detalle de entregables después de una sesión inicial de descubrimiento. Los montos indicados son referenciales."
       },
       "q4": {
         "question": "¿Si solo quiero un logo, también lo hacen?",
@@ -819,7 +819,7 @@
     "faqs": {
       "q1": {
         "question": "¿Cuánto debo invertir en Google Ads para empezar?",
-        "answer": "Recomendamos un presupuesto mínimo de pauta de S/1,500 al mes para tener data accionable, sumado al fee de gestión que arranca en S/1,800 mensuales. En sectores muy competidos (legal, inmobiliario, salud) sugerimos arrancar con S/3,000+ de pauta para no quedarte fuera de las subastas."
+        "answer": "Recomendamos un presupuesto mínimo de pauta de S/1,500 al mes para tener data accionable, sumado al fee de gestión que arranca en S/1,800 mensuales. En sectores muy competidos (legal, inmobiliario, salud) sugerimos arrancar con S/3,000+ de pauta para no quedarte fuera de las subastas. Los montos indicados son referenciales."
       },
       "q2": {
         "question": "¿Qué tipo de campañas Google Ads manejan?",
@@ -873,7 +873,7 @@
     "faqs": {
       "q1": {
         "question": "¿Cuánto cobra una agencia por manejo de redes sociales en Lima?",
-        "answer": "Los planes de manejo de redes sociales en 3R Core arrancan desde S/1,500 mensuales para emprendimientos (TikTok + Instagram + Facebook + LinkedIn con 8–12 piezas) y escalan a partir de ahí según frecuencia, plataformas y producción audiovisual. Te entregamos propuesta detallada en la primera reunión."
+        "answer": "Los planes de manejo de redes sociales en 3R Core arrancan desde S/1,500 mensuales para emprendimientos (TikTok + Instagram + Facebook + LinkedIn con 8–12 piezas) y escalan a partir de ahí según frecuencia, plataformas y producción audiovisual. Te entregamos propuesta detallada en la primera reunión. Los montos indicados son referenciales."
       },
       "q2": {
         "question": "¿Qué redes sociales manejan?",
@@ -897,7 +897,7 @@
       },
       "q7": {
         "question": "¿Community manager freelance o agencia: qué conviene?",
-        "answer": "Freelance funciona si solo necesitas postear contenido (1 plataforma, 8-12 piezas/mes) y tienes el contenido producido. Agencia conviene si necesitas estrategia + diseño + edición de video + copy + community management + reportes en una sola operación. Calcular: el costo total real de un freelance suele estar S/1,200-2,000; la agencia desde S/1,500 te da un equipo completo. Para 2+ plataformas con video, agencia siempre."
+        "answer": "Freelance funciona si solo necesitas postear contenido (1 plataforma, 8-12 piezas/mes) y tienes el contenido producido. Agencia conviene si necesitas estrategia + diseño + edición de video + copy + community management + reportes en una sola operación. Calcular: el costo total real de un freelance suele estar S/1,200-2,000; la agencia desde S/1,500 te da un equipo completo. Para 2+ plataformas con video, agencia siempre. Los montos indicados son referenciales."
       },
       "q8": {
         "question": "¿Cuántas publicaciones al mes debo hacer en cada red social?",
@@ -927,7 +927,7 @@
     "faqs": {
       "q1": {
         "question": "¿Cuál es la inversión mensual del servicio SEO en 3R Core?",
-        "answer": "La inversión mensual del servicio de Posicionamiento SEO en 3R Core es de S/1,800. Este monto incluye auditoría, planificación, optimización, escalamiento y reportes mensuales. Es una estrategia continua enfocada en resultados sostenibles, sin contratos forzosos y con resultados progresivos."
+        "answer": "La inversión mensual del servicio de Posicionamiento SEO en 3R Core es de S/1,800. Este monto incluye auditoría, planificación, optimización, escalamiento y reportes mensuales. Es una estrategia continua enfocada en resultados sostenibles, sin contratos forzosos y con resultados progresivos. Los montos indicados son referenciales."
       },
       "q2": {
         "question": "¿Qué incluye exactamente el servicio de Posicionamiento SEO?",
@@ -1043,7 +1043,7 @@
     "faqs": {
       "q1": {
         "question": "¿Cuánto debo invertir en Meta Ads para empezar en Perú?",
-        "answer": "Recomendamos un presupuesto de pauta mínimo de S/1,500 al mes para tener datos accionables, más el fee de gestión desde S/1,500. En rubros muy competidos conviene arrancar con S/2,500+ de pauta para salir de la fase de aprendizaje del algoritmo con rapidez."
+        "answer": "Recomendamos un presupuesto de pauta mínimo de S/1,500 al mes para tener datos accionables, más el fee de gestión desde S/1,500. En rubros muy competidos conviene arrancar con S/2,500+ de pauta para salir de la fase de aprendizaje del algoritmo con rapidez. Los montos indicados son referenciales."
       },
       "q2": {
         "question": "¿Qué diferencia hay entre impulsar publicaciones y una campaña profesional?",
@@ -1165,7 +1165,7 @@
       },
       "q2": {
         "question": "¿Cuánto cuesta empezar en TikTok Ads?",
-        "answer": "Sugerimos un presupuesto de pauta desde S/1,500 al mes más el fee de gestión desde S/1,500. Al ser un canal aún poco saturado, los costos por mil impresiones (CPM) suelen ser competitivos frente a Meta."
+        "answer": "Sugerimos un presupuesto de pauta desde S/1,500 al mes más el fee de gestión desde S/1,500. Al ser un canal aún poco saturado, los costos por mil impresiones (CPM) suelen ser competitivos frente a Meta. Los montos indicados son referenciales."
       },
       "q3": {
         "question": "¿Ustedes graban los videos?",
@@ -1291,7 +1291,7 @@
       },
       "q4": {
         "question": "¿Qué presupuesto de pauta recomiendan?",
-        "answer": "Depende de tu margen y ticket, pero solemos empezar desde S/3,000 de pauta mensual para tener suficiente data. El fee de gestión arranca en S/2,500 según la cantidad de canales y la complejidad."
+        "answer": "Depende de tu margen y ticket, pero solemos empezar desde S/3,000 de pauta mensual para tener suficiente data. El fee de gestión arranca en S/2,500 según la cantidad de canales y la complejidad. Los montos indicados son referenciales."
       },
       "q5": {
         "question": "¿Incluye mejorar mi web o landing pages?",
@@ -2056,7 +2056,7 @@
       },
       "q4": {
         "question": "¿Cuánto cuesta una campaña con creadores en el Perú?",
-        "answer": "El rango es amplio porque la variable no es el seguidor sino el entregable. Un creador mediano con audiencia peruana real puede cerrar por una historia y un reel entre S/400 y S/2,500 según nicho y exclusividad. Lo que conviene presupuestar no es una acción suelta sino una campaña de varios creadores y varias publicaciones, porque una mención aislada rara vez mueve la aguja."
+        "answer": "El rango es amplio porque la variable no es el seguidor sino el entregable. Un creador mediano con audiencia peruana real puede cerrar por una historia y un reel entre S/400 y S/2,500 según nicho y exclusividad. Lo que conviene presupuestar no es una acción suelta sino una campaña de varios creadores y varias publicaciones, porque una mención aislada rara vez mueve la aguja. Los montos indicados son referenciales."
       },
       "q5": {
         "question": "¿Puedo usar el contenido del creador en mis anuncios?",
@@ -2306,7 +2306,7 @@
       },
       "q2": {
         "question": "¿Cuánto cuesta el posicionamiento en IA en 3R Core?",
-        "answer": "Va dentro del servicio de posicionamiento SEO, que cuesta S/1,800 al mes en Perú y $500 al mes para clientes de Estados Unidos. No lo cobramos aparte porque el trabajo se solapa: la misma reescritura que hace citable un pasaje mejora la página en Google. Precios netos, sin contratos forzosos."
+        "answer": "Va dentro del servicio de posicionamiento SEO, que cuesta S/1,800 al mes en Perú y $500 al mes para clientes de Estados Unidos. No lo cobramos aparte porque el trabajo se solapa: la misma reescritura que hace citable un pasaje mejora la página en Google. Precios netos, sin contratos forzosos. Los montos indicados son referenciales."
       },
       "q3": {
         "question": "¿Se puede garantizar aparecer en ChatGPT?",
@@ -2336,7 +2336,7 @@
   },
   "PosicionamientoIASEO": {
     "seoTitle": "Posicionamiento en IA (GEO) en Lima — que ChatGPT, Perplexity y Copilot citen tu empresa",
-    "p1": "3R Core trabaja el posicionamiento en inteligencia artificial —conocido como GEO— para empresas de Lima y de todo el Perú: preparamos tu web para que ChatGPT, Perplexity, Copilot, Gemini y Claude la usen como fuente y te nombren cuando alguien pregunta por lo que vendes. Va dentro del servicio de SEO, que cuesta S/1,800 al mes, sin contratos forzosos.",
+    "p1": "3R Core trabaja el posicionamiento en inteligencia artificial —conocido como GEO— para empresas de Lima y de todo el Perú: preparamos tu web para que ChatGPT, Perplexity, Copilot, Gemini y Claude la usen como fuente y te nombren cuando alguien pregunta por lo que vendes. Va dentro del servicio de SEO, que cuesta S/1,800 al mes, sin contratos forzosos. Los montos indicados son referenciales.",
     "p2": "La diferencia con el SEO clásico es la unidad de trabajo: en Google se posiciona una página y en un asistente se cita un pasaje. El modelo recorta el fragmento que responde la pregunta y lo atribuye, así que una página que tarda tres párrafos en dar el dato pierde la cita aunque esté bien posicionada.",
     "p3": "Lo primero que revisamos es el acceso. GPTBot, OAI-SearchBot, PerplexityBot, ClaudeBot y Google-Extended tienen que poder leer la web, y eso se comprueba comparando los bytes que recibe cada agente contra los de un navegador: un código 200 no prueba nada, porque un cortafuegos puede servirle una pantalla vacía al rastreador y la página completa a una persona.",
     "p4": "Después viene la forma del texto: respuesta directa en las primeras cincuenta palabras tras cada encabezado, encabezados escritos como la pregunta que la gente teclea, secciones cortas y datos con cifra, unidad, fecha y fuente. Los asistentes citan hechos verificables, no adjetivos comerciales.",
@@ -2420,7 +2420,7 @@
     "faqs": {
       "q1": {
         "question": "¿Cuánto cuesta el marketing digital para un estudio de abogados en Lima?",
-        "answer": "En 3R Core se cotiza con los mismos precios publicados que el resto de servicios: posicionamiento SEO S/1,800 al mes, gestión de Google Ads S/1,800 al mes más la pauta, y página web desde S/1,800. No cobramos una tarifa distinta por ser un estudio jurídico. Precios netos en soles, sin IGV y sin contratos forzosos; puedes calcular el estimado de tu caso en nuestro cotizador."
+        "answer": "En 3R Core se cotiza con los mismos precios publicados que el resto de servicios: posicionamiento SEO S/1,800 al mes, gestión de Google Ads S/1,800 al mes más la pauta, y página web desde S/1,800. No cobramos una tarifa distinta por ser un estudio jurídico. Precios netos en soles, sin IGV y sin contratos forzosos; puedes calcular el estimado de tu caso en nuestro cotizador. Los montos indicados son referenciales."
       },
       "q2": {
         "question": "¿Qué da más resultado para un abogado, la web o la ficha de Google?",
@@ -2454,7 +2454,7 @@
   },
   "MarketingAbogadosSEO": {
     "seoTitle": "Marketing digital para abogados y estudios jurídicos en Lima, Perú",
-    "p1": "3R Core hace marketing digital para estudios de abogados en Lima y en todo el Perú: ficha de Google, posicionamiento local por área de práctica y contenido que genera confianza antes de la primera llamada. Se cotiza con los precios publicados de la agencia —SEO S/1,800 al mes, web desde S/1,800— sin contratos forzosos.",
+    "p1": "3R Core hace marketing digital para estudios de abogados en Lima y en todo el Perú: ficha de Google, posicionamiento local por área de práctica y contenido que genera confianza antes de la primera llamada. Se cotiza con los precios publicados de la agencia —SEO S/1,800 al mes, web desde S/1,800— sin contratos forzosos. Los montos indicados son referenciales.",
     "p2": "El marketing jurídico no se parece al del resto de sectores porque la decisión es de confianza y no de precio. Quien busca un abogado llega con un plazo encima y sin saber distinguir a uno bueno de uno malo, así que elige a quien le transmite que ya resolvió un caso como el suyo.",
     "p3": "Por eso empezamos por la ficha de Google. La mayoría de estas búsquedas son locales y urgentes y se resuelven en el mapa: la persona ve tres estudios con sus reseñas y llama. La ficha, con su categoría correcta, sus áreas de práctica como servicios y sus reseñas respondidas, reparte más llamadas que la portada de la web.",
     "p4": "Después, una página por área de práctica. Laboral, familia, penal, civil, notarial y corporativo tienen consultas, urgencias y clientes distintos, y una sola página de «servicios legales» no compite con ninguna de ellas.",
@@ -2466,7 +2466,7 @@
     "hero": {
       "badge": "Odontología · Captación de pacientes",
       "title": "Marketing digital para clínicas dentales en Lima",
-      "subtitle": "Atraemos pacientes para tu clínica dental o consultorio odontológico con Google Ads de salud, SEO local y ficha de Google. La gestión parte en S/1,800 al mes más IGV y se reporta en citas agendadas.",
+      "subtitle": "Atraemos pacientes para tu clínica dental o consultorio odontológico con Google Ads de salud, SEO local y ficha de Google. La gestión parte en S/1,800 al mes más IGV y se reporta en citas agendadas. Los montos indicados son referenciales.",
       "cta": "Quiero más pacientes"
     },
     "intro": {
@@ -2489,11 +2489,11 @@
         },
         {
           "title": "Landing por tratamiento",
-          "description": "Una página por servicio desde S/1,800 más IGV, lista en 1 a 2 semanas, con lo que incluye, cuánto dura, cuánto cuesta y el botón de agendar."
+          "description": "Una página por servicio desde S/1,800 más IGV, lista en 1 a 2 semanas, con lo que incluye, cuánto dura, cuánto cuesta y el botón de agendar. Los montos indicados son referenciales."
         },
         {
           "title": "SEO local por distrito",
-          "description": "Posicionamiento en Google y Google Maps por la zona de influencia real de la clínica, desde S/1,800 al mes más IGV."
+          "description": "Posicionamiento en Google y Google Maps por la zona de influencia real de la clínica, desde S/1,800 al mes más IGV. Los montos indicados son referenciales."
         },
         {
           "title": "Cumplimiento del rubro salud",
@@ -2538,7 +2538,7 @@
     "faqs": {
       "q1": {
         "question": "¿Cuánto cuesta el marketing digital para una clínica dental en Lima?",
-        "answer": "En 3R Core, la gestión de Google Ads para una clínica dental parte en S/1,800 al mes más IGV, y el SEO mensual también en S/1,800 más IGV. El manejo de redes sociales parte en S/1,500 al mes más IGV. La inversión en anuncios va aparte y la paga la clínica directamente a Google o a Meta."
+        "answer": "En 3R Core, la gestión de Google Ads para una clínica dental parte en S/1,800 al mes más IGV, y el SEO mensual también en S/1,800 más IGV. El manejo de redes sociales parte en S/1,500 al mes más IGV. La inversión en anuncios va aparte y la paga la clínica directamente a Google o a Meta. Los montos indicados son referenciales."
       },
       "q2": {
         "question": "¿Puedo anunciar mi clínica dental en Google si es del rubro salud?",
@@ -2566,15 +2566,15 @@
       },
       "q8": {
         "question": "¿Los precios incluyen IGV? ¿Emiten factura?",
-        "answer": "Los precios publicados son netos y 3R Core emite factura, donde se suma el IGV del 18%. Una web corporativa de S/4,500 factura S/5,310 en total. El pago se hace en dos partes: 50% al iniciar el proyecto y 50% al entregarlo."
+        "answer": "Los precios publicados son netos y 3R Core emite factura, donde se suma el IGV del 18%. Una web corporativa de S/4,500 factura S/5,310 en total. El pago se hace en dos partes: 50% al iniciar el proyecto y 50% al entregarlo. Los montos indicados son referenciales."
       }
     }
   },
   "MarketingClinicasDentalesSEO": {
     "seoTitle": "Marketing digital para clínicas dentales en Lima con foco en citas",
     "p1": "El paciente dental peruano decide en Google. Busca «dentista cerca de mí» cuando le duele, y «cuánto cuesta un implante dental» cuando está evaluando. Son dos momentos distintos y necesitan dos respuestas distintas: la primera se gana con la ficha de Google y las campañas de búsqueda; la segunda, con una página del tratamiento que diga el precio.",
-    "p2": "En 3R Core trabajamos las dos. La gestión de Google Ads para una clínica dental parte en S/1,800 al mes más IGV y el SEO mensual en S/1,800 más IGV, con la inversión publicitaria aparte, que la clínica paga directo a la plataforma y decide cuánto es.",
-    "p3": "Las landing pages por tratamiento cuestan S/1,800 más IGV cada una y están listas en 1 a 2 semanas. Cada una responde lo que el paciente pregunta antes de agendar: qué incluye el tratamiento, cuánto dura, cuánto cuesta y cómo se paga. Enviar el tráfico de una campaña de implantes a la página de inicio es la forma más cara de perder ese clic.",
+    "p2": "En 3R Core trabajamos las dos. La gestión de Google Ads para una clínica dental parte en S/1,800 al mes más IGV y el SEO mensual en S/1,800 más IGV, con la inversión publicitaria aparte, que la clínica paga directo a la plataforma y decide cuánto es. Los montos indicados son referenciales.",
+    "p3": "Las landing pages por tratamiento cuestan S/1,800 más IGV cada una y están listas en 1 a 2 semanas. Cada una responde lo que el paciente pregunta antes de agendar: qué incluye el tratamiento, cuánto dura, cuánto cuesta y cómo se paga. Enviar el tráfico de una campaña de implantes a la página de inicio es la forma más cara de perder ese clic. Los montos indicados son referenciales.",
     "p4": "El rubro salud tiene reglas propias y son la causa más frecuente de que una cuenta publicitaria dental se caiga. Google restringe el lenguaje que promete resultados y prohíbe construir públicos a partir de condiciones de salud. Nosotros escribimos las campañas dentro de esas reglas desde el primer día.",
     "p5": "La ficha de Google Business Profile es lo más barato de arreglar y lo que más rinde en este rubro: es lo que ocupa la pantalla cuando alguien busca «dentista en Miraflores» desde el celular. Categoría correcta, horario real, fotos del consultorio y respuesta a cada reseña.",
     "p6": "Reportamos en costo por cita agendada, no en alcance. Y pedimos a la clínica el dato de tratamiento cerrado desde su propio sistema, porque es lo único que convierte el reporte de clics en un reporte de soles.",
@@ -2584,7 +2584,7 @@
     "hero": {
       "badge": "Estética · Captación de pacientes",
       "title": "Marketing digital para clínicas estéticas en Lima",
-      "subtitle": "Atraemos pacientes para tu clínica estética o centro de medicina estética con Instagram, Meta Ads y SEO local. Las redes parten en S/1,500 al mes más IGV y se reporta en citas agendadas.",
+      "subtitle": "Atraemos pacientes para tu clínica estética o centro de medicina estética con Instagram, Meta Ads y SEO local. Las redes parten en S/1,500 al mes más IGV y se reporta en citas agendadas. Los montos indicados son referenciales.",
       "cta": "Quiero más pacientes"
     },
     "intro": {
@@ -2599,7 +2599,7 @@
       "items": [
         {
           "title": "Contenido para Instagram y TikTok",
-          "description": "Entre 8 y 12 piezas en cada red que se maneje, desde S/1,500 al mes más IGV. En este rubro el video vertical de persona real rinde más que el diseño gráfico."
+          "description": "Entre 8 y 12 piezas en cada red que se maneje, desde S/1,500 al mes más IGV. En este rubro el video vertical de persona real rinde más que el diseño gráfico. Los montos indicados son referenciales."
         },
         {
           "title": "Meta Ads por tratamiento",
@@ -2607,11 +2607,11 @@
         },
         {
           "title": "Google Ads donde sí se busca",
-          "description": "Solo para los tratamientos que la gente escribe por su nombre. Gestión desde S/1,800 al mes más IGV, con la inversión publicitaria aparte."
+          "description": "Solo para los tratamientos que la gente escribe por su nombre. Gestión desde S/1,800 al mes más IGV, con la inversión publicitaria aparte. Los montos indicados son referenciales."
         },
         {
           "title": "Landing por tratamiento",
-          "description": "Una página por procedimiento desde S/1,800 más IGV, lista en 1 a 2 semanas, con qué es, cuánto dura, quién lo realiza y cómo se agenda."
+          "description": "Una página por procedimiento desde S/1,800 más IGV, lista en 1 a 2 semanas, con qué es, cuánto dura, quién lo realiza y cómo se agenda. Los montos indicados son referenciales."
         },
         {
           "title": "Ficha de Google y reseñas",
@@ -2656,7 +2656,7 @@
     "faqs": {
       "q1": {
         "question": "¿Cuánto cuesta el marketing digital para una clínica estética en Lima?",
-        "answer": "En 3R Core, la gestión de campañas para una clínica estética parte en S/1,800 al mes más IGV y el manejo de redes sociales en S/1,500 al mes más IGV. Una landing por tratamiento cuesta S/1,800 más IGV. La inversión publicitaria va aparte y la paga la clínica directamente a Meta o a Google."
+        "answer": "En 3R Core, la gestión de campañas para una clínica estética parte en S/1,800 al mes más IGV y el manejo de redes sociales en S/1,500 al mes más IGV. Una landing por tratamiento cuesta S/1,800 más IGV. La inversión publicitaria va aparte y la paga la clínica directamente a Meta o a Google. Los montos indicados son referenciales."
       },
       "q2": {
         "question": "¿Puedo poner fotos de antes y después en mis anuncios?",
@@ -2684,17 +2684,17 @@
       },
       "q8": {
         "question": "¿Los precios incluyen IGV? ¿Emiten factura?",
-        "answer": "Los precios publicados son netos y 3R Core emite factura, donde se suma el IGV del 18%. Una landing de S/1,800 factura S/2,124 en total. El pago se hace 50% al iniciar y 50% al entregar."
+        "answer": "Los precios publicados son netos y 3R Core emite factura, donde se suma el IGV del 18%. Una landing de S/1,800 factura S/2,124 en total. El pago se hace 50% al iniciar y 50% al entregar. Los montos indicados son referenciales."
       }
     }
   },
   "MarketingClinicasEsteticasSEO": {
     "seoTitle": "Marketing digital para clínicas estéticas en Lima con foco en citas",
     "p1": "Un tratamiento estético casi nunca se busca: se descubre. Esa sola diferencia cambia todo el reparto del presupuesto respecto a otras clínicas, porque el momento de decisión no ocurre en el buscador sino en el feed. Instagram y TikTok son el canal principal, y Google entra para los procedimientos que la gente sí escribe por su nombre.",
-    "p2": "En 3R Core el manejo de redes sociales para una clínica estética parte en S/1,500 al mes más IGV, con entre 8 y 12 piezas en cada red que se maneje. La gestión de campañas parte en S/1,800 al mes más IGV, con la inversión publicitaria aparte, que la clínica paga directo a la plataforma.",
+    "p2": "En 3R Core el manejo de redes sociales para una clínica estética parte en S/1,500 al mes más IGV, con entre 8 y 12 piezas en cada red que se maneje. La gestión de campañas parte en S/1,800 al mes más IGV, con la inversión publicitaria aparte, que la clínica paga directo a la plataforma. Los montos indicados son referenciales.",
     "p3": "En este rubro el video vertical de persona real rinde más que el diseño gráfico, y por eso el contenido de tipo UGC se combina con el manejo de redes cuando el presupuesto lo permite. No es una moda: es el formato con el que se decide un tratamiento estético.",
     "p4": "La estética es de las categorías más vigiladas por las plataformas. Meta restringe explícitamente las fotos de antes y después en tratamientos corporales, rechaza los anuncios que señalan el cuerpo de quien mira y no permite segmentar por condiciones de salud. Estas reglas no las pone la agencia: las ponen las plataformas, y son la razón principal por la que se cae una cuenta publicitaria del rubro.",
-    "p5": "Las landing pages por tratamiento cuestan S/1,800 más IGV cada una y están listas en 1 a 2 semanas. Cada una responde qué es el procedimiento, cuánto dura, quién lo realiza y cómo se agenda, que es exactamente lo que el paciente quiere saber antes de escribir.",
+    "p5": "Las landing pages por tratamiento cuestan S/1,800 más IGV cada una y están listas en 1 a 2 semanas. Cada una responde qué es el procedimiento, cuánto dura, quién lo realiza y cómo se agenda, que es exactamente lo que el paciente quiere saber antes de escribir. Los montos indicados son referenciales.",
     "p6": "Reportamos en costo por cita agendada y en citas que efectivamente llegaron, porque en estética la diferencia entre una cosa y la otra suele ser grande. El dato de tratamiento cerrado lo aporta la clínica desde su sistema y es lo que convierte el reporte en soles.",
     "relatedTitle": "Servicios relacionados"
   },
@@ -2702,7 +2702,7 @@
     "hero": {
       "badge": "Veterinarias · Captación de clientes",
       "title": "Marketing digital para veterinarias en Lima",
-      "subtitle": "Atraemos clientes para tu veterinaria o clínica veterinaria con ficha de Google, SEO local y campañas. El SEO parte en S/1,800 al mes más IGV y la mayor parte del trabajo que rinde está en el mapa.",
+      "subtitle": "Atraemos clientes para tu veterinaria o clínica veterinaria con ficha de Google, SEO local y campañas. El SEO parte en S/1,800 al mes más IGV y la mayor parte del trabajo que rinde está en el mapa. Los montos indicados son referenciales.",
       "cta": "Quiero más clientes"
     },
     "intro": {
@@ -2721,23 +2721,23 @@
         },
         {
           "title": "SEO local por distrito",
-          "description": "Posicionamiento por la zona real de la veterinaria: «veterinaria en Surco», «veterinaria en San Borja». Desde S/1,800 al mes más IGV."
+          "description": "Posicionamiento por la zona real de la veterinaria: «veterinaria en Surco», «veterinaria en San Borja». Desde S/1,800 al mes más IGV. Los montos indicados son referenciales."
         },
         {
           "title": "Páginas por servicio con precio",
-          "description": "Vacunación, esterilización, baño y peluquería, consulta general y emergencias. Desde S/1,800 más IGV cada una, listas en 1 a 2 semanas."
+          "description": "Vacunación, esterilización, baño y peluquería, consulta general y emergencias. Desde S/1,800 más IGV cada una, listas en 1 a 2 semanas. Los montos indicados son referenciales."
         },
         {
           "title": "Google Ads para urgencias",
-          "description": "Campañas de búsqueda para captar cuando la decisión es inmediata. Gestión desde S/1,800 al mes más IGV, con la inversión aparte."
+          "description": "Campañas de búsqueda para captar cuando la decisión es inmediata. Gestión desde S/1,800 al mes más IGV, con la inversión aparte. Los montos indicados son referenciales."
         },
         {
           "title": "Redes sociales",
-          "description": "Desde S/1,500 al mes más IGV. En veterinaria funciona el contenido del día a día de la clínica, no el diseño publicitario."
+          "description": "Desde S/1,500 al mes más IGV. En veterinaria funciona el contenido del día a día de la clínica, no el diseño publicitario. Los montos indicados son referenciales."
         },
         {
           "title": "Tienda virtual, cuando aplica",
-          "description": "Si la veterinaria ya vende alimento y accesorios, una tienda de hasta 50 productos cuesta S/2,500 más IGV y convierte una compra puntual en recurrente."
+          "description": "Si la veterinaria ya vende alimento y accesorios, una tienda de hasta 50 productos cuesta S/2,500 más IGV y convierte una compra puntual en recurrente. Los montos indicados son referenciales."
         }
       ]
     },
@@ -2774,7 +2774,7 @@
     "faqs": {
       "q1": {
         "question": "¿Cuánto cuesta el marketing digital para una veterinaria en Lima?",
-        "answer": "En 3R Core, el SEO local parte en S/1,800 al mes más IGV, la gestión de campañas también en S/1,800 al mes más IGV y el manejo de redes sociales en S/1,500 al mes más IGV. La inversión publicitaria va aparte y la paga la veterinaria directamente a Google o a Meta."
+        "answer": "En 3R Core, el SEO local parte en S/1,800 al mes más IGV, la gestión de campañas también en S/1,800 al mes más IGV y el manejo de redes sociales en S/1,500 al mes más IGV. La inversión publicitaria va aparte y la paga la veterinaria directamente a Google o a Meta. Los montos indicados son referenciales."
       },
       "q2": {
         "question": "¿Necesito una web o me basta con la ficha de Google?",
@@ -2786,7 +2786,7 @@
       },
       "q4": {
         "question": "¿Sirve tener tienda virtual en una veterinaria?",
-        "answer": "Sirve cuando la veterinaria ya vende alimento, accesorios o antiparasitarios en el local, porque convierte una compra puntual en una recurrente. Una tienda de hasta 50 productos cuesta S/2,500 más IGV en 3R Core. Si solo se da servicio clínico, es mejor invertir primero en ficha de Google y páginas de servicio."
+        "answer": "Sirve cuando la veterinaria ya vende alimento, accesorios o antiparasitarios en el local, porque convierte una compra puntual en una recurrente. Una tienda de hasta 50 productos cuesta S/2,500 más IGV en 3R Core. Si solo se da servicio clínico, es mejor invertir primero en ficha de Google y páginas de servicio. Los montos indicados son referenciales."
       },
       "q5": {
         "question": "¿3R Core garantiza una cantidad de clientes al mes?",
@@ -2802,7 +2802,7 @@
       },
       "q8": {
         "question": "¿Los precios incluyen IGV? ¿Emiten factura?",
-        "answer": "Los precios publicados son netos y 3R Core emite factura, donde se suma el IGV del 18%. Una tienda virtual de S/2,500 factura S/2,950 en total. El pago se hace 50% al iniciar y 50% al entregar."
+        "answer": "Los precios publicados son netos y 3R Core emite factura, donde se suma el IGV del 18%. Una tienda virtual de S/2,500 factura S/2,950 en total. El pago se hace 50% al iniciar y 50% al entregar. Los montos indicados son referenciales."
       }
     }
   },
@@ -2810,10 +2810,10 @@
     "seoTitle": "Marketing digital para veterinarias en Lima con foco en el mapa",
     "p1": "El dueño de una mascota casi nunca compara páginas web de veterinarias: mira el mapa, las estrellas y el horario. Cuando busca «veterinaria cerca de mí» desde el celular, lo que ocupa la pantalla es un bloque de fichas de empresa, y quien no está bien ahí no entra en la decisión.",
     "p2": "Por eso el trabajo de una veterinaria empieza en la ficha de Google Business Profile y no en la web. Categoría correcta —«veterinario» y «clínica veterinaria» no compiten por lo mismo—, horario real incluido el de emergencias, fotos del local y del equipo, servicios listados uno a uno y respuesta a cada reseña.",
-    "p3": "Ese trabajo va dentro del plan de SEO local, que en 3R Core parte en S/1,800 al mes más IGV e incluye además el posicionamiento por distrito: «veterinaria en Surco», «veterinaria en San Borja», según de dónde vengan realmente los clientes.",
+    "p3": "Ese trabajo va dentro del plan de SEO local, que en 3R Core parte en S/1,800 al mes más IGV e incluye además el posicionamiento por distrito: «veterinaria en Surco», «veterinaria en San Borja», según de dónde vengan realmente los clientes. Los montos indicados son referenciales.",
     "p4": "En el rubro conviven dos búsquedas que no se parecen. La urgente —«veterinaria 24 horas»— se decide por cercanía y por quién contesta, y casi no se puede ganar con contenido. La planificada —«cuánto cuesta esterilizar a un perro»— se compara por precio y por confianza, y esa sí se gana con una página del servicio que diga la cifra.",
-    "p5": "Las páginas por servicio cuestan desde S/1,800 más IGV cada una y están listas en 1 a 2 semanas. Después sirven como destino de las campañas, porque enviar un anuncio de esterilización a la página de inicio es la forma más cara de perder ese clic.",
-    "p6": "Si la veterinaria ya vende alimento, accesorios o antiparasitarios en el local, una tienda virtual de hasta 50 productos cuesta S/2,500 más IGV y convierte una compra puntual en una recurrente. Es lo que separa a un local de barrio de un negocio con ingresos previsibles.",
+    "p5": "Las páginas por servicio cuestan desde S/1,800 más IGV cada una y están listas en 1 a 2 semanas. Después sirven como destino de las campañas, porque enviar un anuncio de esterilización a la página de inicio es la forma más cara de perder ese clic. Los montos indicados son referenciales.",
+    "p6": "Si la veterinaria ya vende alimento, accesorios o antiparasitarios en el local, una tienda virtual de hasta 50 productos cuesta S/2,500 más IGV y convierte una compra puntual en una recurrente. Es lo que separa a un local de barrio de un negocio con ingresos previsibles. Los montos indicados son referenciales.",
     "relatedTitle": "Servicios relacionados"
   }
 }

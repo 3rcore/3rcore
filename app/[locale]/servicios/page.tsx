@@ -33,7 +33,7 @@ export default async function Servicios({ params }: { params: any }) {
   // H1 oculto del índice de servicios (antes vivía en el layout y duplicaba
   // el H1 de cada página de servicio).
   const hiddenH1 = isEn
-    ? 'Digital marketing services in Lima, Peru: branding, social media, Google Ads, SEO and web development'
+    ? 'Digital marketing services for U.S. businesses: branding, social media, Google Ads, SEO and web development'
     : 'Servicios de marketing digital en Lima, Perú: branding, redes sociales, Google Ads, SEO y desarrollo web';
 
   return (

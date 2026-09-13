@@ -111,6 +111,22 @@ export async function getReviews(): Promise<ReviewsData> {
   }
 }
 
+/**
+ * 13-sep-2026. Plan USA de 3R Core (Piero Roque): el /en no menciona Perú.
+ * Alguna reseña real de la ficha lo nombra («…la mejor agencia de marketing del
+ * Perú»). En /en esas reseñas no se muestran ni se marcan en el JSON-LD; el
+ * texto de las demás no se toca y la valoración y el total siguen siendo los
+ * de Google. /es y /us las muestran todas.
+ */
+export function mentionsPeru(text: string): boolean {
+  return /\bper[uú](?![a-z])|peruan|peruvian|\blima\b/i.test(text)
+}
+
+export function reviewsForLocale(data: ReviewsData, locale: string): ReviewsData {
+  if (locale !== 'en') return data
+  return { ...data, reviews: data.reviews.filter((r) => !mentionsPeru(r.text)) }
+}
+
 /** Nodos aggregateRating + review para incrustar en Organization/LocalBusiness. */
 export function buildRatingNodes(data: ReviewsData) {
   return {

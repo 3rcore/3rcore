@@ -37,7 +37,7 @@ export default async function CotizarLayout({ children, params }: { children: Re
     "isPartOf": { "@id": `${BASE_URL}/#website` },
     "publisher": { "@id": `${BASE_URL}/#organization` },
     "description": isEn
-      ? 'Reference-price calculator for online stores, websites, SEO, Google Ads, branding and social media in Lima, Peru.'
+      ? 'Reference-price calculator in U.S. dollars for online stores, websites, SEO, Google Ads, branding and social media.'
       : 'Calculadora de estimado referencial para tiendas virtuales, webs, SEO, Google Ads, branding y redes sociales en Lima, Perú.',
   }
 

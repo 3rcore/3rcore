@@ -37,7 +37,7 @@ export const COPY = {
     // Fuente: llms.txt y el JSON-LD del sitio. Sin calle: ver AVISO arriba.
     zona: 'Alameda de la Paz 187, primer piso, Urb. El Remanso, La Molina, Lima 15024, Perú',
     horario: 'Lunes a viernes, 9:00 a 18:00 (hora de Perú)',
-    phone: '+51 986 889 147',
+    phone: '+51 987 216 703',
     email: 'info@3rcore.com',
     cta: 'Cotiza tu proyecto',
     ctaHref: '/cotizar',
@@ -112,7 +112,7 @@ export const COPY = {
     sub: 'Digital marketing agency in La Molina, Lima. We combine Experience, Vision and Technology across branding, social media, SEO, Google Ads and web development for companies in Peru and the United States.',
     zona: 'Alameda de la Paz 187, first floor, Urb. El Remanso, La Molina, Lima 15024, Peru',
     horario: 'Monday to Friday, 9:00 to 18:00 (Peru time)',
-    phone: '+51 986 889 147',
+    phone: '+51 987 216 703',
     email: 'info@3rcore.com',
     cta: 'Get a quote',
     ctaHref: '/quote',

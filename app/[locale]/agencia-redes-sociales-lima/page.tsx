@@ -7,7 +7,7 @@ const COPY = {
   es: {
     eyebrow: '3R Core · Redes Sociales · Lima · Perú',
     h1: 'Agencia de Redes Sociales en Lima, Perú',
-    sub: 'Estrategia, contenido en formato Reel y TikTok, community management diario y pauta en Meta y TikTok Ads. Producción incluida desde S/1,500/mes.',
+    sub: 'Estrategia, contenido en formato Reel y TikTok, community management diario y pauta en Meta y TikTok Ads. Producción incluida desde S/1,500/mes. Los montos indicados son referenciales.',
     cta: 'Cotizar manejo de redes',
     contactPath: '/#contacto',
     why: 'Producción real, no plantillas recicladas',
@@ -18,6 +18,7 @@ const COPY = {
       { title: 'Growth', price: 'Desde S/2,800/mes', desc: '12–15 piezas, 2 redes, 4 Reels/TikToks, sesión mensual de fotos, community 7 días, reporte mensual con insights.' },
       { title: 'Premium', price: 'Desde S/4,500/mes', desc: '20+ piezas, 3 redes, 6–8 videos cortos con grabación en locación, copywriting senior, community 7 días, dashboard tiempo real.' },
     ],
+    plansNote: 'Los precios son referenciales y varían según el alcance del proyecto.',
     deliverables: 'Qué entregamos cada mes',
     deliverablesList: [
       'Plan editorial 30 días aprobado por adelantado',
@@ -29,7 +30,7 @@ const COPY = {
       'Reporte mensual + call de 30 min con conclusiones',
     ],
     paid: 'Pauta Meta Ads + TikTok Ads',
-    paidDesc: 'Si quieres pasar de orgánico a leads/ventas, sumamos pauta con pixel y CAPI bien configurados, audiencias lookalike, advantage+ y A/B testing semanal de creativos. Fee desde S/1,500/mes adicional, mínimo recomendado S/1,500 de inversión publicitaria mensual.',
+    paidDesc: 'Si quieres pasar de orgánico a leads/ventas, sumamos pauta con pixel y CAPI bien configurados, audiencias lookalike, advantage+ y A/B testing semanal de creativos. Fee desde S/1,500/mes adicional, mínimo recomendado S/1,500 de inversión publicitaria mensual. Los montos indicados son referenciales.',
     industries: 'Industrias con casos en Lima',
     industriesList: ['Gastronomía', 'Moda y belleza', 'Inmobiliario', 'Educación', 'Salud y wellness', 'Retail', 'B2B y servicios', 'Eventos'],
     contact: 'Solicita propuesta personalizada',
@@ -102,6 +103,7 @@ export default async function RedesSocialesLimaPage({ params }: Props) {
             </li>
           ))}
         </ul>
+        {t.plansNote && <p className="text-white/60 mt-6 max-w-3xl">{t.plansNote}</p>}
       </section>
 
       <section className="px-6 md:px-10 lg:px-20 py-16 max-w-6xl mx-auto border-t border-white/10">

@@ -61,7 +61,7 @@ export default function InlineLeadForm({ slug, service }: { slug: string; servic
       <div className="rounded-2xl border border-white/15 bg-white/5 p-6 text-center">
         <p className="font-semibold text-white">Thanks — we got it.</p>
         <p className="mt-1 text-sm text-white/70">
-          You&apos;ll hear from us within one business day. Lima runs on the same hours as the U.S. East Coast,
+          You&apos;ll hear from us within one business day. Our team works U.S. business hours,
           so it is usually the same day.
         </p>
       </div>

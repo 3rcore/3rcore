@@ -188,7 +188,7 @@ export default function ServicesGridSection() {
           tag: 'SERVICIOS Y PRECIOS',
           line1: 'Tres servicios,',
           line2: 'un solo equipo',
-          aside: 'Cada tarjeta lleva a su pagina, con el precio desde el que arranca. Sin llamadas para averiguar lo basico.',
+          aside: 'Cada tarjeta lleva a su pagina, con el precio desde el que arranca. Sin llamadas para averiguar lo basico. Los precios son referenciales y varían según el alcance del proyecto.',
           cta: 'VER SERVICIO',
         }
       : {

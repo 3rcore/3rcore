@@ -54,7 +54,7 @@ export default async function RedesSocialesLimaLayout({ children, params }: { ch
       question: isEn ? 'How much does a social media agency cost in Lima?' : '¿Cuánto cuesta una agencia de redes sociales en Lima?',
       answer: isEn
         ? 'Monthly retainers for US clients: Starter (8 pieces/month, 1 network) from $800; Growth (12–15 pieces, 2 networks, Reels/TikTok) from $1,400; Premium (20+ pieces, 3 networks, video production on location) from $2,200. Ad spend separate.'
-        : 'Mensualidades en Lima: Starter (8 piezas/mes, 1 red) desde S/1,500; Growth (12–15 piezas, 2 redes, Reels/TikTok) desde S/2,800; Premium (20+ piezas, 3 redes, producción en locación) desde S/4,500. Pauta aparte.',
+        : 'Mensualidades en Lima: Starter (8 piezas/mes, 1 red) desde S/1,500; Growth (12–15 piezas, 2 redes, Reels/TikTok) desde S/2,800; Premium (20+ piezas, 3 redes, producción en locación) desde S/4,500. Pauta aparte. Los montos indicados son referenciales.',
     },
     {
       question: isEn ? 'Which networks do you manage?' : '¿Qué redes manejan?',
@@ -78,7 +78,7 @@ export default async function RedesSocialesLimaLayout({ children, params }: { ch
       question: isEn ? 'Do you handle Meta and TikTok Ads?' : '¿Manejan Meta Ads y TikTok Ads?',
       answer: isEn
         ? 'Yes. We run Meta Ads (Facebook/Instagram) and TikTok Ads with proper pixel, CAPI, custom and lookalike audiences, advantage+, A/B creative testing and weekly review. Management fee from $800/month on top of social media retainer.'
-        : 'Sí. Gestionamos Meta Ads (Facebook/Instagram) y TikTok Ads con pixel y CAPI configurados, audiencias custom y lookalike, advantage+, A/B testing de creativos y revisión semanal. Fee desde S/1,500/mes adicional al manejo orgánico.',
+        : 'Sí. Gestionamos Meta Ads (Facebook/Instagram) y TikTok Ads con pixel y CAPI configurados, audiencias custom y lookalike, advantage+, A/B testing de creativos y revisión semanal. Fee desde S/1,500/mes adicional al manejo orgánico. Los montos indicados son referenciales.',
     },
     {
       question: isEn ? 'Do you sign exclusivity or long contracts?' : '¿Firman exclusividad o contratos largos?',

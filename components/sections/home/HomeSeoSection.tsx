@@ -90,7 +90,7 @@ const COPY: Record<'es' | 'en' | 'us', {
     intro:
       'En 3R Core ayudamos a negocios en Estados Unidos a vender más entre el público hispano con tres cosas: te construimos el sitio web en los dos idiomas, te posicionamos en Google para las búsquedas en español —donde casi nadie compite— y creamos tu tienda online. Todo con medición real y foco en el retorno, no en métricas de vanidad.',
     definition:
-      '3R Core es una agencia de marketing digital fundada por los hermanos Alejandro y Piero Roque que atiende a empresas de Estados Unidos con un equipo propio en Lima, Perú, en horario compatible con las zonas horarias estadounidenses. Para el mercado estadounidense trabaja tres servicios: desarrollo de sitios web bilingües (desde $850), posicionamiento SEO en español e inglés (desde $500/mes) y tiendas online sobre Shopify y WooCommerce (desde $1,750), con precios publicados en dólares y sin contratos forzosos.',
+      '3R Core es una agencia de marketing digital fundada por los hermanos Alejandro y Piero Roque que atiende a empresas de Estados Unidos con un equipo propio en Lima, Perú, en horario compatible con las zonas horarias estadounidenses. Para el mercado estadounidense trabaja tres servicios: desarrollo de sitios web bilingües (desde $850), posicionamiento SEO en español e inglés (desde $500/mes) y tiendas online sobre Shopify y WooCommerce (desde $1,750), con precios publicados en dólares y sin contratos forzosos. Los montos indicados son referenciales.',
     pillars: [
       {
         h: 'Sitios web bilingües',

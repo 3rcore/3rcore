@@ -11,14 +11,14 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
     titleEs: 'Agencia de Branding e Identidad de Marca en Lima | 3R Core',
     titleEn: 'Branding Agency for U.S. Brands | 3R Core',
     descriptionEs: 'Diseño de identidad visual, logotipo, manual de marca y aplicaciones. Agencia de branding en Lima, Perú desde S/500, entrega en 7 días.',
-    descriptionEn: 'Visual identity, logo, brand manual and corporate applications designed in Lima, Peru for U.S. businesses. Full identity projects from $500 in USD.',
+    descriptionEn: 'Visual identity, logo, brand manual and corporate applications designed by an in-house team for U.S. businesses. Full identity projects from $500 in USD.',
     titleUs: 'Branding e Identidad de Marca para EE.UU. | 3R Core',
     descriptionUs: 'Diseño de identidad visual, logotipo, manual de marca y aplicaciones corporativas para negocios en Estados Unidos. Proyectos integrales desde $500, con propuesta tras una sesión inicial de descubrimiento.',
     ogImage: {
       url: 'https://3rcore.com/og/branding.jpg',
       width: 1200,
       height: 630,
-      alt: 'Agencia de Branding en Lima - 3R Core',
+      alt: locale === 'en' ? '3R Core - Branding Agency for U.S. Brands' : 'Agencia de Branding en Lima - 3R Core',
     },
     // En EE.UU. solo se venden web, SEO y tiendas online. Esta página
 
@@ -41,7 +41,7 @@ export default async function BrandingLayout({ children, params }: { children: R
     nameEs: 'Branding Corporativo y Diseño de Identidad de Marca',
     nameEn: 'Corporate Branding and Brand Identity Design',
     descriptionEs: 'Diseño de identidad visual, logotipo, manual de marca, paleta cromática, tipografía corporativa, papelería y aplicaciones de marca para empresas en Lima, Perú.',
-    descriptionEn: 'Visual identity design, logo, brand manual, color palette, corporate typography, stationery and brand applications for U.S. companies, delivered from Lima, Peru.',
+    descriptionEn: 'Visual identity design, logo, brand manual, color palette, corporate typography, stationery and brand applications for U.S. companies, delivered by an in-house design team.',
     serviceType: 'Branding / Visual Identity',
     minPriceEs: 500,
     maxPriceEs: 15000,

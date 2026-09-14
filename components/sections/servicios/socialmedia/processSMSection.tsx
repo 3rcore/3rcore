@@ -3,7 +3,7 @@ import { playfair as trirong } from "@/lib/fonts"
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -11,6 +11,8 @@ gsap.registerPlugin(ScrollTrigger);
 const ProcessSMSection = () => {
 
   const t = useTranslations('SocialMediaHero');
+  // 13-sep-2026. Plan USA: en /en el texto alternativo no nombra Lima.
+  const isEn = useLocale() === "en";
   
 
   const sectionRef = useRef(null);
@@ -123,7 +125,7 @@ const ProcessSMSection = () => {
         <img
           ref={imageRef}
           src="/images/branding/frandoVideo.webp"
-          alt="Proceso de manejo de redes sociales y community management - 3R Core Lima"
+          alt={isEn ? "Social media management and community management process - 3R Core" : "Proceso de manejo de redes sociales y community management - 3R Core Lima"}
           className="w-full h-full object-cover"
         />
       </div>

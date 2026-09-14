@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
     titleEs: 'Blog de Marketing Digital en Perú | 3R Core',
     titleEn: 'Marketing Blog — UGC, Ads, SEO & PR | 3R Core',
     descriptionEs: 'Guías con los precios del mercado peruano: cuánto cuesta una página web, una tienda online, el branding, Google Ads o una campaña en redes.',
-    descriptionEn: 'Guides for U.S. brands: what UGC costs, usage rights, working with a Peru-based team, creative testing, Hispanic marketing, paid media and SEO.',
+    descriptionEn: 'Guides for U.S. brands: what UGC costs, usage rights, working with a remote team, creative testing, Hispanic marketing, paid media and SEO.',
     titleUs: 'Blog de Marketing Digital en Español | 3R Core',
     descriptionUs: 'Artículos y guías sobre marketing digital en español: contenido UGC, influencer marketing, relaciones públicas, posicionamiento SEO, campañas de Google Ads y tiendas online.',
   })

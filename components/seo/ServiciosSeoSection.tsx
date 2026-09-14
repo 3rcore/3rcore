@@ -44,7 +44,7 @@ const COPY = {
     // Fuente: COPY.es.refTitle / refList / refNote de la página de precios, literal.
     presupuestoH3: 'Inversión mensual de referencia para Lima',
     presupuesto:
-      'Emprendimientos, de S/ 2,500 a 4,500 al mes, que cubre redes más Ads básico. Pymes, de S/ 5,000 a 12,000, ya con estrategia integral de redes, Ads, SEO y mejoras web. Empresas medianas, de S/ 12,000 a 30,000, con marketing completo, producción de contenido y CRO. Lo importante no es el presupuesto sino que el ROI sea positivo desde el mes 3.',
+      'Emprendimientos, de S/ 2,500 a 4,500 al mes, que cubre redes más Ads básico. Pymes, de S/ 5,000 a 12,000, ya con estrategia integral de redes, Ads, SEO y mejoras web. Empresas medianas, de S/ 12,000 a 30,000, con marketing completo, producción de contenido y CRO. Lo importante no es el presupuesto sino que el ROI sea positivo desde el mes 3. Los montos indicados son referenciales.',
     h2Especialidad: 'Servicios de captación por canal',
     introEspecialidad:
       'Cada canal se contrata por separado o dentro de una estrategia conjunta. En la página de cada uno está el detalle de qué incluye.',
@@ -99,7 +99,7 @@ const COPY = {
     // Fuente: COPY.en.refList / refNote de la página de precios, literal.
     presupuestoH3: 'Reference monthly investment',
     presupuesto:
-      'Startups, $750 to $1,400 a month, covering social plus basic Ads. SMBs, $1,500 to $3,600, with a full strategy across social, Ads, SEO and web improvements. Mid-market, $3,600 to $9,000, with full marketing, content production and CRO. What matters is not the budget but that ROI turns positive from month 3.',
+      'Startups, $750 to $1,400 a month, covering social plus basic Ads. SMBs, $1,500 to $3,600, with a full strategy across social, Ads, SEO and web improvements. Mid-market, $3,600 to $9,000, with full marketing, content production and CRO. What matters is not the budget but that ROI turns positive from month 3. Figures shown are for reference only.',
     h2Especialidad: 'Acquisition services by channel',
     introEspecialidad:
       'Each channel can be hired on its own or inside a joint strategy. Every service page carries the full scope.',
@@ -123,7 +123,7 @@ const COPY = {
     h2Como: 'Who we are',
     // Fuente: messages/en.json → FAQ.faqs.q2 y q1, literal.
     como:
-      'We are a team of professionals and digital natives with a 3-generation vision. We combine experience, strategic insight, and technology to create personalized strategies that drive real growth for your business. We are a full-service digital marketing agency offering Corporate Branding, Social Media Management, Web Development and E-commerce on Shopify and WooCommerce, Google Ads (SEM) and SEO Positioning, based in La Molina, Lima, and serving clients in both Peru and the USA.',
+      'We are a team of professionals and digital natives with a 3-generation vision. We combine experience, strategic insight, and technology to create personalized strategies that drive real growth for your business. We are a full-service digital marketing agency offering Corporate Branding, Social Media Management, Web Development and E-commerce on Shopify and WooCommerce, Google Ads (SEM) and SEO Positioning, serving businesses across the United States.',
     verMas: 'See the details',
     linksH3: 'Before you decide',
     links: [

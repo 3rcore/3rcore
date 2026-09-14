@@ -18,14 +18,14 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
     titleEs: 'Agencia SEO en Lima, Perú — Posicionamiento Web | 3R Core',
     titleEn: 'SEO Agency for U.S. Brands | 3R Core',
     descriptionEs: 'Agencia de posicionamiento SEO en Lima, Perú (4,7★ en Google): auditoría, optimización, enlazado interno y contenido con reporte mensual. Desde S/1,800/mes.',
-    descriptionEn: 'SEO for U.S. businesses run from Lima, Peru through our U.S. subsidiary: keyword research, technical SEO, content and link building. From $500/month.',
+    descriptionEn: 'SEO for U.S. businesses by an in-house team, contracted through our U.S. subsidiary: keyword research, technical SEO, content and link building. From $500/month.',
     titleUs: 'Posicionamiento SEO en Español para EE.UU. | 3R Core',
     descriptionUs: 'Posicionamiento SEO en español e inglés para negocios en Estados Unidos: keyword research, SEO técnico, contenido y SEO local. Las búsquedas en español suelen tener menos competencia. Desde $500/mes sin contratos forzosos.',
     ogImage: {
       url: 'https://3rcore.com/og/posicionamiento-seo.jpg',
       width: 1200,
       height: 630,
-      alt: 'Agencia SEO en Lima - 3R Core',
+      alt: locale === 'en' ? '3R Core - SEO Agency for U.S. Brands' : 'Agencia SEO en Lima - 3R Core',
     },
   })
 }
@@ -44,7 +44,7 @@ export default async function Posicionamientoseo({ params }: { params: any }) {
     nameEs: 'Agencia de Posicionamiento SEO en Lima',
     nameEn: 'SEO Positioning Agency for U.S. Brands',
     descriptionEs: 'Servicio mensual de posicionamiento SEO orgánico en Google para empresas en Lima, Perú: auditoría, palabras clave, optimización on-page, interlinks, contenido y escalamiento con reporte mensual.',
-    descriptionEn: 'Monthly organic SEO positioning service on Google for U.S. companies, delivered from Lima, Peru: audit, keyword research, on-page optimization, interlinks, content and scaling with monthly reporting.',
+    descriptionEn: 'Monthly organic SEO positioning service on Google for U.S. companies, delivered by an in-house team: audit, keyword research, on-page optimization, interlinks, content and scaling with monthly reporting.',
     serviceType: 'SEO / Search Engine Optimization',
     minPriceEs: 1800,
     offerPriceEs: 1800,

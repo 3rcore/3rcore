@@ -7,7 +7,7 @@ const COPY = {
   es: {
     eyebrow: '3R Core · SEO · Lima · Perú',
     h1: 'Agencia SEO en Lima, Perú',
-    sub: 'Posicionamiento orgánico en Google con auditoría técnica, contenidos optimizados, link building blanco y SEO local por distrito. Desde S/1,800/mes y sin contratos forzosos.',
+    sub: 'Posicionamiento orgánico en Google con auditoría técnica, contenidos optimizados, link building blanco y SEO local por distrito. Desde S/1,800/mes y sin contratos forzosos. Los montos indicados son referenciales.',
     cta: 'Solicita auditoría gratuita',
     contactPath: '/#contacto',
     why: 'SEO técnico, contenido y link building bajo un mismo techo',
@@ -29,7 +29,7 @@ const COPY = {
       { step: 'Mes 5–6', title: 'Escalamiento', desc: 'Cluster de contenidos, link building constante, dashboard mensual y revisión trimestral.' },
     ],
     pricing: 'Inversión SEO en Lima',
-    pricingDesc: 'Tier Local Pyme desde S/1,800/mes · Tier Competitivo desde S/3,000/mes · Tier Enterprise desde S/5,000/mes. Precios netos, factura electrónica suma 18% de IGV. Mínimo 3 meses recomendado para resultados visibles.',
+    pricingDesc: 'Tier Local Pyme desde S/1,800/mes · Tier Competitivo desde S/3,000/mes · Tier Enterprise desde S/5,000/mes. Precios netos, factura electrónica suma 18% de IGV. Mínimo 3 meses recomendado para resultados visibles. Los montos indicados son referenciales.',
     contact: 'Auditoría SEO gratuita antes de cotizar',
     contactCta: 'Mándanos tu URL y palabras clave objetivo. En 48 h te enviamos una auditoría inicial con quickwins, gaps frente a competencia y propuesta personalizada.',
   },

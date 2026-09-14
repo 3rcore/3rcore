@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
     titleEn: 'UGC Content Production for U.S. Brands | 3R Core',
     titleUs: "Producción de Contenido UGC en Español para EE.UU. | 3R Core",
     descriptionEs: "Producimos video UGC con creadores propios en Lima: guiones, grabación, edición y variantes para testear en Meta, TikTok y YouTube. Derechos incluidos.",
-    descriptionEn: 'UGC video produced by our in-house creators in Lima, Peru for U.S. brands: scripted angles, platform-native cuts and usage rights included.',
+    descriptionEn: 'UGC video produced by our in-house creators for U.S. brands: scripted angles, platform-native cuts and usage rights included.',
     descriptionUs: "Video UGC en español con creadores hispanohablantes para tus campañas en Estados Unidos. Guiones, grabación, edición y variantes por plataforma. Precios en dólares y derechos de uso incluidos.",
     ogImage: {
       url: 'https://3rcore.com/og/socialmedia.jpg',

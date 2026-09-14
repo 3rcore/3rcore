@@ -4,10 +4,13 @@ import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useLocale } from 'next-intl';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function PostMedia() {
+  // 13-sep-2026. Plan USA: en /en los textos alternativos no nombran Lima.
+  const isEn = useLocale() === "en";
   const sectionRef = useRef<HTMLElement>(null);
   const postsRef = useRef<HTMLDivElement[]>([]);
 
@@ -84,7 +87,7 @@ export default function PostMedia() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/social/fondoas.webp"
-          alt="Fondo decorativo de portafolio de redes sociales - 3R Core Lima"
+          alt={isEn ? "Decorative background for the 3R Core social media portfolio" : "Fondo decorativo de portafolio de redes sociales - 3R Core Lima"}
           fill
           priority
           className="object-cover"
@@ -117,7 +120,7 @@ export default function PostMedia() {
               <div className="post-image-container relative aspect-square w-full bg-gray-100 overflow-hidden">
                 <Image
                   src={post.image}
-                  alt={`Post de Instagram diseñado para ${post.username} por 3R Core - manejo de redes sociales Lima`}
+                  alt={isEn ? `Instagram post designed for ${post.username} by 3R Core - social media management` : `Post de Instagram diseñado para ${post.username} por 3R Core - manejo de redes sociales Lima`}
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"

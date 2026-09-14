@@ -84,7 +84,7 @@ export default async function DisenoWebLimaLayout({ children, params }: { childr
       question: isEn ? 'Do you provide hosting and maintenance?' : '¿Brindan hosting y mantenimiento?',
       answer: isEn
         ? 'Yes. We offer monthly maintenance plans from S/450/month (~$120 USD) including hosting, daily backups, plugin/core updates, uptime monitoring, security patches and 2 hours of monthly content changes.'
-        : 'Sí. Ofrecemos planes mensuales desde S/450/mes que incluyen hosting, backups diarios, actualización de plugins y core, monitoreo de uptime, parches de seguridad y 2 horas mensuales de cambios de contenido.',
+        : 'Sí. Ofrecemos planes mensuales desde S/450/mes que incluyen hosting, backups diarios, actualización de plugins y core, monitoreo de uptime, parches de seguridad y 2 horas mensuales de cambios de contenido. Los montos indicados son referenciales.',
     },
   ])
 

@@ -1,6 +1,8 @@
 "use client"
 import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
+import { useLocale } from "next-intl"
+import { mentionsPeru } from "@/lib/reviews"
 
 interface Review {
   rating: number
@@ -36,6 +38,7 @@ export default function ReviewsSection() {
   const [error, setError] = useState<string | null>(null)
   const [progress, setProgress] = useState(0)
   const trackRef = useRef<HTMLDivElement>(null)
+  const locale = useLocale()
 
   useEffect(() => {
     fetch("/api/reviews")
@@ -101,7 +104,11 @@ export default function ReviewsSection() {
   }
 
   const goodReviews = (data?.reviews ?? []).filter(
-    (r) => !EXCLUDED_REVIEWERS.includes(r.authorAttribution.displayName)
+    // 13-sep-2026. Plan USA: en /en no salen las reseñas que nombran a Perú
+    // (ver mentionsPeru en lib/reviews.ts). /es y /us las muestran todas.
+    (r) =>
+      !EXCLUDED_REVIEWERS.includes(r.authorAttribution.displayName) &&
+      !(locale === "en" && mentionsPeru(r.text?.text ?? ""))
   )
   if (!data || goodReviews.length === 0) return null
 

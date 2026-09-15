@@ -181,13 +181,13 @@ const mapRef = useRef<HTMLDivElement>(null);
               style={{ border: 0 }} 
               allowFullScreen={true} 
               loading="lazy" 
-              title="Mapa de ubicación"
+              title={locale === "en" ? "Location map" : "Mapa de ubicación"}
             ></iframe>
 
             {!isInteractive && (
               <div className=" text-black absolute inset-0 z-10 bg-black/10 flex items-center justify-center group-hover:bg-black/0 transition-all duration-500">
                 <span className="bg-white/10 backdrop-blur-md text-black/80 px-4 py-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity ">
-                  Click para interactuar
+                  {locale === "en" ? "Click to interact" : "Click para interactuar"}
                 </span>
               </div>
             )}

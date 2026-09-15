@@ -39,6 +39,8 @@ export default function ReviewsSection() {
   const [progress, setProgress] = useState(0)
   const trackRef = useRef<HTMLDivElement>(null)
   const locale = useLocale()
+  // 15-set-2026. Plan USA: el bloque de reseñas salía en castellano dentro de /en
+  const isEn = locale === "en"
 
   useEffect(() => {
     fetch("/api/reviews")
@@ -144,12 +146,12 @@ export default function ReviewsSection() {
         <div className="flex items-center gap-3 mb-6">
           <span className="text-xs font-bold tracking-widest" style={{ color: "#E91E63" }}>05</span>
           <span className="w-8 h-px" style={{ background: "#E91E63" }} />
-          <span className="text-xs tracking-[0.3em] uppercase text-white/40">Lo que dicen</span>
+          <span className="text-xs tracking-[0.3em] uppercase text-white/40">{isEn ? "What they say" : "Lo que dicen"}</span>
         </div>
 
         {/* Título */}
         <h2 className="text-white text-3xl md:text-4xl xl:text-5xl font-black leading-tight mb-2">
-          Lo que dicen
+          {isEn ? "What they say" : "Lo que dicen"}
         </h2>
         <h2
           className="text-3xl md:text-4xl xl:text-5xl font-black leading-tight mb-4 pb-2 inline-block"
@@ -160,11 +162,13 @@ export default function ReviewsSection() {
             borderImage: "linear-gradient(90deg, #E91E63, #9C27B0) 1",
           }}
         >
-          nuestros clientes
+          {isEn ? "our clients" : "nuestros clientes"}
         </h2>
 
         <p className="text-white/50 text-sm mb-10">
-          Reseñas reales del perfil de Google de {data.name}. Desliza para ver todas.
+          {isEn
+            ? "Real reviews from our Google Business Profile. Swipe to see them all."
+            : `Reseñas reales del perfil de Google de ${data.name}. Desliza para ver todas.`}
         </p>
 
         {/* Carrusel */}
@@ -252,7 +256,7 @@ export default function ReviewsSection() {
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 mt-8 text-xs tracking-widest uppercase text-white/50 hover:text-white transition-colors"
         >
-          Ver todas las reseñas en Google
+          {isEn ? "See all reviews on Google" : "Ver todas las reseñas en Google"}
           <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
           </svg>

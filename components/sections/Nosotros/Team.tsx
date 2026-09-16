@@ -32,7 +32,7 @@ const members = [
   { id: 13, name: "Josue", role: "Post-Production", image: "/images/Equipo/Josue.webp", area:"design multimedia"},
   { id: 14, name: "Sofia", role: "Film Maker & Designer", image: "/images/Equipo/Sofia.webp", area:"design multimedia"},
   { id: 15, name: "Aaron", role: "Designer", image: "/images/Equipo/Aaron.webp", area:"design multimedia" },
-  { id: 16, name: "Franco", role: "Designer", image: "/images/Equipo/franco-2.webp", area:"design multimedia"},
+  /*{ id: 16, name: "Franco", role: "Designer", image: "/images/Equipo/franco-2.webp", area:"design multimedia"},*/
   { id: 17, name: "Stefany", role: "Film Maker & Designer", image: "/images/Equipo/Stefany.webp", area:"design multimedia"},
   { id: 18, name: "Karol", role: "Film Maker & Designer", image: "/images/Equipo/Karol.webp", area:"design multimedia"},
   { id: 19, name: "Franco", role: "Designer", image: "/images/Equipo/Franco.webp", area:"design multimedia" },

@@ -24,14 +24,7 @@ const foundersData = [
       image: '/images/Fundadores/AlejandroAlta1.webp',
       video:'/images/Fundadores/Alejandro2.webm'
     },
-    { 
-      id: 'bruno', 
-      name: 'BRUNO', 
-      fullName: 'Bruno Roque', 
-      role: t('roles.marketingDirector'), 
-      image: '/images/Fundadores/BrunoAlta.webp',
-      video:'/images/Fundadores/Bruno2.webm'
-    },
+    
     { 
       id: 'piero', 
       name: 'PIERO', 

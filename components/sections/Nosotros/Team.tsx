@@ -17,7 +17,7 @@ const members = [
   { id: 5, name: "Elizabeth", role: "Creative Design Supervisor", image: "/images/Equipo/Elizabeth.webp", area:"branding"},
   { id: 6, name: "Nadia", role: "Brand Manager", image: "/images/Equipo/Nadia.webp", area:"branding" },
   { id: 7, name: "Odeth", role: "Brand Designer", image: "/images/Equipo/Odeth.webp", area:"branding"},
-  { id: 8, name: "Sara", role: "Brand Designer", image: "/images/Equipo/Sara.webp", area:"branding" },
+ 
   { id: 9, name: "Tania", role: "Brand Designer", image: "/images/Equipo/novo.webp", area:"branding" },
 
   { id: 10, name: "Grecia", role: "Social Media Manager", image: "/images/Equipo/Grecia.webp", area:"social media"},

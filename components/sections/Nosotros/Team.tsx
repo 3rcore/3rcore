@@ -35,7 +35,7 @@ const members = [
   
   { id: 17, name: "Stefany", role: "Film Maker & Designer", image: "/images/Equipo/Stefany.webp", area:"design multimedia"},
   { id: 18, name: "Karol", role: "Film Maker & Designer", image: "/images/Equipo/Karol.webp", area:"design multimedia"},
-  { id: 19, name: "Franco", role: "Designer", image: "/images/Equipo/Franco.webp", area:"design multimedia" },
+ /* { id: 19, name: "Franco", role: "Designer", image: "/images/Equipo/Franco.webp", area:"design multimedia" },*/
   { id: 25, name: "Gianella", role: "Graphic Design & Audiovisual", image: "/images/Equipo/Gianella.webp", area:"design multimedia" },
 
   { id: 20, name: "Aymar", role: "Software Engineer", image: "/images/Equipo/Aymar.webp", area:"Web development & IT" },

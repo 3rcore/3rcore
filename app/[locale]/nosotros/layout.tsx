@@ -51,11 +51,9 @@ export default async function NosotrosLayout({ children, params }: { children: R
       role: isEn ? 'CEO at 3R Core' : 'CEO de 3R Core',
       image: '/images/Fundadores/AlejandroAlta1.webp',
     },
-    {
-      name: 'Bruno Roque',
-      role: isEn ? 'Marketing Director at 3R Core' : 'Director de Marketing en 3R Core',
-      image: '/images/Fundadores/BrunoAlta.webp',
-    },
+    // 16-sep-2026. Fuera Bruno Roque: el cliente lo quitó de la sección de
+    // fundadores (components/sections/Nosotros/Founders.tsx, commit fa207dd) y
+    // el JSON-LD debe describir lo que la página enseña.
     {
       name: 'Piero Roque',
       role: isEn ? 'SEO & Google Ads Analyst at 3R Core' : 'Analista de SEO y Google Ads en 3R Core',

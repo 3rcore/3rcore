@@ -5,6 +5,7 @@ import { montserrat } from "@/lib/fonts"
 import { createServerClient } from "@/lib/supabase/server"
 import type { BlogPost } from "@/lib/supabase/types"
 import { blogLocale } from "@/lib/blogLocale"
+import { CONSOLIDATED_SLUGS_IN } from "@/lib/blog-consolidated"
 import { STATIC_US_POSTS } from "@/lib/blog-static/us-posts"
 import { notFound } from "next/navigation"
 import { BASE_URL, generateBreadcrumbSchema } from "@/lib/metadata"
@@ -93,12 +94,16 @@ export default async function BlogsPage(
           .select("*, category:blog_categories!inner(name, slug)", { count: "exact" })
           .eq("status", "published")
           .in("locale", locFilter)
+          .not("slug", "in", CONSOLIDATED_SLUGS_IN)
           .eq("category.slug", cat)
       : supabase
           .from("blog_posts")
           .select("*, category:blog_categories(name, slug)", { count: "exact" })
           .eq("status", "published")
           .in("locale", locFilter)
+          // 16-sep-2026. Los seis artículos consolidados (lib/blog-consolidated.ts)
+          // redirigen con 308: el índice los enlazaba en las páginas 3, 4 y 5.
+          .not("slug", "in", CONSOLIDATED_SLUGS_IN)
     const res = await query
       .order("published_at", { ascending: false })
       .range(from, from + PAGE_SIZE - 1)

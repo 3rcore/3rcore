@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next'
 import { createServerClient } from '@/lib/supabase/server'
 import { hreflangFor, localizedUrl } from '@/lib/metadata'
 import { STATIC_US_POSTS } from '@/lib/blog-static/us-posts'
+import { CONSOLIDATED_BLOG_SLUGS } from '@/lib/blog-consolidated'
 
 /**
  * El sitemap se generaba en el BUILD (○ Static), así que los posts
@@ -150,14 +151,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // Slugs consolidados por canibalización (301 en next.config.ts): siguen en
     // la base pero ya no deben listarse — el sitemap no debe apuntar a URLs
     // que redirigen.
-    const REDIRECTED_SLUGS = new Set([
-      'es-blogs-diseno-web-lima-peru',
-      'es-blogs-mejor-agencia-web-lima-peru',
-      'cuanto-cuesta-una-pagina-web-en-peru-en-2026-precios-reales',
-      'cuanto-cuesta-crear-una-pagina-web-en-peru-este-ano',
-      'mejores-agencias-de-publicidad',
-      'crear-tienda-online-en-peru-con-shopify-o-woocommerce-guia-2026',
-    ])
+    const REDIRECTED_SLUGS = new Set(Object.keys(CONSOLIDATED_BLOG_SLUGS))
 
     if (posts) {
       const livePosts = posts.filter((p) => !REDIRECTED_SLUGS.has(p.slug))

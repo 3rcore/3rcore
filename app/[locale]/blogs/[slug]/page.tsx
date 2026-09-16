@@ -6,6 +6,7 @@ import BlogPostView from "./BlogPostView"
 import { BASE_URL, DEFAULT_OG_IMAGE } from "@/lib/metadata"
 import { buildAuthorNode } from "@/lib/seoSchemas"
 import { getBlogSeoOverride } from "@/lib/blog-seo-overrides"
+import { consolidatedTarget, CONSOLIDATED_SLUGS_IN } from "@/lib/blog-consolidated"
 import { blogLocale, contentLanguage } from "@/lib/blogLocale"
 import { STATIC_US_POSTS, getStaticUsPost } from "@/lib/blog-static/us-posts"
 
@@ -120,6 +121,8 @@ async function getRelatedPosts(currentId: string, categoryId: string | null, loc
     .neq('id', currentId)
     .in('locale', blogLocale(locale) === 'us' ? ['us', 'es'] : [blogLocale(locale)])
     .eq('status', 'published')
+    // Los consolidados redirigen: enlazarlos es mandar al lector a un 308.
+    .not('slug', 'in', CONSOLIDATED_SLUGS_IN)
     .order('published_at', { ascending: false })
     .limit(POOL)
   if (categoryId) query = query.eq('category_id', categoryId)
@@ -135,6 +138,7 @@ async function getRelatedPosts(currentId: string, categoryId: string | null, loc
     .neq('id', currentId)
     .in('locale', blogLocale(locale) === 'us' ? ['us', 'es'] : [blogLocale(locale)])
     .eq('status', 'published')
+    .not('slug', 'in', CONSOLIDATED_SLUGS_IN)
     .order('published_at', { ascending: false })
     .limit(POOL)
   const pool = (fallback || []) as unknown as BlogPost[]
@@ -203,13 +207,19 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   // si lo mandáramos a /es estaríamos regalando a Perú la señal del mercado
   // que se está abriendo.
   const canonicalLocale = post.locale ?? blogLocale(locale)
-  const canonical = `${BASE_URL}/${canonicalLocale}/blogs/${slug}`
+  // 16-sep-2026. Un slug consolidado solo llega aquí por /us (en /es y /en
+  // redirige antes). Su canonical a /es/blogs/<slug-viejo> apuntaba a una
+  // redirección y Google lo ignoraba: va directo al artículo ganador.
+  const consolidated = consolidatedTarget(slug)
+  const canonical = consolidated
+    ? `${BASE_URL}/es/blogs/${consolidated}`
+    : `${BASE_URL}/${canonicalLocale}/blogs/${slug}`
   const image = post.og_image || post.featured_image
 
   // hreflang solo para los idiomas publicados de este slug (no declarar 'en'
   // si no existe: evita hreflang a página rota / 404).
-  const availableLocales = await getPublishedLocales(slug)
-  const languages: Record<string, string> = {}
+  const availableLocales = consolidated ? [] : await getPublishedLocales(slug)
+  const languages: Record<string, string> = consolidated ? { es: canonical } : {}
   for (const loc of availableLocales) {
     languages[loc] = `${BASE_URL}/${loc}/blogs/${slug}`
   }
@@ -253,8 +263,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string; locale: string }> }) {
   const { slug, locale } = await params
-  const post = await getPost(slug, locale)
-  if (!post) {
+  const found = await getPost(slug, locale)
+  if (!found) {
     // Si el idioma pedido no existe pero SÍ hay otra versión publicada de este
     // slug, redirige a esa (evita 404 desde el selector de idioma / enlaces).
     const locales = await getPublishedLocales(slug)
@@ -267,6 +277,15 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   const canonical = `${BASE_URL}/${locale}/blogs/${slug}`
   const isEn = locale === 'en'
+  // 16-sep-2026. H1 y respuesta directa escritos a mano cuando el título de la
+  // base promete algo que el artículo no cumple (ver lib/blog-seo-overrides.ts).
+  // Copia, no mutación: los artículos de lib/blog-static viven en memoria y un
+  // cambio en el objeto se arrastraría a la petición siguiente.
+  const seo = getBlogSeoOverride(slug, locale)
+  const post: BlogPost =
+    seo?.heading || seo?.lead
+      ? { ...found, title: seo.heading ?? found.title, content: (seo.lead ?? '') + (found.content || '') }
+      : found
   const content = post.content || ''
   const plainText = stripHtml(content)
   const wordCount = wordsOf(content)
@@ -290,7 +309,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       "logo": { "@type": "ImageObject", "url": `${BASE_URL}/icons/LogoFull.webp` },
     },
     "image": post.og_image || post.featured_image || "",
-    "description": post.meta_description || post.excerpt || "",
+    "description": seo?.description ?? (post.meta_description || post.excerpt || ""),
     "articleBody": articleBodyExcerpt,
     "url": canonical,
     "mainEntityOfPage": { "@type": "WebPage", "@id": canonical },

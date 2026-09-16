@@ -21,14 +21,27 @@
  * la base. Para devolver el control al CMS, basta borrar la entrada. Si se
  * reescribe un artículo y cambian sus cifras, hay que revisar su entrada aquí.
  *
- * Deliberadamente NO se toca «características de la publicidad» (2.694
- * apariciones, posición 7,4): es público escolar. Subirle el CTR inflaría las
- * estadísticas sin traer un solo cliente.
+ * «Características de la publicidad» se dejó fuera el 26-ago por ser público
+ * escolar. El 16-sep entra, pero no para subir el CTR sino para corregir tres
+ * errores que se ven en el resultado y en la página: la descripción de la base
+ * terminaba en una frase cortada («Aprende cómo la creatividad.»), el H1 decía
+ * «Las 10 características» y el artículo enumera cinco, y el title, el H1 y el
+ * og:title decían tres cosas distintas.
  */
 
 export interface BlogSeoOverride {
   title: string
   description: string
+  /**
+   * H1 visible (y `headline` del BlogPosting). Solo cuando el título de la base
+   * dice algo que el artículo no cumple.
+   */
+  heading?: string
+  /**
+   * Párrafo HTML que se antepone al cuerpo: la respuesta directa que cita la IA
+   * y que Google usa como fragmento. Solo con datos que ya están en el artículo.
+   */
+  lead?: string
 }
 
 export const BLOG_SEO_OVERRIDES: Record<string, BlogSeoOverride> = {
@@ -127,10 +140,33 @@ export const BLOG_SEO_OVERRIDES: Record<string, BlogSeoOverride> = {
   // 18.825 apariciones, posición 6,5 y CTR 0,77%. Ojo: es público escolar, no
   // clientes. Se arregla el snippet porque cuesta cero, no porque vaya a
   // vender: el valor real de esta URL es el CTA hacia los servicios.
+  //
+  // 16-sep-2026. Solo cambia la caja de una letra: «Parafrasist: qué es…» →
+  // «Parafrasist: Qué es…». Con el patrón «Nombre: minúscula» Google tiende a
+  // quitar lo de delante de los dos puntos y lo visible arranca en minúscula.
+  // El resto no se toca: la búsqueda «parafrasist» es NAVEGACIONAL (desde Lima
+  // salen primero parafrasist.com, parafrasis.org y QuillBot; este artículo va
+  // 4.º orgánico) y en 90 días trajo 137 sesiones y 1 evento clave.
   'parafrasist-la-mejor-herramienta-para-resumir-textos': {
-    title: 'Parafrasist: qué es y cómo usarla para resumir textos',
+    title: 'Parafrasist: Qué es y cómo usarla para resumir textos',
     description:
       'Qué hace Parafrasist al parafrasear y resumir en español, cómo usarla sin meterte en problemas en un trabajo académico, sus límites y qué alternativas hay.',
+  },
+  // 16-sep-2026. Search Console 28 d: 539 impresiones, posición 6,1, CTR 1,7 %,
+  // 83 % desde móvil y repartidas por México, Colombia, Argentina, Chile y Perú
+  // (gente real, no rastreadores). Desde Lima sale 3.º y Google enseña «Las 10
+  // características de la publicidad - 3R Core»: el mismo título que el 1.º
+  // (cyberclick) y una promesa que el artículo no cumple, porque enumera cinco.
+  // Se conserva «importancia» en el title: en 90 días «porque es importante la
+  // publicidad» sumó 182 impresiones y «importancia de la publicidad», 30.
+  // Todo lo que dicen el lead y la descripción está en el cuerpo del artículo.
+  'caracteristicas-de-la-publicidad-importancia-y-claves-para-el-exito': {
+    title: 'Características de la publicidad: Las 5 claves y su importancia',
+    description:
+      'Las 5 características de la publicidad que funciona: creatividad, segmentación, mensaje claro, conexión emocional y llamada a la acción. Qué aporta cada una.',
+    heading: 'Las 5 características de la publicidad y por qué importan',
+    lead:
+      '<p><strong>Las cinco características de la publicidad que funciona son la creatividad y originalidad, la segmentación y relevancia, un mensaje claro y conciso, la conexión emocional y una llamada a la acción.</strong> Juntas deciden si un anuncio se distingue en un mercado saturado, si llega a las personas con más probabilidad de interesarse y si consigue que hagan algo concreto: comprar, suscribirse o visitar un sitio web. Abajo se explica cada una.</p>',
   },
 }
 

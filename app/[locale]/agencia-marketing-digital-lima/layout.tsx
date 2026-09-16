@@ -15,7 +15,14 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
     // Esta landing conserva el eje —agencia de marketing digital en Lima— pero
     // se diferencia por lo que la home no dice: la oficina, las reseñas y que
     // los precios están publicados.
-    titleEs: 'Agencia de Marketing Digital en Lima: precios publicados y sin permanencia | 3R Core',
+    //
+    // 16-sep-2026. Desde el 15-sep la home de /es es «Agencia de SEO, SEM y
+    // Google Ads en Lima, Perú», así que el choque de titles ya no existe y esta
+    // es la URL dueña de «agencia de marketing digital». El title medía 84
+    // caracteres (≈765 px): Google lo cortaba a media frase. En 90 días ninguna
+    // búsqueda de esta página contiene «precios publicados» ni «permanencia»;
+    // la diferencia se queda en la descripción.
+    titleEs: 'Agencia de Marketing Digital en Lima, Perú | 3R Core',
     titleEn: 'Digital Marketing Agency for U.S. Brands | 3R Core',
     descriptionEs: 'Agencia peruana con oficina en La Molina. Precios publicados, sin permanencia y el trabajo es tuyo desde el primer día. 4,7★ en 42 reseñas de Google.',
     descriptionEn: 'Digital marketing agency serving businesses across the U.S. Published pricing, no lock-in and you own the work from day one. 4.7 stars from 42 Google reviews.',

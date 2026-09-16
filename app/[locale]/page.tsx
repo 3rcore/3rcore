@@ -44,7 +44,7 @@ export default async function HomePage({ params }: { params: any }) {
     path: "",
     nameEs: locale === 'us'
       ? "3R Core — Agencia de Marketing Digital en Lima"
-      : "3R Core — Agencia de SEO, SEM y Google Ads",
+      : "3R Core — Agencia de SEO, SEM y Google Ads en Lima, Perú",
     nameEn: "3R Core — SEO, Web Development & Online Stores Agency",
     cssSelector: ["h1", "h2"],
   })

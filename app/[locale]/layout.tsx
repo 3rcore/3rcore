@@ -68,13 +68,13 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
     ? "SEO, Web Development & Online Stores Agency | 3R Core"
     : locale === 'us'
       ? "Marketing Digital en Español para EE.UU. | 3R Core"
-      : "Agencia de SEO, SEM y Google Ads | 3R Core"
+      : "Agencia de SEO, SEM y Google Ads en Lima, Perú | 3R Core"
 
   const description = locale === 'en'
     ? "SEO, web development and online stores for businesses across the U.S. In-house team, U.S. business hours and fixed scopes in USD. 4.7 stars from 42 reviews."
     : locale === 'us'
       ? "Marketing en español para negocios hispanos en EE.UU.: video UGC, Google Ads, Meta Ads, SEO y tiendas online. Precios en dólares y reportes cada mes."
-      : "Agencia de SEO, SEM y Google Ads con equipo propio de diseño, programación y posicionamiento. Resultados medibles y reportes cada mes. 4,7★ en 42 reseñas."
+      : "Agencia de SEO, SEM y Google Ads en Lima, Perú, con equipo propio de diseño, programación y posicionamiento. Resultados medibles y reportes cada mes. 4,7★ en 42 reseñas."
 
   return {
     title,
@@ -88,12 +88,12 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
         ? "3R Core | SEO, Web Development & Online Stores Agency"
         : locale === 'us'
           ? "3R Core | Marketing Digital en Español para EE.UU."
-          : "3R Core | Agencia de SEO, SEM y Google Ads",
+          : "3R Core | Agencia de SEO, SEM y Google Ads en Lima, Perú",
       description: locale === 'en'
         ? "SEO, web development and online stores for businesses across the U.S., with contracts and invoicing through our U.S. subsidiary. U.S. hours, fixed scopes in USD."
         : locale === 'us'
           ? "Marketing digital en español para negocios hispanos en Estados Unidos: video UGC, Google Ads, Meta Ads, SEO y tiendas online. Precios en dólares."
-          : "Agencia de SEO, SEM y Google Ads con equipo propio: posicionamiento en Google, campañas de Google Ads, desarrollo web y social media con resultados medibles.",
+          : "Agencia de SEO, SEM y Google Ads en Lima, Perú, con equipo propio: posicionamiento en Google, campañas de Google Ads, desarrollo web y social media con resultados medibles.",
       url: `${BASE_URL}/${locale}`,
       siteName: "3R Core",
       locale: locale === 'en' ? 'en_US' : locale === 'us' ? 'es_US' : 'es_PE',
@@ -107,7 +107,7 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
             ? '3R Core - SEO, Web Development & Online Stores'
             : locale === 'us'
               ? '3R Core - Agencia de Marketing Digital'
-              : '3R Core - Agencia de SEO, SEM y Google Ads',
+              : '3R Core - Agencia de SEO, SEM y Google Ads en Lima, Perú',
         },
       ],
     },
@@ -117,12 +117,12 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
         ? "3R Core - SEO, Web Development & Online Stores"
         : locale === 'us'
           ? "3R Core - Agencia de Marketing Digital"
-          : "3R Core - Agencia de SEO, SEM y Google Ads",
+          : "3R Core - Agencia de SEO, SEM y Google Ads en Lima, Perú",
       description: locale === 'en'
         ? "SEO, web development and online stores for businesses across the U.S. — in-house team, U.S. subsidiary, fixed scopes in USD."
         : locale === 'us'
           ? "Combinamos Experiencia, Visión y Tecnología en estrategias de marketing digital."
-          : "Agencia de SEO, SEM y Google Ads con equipo propio y resultados medibles.",
+          : "Agencia de SEO, SEM y Google Ads en Lima, Perú, con equipo propio y resultados medibles.",
       images: [`${BASE_URL}/og/default.jpg`],
     },
     metadataBase: new URL(BASE_URL),

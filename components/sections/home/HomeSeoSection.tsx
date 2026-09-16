@@ -72,8 +72,64 @@ const COPY: Record<'es' | 'en' | 'us', {
         cta: 'Ver social media',
       },
     ],
-    secondaryH3: 'También te acompañamos en',
-    secondary: [],
+    // 15-set-2026. Piero Roque: «puedes colocar lo que gustes debajo del
+    // contacto por el bien del SEO» + «atacar nichos». Estas nueve páginas
+    // existían y no recibían ni un enlace interno desde el home: en 90 días,
+    // marketing-clinicas-dentales, marketing-abogados, marketing-veterinarias y
+    // posicionamiento-ia sumaban CERO impresiones en Search Console. El home es
+    // la página con más autoridad del dominio y, sin enlaces externos, repartir
+    // esa autoridad hacia adentro es la única palanca disponible. Se añade
+    // también tiendas-virtuales-lima, que perdió los enlaces del menú y del home
+    // con el plan de reposicionamiento del 13-set y es la página de dinero mejor
+    // colocada (posición 9,8).
+    secondaryH3: 'SEO y Google Ads por sector',
+    secondary: [
+      {
+        h: 'Clínicas dentales',
+        p: 'Captación de pacientes para clínicas y consultorios dentales: búsquedas de tratamiento con intención real, no seguidores.',
+        href: '/servicios/marketing-clinicas-dentales',
+      },
+      {
+        h: 'Clínicas estéticas',
+        p: 'Medicina estética y dermatología: campañas y contenido que llenan la agenda de valoraciones sin quemar presupuesto.',
+        href: '/servicios/marketing-clinicas-esteticas',
+      },
+      {
+        h: 'Veterinarias',
+        p: 'Clínicas y pet shops: posicionamiento por distrito y por servicio, donde el dueño de la mascota busca «veterinaria cerca de mí».',
+        href: '/servicios/marketing-veterinarias',
+      },
+      {
+        h: 'Inmobiliarias',
+        p: 'Proyectos y corredoras: captación de leads calificados por proyecto, zona y tipo de departamento.',
+        href: '/servicios/marketing-inmobiliarias',
+      },
+      {
+        h: 'Estudios de abogados',
+        p: 'Estudios jurídicos y abogados independientes: consultas desde Google por especialidad, con la cautela que exige el rubro.',
+        href: '/servicios/marketing-abogados',
+      },
+      {
+        h: 'E-commerce y tiendas online',
+        p: 'Tiendas que ya venden: SEO de categorías y fichas, Google Shopping y recuperación de carritos.',
+        href: '/servicios/marketing-ecommerce',
+      },
+      {
+        h: 'Diseño de tiendas virtuales',
+        p: 'Tu tienda en Shopify o WooCommerce con pasarela de pago, catálogo cargado y medición de compras desde el primer pedido.',
+        href: '/tiendas-virtuales-lima',
+      },
+      {
+        h: 'Posicionamiento en IA (GEO)',
+        p: 'Que ChatGPT, Perplexity y los resúmenes de Google te citen cuando alguien pregunta por lo que vendes.',
+        href: '/servicios/posicionamiento-ia',
+      },
+      {
+        h: 'Agencia de marketing digital en Lima',
+        p: 'Todo el servicio en una sola página: qué hacemos, cómo lo medimos y cómo trabajamos mes a mes.',
+        href: '/agencia-marketing-digital-lima',
+      },
+    ],
     localH3: 'SEO y Google Ads para empresas de Lima y todo el Perú',
     local:
       'Nuestra oficina está en La Molina (Alameda de la Paz 187, primer piso) y trabajamos con negocios de todos los distritos de Lima —San Isidro, Miraflores, Surco, San Borja, La Victoria, Los Olivos— y de provincias en todo el Perú. Atención de lunes a viernes de 9:00 a 18:00.',

@@ -117,8 +117,14 @@ export default function ReviewsSection() {
   const mapsUrl =
     "https://www.google.com/maps/place/3R+Core+-+Agencia+de+Marketing/@-12.0912956,-76.9519657,17z/data=!3m1!4b1!4m6!3m5!1s0x9105c710419b833d:0xd38447313365f798!8m2!3d-12.0913009!4d-76.9493908!16s%2Fg%2F11jps9mts_?entry=ttu&g_ep=EgoyMDI2MDIxNi4wIKXMDSoASAFQAw%3D%3D"
 
+  // 15-set-2026. El bloque entero pinta en blanco (texto, tarjetas y bordes en
+  // rgba(255,255,255,·)) y NO tenía fondo propio: ni la sección, ni el <main>,
+  // ni el <body> ni el <html> declaran color de fondo, así que heredaba el
+  // lienzo blanco del navegador y salía blanco sobre blanco — ilegible en el
+  // home de los tres idiomas. Se le da el mismo #0D0010 del bloque semántico
+  // que va después del formulario de contacto.
   return (
-    <section className="relative w-full py-12 md:py-16 px-6 md:px-12 lg:px-24 overflow-hidden">
+    <section className="relative w-full bg-[#0D0010] py-12 md:py-16 px-6 md:px-12 lg:px-24 overflow-hidden">
 
       <style jsx>{`
         .review-scroll {

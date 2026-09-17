@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { WA_LEADS, waUrl } from "@/lib/contact";
+import ContactMessageIcon from "@/components/ui/ContactMessageIcon";
 
 // Hero del rediseño de Aymar (aprobado por el cliente, ago-2026). El h1 del
 // home vive en page.tsx (sr-only), por eso aquí los titulares son <p>.
@@ -27,6 +28,7 @@ export default function HeroHome() {
           line3: "Online Stores",
           tagline: "Serving the U.S. Nationwide - Your success, our success",
           services: "SEE SERVICES",
+          contact: "CONTACT US",
           scroll: "Scroll",
         }
       : locale === "es"
@@ -36,6 +38,7 @@ export default function HeroHome() {
             line3: "SEO, SEM y Google Ads",
             tagline: "Lima, Perú - Tu éxito, nuestro éxito",
             services: "VER SERVICIOS",
+            contact: "CONTÁCTANOS",
             scroll: "Navegar",
           }
         : {
@@ -44,6 +47,7 @@ export default function HeroHome() {
             line3: t("marketing") || "Marketing Digital",
             tagline: "Lima, Perú - Tu éxito, nuestro éxito",
             services: "VER SERVICIOS",
+            contact: "CONTÁCTANOS",
             scroll: "Navegar",
           };
 
@@ -93,6 +97,18 @@ export default function HeroHome() {
     const t = setTimeout(pick, 800);
     return () => clearTimeout(t);
   }, []);
+
+  // El formulario de contacto está en esta misma página (HomeClientV2 monta
+  // ContactAnchor), así que el tercer botón baja hasta él en vez de navegar.
+  // En /en el ancla es #contact; el span oculto #contacto sigue existiendo por
+  // los enlaces antiguos, de ahí que el scroll busque siempre ese id.
+  const contactHash = locale === "en" ? "#contact" : "#contacto";
+  const scrollToContact = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    const target = document.getElementById("contacto");
+    if (!target) return;
+    e.preventDefault();
+    target.scrollIntoView({ behavior: "smooth" });
+  };
 
   const primaryCtaClass =
     "bg-gradient-to-r from-[#f4266e]  to-[#a630cd] hover:scale-105 transition-transform duration-300 text-white rounded-full px-10 py-3.5 font-semibold text-xs md:text-xs tracking-wider flex items-center justify-center gap-3 w-full sm:w-auto shadow-lg shadow-pink-500/20";
@@ -149,6 +165,7 @@ export default function HeroHome() {
 
           {/* En el diseño original eran <button> sin destino: se cablean como
               enlaces reales. */}
+          <div className="flex flex-col gap-3 md:gap-4 w-full sm:w-auto">
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 w-full sm:w-auto">
             {locale === "es" ? (
               // Misma línea de leads (WA_LEADS) y mismo evento whatsapp_click
@@ -196,6 +213,17 @@ export default function HeroHome() {
               {copy.services}
               <span className="text-lg leading-none font-normal">→</span>
             </Link>
+          </div>
+
+            {/* Tercer botón del diseño: a lo ancho de los dos de arriba. */}
+            <a
+              href={contactHash}
+              onClick={scrollToContact}
+              className="border border-white/55 hover:bg-white/10 hover:border-white transition-all duration-300 text-white rounded-full px-8 py-3.5 font-bold text-xs md:text-sm tracking-wider flex items-center justify-center gap-3 w-full"
+            >
+              {copy.contact}
+              <ContactMessageIcon className="w-[18px] h-[17px] shrink-0" />
+            </a>
           </div>
         </div>
       </div>

@@ -19,7 +19,7 @@
     "description": "Somos un equipo de profesionales y nativos digitales con una visión de 3 generaciones enfocados en un mismo objetivo, altamente capacitados que conjugan",
     "description2": "la Experiencia, la Visión y la Tecnología",
     "description3": "en estrategias de marketing Digital, personalizadas de acuerdo a tu empresa",
-    "descriptionV2": "En 3R CORE somos un equipo con una visión de 3 generaciones enfocados en un mismo objetivo, altamente capacitados, que conjugan la experiencia, la visión y la tecnología en estrategias de SEO, SEM y Google Ads personalizadas de acuerdo a tu empresa."
+    "descriptionV2": "Diseñamos, programamos y posicionamos con un equipo propio de SEO, SEM y Google Ads. Tres generaciones trabajando sobre el mismo objetivo, sin intermediarios en tu proyecto."
   },
   "Hovers": {
     "ver": "/images/tituloCarru/Servicios.svg",
@@ -64,6 +64,16 @@
     "fieldPhone": "Teléfono",
     "fieldEmail": "Email",
     "fieldMessage": "Mensaje",
+    "fieldService": "Servicio de interés",
+    "placeholderName": "Tu nombre completo",
+    "placeholderPhone": "+51 987 654 321",
+    "placeholderCompany": "Tu empresa",
+    "placeholderEmail": "tu@correo.com",
+    "placeholderService": "Elige un servicio",
+    "placeholderMessage": "Cuéntanos sobre tu proyecto",
+    "serviceWeb": "Desarrollo Web",
+    "serviceSocial": "Social Media",
+    "serviceBranding": "Branding",
     "buttonSend": "Enviar",
     "buttonSending": "Enviando..."
   },

@@ -11,8 +11,9 @@ import { useTranslations, useLocale } from "next-intl"
  * la persona sí se traduce.
  */
 const SERVICIOS = [
-  { value: "Desarrollo Web", key: "serviceWeb" },
-  { value: "Social Media", key: "serviceSocial" },
+  { value: "Desarrollo web y tiendas virtuales", key: "serviceWeb" },
+  { value: "Google SEO / SEM", key: "serviceSeo" },
+  { value: "Social media ADS", key: "serviceSocial" },
   { value: "Branding", key: "serviceBranding" },
 ] as const;
 

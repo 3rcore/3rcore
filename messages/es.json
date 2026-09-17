@@ -71,8 +71,9 @@
     "placeholderEmail": "tu@correo.com",
     "placeholderService": "Elige un servicio",
     "placeholderMessage": "Cuéntanos sobre tu proyecto",
-    "serviceWeb": "Desarrollo Web",
-    "serviceSocial": "Social Media",
+    "serviceWeb": "Desarrollo web y tiendas virtuales",
+    "serviceSeo": "Google SEO / SEM",
+    "serviceSocial": "Social media ADS",
     "serviceBranding": "Branding",
     "buttonSend": "Enviar",
     "buttonSending": "Enviando..."

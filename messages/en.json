@@ -71,8 +71,9 @@
     "placeholderEmail": "you@email.com",
     "placeholderService": "Choose a service",
     "placeholderMessage": "Tell us about your project",
-    "serviceWeb": "Web Development",
-    "serviceSocial": "Social Media",
+    "serviceWeb": "Web Development & Online Stores",
+    "serviceSeo": "Google SEO / SEM",
+    "serviceSocial": "Social Media Ads",
     "serviceBranding": "Branding",
     "buttonSend": "Send",
     "buttonSending": "Sending..."

@@ -6,44 +6,52 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useTranslations } from "next-intl";
 
 gsap.registerPlugin(ScrollTrigger);
+// Foto de reserva para quien todavía no tiene la suya hecha.
+const SIN_FOTO = "/images/Equipo/bob.webp";
+
 const members = [
-  { id: 1, name: "Maria Fernanda", role: "Directora de Operaciones", image: "/images/Equipo/Mafer.webp", area:"commercial" },
-  { id: 2, name: "Diana", role:"Commercial Supervisor", image:"/images/Equipo/Diana.webp", area:"commercial"},
-  { id: 3, name: "Gimena", role: "Commercial", image: "/images/Equipo/Gimena.webp", area:"commercial"},
-  { id: 4, name: "Mariajose", role: "Commercial", image: "/images/Equipo/MAJO_RONDON.webp", area:"commercial"},
-  { id: 5, name: "Angella", role: "Project Manager", image: "/images/Equipo/Angella.webp", area:"commercial"},
-  { id: 31, name: "Karla", role: "Web Sales", image: "/images/Equipo/KARLA_TOSCANO.webp", area:"commercial"},
+  // COMERCIAL
+  { id: 1, name: "Maria Fernanda", role: "Directora de Operaciones", image: "/images/Equipo/Mafer.webp", area: "commercial" },
+  { id: 2, name: "Karla", role: "Web Sales", image: "/images/Equipo/KARLA_TOSCANO.webp", area: "commercial" },
+  { id: 3, name: "Mariajose", role: "Commercial", image: "/images/Equipo/MAJO_RONDON.webp", area: "commercial" },
+  { id: 4, name: "Diana", role: "Commercial Supervisor", image: "/images/Equipo/Diana.webp", area: "commercial" },
+  { id: 5, name: "Gimena", role: "Commercial", image: "/images/Equipo/Gimena.webp", area: "commercial" },
+  { id: 6, name: "Angella", role: "Project Manager", image: "/images/Equipo/Angella.webp", area: "commercial" },
 
-  { id: 5, name: "Elizabeth", role: "Creative Design Supervisor", image: "/images/Equipo/Elizabeth.webp", area:"branding"},
-  { id: 6, name: "Nadia", role: "Brand Manager", image: "/images/Equipo/Nadia.webp", area:"branding" },
-  { id: 7, name: "Odeth", role: "Brand Designer", image: "/images/Equipo/Odeth.webp", area:"branding"},
- 
-  { id: 9, name: "Tania", role: "Brand Designer", image: "/images/Equipo/novo.webp", area:"branding" },
+  // BRANDING
+  { id: 7, name: "Odeth", role: "Brand Designer", image: "/images/Equipo/Odeth.webp", area: "branding" },
+  { id: 8, name: "Nadia", role: "Brand Manager", image: "/images/Equipo/Nadia.webp", area: "branding" },
+  { id: 9, name: "Elizabeth", role: "Creative Design Supervisor", image: "/images/Equipo/Elizabeth.webp", area: "branding" },
+  { id: 10, name: "Tania", role: "Brand Designer", image: "/images/Equipo/novo.webp", area: "branding" },
 
-  { id: 10, name: "Grecia", role: "Social Media Manager", image: "/images/Equipo/Grecia.webp", area:"social media"},
-  { id: 11, name: "Nicole", role: "Content Manager", image: "/images/Equipo/Nicole.webp", area:"social media"},
-  { id: 12, name: "Claudia", role: "Content Manager", image: "/images/Equipo/Claudia.webp", area:"social media"},
-  { id: 23, name: "Sofia", role: "Content Media", image: "/images/Equipo/Sofia-new.webp", area:"social media"},
-  { id: 24, name: "Arianna", role: "Media Creator", image: "/images/Equipo/Arianna.webp", area:"social media"},
-  { id: 26, name: "Valentina", role: "Content Media Creator", image: "/images/Equipo/Valentina.webp", area:"social media"},
-  { id: 27, name: "Mateo", role: "Content Creator Jr.", image: "/images/Equipo/Mateo.webp", area:"social media"},
+  // SOCIAL MEDIA
+  { id: 11, name: "Grecia", role: "Growth Marketer", image: "/images/Equipo/Grecia.webp", area: "social media" },
+  { id: 12, name: "Sofia", role: "Content Manager Senior", image: "/images/Equipo/Sofia-new.webp", area: "social media" },
+  { id: 13, name: "Mateo", role: "Content Creator Jr.", image: "/images/Equipo/Mateo.webp", area: "social media" },
+  { id: 14, name: "Ariana", role: "Media Creator", image: "/images/Equipo/Arianna.webp", area: "social media" },
+  { id: 15, name: "Valentina", role: "Content Media Creator", image: "/images/Equipo/Valentina.webp", area: "social media" },
+  { id: 16, name: "Nicole", role: "Content Manager", image: "/images/Equipo/Nicole.webp", area: "social media" },
+  { id: 17, name: "Claudia", role: "Content Manager", image: "/images/Equipo/Claudia.webp", area: "social media" },
 
+  // DESIGN MULTIMEDIA
+  { id: 18, name: "Aaron", role: "Designer", image: "/images/Equipo/Aaron.webp", area: "design multimedia" },
+  { id: 19, name: "Gianella", role: "Graphic Design & Audiovisual", image: "/images/Equipo/Gianella.webp", area: "design multimedia" },
+  { id: 20, name: "Henrry", role: "Designer", image: SIN_FOTO, area: "design multimedia" },
+  { id: 21, name: "Jazmin", role: "Designer", image: SIN_FOTO, area: "design multimedia" },
+  { id: 22, name: "Angie", role: "Designer", image: SIN_FOTO, area: "design multimedia" },
+  { id: 23, name: "Josue", role: "Post-Production", image: "/images/Equipo/Josue.webp", area: "design multimedia" },
+  { id: 24, name: "Sofia", role: "Film Maker & Designer", image: "/images/Equipo/Sofia.webp", area: "design multimedia" },
+  { id: 25, name: "Stefany", role: "Film Maker & Designer", image: "/images/Equipo/Stefany.webp", area: "design multimedia" },
+  { id: 26, name: "Karol", role: "Film Maker & Designer", image: "/images/Equipo/Karol.webp", area: "design multimedia" },
 
-  { id: 13, name: "Josue", role: "Post-Production", image: "/images/Equipo/Josue.webp", area:"design multimedia"},
-  { id: 14, name: "Sofia", role: "Film Maker & Designer", image: "/images/Equipo/Sofia.webp", area:"design multimedia"},
-  { id: 15, name: "Aaron", role: "Designer", image: "/images/Equipo/Aaron.webp", area:"design multimedia" },
-  
-  { id: 17, name: "Stefany", role: "Film Maker & Designer", image: "/images/Equipo/Stefany.webp", area:"design multimedia"},
-  { id: 18, name: "Karol", role: "Film Maker & Designer", image: "/images/Equipo/Karol.webp", area:"design multimedia"},
- /* { id: 19, name: "Franco", role: "Designer", image: "/images/Equipo/Franco.webp", area:"design multimedia" },*/
-  { id: 25, name: "Gianella", role: "Graphic Design & Audiovisual", image: "/images/Equipo/Gianella.webp", area:"design multimedia" },
-
-  { id: 20, name: "Aymar", role: "Software Engineer", image: "/images/Equipo/Aymar.webp", area:"Web development & IT" },
-  { id: 21, name: "Jose", role: "Seo Manager", image: "/images/Equipo/jose.webp", area:"Web development & IT" },
-  { id: 22, name: "Josue", role: "Web Developer", image: "/images/Equipo/josue-1.webp", area:"Web development & IT" },
-  { id: 28, name: "Marxs", role: "Software Engineer", image: "/images/Equipo/Marxs.webp", area:"Web development & IT" },
-  { id: 30, name: "Fabián", role: "Diseñador Web UI/UX", image: "/images/Equipo/Fabian.webp", area:"Web development & IT" },
-  { id: 29, name: "Bob", role: "AI - Software Engineer Agent", image: "/images/Equipo/bob.webp", area:"Web development & IT" },
+  // WEB DEVELOPMENT & IT
+  { id: 27, name: "Fabián", role: "Diseñador Web UI/UX", image: "/images/Equipo/Fabian.webp", area: "Web development & IT" },
+  { id: 28, name: "Odeth", role: "Web Designer", image: "/images/Equipo/Odeth.webp", area: "Web development & IT" },
+  { id: 29, name: "Josué", role: "Web Developer", image: "/images/Equipo/josue-1.webp", area: "Web development & IT" },
+  { id: 30, name: "Marx", role: "Software Engineer", image: "/images/Equipo/Marxs.webp", area: "Web development & IT" },
+  { id: 31, name: "Aymar", role: "Software Engineer", image: "/images/Equipo/Aymar.webp", area: "Web development & IT" },
+  { id: 32, name: "Jose", role: "Seo Manager", image: "/images/Equipo/jose.webp", area: "Web development & IT" },
+  { id: 33, name: "Bob", role: "AI - Software Engineer Agent", image: "/images/Equipo/bob.webp", area: "Web development & IT" },
 ];
 
 export default function Team() {

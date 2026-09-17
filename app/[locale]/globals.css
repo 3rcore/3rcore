@@ -95,3 +95,52 @@ html {
   -ms-overflow-style: none;  /* IE y Edge */
   scrollbar-width: none;  /* Firefox */
 }
+/* --------------------------------------------------------------------------
+   Formulario de contacto: borde degradado que se "dibuja" al enfocar.
+
+   Sustituye a la línea inferior animada del diseño anterior — mismo gesto (el
+   color se rellena de izquierda a derecha al hacer clic), ahora recorriendo
+   todo el borde de la caja, que es lo que pide el diseño nuevo.
+
+   El degradado se recorta con dos máscaras (una al content-box y otra completa)
+   compuestas en modo exclusión: queda solo el anillo de 1px. Va dentro de
+   @supports porque sin `mask-composite` el span se vería como un rectángulo
+   rosado tapando el campo; ahí simplemente no se muestra y el borde blanco
+   tenue se queda como está.
+   -------------------------------------------------------------------------- */
+.field-border {
+  display: none;
+}
+
+@supports ((-webkit-mask-composite: xor) or (mask-composite: exclude)) {
+  .field-border {
+    display: block;
+    padding: 1px;
+    background: linear-gradient(90deg, #FF2E88 0%, #A854F7 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 500ms ease-out;
+  }
+
+  .contact-field:focus ~ .field-border {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+/* Sin mask-composite el borde degradado no se dibuja, y el campo enfocado se
+   quedaría sin ninguna marca visible. Ahí el foco lo señala el borde rosado
+   que el propio diseño usa para el campo activo. */
+@supports not ((-webkit-mask-composite: xor) or (mask-composite: exclude)) {
+  .contact-field:focus {
+    border-color: #FF2E88;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .field-border {
+    transition: none;
+  }
+}

@@ -28,6 +28,8 @@ const WhatsAppBtn = () => {
     window.addEventListener(EVENTO_CONSENTIMIENTO, revisar);
     return () => window.removeEventListener(EVENTO_CONSENTIMIENTO, revisar);
   }, []);
+  // Orden de la pila flotante (sep-2026): WhatsApp arriba y el botón de
+  // mensaje debajo, como en el diseño del banner. Antes estaba al revés.
   const phoneNumber = WA_LEADS;
   const message = "Hola vengo de la página web, quiero agendar una reunión.";
 
@@ -64,7 +66,7 @@ const WhatsAppBtn = () => {
       target="_blank"
       rel="noopener noreferrer"
       onClick={trackClick}
-      className="fixed bottom-6 right-6 bg-[#25d366] text-white p-4 rounded-full shadow-lg hover:bg-[#128c7e] hover:scale-110 transition-all duration-300 z-50 flex items-center justify-center"
+      className="fixed bottom-24 right-6 bg-[#25d366] text-white p-4 rounded-full shadow-lg hover:bg-[#128c7e] hover:scale-110 transition-all duration-300 z-50 flex items-center justify-center"
       aria-label="Contactar por WhatsApp"
     >
       <svg 

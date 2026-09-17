@@ -123,7 +123,17 @@ const ContactForm = () => {
   return (
     <section
       className={`${poppins.className} relative w-full overflow-hidden bg-[#16021B] py-20 lg:py-[140px] flex flex-col justify-center items-center`}
+      style={{
+        backgroundImage: "url('/images/Formulario/wmremove-transformed-8-1-1.webp')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
     >
+      {/* Velo sobre la foto: el diseño pide un fondo casi negro y la tarjeta
+          del formulario es blanco al 4%, que sobre la imagen desnuda se
+          perdería. El #16021B de la clase queda debajo como color de reserva
+          mientras carga la foto. */}
+      <div className="absolute inset-0 bg-[#130218]/80 z-0"></div>
       {/* 1584px = 820 (formulario) + 64 (gap) + 700 (mapa), las medidas del
           diseño. Con el max-w-7xl anterior el formulario se quedaba en ~590px
           y la tarjeta se veía estrecha frente al comp. */}
@@ -315,6 +325,9 @@ const ContactForm = () => {
           </div>
         </div>
       </div>
+
+      <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-[#16021B] via-[#16021B]/50 to-transparent z-[1] pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-[#16021B] via-[#16021B]/50 to-transparent z-[1] pointer-events-none"></div>
     </section>
   );
 };

@@ -5,8 +5,12 @@ import { useLocale } from "next-intl";
 import ContactMessageIcon from "@/components/ui/ContactMessageIcon";
 
 const ScrollNavBtn = () => {
+  const locale = useLocale();
+  const isEn = locale === "en";
   // En /en el ancla del formulario es #contact.
-  const contactHash = useLocale() === "en" ? "#contact" : "#contacto";
+  const contactHash = isEn ? "#contact" : "#contacto";
+  const label = isEn ? "CONTACT" : "CONTACTO";
+
   const scrollToContact = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     const target = document.getElementById('contacto');
@@ -20,20 +24,20 @@ const ScrollNavBtn = () => {
   };
 
   return (
+    // Pastilla del diseño del banner: alto 45, padding 25, degradado
+    // #FF2E88 → #A854F7, radio completo y el icono con el texto a su derecha.
     <a
-      href={contactHash} 
-      onClick={scrollToContact} 
-      className="fixed bottom-6 right-6 w-13 h-13 rounded-full z-50 flex items-center justify-center 
-                 transition-all duration-500 ease-in-out border border-transparent
-                 shadow-[0_8px_30px_rgb(233,30,99,0.3)]
-                 animate-pulse-slow group
-                 bg-gradient-to-br from-[#E91E63] to-[#9C27B0] text-white
-                 hover:scale-110 hover:bg-none hover:bg-transparent hover:border-[#E91E63] hover:text-[#E91E63]"
-      aria-label="Ir a contacto"
+      href={contactHash}
+      onClick={scrollToContact}
+      className="fixed bottom-6 right-6 z-50 h-[45px] px-[25px] rounded-full
+                 flex items-center justify-center gap-[10px]
+                 bg-gradient-to-r from-[#FF2E88] to-[#A854F7] text-white
+                 shadow-[0_7px_20px_rgba(0,0,0,0.38)]
+                 transition-all duration-300 hover:scale-105 hover:brightness-110"
+      aria-label={isEn ? "Go to the contact form" : "Ir al formulario de contacto"}
     >
-      <div className="relative w-7 h-7 flex items-center justify-center">
-        <ContactMessageIcon className="w-[22px] h-[21px]" />
-      </div>
+      <ContactMessageIcon className="w-[18px] h-[17px] shrink-0" />
+      <span className="text-[13px] font-bold tracking-[1.2px] leading-none">{label}</span>
     </a>
   );
 };

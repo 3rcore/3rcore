@@ -19,7 +19,7 @@ const members = [
   { id: 6, name: "Angella", role: "Project Manager", image: "/images/Equipo/Angella.webp", area: "commercial" },
 
   // BRANDING
-  { id: 7, name: "Odeth", role: "Brand Designer", image: "/images/Equipo/Odeth.webp", area: "branding" },
+  // Odeth no se repite aquí: aparece más abajo, en Web development & IT.
   { id: 8, name: "Nadia", role: "Brand Manager", image: "/images/Equipo/Nadia.webp", area: "branding" },
   { id: 9, name: "Elizabeth", role: "Creative Design Supervisor", image: "/images/Equipo/Elizabeth.webp", area: "branding" },
   { id: 10, name: "Tania", role: "Brand Designer", image: "/images/Equipo/novo.webp", area: "branding" },

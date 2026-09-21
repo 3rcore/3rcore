@@ -168,6 +168,18 @@ export const BLOG_SEO_OVERRIDES: Record<string, BlogSeoOverride> = {
     lead:
       '<p><strong>Las cinco características de la publicidad que funciona son la creatividad y originalidad, la segmentación y relevancia, un mensaje claro y conciso, la conexión emocional y una llamada a la acción.</strong> Juntas deciden si un anuncio se distingue en un mercado saturado, si llega a las personas con más probabilidad de interesarse y si consigue que hagan algo concreto: comprar, suscribirse o visitar un sitio web. Abajo se explica cada una.</p>',
   },
+  // 20-sep-2026 · GSC 20-ago→16-sep: «la moradita de inca kola» 100 apariciones
+  // (95 de Perú, escritorio y móvil a partes iguales: es gente) en posición 6,6-7,8
+  // y CERO clics. El title decía «La Moradita de Inca Kola: Fracaso rotundo | 3R Core»
+  // —arranca con entidad + dos puntos, el patrón que Google recorta— y no coincidía
+  // con el H1 «¿Mes morado sin milagro?…». El artículo lista TRES causas (status quo
+  // de la chicha morada, imagen inconsistente, investigación sesgada) y no da fechas
+  // ni cifras de venta, así que el title no promete ninguna.
+  'mes-morado-sin-milagro-el-fracaso-comercial-de-la-moradita-de-inca-kola': {
+    title: 'Por qué fracasó La Moradita de Inca Kola: 3 errores',
+    description:
+      'Inca Kola subestimó la tradición de la chicha morada. Los 3 errores que hundieron La Moradita y qué revisar antes de lanzar un producto nuevo.',
+  },
 }
 
 /**

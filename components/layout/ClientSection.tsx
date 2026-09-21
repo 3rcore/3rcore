@@ -35,7 +35,8 @@ const clients: Client[] = [
   { name: 'Nexxum', logo: '/images/Logos/Nexxum.webp', className: "lg:scale-90" },
   { name: 'Oros', logo: '/images/Logos/Oros.webp', className: "lg:translate-y-10 lg:translate-x-10 xl:translate-y-25 xl:transalte-x-25 2xl:translate-y-30 2xl:translate-x-30" },
   { name: 'Plinius', logo: '/images/Logos/Plinius.webp', className: "lg:translate-y-4 lg:translate-x-30" },
-  { name: 'Paypal', logo: '/images/Logos/paypal.png', className: "lg:translate-x-40 xl:translate-y-25 xl:translate-x-25 2xl:translate-y-30" }
+  { name: 'Paypal', logo: '/images/Logos/paypal.png', className: "lg:translate-x-40 xl:translate-y-25 xl:translate-x-25 2xl:translate-y-30" },
+  { name: 'Yango', logo: '/images/Logos/yango.svg', className: "lg:scale-90" }
 ];
 
 export default function ClientsSection() {
@@ -123,6 +124,10 @@ const ClientCard = ({ client }: { client: Client }) => {
           src={client.logo}
           alt={`${client.name} logo`}
           fill
+          /* El optimizador de Next rechaza los SVG si no se activa
+             dangerouslyAllowSVG; los nuestros son estáticos de /public y no
+             necesitan optimización, así que se sirven tal cual. */
+          unoptimized={client.logo.endsWith('.svg')}
           className="object-contain md:px-2"
         />
       </div>

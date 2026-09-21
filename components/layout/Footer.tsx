@@ -117,6 +117,19 @@ const Footer = () => {
                     </Link>
                   </li>
                 ))}
+                {/* 20-sep-2026: 3rcommerce es la marca hermana de tiendas virtuales de
+                    los Roque (entidad aparte de 3R Core). Enlace externo, no interno:
+                    no hay ruta /tiendas-virtuales propia que la sustituya. */}
+                <li>
+                  <a
+                    href="https://3rcommerce.com"
+                    target="_blank"
+                    rel="noopener"
+                    className="hover:text-pink-500 transition-colors duration-300"
+                  >
+                    {locale === 'en' ? 'Online stores — 3rcommerce ↗' : 'Tiendas virtuales — 3rcommerce ↗'}
+                  </a>
+                </li>
               </ul>
             </div>
           </div>

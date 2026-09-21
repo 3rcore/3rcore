@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { generatePageMetadata, generateBreadcrumbSchema, BASE_URL } from "@/lib/metadata"
+import { generatePageMetadata, generateBreadcrumbSchema, localizedUrl, BASE_URL } from "@/lib/metadata"
 import { buildPersonSchemas, buildSpeakableSchema } from "@/lib/seoSchemas"
 
 export const revalidate = 3600
@@ -32,8 +32,8 @@ export default async function NosotrosLayout({ children, params }: { children: R
   const aboutSchema = {
     "@context": "https://schema.org",
     "@type": "AboutPage",
-    "@id": `${BASE_URL}/${locale}/nosotros#aboutpage`,
-    "url": `${BASE_URL}/${locale}/nosotros`,
+    "@id": `${localizedUrl('/nosotros', locale)}#aboutpage`,
+    "url": localizedUrl('/nosotros', locale),
     "name": isEn ? "About 3R Core" : "Sobre 3R Core",
     "description": isEn
       ? "3R Core is a family-owned SEO, web development and online stores agency serving businesses across the United States, combining Experience, Vision and Technology."

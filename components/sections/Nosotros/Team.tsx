@@ -36,9 +36,9 @@ const members = [
   // DESIGN MULTIMEDIA
   { id: 18, name: "Aaron", role: "Designer", image: "/images/Equipo/Aaron.webp", area: "design multimedia" },
   { id: 19, name: "Gianella", role: "Graphic Design & Audiovisual", image: "/images/Equipo/Gianella.webp", area: "design multimedia" },
-  { id: 20, name: "Henrry", role: "Designer", image: SIN_FOTO, area: "design multimedia" },
+  { id: 20, name: "Henrry", role: "Designer", image: "/images/Equipo/henry.webp", area: "design multimedia" },
   { id: 21, name: "Jazmin", role: "Designer", image: SIN_FOTO, area: "design multimedia" },
-  { id: 22, name: "Angie", role: "Designer", image: SIN_FOTO, area: "design multimedia" },
+  { id: 22, name: "Angie", role: "Designer", image: "/images/Equipo/angie.webp", area: "design multimedia" },
   { id: 23, name: "Josue", role: "Post-Production", image: "/images/Equipo/Josue.webp", area: "design multimedia" },
   { id: 24, name: "Sofia", role: "Film Maker & Designer", image: "/images/Equipo/Sofia.webp", area: "design multimedia" },
   { id: 25, name: "Stefany", role: "Film Maker & Designer", image: "/images/Equipo/Stefany.webp", area: "design multimedia" },

@@ -26,3 +26,15 @@ export function pickMessages(messages: Messages, namespaces: string[]): Messages
   }
   return picked
 }
+
+/**
+ * Complemento de pickMessages: quita namespaces completos de un diccionario
+ * de mensajes. Se usa en el layout raíz (app/[locale]/layout.tsx), que es
+ * el UNICO NextIntlClientProvider real del árbol -- ver el comentario ahí
+ * para el porqué.
+ */
+export function omitMessages(messages: Messages, namespaces: string[]): Messages {
+  const result: Messages = { ...messages }
+  for (const ns of namespaces) delete result[ns]
+  return result
+}

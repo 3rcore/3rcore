@@ -1,4 +1,6 @@
-import { getTranslations, setRequestLocale } from "next-intl/server"
+import { getMessages, getTranslations, setRequestLocale } from "next-intl/server"
+import { NextIntlClientProvider } from "next-intl"
+import { pickMessages } from "@/lib/pickMessages"
 import HomeClientV2 from "./HomeClientV2"
 import HomeSeoSection from "@/components/sections/home/HomeSeoSection"
 import SsrReviews from "@/components/seo/SsrReviews"
@@ -11,6 +13,15 @@ export default async function HomePage({ params }: { params: any }) {
   setRequestLocale(locale);
 
   const tH1 = await getTranslations({ locale, namespace: "HiddenH1" })
+
+  // Recorte del payload de hidratación (ver lib/pickMessages.ts): el home
+  // solo necesita los namespaces que consume HomeClientV2 y su árbol, no el
+  // diccionario completo del locale (que incluye Nearshore, legales, etc.).
+  // /es queda fuera a propósito: no se toca su comportamiento.
+  const homeMessages = pickMessages(await getMessages(), [
+    "CTA", "ClientsSection", "ContactSection", "HeroHome", "NewsSection",
+    "SocialMediaHero", "TeamSection", "preload",
+  ])
 
   // 13-sep-2026. Planes de reposicionamiento de 3R Core (Piero Roque): el home
   // de /es enseña cuatro servicios (Google Ads, Posicionamiento SEO, Desarrollo
@@ -61,7 +72,13 @@ export default async function HomePage({ params }: { params: any }) {
           el mismo hero en video»); el grid baja a los servicios de cada
           mercado. Todas comparten el h1 sr-only y el bloque semántico SSR. */}
       <h1 className="sr-only">{tH1("home")}</h1>
-      <HomeClientV2 />
+      {locale === 'es' ? (
+        <HomeClientV2 />
+      ) : (
+        <NextIntlClientProvider locale={locale} messages={homeMessages}>
+          <HomeClientV2 />
+        </NextIntlClientProvider>
+      )}
       {/* Contenido semántico del home renderizado en el servidor (SSR real):
           pilares + señales de mercado para Googlebot y bots de IA que no
           ejecutan JS. HomeClientV2 (arriba) es 'use client' y se hidrata en el

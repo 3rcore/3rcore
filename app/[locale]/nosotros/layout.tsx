@@ -1,6 +1,9 @@
 import type { Metadata } from "next"
 import { generatePageMetadata, generateBreadcrumbSchema, localizedUrl, BASE_URL } from "@/lib/metadata"
 import { buildPersonSchemas, buildSpeakableSchema } from "@/lib/seoSchemas"
+import { getMessages } from "next-intl/server"
+import { NextIntlClientProvider } from "next-intl"
+import { pickMessages } from "@/lib/pickMessages"
 
 export const revalidate = 3600
 
@@ -74,6 +77,14 @@ export default async function NosotrosLayout({ children, params }: { children: R
     ? 'SEO, web development and online stores agency serving businesses across the U.S. — the Roque family team'
     : 'Agencia de marketing digital en Lima, Perú — equipo familiar Roque: branding, SEO, Google Ads, redes sociales y desarrollo web'
 
+  // Recorte del payload de hidratación (ver lib/pickMessages.ts): /nosotros
+  // solo necesita los namespaces que consume Original.tsx (en/us), no el
+  // diccionario completo del locale. /es usa OriginalV2 (otro árbol) y queda
+  // fuera del recorte para no arriesgar nada de ese mercado.
+  const aboutMessages = pickMessages(await getMessages(), [
+    "AboutSection", "ContactSection", "FoundersSection", "MomentsSection", "OurTeamSection", "preload",
+  ])
+
   return (
     <>
       <script
@@ -83,7 +94,13 @@ export default async function NosotrosLayout({ children, params }: { children: R
       {/* En /es la página del prototipo trae su propio h1 visible; duplicarlo
           con el sr-only dejaría dos h1 en la misma página. */}
       {locale !== 'es' && <h1 className="sr-only">{hiddenH1}</h1>}
-      {children}
+      {locale === 'es' ? (
+        children
+      ) : (
+        <NextIntlClientProvider locale={locale} messages={aboutMessages}>
+          {children}
+        </NextIntlClientProvider>
+      )}
     </>
   )
 }

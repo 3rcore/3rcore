@@ -10,13 +10,21 @@ export const revalidate = 3600
 //  - /en: agencia de SEO, desarrollo web y tiendas online para todo EE. UU.,
 //    sin ninguna referencia a Perú.
 //  - /us se queda como estaba.
+// 22-sep-2026. GSC (28d) mostraba a /es y /en repitiendo casi título por
+// título el de la home («Agencia de SEO, SEM y Google Ads»/«SEO, Web
+// Development & Online Stores Agency») + «3R Core»: para la query exacta
+// «3r core» Google alternaba SERP entre home y Nosotros (home #1.1 72 imp
+// 42 clics, Nosotros #1.3 89 imp 0 clics) — mismo título, misma intención de
+// marca. El H1 y la descripción ya diferencian bien («Un equipo propio»); solo
+// el <title> repetía. Se deja de repetir la frase de servicio en el title
+// (queda en la descripción) para que cada URL tenga un título propio.
 export async function generateMetadata({ params }: { params: any }): Promise<Metadata> {
   const { locale } = await params
   return generatePageMetadata({
     locale,
     path: '/nosotros',
-    titleEs: 'Nosotros — Agencia de SEO, SEM y Google Ads | 3R Core',
-    titleEn: 'About Us — SEO, Web Development & Online Stores Agency | 3R Core',
+    titleEs: 'Nosotros — El equipo detrás de 3R Core',
+    titleEn: 'About Us — The Team Behind 3R Core',
     descriptionEs: 'Los hermanos Roque y su equipo propio de diseño, programación y posicionamiento: SEO, SEM y Google Ads con resultados medibles. 4,7★ en 42 reseñas de Google.',
     descriptionEn: '3R Core is a family-run SEO, web development and online stores agency serving businesses across the U.S., on U.S. business hours and billing in USD through its U.S. subsidiary.',
     titleUs: 'Nosotros — Equipo en Lima para EE.UU. | 3R Core',

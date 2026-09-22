@@ -155,6 +155,18 @@ export const USA4_EN_POSTS: SeedPost[] = [
 
 <p>Here is what each band actually buys, using published prices rather than ranges invented to sound reasonable.</p>
 
+<h2>Where this sits in the wider market</h2>
+
+<p>Before comparing agency quotes, it helps to know the full range of what "building a website" can mean, because the three routes are not really substitutes for each other.</p>
+
+<ul>
+<li><strong>DIY builders</strong> (Wix, Squarespace, a self-managed WordPress site): commonly $15–$50 a month, sometimes more for an online store. You are paying almost entirely for the platform; your own time replaces design and development hours. This works when the owner has time and the site does not need custom functionality.</li>
+<li><strong>Freelancers:</strong> commonly $2,000–$8,000 for a custom brochure site, depending on scope and experience. You get a person, not a team — faster decisions, but capacity for one project at a time and no redundancy if they become unavailable mid-project.</li>
+<li><strong>Full-service agencies:</strong> commonly $10,000–$35,000+ for a small business build, more for ecommerce at scale. The premium buys a team (design, development, QA, project management) and typically an ongoing relationship rather than a one-off delivery.</li>
+</ul>
+
+<p>3R Core's bands ($850–$10,000, most landing at $1,200–$2,400) sit closer to the freelancer range in price but are delivered by a team rather than one person — which is the actual trade-off to evaluate, not just the number on the quote.</p>
+
 <h2>What does each price band include?</h2>
 
 <p><strong>At 3R Core the bands are: landing page from $850, corporate site from $1,200 with a range of $1,200–$2,400 by scope, and ecommerce from $1,750.</strong> Every proposal includes Figma design, responsive development, basic technical SEO, a contact form and Google Analytics, and the first year includes domain, SSL and hosting.</p>

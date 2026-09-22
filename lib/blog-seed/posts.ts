@@ -1542,6 +1542,10 @@ export const SEED_POSTS: SeedPost[] = [
 </table>
 <p>Los rangos bajos corresponden a rubros masivos (moda, comida, belleza) y los altos a rubros de ticket alto o competidos (inmobiliaria, salud, servicios profesionales).</p>
 
+<h2>El 18% de IGV que casi nadie suma al presupuesto</h2>
+<p>Desde diciembre de 2024, SUNAT cobra <strong>IGV (18%)</strong> sobre el gasto publicitario de las cuentas de Meta registradas en Perú, salvo que la cuenta tenga cargado un <strong>RUC válido que empiece con 20</strong> (persona jurídica) en el Centro de pagos de Meta. Sin ese RUC —o con uno mal cargado— el cobro es automático: un presupuesto de S/1,000 al mes se factura en la práctica S/1,180.</p>
+<p>Para presupuestar bien: si tu cuenta factura como persona natural o el RUC no califica para la exoneración, súmale 18% a cualquier cifra de esta guía antes de compararla contra tu margen por cliente.</p>
+
 <h2>Cuánto invertir según tu rubro</h2>
 <h3>Negocio local o de servicios (peluquería, restaurante, taller)</h3>
 <p>Piso de <strong>S/600 a S/1,200 al mes</strong>. El objetivo suele ser mensajes por WhatsApp o visitas. Con buen creativo, un mensaje calificado cuesta entre S/3 y S/10.</p>
@@ -1582,6 +1586,8 @@ export const SEED_POSTS: SeedPost[] = [
 <p>Casi siempre por mejor creativo y mejor relevancia. Meta premia con menor costo a los anuncios que la gente quiere ver.</p>
 <h3>¿La publicidad en Instagram cuesta más que en Facebook?</h3>
 <p>Puede variar, pero en la práctica gestionas ambas desde Meta y el sistema reparte según dónde rinde mejor. Deja las ubicaciones automáticas al inicio.</p>
+<h3>¿El IGV se suma a todos los montos de esta guía?</h3>
+<p>Sí, salvo que tu cuenta facture con un RUC válido que empieza con 20 registrado en el Centro de pagos de Meta. Sin eso, cualquier presupuesto que definas aquí sube 18% en tu factura real desde diciembre de 2024.</p>
 
 <h2>Cierre</h2>
 <p>En 2026, hacer publicidad en Facebook e Instagram en Perú es accesible para cualquier pyme, pero rentable solo para quien mide y optimiza. Antes de mirar el precio, define tu margen y tu tasa de cierre: eso decide cuánto puedes y debes invertir. En 3R Core diseñamos y gestionamos campañas de <a href="/es/servicios/meta-ads">Meta Ads en Perú</a> con presupuestos ajustados a cada negocio. Si quieres una proyección realista para tu rubro, <a href="/es#contacto">escríbenos</a>. Y si recién empiezas, revisa nuestra <a href="/es/blogs/meta-ads-pymes-peru-guia-primera-campana-rentable">guía paso a paso de Meta Ads para pymes</a>.</p>`,

@@ -235,6 +235,10 @@ export const USA2_POSTS_2026_08: SeedPost[] = [
 <li><strong>LocalBusiness schema</strong> on the Spanish pages too, with <code>inLanguage</code> set correctly.</li>
 </ul>
 
+<h2>Citations and directories, in Spanish</h2>
+<p>Most local SEO checklists stop at the English-language directories: the general business listings, the industry-specific ones, the chamber of commerce. Almost nobody repeats that work in Spanish, which is exactly why it's worth doing — a Hispanic chamber of commerce listing, a Spanish-language business directory, or a bilingual review platform carries the same local-signal weight an English citation does, against far less competition for the slot.</p>
+<p>Two things make this pay off instead of becoming busywork: keep the business name, address and phone (NAP) identical to the English listings — Google reconciles these as the same business, and a mismatch undoes the benefit — and don't stop at the listing. Ask Spanish-speaking customers for reviews in Spanish and reply to them in Spanish; a directory entry with zero reviews signals less than a thin English one does.</p>
+
 <h2>Content that ranks, not content that translates</h2>
 <p>The pages that work are the ones written for the reader's situation, which is often different from the English reader's. A U.S. Hispanic customer researching a service may have questions an English-speaking customer wouldn't: whether staff speak Spanish, what documentation is required, how payment plans work, whether a particular status affects eligibility.</p>
 <p>Those questions rarely appear in an English page, so they never survive translation — and they're exactly what the search demand looks like. Writing them properly is what separates a Spanish section that ranks from one that exists.</p>
@@ -259,7 +263,21 @@ export const USA2_POSTS_2026_08: SeedPost[] = [
 <li><strong>Stopping at the landing page</strong> while forms, emails and the sales call stay in English.</li>
 </ol>
 
-<p>We produce Spanish-language SEO and content with a native Spanish-speaking team, and we structure it so Google serves the right version to the right searcher. <a href="/en/seo-agency">See how we run SEO</a>, or read <a href="/en/blogs/why-translated-spanish-ads-underperform">why translated Spanish ads underperform</a>.</p>`,
+<p>We produce Spanish-language SEO and content with a native Spanish-speaking team, and we structure it so Google serves the right version to the right searcher. <a href="/en/seo-agency">See how we run SEO</a>, or read <a href="/en/blogs/why-translated-spanish-ads-underperform">why translated Spanish ads underperform</a>.</p>
+
+<h2>Frequently asked questions</h2>
+
+<h3>Is Spanish SEO just translating my English pages?</h3>
+<p>No — that's the single most common and most expensive mistake. A translated page keeps the English page's structure, headings and keyword targets, which were built for queries nobody types in Spanish. Spanish SEO means separate keyword research, its own URL, and copy written for the Spanish-speaking reader's actual questions.</p>
+
+<h3>What does es-US mean, and why not just es?</h3>
+<p>It tells Google the page is written for U.S. Hispanic readers specifically, rather than for Spain, Mexico or any other Spanish-speaking market. Bare <code>es</code> competes against content from every Spanish-speaking country; <code>es-US</code> narrows the field to the audience you actually serve.</p>
+
+<h3>How long before a Spanish page outranks the English-only competition?</h3>
+<p>Faster than the equivalent English work in most local markets, because the competing content is thinner. Structure and a properly built landing page happen in the first two weeks; visible movement in local Spanish results commonly follows within the first two to three months, ahead of typical English SEO timelines for the same market.</p>
+
+<h3>Do I need a separate Google Business Profile for Spanish?</h3>
+<p>Not a separate listing — one profile with a Spanish description, Spanish service names where relevant, and replies to Spanish reviews written in Spanish. That's enough to send the signal; what most businesses skip is the ongoing part, not the initial setup.</p>`,
   },
   {
     slug: "creative-testing-framework-paid-social",

@@ -3,6 +3,7 @@ import { notFound } from "next/navigation"
 import { BASE_URL, generateBreadcrumbSchema } from "@/lib/metadata"
 import { buildFAQPageSchema, buildServiceSchema } from "@/lib/seoSchemas"
 import { getMessages } from "next-intl/server"
+import { NextIntlClientProvider } from "next-intl"
 
 const PATH = '/nearshore-marketing-agency'
 
@@ -79,7 +80,13 @@ export default async function NearshoreLayout({ children, params }: { children: 
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify([serviceSchema, faqSchema, breadcrumbSchema]) }}
       />
-      {children}
+      {/* 22-sep-2026. Unica ruta de /en a la que la LEY permite mencionar
+          Peru: recibe el diccionario COMPLETO (el mismo `messages` que ya se
+          usa arriba para el FAQ schema), sin el recorte que aplica el layout
+          raiz para el resto de /en. */}
+      <NextIntlClientProvider locale={locale} messages={messages}>
+        {children}
+      </NextIntlClientProvider>
     </>
   )
 }

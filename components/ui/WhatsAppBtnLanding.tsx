@@ -5,6 +5,7 @@ import { WA_LANDING } from '@/lib/contact';
 import { useLocale } from 'next-intl';
 import { gsap } from 'gsap';
 import { trackConversion } from '@/lib/track';
+import { openWhatsAppNative } from '@/lib/wa-native-open';
 
 const COPY = {
   es: {
@@ -212,7 +213,9 @@ const WhatsAppBtnLanding = () => {
       trackConversion('whatsapp_click', { wa_phone: phoneNumber, wa_source: origin });
 
       gtag_report_conversion(whatsappUrl);
-      window.open(whatsappUrl, '_blank');
+      // Ya se capturó el formulario completo arriba: se abre directo, sin
+      // pasar por el interceptor global (WhatsAppLeadGate).
+      openWhatsAppNative(whatsappUrl, '_blank');
       
       
       setFormData({

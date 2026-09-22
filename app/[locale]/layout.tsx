@@ -10,6 +10,7 @@ import { routing } from '@/i18n/routing';
 import { getMessages, setRequestLocale } from "next-intl/server";
 import ParticlesBackground from "@/components/ui/AnimatedBackground";
 import WhatsAppBtn from "@/components/ui/WhatsAppBtn";
+import WhatsAppLeadGate from "@/components/global/WhatsAppLeadGate";
 import { TEL_MAIN } from "@/lib/contact";
 import { localizedUrl } from "@/lib/metadata";
 import ReactLenis from "lenis/react";
@@ -592,6 +593,11 @@ export default async function RootLayout({
                 incluidos los 135 blogs y /tiendas-virtuales-lima, donde vive el
                 tráfico orgánico y antes no había ninguna vía de contacto. */}
             <WhatsAppBtn />
+            {/* Intercepta CUALQUIER clic a WhatsApp del sitio (enlaces y
+                botones, incluidos los añadidos dinámicamente) y pide nombre +
+                WhatsApp ANTES de abrir el chat. Ver el comentario del
+                componente para el porqué. */}
+            <WhatsAppLeadGate />
           </NextIntlClientProvider>
           <noscript>
             <iframe

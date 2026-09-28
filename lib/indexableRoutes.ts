@@ -26,6 +26,17 @@ const MARKET_ONLY: Record<string, string> = {
   '/marketing-para-negocios-hispanos': 'us',
   '/casos-de-exito': 'es',
   '/agencia-marketing-digital-lima': 'es',
+  // Páginas nuevas de USA (PR #101), solo existen en /en
+  '/website-cost-calculator': 'en',
+  '/bilingual-website-design': 'en',
+  '/seo-for-hispanic-businesses': 'en',
+  // Páginas nuevas de Perú (tandas del 28-sep), solo existen en /es
+  '/cuanto-cuesta-el-seo-en-peru': 'es',
+  '/cuanto-cuesta-una-pagina-web-en-peru': 'es',
+  '/mejores-agencias-google-ads-lima': 'es',
+  '/diseno-web-restaurantes-lima': 'es',
+  '/agencia-seo-arequipa': 'es',
+  '/agencia-marketing-digital-miraflores': 'es',
 }
 
 export function isIndexableIn(path: string, locale: string): boolean {

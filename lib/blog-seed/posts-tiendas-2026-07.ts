@@ -364,7 +364,7 @@ export const TIENDAS_POSTS_2026_07: SeedPost[] = [
     featured_image: IMG("1553729459-efe14ef6055d"),
     featured_image_alt: "Google Ads y Google Shopping para tiendas online en Perú",
     author_name: AUTHOR,
-    content: `<p class="lead"><strong>Resumen ejecutivo:</strong> <strong>Google Shopping</strong> pone tus productos —con foto, precio y tienda— justo arriba de los resultados de Google cuando alguien busca lo que vendes. Junto con <a href="/es/servicios/google-ads">Google Ads</a> de búsqueda, es el canal más rápido para que una tienda online en Perú venda desde el primer día. Esta guía te explica cómo funciona, cuánto invertir y cómo configurar el feed de productos para no quemar presupuesto.</p>
+    content: `<p class="lead"><strong>Resumen ejecutivo:</strong> <strong>Google Shopping</strong> pone tus productos —con foto, precio y tienda— justo arriba de los resultados de Google cuando alguien busca lo que vendes. Junto con los anuncios de búsqueda de Google Ads, es el canal más rápido para que una tienda online en Perú venda desde el primer día, y es lo que configuramos en 3R Core como <a href="/es/servicios/google-ads">agencia de Google Ads en Perú</a>. Esta guía te explica cómo funciona, cuánto invertir y cómo configurar el feed de productos para no quemar presupuesto.</p>
 
 <h2>Qué es Google Shopping y por qué vende tanto</h2>
 <p>Cuando buscas "zapatillas running" en Google, esos productos con foto y precio arriba son Google Shopping. Vende bien porque el usuario ve el producto y el precio <em>antes</em> de hacer clic: llega a tu tienda ya interesado y listo para comprar. Para e-commerce, suele tener mejor retorno que los anuncios de solo texto.</p>

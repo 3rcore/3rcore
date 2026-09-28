@@ -6,6 +6,7 @@ import BlogPostView from "./BlogPostView"
 import { BASE_URL, DEFAULT_OG_IMAGE } from "@/lib/metadata"
 import { buildAuthorNode } from "@/lib/seoSchemas"
 import { getBlogSeoOverride } from "@/lib/blog-seo-overrides"
+import { conEnlaceDeServicio } from "@/lib/blog-service-links"
 import { consolidatedTarget, CONSOLIDATED_SLUGS_IN } from "@/lib/blog-consolidated"
 import { blogLocale, contentLanguage } from "@/lib/blogLocale"
 import { STATIC_US_POSTS, getStaticUsPost } from "@/lib/blog-static/us-posts"
@@ -282,10 +283,15 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   // Copia, no mutación: los artículos de lib/blog-static viven en memoria y un
   // cambio en el objeto se arrastraría a la petición siguiente.
   const seo = getBlogSeoOverride(slug, locale)
-  const post: BlogPost =
+  const conOverride: BlogPost =
     seo?.heading || seo?.lead
       ? { ...found, title: seo.heading ?? found.title, content: (seo.lead ?? '') + (found.content || '') }
       : found
+  // 28-sep-2026. Enlace a la página de servicio dentro del texto, tras el primer
+  // párrafo, en los posts de /es que no lo tienen (ver lib/blog-service-links.ts).
+  // Solo /es: /us sirve el mismo artículo peruano pero vende otros servicios.
+  const conEnlace = locale === 'es' ? conEnlaceDeServicio(slug, conOverride.content || '') : conOverride.content
+  const post: BlogPost = conEnlace === conOverride.content ? conOverride : { ...conOverride, content: conEnlace }
   const content = post.content || ''
   const plainText = stripHtml(content)
   const wordCount = wordsOf(content)

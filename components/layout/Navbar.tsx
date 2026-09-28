@@ -228,6 +228,10 @@ const Navbar = () => {
     en: [
       { href: "/spanish-seo-services", label: t("services.spanishSeo") },
       { href: "/hispanic-marketing-agency", label: t("services.hispanic") },
+      // 28-sep-2026. Plan USA: landings nuevas, colgadas del menú por la misma
+      // razón que las dos de arriba (sin enlace desde cada página no se indexan).
+      { href: "/bilingual-website-design", label: t("services.bilingualWeb") },
+      { href: "/seo-for-hispanic-businesses", label: t("services.hispanicSeo") },
     ],
     us: [
       { href: "/marketing-para-negocios-hispanos", label: t("services.hispanic") },

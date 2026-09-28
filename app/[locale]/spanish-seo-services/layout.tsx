@@ -13,8 +13,14 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
   // existen.
   if (locale !== 'en') return { robots: { index: false, follow: false } }
 
-  const title = "Spanish SEO Services for U.S. Businesses | 3R Core"
-  const description = "Spanish SEO at $500/month: native Spanish keyword research, hreflang repair, Spanish pages written from scratch and Google Business Profile in Spanish. No mandatory contract."
+  // 28-sep-2026. GSC USA (90 días): el blog spanish-seo-for-us-businesses se
+  // llevaba las 385 impresiones de «spanish seo / seo spanish» y esta landing
+  // apenas salía (12 impresiones, posición 25,8). Se separan intenciones: el
+  // blog queda como guía «how to» y esta página se queda «services / agency /
+  // pricing». Ningún competidor de la SERP publica precio: el «From $500/mo»
+  // va en el title, y el aviso de precio referencial en la descripción.
+  const title = "Spanish SEO Services & Agency | From $500/mo | 3R Core"
+  const description = "Spanish SEO agency for U.S. businesses: native Spanish keyword research, hreflang repair and Spanish pages. From $500/mo (reference price), no contract."
 
   return {
     title,
@@ -53,7 +59,7 @@ export default async function SpanishSeoServicesLayout({ children, params }: { c
     nameEs: "Servicios de SEO en Espanol para Negocios de Estados Unidos",
     nameEn: "Spanish SEO Services for U.S. Businesses",
     descriptionEs: "Servicios de SEO en espanol para negocios de Estados Unidos: investigacion de palabras clave nativa, reparacion de hreflang, paginas escritas en espanol y ficha de Google en espanol, con reporte mensual.",
-    descriptionEn: "Spanish SEO services for U.S. businesses at $500 USD per month: keyword research run natively in Spanish rather than translated, technical audit and reciprocal hreflang repair, Spanish pages written against Spanish search intent, internal linking, Google Business Profile managed in Spanish, and a monthly report with Spanish traffic reported separately. No mandatory contract.",
+    descriptionEn: "Spanish SEO services for U.S. businesses from $500 USD per month (reference price): keyword research run natively in Spanish rather than translated, technical audit and reciprocal hreflang repair, Spanish pages written against Spanish search intent, internal linking, Google Business Profile managed in Spanish, and a monthly report with Spanish traffic reported separately. No mandatory contract.",
     serviceType: "Spanish SEO / Multilingual Search Engine Optimization",
     offerPriceEn: 500,
     // Página de un solo mercado: areaServed sin PE. Por defecto buildServiceSchema

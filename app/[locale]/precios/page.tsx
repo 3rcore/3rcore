@@ -53,7 +53,7 @@ const COPY = {
     // eran el último sitio donde no se había aplicado: la web ofrecía un
     // catálogo que ella misma pide no indexar. Los servicios retirados siguen
     // vivos y con precio en /es/precios, que es donde sí se venden.
-    sub: 'SEO $500/month, websites from $850 USD and online stores from $1,750 USD. Net prices in US Dollars for clients based in the United States.',
+    sub: 'SEO $500/month, websites from $850 USD and online stores from $1,750 USD. Net prices in US Dollars for clients based in the United States. Figures shown are for reference only.',
     contactCta: 'Let’s talk about your project',
     contactPath: '/#contact',
     note: 'No mandatory contracts, monthly reports and progressive results. Prices shown are reference packages; each proposal is tailored after an initial meeting.',
@@ -83,7 +83,29 @@ const COPY = {
       { q: 'How much does SEO positioning cost?', a: 'SEO costs $500 USD per month and includes audit, planning, on-page optimization, scaling and a monthly report. No mandatory contracts and progressive results. Figures shown are for reference only.' },
       { q: 'Do you handle branding, social media or Google Ads for U.S. clients?', a: 'In the United States we focus on three services: websites, SEO and online stores. Branding, social media and paid media are not what we lead with for U.S. clients, and we would rather say so than sell a service we are not focused on for this market.' },
       { q: 'Are prices final? Are there mandatory contracts?', a: 'Prices are net; each proposal is tailored after an initial meeting. We do not use mandatory contracts: the service is monthly, with reports and progressive results.' },
+      // 28-sep-2026. Plan USA: /en/pricing tenía 607 palabras y no respondía
+      // plazos, pago ni costes tras el lanzamiento. Cada respuesta sale de las
+      // FAQ ya publicadas en /en (WebDevFAQ.q4, webFAQ.q5/q8/q9, SEOFAQ.q2).
+      { q: 'How long does a website take?', a: 'A landing page takes 2 to 3 weeks, a corporate site 4 to 6 weeks and a full online store 6 to 10 weeks, depending on complexity. You get a milestone-based timeline at kickoff.' },
+      { q: 'How does payment work?', a: 'In U.S. dollars, usually half at kickoff and half at launch for websites and online stores, by transfer or card, invoiced through our U.S. subsidiary. SEO is billed monthly.' },
+      { q: 'What does a website cost after the first year?', a: 'The first year of domain, SSL and hosting is included. From year two, hosting runs roughly $10 to $35 per month depending on traffic and platform, or you can move it to your own provider with no penalty. Figures shown are for reference only.' },
+      { q: 'When does SEO start to show results?', a: 'First ranking movement usually shows between months two and three, and meaningful lead volume between months four and six. We do not promise page one in weeks.' },
+      { q: 'Can I get an estimate before talking to anyone?', a: 'Yes. Our website cost calculator shows the reference price band for your site type, number of pages and languages, and the quote calculator covers SEO, websites and online stores. Figures shown are for reference only.' },
     ],
+    // Solo /en: qué incluye cada plan y plazos (ver el render más abajo).
+    included: {
+      title: 'What each plan includes',
+      intro: 'Reference prices in U.S. dollars. Figures shown are for reference only; the exact figure is confirmed in a written quote after a first call.',
+      plans: [
+        { name: 'SEO · $500/month', time: 'First movement in months 2 to 3', items: ['Technical audit and fixes', 'Keyword and intent research', 'On-page optimization and content', 'Monthly report with leads and rankings', 'No mandatory contract'] },
+        { name: 'Landing page · from $850', time: '2 to 3 weeks', items: ['Custom design in Figma', 'Responsive development', 'Basic technical SEO', 'Contact form and Google Analytics', 'First year of domain, SSL and hosting'] },
+        { name: 'Corporate site · $1,200–$2,400', time: '4 to 6 weeks', items: ['5 to 8 sections', 'Admin panel for text, images and posts', 'Basic technical SEO and structured data', 'Two revision rounds before launch', 'Thirty days of warranty after launch'] },
+        { name: 'Online store · from $1,750', time: '6 to 10 weeks', items: ['Shopify or WooCommerce', 'Catalog and inventory management', 'Payment gateway (Stripe, PayPal or the platform\'s own)', 'State-level sales tax calculation set up', 'Admin panel and recorded handover'] },
+      ],
+      calcTitle: 'Estimate your website',
+      calcText: 'Pick the type of site, the number of pages and the languages, and see which reference price band your project falls into.',
+      calcCta: 'Open the website cost calculator',
+    },
   },
   // es-US: mismo idioma que Perú, mercado y moneda distintos. Sin IGV, sin
   // pasarelas peruanas y con los precios en dólares del bloque 'en'.
@@ -201,6 +223,35 @@ export default async function PreciosPage({ params }: Props) {
           ))}
         </div>
       </section>
+
+      {t.included && (
+        <section className="px-6 md:px-10 lg:px-20 py-16 max-w-6xl mx-auto border-t border-white/10">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t.included.title}</h2>
+          <p className="text-white/60 max-w-3xl mb-8">{t.included.intro}</p>
+          <div className="grid md:grid-cols-2 gap-6">
+            {t.included.plans.map((pl: any, i: number) => (
+              <div key={i} className="pricing-card border border-white/10 rounded-2xl p-6">
+                <h3 className="text-lg font-semibold mb-1">{pl.name}</h3>
+                <p className="text-sm text-white/50 mb-4">Typical timeline: {pl.time}</p>
+                <ul className="text-sm text-white/80 space-y-1">
+                  {pl.items.map((it: string, j: number) => (
+                    <li key={j}>· {it}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          <div className="mt-10 border border-white/10 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div>
+              <h3 className="text-xl font-semibold mb-1">{t.included.calcTitle}</h3>
+              <p className="text-sm text-white/70 max-w-2xl">{t.included.calcText}</p>
+            </div>
+            <Link href="/website-cost-calculator" className="shrink-0 text-center bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-white/90 transition">
+              {t.included.calcCta}
+            </Link>
+          </div>
+        </section>
+      )}
 
       <section className="px-6 md:px-10 lg:px-20 py-16 max-w-6xl mx-auto border-t border-white/10">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">{t.refTitle}</h2>

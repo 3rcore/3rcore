@@ -12,13 +12,16 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
     titleEn: 'Web Design & Development for U.S. Brands | 3R Core',
     descriptionEs: 'Diseño y creación de páginas web en Lima, Perú: sitios corporativos, landing pages y e-commerce (Shopify, WooCommerce). SEO técnico desde S/1,800.',
     descriptionEn: 'Corporate sites, landing pages and e-commerce built by our in-house team for U.S. businesses. Technical SEO included, from $850 with hosting.',
-    titleUs: 'Páginas Web Bilingües para Negocios en EE.UU. | 3R Core',
-    descriptionUs: 'Diseño y desarrollo de sitios corporativos, landing pages y e-commerce bilingües (inglés y español) con hreflang correcto y SEO técnico incluido. Desde $850, con el primer año de dominio y hosting.',
+    // 28-sep-2026. Plan USA: la SERP de «diseño de páginas web para negocios
+    // hispanos en EE.UU.» es débil (disenowebusa, carlodigital con 578
+    // palabras). La landing ya tiene el contenido; faltaba decirlo en el title.
+    titleUs: 'Diseño de Páginas Web para Negocios Hispanos en EE.UU. | 3R Core',
+    descriptionUs: 'Páginas web bilingües (inglés y español) para negocios hispanos en EE.UU., con hreflang y SEO técnico incluido. Desde $850, precio referencial.',
     ogImage: {
       url: 'https://3rcore.com/og/web-development.jpg',
       width: 1200,
       height: 630,
-      alt: locale === 'en' ? '3R Core - Web Design & Development' : 'Diseño y Creación de Páginas Web en Lima - 3R Core',
+      alt: locale === 'en' ? '3R Core - Web Design & Development' : locale === 'us' ? 'Diseño de páginas web para negocios hispanos en EE.UU. - 3R Core' : 'Diseño y Creación de Páginas Web en Lima - 3R Core',
     },
   })
 }
@@ -32,7 +35,7 @@ export default async function WebDevLayout({ children, params }: { children: Rea
   const serviceSchema: any = buildServiceSchema({
     locale,
     path: '/servicios/web-development',
-    nameEs: 'Diseño y Creación de Páginas Web en Lima',
+    nameEs: locale === 'us' ? 'Diseño de Páginas Web para Negocios Hispanos en EE.UU.' : 'Diseño y Creación de Páginas Web en Lima',
     nameEn: 'Web Design and Development for U.S. Brands',
     descriptionEs: 'Diseño y desarrollo de sitios web corporativos, landing pages, tiendas online (e-commerce) en Shopify y WooCommerce, plataformas e-learning, sitios de servicios y blogs. Optimización SEO técnica, mobile-first y conversión integrada.',
     descriptionEn: 'Design and development of corporate websites, landing pages, online stores (e-commerce) on Shopify and WooCommerce, e-learning platforms, service sites and blogs. Technical SEO, mobile-first optimization and built-in conversion.',

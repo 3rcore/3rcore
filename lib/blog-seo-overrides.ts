@@ -225,16 +225,31 @@ export const BLOG_SEO_OVERRIDES_EN: Record<string, BlogSeoOverride> = {
       'Shopify costs $25–$399 a month; WooCommerce is free but hosting runs $25–$350 a month. Fees, SEO and who each platform fits, with no affiliate links.',
   },
   // Artículo: «Roughly 40 million U.S. residents speak Spanish at home».
+  // 28-sep-2026. Separación de intenciones (plan USA): este post se llevaba las
+  // 385 impresiones USA de «spanish seo / seo spanish» y la landing
+  // /en/spanish-seo-services apenas salía. El post se queda la guía («how to»)
+  // y enlaza a la landing con el ancla exacta «Spanish SEO services»; la
+  // landing se queda «services / agency / pricing». La respuesta directa del
+  // `lead` resume las secciones del propio artículo (hreflang, keyword research
+  // en español, señales locales). El contenido vive en Supabase: el seed
+  // (lib/blog-seed/posts-usa2-2026-08.ts) lleva el mismo enlace, pero no cambia
+  // lo publicado hasta volver a llamar a /api/admin/seed-blogs.
   'spanish-seo-for-us-businesses': {
-    title: 'Spanish SEO for U.S. Businesses: How to Rank in Spanish',
+    title: 'How to Do Spanish SEO in the U.S.: A Step-by-Step Guide',
     description:
-      'Roughly 40 million U.S. residents speak Spanish at home. How to rank for their searches: es-US hreflang, native keyword research and local pages.',
+      'How to rank in Spanish in the U.S.: es-US hreflang, keyword research done in Spanish, local signals and content. A practical guide for U.S. businesses.',
+    heading: 'How to do Spanish SEO for a U.S. business: a step-by-step guide',
+    lead:
+      '<p>Doing Spanish SEO in the U.S. comes down to three steps: give every Spanish page its own URL with hreflang declared in both directions, research keywords in Spanish instead of translating the English list, and build local signals in Spanish, starting with the Google Business Profile. The sections below walk through each one. If you would rather have a team run it for you, see our <a href="/en/spanish-seo-services">Spanish SEO services</a> (from $500/month, reference price).</p>',
   },
   // Artículo: $850–$10,000; la mayoría entre $1,200 y $2,400.
+  // 28-sep-2026. Enlace a la calculadora nueva (/en/website-cost-calculator).
   'how-much-does-a-small-business-website-cost': {
     title: 'Small Business Website Cost in 2026: Real Price Ranges',
     description:
       'A small business website costs $850 to $10,000 to build, and most land at $1,200–$2,400. What each band includes and the yearly costs after launch.',
+    lead:
+      '<p>Want a figure for your own project? Our <a href="/en/website-cost-calculator">website cost calculator</a> turns site type, number of pages and languages into a reference price range in U.S. dollars.</p>',
   },
 }
 

@@ -565,6 +565,8 @@ export default async function RootLayout({
         { name: "Online Stores", url: localizedUrl('/tiendas-virtuales-lima', 'en') },
         { name: "Spanish SEO Services", url: `${BASE_URL}/en/spanish-seo-services` },
         { name: "Hispanic Marketing Agency", url: `${BASE_URL}/en/hispanic-marketing-agency` },
+        { name: "Bilingual Website Design", url: `${BASE_URL}/en/bilingual-website-design` },
+        { name: "SEO for Hispanic Businesses", url: `${BASE_URL}/en/seo-for-hispanic-businesses` },
         { name: "Pricing", url: localizedUrl('/precios', 'en') },
         { name: "Blog", url: `${BASE_URL}/en/blogs` },
         { name: "FAQ", url: localizedUrl('/preguntas', 'en') },

@@ -43,6 +43,10 @@ const Footer = () => {
           // estaban huérfanas y sin indexar.
           { href: '/spanish-seo-services', label: tn('services.spanishSeo') },
           { href: '/hispanic-marketing-agency', label: tn('services.hispanic') },
+          // 28-sep-2026. Plan USA: las dos landings nuevas y la calculadora.
+          { href: '/bilingual-website-design', label: tn('services.bilingualWeb') },
+          { href: '/seo-for-hispanic-businesses', label: tn('services.hispanicSeo') },
+          { href: '/website-cost-calculator', label: tn('services.costCalculator') },
         ]
       : [
           { href: '/servicios', label: tn('services.todos') },

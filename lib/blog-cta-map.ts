@@ -213,7 +213,9 @@ export const SERVICE_GUIDES: Record<ServiceKey, { slug: string; title: string }[
     { slug: 'palabras-clave-negativas-google-ads-peru', title: 'Palabras clave negativas en Google Ads' },
   ],
   web: [
-    { slug: 'cuanto-cuesta-pagina-web-peru-2026', title: 'Cuánto cuesta una página web en Perú 2026' },
+    // 28-sep-2026: el post de precio web ahora redirige a /es/cuanto-cuesta-una-pagina-web-en-peru
+    // (página, no post: este bloque solo enlaza posts). Enlazar un 301 gasta rastreo.
+    { slug: 'por-que-mi-pagina-web-no-aparece-en-google-peru', title: 'Por qué mi página web no aparece en Google' },
     { slug: 'como-elegir-agencia-diseno-web-lima', title: 'Cómo elegir agencia de diseño web en Lima' },
     { slug: 'diseno-web-responsive-peru-2026', title: 'Diseño web responsive en Perú' },
   ],

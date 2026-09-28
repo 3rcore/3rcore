@@ -66,6 +66,23 @@ const nextConfig: NextConfig = {
       // Con 308 permanente la raíz deja de negociar: mismo destino para todos.
       { source: '/', destination: '/es', permanent: true },
 
+      // ── TANDA 2 PERÚ: PRECIO DE PÁGINA WEB CONSOLIDADO (2026-09-28) ───────
+      // «cuánto cuesta una página web en Perú» se repartía entre el post
+      // cuanto-cuesta-pagina-web-peru-2026 y dos slugs viejos que ya le
+      // redirigían (consolidación del 16-jul). Todo pasa a la página comercial
+      // /es/cuanto-cuesta-una-pagina-web-en-peru (tabla en soles, FAQ y
+      // cotizador), el formato que gana esa búsqueda. Van ANTES del bloque de
+      // consolidación del blog para que los slugs viejos lleguen en un solo
+      // salto y no encadenen dos. Solo /es y la ruta sin idioma: /en y /us
+      // no se tocan. Deshacer = borrar este bloque y la entrada de
+      // lib/blog-consolidated.ts.
+      { source: '/es/blogs/cuanto-cuesta-pagina-web-peru-2026', destination: '/es/cuanto-cuesta-una-pagina-web-en-peru', statusCode: 301 },
+      { source: '/blogs/cuanto-cuesta-pagina-web-peru-2026', destination: '/es/cuanto-cuesta-una-pagina-web-en-peru', statusCode: 301 },
+      { source: '/es/blogs/cuanto-cuesta-crear-una-pagina-web-en-peru-este-ano', destination: '/es/cuanto-cuesta-una-pagina-web-en-peru', statusCode: 301 },
+      { source: '/blogs/cuanto-cuesta-crear-una-pagina-web-en-peru-este-ano', destination: '/es/cuanto-cuesta-una-pagina-web-en-peru', statusCode: 301 },
+      { source: '/es/blogs/cuanto-cuesta-una-pagina-web-en-peru-en-2026-precios-reales', destination: '/es/cuanto-cuesta-una-pagina-web-en-peru', statusCode: 301 },
+      { source: '/blogs/cuanto-cuesta-una-pagina-web-en-peru-en-2026-precios-reales', destination: '/es/cuanto-cuesta-una-pagina-web-en-peru', statusCode: 301 },
+
       // ── RUTAS DESNUDAS DE LAS PÁGINAS ANCLA (2026-08-28) ──────────────────
       // Estas tres páginas existen SOLO en un mercado. Sin prefijo de idioma,
       // el middleware las mandaba a /es/…, donde no existen: quien copiaba el

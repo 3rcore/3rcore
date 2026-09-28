@@ -80,6 +80,13 @@ export const pathnames = {
   // páginas del sitio, y sin entrada en `pathnames` el tipo AppPathname lo
   // impedía. Solo /es: en /en el mercado lo ataca /nearshore-marketing-agency.
   '/agencia-marketing-digital-lima': '/agencia-marketing-digital-lima',
+  // 28-sep-2026. Tanda 2 Perú: bloque comercial que se publica junto. Solo /es
+  // (en /en y /us dan 404). Contenido en lib/landings-peru.ts + content.ts.
+  '/cuanto-cuesta-una-pagina-web-en-peru': '/cuanto-cuesta-una-pagina-web-en-peru',
+  '/mejores-agencias-google-ads-lima': '/mejores-agencias-google-ads-lima',
+  '/diseno-web-restaurantes-lima': '/diseno-web-restaurantes-lima',
+  '/agencia-seo-arequipa': '/agencia-seo-arequipa',
+  '/agencia-marketing-digital-miraflores': '/agencia-marketing-digital-miraflores',
 
   // Institucionales
   '/nosotros': {es: '/nosotros', us: '/nosotros', en: '/about'},

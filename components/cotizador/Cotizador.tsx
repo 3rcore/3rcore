@@ -78,8 +78,9 @@ const SERVICES: Service[] = [
 const COPY = {
   es: {
     eyebrow: 'Cotizador · 3R Core',
-    h1: 'Calcula el estimado de tu proyecto',
-    sub: 'Marca lo que necesitas y te damos un estimado referencial al instante. El precio exacto lo afinamos contigo por WhatsApp.',
+    // 28-sep-2026: H1 con la búsqueda real («cotizador de pagina web», pos. 29).
+    h1: 'Cotizador de páginas web en Perú 2026',
+    sub: 'Marca lo que necesitas (página web, tienda online, SEO o Google Ads) y te damos un estimado referencial al instante, sin dejar tus datos. El precio exacto lo afinamos contigo por WhatsApp.',
     step1: '1. ¿Qué necesitas?',
     step2: '2. Tu estimado referencial',
     setupLabel: 'Inversión inicial',

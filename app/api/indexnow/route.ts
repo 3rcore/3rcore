@@ -46,7 +46,7 @@ const STATIC_URLS = [
   "https://3rcore.com/es/precios",
   "https://3rcore.com/es/blogs",
   // Los artículos del clúster «cuánto cuesta» con snippet nuevo.
-  "https://3rcore.com/es/blogs/cuanto-cuesta-pagina-web-peru-2026",
+  "https://3rcore.com/es/cuanto-cuesta-una-pagina-web-en-peru",
   "https://3rcore.com/es/blogs/cuanto-cuesta-branding-peru-2026",
   "https://3rcore.com/es/blogs/cuanto-cuesta-publicidad-facebook-instagram-peru-2026",
   "https://3rcore.com/es/blogs/cuanto-cuesta-tienda-virtual-peru-2026",

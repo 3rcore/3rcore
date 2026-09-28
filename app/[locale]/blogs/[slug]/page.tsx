@@ -212,7 +212,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   // redirección y Google lo ignoraba: va directo al artículo ganador.
   const consolidated = consolidatedTarget(slug)
   const canonical = consolidated
-    ? `${BASE_URL}/es/blogs/${consolidated}`
+    ? consolidated.startsWith('/')
+      ? `${BASE_URL}${consolidated}`
+      : `${BASE_URL}/es/blogs/${consolidated}`
     : `${BASE_URL}/${canonicalLocale}/blogs/${slug}`
   const image = post.og_image || post.featured_image
 

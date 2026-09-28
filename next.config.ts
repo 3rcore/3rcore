@@ -234,6 +234,37 @@ const nextConfig: NextConfig = {
       { source: '/categoria/marketing', destination: '/es/servicios', permanent: true },
       { source: '/categoria/:slug', destination: '/es/blogs', permanent: true },
 
+      // ── PÁGINAS DE LA WEB EN WORDPRESS QUE SEGUÍAN EN 404 (2026-09-28) ────
+      // Las entradas `/AAAA/MM/DD/slug` ya se recuperaron el 26-ago (arriba).
+      // Quedaban las PÁGINAS sueltas: la regla general de abajo las manda a
+      // /es/<ruta>, donde no existen, y acaban en 404. Solo se redirigen las
+      // que tienen una página equivalente real hoy (medido en vivo el 28-sep
+      // con Search Console, 16 meses: 1.100+ impresiones y ~50 clics entre
+      // todas, casi todas por la marca «3r core»). Van con y sin /es/ porque
+      // desde el 29-ago la regla general ya reenviaba a Google a /es/<ruta>.
+      // Autores, /tienda, /paga-aqui y los PDF no tienen equivalente: se dejan.
+      ...([
+        ['/contactanos', '/es#contacto'],
+        ['/contactanos-agencia-de-marketing', '/es#contacto'],
+        ['/la-agencia-marketing', '/es/nosotros'],
+        ['/sobre-la-agenc', '/es/nosotros'],
+        ['/social-media', '/es/servicios/socialmedia'],
+        ['/politicas-de-privacidad', '/es/politicas'],
+        ['/google-ads-3', '/es/servicios/google-ads'],
+        ['/google-ads-4', '/es/servicios/google-ads'],
+        ['/servicios/seo-sem', '/es/posicionamiento-seo'],
+        ['/web-development-desing', '/es/servicios/web-development'],
+        ['/libro-de-reclamaciones-2', '/es/reclamaciones'],
+        ['/inicio', '/es'],
+      ] as const).flatMap(([source, destination]) => [
+        { source, destination, permanent: true },
+        { source: `/es${source}`, destination, permanent: true },
+      ]),
+      { source: '/en/la-agencia-marketing', destination: '/en/about', permanent: true },
+      { source: '/en/sobre-la-agenc', destination: '/en/about', permanent: true },
+      { source: '/en/branding', destination: '/en/services/branding', permanent: true },
+      { source: '/en/servicios/seo-sem', destination: '/en/seo-agency', permanent: true },
+
       // ── LA LANDING DE ADS NO DEBE COMPETIR CON SU PROPIA FICHA (2026-08-29)
       // /performance-marketing vive fuera del sistema de idiomas, es indexable,
       // no está en el sitemap y duplica a /es/servicios/performance-marketing.

@@ -139,6 +139,20 @@ const Footer = () => {
                   </a>
                 </li>
               </ul>
+              {/* 28-sep-2026 (Tanda 2 Perú): guías y zonas que solo existen en
+                  /es. Un enlace desde cada página es lo que las saca de
+                  «descubierta, sin indexar» (lo que pasó con las anclas de /en). */}
+              {locale === 'es' && (
+                <ul className="space-y-3 text-sm lg:text-xs xl:text-sm text-gray-200 mt-6 pt-6 border-t border-white/10">
+                  {PERU_GUIDES.map((g) => (
+                    <li key={g.href}>
+                      <Link href={g.href} className="hover:text-pink-500 transition-colors duration-300">
+                        {g.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           </div>
 
@@ -219,6 +233,15 @@ const Footer = () => {
     </footer>
   );
 };
+
+const PERU_GUIDES: { href: AppPathname; label: string }[] = [
+  { href: '/cuanto-cuesta-una-pagina-web-en-peru', label: 'Cuánto cuesta una página web' },
+  { href: '/cotizar', label: 'Cotizador de páginas web' },
+  { href: '/mejores-agencias-google-ads-lima', label: 'Agencias de Google Ads en Lima' },
+  { href: '/diseno-web-restaurantes-lima', label: 'Web para restaurantes' },
+  { href: '/agencia-marketing-digital-miraflores', label: 'Marketing digital en Miraflores' },
+  { href: '/agencia-seo-arequipa', label: 'SEO en Arequipa' },
+];
 
 const SocialIcon = ({ href, icon }: { href: string; icon: React.ReactNode }) => {
   return (

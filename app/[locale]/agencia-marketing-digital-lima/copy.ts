@@ -104,6 +104,9 @@ export const COPY = {
       { name: 'Precios completos', desc: 'La tabla entera de planes, extras y presupuestos.', href: '/precios' },
       { name: 'Preguntas frecuentes', desc: 'Servicios, plataformas, ubicación y horario.', href: '/preguntas' },
       { name: 'Casos de éxito', desc: 'Proyectos de clientes publicados por la agencia.', href: '/casos-de-exito' },
+      // 28-sep-2026 (Tanda 2 Perú): las dos páginas de zona cuelgan de la madre.
+      { name: 'Marketing digital en Miraflores', desc: 'Cómo compiten en Google los negocios del distrito, atendidos desde La Molina.', href: '/agencia-marketing-digital-miraflores' },
+      { name: 'SEO en Arequipa', desc: 'Posicionamiento para negocios arequipeños con atención remota.', href: '/agencia-seo-arequipa' },
     ] as Item[],
   },
   en: {

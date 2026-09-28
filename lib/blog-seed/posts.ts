@@ -11,6 +11,7 @@ import { LEADS_POSTS_2026_07 } from "./posts-leads-2026-07"
 import { LEADS2_POSTS_2026_07 } from "./posts-leads2-2026-07"
 import { LEADS3_POSTS_2026_07 } from "./posts-leads3-2026-07"
 import { REFRESH_POSTS_2026_07_28 } from "./posts-refresh-2026-07-28"
+import { REFRESH_POSTS_2026_09 } from "./posts-refresh-2026-09"
 import { USA_POSTS_2026_08 } from "./posts-usa-2026-08"
 import { USA2_POSTS_2026_08 } from "./posts-usa2-2026-08"
 import { USA3_POSTS_2026_08 } from "./posts-usa3-2026-08"
@@ -648,7 +649,7 @@ export const SEED_POSTS: SeedPost[] = [
 <h3>Identidad visual (S/3,500 – S/6,500)</h3>
 <ul>
 <li>Diseño de logo + isotipo + variantes (horizontal, vertical, monograma).</li>
-<li>Paleta de colores corporativa (primarios + secundarios).</li>
+<li>Paleta de colores corporativa (primarios + secundarios), elegida con criterio y no por gusto: ver <a href="/es/blogs/la-psicologia-de-los-colores-un-glosario-sobre-la-identidad-de-marca">psicología del color en marcas</a>.</li>
 <li>Tipografía oficial (1 principal + 1 complementaria).</li>
 <li>Iconografía base (5–10 iconos).</li>
 <li>Plantillas para redes sociales (3–5 diseños).</li>
@@ -662,7 +663,7 @@ export const SEED_POSTS: SeedPost[] = [
 <li>Todo lo de identidad visual.</li>
 <li><strong>Estrategia de marca</strong>: misión, visión, propuesta de valor, posicionamiento, tono de voz.</li>
 <li><strong>Manual de marca completo</strong> (PDF de 30–50 páginas).</li>
-<li><strong>Aplicaciones de marca</strong>: papelería completa, merchandising básico, plantillas digitales.</li>
+<li><strong>Aplicaciones de marca</strong>: papelería completa, <a href="/es/blogs/como-crear-un-brochure-impactante-para-tu-empresa">brochure empresarial</a>, merchandising básico, plantillas digitales.</li>
 <li>Naming si la marca es nueva (o auditoría de naming si ya tienes).</li>
 <li>Mockups profesionales para presentación.</li>
 <li>3 rondas de revisión.</li>
@@ -807,7 +808,7 @@ export const SEED_POSTS: SeedPost[] = [
 <li>Tipografía oficial (principal + secundaria + para web).</li>
 <li>Iconografía: estilo de los íconos que usas.</li>
 <li>Sistema gráfico: patrones, ilustraciones, fotografías de marca.</li>
-<li>Plantillas base: redes sociales, presentaciones, papelería.</li>
+<li>Plantillas base: redes sociales, presentaciones, papelería y <a href="/es/blogs/como-crear-un-brochure-impactante-para-tu-empresa">brochure</a>.</li>
 </ul>
 <p>La identidad visual es <strong>el "cómo se ve tu marca"</strong> aplicado de manera coherente.</p>
 
@@ -960,6 +961,7 @@ export const SEED_POSTS: SeedPost[] = [
 <li><strong>Pantone</strong> (PMS 286 C) — para colores corporativos críticos.</li>
 </ul>
 <p>Sin código exacto, cada proveedor "estima" el color. Resultado: el azul de tu logo en redes es distinto del azul en tu valla publicitaria.</p>
+<p>Si todavía estás eligiendo esos colores, revisa qué transmite cada uno en nuestra guía de <a href="/es/blogs/la-psicologia-de-los-colores-un-glosario-sobre-la-identidad-de-marca">psicología del color para marcas</a>.</p>
 
 <h3>4. Tipografía oficial</h3>
 <ul>
@@ -1008,7 +1010,7 @@ export const SEED_POSTS: SeedPost[] = [
 
 <h3>10. Aplicaciones impresas</h3>
 <ul>
-<li>Papelería: tarjeta de presentación, hoja membretada, sobres, carpetas.</li>
+<li>Papelería: tarjeta de presentación, hoja membretada, sobres, carpetas y el <a href="/es/blogs/como-crear-un-brochure-impactante-para-tu-empresa">brochure de la empresa</a>.</li>
 <li>Merchandising: polos, gorras, mugs, lapiceros, libretas.</li>
 <li>Packaging si vendes producto físico.</li>
 <li>Señalética: stands, fachadas, vehículos, uniformes.</li>
@@ -1185,7 +1187,7 @@ export const SEED_POSTS: SeedPost[] = [
 
 <h3>Fase 1: Auditoría de marca actual (2 semanas)</h3>
 <ul>
-<li>Qué elementos tienen equity acumulado (color, tipografía, símbolo).</li>
+<li>Qué elementos tienen equity acumulado (color, tipografía, símbolo). Con el color hay que ir con cuidado: lo explicamos en <a href="/es/blogs/la-psicologia-de-los-colores-un-glosario-sobre-la-identidad-de-marca">psicología del color en marcas</a>.</li>
 <li>Qué elementos generan asociaciones negativas o anticuadas.</li>
 <li>Investigación con clientes actuales y potenciales.</li>
 <li>Benchmarking con competencia.</li>
@@ -1356,7 +1358,7 @@ export const SEED_POSTS: SeedPost[] = [
 <p>Pagas USD 30, recibes 50 propuestas de freelancers de Indonesia que nunca vieron tu negocio. Resultado: logo genérico que parece de cualquier marca. <strong>Mejor</strong>: invierte S/800–1,500 en un freelance peruano que se siente contigo 1 hora a entender el negocio.</p>
 
 <h3>Error 2: Colores y tipografía sin justificación</h3>
-<p>Eliges azul porque "te gusta". Eliges una tipografía elegante porque "se ve premium". Sin saber si esos elementos comunican lo que tu marca es. <strong>Mejor</strong>: cada decisión visual debe responder a "¿esto refuerza mi propuesta de valor?".</p>
+<p>Eliges azul porque "te gusta". Eliges una tipografía elegante porque "se ve premium". Sin saber si esos elementos comunican lo que tu marca es. <strong>Mejor</strong>: cada decisión visual debe responder a "¿esto refuerza mi propuesta de valor?". Para el color, tienes un método en 5 pasos en nuestra guía de <a href="/es/blogs/la-psicologia-de-los-colores-un-glosario-sobre-la-identidad-de-marca">psicología del color</a>.</p>
 
 <h3>Error 3: No tener archivos vectoriales</h3>
 <p>Te entregan solo el JPG del logo. Cuando llegues a hacer una valla, va a pixelarse. <strong>Mejor</strong>: exige archivos .AI, .EPS, .SVG editables, sin candados.</p>
@@ -3027,6 +3029,7 @@ export const SEED_POSTS: SeedPost[] = [
   ...LEADS2_POSTS_2026_07,
   ...LEADS3_POSTS_2026_07,
   ...REFRESH_POSTS_2026_07_28,
+  ...REFRESH_POSTS_2026_09,
   ...USA_POSTS_2026_08,
   ...USA2_POSTS_2026_08,
   ...USA3_POSTS_2026_08,

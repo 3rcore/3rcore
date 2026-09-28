@@ -243,10 +243,10 @@ export default async function RootLayout({
         "@type": "PropertyValue",
         "propertyID": "RUC",
         "name": "RUC",
-        "value": "20609008217"
+        "value": "20609008211"
       },
-      "taxID": "20609008217",
-      "vatID": "20609008217",
+      "taxID": "20609008211",
+      "vatID": "20609008211",
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],

@@ -32,7 +32,7 @@
 export const NAP = {
   name: '3R Core - Agencia de Marketing Digital',
   legalName: '3R Core Agencia de Marketing',
-  ruc: '20609008217',
+  ruc: '20609008211',
   street: 'Alameda de la Paz 187, primer piso',
   district: 'La Molina',
   region: 'Lima',

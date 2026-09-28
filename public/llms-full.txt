@@ -4,7 +4,7 @@
 
 ## Identity
 - Legal name: 3R Core
-- Tax ID (RUC, Peru): 20609008217
+- Tax ID (RUC, Peru): 20609008211
 - Headquarters: La Molina, Lima 15024, Peru
 - Phone / WhatsApp: +51 987 216 703
 - Email: info@3rcore.com

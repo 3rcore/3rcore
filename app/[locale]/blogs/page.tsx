@@ -49,6 +49,17 @@ export async function generateMetadata(
       robots: "noindex, follow",
     }
   }
+  // 28-sep-2026. /us/blogs?page=3…7 salía en Search Console con impresiones de
+  // marca («3r core»): paginación compitiendo con la home. En /us las páginas 2+
+  // van noindex,follow (misma convención que las vistas filtradas: no se
+  // indexan pero el enlazado fluye) y su title ya no dice «Perú».
+  if (locale === "us") {
+    return {
+      title: `Blog de Marketing Digital para Negocios Hispanos — Página ${page} | 3R Core`,
+      alternates: { canonical: `${base}?page=${page}` },
+      robots: "noindex, follow",
+    }
+  }
   return {
     title: isEn
       ? `Marketing Blog — Page ${page} | 3R Core`

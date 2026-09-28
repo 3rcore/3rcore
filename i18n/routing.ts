@@ -73,6 +73,17 @@ export const pathnames = {
   // lo ocupa /marketing-para-negocios-hispanos y duplicarlo sería canibalizar.
   '/hispanic-marketing-agency': '/hispanic-marketing-agency',
   '/spanish-seo-services': '/spanish-seo-services',
+  // 28-sep-2026. Plan USA (GSC USA 90 días): tres páginas nuevas, solo /en.
+  //  - /website-cost-calculator: «small business website cost» suma ~600
+  //    impresiones en posiciones 13-20 y el autocompletado pide «…calculator».
+  //    La guía del blog se queda la intención informativa; esta, la de cálculo.
+  //  - /bilingual-website-design y /seo-for-hispanic-businesses: SERPs de
+  //    blogs pequeños, sin landings de agencia fuertes. No se crea versión /us:
+  //    ese eje ya lo cubren /us/servicios/desarrollo-web y
+  //    /us/marketing-para-negocios-hispanos.
+  '/website-cost-calculator': '/website-cost-calculator',
+  '/bilingual-website-design': '/bilingual-website-design',
+  '/seo-for-hispanic-businesses': '/seo-for-hispanic-businesses',
   // Solo en /es: la página del prototipo habla de marcas trabajadas desde Lima
   '/casos-de-exito': '/casos-de-exito',
   // Landing madre del eje comercial, recuperada el 26-ago. Se declara aquí para

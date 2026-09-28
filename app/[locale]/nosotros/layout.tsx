@@ -81,9 +81,11 @@ export default async function NosotrosLayout({ children, params }: { children: R
   )
 
   // Solo se pinta en /en y /us: en /es el hero de la v2 trae su propio h1.
+  // 28-sep-2026. El H1 de /us decía «…en Lima, Perú». Solo se pinta en /en y
+  // /us (en /es lo trae el prototipo), así que la rama española es la de /us.
   const hiddenH1 = isEn
     ? 'SEO, web development and online stores agency serving businesses across the U.S. — the Roque family team'
-    : 'Agencia de marketing digital en Lima, Perú — equipo familiar Roque: branding, SEO, Google Ads, redes sociales y desarrollo web'
+    : 'Agencia de marketing digital para negocios hispanos en Estados Unidos — equipo familiar Roque: páginas web, SEO y tiendas online'
 
   // Recorte del payload de hidratación (ver lib/pickMessages.ts): /nosotros
   // solo necesita los namespaces que consume Original.tsx (en/us), no el

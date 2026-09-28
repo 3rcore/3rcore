@@ -68,6 +68,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${baseUrl}/en/nearshore-marketing-agency`, priority: 0.95 },
     { url: `${baseUrl}/en/hispanic-marketing-agency`, priority: 0.95 },
     { url: `${baseUrl}/en/spanish-seo-services`, priority: 0.95 },
+    // 28-sep-2026. Plan USA: tres páginas nuevas, solo /en (404 en /es y /us),
+    // así que tampoco llevan hreflang: no hay hermanas a las que apuntar.
+    { url: `${baseUrl}/en/website-cost-calculator`, priority: 0.9 },
+    { url: `${baseUrl}/en/bilingual-website-design`, priority: 0.95 },
+    { url: `${baseUrl}/en/seo-for-hispanic-businesses`, priority: 0.95 },
     { url: `${baseUrl}/us/marketing-para-negocios-hispanos`, priority: 0.95 },
     { url: `${baseUrl}/es/casos-de-exito`, priority: 0.8 },
     // Página madre del negocio, recuperada el 26-ago-2026 (ya no 301 hacia

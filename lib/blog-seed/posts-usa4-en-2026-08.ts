@@ -234,7 +234,7 @@ export const USA4_EN_POSTS: SeedPost[] = [
 <h3>What does 3R Core charge for a website?</h3>
 <p>Landing pages from $850, corporate sites from $1,200 (range $1,200–$2,400 by scope) and ecommerce from $1,750. Every proposal includes Figma design, responsive development, basic technical SEO, contact form and Google Analytics; the first year includes domain, SSL and hosting. Net prices in U.S. dollars.</p>
 
-<p>Working out a budget? <a href="/en/services/web-development">See how we build websites for U.S. brands</a>, <a href="/en/pricing">check the published pricing</a>, or read <a href="/en/blogs/how-much-does-a-shopify-store-cost">what a Shopify store costs</a> if you are selling online.</p>
+<p>Working out a budget? Try our <a href="/en/website-cost-calculator">website cost calculator</a>, <a href="/en/services/web-development">see how we build websites for U.S. brands</a>, <a href="/en/pricing">check the published pricing</a>, or read <a href="/en/blogs/how-much-does-a-shopify-store-cost">what a Shopify store costs</a> if you are selling online.</p>
 `,
   },
   {

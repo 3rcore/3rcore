@@ -16,7 +16,8 @@ import PageLoader from '@/components/layout/PageLoader';
 
 import ScrollContactBtn from '@/components/ui/ScrollContactBtn'
 
-export default function SpanishSeoServices() {
+// Misma estructura que /en/spanish-seo-services y /en/hispanic-marketing-agency.
+export default function BilingualWebsiteDesign() {
 
   useScrollToSection();
   const isLoading = useIndividualPageLoader({
@@ -29,19 +30,19 @@ export default function SpanishSeoServices() {
   return (
     <>
       <AnimatePresence mode="wait">
-        {isLoading && <PageLoader key="spanish-seo-services-loader" />}
+        {isLoading && <PageLoader key="bilingual-website-design-loader" />}
       </AnimatePresence>
       <main>
-        <h1 className="sr-only">{tH1('spanishseo')}</h1>
+        <h1 className="sr-only">{tH1('bilingualweb')}</h1>
         <div id="hero">
-          <ServiceLanding namespace="SpanishSeoLanding" />
+          <ServiceLanding namespace="BilingualWebLanding" />
         </div>
-        <LandingSections namespace="SpanishSeoMore" />
-        <ServiceFAQ namespace="SpanishSeoFAQ" count={11} />
+        <LandingSections namespace="BilingualWebMore" />
+        <ServiceFAQ namespace="BilingualWebFAQ" count={8} />
         <SEOContentBlock
-          namespace="SpanishSeoSEO"
-          paragraphs={6}
-          relatedLinks={[{ href: "/bilingual-website-design", label: "Bilingual Website Design" }, { href: "/seo-for-hispanic-businesses", label: "SEO for Hispanic Businesses" }, { href: "/posicionamiento-seo", label: "SEO" }, { href: "/servicios/web-development", label: "Web Development" }, { href: "/precios", label: "Pricing" }, { href: "/blogs", label: "Blog" }]}
+          namespace="BilingualWebSEO"
+          paragraphs={5}
+          relatedLinks={[{ href: "/spanish-seo-services", label: "Spanish SEO Services" }, { href: "/seo-for-hispanic-businesses", label: "SEO for Hispanic Businesses" }, { href: "/servicios/web-development", label: "Web Development" }, { href: "/tiendas-virtuales-lima", label: "Online Stores" }, { href: "/website-cost-calculator", label: "Website Cost Calculator" }, { href: "/precios", label: "Pricing" }]}
         />
         <ReviewsSection/>
         <ClientSection />

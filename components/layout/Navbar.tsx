@@ -7,6 +7,7 @@ import gsap from "gsap";
 
 import { Link, usePathname } from "@/i18n/routing";
 import { useTranslations, useLocale } from "next-intl";
+import { isIndexableIn } from "@/lib/indexableRoutes";
 
 const Navbar = () => {
   const t = useTranslations("Navbar");
@@ -18,17 +19,17 @@ const Navbar = () => {
   // /en/blogs/{slug} inexistente (404). En el resto de páginas conserva la ruta.
   // usePathname() con `pathnames` devuelve la ruta interna (en español), que
   // es justo lo que Link necesita para reescribirla al slug del otro locale.
-  // Rutas que existen en UN solo mercado: /nearshore-marketing-agency solo en
-  // /en y /marketing-para-negocios-hispanos solo en /us. Mantener la ruta al
-  // cambiar de idioma llevaba a un 404, así que el selector cae a la home.
-  const MARKET_ONLY = ["/nearshore-marketing-agency", "/marketing-para-negocios-hispanos", "/casos-de-exito"];
-  const localeSwitchHref = (
-    /^\/blogs\/[^/]+$/.test(pathname)
-      ? "/blogs"
-      : MARKET_ONLY.includes(pathname)
-        ? "/"
-        : pathname
-  ) as AppPathname;
+  // Rutas que existen en UN solo mercado (p. ej. /spanish-seo-services solo en
+  // /en) o que en el otro mercado van noindex (los /servicios/* que no se
+  // venden en EE.UU.). Mantener la ruta al cambiar de idioma llevaba a un 404
+  // —/en/spanish-seo-services enlazaba a /es/spanish-seo-services (JEV-002,
+  // 28-sep-2026)— o a una página noindex. Se decide por idioma de destino: un
+  // servicio no indexable cae al índice de servicios y lo demás a la home.
+  const localeSwitchHref = (target: string) => {
+    if (/^\/blogs\/[^/]+$/.test(pathname)) return "/blogs" as AppPathname;
+    if (isIndexableIn(pathname, target)) return pathname as AppPathname;
+    return (pathname.startsWith("/servicios/") ? "/servicios" : "/") as AppPathname;
+  };
 
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
@@ -449,7 +450,7 @@ const Navbar = () => {
                     indexado; a ese usuario lo enruta Google por hreflang, que
                     es para lo que existe — no por este botón. */}
                 <Link
-                  href={localeSwitchHref}
+                  href={localeSwitchHref("es")}
                   locale="es"
                   // next-intl deriva hrefLang del prop `locale`. Se declara
                   // explícito para no emitir códigos inválidos.
@@ -460,7 +461,7 @@ const Navbar = () => {
                   ES
                 </Link>
                 <Link
-                  href={localeSwitchHref}
+                  href={localeSwitchHref("en")}
                   locale="en"
                   hrefLang="en"
                   title="English"

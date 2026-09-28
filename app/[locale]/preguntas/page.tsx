@@ -71,9 +71,10 @@ export default function FAQ() {
                       <span className="text-[#E91E63] font-mono text-sm border-b border-[#9C27B0] shrink-0 mt-1">
                         {String(index + 1).padStart(2, '0')}.
                       </span>
-                      <h3 className="text-white font-semibold text-sm md:text-xl leading-relaxed">
+                      {/* h2 y no h3: la pregunta cuelga directamente del h1 (JEV-006). */}
+                      <h2 className="text-white font-semibold text-sm md:text-xl leading-relaxed">
                         {faq.question}
-                      </h3>
+                      </h2>
                     </div>
                     
                     {/* Toggle icon */}

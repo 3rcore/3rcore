@@ -10,7 +10,7 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
     path: '/servicios/meta-ads',
     titleEs: "Agencia de Meta Ads en Lima, Perú | 3R Core",
     titleEn: 'Meta Ads Agency for U.S. Brands | 3R Core',
-    descriptionEs: "Campañas de Facebook e Instagram en Perú con retargeting, catálogo y mensajes directos a WhatsApp. Desde S/1,500/mes con ROAS medible.",
+    descriptionEs: "Campañas de Facebook e Instagram en Perú con retargeting, catálogo y mensajes directos a WhatsApp. Desde S/1,500/mes (referencial), con ROAS medible.",
     descriptionEn: 'Facebook and Instagram campaigns for U.S. businesses, with advanced targeting, retargeting and in-house UGC creative.',
     titleUs: 'Agencia de Meta Ads en Español para EE.UU. | 3R Core',
     descriptionUs: 'Facebook e Instagram para el público hispano de EE.UU.: segmentación por idioma y ciudad, retargeting y creatividades UGC. Desde $800/mes.',
@@ -27,6 +27,8 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
     // diluir el foco del mercado que se está abriendo.
 
     noindex: locale !== 'es',
+    // Y el hreflang solo declara /es: las versiones /en y /us van noindex.
+    onlyLocales: ['es'],
   })
 }
 

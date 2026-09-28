@@ -10,13 +10,13 @@ const Tools = () => {
   const t = useTranslations('TOOLS');
 
   const logos = [
-    { src: "/images/seosem/Logo2.svg", alt: "Google Partner" },
-    { src: "/images/seosem/Logo3.svg", alt: "Google Analytics" },
-    { src: "/images/seosem/Logo4.svg", alt: "Search Console" },
-    { src: "/images/seosem/Logo5.svg", alt: "Tag Manager" },
-    { src: "/images/seosem/Logo6.svg", alt: "Semrush" },
-    { src: "/images/seosem/Logo7.svg", alt: "Meta Ads" },
-    { src: "/images/seosem/Logo8.svg", alt: "Hotjar" },
+    { src: "/images/seosem/Logo2.svg", alt: "Google Partner", w: 146, h: 95 },
+    { src: "/images/seosem/Logo3.svg", alt: "Google Analytics", w: 172, h: 172 },
+    { src: "/images/seosem/Logo4.svg", alt: "Search Console", w: 172, h: 172 },
+    { src: "/images/seosem/Logo5.svg", alt: "Tag Manager", w: 172, h: 172 },
+    { src: "/images/seosem/Logo6.svg", alt: "Semrush", w: 172, h: 172 },
+    { src: "/images/seosem/Logo7.svg", alt: "Meta Ads", w: 172, h: 172 },
+    { src: "/images/seosem/Logo8.svg", alt: "Hotjar", w: 172, h: 172 },
   ];
 
   return (
@@ -56,9 +56,13 @@ const Tools = () => {
           {logos.map((logo, index) => (
             <SwiperSlide key={index} className="flex justify-center items-center">
                 <div className="bg-white border rounded-[15px] p-1 w-25 h-25 md:w-30 md:h-30 flex justify-center items-center shadow-[0_10px_30px_rgba(0,0,0,0.3)] transition-transform duration-300">
+                  {/* width/height = tamaño intrínseco del SVG (su viewBox): el
+                      navegador reserva el hueco antes de descargarlo (JEV-005). */}
                   <img 
                     src={logo.src} 
                     alt={logo.alt} 
+                    width={logo.w}
+                    height={logo.h}
                     className="max-w-[85%] max-h-[85%] object-contain" 
                   />
                 </div>

@@ -6,6 +6,7 @@ import ReviewsSection from "@/components/layout/ReviewsSection";
 import ServiceLanding from "@/components/sections/servicios/generic/ServiceLanding";
 import ServiceFAQ from "@/components/seo/ServiceFAQ";
 import SEOContentBlock from "@/components/seo/SEOContentBlock";
+import LandingSections from "@/components/seo/LandingSections";
 import { useScrollToSection } from '@/components/ui/useScrollToSection';
 import { useTranslations } from 'next-intl';
 
@@ -35,11 +36,12 @@ export default function SpanishSeoServices() {
         <div id="hero">
           <ServiceLanding namespace="SpanishSeoLanding" />
         </div>
-        <ServiceFAQ namespace="SpanishSeoFAQ" count={8} />
+        <LandingSections namespace="SpanishSeoMore" />
+        <ServiceFAQ namespace="SpanishSeoFAQ" count={11} />
         <SEOContentBlock
           namespace="SpanishSeoSEO"
           paragraphs={6}
-          relatedLinks={[{ href: "/posicionamiento-seo", label: "SEO" }, { href: "/servicios/web-development", label: "Web Development" }, { href: "/precios", label: "Pricing" }, { href: "/blogs", label: "Blog" }]}
+          relatedLinks={[{ href: "/bilingual-website-design", label: "Bilingual Website Design" }, { href: "/seo-for-hispanic-businesses", label: "SEO for Hispanic Businesses" }, { href: "/posicionamiento-seo", label: "SEO" }, { href: "/servicios/web-development", label: "Web Development" }, { href: "/precios", label: "Pricing" }, { href: "/blogs", label: "Blog" }]}
         />
         <ReviewsSection/>
         <ClientSection />

@@ -31,7 +31,8 @@
 
 export interface BlogSeoOverride {
   title: string
-  description: string
+  /** Sin ella se conserva la meta_description de la base. */
+  description?: string
   /**
    * H1 visible (y `headline` del BlogPosting). Solo cuando el título de la base
    * dice algo que el artículo no cumple.
@@ -50,63 +51,67 @@ export const BLOG_SEO_OVERRIDES: Record<string, BlogSeoOverride> = {
   'cuanto-cuesta-pagina-web-peru-2026': {
     title: '¿Cuánto cuesta una página web en Perú? Precios 2026',
     description:
-      'Landing S/2,500, web corporativa S/4,500–9,000, e-commerce desde S/6,500 y portal con sistema desde S/12,000. Qué incluye cada rango y qué lo encarece.',
+      'Landing S/2,500, web corporativa S/4,500–9,000, e-commerce desde S/6,500 y portal desde S/12,000 (montos referenciales). Qué incluye cada rango.',
   },
   // Resumen: logo desde S/800 · identidad visual completa desde S/3,500 ·
   // branding integral con manual desde S/6,500 · rebranding desde S/12,000.
+  // 28-sep-2026 (plan Perú §5). Las búsquedas son «logo precio» y «marca precios».
   'cuanto-cuesta-branding-peru-2026': {
-    title: '¿Cuánto cuesta el branding en Perú? Precios 2026',
+    title: 'Precio de un logo y branding en Perú 2026: desde S/800',
     description:
-      'Logo desde S/800, identidad visual completa desde S/3,500, branding con manual de marca desde S/6,500 y rebranding desde S/12,000. Qué incluye cada nivel.',
+      'Logo desde S/800, identidad visual desde S/3,500 y branding con manual de marca desde S/6,500 (montos referenciales). Qué incluye cada nivel.',
   },
   // Resumen: piso práctico S/600/mes · rangos S/1,500–8,000 según rubro ·
   // CPM S/8–25 · CPC S/0.30–1.50 · costo por lead S/3–40.
+  // 28-sep-2026 (plan Perú §5). ~640 impresiones en posición 7 con CTR 0,5 %. La
+  // cifra del title es la del propio resumen del artículo, y el artículo la marca
+  // como referencial (lib/blog-service-links.ts y el seed).
   'cuanto-cuesta-publicidad-facebook-instagram-peru-2026': {
-    title: 'Cuánto cuesta la publicidad en Facebook en Perú 2026',
+    title: '¿Cuánto cuesta la publicidad en Facebook en Perú? Desde S/600',
     description:
-      'Piso práctico de S/600 al mes y rangos de S/1,500 a S/8,000 según rubro. CPM de S/8 a S/25, CPC de S/0.30 a S/1.50 y costo por lead de S/3 a S/40.',
+      'Desde S/600 al mes de pauta; CPM de S/8 a S/25, CPC de S/0.30 a S/1.50 y costo por lead de S/3 a S/40 según rubro, más IGV. Montos referenciales.',
   },
   // Resumen: implementación S/1,500–25,000 · tienda estándar S/1,500–4,000 ·
   // mensualidad: Shopify desde USD 39, Tiendanube desde S/89, Woo solo hosting.
   'cuanto-cuesta-tienda-virtual-peru-2026': {
     title: '¿Cuánto cuesta una tienda virtual en Perú? 2026',
     description:
-      'Implementación de S/1,500 a S/25,000 y una tienda estándar lista para vender de S/1,500 a S/4,000, más la mensualidad de Shopify, Tiendanube o WooCommerce.',
+      'Implementación de S/1,500 a S/25,000 y tienda estándar de S/1,500 a S/4,000 (referenciales), más la mensualidad de Shopify, Tiendanube o WooCommerce.',
   },
   // Resumen: una tienda pequeña se sostiene desde ~S/150–400/mes en costos
   // fijos, sin contar pauta ni comisiones de pasarela.
   'cuanto-cuesta-mantener-tienda-virtual-peru-2026': {
     title: '¿Cuánto cuesta mantener una tienda virtual en Perú?',
     description:
-      'Una tienda pequeña se sostiene desde S/150 a S/400 al mes en costos fijos, sin contar pauta ni comisiones. El desglose de plataforma, pasarela y soporte.',
+      'Una tienda pequeña se sostiene con S/150 a S/400 al mes en costos fijos (referenciales), sin pauta ni comisiones. Desglose de plataforma, pasarela y soporte.',
   },
   // Resumen: freelance S/600–1,500/mes · agencia S/1,500–4,000+/mes según
   // piezas, plataformas y si incluye pauta.
   'cuanto-cuesta-community-manager-redes-lima-2026': {
     title: '¿Cuánto cuesta un community manager en Lima? 2026',
     description:
-      'Un freelance cobra de S/600 a S/1,500 al mes y una agencia de S/1,500 a S/4,000+. Qué incluye cada rango y cómo saber si tus redes venden o solo dan likes.',
+      'Un freelance cobra de S/600 a S/1,500 al mes y una agencia de S/1,500 a S/4,000+ (montos referenciales). Qué incluye cada rango y cómo medir si vende.',
   },
   // Resumen: S/1,800–5,000+/mes · local S/1,800 · competitivo S/3,000 ·
   // enterprise desde S/5,000 · netos, +18% IGV · rinde a partir del mes 3-6.
   'cuanto-cuesta-agencia-seo-lima-2026': {
     title: '¿Cuánto cuesta una agencia SEO en Lima? Precios 2026',
     description:
-      'De S/1,800 a S/5,000+ al mes: tier local S/1,800, competitivo S/3,000 y enterprise desde S/5,000. Rinde a partir del mes 3-6, no antes.',
+      'De S/1,800 a S/5,000+ al mes: tier local S/1,800, competitivo S/3,000 y enterprise desde S/5,000 (montos referenciales). Rinde desde el mes 3-6.',
   },
   // Resumen: fee de gestión desde S/1,800/mes + pauta mínima recomendada
   // S/1,500/mes pagada a Google → arranque serio ~S/3,300/mes.
   'cuanto-cuesta-google-ads-lima-agencia-2026': {
     title: '¿Cuánto cuesta Google Ads en Lima? Fee y pauta 2026',
     description:
-      'Son dos costos que no hay que mezclar: fee de agencia desde S/1,800 al mes y pauta mínima de S/1,500 pagada a Google. Un arranque serio ronda los S/3,300.',
+      'Dos costos que no hay que mezclar: fee de agencia desde S/1,800 al mes y pauta mínima de S/1,500 para Google. Arranque serio: ~S/3,300 (referencial).',
   },
   // Resumen: piso práctico S/700/mes en medios · CPM S/6–20 · CPC S/0.20–1.20 ·
   // CPA S/5–45 según rubro.
   'cuanto-cuesta-anunciar-tiktok-peru-cpm-cpa': {
     title: '¿Cuánto cuesta anunciar en TikTok en Perú? CPM y CPA',
     description:
-      'Piso práctico de S/700 al mes en medios, CPM de S/6 a S/20, CPC de S/0.20 a S/1.20 y CPA de S/5 a S/45 según rubro. Qué encarece y qué abarata tu campaña.',
+      'Piso práctico de S/700 al mes, CPM de S/6 a S/20, CPC de S/0.20 a S/1.20 y CPA de S/5 a S/45 según rubro (referenciales). Qué encarece tu campaña.',
   },
   // El artículo NO da una cifra en su resumen: explica el trabajo real (pagos
   // peruanos, envíos, velocidad, SEO, medición) y cuándo hace falta una
@@ -128,7 +133,7 @@ export const BLOG_SEO_OVERRIDES: Record<string, BlogSeoOverride> = {
   'tiktok-ads-peru-2026-guia-completa-empezar-vender': {
     title: 'TikTok Ads en Perú: guía para empezar a vender',
     description:
-      'Se puede empezar desde S/700 al mes, pero lo que decide no es el dinero: es el creativo. De crear la cuenta a Spark Ads y medir con el píxel, paso a paso.',
+      'Se puede empezar desde S/700 al mes (monto referencial), pero lo que decide es el creativo. De crear la cuenta a Spark Ads y medir con el píxel, paso a paso.',
   },
   // El artículo analiza DIEZ webs peruanas concretas: BCP, Plaza Vea,
   // Cinepólis, Don Italo, Sodimac, Inkaterra… Nombrarlas es lo que da el clic.
@@ -147,10 +152,13 @@ export const BLOG_SEO_OVERRIDES: Record<string, BlogSeoOverride> = {
   // El resto no se toca: la búsqueda «parafrasist» es NAVEGACIONAL (desde Lima
   // salen primero parafrasist.com, parafrasis.org y QuillBot; este artículo va
   // 4.º orgánico) y en 90 días trajo 137 sesiones y 1 evento clave.
+  // 28-sep-2026 (plan Perú §5). 15.710 impresiones y CTR 0,7 % en 90 d. La gente
+  // pregunta si es gratis: se verificó en parafrasist.com (plan gratuito hasta
+  // 5.000 caracteres y plan de pago). El title evita «Parafrasist: …», que Google recorta.
   'parafrasist-la-mejor-herramienta-para-resumir-textos': {
-    title: 'Parafrasist: Qué es y cómo usarla para resumir textos',
+    title: '¿Parafrasist es gratis? Qué hace, límites y alternativas 2026',
     description:
-      'Qué hace Parafrasist al parafrasear y resumir en español, cómo usarla sin meterte en problemas en un trabajo académico, sus límites y qué alternativas hay.',
+      'Parafrasist tiene plan gratuito y de pago. Qué hace al resumir y parafrasear, cómo usarla sin plagio en la universidad, sus límites y alternativas en español.',
   },
   // 16-sep-2026. Search Console 28 d: 539 impresiones, posición 6,1, CTR 1,7 %,
   // 83 % desde móvil y repartidas por México, Colombia, Argentina, Chile y Perú
@@ -160,10 +168,12 @@ export const BLOG_SEO_OVERRIDES: Record<string, BlogSeoOverride> = {
   // Se conserva «importancia» en el title: en 90 días «porque es importante la
   // publicidad» sumó 182 impresiones y «importancia de la publicidad», 30.
   // Todo lo que dicen el lead y la descripción está en el cuerpo del artículo.
+  // 28-sep-2026 (plan Perú §5). El artículo sigue teniendo CINCO claves y no trae
+  // ejemplos por punto: el title no promete diez ni «con ejemplos».
   'caracteristicas-de-la-publicidad-importancia-y-claves-para-el-exito': {
-    title: 'Características de la publicidad: Las 5 claves y su importancia',
+    title: 'Características de la publicidad: 5 claves que sí funcionan',
     description:
-      'Las 5 características de la publicidad que funciona: creatividad, segmentación, mensaje claro, conexión emocional y llamada a la acción. Qué aporta cada una.',
+      'Las 5 características de una buena publicidad: creatividad, segmentación, mensaje claro, conexión emocional y llamada a la acción. Qué aporta cada una.',
     heading: 'Las 5 características de la publicidad y por qué importan',
     lead:
       '<p><strong>Las cinco características de la publicidad que funciona son la creatividad y originalidad, la segmentación y relevancia, un mensaje claro y conciso, la conexión emocional y una llamada a la acción.</strong> Juntas deciden si un anuncio se distingue en un mercado saturado, si llega a las personas con más probabilidad de interesarse y si consigue que hagan algo concreto: comprar, suscribirse o visitar un sitio web. Abajo se explica cada una.</p>',
@@ -180,6 +190,33 @@ export const BLOG_SEO_OVERRIDES: Record<string, BlogSeoOverride> = {
     description:
       'Inca Kola subestimó la tradición de la chicha morada. Los 3 errores que hundieron La Moradita y qué revisar antes de lanzar un producto nuevo.',
   },
+
+  // 28-sep-2026. Titles de 66 a 70 caracteres (jev-seo, JEV-007): el meta_title
+  // de la base les añade « | 3R Core» y Google los cortaba. Se quita solo la
+  // marca —la keyword y el resto del texto quedan igual— y la descripción de la
+  // base no se toca (por eso estas entradas no llevan `description`).
+  // Mismo criterio que el resto del mapa: los titles de aquí van sin marca.
+  'cuantos-videos-ugc-necesitas-escalar-meta-ads': {
+    title: 'Cuántos creativos necesitas al mes para escalar en Meta Ads',
+  },
+  'cuanto-cuesta-contenido-ugc-peru-2026': {
+    title: 'Cuánto cuesta el contenido UGC en Perú 2026 — Precios reales',
+  },
+  'como-elegir-influencers-peru-audiencia-real': {
+    title: 'Cómo elegir influencers en Perú sin pagar seguidores falsos',
+  },
+  'medir-campanas-influencers-peru-atribucion': {
+    title: 'Cómo medir campañas con influencers en Perú — Atribución',
+  },
+  'que-es-noticia-en-tu-empresa-relaciones-publicas': {
+    title: 'Qué es noticia en tu empresa — Guía de relaciones públicas',
+  },
+  'branding-emprendedores-peru-guia': {
+    title: 'Branding para emprendedores en Perú 2026 — Guía completa',
+  },
+  'como-elegir-agencia-diseno-web-lima': {
+    title: 'Cómo elegir agencia de diseño web en Lima — 7 filtros 2026',
+  },
 }
 
 /**
@@ -191,22 +228,38 @@ export const BLOG_SEO_OVERRIDES: Record<string, BlogSeoOverride> = {
  */
 export const BLOG_SEO_OVERRIDES_EN: Record<string, BlogSeoOverride> = {
   // Artículo: Shopify $25–$399/mes; WooCommerce gratis + hosting $25–$350/mes.
+  // 28-sep-2026. The article already has a Squarespace/Wix/BigCommerce section.
   'best-ecommerce-platform-for-small-business': {
-    title: 'Ecommerce Platform Comparison 2026: Shopify vs WooCommerce',
+    title: 'Ecommerce Platform Comparison 2026: Shopify vs WooCommerce vs Wix',
     description:
-      'Shopify costs $25–$399 a month; WooCommerce is free but hosting runs $25–$350 a month. Fees, SEO and who each platform fits, with no affiliate links.',
+      'Shopify costs $25–$399 a month; WooCommerce is free, hosting $25–$350. Wix, Squarespace and BigCommerce too. Prices for reference, no affiliate links.',
   },
   // Artículo: «Roughly 40 million U.S. residents speak Spanish at home».
+  // 28-sep-2026. Separación de intenciones (plan USA): este post se llevaba las
+  // 385 impresiones USA de «spanish seo / seo spanish» y la landing
+  // /en/spanish-seo-services apenas salía. El post se queda la guía («how to»)
+  // y enlaza a la landing con el ancla exacta «Spanish SEO services»; la
+  // landing se queda «services / agency / pricing». La respuesta directa del
+  // `lead` resume las secciones del propio artículo (hreflang, keyword research
+  // en español, señales locales). El contenido vive en Supabase: el seed
+  // (lib/blog-seed/posts-usa2-2026-08.ts) lleva el mismo enlace, pero no cambia
+  // lo publicado hasta volver a llamar a /api/admin/seed-blogs.
   'spanish-seo-for-us-businesses': {
-    title: 'Spanish SEO for U.S. Businesses: How to Rank in Spanish',
+    title: 'How to Do Spanish SEO in the U.S.: A Step-by-Step Guide',
     description:
-      'Roughly 40 million U.S. residents speak Spanish at home. How to rank for their searches: es-US hreflang, native keyword research and local pages.',
+      'How to rank in Spanish in the U.S.: es-US hreflang, keyword research done in Spanish, local signals and content. A practical guide for U.S. businesses.',
+    heading: 'How to do Spanish SEO for a U.S. business: a step-by-step guide',
+    lead:
+      '<p>Doing Spanish SEO in the U.S. comes down to three steps: give every Spanish page its own URL with hreflang declared in both directions, research keywords in Spanish instead of translating the English list, and build local signals in Spanish, starting with the Google Business Profile. The sections below walk through each one. If you would rather have a team run it for you, see our <a href="/en/spanish-seo-services">Spanish SEO services</a> (from $500/month, reference price).</p>',
   },
   // Artículo: $850–$10,000; la mayoría entre $1,200 y $2,400.
+  // 28-sep-2026. Enlace a la calculadora nueva (/en/website-cost-calculator).
   'how-much-does-a-small-business-website-cost': {
     title: 'Small Business Website Cost in 2026: Real Price Ranges',
     description:
       'A small business website costs $850 to $10,000 to build, and most land at $1,200–$2,400. What each band includes and the yearly costs after launch.',
+    lead:
+      '<p>Want a figure for your own project? Our <a href="/en/website-cost-calculator">website cost calculator</a> turns site type, number of pages and languages into a reference price range in U.S. dollars.</p>',
   },
 }
 

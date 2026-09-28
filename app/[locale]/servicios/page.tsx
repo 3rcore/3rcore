@@ -32,9 +32,13 @@ export default async function Servicios({ params }: { params: any }) {
 
   // H1 oculto del índice de servicios (antes vivía en el layout y duplicaba
   // el H1 de cada página de servicio).
+  // 28-sep-2026. /us heredaba el H1 de Perú («…en Lima, Perú»): a un hispano
+  // de EE.UU. le decía «esto no es para ti». En /us se venden tres servicios.
   const hiddenH1 = isEn
     ? 'Digital marketing services for U.S. businesses: branding, social media, Google Ads, SEO and web development'
-    : 'Servicios de marketing digital en Lima, Perú: branding, redes sociales, Google Ads, SEO y desarrollo web';
+    : locale === 'us'
+      ? 'Servicios de marketing digital para negocios hispanos en Estados Unidos: páginas web, SEO y tiendas online'
+      : 'Servicios de marketing digital en Lima, Perú: branding, redes sociales, Google Ads, SEO y desarrollo web';
 
   return (
     <main>

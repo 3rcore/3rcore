@@ -181,9 +181,10 @@ export const USA2_POSTS_2026_08: SeedPost[] = [
   {
     slug: "spanish-seo-for-us-businesses",
     locale: "en",
-    title: "Spanish SEO for U.S. Businesses: The Cheapest Traffic Nobody Is Bidding On",
-    focus_keyword: "spanish seo united states",
-    meta_title: "Spanish SEO for U.S. Businesses — Underserved Search | 3R Core",
+    // 28-sep-2026. Guía «how to»; la intención comercial es de /en/spanish-seo-services.
+    title: "How to Do Spanish SEO for a U.S. Business: A Step-by-Step Guide",
+    focus_keyword: "how to do spanish seo",
+    meta_title: "How to Do Spanish SEO in the U.S.: A Step-by-Step Guide",
     meta_description: "How to rank for Spanish-language searches in your U.S. service area: hreflang, URL structure, keyword research in Spanish and the mistakes that make Google serve the wrong page.",
     excerpt: "Spanish queries in most U.S. service areas have a fraction of the competing content their English equivalents do. Here's how to structure a site to capture them.",
     og_title: "Spanish SEO for U.S. Businesses",
@@ -263,7 +264,7 @@ export const USA2_POSTS_2026_08: SeedPost[] = [
 <li><strong>Stopping at the landing page</strong> while forms, emails and the sales call stay in English.</li>
 </ol>
 
-<p>We produce Spanish-language SEO and content with a native Spanish-speaking team, and we structure it so Google serves the right version to the right searcher. <a href="/en/seo-agency">See how we run SEO</a>, or read <a href="/en/blogs/why-translated-spanish-ads-underperform">why translated Spanish ads underperform</a>.</p>
+<p>We produce Spanish-language SEO and content with a native Spanish-speaking team, and we structure it so Google serves the right version to the right searcher. If you want it done for you, see our <a href="/en/spanish-seo-services">Spanish SEO services</a> (from $500/month, reference price) or <a href="/en/seo-agency">how we run SEO</a>, or read <a href="/en/blogs/why-translated-spanish-ads-underperform">why translated Spanish ads underperform</a>.</p>
 
 <h2>Frequently asked questions</h2>
 

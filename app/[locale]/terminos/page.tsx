@@ -88,7 +88,7 @@ export default function Terminos() {
                     <div className="group relative p-0.5 rounded-2xl overflow-hidden tracking-wide transition-all hover:shadow-[0_0_20px_rgba(156,39,176,0.2)]">
                       <div className="absolute inset-0 bg-gradient-to-r from-[#E91E63] to-[#9C27B0]" />
                       <div className="relative bg-[#130218] p-6 rounded-[14px]">
-                        <h4 className="text-white font-bold mb-2 uppercase text-xs tracking-widest">{t('sections.s5.physical')}</h4>
+                        <h3 className="text-white font-bold mb-2 uppercase text-xs tracking-widest">{t('sections.s5.physical')}</h3>
                         <p className="text-sm font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#E91E63] to-[#9C27B0]">Sede Central</p>
                         <p className="text-sm text-gray-300">Alameda de la Paz 187, primer piso, La Molina, Lima.</p>
                       </div>
@@ -98,7 +98,7 @@ export default function Terminos() {
                     <div className="group relative p-0.5 rounded-2xl overflow-hidden tracking-wide transition-all hover:shadow-[0_0_20px_rgba(156,39,176,0.2)]">
                       <div className="absolute inset-0 bg-gradient-to-r from-[#E91E63] to-[#9C27B0]" />
                       <div className="relative bg-[#130218] p-6 rounded-[14px]">
-                        <h4 className="text-white font-bold mb-2 uppercase text-xs tracking-widest">{t('sections.s5.digital')}</h4>
+                        <h3 className="text-white font-bold mb-2 uppercase text-xs tracking-widest">{t('sections.s5.digital')}</h3>
                         <p className="text-sm font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#E91E63] to-[#9C27B0]">info@3rcore.com</p>
                         <p className="text-[10px] text-gray-300 mt-1 uppercase">{t('sections.s5.subject')}</p>
                       </div>

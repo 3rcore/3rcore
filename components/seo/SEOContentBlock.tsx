@@ -1,5 +1,6 @@
 "use client"
-import { useTranslations } from "next-intl"
+import { useTranslations, useLocale } from "next-intl"
+import { isIndexableIn } from "@/lib/indexableRoutes"
 import type { AppPathname } from "@/i18n/routing";
 import { Link } from "@/i18n/routing"
 
@@ -26,6 +27,13 @@ export default function SEOContentBlock({ namespace, paragraphs, relatedLinks, s
 
   const items = Array.from({ length: paragraphs }, (_, i) => i + 1)
 
+  // 28-sep-2026. En /en los «relacionados» de /seo-agency y
+  // /services/web-development enlazaban a Google Ads, Social Media y Branding,
+  // que en EE.UU. van noindex (plan USA: solo SEO, web y tiendas). Se omiten
+  // los destinos que no se indexan en el idioma actual.
+  const locale = useLocale()
+  const visibleLinks = (relatedLinks ?? []).filter((l) => isIndexableIn(l.href, locale))
+
   return (
     <section className="relative z-10 px-6 md:px-10 pt-8 pb-20" aria-labelledby={`${namespace}-seo-heading`}>
       <div className="max-w-4xl mx-auto">
@@ -41,13 +49,13 @@ export default function SEOContentBlock({ namespace, paragraphs, relatedLinks, s
           ))}
         </div>
 
-        {showRelated && relatedLinks && relatedLinks.length > 0 && (
+        {showRelated && visibleLinks.length > 0 && (
           <div className="mt-10 pt-6 border-t border-white/20">
             <p className="text-white/80 text-sm uppercase tracking-widest font-light mb-4">
               {t("relatedTitle")}
             </p>
             <ul className="flex flex-wrap gap-3">
-              {relatedLinks.map((link) => (
+              {visibleLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}

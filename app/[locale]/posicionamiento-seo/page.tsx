@@ -15,9 +15,9 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
   return generatePageMetadata({
     locale,
     path: '/posicionamiento-seo',
-    titleEs: 'Agencia SEO en Lima, Perú — Posicionamiento Web | 3R Core',
+    titleEs: 'Agencia SEO en Lima y Perú — Posicionamiento SEO | 3R Core',
     titleEn: 'SEO Agency for U.S. Brands | 3R Core',
-    descriptionEs: 'Agencia de posicionamiento SEO en Lima, Perú (4,7★ en Google): auditoría, optimización, enlazado interno y contenido con reporte mensual. Desde S/1,800/mes.',
+    descriptionEs: 'Agencia SEO en Lima con equipo propio: SEO técnico, contenido y enlaces, con acceso a tu Search Console. 4,7★ en Google. Desde S/1,800/mes (precio referencial).',
     descriptionEn: 'SEO for U.S. businesses by an in-house team, contracted through our U.S. subsidiary: keyword research, technical SEO, content and link building. From $500/month.',
     titleUs: 'Posicionamiento SEO en Español para EE.UU. | 3R Core',
     descriptionUs: 'Posicionamiento SEO en español e inglés para negocios en Estados Unidos: keyword research, SEO técnico, contenido y SEO local. Las búsquedas en español suelen tener menos competencia. Desde $500/mes sin contratos forzosos.',
@@ -91,9 +91,13 @@ export default async function Posicionamientoseo({ params }: { params: any }) {
 
   return (
     <>
+      {/* 28-sep-2026. En /es el HTML del prototipo ya declara su propio FAQPage
+          con las preguntas que se ven en pantalla; el de SEOFAQ (messages) son
+          otras preguntas que en /es no se muestran. Dos FAQPage en la misma URL
+          es un error en Search Console, así que en /es se emite solo el visible. */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify([webPageSchema, serviceSchema, faqSchema, breadcrumbSchema]) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(locale === 'es' ? [webPageSchema, serviceSchema, breadcrumbSchema] : [webPageSchema, serviceSchema, faqSchema, breadcrumbSchema]) }}
       />
       {/* Rediseño aprobado (mix 18-ago): es sirve el prototipo; us y en, su versión propia */}
       {locale === 'es' ? <ProtoPage frag="posicionamiento-seo" /> : <LandingClient />}

@@ -24,6 +24,8 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
     // /es y va noindex en /en y /us para no diluir ese foco, igual que
     // /servicios/marketing-clinicas.
     noindex: locale !== 'es',
+    // Y el hreflang solo declara /es: las versiones /en y /us van noindex.
+    onlyLocales: ['es'],
   })
 }
 

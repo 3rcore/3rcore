@@ -1,6 +1,7 @@
 import Cotizador from "@/components/cotizador/Cotizador"
 import CotizarGuia from "./Guia"
 import { setRequestLocale } from "next-intl/server"
+import QuoteDetailsEn from "./QuoteDetailsEn"
 
 export default async function CotizarPage({ params }: { params: any }) {
   const { locale } = await params
@@ -13,6 +14,7 @@ export default async function CotizarPage({ params }: { params: any }) {
       <Cotizador locale={locale} />
       {/* Texto de apoyo solo en Perú: /en y /us siguen igual. */}
       {locale === 'es' && <CotizarGuia />}
+      {locale === 'en' && <QuoteDetailsEn />}
     </main>
   )
 }

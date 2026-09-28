@@ -27,8 +27,12 @@ const Footer = () => {
           // El índice de servicios recibía 2 enlaces internos mientras sus
           // propias hijas recibían entre 41 y 71. La jerarquía estaba del revés.
           { href: '/servicios', label: tn('services.todos') },
-          { href: '/servicios/google-ads', label: tn('services.googleAds') },
-          { href: '/posicionamiento-seo', label: tn('services.seo') },
+          // 28-sep-2026. Ancla exacta en el pie de las ~180 páginas de /es: es
+          // la búsqueda que cada página debe ganar. «Agencia de Google Ads en
+          // Lima» la sostenía /performance-marketing (landing de campañas, en
+          // noindex), que la va a perder al recrawlear.
+          { href: '/servicios/google-ads', label: 'Agencia de Google Ads en Lima' },
+          { href: '/posicionamiento-seo', label: 'Agencia SEO en Lima' },
           { href: '/servicios/web-development', label: tn('services.webDesign') },
           { href: '/servicios/socialmedia', label: tn('services.socialMedia') },
           { href: '/servicios/branding', label: tn('services.branding') },

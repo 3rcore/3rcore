@@ -8,9 +8,9 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
   return generatePageMetadata({
     locale,
     path: '/servicios/google-ads',
-    titleEs: 'Agencia de Google Ads en Lima, Perú — SEM | 3R Core',
+    titleEs: 'Agencia de Google Ads en Lima y Perú — Campañas SEM | 3R Core',
     titleEn: 'Google Ads Agency for U.S. Brands | 3R Core',
-    descriptionEs: 'Agencia de Google Ads en Lima, Perú (4,7★ en Google): campañas Search, Performance Max, Shopping y YouTube con reporte mensual. Desde S/1,800/mes.',
+    descriptionEs: 'Agencia de Google Ads en Lima con equipo propio: Search, Performance Max y Shopping en tu propia cuenta. 4,7★ en Google. Desde S/1,800/mes (referencial).',
     descriptionEn: 'Google Ads managed by an in-house team for U.S. businesses through our U.S. subsidiary: Search, Performance Max, YouTube and Shopping. From $800/month.',
     titleUs: 'Agencia de Google Ads en Español para EE.UU. | 3R Core',
     descriptionUs: 'Campañas de Google Ads segmentadas por idioma y ciudad para llegar al público hispano en Estados Unidos: Search, Performance Max, YouTube, Display y Shopping. Gestión desde $800/mes con reportes mensuales.',
@@ -92,7 +92,10 @@ export default async function GoogleAdsLayout({ children, params }: { children: 
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify([serviceSchema, faqSchema, breadcrumbSchema]) }}
+        // 28-sep-2026. En /es el HTML del prototipo ya trae su FAQPage con las
+        // preguntas visibles; GoogleAdsFAQ son otras que en /es no se ven. Dos
+        // FAQPage en la misma URL dan error en Search Console.
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(locale === 'es' ? [serviceSchema, breadcrumbSchema] : [serviceSchema, faqSchema, breadcrumbSchema]) }}
       />
       {children}
     </>

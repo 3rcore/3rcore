@@ -91,6 +91,8 @@ export const pathnames = {
   // páginas del sitio, y sin entrada en `pathnames` el tipo AppPathname lo
   // impedía. Solo /es: en /en el mercado lo ataca /nearshore-marketing-agency.
   '/agencia-marketing-digital-lima': '/agencia-marketing-digital-lima',
+  // 28-sep-2026. Precio del SEO en Perú. Solo /es.
+  '/cuanto-cuesta-el-seo-en-peru': '/cuanto-cuesta-el-seo-en-peru',
 
   // Institucionales
   '/nosotros': {es: '/nosotros', us: '/nosotros', en: '/about'},

@@ -10,7 +10,7 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
     path: '/servicios/web-development',
     titleEs: 'Diseño de Páginas Web en Lima, Perú — E-commerce | 3R Core',
     titleEn: 'Web Design & Development for U.S. Brands | 3R Core',
-    descriptionEs: 'Diseño y creación de páginas web en Lima, Perú: sitios corporativos, landing pages y e-commerce (Shopify, WooCommerce). SEO técnico desde S/1,800.',
+    descriptionEs: 'Diseño de páginas web en Lima, Perú: sitios corporativos, landing pages y e-commerce (Shopify, WooCommerce) con SEO técnico. Desde S/1,800 (referencial).',
     descriptionEn: 'Corporate sites, landing pages and e-commerce built by our in-house team for U.S. businesses. Technical SEO included, from $850 with hosting.',
     // 28-sep-2026. Plan USA: la SERP de «diseño de páginas web para negocios
     // hispanos en EE.UU.» es débil (disenowebusa, carlodigital con 578

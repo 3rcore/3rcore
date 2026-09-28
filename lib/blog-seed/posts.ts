@@ -59,6 +59,7 @@ export const SEED_POSTS: SeedPost[] = [
     featured_image_alt: "Diseño web profesional Perú 2026 - precios y tipos de proyecto",
     author_name: AUTHOR,
     content: `<p class="lead"><strong>Resumen ejecutivo:</strong> en 2026 una <strong>página web profesional en Perú</strong> cuesta entre <strong>S/2,500 y S/25,000</strong> según tipo, alcance e integraciones. Una landing de campaña arranca en S/2,500, una web corporativa entre S/4,500 y S/9,000, un e-commerce con Shopify o WooCommerce desde S/6,500, y un portal con sistema interno desde S/12,000. Lo que mueve el precio no es la cantidad de páginas, sino las integraciones, el SEO técnico, la velocidad y el copy. Esta guía te explica cuánto pagar por cada tipo de proyecto, qué debe incluir y cómo evitar las trampas más comunes.</p>
+<p>Los montos de esta guía son referenciales. Si quieres el precio para tu proyecto, en 3R Core hacemos <a href="/es/servicios/web-development">diseño de páginas web en Lima</a> y puedes calcularlo en el <a href="/es/cotizar">cotizador</a>.</p>
 
 <h2>¿Por qué varían tanto los precios de páginas web en Perú?</h2>
 <p>Si pides 5 cotizaciones en Lima para "una página web", recibes precios entre <strong>S/500 y S/15,000 para el mismo brief</strong>. La diferencia no es estafa: es que cada estudio o agencia define "página web" distinto. Algunos cobran S/500 por una plantilla rellenada en WordPress sin estrategia; otros cobran S/15,000 por una web a medida con investigación de mercado, copywriting profesional, SEO técnico, integración con CRM y testing. Ambos productos son legítimos para clientes distintos.</p>
@@ -607,6 +608,7 @@ export const SEED_POSTS: SeedPost[] = [
     featured_image_alt: "Cuánto cuesta el branding en Perú 2026 - precios y proyectos",
     author_name: AUTHOR,
     content: `<p class="lead"><strong>Resumen ejecutivo:</strong> en 2026, el costo de hacer <strong>branding profesional en Perú</strong> oscila entre <strong>S/800 y S/25,000</strong>: un logo aislado va desde S/800, una identidad visual completa desde S/3,500, un proyecto de branding integral con manual de marca desde S/6,500, y un rebranding empresarial desde S/12,000. La diferencia no está en la cantidad de archivos entregados, sino en la profundidad estratégica detrás de cada decisión visual. Esta guía explica cuánto invertir según el momento de tu negocio y qué debe incluir cada nivel.</p>
+<p>Los montos de esta guía son referenciales: sirven para ubicar tu presupuesto, no son una cotización. Si quieres el precio para tu caso, en 3R Core somos <a href="/es/servicios/branding">agencia de branding en Lima</a> y te lo damos por escrito.</p>
 
 <h2>Qué se entiende por "branding" en Perú</h2>
 <p>El término <strong>branding</strong> se usa de manera tan amplia que confunde. En esta guía hablamos de cuatro niveles distintos:</p>
@@ -914,6 +916,7 @@ export const SEED_POSTS: SeedPost[] = [
     featured_image_alt: "Manual de marca estructura plantilla 2026",
     author_name: AUTHOR,
     content: `<p class="lead"><strong>Resumen ejecutivo:</strong> un <strong>manual de marca</strong> profesional en 2026 tiene 12 secciones obligatorias: estrategia, logo + variantes, paleta de colores con códigos exactos, tipografía, iconografía, fotografía, ilustración, tono de voz, aplicaciones digitales, aplicaciones impresas, qué NO hacer, y casos de aplicación. Sin estas 12, el manual es decoración: el equipo y los proveedores lo ignoran porque no resuelve sus dudas reales. Esta guía te explica cada sección con ejemplos peruanos y los errores más comunes que vacían el documento.</p>
+<p>Si prefieres que un equipo arme el manual contigo, en 3R Core somos <a href="/es/servicios/branding">agencia de branding en Lima</a>: identidad visual, logotipo, manual de marca y aplicaciones.</p>
 
 <h2>Para qué sirve realmente un manual de marca</h2>
 <p>El <strong>manual de marca</strong> (también llamado brand book, brand guidelines, manual de identidad corporativa) es <strong>el documento que rige cómo se aplica tu marca en cada punto de contacto</strong>. Si no existe, cada proveedor (diseñador web, fotógrafo, agencia de redes, imprenta, fabricante de packaging) interpreta la marca a su manera. Resultado: marca incoherente, cliente confundido, recordación bajísima.</p>
@@ -1526,6 +1529,7 @@ export const SEED_POSTS: SeedPost[] = [
     featured_image_alt: "Costos de publicidad en Facebook e Instagram en Perú 2026",
     author_name: AUTHOR,
     content: `<p class="lead"><strong>Resumen ejecutivo:</strong> en 2026 anunciar en <strong>Facebook e Instagram (Meta Ads) en Perú</strong> tiene un piso práctico de <strong>S/600 al mes</strong> para pymes y rangos de <strong>S/1,500 a S/8,000</strong> según rubro y objetivo. El CPM (costo por mil impresiones) ronda <strong>S/8 a S/25</strong>, el CPC entre <strong>S/0.30 y S/1.50</strong>, y el costo por lead va de <strong>S/3 a S/40</strong> según industria. Lo que define tu costo real no es la plataforma: es la calidad de tu creativo, la segmentación y tu tasa de cierre.</p>
+<p>Los montos de esta guía son referenciales. Si quieres saber cuánto te costaría a ti, calcula tu presupuesto en el <a href="/es/cotizar">cotizador</a> o escríbenos: en 3R Core trabajamos como <a href="/es/servicios/meta-ads">agencia de Meta Ads en Lima</a>.</p>
 
 <h2>Cómo funciona el costo en Meta Ads (para entender la factura)</h2>
 <p>No pagas un "precio fijo". Meta funciona por <strong>subasta</strong>: compites con otros anunciantes por mostrar tu anuncio a un mismo público. Tu costo depende de tres factores: cuánta gente quiere el mismo público, qué tan relevante es tu anuncio (buen creativo = costo más bajo) y el objetivo que elegiste. Por eso el mismo presupuesto rinde distinto en dos negocios: el que tiene mejor creativo paga menos por el mismo resultado.</p>

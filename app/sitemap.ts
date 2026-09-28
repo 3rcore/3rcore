@@ -74,6 +74,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // /servicios). Solo /es: el slug es español y en /en el mercado se ataca
     // con /nearshore-marketing-agency, que es otro eje.
     { url: `${baseUrl}/es/agencia-marketing-digital-lima`, priority: 0.95 },
+    // 28-sep-2026. «cuánto cuesta seo perú»: solo /es.
+    { url: `${baseUrl}/es/cuanto-cuesta-el-seo-en-peru`, priority: 0.8 },
   ]
 
   // Antes el sitemap listaba SOLO /es (163 URLs, cero /en como <loc>): las

@@ -1,5 +1,6 @@
 import { Link } from '@/i18n/navigation'
 import type { AppPathname } from '@/i18n/routing'
+import { isIndexableIn } from '@/lib/indexableRoutes'
 
 /**
  * Bloque de contenido SSR del índice de servicios.
@@ -142,6 +143,13 @@ export default function ServiciosSeoSection({ locale }: { locale: string }) {
   // /us es español pero factura en dólares: los rangos en soles de /es no le
   // corresponden y los de /en son de otro texto, así que no se le enseña ninguno.
   const isUs = locale === 'us'
+  // 28-sep-2026. En /en y /us los servicios que allí no se venden van noindex
+  // y /casos-de-exito solo existe en /es: el índice enlazaba a tres páginas
+  // noindex (Google Ads, Social Media, Branding) y a /en/casos-de-exito, que
+  // da 404 (JEV-001 y JEV-002). La tarjeta se queda —es texto con precio—,
+  // pero sin enlace cuando el destino no se indexa en este idioma.
+  const linkable = (href: AppPathname) => isIndexableIn(href, locale)
+  const links = t.links.filter((l) => linkable(l.href))
 
   return (
     <section className="relative z-10 px-6 md:px-12 py-16 md:py-24 max-w-6xl mx-auto">
@@ -156,12 +164,14 @@ export default function ServiciosSeoSection({ locale }: { locale: string }) {
               <span className="text-[#E91E63] font-bold text-sm whitespace-nowrap">{r.price}</span>
             </div>
             <p className="text-white/50 text-sm leading-relaxed mb-4">{r.detail}</p>
-            <Link
-              href={r.href}
-              className="text-white/70 text-[11px] font-bold uppercase tracking-[0.18em] underline decoration-[#A21F8A]/50 underline-offset-4 hover:text-white transition-colors"
-            >
-              {t.verMas}
-            </Link>
+            {linkable(r.href) && (
+              <Link
+                href={r.href}
+                className="text-white/70 text-[11px] font-bold uppercase tracking-[0.18em] underline decoration-[#A21F8A]/50 underline-offset-4 hover:text-white transition-colors"
+              >
+                {t.verMas}
+              </Link>
+            )}
           </div>
         ))}
       </div>
@@ -180,12 +190,14 @@ export default function ServiciosSeoSection({ locale }: { locale: string }) {
           <div key={c.name} className="rounded-[18px] border border-white/10 bg-white/[0.03] p-6">
             <h3 className="text-base font-semibold mb-2 text-white/90">{c.name}</h3>
             <p className="text-white/50 text-sm leading-relaxed mb-3">{c.detail}</p>
-            <Link
-              href={c.href}
-              className="text-white/70 text-[11px] font-bold uppercase tracking-[0.18em] underline decoration-[#A21F8A]/50 underline-offset-4 hover:text-white transition-colors"
-            >
-              {t.verMas}
-            </Link>
+            {linkable(c.href) && (
+              <Link
+                href={c.href}
+                className="text-white/70 text-[11px] font-bold uppercase tracking-[0.18em] underline decoration-[#A21F8A]/50 underline-offset-4 hover:text-white transition-colors"
+              >
+                {t.verMas}
+              </Link>
+            )}
           </div>
         ))}
       </div>
@@ -197,12 +209,14 @@ export default function ServiciosSeoSection({ locale }: { locale: string }) {
           <div key={c.name} className="rounded-[18px] border border-white/10 bg-white/[0.03] p-6">
             <h3 className="text-base font-semibold mb-2 text-white/90">{c.name}</h3>
             <p className="text-white/50 text-sm leading-relaxed mb-3">{c.detail}</p>
-            <Link
-              href={c.href}
-              className="text-white/70 text-[11px] font-bold uppercase tracking-[0.18em] underline decoration-[#A21F8A]/50 underline-offset-4 hover:text-white transition-colors"
-            >
-              {t.verMas}
-            </Link>
+            {linkable(c.href) && (
+              <Link
+                href={c.href}
+                className="text-white/70 text-[11px] font-bold uppercase tracking-[0.18em] underline decoration-[#A21F8A]/50 underline-offset-4 hover:text-white transition-colors"
+              >
+                {t.verMas}
+              </Link>
+            )}
           </div>
         ))}
       </div>
@@ -212,7 +226,7 @@ export default function ServiciosSeoSection({ locale }: { locale: string }) {
         <p className="text-white/55 text-sm md:text-base leading-relaxed mb-8">{t.como}</p>
         <h3 className="text-base font-semibold mb-4 text-white/90">{t.linksH3}</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {t.links.map((l) => (
+          {links.map((l) => (
             <Link
               key={l.name}
               href={l.href}

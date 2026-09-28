@@ -11,6 +11,7 @@ import { notFound } from "next/navigation"
 import { BASE_URL, generateBreadcrumbSchema } from "@/lib/metadata"
 import { buildAuthorNode } from "@/lib/seoSchemas"
 import { setRequestLocale } from "next-intl/server"
+import { unstable_cache } from "next/cache"
 
 export const revalidate = 600
 
@@ -58,6 +59,77 @@ export async function generateMetadata(
   }
 }
 
+// Columnas que usa el listado (tarjetas + schema Blog/ItemList). Sin `content`.
+const LIST_COLUMNS =
+  "id, slug, title, excerpt, featured_image, featured_image_alt, og_image, published_at, created_at, updated_at, author_name"
+
+// 30-ago-2026. Si Supabase falla, este listado devolvía 500 en vez de degradar:
+// el índice del blog entero caía por un problema de base de datos. Ahora se
+// traga el fallo y se sirve lo que haya —en /us, los artículos que viven en el
+// código— con el aviso de que la lista puede estar incompleta. El fallo se
+// lanza DENTRO de la función cacheada y se captura fuera: así un error de la
+// base no se queda guardado diez minutos.
+const cachedListing = unstable_cache(
+  async (locFilter: string[], cat: string | null, from: number): Promise<{ posts: unknown[] | null; count: number | null }> => {
+      const supabase = createServerClient()
+      const query = cat
+        ? supabase
+            .from("blog_posts")
+            .select(`${LIST_COLUMNS}, category:blog_categories!inner(name, slug)`, { count: "exact" })
+            .eq("status", "published")
+            .in("locale", locFilter)
+            .not("slug", "in", CONSOLIDATED_SLUGS_IN)
+            .eq("category.slug", cat)
+        : supabase
+            .from("blog_posts")
+            .select(`${LIST_COLUMNS}, category:blog_categories(name, slug)`, { count: "exact" })
+            .eq("status", "published")
+            .in("locale", locFilter)
+            // 16-sep-2026. Los seis artículos consolidados (lib/blog-consolidated.ts)
+            // redirigen con 308: el índice los enlazaba en las páginas 3, 4 y 5.
+            .not("slug", "in", CONSOLIDATED_SLUGS_IN)
+      const res = await query
+        .order("published_at", { ascending: false })
+        .range(from, from + PAGE_SIZE - 1)
+      if (res.error) throw res.error
+      return { posts: res.data as unknown[] | null, count: res.count }
+  },
+  ["blogs-listing-v1"],
+  { revalidate: 600, tags: ["blog-posts"] }
+)
+
+async function getListing(locFilter: string[], cat: string | null, from: number) {
+  try {
+    return await cachedListing(locFilter, cat, from)
+  } catch {
+    return { posts: null, count: null }
+  }
+}
+
+const cachedCategories = unstable_cache(
+  async (locFilter: string[]): Promise<{ name: string; slug: string }[]> => {
+      const supabase = createServerClient()
+      const { data: cats, error } = await supabase
+        .from("blog_categories")
+        .select("name, slug")
+        .in("locale", locFilter)
+        .order("name")
+      if (error) throw error
+      return (cats || []) as { name: string; slug: string }[]
+  },
+  ["blogs-categories-v1"],
+  { revalidate: 600, tags: ["blog-posts"] }
+)
+
+async function getCategories(locFilter: string[]) {
+  try {
+    return await cachedCategories(locFilter)
+  } catch {
+    // Sin base no hay filtro de categorías, pero el listado se sigue sirviendo.
+    return []
+  }
+}
+
 export default async function BlogsPage(
   { params, searchParams }: { params: Promise<{ locale: string }>; searchParams: Promise<SP> }
 ) {
@@ -80,40 +152,16 @@ export default async function BlogsPage(
   const locFilter: string[] = [loc]
 
   const from = (page - 1) * PAGE_SIZE
-  // 30-ago-2026. Si Supabase falla, este listado devolvía 500 en vez de
-  // degradar: el índice del blog entero caía por un problema de base de datos.
-  // Ahora se traga el fallo y se sirve lo que haya —en /us, los artículos que
-  // viven en el código— con el aviso de que la lista puede estar incompleta.
-  let posts: unknown[] | null = null
-  let count: number | null = null
-  try {
-    const supabase = createServerClient()
-    const query = cat
-      ? supabase
-          .from("blog_posts")
-          .select("*, category:blog_categories!inner(name, slug)", { count: "exact" })
-          .eq("status", "published")
-          .in("locale", locFilter)
-          .not("slug", "in", CONSOLIDATED_SLUGS_IN)
-          .eq("category.slug", cat)
-      : supabase
-          .from("blog_posts")
-          .select("*, category:blog_categories(name, slug)", { count: "exact" })
-          .eq("status", "published")
-          .in("locale", locFilter)
-          // 16-sep-2026. Los seis artículos consolidados (lib/blog-consolidated.ts)
-          // redirigen con 308: el índice los enlazaba en las páginas 3, 4 y 5.
-          .not("slug", "in", CONSOLIDATED_SLUGS_IN)
-    const res = await query
-      .order("published_at", { ascending: false })
-      .range(from, from + PAGE_SIZE - 1)
-    posts = res.data as unknown[] | null
-    count = res.count
-  } catch {
-    posts = null
-    count = null
-  }
-
+  // 28-sep-2026. TTFB de /es/blogs medido en 2,8 s (jev-seo) y siempre
+  // `x-vercel-cache: MISS`: la página lee `searchParams` (paginación y filtro),
+  // así que Next la renderiza en cada visita y el `revalidate` de arriba no
+  // llega a aplicarse. Cada visita hacía dos consultas a Supabase y la del
+  // listado traía `*`, es decir el CUERPO ENTERO de 24 artículos para pintar
+  // solo título, extracto e imagen. Ahora: (1) solo se piden las columnas que
+  // la página usa y (2) el resultado se guarda en la caché de datos de Next
+  // durante 10 minutos por combinación de idioma, página y categoría. Las URLs
+  // (?page=N, ?categoria=) no cambian.
+  const { posts, count } = await getListing(locFilter, cat ?? null, from)
   let allPosts: BlogPost[] = (posts || []) as unknown as BlogPost[]
   let total = count || allPosts.length
   // Los artículos es-US que todavía no caben en la base van al frente de la
@@ -138,19 +186,7 @@ export default async function BlogsPage(
   // cualquier número. Fuera de rango se devuelve 404 de verdad.
   if (page > totalPages && page > 1) notFound()
 
-  let categories: { name: string; slug: string }[] = []
-  try {
-    const supabaseCats = createServerClient()
-    const { data: cats } = await supabaseCats
-      .from("blog_categories")
-      .select("name, slug")
-      .in("locale", locFilter)
-      .order("name")
-    categories = (cats || []) as { name: string; slug: string }[]
-  } catch {
-    // Sin base no hay filtro de categorías, pero el listado se sigue sirviendo.
-    categories = []
-  }
+  const categories = await getCategories(locFilter)
 
   const blogSchema = {
     "@context": "https://schema.org",

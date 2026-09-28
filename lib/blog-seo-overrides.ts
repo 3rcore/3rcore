@@ -31,7 +31,8 @@
 
 export interface BlogSeoOverride {
   title: string
-  description: string
+  /** Sin ella se conserva la meta_description de la base. */
+  description?: string
   /**
    * H1 visible (y `headline` del BlogPosting). Solo cuando el título de la base
    * dice algo que el artículo no cumple.
@@ -179,6 +180,33 @@ export const BLOG_SEO_OVERRIDES: Record<string, BlogSeoOverride> = {
     title: 'Por qué fracasó La Moradita de Inca Kola: 3 errores',
     description:
       'Inca Kola subestimó la tradición de la chicha morada. Los 3 errores que hundieron La Moradita y qué revisar antes de lanzar un producto nuevo.',
+  },
+
+  // 28-sep-2026. Titles de 66 a 70 caracteres (jev-seo, JEV-007): el meta_title
+  // de la base les añade « | 3R Core» y Google los cortaba. Se quita solo la
+  // marca —la keyword y el resto del texto quedan igual— y la descripción de la
+  // base no se toca (por eso estas entradas no llevan `description`).
+  // Mismo criterio que el resto del mapa: los titles de aquí van sin marca.
+  'cuantos-videos-ugc-necesitas-escalar-meta-ads': {
+    title: 'Cuántos creativos necesitas al mes para escalar en Meta Ads',
+  },
+  'cuanto-cuesta-contenido-ugc-peru-2026': {
+    title: 'Cuánto cuesta el contenido UGC en Perú 2026 — Precios reales',
+  },
+  'como-elegir-influencers-peru-audiencia-real': {
+    title: 'Cómo elegir influencers en Perú sin pagar seguidores falsos',
+  },
+  'medir-campanas-influencers-peru-atribucion': {
+    title: 'Cómo medir campañas con influencers en Perú — Atribución',
+  },
+  'que-es-noticia-en-tu-empresa-relaciones-publicas': {
+    title: 'Qué es noticia en tu empresa — Guía de relaciones públicas',
+  },
+  'branding-emprendedores-peru-guia': {
+    title: 'Branding para emprendedores en Perú 2026 — Guía completa',
+  },
+  'como-elegir-agencia-diseno-web-lima': {
+    title: 'Cómo elegir agencia de diseño web en Lima — 7 filtros 2026',
   },
 }
 

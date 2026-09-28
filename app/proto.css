@@ -67,6 +67,12 @@
 .proto h2{font-weight:700;font-size:clamp(1.6rem,3.2vw,3rem);letter-spacing:-.02em;line-height:1.25}
 .proto h3{font-weight:600;font-size:clamp(1.05rem,1.4vw,1.25rem);letter-spacing:normal;line-height:1.4}
 .proto h4{font-weight:600;font-size:1rem;letter-spacing:normal}
+/* 28-sep-2026. Titulares DENTRO de maquetas ilustrativas (resultado de Google
+   simulado, anuncio, nota de prensa, cotizador del hero). Eran <h3> justo
+   debajo del <h1> y rompían el orden de encabezados (JEV-006); no son
+   secciones de la página, así que pasan a <div class="mock-h"> con el aspecto
+   del h3. */
+.proto .mock-h{font-family:var(--f-disp);margin:0 0 .38em;color:var(--ink-2);font-weight:600;font-size:clamp(1.05rem,1.4vw,1.25rem);letter-spacing:-.008em;line-height:1.4;text-wrap:balance}
 .proto p{margin:0 0 1.1em}
 .proto .lede{font-size:clamp(1rem,1.15vw,1.06rem);color:var(--gris);max-width:56ch;line-height:1.65}
 .proto .dim{color:var(--gris-2);font-size:.8rem;line-height:1.6}
@@ -289,7 +295,10 @@
 .proto .step{background:var(--paper-2);padding:1.8rem 1.6rem;counter-increment:s}
 .proto .step::before{content:'0' counter(s);display:block;font-family:var(--f-disp);font-size:2.6rem;
   font-weight:700;letter-spacing:-.05em;color:var(--mag);opacity:.65;line-height:1;margin-bottom:.9rem}
-.proto .step h4{margin-bottom:.45rem}
+/* 28-sep-2026. Los títulos de los pasos eran <h4> directamente bajo un <h2>
+   (salto de nivel, JEV-006). Ahora son <h3> con el mismo aspecto que tenían. */
+.proto .step h4,.proto .step h3{margin-bottom:.45rem}
+.proto .step h3{font-weight:600;font-size:1rem;letter-spacing:0;line-height:inherit}
 .proto .step p{font-size:.86rem;color:var(--gris);margin:0;line-height:1.6}
 .proto .step .t{display:block;font-size:.68rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--gris-2);margin-top:1rem}
 
@@ -1035,14 +1044,14 @@
   font-size:.6rem;font-weight:700;color:#fff}
 .proto .serp .site b{display:block;font-size:.78rem;color:#E8EAED;font-weight:500}
 .proto .serp .site span{display:block;font-size:.68rem;color:#9AA0A6}
-.proto .serp h3{font-size:1.12rem;font-weight:400;color:#8AB4F8;margin:0 0 .25rem;font-family:var(--f-ui);letter-spacing:0;line-height:1.3}
+.proto .serp h3,.proto .serp .mock-h{font-size:1.12rem;font-weight:400;color:#8AB4F8;margin:0 0 .25rem;font-family:var(--f-ui);letter-spacing:0;line-height:1.3}
 .proto .serp p{font-size:.8rem;color:#BDC1C6;line-height:1.5;margin:0}
 .proto .serp .stars{color:#FBBC04;font-size:.74rem;letter-spacing:.12em;margin:.2rem 0}
 .proto .serp .stars small{color:#9AA0A6;letter-spacing:0;margin-left:.4rem}
 .proto .serp .pos{display:inline-flex;align-items:center;gap:.4rem;font-size:.62rem;font-weight:700;
   letter-spacing:.12em;text-transform:uppercase;color:#7BE0A8;margin-bottom:.6rem}
 .proto .serp .pos::before{content:'▲'}
-.proto .serp .res.dim2 h3{color:#5f6b7a}.proto .serp .res.dim2 p,.proto .serp .res.dim2 .site b{color:#525a66}
+.proto .serp .res.dim2 h3,.proto .serp .res.dim2 .mock-h{color:#5f6b7a}.proto .serp .res.dim2 p,.proto .serp .res.dim2 .site b{color:#525a66}
 
 /* ── GRÁFICO DE CRECIMIENTO (SVG que se dibuja) ───────────────── */
 .proto .growth{position:relative;border:1px solid var(--linea-s);background:var(--paper-2);border-radius:.9rem;
@@ -1607,7 +1616,7 @@
   .proto .steps.stack .step:nth-child(3){top:calc(var(--nav-h) + var(--pb) + 10.4rem);z-index:3}
   .proto .steps.stack .step:nth-child(4){top:calc(var(--nav-h) + var(--pb) + 14.8rem);z-index:4}
   .proto .steps.stack .step:nth-child(5){top:calc(var(--nav-h) + var(--pb) + 19.2rem);z-index:5}
-  .proto .steps.stack .step h4{font-size:clamp(1.25rem,2vw,1.7rem);font-family:var(--f-disp);
+  .proto .steps.stack .step h4,.proto .steps.stack .step h3{font-size:clamp(1.25rem,2vw,1.7rem);font-family:var(--f-disp);
     letter-spacing:-.02em;margin-bottom:.5rem}
   .proto .steps.stack .step p{font-size:1.02rem;max-width:56ch}
   .proto .steps.stack .step .t{position:absolute;top:clamp(1.6rem,2.6vw,2.4rem);right:clamp(1.6rem,2.6vw,2.4rem)}
@@ -1681,7 +1690,7 @@
 .proto .ads .slot .tagad{display:inline-block;font-size:.6rem;font-weight:700;letter-spacing:.1em;
   text-transform:uppercase;color:#0B0110;background:#F5C518;border-radius:.25rem;padding:.1rem .38rem;margin-right:.5rem}
 .proto .ads .slot .dom{font-size:.75rem;color:var(--gris)}
-.proto .ads .slot h3{font-size:1.02rem;color:#9DB4FF;margin:.35rem 0 .3rem;font-family:var(--f-ui);
+.proto .ads .slot h3,.proto .ads .slot .mock-h{font-size:1.02rem;color:#9DB4FF;margin:.35rem 0 .3rem;font-family:var(--f-ui);
   font-weight:500;letter-spacing:0}
 .proto .ads .slot p{font-size:.82rem;color:var(--gris);margin:0;line-height:1.55}
 .proto .ads .slot .ext{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:.55rem}
@@ -2237,7 +2246,7 @@
 .proto .pr-doc .kick{display:inline-block;font-size:.58rem;font-weight:600;letter-spacing:.16em;
   text-transform:uppercase;color:#FF77AC;border:1px solid rgba(233,30,99,.34);
   border-radius:1rem;padding:.24rem .7rem;margin-bottom:1rem}
-.proto .pr-doc h3{font-family:var(--f-disp);font-weight:600;letter-spacing:-.02em;
+.proto .pr-doc h3,.proto .pr-doc .mock-h{font-family:var(--f-disp);font-weight:600;letter-spacing:-.02em;
   word-spacing:.14em;font-size:clamp(1.15rem,2.2vw,1.5rem);line-height:1.25;margin:0 0 .5rem}
 .proto .pr-doc .meta{font-size:.72rem;color:var(--gris-2);margin:0 0 1.1rem}
 /* Las líneas del cuerpo se «escriben» al entrar: es tipografía falsa a
@@ -2283,7 +2292,7 @@
   background:var(--paper-2);padding:clamp(1.5rem,3vw,2.6rem);overflow:hidden}
 .proto .pr-case .pic{margin:0;border-radius:1.1rem;overflow:hidden;border:1px solid var(--linea-s)}
 .proto .pr-case .pic img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:4/3}
-.proto .pr-case h3{font-family:var(--f-disp);font-weight:600;letter-spacing:-.025em;
+.proto .pr-case h3,.proto .pr-case h2{font-family:var(--f-disp);font-weight:600;letter-spacing:-.025em;
   word-spacing:.14em;font-size:clamp(1.5rem,3vw,2.15rem);line-height:1.15;margin:.7rem 0 .7rem}
 .proto .pr-case > div > p{color:var(--gris);line-height:1.7;max-width:58ch;margin:0}
 .proto .pr-case .tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1.3rem}

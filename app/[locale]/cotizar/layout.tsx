@@ -9,7 +9,9 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
     titleEs: 'Cotizador online: precio de tu proyecto | 3R Core',
     titleEn: 'Instant Quote Calculator in USD | 3R Core',
     descriptionEs: 'Marca lo que necesitas para tu web, tienda online, SEO, Google Ads o branding y recibe un estimado al instante. El precio exacto se afina por WhatsApp.',
-    descriptionEn: 'Estimate a reference price in U.S. dollars for your online store, website, SEO, Google Ads, branding or social media in under a minute.',
+    // 28-sep-2026. La calculadora de /en solo ofrece SEO, web y tiendas (plan
+    // USA); la descripción prometía también Google Ads, branding y redes.
+    descriptionEn: 'Estimate a reference price in U.S. dollars for SEO, a website or an online store in under a minute, then get a tailored quote after a free initial meeting.',
     titleUs: 'Cotizador online en dólares | 3R Core',
     descriptionUs: 'Marca lo que necesitas para tu web, tienda online, SEO, Google Ads o branding y recibe un estimado en dólares. El precio exacto se afina por WhatsApp.',
   })
@@ -37,7 +39,7 @@ export default async function CotizarLayout({ children, params }: { children: Re
     "isPartOf": { "@id": `${BASE_URL}/#website` },
     "publisher": { "@id": `${BASE_URL}/#organization` },
     "description": isEn
-      ? 'Reference-price calculator in U.S. dollars for online stores, websites, SEO, Google Ads, branding and social media.'
+      ? 'Reference-price calculator in U.S. dollars for SEO, websites and online stores.'
       : 'Calculadora de estimado referencial para tiendas virtuales, webs, SEO, Google Ads, branding y redes sociales en Lima, Perú.',
   }
 

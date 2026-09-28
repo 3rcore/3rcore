@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next'
 import { createServerClient } from '@/lib/supabase/server'
-import { hreflangFor, localizedUrl } from '@/lib/metadata'
+import { hreflangFor, hreflangSolo, localizedUrl } from '@/lib/metadata'
 import { STATIC_US_POSTS } from '@/lib/blog-static/us-posts'
 import { CONSOLIDATED_BLOG_SLUGS } from '@/lib/blog-consolidated'
 
@@ -128,7 +128,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: loc === 'es' || ['/posicionamiento-seo', '/tiendas-virtuales-lima', '/servicios/web-development'].includes(page.path)
         ? page.priority
         : Math.round((page.priority - 0.05) * 100) / 100,
-      alternates: { languages: hreflangFor(page.path) },
+      // 28-sep-2026. Los servicios que no se venden en EE.UU. declaraban aquí
+      // el cluster completo, con hreflang y x-default hacia /en y /us, que van
+      // noindex. Ahora solo /es, igual que el <head> de esas páginas.
+      alternates: {
+        languages: NOT_SOLD_IN_US.includes(page.path) ? hreflangSolo(page.path, ['es']) : hreflangFor(page.path),
+      },
     }))
   )
 

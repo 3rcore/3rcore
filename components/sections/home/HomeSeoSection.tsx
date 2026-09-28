@@ -31,7 +31,8 @@ const COPY: Record<'es' | 'en' | 'us', {
   definition: string
   pillars: Pillar[]
   secondaryH3: string
-  secondary: { h: string; p: string; href: AppPathname }[]
+  // `cta`: texto del enlace. Sin él cae a «Saber más» / «Learn more».
+  secondary: { h: string; p: string; href: AppPathname; cta?: string }[]
   localH3: string
   local: string
   closing: string
@@ -212,9 +213,9 @@ const COPY: Record<'es' | 'en' | 'us', {
     ],
     secondaryH3: 'We also support you with',
     secondary: [
-      { h: 'Measurement from day one', p: 'Analytics and conversion tracking configured before launch, in your own accounts.', href: '/servicios/web-development' },
-      { h: 'Spanish where it pays', p: 'A real indexable Spanish version — usually the cheapest qualified traffic a U.S. business can reach.', href: '/posicionamiento-seo' },
-      { h: 'U.S. payments and sales tax', p: 'Gateway configured and state-level tax calculation working, the piece most commonly left broken.', href: '/tiendas-virtuales-lima' },
+      { h: 'Measurement from day one', p: 'Analytics and conversion tracking configured before launch, in your own accounts.', href: '/servicios/web-development', cta: 'Web development with tracking built in' },
+      { h: 'Spanish where it pays', p: 'A real indexable Spanish version — usually the cheapest qualified traffic a U.S. business can reach.', href: '/posicionamiento-seo', cta: 'SEO services, English and Spanish' },
+      { h: 'U.S. payments and sales tax', p: 'Gateway configured and state-level tax calculation working, the piece most commonly left broken.', href: '/tiendas-virtuales-lima', cta: 'Online store development' },
     ],
     localH3: 'Serving businesses across the U.S.',
     local:
@@ -293,7 +294,9 @@ export default function HomeSeoSection({ locale }: { locale: string }) {
                     href={s.href}
                     className="text-white/70 text-[11px] font-bold uppercase tracking-[0.18em] underline decoration-[#A21F8A]/50 underline-offset-4 hover:text-white transition-colors"
                   >
-                    {locale === 'en' ? 'Learn more' : 'Saber más'}
+                    {/* 28-sep-2026. «Learn more» x3 en /en era un ancla genérica
+                        (JEV-008): no dice a dónde lleva. */}
+                    {s.cta ?? (locale === 'en' ? 'Learn more' : 'Saber más')}
                   </Link>
                 </div>
               ))}

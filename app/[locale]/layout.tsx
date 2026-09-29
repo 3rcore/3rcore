@@ -13,6 +13,7 @@ import ParticlesBackground from "@/components/ui/AnimatedBackground";
 import WhatsAppBtn from "@/components/ui/WhatsAppBtn";
 import WhatsAppLeadGate from "@/components/global/WhatsAppLeadGate";
 import AttributionCapture from "@/components/global/AttributionCapture";
+import WTrack from "@/components/global/WTrack";
 import { TEL_MAIN } from "@/lib/contact";
 import { localizedUrl } from "@/lib/metadata";
 import ReactLenis from "lenis/react";
@@ -636,6 +637,7 @@ export default async function RootLayout({
                 componente para el porqué. */}
             <WhatsAppLeadGate />
             <AttributionCapture />
+            <WTrack />
           </NextIntlClientProvider>
           <noscript>
             <iframe

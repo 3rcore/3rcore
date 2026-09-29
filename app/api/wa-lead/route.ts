@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { readAttribution } from '@/lib/attribution';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -50,6 +51,7 @@ export async function POST(request: Request) {
           // La fuente refleja la página real de origen (el widget también vive
           // en /posicionamiento-seo y otras páginas, no solo en la landing).
           website: origin ? `WhatsApp ${origin}` : 'WhatsApp /performance-marketing',
+          attribution: readAttribution(request),
         }),
         signal: ctl.signal,
       });

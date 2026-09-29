@@ -1,5 +1,6 @@
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
+import { readAttribution } from '@/lib/attribution';
 import { companyLeadEmail, leadReplyEmail } from '@/lib/email-templates';
 
 // Registra el lead en el panel (CRM) a través del endpoint público del panel.
@@ -7,7 +8,7 @@ import { companyLeadEmail, leadReplyEmail } from '@/lib/email-templates';
 // sitio público) — el panel inserta en `panel_leads` con sus propias credenciales.
 // Si el panel no responde, no rompe nada: los correos igual se envían.
 async function saveLeadToPanel(d: {
-  nombre: string; apellido?: string; email: string; telefono?: string; mensaje?: string; website?: string;
+  nombre: string; apellido?: string; email: string; telefono?: string; mensaje?: string; website?: string; attribution?: unknown;
 }) {
   // Timeout duro (6s): si el panel está lento o caído, NO bloquea ni retrasa el
   // envío de los correos. El lead igual queda en el correo aunque el panel falle.
@@ -27,6 +28,7 @@ async function saveLeadToPanel(d: {
         telefono: d.telefono,
         mensaje: d.mensaje,
         website: d.website,
+        attribution: d.attribution,
       }),
       signal: ctl.signal,
     });
@@ -56,7 +58,7 @@ export async function POST(request: Request) {
     const origenTxt = [utm, referrer].filter(Boolean).join(' · ').trim();
 
     // Guarda el lead en el panel/CRM antes de enviar los correos.
-    await saveLeadToPanel({ nombre, apellido, email, telefono, mensaje, website });
+    await saveLeadToPanel({ nombre, apellido, email, telefono, mensaje, website, attribution: readAttribution(request) });
 
     const result = await resend.batch.send([
       {

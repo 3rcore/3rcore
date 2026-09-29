@@ -12,6 +12,7 @@ import { omitMessages } from "@/lib/pickMessages"
 import ParticlesBackground from "@/components/ui/AnimatedBackground";
 import WhatsAppBtn from "@/components/ui/WhatsAppBtn";
 import WhatsAppLeadGate from "@/components/global/WhatsAppLeadGate";
+import AttributionCapture from "@/components/global/AttributionCapture";
 import { TEL_MAIN } from "@/lib/contact";
 import { localizedUrl } from "@/lib/metadata";
 import ReactLenis from "lenis/react";
@@ -634,6 +635,7 @@ export default async function RootLayout({
                 WhatsApp ANTES de abrir el chat. Ver el comentario del
                 componente para el porqué. */}
             <WhatsAppLeadGate />
+            <AttributionCapture />
           </NextIntlClientProvider>
           <noscript>
             <iframe

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Poppins, Inter } from "next/font/google";
 import Script from "next/script";
 import "./landing.css";
+import AttributionCapture from "@/components/global/AttributionCapture";
+import WTrack from "@/components/global/WTrack";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -61,6 +63,8 @@ export default function LandingRootLayout({
         <Script src="/_ux/t.js" strategy="afterInteractive" data-endpoint="/panel/api/ux-ingest" />
       </head>
       <body suppressHydrationWarning={true}>
+        <AttributionCapture />
+        <WTrack />
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-54VJ6F97"

@@ -1,12 +1,13 @@
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
+import { readAttribution } from '@/lib/attribution';
 import { companyLeadEmail, leadReplyEmail } from '@/lib/email-templates';
 
 // Registra el lead en el panel (CRM) a través del endpoint público del panel —
 // mismo patrón que /api/landing. Best-effort con timeout: si el panel no
 // responde, los correos igual salen y el formulario no se entera.
 async function saveLeadToPanel(d: {
-  nombre: string; apellido?: string; email: string; telefono?: string; mensaje?: string; website?: string;
+  nombre: string; apellido?: string; email: string; telefono?: string; mensaje?: string; website?: string; attribution?: unknown;
 }) {
   const ctl = new AbortController();
   const t = setTimeout(() => ctl.abort(), 6000);
@@ -24,6 +25,7 @@ async function saveLeadToPanel(d: {
         telefono: d.telefono,
         mensaje: d.mensaje,
         website: d.website,
+        attribution: d.attribution,
       }),
       signal: ctl.signal,
     });
@@ -68,6 +70,7 @@ export async function POST(request: Request) {
       nombre, apellido, email, telefono,
       mensaje: servicioTxt ? `Servicio: ${servicioTxt}\n\n${mensaje}` : mensaje,
       website: `Formulario web${page ? ` ${page}` : ''}`,
+      attribution: readAttribution(request),
     });
 
     const result = await resend.batch.send([

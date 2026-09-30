@@ -11,7 +11,7 @@ export function SocialShowSection() {
   return (
         <section className="relative h-[25vh] lg:h-[70vh] w-full overflow-hidden">
           <Image
-            src="/images/social/fondoFi.png"
+            src="/images/social/fondoFi.webp"
             alt={isEn ? "Social media management and community management - 3R Core" : "Agencia de manejo de redes sociales y community manager en Lima Perú - 3R Core"}
             fill
             priority

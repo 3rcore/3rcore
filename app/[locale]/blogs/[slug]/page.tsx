@@ -1,11 +1,12 @@
 import { Metadata } from "next"
-import { notFound, redirect } from "next/navigation"
+import { notFound, permanentRedirect, redirect } from "next/navigation"
 import { createServerClient } from "@/lib/supabase/server"
 import type { BlogPost } from "@/lib/supabase/types"
 import BlogPostView from "./BlogPostView"
 import { BASE_URL, DEFAULT_OG_IMAGE } from "@/lib/metadata"
 import { buildAuthorNode } from "@/lib/seoSchemas"
 import { getBlogSeoOverride } from "@/lib/blog-seo-overrides"
+import { conEnlaceDeServicio } from "@/lib/blog-service-links"
 import { consolidatedTarget, CONSOLIDATED_SLUGS_IN } from "@/lib/blog-consolidated"
 import { blogLocale, contentLanguage } from "@/lib/blogLocale"
 import { STATIC_US_POSTS, getStaticUsPost } from "@/lib/blog-static/us-posts"
@@ -62,9 +63,13 @@ async function getPost(slug: string, locale: string): Promise<BlogPost | null> {
     // La base manda: solo se llega aquí si Supabase no los tiene.
     const fromCode = getStaticUsPost(slug)
     if (fromCode) return fromCode
-    // /us hereda el fondo peruano cuando no tiene artículo propio para ese slug.
-    // Al revés no: un post es-US no debe aparecer en /es (habla de EE.UU.).
-    return await fetchOne('es')
+    // 28-sep-2026. /us ya NO sirve los posts peruanos. Antes heredaba el fondo
+    // de /es y Search Console mostraba /us/blogs/es-blogs-mejor-agencia-web-
+    // lima-peru (181 impresiones de «paginas web en lima») y varios /us/blogs/
+    // …-peru-…: contenido de Perú diluyendo el mercado hispano de EE.UU. El
+    // canonical ya apuntaba a /es; ahora la página redirige allí con 308 (ver
+    // BlogPostPage), que consolida la señal en vez de repartirla.
+    return null
   }
   return null
 }
@@ -113,6 +118,11 @@ async function getRelatedPosts(currentId: string, categoryId: string | null, loc
   // artículos por categoría en vez de 12. Sigue siendo una sola consulta y
   // devuelve las mismas 3 tarjetas.
   const POOL = 60
+  // /us no enlaza posts de /es (redirigen a /es desde el 28-sep-2026): sus
+  // relacionados salen de los artículos es-US servidos desde el código.
+  if (blogLocale(locale) === 'us') {
+    return STATIC_US_POSTS.filter((p) => p.slug !== currentSlug).slice(0, limit)
+  }
   try {
   const supabase = createServerClient()
   let query = supabase
@@ -212,7 +222,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   // redirección y Google lo ignoraba: va directo al artículo ganador.
   const consolidated = consolidatedTarget(slug)
   const canonical = consolidated
-    ? `${BASE_URL}/es/blogs/${consolidated}`
+    ? consolidated.startsWith('/')
+      ? `${BASE_URL}${consolidated}`
+      : `${BASE_URL}/es/blogs/${consolidated}`
     : `${BASE_URL}/${canonicalLocale}/blogs/${slug}`
   const image = post.og_image || post.featured_image
 
@@ -264,6 +276,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string; locale: string }> }) {
   const { slug, locale } = await params
   const found = await getPost(slug, locale)
+  if (!found && locale === 'us') {
+    // Post que solo existe en /es: 308 a su URL de Perú (o al artículo ganador
+    // si el slug está consolidado). Si tampoco existe allí, 404.
+    const target = consolidatedTarget(slug) ?? slug
+    const esLocales = await getPublishedLocales(target)
+    if (esLocales.includes('es')) permanentRedirect(`/es/blogs/${target}`)
+    notFound()
+  }
   if (!found) {
     // Si el idioma pedido no existe pero SÍ hay otra versión publicada de este
     // slug, redirige a esa (evita 404 desde el selector de idioma / enlaces).
@@ -282,10 +302,15 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   // Copia, no mutación: los artículos de lib/blog-static viven en memoria y un
   // cambio en el objeto se arrastraría a la petición siguiente.
   const seo = getBlogSeoOverride(slug, locale)
-  const post: BlogPost =
+  const conOverride: BlogPost =
     seo?.heading || seo?.lead
       ? { ...found, title: seo.heading ?? found.title, content: (seo.lead ?? '') + (found.content || '') }
       : found
+  // 28-sep-2026. Enlace a la página de servicio dentro del texto, tras el primer
+  // párrafo, en los posts de /es que no lo tienen (ver lib/blog-service-links.ts).
+  // Solo /es: /us sirve el mismo artículo peruano pero vende otros servicios.
+  const conEnlace = locale === 'es' ? conEnlaceDeServicio(slug, conOverride.content || '') : conOverride.content
+  const post: BlogPost = conEnlace === conOverride.content ? conOverride : { ...conOverride, content: conEnlace }
   const content = post.content || ''
   const plainText = stripHtml(content)
   const wordCount = wordsOf(content)

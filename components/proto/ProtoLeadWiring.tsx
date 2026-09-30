@@ -16,6 +16,7 @@
  */
 import { useEffect } from 'react'
 import { WA_LEADS } from '@/lib/contact'
+import { openWhatsAppNative } from '@/lib/wa-native-open'
 
 function readGclid(): string {
   try {
@@ -82,7 +83,9 @@ export default function ProtoLeadWiring() {
         '<p class="mini" style="margin:0">Guardamos tus datos y abrimos el chat. Si no se abre solo, ' +
         '<a href="' + waUrl + '" target="_blank" rel="noopener" style="text-decoration:underline">toca aquí</a>.</p>'
 
-      window.open(waUrl, '_blank', 'noopener')
+      // Ya se capturó el formulario data-demo arriba: se abre directo, sin
+      // pasar por el interceptor global (WhatsAppLeadGate).
+      openWhatsAppNative(waUrl, '_blank', 'noopener')
     }
     forms.forEach((f) => f.addEventListener('submit', onSubmit))
 

@@ -8,8 +8,12 @@ import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { getMessages, setRequestLocale } from "next-intl/server";
+import { omitMessages } from "@/lib/pickMessages"
 import ParticlesBackground from "@/components/ui/AnimatedBackground";
 import WhatsAppBtn from "@/components/ui/WhatsAppBtn";
+import WhatsAppLeadGate from "@/components/global/WhatsAppLeadGate";
+import AttributionCapture from "@/components/global/AttributionCapture";
+import WTrack from "@/components/global/WTrack";
 import { TEL_MAIN } from "@/lib/contact";
 import { localizedUrl } from "@/lib/metadata";
 import ReactLenis from "lenis/react";
@@ -149,6 +153,39 @@ export default async function RootLayout({
 
   const messages = await getMessages();
 
+  // 22-sep-2026. CAUSA RAIZ del leak de Peru/Lima en /en (por que el PR #96
+  // no basto): este layout raiz es el UNICO NextIntlClientProvider real --
+  // envuelve TODO (Navbar, {children}, Footer...). getMessages() trae el
+  // diccionario COMPLETO del locale y ese objeto se incrusta tal cual en el
+  // payload de hidratacion (self.__next_f.push) en cuanto este provider se
+  // renderiza. Un NextIntlClientProvider ANIDADO mas abajo (home, /nosotros,
+  // ambos del PR #96) ANADE un segundo payload mas pequeno para su propio
+  // subarbol, pero NO elimina el primero: este provider raiz ya sirvio el
+  // diccionario completo antes de que el hijo tenga oportunidad de recortar
+  // nada. Google no lo nota (ejecuta JS y ve solo el DOM final), pero GPTBot
+  // y ClaudeBot no ejecutan JS: leen ese <script> crudo y heredan namespaces
+  // de paginas que si pueden mencionar Peru aunque la pagina visitada no los
+  // use. El recorte tiene que pasar AQUI, no en cada pagina hija.
+  //
+  // /es no se toca (LEY). En /en se quitan los 3 namespaces exclusivos de
+  // /en/nearshore-marketing-agency (esa ruta recibe el diccionario COMPLETO
+  // desde su propio layout -- es la unica a la que la LEY le permite
+  // mencionar Peru) y la unica clave de HiddenH1 que menciona Peru
+  // ("nearshore", el h1 sr-only de esa misma pagina). Verificado por grep
+  // contra messages/en.json que ningun otro namespace ni ninguna otra clave
+  // de HiddenH1 mencionan "Peru"/"Lima" (22-sep-2026); MoreServices y
+  // ServiceLinks tambien matchean el regex pero es la URL
+  // "/tiendas-virtuales-lima" (slug de ruta compartido con /es y /us, no una
+  // mencion de lugar) -- no se tocan.
+  const EN_ONLY_NAMESPACES = ["NearshoreLanding", "NearshoreSEO", "NearshoreFAQ", "PrivacyPolicy", "Terms"]
+  const clientMessages = locale === 'en'
+    ? (() => {
+        const trimmed = omitMessages(messages, EN_ONLY_NAMESPACES) as Record<string, unknown>
+        const { nearshore, ...hiddenH1Rest } = (trimmed.HiddenH1 as Record<string, string>) ?? {}
+        return { ...trimmed, HiddenH1: hiddenH1Rest }
+      })()
+    : messages
+
   // 4,7★ con 42 reseñas reales de la ficha de Google que hasta ahora ningún
   // marcado declaraba (0 de 27 páginas). Se leen en el servidor con caché de
   // 24 h; si la API falla se usa el último snapshot verificado.
@@ -208,10 +245,10 @@ export default async function RootLayout({
         "@type": "PropertyValue",
         "propertyID": "RUC",
         "name": "RUC",
-        "value": "20609008217"
+        "value": "20609008211"
       },
-      "taxID": "20609008217",
-      "vatID": "20609008217",
+      "taxID": "20609008211",
+      "vatID": "20609008211",
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
@@ -530,6 +567,8 @@ export default async function RootLayout({
         { name: "Online Stores", url: localizedUrl('/tiendas-virtuales-lima', 'en') },
         { name: "Spanish SEO Services", url: `${BASE_URL}/en/spanish-seo-services` },
         { name: "Hispanic Marketing Agency", url: `${BASE_URL}/en/hispanic-marketing-agency` },
+        { name: "Bilingual Website Design", url: `${BASE_URL}/en/bilingual-website-design` },
+        { name: "SEO for Hispanic Businesses", url: `${BASE_URL}/en/seo-for-hispanic-businesses` },
         { name: "Pricing", url: localizedUrl('/precios', 'en') },
         { name: "Blog", url: `${BASE_URL}/en/blogs` },
         { name: "FAQ", url: localizedUrl('/preguntas', 'en') },
@@ -579,7 +618,7 @@ export default async function RootLayout({
         <body className={`${poppins.className} text-white`} suppressHydrationWarning={true}>
           <div className="noise-overlay" />
           <ParticlesBackground />
-          <NextIntlClientProvider locale={locale} messages={messages}>
+          <NextIntlClientProvider locale={locale} messages={clientMessages}>
             <Navbar />
             <main className="flex flex-col relative z-10">
               <div className="noise-global" />
@@ -592,6 +631,13 @@ export default async function RootLayout({
                 incluidos los 135 blogs y /tiendas-virtuales-lima, donde vive el
                 tráfico orgánico y antes no había ninguna vía de contacto. */}
             <WhatsAppBtn />
+            {/* Intercepta CUALQUIER clic a WhatsApp del sitio (enlaces y
+                botones, incluidos los añadidos dinámicamente) y pide nombre +
+                WhatsApp ANTES de abrir el chat. Ver el comentario del
+                componente para el porqué. */}
+            <WhatsAppLeadGate />
+            <AttributionCapture />
+            <WTrack />
           </NextIntlClientProvider>
           <noscript>
             <iframe

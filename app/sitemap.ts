@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next'
 import { createServerClient } from '@/lib/supabase/server'
-import { hreflangFor, localizedUrl } from '@/lib/metadata'
+import { hreflangFor, hreflangSolo, localizedUrl } from '@/lib/metadata'
 import { STATIC_US_POSTS } from '@/lib/blog-static/us-posts'
 import { CONSOLIDATED_BLOG_SLUGS } from '@/lib/blog-consolidated'
 
@@ -68,12 +68,25 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${baseUrl}/en/nearshore-marketing-agency`, priority: 0.95 },
     { url: `${baseUrl}/en/hispanic-marketing-agency`, priority: 0.95 },
     { url: `${baseUrl}/en/spanish-seo-services`, priority: 0.95 },
+    // 28-sep-2026. Plan USA: tres páginas nuevas, solo /en (404 en /es y /us),
+    // así que tampoco llevan hreflang: no hay hermanas a las que apuntar.
+    { url: `${baseUrl}/en/website-cost-calculator`, priority: 0.9 },
+    { url: `${baseUrl}/en/bilingual-website-design`, priority: 0.95 },
+    { url: `${baseUrl}/en/seo-for-hispanic-businesses`, priority: 0.95 },
     { url: `${baseUrl}/us/marketing-para-negocios-hispanos`, priority: 0.95 },
     { url: `${baseUrl}/es/casos-de-exito`, priority: 0.8 },
     // Página madre del negocio, recuperada el 26-ago-2026 (ya no 301 hacia
     // /servicios). Solo /es: el slug es español y en /en el mercado se ataca
     // con /nearshore-marketing-agency, que es otro eje.
     { url: `${baseUrl}/es/agencia-marketing-digital-lima`, priority: 0.95 },
+    // 28-sep-2026. Tanda 2 Perú: solo /es (404 en /en y /us).
+    { url: `${baseUrl}/es/cuanto-cuesta-una-pagina-web-en-peru`, priority: 0.95 },
+    { url: `${baseUrl}/es/mejores-agencias-google-ads-lima`, priority: 0.85 },
+    { url: `${baseUrl}/es/diseno-web-restaurantes-lima`, priority: 0.85 },
+    { url: `${baseUrl}/es/agencia-seo-arequipa`, priority: 0.85 },
+    { url: `${baseUrl}/es/agencia-marketing-digital-miraflores`, priority: 0.85 },
+    // 28-sep-2026. «cuánto cuesta seo perú»: solo /es.
+    { url: `${baseUrl}/es/cuanto-cuesta-el-seo-en-peru`, priority: 0.8 },
   ]
 
   // Antes el sitemap listaba SOLO /es (163 URLs, cero /en como <loc>): las
@@ -128,7 +141,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: loc === 'es' || ['/posicionamiento-seo', '/tiendas-virtuales-lima', '/servicios/web-development'].includes(page.path)
         ? page.priority
         : Math.round((page.priority - 0.05) * 100) / 100,
-      alternates: { languages: hreflangFor(page.path) },
+      // 28-sep-2026. Los servicios que no se venden en EE.UU. declaraban aquí
+      // el cluster completo, con hreflang y x-default hacia /en y /us, que van
+      // noindex. Ahora solo /es, igual que el <head> de esas páginas.
+      alternates: {
+        languages: NOT_SOLD_IN_US.includes(page.path) ? hreflangSolo(page.path, ['es']) : hreflangFor(page.path),
+      },
     }))
   )
 

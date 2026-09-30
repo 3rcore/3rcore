@@ -114,8 +114,11 @@
       "branding": "Branding",
       "spanishSeo": "Spanish SEO",
       "hispanic": "Hispanic Marketing",
-      "nearshore": "Why a Peruvian agency",
-      "todos": "All services"
+      "nearshore": "Why Nearshore",
+      "todos": "All services",
+      "bilingualWeb": "Bilingual Websites",
+      "hispanicSeo": "SEO for Hispanic Businesses",
+      "costCalculator": "Website Cost Calculator"
     }
   },
   "FoundersSection": {
@@ -237,7 +240,7 @@
     "sections": {
       "s1": {
         "title": "Introduction",
-        "text": "3R Core Marketing Agency, with RUC 20609008217 and located at Alameda de la Paz 187, primer piso, La Molina, Lima, presents its Privacy Policy to inform about the general conditions for the processing of personal data of its clients and users who visit its website: https://www.3rcore.com."
+        "text": "3R Core Marketing Agency, with RUC 20609008211 and located at Alameda de la Paz 187, primer piso, La Molina, Lima, presents its Privacy Policy to inform about the general conditions for the processing of personal data of its clients and users who visit its website: https://www.3rcore.com."
       },
       "s2": {
         "title": "Objective and Purpose",
@@ -274,7 +277,7 @@
     "sections": {
       "s1": {
         "title": "General Information",
-        "text": "This document regulates the access and use of the website https://www.3rcore.com, owned by 3R Core Marketing Agency, with RUC 20609008217 and registered address at Alameda de la Paz 187, primer piso, La Molina, Lima. By browsing this site, the user fully accepts these terms and conditions."
+        "text": "This document regulates the access and use of the website https://www.3rcore.com, owned by 3R Core Marketing Agency, with RUC 20609008211 and registered address at Alameda de la Paz 187, primer piso, La Molina, Lima. By browsing this site, the user fully accepts these terms and conditions."
       },
       "s2": {
         "title": "Intellectual Property",
@@ -654,14 +657,16 @@
     "ugc": "UGC content production for U.S. brands with in-house creators",
     "influencers": "Influencer marketing for U.S. brands with per-creator attribution, run by our in-house team",
     "pr": "Public relations, press coverage and reputation management for U.S. brands, run by our in-house team",
-    "nearshore": "Peruvian marketing agency serving U.S. brands remotely through its U.S. subsidiary",
+    "nearshore": "Nearshore marketing agency for U.S. brands, working U.S. business hours and invoicing through its U.S. subsidiary",
     "hispanic": "Hispanic marketing agency for U.S. brands: websites, SEO and online stores written in Spanish, not translated",
-    "spanishseo": "Spanish SEO services for U.S. businesses: native keyword research, hreflang repair and Spanish pages from $500 per month",
+    "spanishseo": "Spanish SEO services and Spanish SEO agency for U.S. businesses, from $500/mo (reference price)",
     "posicionamientoia": "Generative engine optimization for U.S. brands: get cited by ChatGPT, Perplexity and Copilot",
     "abogados": "Marketing digital para estudios de abogados",
     "clinicasdentales": "Digital marketing agency for dental clinics and dental practices in the United States",
     "clinicasesteticas": "Digital marketing agency for aesthetic clinics and medspas in the United States",
-    "veterinarias": "Digital marketing agency for veterinary clinics and animal hospitals in the United States"
+    "veterinarias": "Digital marketing agency for veterinary clinics and animal hospitals in the United States",
+    "bilingualweb": "Bilingual website design for U.S. businesses: English and Spanish sites with their own URLs and hreflang",
+    "hispanicseo": "SEO for Hispanic businesses in the U.S.: bilingual local SEO in English and Spanish"
   },
   "HomeFAQ": {
     "badge": "Frequently Asked Questions",
@@ -2306,7 +2311,13 @@
       "/servicios/marketing-clinicas": "Marketing for Clinics",
       "/servicios/marketing-inmobiliarias": "Real Estate Marketing",
       "/precios": "Pricing",
-      "/servicios": "Services"
+      "/servicios": "Services",
+      "/spanish-seo-services": "Spanish SEO Services",
+      "/hispanic-marketing-agency": "Hispanic Marketing Agency",
+      "/bilingual-website-design": "Bilingual Website Design",
+      "/seo-for-hispanic-businesses": "SEO for Hispanic Businesses",
+      "/website-cost-calculator": "Website Cost Calculator",
+      "/cotizar": "Get a Quote"
     }
   },
   "HispanicLanding": {
@@ -2429,7 +2440,7 @@
   },
   "SpanishSeoLanding": {
     "hero": {
-      "badge": "Spanish SEO · native research · U.S. hours",
+      "badge": "Spanish SEO agency · From $500/mo · For reference only",
       "title": "Spanish SEO services for U.S. businesses",
       "subtitle": "Rank in Spanish for the queries your Spanish-speaking customers actually type. Research, structure and copy produced in Spanish by a native in-house team, working in overlapping U.S. business hours. $500 per month, no mandatory contract. Figures shown are for reference only.",
       "cta": "Get a Spanish SEO proposal"
@@ -2532,6 +2543,18 @@
       "q8": {
         "question": "Do you also handle Google Ads in Spanish?",
         "answer": "In the United States, 3R Core sells three services: websites, SEO and online stores. Google Ads management is not what we lead with for U.S. clients, and we would rather say so than sell a service we are not focused on. If paid search in Spanish is your priority, we will tell you honestly whether we are the right fit on the first call."
+      },
+      "q9": {
+        "question": "What does a Spanish SEO agency do each month?",
+        "answer": "A Spanish SEO agency runs the same monthly cycle as an English SEO team, with Spanish as the working language: a technical audit, keyword and intent research in Spanish, on-page work, new Spanish pages, internal links, the Google Business Profile in Spanish and a report with Spanish traffic separated from English. At 3R Core that engagement starts from $500 per month with no mandatory contract. Figures shown are for reference only."
+      },
+      "q10": {
+        "question": "Do I need Spanish SEO services or just a guide?",
+        "answer": "If someone on your team can research keywords in Spanish, write Spanish pages and fix hreflang, our free guide on how to do Spanish SEO for a U.S. business covers the steps. If nobody has the time or the Spanish, that is what the service is for: our team does the research, writes the pages and reports every month."
+      },
+      "q11": {
+        "question": "Is $500 per month the final price for Spanish SEO?",
+        "answer": "No. $500 per month is our published reference price for SEO. The final figure depends on the size of the site and on how many Spanish pages have to be written, and we confirm it in a written proposal after a first call. Building whole Spanish sections from scratch is quoted as website work, with websites from $850. Figures shown are for reference only."
       }
     }
   },
@@ -3134,5 +3157,543 @@
     "p5": "Service pages cost from $850 each and are ready in 1 to 2 weeks. They then work as the destination for the campaigns, because sending a spay-and-neuter ad to the homepage is the most expensive way to lose that click. Figures shown are for reference only.",
     "p6": "If the clinic already sells food, supplies or parasite treatments on site, an online store with up to 50 products costs $700 and turns a one-off purchase into a recurring one. It is what separates a neighborhood clinic from a business with predictable revenue. Figures shown are for reference only.",
     "relatedTitle": "Servicios relacionados"
+  },
+  "SpanishSeoMore": {
+    "sections": [
+      {
+        "title": "What the Spanish SEO plan includes",
+        "paragraphs": [
+          "The Spanish SEO plan costs $500 per month as a reference price, with no mandatory contract. It covers the same work an English SEO engagement does, done in Spanish by native speakers on our in-house team:"
+        ],
+        "bullets": [
+          "Technical audit of the site, with hreflang checked and repaired in both directions.",
+          "Keyword and intent research run in Spanish, grouped so each page owns one set of queries.",
+          "On-page work on the Spanish pages you already have.",
+          "New Spanish content written against Spanish search intent, released in batches.",
+          "Internal links from the pages that already rank to the new Spanish ones.",
+          "Google Business Profile in Spanish for local businesses: category, services, posts and review replies.",
+          "A monthly report with Spanish traffic and leads separated from English."
+        ],
+        "note": "Reference price: $500/month. Figures shown are for reference only.",
+        "links": [
+          {
+            "before": "Need new Spanish sections built, not just optimized? That part is quoted as web work. You can get a first number from our ",
+            "label": "website cost calculator",
+            "href": "/website-cost-calculator",
+            "after": "."
+          }
+        ]
+      },
+      {
+        "title": "Spanish SEO services vs. doing it in-house",
+        "table": {
+          "head": [
+            "",
+            "Spanish SEO services (3R Core)",
+            "In-house with a guide"
+          ],
+          "rows": [
+            [
+              "Who does the keyword research",
+              "Native Spanish SEO specialists on our team",
+              "Whoever on your team speaks Spanish and knows SEO"
+            ],
+            [
+              "Hreflang and technical fixes",
+              "Included from month one",
+              "Your developer, following the guide"
+            ],
+            [
+              "New Spanish pages",
+              "Written by our team, in batches",
+              "Written or commissioned by you"
+            ],
+            [
+              "Reporting",
+              "Monthly, Spanish traffic split from English",
+              "Whatever you set up in Search Console and analytics"
+            ],
+            [
+              "Cost",
+              "From $500/month (reference price)",
+              "Your team's time"
+            ]
+          ]
+        },
+        "links": [
+          {
+            "before": "If you want to try it yourself first, read our step-by-step guide on ",
+            "label": "how to do Spanish SEO for a U.S. business",
+            "href": "/blogs/spanish-seo-for-us-businesses",
+            "after": ". It covers hreflang, Spanish keyword research and local signals."
+          }
+        ]
+      },
+      {
+        "title": "What to expect from Spanish SEO, month by month",
+        "bullets": [
+          "Month 1: technical baseline fixed (hreflang, indexation, canonicals) and a measured starting point.",
+          "Months 2 to 3: first ranking movement on Spanish long-tail and local queries.",
+          "Months 4 to 6: meaningful lead volume, on low-competition queries first.",
+          "Every month: a report showing which Spanish queries moved and which did not."
+        ],
+        "note": "Competitive commercial terms take longer. We do not quote a guaranteed date."
+      },
+      {
+        "title": "Related services for the Spanish-speaking market",
+        "links": [
+          {
+            "before": "If the site has no Spanish version yet, start with ",
+            "label": "bilingual website design",
+            "href": "/bilingual-website-design",
+            "after": ": English and Spanish pages with their own URLs and hreflang from launch."
+          },
+          {
+            "before": "If your business is Hispanic-owned and your customers search in both languages, see ",
+            "label": "SEO for Hispanic businesses",
+            "href": "/seo-for-hispanic-businesses",
+            "after": ", which focuses on bilingual local SEO and the Google Business Profile."
+          }
+        ]
+      }
+    ]
+  },
+  "HispanicMore": {
+    "sections": [
+      {
+        "title": "Where to start with the Hispanic market",
+        "links": [
+          {
+            "before": "No Spanish pages yet? Our ",
+            "label": "bilingual website design",
+            "href": "/bilingual-website-design",
+            "after": " service builds the English and Spanish sides together, each with its own URLs."
+          },
+          {
+            "before": "A Hispanic-owned business serving customers in both languages? See ",
+            "label": "SEO for Hispanic businesses",
+            "href": "/seo-for-hispanic-businesses",
+            "after": "."
+          },
+          {
+            "before": "Already have a site and want it to rank in Spanish? That is our ",
+            "label": "Spanish SEO services",
+            "href": "/spanish-seo-services",
+            "after": " plan, from $500 per month (reference price)."
+          }
+        ]
+      }
+    ]
+  },
+  "BilingualWebLanding": {
+    "hero": {
+      "badge": "English + Spanish · From $850 · For reference only",
+      "title": "Bilingual website design for U.S. businesses",
+      "subtitle": "English and Spanish websites where each language has its own pages, its own URLs and hreflang declared both ways, so Google shows each customer the right version. Designed and built by our in-house team, whose working language is Spanish. Landing pages from $850, corporate sites $1,200 to $2,400 and online stores from $1,750. Figures shown are for reference only.",
+      "cta": "Get a bilingual website quote"
+    },
+    "intro": {
+      "title": "What makes a bilingual website work in search",
+      "p1": "A bilingual website is really two sets of pages that share one design. The English pages answer English searches and the Spanish pages answer Spanish ones, and each page has its own address. A toggle that swaps the text on the same URL does not do this: Google indexes one version, and the other one never appears in results.",
+      "p2": "The Spanish side also has to be written for Spanish queries. A translated page keeps the English headings, and those headings answer a question the Spanish-speaking customer did not type. We write the Spanish pages from Spanish keyword research and build the English ones alongside them.",
+      "p3": "Then there is the path to contact. If a Spanish page leads to an English form, an English confirmation email and an English follow-up call, the customer drops off right when they are deciding. Forms, notices and automatic emails ship in both languages from launch."
+    },
+    "benefits": {
+      "badge": "Included in every bilingual build",
+      "title": "What a bilingual website from 3R Core includes",
+      "items": [
+        {
+          "title": "Separate URLs per language",
+          "description": "A subfolder such as /es/ on your own domain, so the Spanish pages inherit the authority the domain already has instead of starting from zero."
+        },
+        {
+          "title": "Hreflang declared both ways",
+          "description": "Every page points at its counterpart and back. When this is missing or one-sided, Google guesses, and it often serves the English page to Spanish searchers."
+        },
+        {
+          "title": "Spanish written, not translated",
+          "description": "Spanish pages built from Spanish keyword research by native Spanish writers on our team, with headings that match how the question is asked."
+        },
+        {
+          "title": "Forms and emails in both languages",
+          "description": "Contact forms, confirmations and notices follow the language the visitor chose, so nobody gets switched to English halfway through."
+        },
+        {
+          "title": "Technical SEO in both languages",
+          "description": "Semantic structure, schema markup, sitemap, meta tags, image optimization, page speed and a mobile-first layout, on the English and the Spanish side."
+        },
+        {
+          "title": "Yours from day one",
+          "description": "Domain, hosting, repository and analytics registered in your name. The first year of domain, SSL and hosting is included."
+        }
+      ]
+    },
+    "process": {
+      "badge": "How a bilingual build runs",
+      "title": "From first call to launch",
+      "steps": [
+        {
+          "title": "1 · Discovery call, in English or Spanish",
+          "description": "Who your customers are, how many of them search in Spanish, and what the site has to produce: calls, quote requests or orders."
+        },
+        {
+          "title": "2 · Keyword map in both languages",
+          "description": "English and Spanish queries researched separately, with one page assigned to each group so your own pages do not compete."
+        },
+        {
+          "title": "3 · Design and build",
+          "description": "Design in Figma, then development on Next.js, WordPress, Shopify or WooCommerce depending on the project. Two revision rounds before launch."
+        },
+        {
+          "title": "4 · Launch with measurement",
+          "description": "Analytics and conversion tracking installed before go-live, with Spanish and English traffic reported separately."
+        },
+        {
+          "title": "5 · Handover",
+          "description": "An admin panel for text, images and posts, a recorded handover session and thirty days of warranty on anything that breaks after launch."
+        }
+      ]
+    }
+  },
+  "BilingualWebFAQ": {
+    "badge": "FAQ",
+    "title": "Bilingual website design, frequently asked questions",
+    "faqs": {
+      "q1": {
+        "question": "What is bilingual website design?",
+        "answer": "Bilingual website design is building a site in two languages, usually English and Spanish in the U.S., where each language has its own pages and URLs and the two versions are linked with hreflang. That setup lets Google show the Spanish page to people searching in Spanish and the English page to people searching in English."
+      },
+      "q2": {
+        "question": "How much does a bilingual website cost?",
+        "answer": "3R Core's published starting prices apply: a landing page from $850, a corporate site of five to eight sections between $1,200 and $2,400, and an online store from $1,750. The second language is part of the scope we confirm in a written quote after a first call. Figures shown are for reference only."
+      },
+      "q3": {
+        "question": "How long does a bilingual website take?",
+        "answer": "A landing page takes 2 to 3 weeks, a corporate site 4 to 6 weeks and a full online store 6 to 10 weeks, depending on complexity. What usually stretches a timeline is waiting on copy, photos and access, so at kickoff we tell you exactly what we need and when."
+      },
+      "q4": {
+        "question": "Should the Spanish version live on /es/, a subdomain or a separate domain?",
+        "answer": "For a U.S. business, a subfolder such as example.com/es/ is the right default. It inherits the authority your domain already has, which a subdomain or a separate domain would have to build from nothing, and it leaves one property to maintain. Whatever the choice, each language needs its own URL and hreflang declared both ways."
+      },
+      "q5": {
+        "question": "Can I use a translation plugin instead?",
+        "answer": "A plugin gives you a Spanish version of each English page, so the Spanish page still targets what the English page targeted and keeps headings written for English searches. Machine translation also tends to read as foreign to U.S. Hispanic customers. It is a stopgap, not a way to rank in Spanish."
+      },
+      "q6": {
+        "question": "What is hreflang and why does a bilingual site need it?",
+        "answer": "Hreflang is the markup that tells Google which language version of a page to show to which searcher. Each version needs its own URL and each must point at the other. When it is missing or one-sided, Google picks on its own and often serves the English page to a Spanish-speaking user, which wastes the Spanish page."
+      },
+      "q7": {
+        "question": "Can I edit both languages myself after launch?",
+        "answer": "Yes. The site ships with an admin panel for text, images and posts in both languages, plus a recorded handover session. Ongoing maintenance is available as a separate service, but it is optional."
+      },
+      "q8": {
+        "question": "Can a bilingual site also sell online?",
+        "answer": "Yes. We build Shopify or WooCommerce stores with the catalog in both languages, the payment gateway you use (Stripe, PayPal or the platform's own) and state-level sales tax calculation set up. Online stores start from $1,750. Figures shown are for reference only."
+      }
+    }
+  },
+  "BilingualWebSEO": {
+    "seoTitle": "Bilingual website design for U.S. businesses, in English and Spanish",
+    "p1": "3R Core designs and builds bilingual websites for U.S. businesses, with English and Spanish pages on separate URLs, hreflang declared in both directions and Spanish copy written from Spanish keyword research. Reference prices: landing pages from $850, corporate sites $1,200 to $2,400 and online stores from $1,750. Figures shown are for reference only.",
+    "p2": "The difference between a bilingual site and a translated one shows up in search. A translated page answers the English question in Spanish words. A bilingual page built for Spanish queries answers the question Spanish-speaking customers actually type, and in most U.S. service categories far fewer competitors have built those pages.",
+    "p3": "Every build includes the technical base in both languages: page speed, clean URL structure, metadata, structured data and analytics wired up at launch. Forms and automatic emails follow the visitor's language, and the first year of domain, SSL and hosting is included.",
+    "p4": "Timelines are 2 to 3 weeks for a landing page, 4 to 6 weeks for a corporate site and 6 to 10 weeks for a full online store. Payment is in U.S. dollars, usually half at kickoff and half at launch, invoiced through our U.S. subsidiary.",
+    "p5": "Once the Spanish side is live, it can be pushed further with monthly Spanish SEO, which is a separate service from $500 per month (reference price).",
+    "relatedTitle": "Related services"
+  },
+  "BilingualWebMore": {
+    "sections": [
+      {
+        "title": "Bilingual website vs. translated website",
+        "table": {
+          "head": [
+            "",
+            "Bilingual website",
+            "Translated website (plugin or toggle)"
+          ],
+          "rows": [
+            [
+              "URLs",
+              "One URL per page and language, e.g. /es/",
+              "Often the same URL, text swapped in the browser"
+            ],
+            [
+              "What Google indexes",
+              "Both versions, linked with hreflang",
+              "Usually one version"
+            ],
+            [
+              "Spanish copy",
+              "Written from Spanish keyword research",
+              "Translated from the English page"
+            ],
+            [
+              "Forms and emails",
+              "In the visitor's language",
+              "Often still in English"
+            ],
+            [
+              "Ranking in Spanish",
+              "Possible on its own queries",
+              "Rare"
+            ]
+          ]
+        }
+      },
+      {
+        "title": "Reference prices and timelines for a bilingual website",
+        "table": {
+          "head": [
+            "Type of site",
+            "Reference price (USD)",
+            "Typical timeline"
+          ],
+          "rows": [
+            [
+              "Landing page",
+              "From $850",
+              "2 to 3 weeks"
+            ],
+            [
+              "Corporate site, 5 to 8 sections",
+              "$1,200 to $2,400",
+              "4 to 6 weeks"
+            ],
+            [
+              "Online store (Shopify or WooCommerce)",
+              "From $1,750",
+              "6 to 10 weeks"
+            ]
+          ]
+        },
+        "note": "Figures shown are for reference only. The exact figure, including the second language, is confirmed in a written quote.",
+        "links": [
+          {
+            "before": "For a first estimate of your own project, try the ",
+            "label": "website cost calculator",
+            "href": "/website-cost-calculator",
+            "after": "."
+          },
+          {
+            "before": "Ready for a written figure? ",
+            "label": "Request a quote",
+            "href": "/cotizar",
+            "after": " and we reply during U.S. business hours."
+          }
+        ]
+      },
+      {
+        "title": "After launch: ranking the Spanish side",
+        "paragraphs": [
+          "A bilingual site gives the Spanish pages a place to rank. Getting them to rank is ongoing work: keyword research, new pages, internal links and the Google Business Profile in Spanish."
+        ],
+        "links": [
+          {
+            "before": "For any U.S. business adding Spanish, that is our ",
+            "label": "Spanish SEO services",
+            "href": "/spanish-seo-services",
+            "after": " plan."
+          },
+          {
+            "before": "For Hispanic-owned businesses whose customers search in both languages, see ",
+            "label": "SEO for Hispanic businesses",
+            "href": "/seo-for-hispanic-businesses",
+            "after": "."
+          }
+        ]
+      }
+    ]
+  },
+  "HispanicSeoLanding": {
+    "hero": {
+      "badge": "Bilingual local SEO · From $500/mo · For reference only",
+      "title": "SEO for Hispanic businesses in the U.S.",
+      "subtitle": "Local and bilingual SEO for Hispanic-owned businesses whose customers search in English and in Spanish: a Google Business Profile that works in both languages, Spanish pages that rank on their own and review replies in the language the review was written in. From $500 per month, no mandatory contract. Figures shown are for reference only.",
+      "cta": "Get an SEO proposal"
+    },
+    "intro": {
+      "title": "Why Hispanic businesses need SEO in two languages",
+      "p1": "Many Hispanic-owned businesses in the U.S. serve two groups of customers at the same time: people who search in English and people who search in Spanish, often in the same zip code. A website that exists in only one language is invisible to the other group, even when the business already speaks both.",
+      "p2": "A translate button does not fix that. Each language needs its own pages and its own keyword research, because Spanish speakers do not always type the literal translation of the English phrase. In most U.S. service categories fewer businesses have built Spanish pages, so a well-built Spanish page has less to outrank than its English twin.",
+      "p3": "For a local business, most calls come from the map, not the website. That is why the Google Business Profile, with services, posts and review replies in Spanish and English, is part of the work from the first month."
+    },
+    "benefits": {
+      "badge": "What the monthly SEO plan covers",
+      "title": "Bilingual SEO work we run every month",
+      "items": [
+        {
+          "title": "Keyword research in both languages",
+          "description": "English and Spanish queries researched separately, including the regional variants your customers use, not a translated list."
+        },
+        {
+          "title": "Google Business Profile in both languages",
+          "description": "Category, services, posts and review replies kept up to date, so Spanish-speaking customers can pick you out of the map pack."
+        },
+        {
+          "title": "Review replies in the customer's language",
+          "description": "A review written in Spanish gets its reply in Spanish. It is a small thing that customers notice when they compare businesses."
+        },
+        {
+          "title": "Spanish service pages that rank",
+          "description": "Pages written against Spanish searches, with their own URLs and hreflang connecting them to the English versions."
+        },
+        {
+          "title": "Technical fixes first",
+          "description": "Indexation, hreflang, canonicals and page speed. There is no point publishing until Google can find and serve the pages."
+        },
+        {
+          "title": "A monthly report by language",
+          "description": "Spanish and English traffic, calls and form leads reported separately, so you can see what each language brings in."
+        }
+      ]
+    },
+    "process": {
+      "badge": "How it starts",
+      "title": "The first 90 days",
+      "steps": [
+        {
+          "title": "1 · Audit in both languages",
+          "description": "What you rank for today in English and in Spanish, what is technically broken and what your local competitors have built."
+        },
+        {
+          "title": "2 · Bilingual keyword map",
+          "description": "The English and Spanish query sets grouped by intent, with one page assigned to each so your pages do not compete with each other."
+        },
+        {
+          "title": "3 · Fix the base and the profile",
+          "description": "Technical fixes on the site and a full pass on the Google Business Profile in both languages."
+        },
+        {
+          "title": "4 · Publish on a schedule",
+          "description": "New Spanish and English pages released in batches, linked from the pages that already rank."
+        },
+        {
+          "title": "5 · Measure and adjust",
+          "description": "Monthly reporting by language, and the next batch planned from what moved."
+        }
+      ]
+    }
+  },
+  "HispanicSeoFAQ": {
+    "badge": "FAQ",
+    "title": "SEO for Hispanic businesses, frequently asked questions",
+    "faqs": {
+      "q1": {
+        "question": "What is SEO for Hispanic businesses?",
+        "answer": "SEO for Hispanic businesses is search optimization for Hispanic-owned companies in the U.S. whose customers search in English and in Spanish. It combines bilingual keyword research, Spanish and English pages with their own URLs, and a Google Business Profile kept up in both languages, so the business shows up in both sets of results."
+      },
+      "q2": {
+        "question": "How is this different from Spanish SEO services?",
+        "answer": "Spanish SEO services are for any U.S. business that wants to add Spanish-speaking customers, usually starting from an English site. SEO for Hispanic businesses is for companies that already serve customers in both languages and need both sides to rank locally, with the Google Business Profile at the center."
+      },
+      "q3": {
+        "question": "How much does SEO for a Hispanic business cost?",
+        "answer": "3R Core's SEO plan starts from $500 per month with no mandatory contract. If the site needs new Spanish or English pages built from scratch, that is quoted as website work, with websites from $850. Figures shown are for reference only."
+      },
+      "q4": {
+        "question": "Do I need a Spanish website first?",
+        "answer": "You need Spanish pages with their own URLs for Spanish SEO to work. If the site only exists in one language, the first step is usually a bilingual build, and the monthly SEO starts once both versions are live."
+      },
+      "q5": {
+        "question": "How long does it take to see results?",
+        "answer": "The first ranking movement usually shows between months two and three, and meaningful lead volume between months four and six, starting with low-competition local queries. Competitive terms take longer, and we do not quote a guaranteed date."
+      },
+      "q6": {
+        "question": "Is the Google Business Profile included?",
+        "answer": "Yes. For local businesses the profile decides more calls than the website, so its category, services, posts and review replies in both languages are part of the monthly work."
+      },
+      "q7": {
+        "question": "Can you work with me in Spanish?",
+        "answer": "Yes. Calls, briefs and monthly reports run in Spanish or English, whichever you prefer. Our team works U.S. business hours, Monday to Friday, 9 a.m. to 6 p.m. Eastern."
+      },
+      "q8": {
+        "question": "Do I keep the work if I stop?",
+        "answer": "Yes. Everything is built in your own properties: your site, your Search Console, your analytics and your Google Business Profile. Content and technical fixes stay in place if the engagement ends."
+      }
+    }
+  },
+  "HispanicSeoSEO": {
+    "seoTitle": "SEO for Hispanic businesses in the U.S., in English and Spanish",
+    "p1": "3R Core provides SEO for Hispanic-owned businesses in the U.S. that serve customers in English and in Spanish: bilingual keyword research, Spanish and English pages on separate URLs, and a Google Business Profile kept up in both languages. The plan starts from $500 per month with no mandatory contract. Figures shown are for reference only.",
+    "p2": "The opportunity is in the Spanish results. In most U.S. service categories far fewer businesses have built Spanish pages, so a page written for Spanish searches often competes against a handful of results instead of every business in the county.",
+    "p3": "Local search runs through the map. The Google Business Profile, with services, posts and review replies in both languages, is what makes a Spanish-speaking customer choose one business over another, so it is part of the monthly work rather than an extra.",
+    "p4": "Our team works in Spanish and English on U.S. business hours, and U.S. clients contract and are invoiced in U.S. dollars through our U.S. subsidiary.",
+    "p5": "Everything is built in your own accounts. If the engagement ends, the pages, the fixes and the data stay with you.",
+    "relatedTitle": "Related services"
+  },
+  "HispanicSeoMore": {
+    "sections": [
+      {
+        "title": "SEO for Hispanic businesses vs. Spanish SEO services",
+        "table": {
+          "head": [
+            "",
+            "SEO for Hispanic businesses",
+            "Spanish SEO services"
+          ],
+          "rows": [
+            [
+              "Who it is for",
+              "Hispanic-owned businesses serving customers in both languages",
+              "Any U.S. business adding Spanish-speaking customers"
+            ],
+            [
+              "Languages",
+              "English and Spanish, both ranked",
+              "Mainly the new Spanish side"
+            ],
+            [
+              "Main lever",
+              "Local SEO and the Google Business Profile",
+              "Spanish pages and hreflang"
+            ],
+            [
+              "Reference price",
+              "From $500/month",
+              "From $500/month"
+            ]
+          ]
+        },
+        "note": "Figures shown are for reference only.",
+        "links": [
+          {
+            "before": "If your case is the second column, see our ",
+            "label": "Spanish SEO services",
+            "href": "/spanish-seo-services",
+            "after": "."
+          }
+        ]
+      },
+      {
+        "title": "What changes in the first 90 days",
+        "bullets": [
+          "Month 1: audit in both languages, technical fixes and a full pass on the Google Business Profile.",
+          "Months 2 to 3: first Spanish and English pages published and first ranking movement on local queries.",
+          "Months 4 to 6: meaningful lead volume, starting with low-competition searches.",
+          "Every month: a report with calls and form leads split by language."
+        ]
+      },
+      {
+        "title": "No Spanish pages yet?",
+        "paragraphs": [
+          "Spanish SEO needs Spanish pages with their own URLs. If your site exists in only one language, the first step is a bilingual build, and the monthly SEO starts once both versions are live."
+        ],
+        "links": [
+          {
+            "before": "See ",
+            "label": "bilingual website design",
+            "href": "/bilingual-website-design",
+            "after": " for how we build the English and Spanish sides together."
+          },
+          {
+            "before": "Or get a first figure from our ",
+            "label": "website cost calculator",
+            "href": "/website-cost-calculator",
+            "after": "."
+          }
+        ]
+      }
+    ]
   }
 }

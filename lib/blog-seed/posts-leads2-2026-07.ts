@@ -13,48 +13,85 @@ const IMG = (id: string) => `https://images.unsplash.com/photo-${id}?w=1200&h=63
 export const LEADS2_POSTS_2026_07: SeedPost[] = [
   {
     slug: "mejores-agencias-seo-lima-como-elegir-2026",
-    title: "Mejores agencias SEO en Lima 2026: cómo elegir la correcta (checklist)",
-    focus_keyword: "mejores agencias seo lima",
-    meta_title: "Mejores agencias SEO en Lima 2026 — Cómo elegir | 3R Core",
-    meta_description: "Cómo identificar a las mejores agencias SEO en Lima 2026: 9 criterios objetivos, señales de alerta, preguntas clave y qué debe incluir una propuesta seria.",
-    excerpt: "Guía para elegir entre las mejores agencias SEO en Lima 2026: 9 criterios objetivos, banderas rojas, qué exigir en la propuesta y cómo comparar sin caer en promesas de humo.",
-    og_title: "Mejores agencias SEO en Lima 2026: cómo elegir",
-    og_description: "9 criterios objetivos, banderas rojas y las preguntas que separan a una agencia seria de una que vende humo.",
+    // 28-sep-2026. Reescrito como guía de elección: con 567 palabras y el título
+    // «Mejores agencias SEO en Lima» le quitaba «agencia seo en lima» a
+    // /es/posicionamiento-seo (69 de 81 impresiones en 90 días) sin poder
+    // competir con las listas de agencias. No nombra agencias: no hay datos
+    // verificables del trabajo de otras y no se inventan.
+    title: "Cómo elegir agencia SEO en Lima: 9 criterios y señales de alerta (2026)",
+    focus_keyword: "como elegir agencia seo en lima",
+    meta_title: "Cómo elegir agencia SEO en Lima: 9 criterios y alertas 2026",
+    meta_description: "Cómo elegir agencia SEO en Lima: 9 criterios que puedes comprobar en la primera reunión, las preguntas que conviene hacer y las señales de alerta.",
+    excerpt: "Guía para elegir agencia SEO en Lima: 9 criterios que puedes comprobar antes de firmar, las preguntas para la primera reunión, las señales de alerta y cuánto cuesta.",
+    og_title: "Cómo elegir agencia SEO en Lima (2026)",
+    og_description: "9 criterios que puedes comprobar, preguntas para la primera reunión y señales de alerta antes de firmar.",
     featured_image: IMG("1499750310107-5fef28a66643"),
-    featured_image_alt: "Mejores agencias SEO en Lima 2026 cómo elegir checklist",
+    featured_image_alt: "Cómo elegir agencia SEO en Lima: criterios y checklist",
     author_name: AUTHOR,
-    content: `<p class="lead"><strong>Resumen ejecutivo:</strong> no existe "la mejor agencia SEO en Lima" universal; existe la mejor <em>para tu negocio</em>. Las agencias SEO serias comparten 9 rasgos objetivos: auditoría inicial real, reportes de resultados (no de tareas), link building manual, SEO local, transparencia de accesos, sin contratos forzosos, casos verificables, comunicación clara y estrategia adaptada a tu sector. Esta guía te da el checklist para comparar y detectar las señales de alerta antes de firmar.</p>
+    content: `<p class="lead"><strong>Respuesta corta:</strong> para elegir una agencia SEO en Lima, pide cuatro cosas antes de firmar: acceso a tu propio Search Console desde el primer mes, un plan escrito de los tres primeros meses, un contrato sin permanencia forzosa y un reporte que muestre posiciones, clics y consultas en vez de una lista de tareas. Y descarta a quien te garantice el primer lugar en Google: el propio Google advierte que nadie puede garantizarlo. Abajo están los nueve criterios completos, las preguntas para la primera reunión y las señales de alerta.</p>
+<p>Si ya estás comparando propuestas, puedes ver cómo trabajamos en 3R Core como <a href="/es/posicionamiento-seo">agencia SEO en Lima</a> y usar esta guía para medirnos con el mismo criterio que a las demás.</p>
 
-<h2>9 criterios para elegir una agencia SEO en Lima</h2>
+<h2>¿Qué hace una agencia SEO (y qué no hace)?</h2>
+<p>Una agencia SEO trabaja para que tu web salga en los resultados orgánicos de Google, los que no se pagan por clic. El trabajo tiene cuatro frentes: la parte técnica (que Google pueda rastrear e indexar tu web y que cargue rápido), el contenido (páginas que respondan lo que tu cliente busca), los enlaces (que otros sitios de tu rubro te mencionen) y, si atiendes en una zona, el SEO local con tu ficha de Google.</p>
+<p>Lo que no hace es comprar posiciones. Los resultados marcados como «Patrocinado» son anuncios de Google Ads y se pagan aparte, con otro presupuesto.</p>
+
+<h2>9 criterios para elegir agencia SEO en Lima</h2>
+<p>Cada criterio lleva la forma de comprobarlo en la primera reunión, antes de pagar nada.</p>
 <ol>
-<li><strong>Te dan una auditoría inicial concreta</strong> con quickwins y gaps frente a tu competencia — no un PDF genérico.</li>
-<li><strong>Sus reportes muestran resultados</strong>: rankings, tráfico orgánico y conversiones. Huye del que solo lista "tareas realizadas".</li>
-<li><strong>El link building es manual</strong> (outreach a medios y blogs reales), no directorios spam que penalizan.</li>
-<li><strong>Trabajan SEO local</strong>: Google Business Profile, reseñas y consistencia NAP, clave para captar clientes por distrito.</li>
-<li><strong>Transparencia de accesos</strong>: los contenidos y las cuentas son tuyos si te vas.</li>
-<li><strong>Sin permanencia forzosa</strong>: se sostienen por resultados, no por cláusulas.</li>
-<li><strong>Casos verificables</strong>, no solo capturas sin contexto.</li>
-<li><strong>Comunicación clara</strong>: un punto de contacto y calls periódicos.</li>
-<li><strong>Estrategia adaptada a tu sector</strong>, no la misma plantilla para todos.</li>
+<li><strong>Acceso a tu Search Console desde el primer mes.</strong> La propiedad debe estar a tu nombre y eres tú quien le da acceso a la agencia, no al revés. Es la única forma de ver las posiciones en la fuente y no en un PDF.</li>
+<li><strong>Una auditoría inicial con tu web dentro.</strong> Debe nombrar URLs, errores y prioridades concretas. Si el documento serviría igual para otra empresa, no es una auditoría.</li>
+<li><strong>Un plan escrito de los tres primeros meses.</strong> Qué páginas se van a trabajar, para qué búsquedas y qué correcciones técnicas van primero.</li>
+<li><strong>Reportes de resultados, no de tareas.</strong> Posiciones, clics, impresiones y las consultas que traen gente. «Publicamos cuatro artículos» es una tarea, no un resultado.</li>
+<li><strong>Plazos honestos.</strong> En búsquedas comerciales, las posiciones estables llegan entre el tercer y el sexto mes. Quien promete primera página en 30 días está apostando con tu web.</li>
+<li><strong>Enlaces conseguidos uno por uno.</strong> Menciones en sitios de tu rubro o de tu ciudad. Los paquetes de cientos de enlaces baratos son justo lo que Google penaliza.</li>
+<li><strong>SEO local si vendes en Lima.</strong> Ficha de Google cuidada, reseñas y la misma dirección y teléfono en la web, en la ficha y en los directorios.</li>
+<li><strong>Sin permanencia forzosa, y todo queda a tu nombre.</strong> El contenido, la web y las cuentas son tuyos si decides irte.</li>
+<li><strong>Saber quién hace el trabajo.</strong> Pregunta quién escribe el contenido, quién toca la parte técnica y si algo se terceriza. La respuesta dice mucho de la calidad que vas a recibir.</li>
 </ol>
 
-<h2>Banderas rojas (evítalas)</h2>
+<h2>Preguntas para la primera reunión</h2>
 <ul>
-<li>"Garantizamos el puesto #1 en Google" — nadie puede garantizar posiciones; Google lo prohíbe explícitamente.</li>
-<li>Precios tipo "SEO desde S/300/mes": no alcanza para trabajo manual real.</li>
-<li>No te dan acceso a Search Console ni Analytics.</li>
-<li>Reportan visitas totales sin separar orgánico, o vanity metrics.</li>
+<li>¿Qué incluye exactamente la mensualidad y qué se cobra aparte?</li>
+<li>¿Qué van a hacer el primer mes, con nombre de páginas?</li>
+<li>¿Cómo miden el éxito a los tres y a los seis meses?</li>
+<li>¿Me dan acceso a Search Console y a Analytics desde el inicio?</li>
+<li>¿El SEO local está incluido?</li>
+<li>¿Qué pasa con el contenido y los accesos si termino el servicio?</li>
+<li>¿Quién de su equipo va a trabajar mi cuenta?</li>
 </ul>
-<p>Si quieres entender los rangos de inversión, lee <a href="/es/blogs/cuanto-cuesta-agencia-seo-lima-2026">cuánto cuesta una agencia SEO en Lima</a>.</p>
+<p>Las respuestas te dirán más que cualquier portafolio. Una agencia seria contesta todas sin rodeos.</p>
 
-<h2>Preguntas para la reunión</h2>
-<p>¿Qué incluye exactamente el fee? ¿Cómo miden el éxito? ¿Cada cuánto reportan? ¿El SEO local está incluido? ¿Qué pasa con mis contenidos si termino el servicio? Las respuestas te dirán más que cualquier portafolio.</p>
+<h2>Señales de alerta</h2>
+<ul>
+<li>Te garantizan el primer lugar en Google. Nadie controla el algoritmo y Google lo dice en su guía sobre cómo contratar a un SEO.</li>
+<li>No te dan acceso a Search Console o lo crean a nombre de la agencia.</li>
+<li>El reporte mezcla todas las visitas sin separar las que llegan desde Google.</li>
+<li>Te piden un contrato de doce meses sin salida.</li>
+<li>El precio mensual no alcanza para horas reales de trabajo técnico y de redacción.</li>
+<li>Proponen publicar decenas de artículos al mes escritos en automático y sin revisión.</li>
+</ul>
 
-<h2>SEO, Ads o ambos</h2>
-<p>Si necesitas resultados inmediatos mientras el SEO madura, combínalo con <a href="/es/servicios/google-ads">Google Ads</a>. Y si vendes online, una <a href="/es/tiendas-virtuales-lima">tienda virtual</a> bien optimizada potencia todo el trabajo orgánico. Compara enfoques en <a href="/es/blogs/seo-vs-google-ads-peru-cual-conviene">SEO vs Google Ads</a>.</p>
+<h2>¿Cuánto cuesta una agencia SEO en Lima?</h2>
+<p>Depende de la competencia de tu rubro y del tamaño de tu web, no de la ciudad. Los rangos por nivel de competencia están en la guía de <a href="/es/blogs/cuanto-cuesta-agencia-seo-lima-2026">cuánto cuesta una agencia SEO en Lima</a>, y qué sube o baja el precio, en <a href="/es/cuanto-cuesta-el-seo-en-peru">cuánto cuesta el SEO en Perú</a>. Como referencia, en 3R Core el plan de <a href="/es/posicionamiento-seo">posicionamiento SEO</a> parte de S/1,800 al mes, sin permanencia. Los montos son referenciales.</p>
+
+<h2>¿Agencia, freelance o equipo propio?</h2>
+<p>Una agencia junta técnico, contenido y enlaces bajo un solo contrato. Un freelance te da trato directo, pero todo depende de una persona. Un equipo propio conoce tu negocio a diario, aunque el SEO pide varios perfiles y uno solo rara vez los cubre. Elige según quién vaya a revisar el trabajo en tu empresa: si nadie lo va a revisar, necesitas a alguien que reporte con datos que puedas comprobar.</p>
+
+<h2>¿SEO o Google Ads mientras tanto?</h2>
+<p>El SEO tarda meses en rendir. Si necesitas consultas esta semana, la pauta en <a href="/es/servicios/google-ads">Google Ads</a> las trae mientras las posiciones orgánicas maduran. Lo comparamos con calma en <a href="/es/blogs/seo-vs-google-ads-peru-cual-conviene">SEO vs Google Ads: cuál conviene</a>.</p>
+
+<h2>Preguntas frecuentes</h2>
+<h3>¿Cuál es la mejor agencia SEO en Lima?</h3>
+<p>La que cumpla los nueve criterios de arriba para tu caso. No publicamos un ranking de agencias porque no tenemos datos verificables del trabajo de las demás, y una lista sin datos no te ayuda a decidir. Lo útil es pedir la misma información a cada una y comparar.</p>
+<h3>¿En cuánto tiempo se ven resultados?</h3>
+<p>Los primeros movimientos suelen verse alrededor del tercer mes en búsquedas de baja competencia, y las posiciones estables en búsquedas comerciales, entre el tercer y el sexto mes.</p>
+<h3>¿Qué le tengo que dar a la agencia para empezar?</h3>
+<p>Acceso a Search Console, a Analytics y al gestor de tu web, además de lo que sabes de tu cliente: qué vendes, a quién y qué te preguntan antes de comprar. Esa información vale más que cualquier herramienta.</p>
+<h3>¿Me conviene una agencia que también haga Google Ads?</h3>
+<p>Ayuda que el mismo equipo vea los dos canales, porque las búsquedas que convierten en Ads dicen qué páginas conviene posicionar. Pregunta, eso sí, cómo te van a recomendar el reparto del presupuesto.</p>
 
 <h2>Cierre</h2>
-<p>La mejor agencia SEO para ti es la que te muestra un plan claro, mide en resultados y no te amarra. Si quieres comparar con una propuesta real, pide una <strong>auditoría gratuita</strong>: mándanos tu URL y en 48 h te decimos qué mejorar y qué esperar. Conoce nuestro <a href="/es/posicionamiento-seo">servicio de posicionamiento SEO</a>.</p>`,
+<p>Con estos criterios puedes comparar agencias con datos y no con promesas. Si quieres ver cómo los cumplimos nosotros, en la página de <a href="/es/posicionamiento-seo">agencia SEO en Lima de 3R Core</a> está cómo trabajamos mes a mes, qué incluye el plan y el formulario para pedir tu cotización.</p>`,
   },
   {
     slug: "agencia-google-ads-inmobiliarias-lima",
@@ -68,7 +105,7 @@ export const LEADS2_POSTS_2026_07: SeedPost[] = [
     featured_image: IMG("1560518883-ce09059eeffa"),
     featured_image_alt: "Google Ads para inmobiliarias en Lima leads de calidad",
     author_name: AUTHOR,
-    content: `<p class="lead"><strong>Resumen ejecutivo:</strong> el sector inmobiliario en Lima es de <strong>ticket alto y ciclo largo</strong>, así que la meta de <strong>Google Ads para inmobiliarias</strong> no es volumen de clics, sino <strong>leads calificados</strong> (personas con intención y capacidad de compra) al menor costo por lead posible. Eso se logra combinando campañas Search de alta intención, Performance Max con buenas señales de audiencia, formularios que filtran curiosos y tracking que conecta el lead con la venta real. Aquí te explicamos cómo.</p>
+    content: `<p class="lead"><strong>Resumen ejecutivo:</strong> el sector inmobiliario en Lima es de <strong>ticket alto y ciclo largo</strong>, así que la meta de <strong>Google Ads para inmobiliarias</strong> no es volumen de clics, sino <strong>leads calificados</strong> (personas con intención y capacidad de compra) al menor costo por lead posible. Eso se logra combinando campañas Search de alta intención, Performance Max con buenas señales de audiencia, formularios que filtran curiosos y tracking que conecta el lead con la venta real. Aquí te explicamos cómo lo hacemos en 3R Core como <a href="/es/servicios/google-ads">agencia de Google Ads en Lima</a>.</p>
 
 <h2>Qué campañas funcionan para inmobiliarias</h2>
 <ul>

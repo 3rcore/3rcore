@@ -327,6 +327,8 @@ export const USA4_US_POSTS: SeedPost[] = [
 
 <p><strong>Los marketplaces cobran una comisión por venta que varía mucho según la categoría, y esa comisión sale de tu margen en cada pedido, para siempre.</strong> Las cifras exactas cambian por plataforma y por categoría, así que hay que sacarlas de la tabla oficial de cada marketplace y no de un artículo — incluido este.</p>
 
+<p>En Estados Unidos los marketplaces con más tráfico para producto físico son Amazon, Walmart Marketplace y Etsy (este último para hecho a mano o vintage); si prefieres vender dentro de una red social, Instagram Shopping y TikTok Shop ya permiten pagar sin salir de la app. Cada uno tiene su propia tabla de comisiones y reglas de categoría — se revisan ahí, no en este artículo.</p>
+
 <p>En tu tienda propia el costo es la plataforma más la comisión del procesador de pagos. <strong>En Shopify eso son $25 a $399 mensuales según el plan, y ojo con el recargo de 2% en Basic si cobras con una pasarela que no sea Shopify Payments</strong>, porque en volumen ese porcentaje pesa más que el plan entero.</p>
 
 <h2>El canal que casi nadie usa: el español</h2>

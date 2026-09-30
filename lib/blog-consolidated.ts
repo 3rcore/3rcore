@@ -21,13 +21,19 @@
 export const CONSOLIDATED_BLOG_SLUGS: Record<string, string> = {
   'es-blogs-diseno-web-lima-peru': 'como-elegir-agencia-diseno-web-lima',
   'es-blogs-mejor-agencia-web-lima-peru': 'como-elegir-agencia-diseno-web-lima',
-  'cuanto-cuesta-una-pagina-web-en-peru-en-2026-precios-reales': 'cuanto-cuesta-pagina-web-peru-2026',
-  'cuanto-cuesta-crear-una-pagina-web-en-peru-este-ano': 'cuanto-cuesta-pagina-web-peru-2026',
+  // 28-sep-2026 (Tanda 2 Perú): el ganador ya no es un post sino la página
+  // comercial. Un destino que empieza por «/» es una ruta completa, no un slug.
+  'cuanto-cuesta-una-pagina-web-en-peru-en-2026-precios-reales': '/es/cuanto-cuesta-una-pagina-web-en-peru',
+  'cuanto-cuesta-crear-una-pagina-web-en-peru-este-ano': '/es/cuanto-cuesta-una-pagina-web-en-peru',
+  'cuanto-cuesta-pagina-web-peru-2026': '/es/cuanto-cuesta-una-pagina-web-en-peru',
   'mejores-agencias-de-publicidad': 'mejores-agencias-de-marketing-digital',
   'crear-tienda-online-en-peru-con-shopify-o-woocommerce-guia-2026': 'como-crear-tienda-online-que-venda-peru',
 }
 
-/** Slug del artículo que ganó la consolidación, o null si este slug no se consolidó. */
+/**
+ * Slug del artículo que ganó la consolidación, o null si este slug no se
+ * consolidó. Si empieza por «/», es la ruta completa de una página (no un post).
+ */
 export function consolidatedTarget(slug: string): string | null {
   return CONSOLIDATED_BLOG_SLUGS[slug] ?? null
 }

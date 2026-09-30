@@ -27,8 +27,12 @@ const Footer = () => {
           // El índice de servicios recibía 2 enlaces internos mientras sus
           // propias hijas recibían entre 41 y 71. La jerarquía estaba del revés.
           { href: '/servicios', label: tn('services.todos') },
-          { href: '/servicios/google-ads', label: tn('services.googleAds') },
-          { href: '/posicionamiento-seo', label: tn('services.seo') },
+          // 28-sep-2026. Ancla exacta en el pie de las ~180 páginas de /es: es
+          // la búsqueda que cada página debe ganar. «Agencia de Google Ads en
+          // Lima» la sostenía /performance-marketing (landing de campañas, en
+          // noindex), que la va a perder al recrawlear.
+          { href: '/servicios/google-ads', label: 'Agencia de Google Ads en Lima' },
+          { href: '/posicionamiento-seo', label: 'Agencia SEO en Lima' },
           { href: '/servicios/web-development', label: tn('services.webDesign') },
           { href: '/servicios/socialmedia', label: tn('services.socialMedia') },
           { href: '/servicios/branding', label: tn('services.branding') },
@@ -43,6 +47,10 @@ const Footer = () => {
           // estaban huérfanas y sin indexar.
           { href: '/spanish-seo-services', label: tn('services.spanishSeo') },
           { href: '/hispanic-marketing-agency', label: tn('services.hispanic') },
+          // 28-sep-2026. Plan USA: las dos landings nuevas y la calculadora.
+          { href: '/bilingual-website-design', label: tn('services.bilingualWeb') },
+          { href: '/seo-for-hispanic-businesses', label: tn('services.hispanicSeo') },
+          { href: '/website-cost-calculator', label: tn('services.costCalculator') },
         ]
       : [
           { href: '/servicios', label: tn('services.todos') },
@@ -117,7 +125,34 @@ const Footer = () => {
                     </Link>
                   </li>
                 ))}
+                {/* 20-sep-2026: 3rcommerce es la marca hermana de tiendas virtuales de
+                    los Roque (entidad aparte de 3R Core). Enlace externo, no interno:
+                    no hay ruta /tiendas-virtuales propia que la sustituya. */}
+                <li>
+                  <a
+                    href="https://3rcommerce.com"
+                    target="_blank"
+                    rel="noopener"
+                    className="hover:text-pink-500 transition-colors duration-300"
+                  >
+                    {locale === 'en' ? 'Online stores — 3rcommerce ↗' : 'Tiendas virtuales — 3rcommerce ↗'}
+                  </a>
+                </li>
               </ul>
+              {/* 28-sep-2026 (Tanda 2 Perú): guías y zonas que solo existen en
+                  /es. Un enlace desde cada página es lo que las saca de
+                  «descubierta, sin indexar» (lo que pasó con las anclas de /en). */}
+              {locale === 'es' && (
+                <ul className="space-y-3 text-sm lg:text-xs xl:text-sm text-gray-200 mt-6 pt-6 border-t border-white/10">
+                  {PERU_GUIDES.map((g) => (
+                    <li key={g.href}>
+                      <Link href={g.href} className="hover:text-pink-500 transition-colors duration-300">
+                        {g.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           </div>
 
@@ -198,6 +233,15 @@ const Footer = () => {
     </footer>
   );
 };
+
+const PERU_GUIDES: { href: AppPathname; label: string }[] = [
+  { href: '/cuanto-cuesta-una-pagina-web-en-peru', label: 'Cuánto cuesta una página web' },
+  { href: '/cotizar', label: 'Cotizador de páginas web' },
+  { href: '/mejores-agencias-google-ads-lima', label: 'Agencias de Google Ads en Lima' },
+  { href: '/diseno-web-restaurantes-lima', label: 'Web para restaurantes' },
+  { href: '/agencia-marketing-digital-miraflores', label: 'Marketing digital en Miraflores' },
+  { href: '/agencia-seo-arequipa', label: 'SEO en Arequipa' },
+];
 
 const SocialIcon = ({ href, icon }: { href: string; icon: React.ReactNode }) => {
   return (

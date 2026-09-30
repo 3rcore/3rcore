@@ -27,6 +27,8 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
     // diluir el foco del mercado que se está abriendo.
 
     noindex: locale !== 'es',
+    // Y el hreflang solo declara /es: las versiones /en y /us van noindex.
+    onlyLocales: ['es'],
   })
 }
 

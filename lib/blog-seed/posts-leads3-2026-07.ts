@@ -34,6 +34,7 @@ export const LEADS3_POSTS_2026_07: SeedPost[] = [
 <li><strong>Configura envíos</strong>: zonas, tarifas por distrito/provincia y correos automáticos de pedido.</li>
 <li><strong>Deja el SEO técnico de base</strong>: URLs limpias, schema de producto, velocidad y sitemap — para que Google entienda tu tienda desde el día uno.</li>
 <li><strong>Instala la medición</strong>: Google Analytics 4 y píxeles listos para campañas.</li>
+<li><strong>Optimiza la conversión (CRO)</strong>: prueba variantes de la ficha de producto, del checkout y de los CTA para que la misma visita venda más, no solo que la tienda cargue rápido.</li>
 </ul>
 
 <h2>Cuánto cuesta una agencia Shopify en Perú</h2>

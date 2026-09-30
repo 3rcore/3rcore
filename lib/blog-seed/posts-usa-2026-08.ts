@@ -204,6 +204,9 @@ export const USA_POSTS_2026_08: SeedPost[] = [
     author_name: AUTHOR,
     content: `<p class="lead"><strong>The short version:</strong> paying a creator to make a video does not, by default, give you the right to advertise with it. Copyright in the footage sits with whoever created it, and what you buy is a <strong>license</strong> — bounded by channel, term and geography. The disputes that get expensive almost never concern quality. They concern rights nobody specified before filming.</p>
 
+<h2>A tag is not a license</h2>
+<p>None of this is limited to content you commissioned. A customer posting about your product unprompted, tagging your account or using your hashtag, does not hand you any right to run that clip as an ad or publish it on your site. Public visibility is not permission, and a tag is not a transfer of rights — the creator owns the copyright the moment they hit record. If an organic post is working, the fix is the same one as for commissioned content: ask the creator for the specific right you need, in writing, before you use it anywhere beyond a share or a like.</p>
+
 <h2>Why this matters more than it sounds</h2>
 <p>The problem surfaces at the worst possible moment. You commission a batch, one asset outperforms everything else, you decide to put serious budget behind it — and only then discover the agreement covered organic posting only. Now you're renegotiating from a position where the creator knows exactly how valuable that asset is to you.</p>
 <p>The fix costs nothing: decide the rights you need <em>before</em> anyone films, when nobody knows yet which asset will win.</p>

@@ -11,6 +11,7 @@ import { LEADS_POSTS_2026_07 } from "./posts-leads-2026-07"
 import { LEADS2_POSTS_2026_07 } from "./posts-leads2-2026-07"
 import { LEADS3_POSTS_2026_07 } from "./posts-leads3-2026-07"
 import { REFRESH_POSTS_2026_07_28 } from "./posts-refresh-2026-07-28"
+import { REFRESH_POSTS_2026_09 } from "./posts-refresh-2026-09"
 import { USA_POSTS_2026_08 } from "./posts-usa-2026-08"
 import { USA2_POSTS_2026_08 } from "./posts-usa2-2026-08"
 import { USA3_POSTS_2026_08 } from "./posts-usa3-2026-08"
@@ -59,6 +60,7 @@ export const SEED_POSTS: SeedPost[] = [
     featured_image_alt: "Diseño web profesional Perú 2026 - precios y tipos de proyecto",
     author_name: AUTHOR,
     content: `<p class="lead"><strong>Resumen ejecutivo:</strong> en 2026 una <strong>página web profesional en Perú</strong> cuesta entre <strong>S/2,500 y S/25,000</strong> según tipo, alcance e integraciones. Una landing de campaña arranca en S/2,500, una web corporativa entre S/4,500 y S/9,000, un e-commerce con Shopify o WooCommerce desde S/6,500, y un portal con sistema interno desde S/12,000. Lo que mueve el precio no es la cantidad de páginas, sino las integraciones, el SEO técnico, la velocidad y el copy. Esta guía te explica cuánto pagar por cada tipo de proyecto, qué debe incluir y cómo evitar las trampas más comunes.</p>
+<p>Los montos de esta guía son referenciales. Si quieres el precio para tu proyecto, en 3R Core hacemos <a href="/es/servicios/web-development">diseño de páginas web en Lima</a> y puedes calcularlo en el <a href="/es/cotizar">cotizador</a>.</p>
 
 <h2>¿Por qué varían tanto los precios de páginas web en Perú?</h2>
 <p>Si pides 5 cotizaciones en Lima para "una página web", recibes precios entre <strong>S/500 y S/15,000 para el mismo brief</strong>. La diferencia no es estafa: es que cada estudio o agencia define "página web" distinto. Algunos cobran S/500 por una plantilla rellenada en WordPress sin estrategia; otros cobran S/15,000 por una web a medida con investigación de mercado, copywriting profesional, SEO técnico, integración con CRM y testing. Ambos productos son legítimos para clientes distintos.</p>
@@ -607,6 +609,7 @@ export const SEED_POSTS: SeedPost[] = [
     featured_image_alt: "Cuánto cuesta el branding en Perú 2026 - precios y proyectos",
     author_name: AUTHOR,
     content: `<p class="lead"><strong>Resumen ejecutivo:</strong> en 2026, el costo de hacer <strong>branding profesional en Perú</strong> oscila entre <strong>S/800 y S/25,000</strong>: un logo aislado va desde S/800, una identidad visual completa desde S/3,500, un proyecto de branding integral con manual de marca desde S/6,500, y un rebranding empresarial desde S/12,000. La diferencia no está en la cantidad de archivos entregados, sino en la profundidad estratégica detrás de cada decisión visual. Esta guía explica cuánto invertir según el momento de tu negocio y qué debe incluir cada nivel.</p>
+<p>Los montos de esta guía son referenciales: sirven para ubicar tu presupuesto, no son una cotización. Si quieres el precio para tu caso, en 3R Core somos <a href="/es/servicios/branding">agencia de branding en Lima</a> y te lo damos por escrito.</p>
 
 <h2>Qué se entiende por "branding" en Perú</h2>
 <p>El término <strong>branding</strong> se usa de manera tan amplia que confunde. En esta guía hablamos de cuatro niveles distintos:</p>
@@ -646,7 +649,7 @@ export const SEED_POSTS: SeedPost[] = [
 <h3>Identidad visual (S/3,500 – S/6,500)</h3>
 <ul>
 <li>Diseño de logo + isotipo + variantes (horizontal, vertical, monograma).</li>
-<li>Paleta de colores corporativa (primarios + secundarios).</li>
+<li>Paleta de colores corporativa (primarios + secundarios), elegida con criterio y no por gusto: ver <a href="/es/blogs/la-psicologia-de-los-colores-un-glosario-sobre-la-identidad-de-marca">psicología del color en marcas</a>.</li>
 <li>Tipografía oficial (1 principal + 1 complementaria).</li>
 <li>Iconografía base (5–10 iconos).</li>
 <li>Plantillas para redes sociales (3–5 diseños).</li>
@@ -660,7 +663,7 @@ export const SEED_POSTS: SeedPost[] = [
 <li>Todo lo de identidad visual.</li>
 <li><strong>Estrategia de marca</strong>: misión, visión, propuesta de valor, posicionamiento, tono de voz.</li>
 <li><strong>Manual de marca completo</strong> (PDF de 30–50 páginas).</li>
-<li><strong>Aplicaciones de marca</strong>: papelería completa, merchandising básico, plantillas digitales.</li>
+<li><strong>Aplicaciones de marca</strong>: papelería completa, <a href="/es/blogs/como-crear-un-brochure-impactante-para-tu-empresa">brochure empresarial</a>, merchandising básico, plantillas digitales.</li>
 <li>Naming si la marca es nueva (o auditoría de naming si ya tienes).</li>
 <li>Mockups profesionales para presentación.</li>
 <li>3 rondas de revisión.</li>
@@ -805,7 +808,7 @@ export const SEED_POSTS: SeedPost[] = [
 <li>Tipografía oficial (principal + secundaria + para web).</li>
 <li>Iconografía: estilo de los íconos que usas.</li>
 <li>Sistema gráfico: patrones, ilustraciones, fotografías de marca.</li>
-<li>Plantillas base: redes sociales, presentaciones, papelería.</li>
+<li>Plantillas base: redes sociales, presentaciones, papelería y <a href="/es/blogs/como-crear-un-brochure-impactante-para-tu-empresa">brochure</a>.</li>
 </ul>
 <p>La identidad visual es <strong>el "cómo se ve tu marca"</strong> aplicado de manera coherente.</p>
 
@@ -914,6 +917,7 @@ export const SEED_POSTS: SeedPost[] = [
     featured_image_alt: "Manual de marca estructura plantilla 2026",
     author_name: AUTHOR,
     content: `<p class="lead"><strong>Resumen ejecutivo:</strong> un <strong>manual de marca</strong> profesional en 2026 tiene 12 secciones obligatorias: estrategia, logo + variantes, paleta de colores con códigos exactos, tipografía, iconografía, fotografía, ilustración, tono de voz, aplicaciones digitales, aplicaciones impresas, qué NO hacer, y casos de aplicación. Sin estas 12, el manual es decoración: el equipo y los proveedores lo ignoran porque no resuelve sus dudas reales. Esta guía te explica cada sección con ejemplos peruanos y los errores más comunes que vacían el documento.</p>
+<p>Si prefieres que un equipo arme el manual contigo, en 3R Core somos <a href="/es/servicios/branding">agencia de branding en Lima</a>: identidad visual, logotipo, manual de marca y aplicaciones.</p>
 
 <h2>Para qué sirve realmente un manual de marca</h2>
 <p>El <strong>manual de marca</strong> (también llamado brand book, brand guidelines, manual de identidad corporativa) es <strong>el documento que rige cómo se aplica tu marca en cada punto de contacto</strong>. Si no existe, cada proveedor (diseñador web, fotógrafo, agencia de redes, imprenta, fabricante de packaging) interpreta la marca a su manera. Resultado: marca incoherente, cliente confundido, recordación bajísima.</p>
@@ -957,6 +961,7 @@ export const SEED_POSTS: SeedPost[] = [
 <li><strong>Pantone</strong> (PMS 286 C) — para colores corporativos críticos.</li>
 </ul>
 <p>Sin código exacto, cada proveedor "estima" el color. Resultado: el azul de tu logo en redes es distinto del azul en tu valla publicitaria.</p>
+<p>Si todavía estás eligiendo esos colores, revisa qué transmite cada uno en nuestra guía de <a href="/es/blogs/la-psicologia-de-los-colores-un-glosario-sobre-la-identidad-de-marca">psicología del color para marcas</a>.</p>
 
 <h3>4. Tipografía oficial</h3>
 <ul>
@@ -1005,7 +1010,7 @@ export const SEED_POSTS: SeedPost[] = [
 
 <h3>10. Aplicaciones impresas</h3>
 <ul>
-<li>Papelería: tarjeta de presentación, hoja membretada, sobres, carpetas.</li>
+<li>Papelería: tarjeta de presentación, hoja membretada, sobres, carpetas y el <a href="/es/blogs/como-crear-un-brochure-impactante-para-tu-empresa">brochure de la empresa</a>.</li>
 <li>Merchandising: polos, gorras, mugs, lapiceros, libretas.</li>
 <li>Packaging si vendes producto físico.</li>
 <li>Señalética: stands, fachadas, vehículos, uniformes.</li>
@@ -1182,7 +1187,7 @@ export const SEED_POSTS: SeedPost[] = [
 
 <h3>Fase 1: Auditoría de marca actual (2 semanas)</h3>
 <ul>
-<li>Qué elementos tienen equity acumulado (color, tipografía, símbolo).</li>
+<li>Qué elementos tienen equity acumulado (color, tipografía, símbolo). Con el color hay que ir con cuidado: lo explicamos en <a href="/es/blogs/la-psicologia-de-los-colores-un-glosario-sobre-la-identidad-de-marca">psicología del color en marcas</a>.</li>
 <li>Qué elementos generan asociaciones negativas o anticuadas.</li>
 <li>Investigación con clientes actuales y potenciales.</li>
 <li>Benchmarking con competencia.</li>
@@ -1353,7 +1358,7 @@ export const SEED_POSTS: SeedPost[] = [
 <p>Pagas USD 30, recibes 50 propuestas de freelancers de Indonesia que nunca vieron tu negocio. Resultado: logo genérico que parece de cualquier marca. <strong>Mejor</strong>: invierte S/800–1,500 en un freelance peruano que se siente contigo 1 hora a entender el negocio.</p>
 
 <h3>Error 2: Colores y tipografía sin justificación</h3>
-<p>Eliges azul porque "te gusta". Eliges una tipografía elegante porque "se ve premium". Sin saber si esos elementos comunican lo que tu marca es. <strong>Mejor</strong>: cada decisión visual debe responder a "¿esto refuerza mi propuesta de valor?".</p>
+<p>Eliges azul porque "te gusta". Eliges una tipografía elegante porque "se ve premium". Sin saber si esos elementos comunican lo que tu marca es. <strong>Mejor</strong>: cada decisión visual debe responder a "¿esto refuerza mi propuesta de valor?". Para el color, tienes un método en 5 pasos en nuestra guía de <a href="/es/blogs/la-psicologia-de-los-colores-un-glosario-sobre-la-identidad-de-marca">psicología del color</a>.</p>
 
 <h3>Error 3: No tener archivos vectoriales</h3>
 <p>Te entregan solo el JPG del logo. Cuando llegues a hacer una valla, va a pixelarse. <strong>Mejor</strong>: exige archivos .AI, .EPS, .SVG editables, sin candados.</p>
@@ -1526,6 +1531,7 @@ export const SEED_POSTS: SeedPost[] = [
     featured_image_alt: "Costos de publicidad en Facebook e Instagram en Perú 2026",
     author_name: AUTHOR,
     content: `<p class="lead"><strong>Resumen ejecutivo:</strong> en 2026 anunciar en <strong>Facebook e Instagram (Meta Ads) en Perú</strong> tiene un piso práctico de <strong>S/600 al mes</strong> para pymes y rangos de <strong>S/1,500 a S/8,000</strong> según rubro y objetivo. El CPM (costo por mil impresiones) ronda <strong>S/8 a S/25</strong>, el CPC entre <strong>S/0.30 y S/1.50</strong>, y el costo por lead va de <strong>S/3 a S/40</strong> según industria. Lo que define tu costo real no es la plataforma: es la calidad de tu creativo, la segmentación y tu tasa de cierre.</p>
+<p>Los montos de esta guía son referenciales. Si quieres saber cuánto te costaría a ti, calcula tu presupuesto en el <a href="/es/cotizar">cotizador</a> o escríbenos: en 3R Core trabajamos como <a href="/es/servicios/meta-ads">agencia de Meta Ads en Lima</a>.</p>
 
 <h2>Cómo funciona el costo en Meta Ads (para entender la factura)</h2>
 <p>No pagas un "precio fijo". Meta funciona por <strong>subasta</strong>: compites con otros anunciantes por mostrar tu anuncio a un mismo público. Tu costo depende de tres factores: cuánta gente quiere el mismo público, qué tan relevante es tu anuncio (buen creativo = costo más bajo) y el objetivo que elegiste. Por eso el mismo presupuesto rinde distinto en dos negocios: el que tiene mejor creativo paga menos por el mismo resultado.</p>
@@ -1541,6 +1547,10 @@ export const SEED_POSTS: SeedPost[] = [
 </tbody>
 </table>
 <p>Los rangos bajos corresponden a rubros masivos (moda, comida, belleza) y los altos a rubros de ticket alto o competidos (inmobiliaria, salud, servicios profesionales).</p>
+
+<h2>El 18% de IGV que casi nadie suma al presupuesto</h2>
+<p>Desde diciembre de 2024, SUNAT cobra <strong>IGV (18%)</strong> sobre el gasto publicitario de las cuentas de Meta registradas en Perú, salvo que la cuenta tenga cargado un <strong>RUC válido que empiece con 20</strong> (persona jurídica) en el Centro de pagos de Meta. Sin ese RUC —o con uno mal cargado— el cobro es automático: un presupuesto de S/1,000 al mes se factura en la práctica S/1,180.</p>
+<p>Para presupuestar bien: si tu cuenta factura como persona natural o el RUC no califica para la exoneración, súmale 18% a cualquier cifra de esta guía antes de compararla contra tu margen por cliente.</p>
 
 <h2>Cuánto invertir según tu rubro</h2>
 <h3>Negocio local o de servicios (peluquería, restaurante, taller)</h3>
@@ -1582,6 +1592,8 @@ export const SEED_POSTS: SeedPost[] = [
 <p>Casi siempre por mejor creativo y mejor relevancia. Meta premia con menor costo a los anuncios que la gente quiere ver.</p>
 <h3>¿La publicidad en Instagram cuesta más que en Facebook?</h3>
 <p>Puede variar, pero en la práctica gestionas ambas desde Meta y el sistema reparte según dónde rinde mejor. Deja las ubicaciones automáticas al inicio.</p>
+<h3>¿El IGV se suma a todos los montos de esta guía?</h3>
+<p>Sí, salvo que tu cuenta facture con un RUC válido que empieza con 20 registrado en el Centro de pagos de Meta. Sin eso, cualquier presupuesto que definas aquí sube 18% en tu factura real desde diciembre de 2024.</p>
 
 <h2>Cierre</h2>
 <p>En 2026, hacer publicidad en Facebook e Instagram en Perú es accesible para cualquier pyme, pero rentable solo para quien mide y optimiza. Antes de mirar el precio, define tu margen y tu tasa de cierre: eso decide cuánto puedes y debes invertir. En 3R Core diseñamos y gestionamos campañas de <a href="/es/servicios/meta-ads">Meta Ads en Perú</a> con presupuestos ajustados a cada negocio. Si quieres una proyección realista para tu rubro, <a href="/es#contacto">escríbenos</a>. Y si recién empiezas, revisa nuestra <a href="/es/blogs/meta-ads-pymes-peru-guia-primera-campana-rentable">guía paso a paso de Meta Ads para pymes</a>.</p>`,
@@ -3017,6 +3029,7 @@ export const SEED_POSTS: SeedPost[] = [
   ...LEADS2_POSTS_2026_07,
   ...LEADS3_POSTS_2026_07,
   ...REFRESH_POSTS_2026_07_28,
+  ...REFRESH_POSTS_2026_09,
   ...USA_POSTS_2026_08,
   ...USA2_POSTS_2026_08,
   ...USA3_POSTS_2026_08,

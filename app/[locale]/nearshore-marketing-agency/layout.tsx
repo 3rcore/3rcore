@@ -3,6 +3,7 @@ import { notFound } from "next/navigation"
 import { BASE_URL, generateBreadcrumbSchema } from "@/lib/metadata"
 import { buildFAQPageSchema, buildServiceSchema } from "@/lib/seoSchemas"
 import { getMessages } from "next-intl/server"
+import { NextIntlClientProvider } from "next-intl"
 
 const PATH = '/nearshore-marketing-agency'
 
@@ -13,8 +14,12 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
   // existen.
   if (locale !== 'en') return { robots: { index: false, follow: false } }
 
-  const title = "Peruvian Marketing Agency Serving U.S. Brands | 3R Core"
-  const description = "A Peruvian agency in Lima serving U.S. brands remotely through its U.S. subsidiary: UGC video, paid media, SEO and Shopify builds, billed in USD."
+  // 28-sep-2026. El title decía «Peruvian Marketing Agency…» y chocaba con la
+  // regla del /en (cero Perú en títulos y schema, plan de Piero Roque). La
+  // página es precisamente sobre nearshore, así que el title y el schema van
+  // por ahí; el cuerpo sigue explicando de dónde es el equipo.
+  const title = "Nearshore Marketing Agency for U.S. Brands | 3R Core"
+  const description = "Nearshore marketing agency for U.S. brands: UGC video, paid media, SEO and Shopify builds, delivered in U.S. business hours and billed in USD."
 
   return {
     title,
@@ -51,9 +56,9 @@ export default async function NearshoreLayout({ children, params }: { children: 
     locale,
     path: PATH,
     nameEs: "Agencia de Marketing Nearshore para Marcas de Estados Unidos",
-    nameEn: "Peruvian Marketing Agency for U.S. Brands",
+    nameEn: "Nearshore Marketing Agency for U.S. Brands",
     descriptionEs: "Equipo de marketing nearshore en Lima, Perú para marcas de Estados Unidos: producción de video UGC, gestión de medios pagados, SEO y desarrollo de tiendas Shopify, en horario compatible con EE.UU. y con alcances cerrados facturados en dólares.",
-    descriptionEn: "Peruvian marketing agency based in Lima serving U.S. brands remotely through its U.S. subsidiary: UGC video production, paid media across Google, Meta and TikTok, technical and content SEO, and Shopify and landing page builds — delivered in overlapping U.S. business hours under fixed scopes invoiced in U.S. dollars.",
+    descriptionEn: "Nearshore marketing agency serving U.S. brands remotely through its U.S. subsidiary: UGC video production, paid media across Google, Meta and TikTok, technical and content SEO, and Shopify and landing page builds — delivered in overlapping U.S. business hours under fixed scopes invoiced in U.S. dollars.",
     serviceType: "Nearshore Marketing Services / Outsourced Marketing Team",
     offerPriceEn: 1200,
     audienceTypes: ["E-commerce", "D2C brands", "B2B", "SaaS", "Agencies"],
@@ -79,7 +84,13 @@ export default async function NearshoreLayout({ children, params }: { children: 
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify([serviceSchema, faqSchema, breadcrumbSchema]) }}
       />
-      {children}
+      {/* 22-sep-2026. Unica ruta de /en a la que la LEY permite mencionar
+          Peru: recibe el diccionario COMPLETO (el mismo `messages` que ya se
+          usa arriba para el FAQ schema), sin el recorte que aplica el layout
+          raiz para el resto de /en. */}
+      <NextIntlClientProvider locale={locale} messages={messages}>
+        {children}
+      </NextIntlClientProvider>
     </>
   )
 }

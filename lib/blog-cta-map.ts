@@ -213,7 +213,9 @@ export const SERVICE_GUIDES: Record<ServiceKey, { slug: string; title: string }[
     { slug: 'palabras-clave-negativas-google-ads-peru', title: 'Palabras clave negativas en Google Ads' },
   ],
   web: [
-    { slug: 'cuanto-cuesta-pagina-web-peru-2026', title: 'Cuánto cuesta una página web en Perú 2026' },
+    // 28-sep-2026: el post de precio web ahora redirige a /es/cuanto-cuesta-una-pagina-web-en-peru
+    // (página, no post: este bloque solo enlaza posts). Enlazar un 301 gasta rastreo.
+    { slug: 'por-que-mi-pagina-web-no-aparece-en-google-peru', title: 'Por qué mi página web no aparece en Google' },
     { slug: 'como-elegir-agencia-diseno-web-lima', title: 'Cómo elegir agencia de diseño web en Lima' },
     { slug: 'diseno-web-responsive-peru-2026', title: 'Diseño web responsive en Perú' },
   ],
@@ -234,6 +236,7 @@ export const SERVICE_GUIDES: Record<ServiceKey, { slug: string; title: string }[
   'tiktok-ads': [
     { slug: 'cuanto-cuesta-anunciar-tiktok-peru-cpm-cpa', title: 'Cuánto cuesta anunciar en TikTok en Perú' },
     { slug: 'tiktok-ads-peru-2026-guia-completa-empezar-vender', title: 'TikTok Ads Perú: guía completa' },
+    { slug: 'como-subir-videos-a-tik-tok', title: 'Cómo subir videos a Tik Tok' },
   ],
   performance: [
     { slug: 'cuanto-invertir-publicidad-online-peru-negocio', title: 'Cuánto invertir en publicidad online en Perú' },
@@ -268,6 +271,7 @@ export const SERVICE_GUIDES_EN: Record<ServiceKey, { slug: string; title: string
   tiendas: [
     { slug: 'marketing-budget-for-small-business', title: 'How much should a small business spend on marketing?' },
     { slug: 'questions-to-ask-a-marketing-agency', title: '12 questions to ask a marketing agency before you sign' },
+    { slug: 'how-much-does-a-small-business-website-cost', title: 'How much does a small business website cost in 2026?' },
   ],
   seo: [
     { slug: 'spanish-seo-for-us-businesses', title: 'Spanish SEO for U.S. businesses: the traffic nobody is bidding on' },
@@ -300,6 +304,8 @@ export const SERVICE_GUIDES_EN: Record<ServiceKey, { slug: string; title: string
   performance: [
     { slug: 'creative-testing-framework-paid-social', title: 'A creative testing framework for paid social' },
     { slug: 'marketing-budget-for-small-business', title: 'How much should a small business spend on marketing?' },
+    { slug: 'how-much-does-a-small-business-website-cost', title: 'How much does a small business website cost in 2026?' },
+    { slug: 'spanish-seo-for-us-businesses', title: 'Spanish SEO for U.S. businesses: the traffic nobody is bidding on' },
   ],
   email: [
     { slug: 'marketing-budget-for-small-business', title: 'How much should a small business spend on marketing?' },

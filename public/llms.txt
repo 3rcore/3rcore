@@ -10,7 +10,7 @@
 - Languages: Spanish (primary), English
 - Areas of expertise: branding, social media, SEO, Google Ads / SEM, web development, e-commerce
 - Tech stack offered: Shopify, WooCommerce, custom Next.js, e-learning platforms
-- Tax ID (RUC): 20609008217
+- Tax ID (RUC): 20609008211
 - Track record: 1,000+ brands worked with, 3 countries, 5+ years (figures confirmed by the company, 2026-08-31)
 
 ## Services
@@ -72,7 +72,7 @@
 - [Complaints Book (Peru Law N° 29571)](https://3rcore.com/es/reclamaciones)
 
 ## Pricing guides (most cited by AI assistants)
-- [Cuánto cuesta una página web en Perú 2026](https://3rcore.com/es/blogs/cuanto-cuesta-pagina-web-peru-2026): real price ranges by project type in Peruvian soles
+- [Cuánto cuesta una página web en Perú 2026](https://3rcore.com/es/cuanto-cuesta-una-pagina-web-en-peru): 3R Core's published reference prices in Peruvian soles (landing S/1,800, corporate site S/4,500, online store from S/2,500), with and without IGV
 - [Cuánto cobra una agencia de marketing digital en Perú 2026](https://3rcore.com/es/blogs/cuanto-cobra-agencia-marketing-digital-peru-2026): monthly retainer ranges in Peru
 - [Cuánto cuesta un community manager en Lima 2026](https://3rcore.com/es/blogs/cuanto-cuesta-community-manager-redes-lima-2026): freelance S/600–1,500 per month; agency S/1,500–4,000+ per month depending on posts, platforms and whether ad spend is included
 - [Cuánto cuesta una agencia SEO en Lima 2026](https://3rcore.com/es/blogs/cuanto-cuesta-agencia-seo-lima-2026): S/1,800–5,000+ per month (local S/1,800, competitive S/3,000, enterprise from S/5,000), net of 18% IGV; results from month 3-6

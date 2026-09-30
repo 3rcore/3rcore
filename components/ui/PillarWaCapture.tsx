@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { WA_LEADS } from '@/lib/contact'
 import { trackConversion } from '@/lib/track'
+import { openWhatsAppNative } from '@/lib/wa-native-open'
 
 /**
  * PillarWaCapture — captura de leads nativa para las páginas pilar (recursos
@@ -50,7 +51,9 @@ export default function PillarWaCapture({ locale, service }: { locale: string; s
 
   const openWa = (msg: string) => {
     const url = `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(msg)}`
-    window.open(url, '_blank', 'noopener,noreferrer')
+    // Ya se capturó nombre + WhatsApp arriba: se abre directo, sin pasar por
+    // el interceptor global (WhatsAppLeadGate), que si no volvería a pedirlos.
+    openWhatsAppNative(url, '_blank', 'noopener,noreferrer')
   }
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {

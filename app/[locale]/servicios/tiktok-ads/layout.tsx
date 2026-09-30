@@ -10,7 +10,7 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
     path: '/servicios/tiktok-ads',
     titleEs: "Agencia de TikTok Ads en Lima, Perú | 3R Core",
     titleEn: 'TikTok Ads Agency for U.S. Brands | 3R Core',
-    descriptionEs: "Spark Ads, video nativo y creadores UGC propios para vender en TikTok en Perú. Gestión desde S/1,500/mes con ROAS medible y reportes cada mes.",
+    descriptionEs: "Spark Ads, video nativo y creadores UGC propios para vender en TikTok en Perú. Gestión desde S/1,500/mes (referencial) con ROAS medible y reporte mensual.",
     descriptionEn: 'TikTok Ads for U.S. businesses: Spark Ads, native video and in-house UGC creators with measurable ROAS. From $800/month in USD.',
     titleUs: 'Agencia de TikTok Ads en Español para EE.UU. | 3R Core',
     descriptionUs: 'TikTok Ads para el público hispano de EE.UU.: Spark Ads, video nativo con creadores hispanohablantes y segmentación por ciudad. Desde $800/mes.',
@@ -27,6 +27,8 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
     // diluir el foco del mercado que se está abriendo.
 
     noindex: locale !== 'es',
+    // Y el hreflang solo declara /es: las versiones /en y /us van noindex.
+    onlyLocales: ['es'],
   })
 }
 

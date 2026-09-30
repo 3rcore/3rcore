@@ -1,6 +1,9 @@
 import type { Metadata } from "next"
-import { generatePageMetadata, generateBreadcrumbSchema, BASE_URL } from "@/lib/metadata"
+import { generatePageMetadata, generateBreadcrumbSchema, localizedUrl, BASE_URL } from "@/lib/metadata"
 import { buildPersonSchemas, buildSpeakableSchema } from "@/lib/seoSchemas"
+import { getMessages } from "next-intl/server"
+import { NextIntlClientProvider } from "next-intl"
+import { pickMessages } from "@/lib/pickMessages"
 
 export const revalidate = 3600
 
@@ -10,13 +13,21 @@ export const revalidate = 3600
 //  - /en: agencia de SEO, desarrollo web y tiendas online para todo EE. UU.,
 //    sin ninguna referencia a Perú.
 //  - /us se queda como estaba.
+// 22-sep-2026. GSC (28d) mostraba a /es y /en repitiendo casi título por
+// título el de la home («Agencia de SEO, SEM y Google Ads»/«SEO, Web
+// Development & Online Stores Agency») + «3R Core»: para la query exacta
+// «3r core» Google alternaba SERP entre home y Nosotros (home #1.1 72 imp
+// 42 clics, Nosotros #1.3 89 imp 0 clics) — mismo título, misma intención de
+// marca. El H1 y la descripción ya diferencian bien («Un equipo propio»); solo
+// el <title> repetía. Se deja de repetir la frase de servicio en el title
+// (queda en la descripción) para que cada URL tenga un título propio.
 export async function generateMetadata({ params }: { params: any }): Promise<Metadata> {
   const { locale } = await params
   return generatePageMetadata({
     locale,
     path: '/nosotros',
-    titleEs: 'Nosotros — Agencia de SEO, SEM y Google Ads | 3R Core',
-    titleEn: 'About Us — SEO, Web Development & Online Stores Agency | 3R Core',
+    titleEs: 'Nosotros — El equipo detrás de 3R Core',
+    titleEn: 'About Us — The Team Behind 3R Core',
     descriptionEs: 'Los hermanos Roque y su equipo propio de diseño, programación y posicionamiento: SEO, SEM y Google Ads con resultados medibles. 4,7★ en 42 reseñas de Google.',
     descriptionEn: '3R Core is a family-run SEO, web development and online stores agency serving businesses across the U.S., on U.S. business hours and billing in USD through its U.S. subsidiary.',
     titleUs: 'Nosotros — Equipo en Lima para EE.UU. | 3R Core',
@@ -32,8 +43,8 @@ export default async function NosotrosLayout({ children, params }: { children: R
   const aboutSchema = {
     "@context": "https://schema.org",
     "@type": "AboutPage",
-    "@id": `${BASE_URL}/${locale}/nosotros#aboutpage`,
-    "url": `${BASE_URL}/${locale}/nosotros`,
+    "@id": `${localizedUrl('/nosotros', locale)}#aboutpage`,
+    "url": localizedUrl('/nosotros', locale),
     "name": isEn ? "About 3R Core" : "Sobre 3R Core",
     "description": isEn
       ? "3R Core is a family-owned SEO, web development and online stores agency serving businesses across the United States, combining Experience, Vision and Technology."
@@ -70,9 +81,19 @@ export default async function NosotrosLayout({ children, params }: { children: R
   )
 
   // Solo se pinta en /en y /us: en /es el hero de la v2 trae su propio h1.
+  // 28-sep-2026. El H1 de /us decía «…en Lima, Perú». Solo se pinta en /en y
+  // /us (en /es lo trae el prototipo), así que la rama española es la de /us.
   const hiddenH1 = isEn
     ? 'SEO, web development and online stores agency serving businesses across the U.S. — the Roque family team'
-    : 'Agencia de marketing digital en Lima, Perú — equipo familiar Roque: branding, SEO, Google Ads, redes sociales y desarrollo web'
+    : 'Agencia de marketing digital para negocios hispanos en Estados Unidos — equipo familiar Roque: páginas web, SEO y tiendas online'
+
+  // Recorte del payload de hidratación (ver lib/pickMessages.ts): /nosotros
+  // solo necesita los namespaces que consume Original.tsx (en/us), no el
+  // diccionario completo del locale. /es usa OriginalV2 (otro árbol) y queda
+  // fuera del recorte para no arriesgar nada de ese mercado.
+  const aboutMessages = pickMessages(await getMessages(), [
+    "AboutSection", "ContactSection", "FoundersSection", "MomentsSection", "OurTeamSection", "preload",
+  ])
 
   return (
     <>
@@ -83,7 +104,13 @@ export default async function NosotrosLayout({ children, params }: { children: R
       {/* En /es la página del prototipo trae su propio h1 visible; duplicarlo
           con el sr-only dejaría dos h1 en la misma página. */}
       {locale !== 'es' && <h1 className="sr-only">{hiddenH1}</h1>}
-      {children}
+      {locale === 'es' ? (
+        children
+      ) : (
+        <NextIntlClientProvider locale={locale} messages={aboutMessages}>
+          {children}
+        </NextIntlClientProvider>
+      )}
     </>
   )
 }

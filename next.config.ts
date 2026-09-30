@@ -5,6 +5,13 @@ const withNextIntl = createNextIntlPlugin();
 
 const nextConfig: NextConfig = {
   images: {
+    // 30-sep-2026. Se agotó la cuota de optimización de imágenes de Vercel:
+    // /_next/image respondía 402 (OPTIMIZED_IMAGE_REQUEST_PAYMENT_REQUIRED)
+    // para todo tamaño que no estuviera ya en caché, y en celulares —que piden
+    // anchos distintos a los de escritorio— salían logos, mosaico y fotos
+    // rotos. Las imágenes de /public ya van en WebP ligero, así que se sirven
+    // tal cual. Para volver a optimizar, quitar esta línea con cuota disponible.
+    unoptimized: true,
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 31536000,
     remotePatterns: [

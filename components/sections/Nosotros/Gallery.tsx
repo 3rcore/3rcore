@@ -44,7 +44,7 @@ export default function Gallery() {
 
             <div className="absolute inset-0 flex items-center justify-center z-20">
               <img 
-                src="/icons/LOGO3R.png" 
+                src="/icons/LOGO3R.webp" 
                 alt="Logo"
                 className="w-20 h-20 object-contain opacity-0 scale-0 -translate-y-20 rotate-[30deg] group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0 group-hover:rotate-0 transition-all duration-500 ease-out"
               />

@@ -58,7 +58,7 @@ export async function POST(request: Request) {
     const origenTxt = [utm, referrer].filter(Boolean).join(' · ').trim();
 
     // Guarda el lead en el panel/CRM antes de enviar los correos.
-    await saveLeadToPanel({ nombre, apellido, email, telefono, mensaje, website, attribution: readAttribution(request) });
+    await saveLeadToPanel({ nombre, apellido, email, telefono, mensaje, website, attribution: readAttribution(request, 'landing') });
 
     const result = await resend.batch.send([
       {

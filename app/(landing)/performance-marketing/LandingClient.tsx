@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { WA_LANDING } from "@/lib/contact";
-import { isHumanInteraction } from "@/lib/track";
+import { isHumanInteraction, GTM_TAGGED_EVENTS } from "@/lib/track";
 
 type GtagWindow = Window & {
   dataLayer?: unknown[];
@@ -12,14 +12,15 @@ type GtagWindow = Window & {
 // ID de la cuenta de Google Ads (ya cargada por gtag en el layout).
 const ADS_ID = "AW-17933910865";
 
-// Mide TODO: cada evento va al dataLayer (GTM) Y a GA4 directo vía gtag, para
-// que se registre aunque GTM no tenga los tags configurados.
+// Mide TODO: cada evento va al dataLayer (GTM) y, si GTM no tiene tag para él,
+// también a GA4 directo vía gtag (ver GTM_TAGGED_EVENTS: con los dos, GA4 lo
+// contaba 3 veces).
 const track = (event: string, params: Record<string, unknown> = {}) => {
   if (typeof window === "undefined") return;
   const w = window as GtagWindow;
   w.dataLayer = w.dataLayer || [];
   w.dataLayer.push({ event, ...params });
-  if (typeof w.gtag === "function") w.gtag("event", event, params);
+  if (!GTM_TAGGED_EVENTS.has(event) && typeof w.gtag === "function") w.gtag("event", event, params);
 };
 
 // Dispara una conversión de Google Ads (solo si existe el label de la acción).

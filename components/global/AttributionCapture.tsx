@@ -120,7 +120,10 @@ export default function AttributionCapture() {
         const cx = leerCookie('3r_cx') || {}
         const d = limpiar(desc(el))
         cx.k = d // último clic
-        if (d.z !== 'modal' && d.z !== 'formulario') cx.o = d // el CTA que abrió el flujo
+        // El CTA que abrió el flujo: solo lo que es una llamada a contactar (WhatsApp, teléfono,
+        // correo, botones, anclas o enlaces a cotizar/contacto), no un enlace cualquiera del menú.
+        const esCta = el.tagName !== 'A' || /wa\.me|whatsapp|^tel:|^mailto:|^#|cotiz|quote|contact|calcul|precio|pricing/i.test(d.h || '') || el.hasAttribute('data-cta')
+        if (esCta && d.z !== 'modal' && d.z !== 'formulario') cx.o = d
         ponerCookie('3r_cx', cx)
       } catch {}
     }

@@ -43,7 +43,10 @@ export async function POST(request: Request) {
   const resend = new Resend(process.env.RESEND_API_KEY);
 
   try {
-    const { nombre, apellido, email, telefono, mensaje, website, servicio, utm, referrer } = await request.json();
+    const body = await request.json();
+    const { nombre, apellido, email, mensaje, website, servicio, utm, referrer } = body;
+    // El formulario de los pilares (landingContact) manda el teléfono como `number`: sin esto llegaba vacío.
+    const telefono = body.telefono ?? body.number;
 
     if (!nombre || !email || !mensaje  || !website) {
       return NextResponse.json({ error: 'Faltan campos requeridos' }, { status: 400 });

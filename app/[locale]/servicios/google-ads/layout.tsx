@@ -95,7 +95,10 @@ export default async function GoogleAdsLayout({ children, params }: { children: 
         // 28-sep-2026. En /es el HTML del prototipo ya trae su FAQPage con las
         // preguntas visibles; GoogleAdsFAQ son otras que en /es no se ven. Dos
         // FAQPage en la misma URL dan error en Search Console.
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(locale === 'es' ? [serviceSchema, breadcrumbSchema] : [serviceSchema, faqSchema, breadcrumbSchema]) }}
+        // 2-oct-2026. El HTML del prototipo trae también su BreadcrumbList; en
+        // /es va solo el Service (el del prototipo se retiró: era un segundo
+        // Service sin oferta para la misma página).
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(locale === 'es' ? [serviceSchema] : [serviceSchema, faqSchema, breadcrumbSchema]) }}
       />
       {children}
     </>

@@ -70,7 +70,7 @@ export async function POST(request: Request) {
       nombre, apellido, email, telefono,
       mensaje: servicioTxt ? `Servicio: ${servicioTxt}\n\n${mensaje}` : mensaje,
       website: `Formulario web${page ? ` ${page}` : ''}`,
-      attribution: readAttribution(request),
+      attribution: readAttribution(request, 'contact'),
     });
 
     const result = await resend.batch.send([

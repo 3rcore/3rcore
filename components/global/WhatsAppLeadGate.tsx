@@ -40,7 +40,7 @@
  * nombre ya puesto y SIN mandar un lead nuevo al panel.
  */
 
-import { useEffect, useState, type FormEvent } from 'react'
+import { useEffect, useRef, useState, type FormEvent } from 'react'
 import { useLocale } from 'next-intl'
 import { trackConversion } from '@/lib/track'
 import { openWhatsAppNative } from '@/lib/wa-native-open'
@@ -121,6 +121,10 @@ export default function WhatsAppLeadGate() {
   const [celular, setCelular] = useState('')
   const [mensaje, setMensaje] = useState('')
   const [loading, setLoading] = useState(false)
+  // Un envío = un lead y un solo par generate_lead/whatsapp_click. `loading`
+  // es estado de React y no frena un doble toque/Enter que llega antes del
+  // siguiente render; este ref sí.
+  const sending = useRef(false)
 
   function openGate(phone: string, text: string, targetWin: string, features?: string) {
     const origin = window.location.pathname
@@ -183,7 +187,8 @@ export default function WhatsAppLeadGate() {
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
-    if (!pending || !nombre.trim() || !celular.trim() || loading) return
+    if (!pending || !nombre.trim() || !celular.trim() || loading || sending.current) return
+    sending.current = true
     setLoading(true)
 
     const finalMsg = `Hola, soy ${nombre.trim()}. ${mensaje.trim()}`.trim()
@@ -214,6 +219,7 @@ export default function WhatsAppLeadGate() {
     openWhatsAppNative(waUrl, pending.targetWin, pending.features)
 
     setLoading(false)
+    sending.current = false
     closeModal()
   }
 

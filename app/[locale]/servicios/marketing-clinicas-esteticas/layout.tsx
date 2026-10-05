@@ -8,9 +8,9 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
   return generatePageMetadata({
     locale,
     path: '/servicios/marketing-clinicas-esteticas',
-    titleEs: "Marketing para Clínicas Estéticas en Lima 2026 | 3R Core",
+    titleEs: "Gestión de Google Ads para clínicas estéticas en Lima | 3R Core",
     titleEn: "Digital Marketing for Aesthetic Clinics | 3R Core",
-    descriptionEs: "Agencia de marketing para clínicas estéticas en Lima: Meta Ads, Google Ads y SEO local. Redes desde S/1,500/mes + IGV, con reporte de citas.",
+    descriptionEs: "Google Ads para clínicas estéticas en Lima: tratamientos que se buscan por nombre, anuncios dentro de las políticas de salud y valoraciones medidas. Marketing estético.",
     descriptionEn: "Digital marketing for U.S. aesthetic clinics and medspas: social media management, Meta Ads, Google Ads, local SEO and per-treatment landing pages.",
     titleUs: "Marketing Digital para Clínicas Estéticas en EE.UU.",
     descriptionUs: "Agencia de marketing para clínicas estéticas en Lima: Meta Ads, Google Ads y SEO local. Redes desde S/1,500/mes + IGV, con reporte de citas.",
@@ -38,12 +38,12 @@ export default async function MarketingClinicasEsteticasLayout({ children, param
   const serviceSchema = buildServiceSchema({
     locale,
     path: '/servicios/marketing-clinicas-esteticas',
-    nameEs: "Marketing Digital para Clínicas Estéticas en Lima",
+    nameEs: "Gestión de Google Ads para clínicas estéticas en Lima",
     nameEn: "Digital Marketing for Aesthetic Clinics",
-    descriptionEs: "Marketing digital para clínicas estéticas y centros de medicina estética en Lima y Perú: manejo de redes sociales, Meta Ads, Google Ads, SEO local y landing pages por tratamiento.",
+    descriptionEs: "Gestión de campañas de Google Ads para clínicas estéticas y centros de medicina estética en Lima y Perú: anuncios de búsqueda por tratamiento, cumplimiento de las políticas de atención médica de Google, landing por tratamiento y medición de valoraciones agendadas.",
     descriptionEn: "Digital marketing for aesthetic clinics and medical aesthetics centers in the United States: social media management, Meta Ads, Google Ads, local SEO and per-treatment landing pages.",
-    serviceType: "Aesthetic Clinic Marketing / Healthcare Marketing",
-    minPriceEs: 1500,
+    serviceType: "Google Ads Management for Aesthetic Clinics",
+    minPriceEs: 1800,
     maxPriceEs: 12000,
     offerPriceEs: 1800,
     offerPriceEn: 500,
@@ -57,7 +57,7 @@ export default async function MarketingClinicasEsteticasLayout({ children, param
   const faqSchema = buildFAQPageSchema(faqItems)
 
   const breadcrumbSchema = generateBreadcrumbSchema(
-    [{ name: isEn ? 'Home' : 'Inicio', path: '' }, { name: isEn ? 'Services' : 'Servicios', path: '/servicios' }, { name: isEn ? "Aesthetic Clinic Marketing" : "Marketing para Clínicas Estéticas", path: '/servicios/marketing-clinicas-esteticas' }],
+    [{ name: isEn ? 'Home' : 'Inicio', path: '' }, { name: isEn ? 'Services' : 'Servicios', path: '/servicios' }, { name: isEn ? "Aesthetic Clinic Marketing" : "Google Ads para clínicas estéticas", path: '/servicios/marketing-clinicas-esteticas' }],
     locale
   )
 

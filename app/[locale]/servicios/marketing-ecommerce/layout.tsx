@@ -8,9 +8,9 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
   return generatePageMetadata({
     locale,
     path: '/servicios/marketing-ecommerce',
-    titleEs: "Marketing para E-commerce y Tiendas Online en Perú",
+    titleEs: "Gestión de Google Ads para e-commerce en Perú | 3R Core",
     titleEn: 'E-commerce Marketing for U.S. Online Stores | 3R Core',
-    descriptionEs: "Google Shopping, Meta Ads con catálogo, email y CRO para tiendas Shopify, WooCommerce y VTEX en Perú. Se optimiza por ROAS, no por impresiones.",
+    descriptionEs: "Google Ads para e-commerce y tiendas online en Perú: Shopping, Performance Max y búsqueda optimizados por ROAS en Shopify, WooCommerce o VTEX. Marketing para tiendas.",
     descriptionEn: 'Google Shopping, Meta Ads, catalog feeds, email flows and CRO for U.S. online stores, with measurable ROAS and pricing in USD.',
     titleUs: 'Marketing para E-commerce y Tiendas Online en EE.UU.',
     descriptionUs: 'Google Shopping, Meta Ads con catálogo, email y CRO para tiendas online en EE.UU., en español e inglés. Se optimiza por ROAS y se paga en dólares.',
@@ -41,14 +41,14 @@ export default async function MarketingEcommerceLayout({ children, params }: { c
   const serviceSchema = buildServiceSchema({
     locale,
     path: '/servicios/marketing-ecommerce',
-    nameEs: "Marketing Digital para E-commerce y Tiendas Online en Perú",
+    nameEs: "Gestión de Google Ads para e-commerce en Perú",
     nameEn: "Digital Marketing for E-commerce and Online Stores",
-    descriptionEs: "Marketing digital para e-commerce y tiendas online en Perú (Shopify, WooCommerce, VTEX): Google Shopping y Performance Max, Meta Ads con catálogo, email marketing, CRO y optimización por ROAS con reportes mensuales.",
+    descriptionEs: "Gestión de campañas de Google Ads para e-commerce y tiendas online en Perú (Shopify, WooCommerce, VTEX): Google Shopping y Performance Max con Merchant Center, búsqueda de marca y categoría, medición de compras y optimización por ROAS.",
     descriptionEn: "Digital marketing for e-commerce and online stores in the United States (Shopify, WooCommerce, VTEX): Google Shopping and Performance Max, Meta Ads with catalog, email marketing, CRO and ROAS optimization with monthly reports.",
-    serviceType: "E-commerce Marketing / Growth",
-    minPriceEs: 2500,
+    serviceType: "Google Ads Management for E-commerce",
+    minPriceEs: 1800,
     maxPriceEs: 15000,
-    offerPriceEs: 2500,
+    offerPriceEs: 1800,
     offerPriceEn: 700,
     audienceTypes: ["E-commerce", "Retail", "Consumer brands", "D2C"],
   })
@@ -60,7 +60,7 @@ export default async function MarketingEcommerceLayout({ children, params }: { c
   const faqSchema = buildFAQPageSchema(faqItems)
 
   const breadcrumbSchema = generateBreadcrumbSchema(
-    [{ name: isEn ? 'Home' : 'Inicio', path: '' }, { name: isEn ? 'Services' : 'Servicios', path: '/servicios' }, { name: isEn ? "E-commerce Marketing" : "Marketing E-commerce", path: '/servicios/marketing-ecommerce' }],
+    [{ name: isEn ? 'Home' : 'Inicio', path: '' }, { name: isEn ? 'Services' : 'Servicios', path: '/servicios' }, { name: isEn ? "E-commerce Marketing" : "Google Ads para e-commerce", path: '/servicios/marketing-ecommerce' }],
     locale
   )
 

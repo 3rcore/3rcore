@@ -8,9 +8,9 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
   return generatePageMetadata({
     locale,
     path: '/servicios/marketing-clinicas-dentales',
-    titleEs: "Marketing para Clínicas Dentales en Lima 2026 | 3R Core",
+    titleEs: "Gestión de Google Ads para clínicas dentales en Lima | 3R Core",
     titleEn: "Digital Marketing for Dental Clinics | 3R Core",
-    descriptionEs: "Agencia de marketing para clínicas dentales en Lima: Google Ads de salud, SEO local y ficha de Google. Gestión desde S/1,800/mes + IGV.",
+    descriptionEs: "Google Ads para clínicas dentales en Lima: implantes, ortodoncia y urgencias con citas medidas. Agencia de marketing para dentistas. Desde S/1,800/mes + IGV.",
     descriptionEn: "Digital marketing for U.S. dental clinics and orthodontic practices: healthcare Google Ads, local SEO, Google Business Profile and per-treatment landing pages.",
     titleUs: "Marketing Digital para Clínicas Dentales en EE.UU.",
     descriptionUs: "Agencia de marketing para clínicas dentales en Lima: Google Ads de salud, SEO local y ficha de Google. Gestión desde S/1,800/mes + IGV.",
@@ -38,12 +38,12 @@ export default async function MarketingClinicasDentalesLayout({ children, params
   const serviceSchema = buildServiceSchema({
     locale,
     path: '/servicios/marketing-clinicas-dentales',
-    nameEs: "Marketing Digital para Clínicas Dentales en Lima",
+    nameEs: "Gestión de Google Ads para clínicas dentales en Lima",
     nameEn: "Digital Marketing for Dental Clinics",
-    descriptionEs: "Marketing digital para clínicas dentales y consultorios odontológicos en Lima y Perú: Google Ads de salud, SEO local, Google Business Profile y landing pages por tratamiento. Se reporta en citas agendadas y costo por cita.",
+    descriptionEs: "Gestión de campañas de Google Ads para clínicas dentales y consultorios odontológicos en Lima y Perú: anuncios de búsqueda por tratamiento (implantes, ortodoncia, urgencias), landing por tratamiento, recursos de llamada y WhatsApp, y medición de citas agendadas.",
     descriptionEn: "Digital marketing for dental clinics and orthodontic practices in the United States: healthcare Google Ads, local SEO, Google Business Profile and per-treatment landing pages.",
-    serviceType: "Dental Marketing / Healthcare Marketing",
-    minPriceEs: 1500,
+    serviceType: "Google Ads Management for Dental Clinics",
+    minPriceEs: 1800,
     maxPriceEs: 12000,
     offerPriceEs: 1800,
     offerPriceEn: 500,
@@ -57,7 +57,7 @@ export default async function MarketingClinicasDentalesLayout({ children, params
   const faqSchema = buildFAQPageSchema(faqItems)
 
   const breadcrumbSchema = generateBreadcrumbSchema(
-    [{ name: isEn ? 'Home' : 'Inicio', path: '' }, { name: isEn ? 'Services' : 'Servicios', path: '/servicios' }, { name: isEn ? "Dental Clinic Marketing" : "Marketing para Clínicas Dentales", path: '/servicios/marketing-clinicas-dentales' }],
+    [{ name: isEn ? 'Home' : 'Inicio', path: '' }, { name: isEn ? 'Services' : 'Servicios', path: '/servicios' }, { name: isEn ? "Dental Clinic Marketing" : "Google Ads para clínicas dentales", path: '/servicios/marketing-clinicas-dentales' }],
     locale
   )
 

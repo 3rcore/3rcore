@@ -8,9 +8,9 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
   return generatePageMetadata({
     locale,
     path: '/servicios/marketing-veterinarias',
-    titleEs: "Marketing para Veterinarias en Lima 2026 | 3R Core",
+    titleEs: "Gestión de Google Ads para veterinarias en Lima | 3R Core",
     titleEn: "Digital Marketing for Veterinary Clinics | 3R Core",
-    descriptionEs: "Agencia de marketing para veterinarias en Lima: ficha de Google, SEO local y campañas. Desde S/1,800/mes + IGV, medido en citas.",
+    descriptionEs: "Google Ads para veterinarias en Lima: urgencias, vacunas y peluquería anunciadas por distrito, con llamadas y WhatsApp medidos. Marketing para veterinarias.",
     descriptionEn: "Digital marketing for veterinary clinics and pet shops in the United States: local SEO, Google Business Profile, campaigns and per-service pages.",
     titleUs: "Marketing Digital para Veterinarias en EE.UU.",
     descriptionUs: "Agencia de marketing para veterinarias en Lima: ficha de Google, SEO local y campañas. Desde S/1,800/mes + IGV, medido en citas.",
@@ -38,12 +38,12 @@ export default async function MarketingVeterinariasLayout({ children, params }: 
   const serviceSchema = buildServiceSchema({
     locale,
     path: '/servicios/marketing-veterinarias',
-    nameEs: "Marketing Digital para Veterinarias en Lima",
+    nameEs: "Gestión de Google Ads para veterinarias en Lima",
     nameEn: "Digital Marketing for Veterinary Clinics",
-    descriptionEs: "Marketing digital para veterinarias, clínicas veterinarias y pet shops en Lima y Perú: SEO local, ficha de Google Business Profile, campañas y páginas por servicio.",
+    descriptionEs: "Gestión de campañas de Google Ads para veterinarias, clínicas veterinarias y pet shops en Lima y Perú: anuncios de búsqueda por servicio y distrito, recursos de llamada para urgencias, landing por servicio y medición de citas.",
     descriptionEn: "Digital marketing for veterinary clinics and pet shops in the United States: local SEO, Google Business Profile, campaigns and per-service pages.",
-    serviceType: "Veterinary Marketing / Local Marketing",
-    minPriceEs: 1500,
+    serviceType: "Google Ads Management for Veterinary Clinics",
+    minPriceEs: 1800,
     maxPriceEs: 12000,
     offerPriceEs: 1800,
     offerPriceEn: 500,
@@ -57,7 +57,7 @@ export default async function MarketingVeterinariasLayout({ children, params }: 
   const faqSchema = buildFAQPageSchema(faqItems)
 
   const breadcrumbSchema = generateBreadcrumbSchema(
-    [{ name: isEn ? 'Home' : 'Inicio', path: '' }, { name: isEn ? 'Services' : 'Servicios', path: '/servicios' }, { name: isEn ? "Veterinary Marketing" : "Marketing para Veterinarias", path: '/servicios/marketing-veterinarias' }],
+    [{ name: isEn ? 'Home' : 'Inicio', path: '' }, { name: isEn ? 'Services' : 'Servicios', path: '/servicios' }, { name: isEn ? "Veterinary Marketing" : "Google Ads para veterinarias", path: '/servicios/marketing-veterinarias' }],
     locale
   )
 

@@ -8,9 +8,9 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
   return generatePageMetadata({
     locale,
     path: '/servicios/marketing-abogados',
-    titleEs: "Marketing Digital para Abogados y Estudios Jurídicos en Lima",
+    titleEs: "Gestión de Google Ads para abogados en Lima | 3R Core",
     titleEn: "Digital Marketing for Law Firms | 3R Core",
-    descriptionEs: "Captamos consultas para tu estudio jurídico en Lima: SEO local, ficha de Google y contenido que genera confianza. Se mide en consultas, no en visitas.",
+    descriptionEs: "Google Ads para estudios de abogados en Lima: consultas por especialidad (laboral, familia, penal), llamadas y WhatsApp medidos. Marketing digital para abogados.",
     descriptionEn: "Client acquisition for law firms: local SEO, Google Business Profile and content that builds trust before the first call.",
     titleUs: "Marketing Digital para Abogados en Estados Unidos",
     descriptionUs: "Captación de consultas para despachos hispanos en EE.UU.: SEO local en español, ficha de Google y contenido que genera confianza.",
@@ -41,14 +41,14 @@ export default async function MarketingClinicasLayout({ children, params }: { ch
   const serviceSchema = buildServiceSchema({
     locale,
     path: '/servicios/marketing-abogados',
-    nameEs: "Marketing Digital para Clínicas y Consultorios en Lima",
+    nameEs: "Gestión de Google Ads para abogados en Lima",
     nameEn: "Digital Marketing for Law Firms",
-    descriptionEs: "Marketing digital para clínicas, consultorios y profesionales de la salud en Lima y Perú: Google Ads y Meta Ads de salud, SEO local, Google Business Profile, landing pages y captación de pacientes con citas medibles.",
+    descriptionEs: "Gestión de campañas de Google Ads para estudios de abogados y abogados independientes en Lima y Perú: anuncios de búsqueda por área de práctica, recursos de llamada, landing por especialidad y medición de consultas por WhatsApp y teléfono.",
     descriptionEn: "Digital marketing for law firms: Google Business Profile, local positioning by practice area and content that builds trust before the first call.",
-    serviceType: "Healthcare Marketing / Medical Marketing",
-    minPriceEs: 2000,
+    serviceType: "Google Ads Management for Law Firms",
+    minPriceEs: 1800,
     maxPriceEs: 10000,
-    offerPriceEs: 2000,
+    offerPriceEs: 1800,
     offerPriceEn: 560,
     audienceTypes: ["Clinics", "Medical offices", "Dental", "Aesthetic"],
   })
@@ -60,7 +60,7 @@ export default async function MarketingClinicasLayout({ children, params }: { ch
   const faqSchema = buildFAQPageSchema(faqItems)
 
   const breadcrumbSchema = generateBreadcrumbSchema(
-    [{ name: isEn ? 'Home' : 'Inicio', path: '' }, { name: isEn ? 'Services' : 'Servicios', path: '/servicios' }, { name: isEn ? "Marketing for Clinics" : "Marketing para Clínicas", path: '/servicios/marketing-abogados' }],
+    [{ name: isEn ? 'Home' : 'Inicio', path: '' }, { name: isEn ? 'Services' : 'Servicios', path: '/servicios' }, { name: isEn ? "Marketing for Clinics" : "Google Ads para abogados", path: '/servicios/marketing-abogados' }],
     locale
   )
 

@@ -39,7 +39,7 @@ export default function MarketingVeterinarias() {
         <SEOContentBlock
           namespace="MarketingVeterinariasSEO"
           paragraphs={6}
-          relatedLinks={[{ href: "/posicionamiento-seo", label: "SEO Local" }, { href: "/servicios/google-ads", label: "Google Ads" }, { href: "/servicios/socialmedia", label: "Redes Sociales" }, { href: "/tiendas-virtuales-lima", label: "Tiendas Virtuales" }]}
+          relatedLinks={[{ href: "/servicios/google-ads", label: "Gestión de Google Ads" }, { href: "/posicionamiento-seo", label: "SEO Local" }, { href: "/servicios/socialmedia", label: "Redes Sociales" }, { href: "/tiendas-virtuales-lima", label: "Tiendas Virtuales" }]}
         />
         <ReviewsSection/>
         <ClientSection />

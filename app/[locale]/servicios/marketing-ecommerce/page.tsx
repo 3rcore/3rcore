@@ -39,7 +39,7 @@ export default function MarketingEcommerce() {
         <SEOContentBlock
           namespace="MarketingEcommerceSEO"
           paragraphs={6}
-          relatedLinks={[{ href: "/servicios/meta-ads", label: "Meta Ads" }, { href: "/servicios/google-ads", label: "Google Ads" }, { href: "/servicios/email-marketing", label: "Email Marketing" }, { href: "/servicios/web-development", label: "Tiendas Online" }]}
+          relatedLinks={[{ href: "/servicios/google-ads", label: "Gestión de Google Ads" }, { href: "/servicios/meta-ads", label: "Meta Ads" }, { href: "/servicios/email-marketing", label: "Email Marketing" }, { href: "/servicios/web-development", label: "Tiendas Online" }]}
         />
         <ReviewsSection/>
         <ClientSection />

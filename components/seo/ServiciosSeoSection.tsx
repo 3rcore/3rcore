@@ -59,9 +59,9 @@ const COPY = {
       { name: 'Influencer marketing', detail: 'Selección de creadores por datos de audiencia, negociación de tarifas y medición del resultado.', href: '/servicios/influencer-marketing' },
       { name: 'Relaciones públicas', detail: 'Mapa de medios por relevancia comercial, identificación del ángulo noticiable y gestión de la publicación.', href: '/servicios/relaciones-publicas' },
     ] as { name: string; detail: string; href: AppPathname }[],
-    h2Sectores: 'Marketing digital por sector',
+    h2Sectores: 'Gestión de Google Ads por sector',
     introSectores:
-      'Tres sectores tienen página propia porque su embudo y su coste por contacto no se parecen al resto.',
+      'Siete sectores tienen página propia de Google Ads porque sus búsquedas, sus reglas y su costo por contacto no se parecen al resto.',
     sectores: [
       { name: 'Clínicas y consultorios', detail: 'Google Ads de salud, SEO local, Google Business Profile y captación de pacientes con citas medibles.', href: '/servicios/marketing-clinicas' },
       { name: 'Inmobiliarias y proyectos', detail: 'Meta Ads y Google Ads para captar leads, landing por proyecto, CRM y seguimiento por WhatsApp con costo por lead medible.', href: '/servicios/marketing-inmobiliarias' },

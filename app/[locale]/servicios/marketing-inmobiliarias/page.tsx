@@ -39,7 +39,7 @@ export default function MarketingInmobiliarias() {
         <SEOContentBlock
           namespace="MarketingInmobiliariasSEO"
           paragraphs={6}
-          relatedLinks={[{ href: "/servicios/meta-ads", label: "Meta Ads" }, { href: "/servicios/google-ads", label: "Google Ads" }, { href: "/servicios/performance-marketing", label: "Performance Marketing" }, { href: "/servicios/web-development", label: "Landing Pages" }]}
+          relatedLinks={[{ href: "/servicios/google-ads", label: "Gestión de Google Ads" }, { href: "/servicios/meta-ads", label: "Meta Ads" }, { href: "/servicios/performance-marketing", label: "Performance Marketing" }, { href: "/servicios/web-development", label: "Landing Pages" }]}
         />
         <ReviewsSection/>
         <ClientSection />

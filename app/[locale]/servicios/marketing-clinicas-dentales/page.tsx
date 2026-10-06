@@ -39,7 +39,7 @@ export default function MarketingClinicasDentales() {
         <SEOContentBlock
           namespace="MarketingClinicasDentalesSEO"
           paragraphs={6}
-          relatedLinks={[{ href: "/servicios/marketing-clinicas", label: "Marketing para Clínicas" }, { href: "/servicios/google-ads", label: "Google Ads" }, { href: "/posicionamiento-seo", label: "SEO Local" }, { href: "/servicios/web-development", label: "Landing Pages" }]}
+          relatedLinks={[{ href: "/servicios/google-ads", label: "Gestión de Google Ads" }, { href: "/servicios/marketing-clinicas", label: "Marketing para Clínicas" }, { href: "/posicionamiento-seo", label: "SEO Local" }, { href: "/servicios/web-development", label: "Landing Pages" }]}
         />
         <ReviewsSection/>
         <ClientSection />

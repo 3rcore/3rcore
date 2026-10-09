@@ -232,10 +232,14 @@ export const BLOG_SEO_OVERRIDES: Record<string, BlogSeoOverride> = {
 export const BLOG_SEO_OVERRIDES_EN: Record<string, BlogSeoOverride> = {
   // Artículo: Shopify $25–$399/mes; WooCommerce gratis + hosting $25–$350/mes.
   // 28-sep-2026. The article already has a Squarespace/Wix/BigCommerce section.
+  // 9-oct-2026 (plan Mega SEO): GSC 90 d, 289 impresiones en posición 6,6 y 0
+  // clics. El title anterior (28-sep) se queda en la reversión (REVERTIR.md).
+  // Mismas cifras del artículo; el title dice para quién es y la descripción
+  // abre con lo que ningún comparador afiliado dice: no cobramos comisión.
   'best-ecommerce-platform-for-small-business': {
-    title: 'Ecommerce Platform Comparison 2026: Shopify vs WooCommerce vs Wix',
+    title: 'Ecommerce Platform Comparison 2026: Best Fit for Small Business',
     description:
-      'Shopify costs $25–$399 a month; WooCommerce is free, hosting $25–$350. Wix, Squarespace and BigCommerce too. Prices for reference, no affiliate links.',
+      'No affiliate links. Shopify runs $25–$399 a month; WooCommerce is free plus $25–$350 hosting. Where Wix, Squarespace and BigCommerce fit, and how to choose.',
   },
   // Artículo: «Roughly 40 million U.S. residents speak Spanish at home».
   // 28-sep-2026. Separación de intenciones (plan USA): este post se llevaba las

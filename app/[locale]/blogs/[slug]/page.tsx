@@ -7,6 +7,7 @@ import { BASE_URL, DEFAULT_OG_IMAGE } from "@/lib/metadata"
 import { buildAuthorNode } from "@/lib/seoSchemas"
 import { getBlogSeoOverride } from "@/lib/blog-seo-overrides"
 import { conEnlaceDeServicio } from "@/lib/blog-service-links"
+import { conEnlaceAMitad } from "@/lib/blog-service-links"
 import { consolidatedTarget, CONSOLIDATED_SLUGS_IN } from "@/lib/blog-consolidated"
 import { blogLocale, contentLanguage } from "@/lib/blogLocale"
 import { STATIC_US_POSTS, getStaticUsPost } from "@/lib/blog-static/us-posts"
@@ -310,7 +311,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   // párrafo, en los posts de /es que no lo tienen (ver lib/blog-service-links.ts).
   // Solo /es: /us sirve el mismo artículo peruano pero vende otros servicios.
   const conEnlace = locale === 'es' ? conEnlaceDeServicio(slug, conOverride.content || '') : conOverride.content
-  const post: BlogPost = conEnlace === conOverride.content ? conOverride : { ...conOverride, content: conEnlace }
+  // 9-oct-2026: segundo enlace contextual a mitad del texto (lib/blog-service-links.ts).
+  const conEnlaceMitad = locale === 'es' ? conEnlaceAMitad(slug, conEnlace || '') : conEnlace
+  const post: BlogPost = conEnlaceMitad === conOverride.content ? conOverride : { ...conOverride, content: conEnlaceMitad }
   const content = post.content || ''
   const plainText = stripHtml(content)
   const wordCount = wordsOf(content)

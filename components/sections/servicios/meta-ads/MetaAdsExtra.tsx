@@ -78,6 +78,25 @@ const ERRORES = [
   },
 ]
 
+const OBJETIVOS = [
+  {
+    t: 'Mensajes a WhatsApp',
+    d: 'El anuncio abre una conversación con tu número. Funciona para servicios y ventas consultivas, donde el cliente quiere preguntar antes de comprar. Se mide por costo por conversación iniciada y, si registras cuáles terminaron en venta, por costo por venta.',
+  },
+  {
+    t: 'Formulario en la propia plataforma',
+    d: 'La persona deja sus datos sin salir de Facebook o Instagram. Es la vía con menos fricción y por eso trae más volumen, pero también más contactos poco interesados: conviene añadir una o dos preguntas que filtren y llamar rápido.',
+  },
+  {
+    t: 'Tráfico a una landing con Pixel',
+    d: 'El anuncio lleva a una página tuya con formulario y botón de WhatsApp. Cuesta algo más por contacto, pero cada visita alimenta el retargeting y las audiencias similares, y la página se puede mejorar con los datos de GA4.',
+  },
+  {
+    t: 'Catálogo y retargeting de tienda',
+    d: 'Para tiendas online: el catálogo de productos conectado a Meta muestra a cada persona lo que vio o dejó en el carrito. Necesita el Pixel y la API de Conversiones bien instalados para que los eventos de compra lleguen completos.',
+  },
+]
+
 const MEDIMOS = [
   { t: 'Cada lead con su anuncio', d: 'El formulario y el clic a WhatsApp llegan con la campaña, el conjunto de anuncios y la página donde entró la persona, para saber qué pieza trajo cada contacto.' },
   { t: 'Pixel y API de Conversiones', d: 'Los eventos de lead y de mensaje se envían desde el navegador y desde el servidor, para que Meta los reciba aunque el navegador los bloquee.' },
@@ -105,6 +124,25 @@ export default function MetaAdsExtra() {
         <p className="text-white/60 max-w-3xl mt-6">
           El desglose por tipo de campaña y por rubro está en la guía de{' '}
           <Link href="/es/blogs/cuanto-cuesta-publicidad-facebook-instagram-peru-2026" className="underline underline-offset-4">cuánto cuesta la publicidad en Facebook e Instagram en Perú</Link>.
+        </p>
+      </section>
+
+      <section id="objetivos" className={sec}>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">¿Qué tipo de campaña de Meta Ads te conviene?</h2>
+        <p className="text-white/70 max-w-3xl mb-8 leading-relaxed">
+          Depende de dónde cierras la venta. Un negocio que vende por WhatsApp no necesita la misma campaña que una tienda online o una inmobiliaria que califica cada contacto por teléfono. Estas son las cuatro que más armamos:
+        </p>
+        <ul className="grid md:grid-cols-2 gap-4">
+          {OBJETIVOS.map((o) => (
+            <li key={o.t} className="border border-white/10 rounded-2xl p-6">
+              <h3 className="text-lg font-semibold mb-2">{o.t}</h3>
+              <p className="text-white/70 text-sm leading-relaxed">{o.d}</p>
+            </li>
+          ))}
+        </ul>
+        <p className="text-white/60 max-w-3xl mt-6">
+          Si todavía no tienes una página a la que mandar el tráfico, la hacemos nosotros: mira el{' '}
+          <Link href="/es/servicios/web-development" className="underline underline-offset-4">diseño de páginas web</Link>.
         </p>
       </section>
 

@@ -23,7 +23,7 @@ const clients: Client[] = [
   { name: 'Vita Logo', logo: '/images/Logos/vitaLogo.webp', className: "lg:-translate-y-2" },
   { name: 'Venus Logo', logo: '/images/Logos/venusLogo.webp', className: "lg:translate-y-5" },
   { name: 'Ventura Logo', logo: '/images/Logos/venturaLogo.webp', className: "lg:-translate-y-1" },
-  { name: 'Warner Bros', logo: '/images/Logos/warnerbros.png', className: "lg:translate-y-6 lg:scale-90" },
+  { name: 'Warner Bros', logo: '/images/Logos/warnerbros.webp', className: "lg:translate-y-6 lg:scale-90" },
   { name: 'Pretties', logo: '/images/Logos/pretties.webp', className: "lg:-translate-y-4" },
   { name: 'PDK', logo: '/images/Logos/pdk.webp', className: "xl:translate-x-15 lg:translate-y-10 2xl:translate-x-30" },
   { name: 'Domus Logo', logo: '/images/Logos/domusLogo.webp', className: "lg:-translate-x-5 xl:-translate-y-6 xl:-translate-x-40" },

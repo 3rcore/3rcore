@@ -102,7 +102,10 @@ export const BLOG_SEO_OVERRIDES: Record<string, BlogSeoOverride> = {
   // Resumen: fee de gestión desde S/1,800/mes + pauta mínima recomendada
   // S/1,500/mes pagada a Google → arranque serio ~S/3,300/mes.
   'cuanto-cuesta-google-ads-lima-agencia-2026': {
-    title: '¿Cuánto cuesta Google Ads en Lima? Fee y pauta 2026',
+    // 2-oct-2026: «Lima» → «Perú». En Search Console la búsqueda que le llega
+    // es «precio google ads peru» y el autocompletado de Google Perú propone
+    // «cuanto cuesta google ads perú».
+    title: '¿Cuánto cuesta Google Ads en Perú? Fee y pauta 2026',
     description:
       'Dos costos que no hay que mezclar: fee de agencia desde S/1,800 al mes y pauta mínima de S/1,500 para Google. Arranque serio: ~S/3,300 (referencial).',
   },

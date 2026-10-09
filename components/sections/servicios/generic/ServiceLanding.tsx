@@ -1,5 +1,7 @@
 "use client"
 import { useTranslations, useLocale } from "next-intl"
+import { Link } from "@/i18n/navigation"
+import { WA_LEADS } from "@/lib/contact"
 
 interface ContentItem {
   title: string
@@ -39,7 +41,29 @@ export default function ServiceLanding({ namespace }: Props) {
             >
               {t("hero.cta")}
             </a>
+            {/* 5-oct-2026: las páginas de sector se reorientan a Google Ads
+                (pedido de Piero Roque). Solo pintan el botón de WhatsApp y el
+                enlace al servicio si su namespace trae esas claves; el resto de
+                páginas que usan este componente no cambia. El wa.me lo captura
+                WhatsAppLeadGate (panel propio). */}
+            {t.has("hero.waCta") && (
+              <a
+                href={`https://wa.me/${WA_LEADS}?text=${encodeURIComponent(t("hero.waText"))}`}
+                target="_blank"
+                rel="noopener"
+                className="inline-block px-8 py-3 rounded-full border border-[#E91E63] text-white font-semibold hover:bg-[#E91E63]/20 transition-all duration-300"
+              >
+                {t("hero.waCta")}
+              </a>
+            )}
           </div>
+          {t.has("hero.serviceLink") && (
+            <p className="mt-6 text-sm text-gray-300">
+              <Link href="/servicios/google-ads" className="underline underline-offset-4 hover:text-white">
+                {t("hero.serviceLink")}
+              </Link>
+            </p>
+          )}
         </div>
       </section>
 

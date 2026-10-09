@@ -669,17 +669,17 @@
     "tiktokads": "Agencia de TikTok Ads en Lima, Perú",
     "performance": "Agencia de performance marketing y adquisición con ROI en Lima, Perú",
     "emailmarketing": "Agencia de email marketing y automatización en Lima, Perú",
-    "clinicas": "Agencia de marketing digital para clínicas y consultorios en Lima, Perú",
-    "inmobiliarias": "Agencia de marketing digital para inmobiliarias en Lima, Perú",
-    "ecommerce": "Agencia de marketing digital para e-commerce y tiendas online en Perú",
+    "clinicas": "Gestión de Google Ads para clínicas y consultorios en Lima, Perú",
+    "inmobiliarias": "Gestión de Google Ads para inmobiliarias en Lima, Perú",
+    "ecommerce": "Gestión de Google Ads para e-commerce y tiendas online en Perú",
     "ugc": "Agencia de producción de contenido UGC para campañas en Lima, Perú",
     "influencers": "Agencia de influencer marketing y campañas con creadores en Lima, Perú",
     "pr": "Agencia de relaciones públicas, prensa y gestión de reputación en Lima, Perú",
     "posicionamientoia": "Posicionamiento en IA (GEO) en Lima: que ChatGPT, Perplexity y Copilot citen a tu empresa",
-    "abogados": "Agencia de marketing digital para estudios de abogados en Lima, Perú",
-    "clinicasdentales": "Agencia de marketing digital para clínicas dentales en Lima, Perú",
-    "clinicasesteticas": "Agencia de marketing digital para clínicas estéticas en Lima, Perú",
-    "veterinarias": "Agencia de marketing digital para veterinarias en Lima, Perú"
+    "abogados": "Gestión de Google Ads para abogados y estudios jurídicos en Lima, Perú",
+    "clinicasdentales": "Gestión de Google Ads para clínicas dentales en Lima, Perú",
+    "clinicasesteticas": "Gestión de Google Ads para clínicas estéticas en Lima, Perú",
+    "veterinarias": "Gestión de Google Ads para veterinarias en Lima, Perú"
   },
   "HomeFAQ": {
     "badge": "Preguntas Frecuentes",
@@ -1455,356 +1455,365 @@
   },
   "MarketingClinicasLanding": {
     "hero": {
-      "badge": "Salud · Captación de pacientes",
-      "title": "Marketing digital para clínicas y consultorios en Lima",
-      "subtitle": "Atraemos pacientes reales para tu clínica, consultorio o especialidad con Google Ads, SEO local y campañas que respetan las normas de publicidad en salud.",
-      "cta": "Quiero más pacientes"
+      "badge": "Google Ads · Clínicas y consultorios",
+      "title": "Gestión de Google Ads para clínicas que llena la agenda de citas",
+      "subtitle": "Pacientes que buscan «cardiólogo en San Borja» o «clínica de fisioterapia en Surco» encuentran tu clínica arriba en Google, y cada cita queda medida.",
+      "cta": "Quiero más pacientes",
+      "waCta": "Pedir auditoría por WhatsApp",
+      "waText": "Hola 3R Core, tengo una clínica y quiero una auditoría de Google Ads.",
+      "serviceLink": "Ver el servicio completo de Google Ads"
     },
     "intro": {
-      "title": "Más citas agendadas, no solo más seguidores",
-      "p1": "El paciente peruano investiga en Google y en redes antes de elegir dónde atenderse. En 3R Core ayudamos a clínicas, consultorios y profesionales de la salud en Lima y provincias a estar presentes justo en ese momento de decisión, con una estrategia que prioriza las citas agendadas por encima de las métricas de vanidad.",
-      "p2": "Combinamos Google Ads de alta intención (\"dermatólogo en Miraflores\", \"clínica dental San Isidro\") con SEO local y una ficha de Google Business Profile optimizada para aparecer en el mapa cuando alguien busca cerca de tu sede. Sumamos landing pages por especialidad y campañas de Meta Ads para tratamientos electivos, siempre midiendo el costo por cita.",
-      "p3": "Sabemos que el rubro salud tiene reglas: cuidamos que la publicidad cumpla las políticas de Google y Meta para el sector, evitamos promesas indebidas y protegemos la reputación de tu marca. El resultado es un flujo constante de pacientes calificados y un panel donde ves de dónde viene cada contacto."
+      "title": "Google Ads para clínicas: el paciente busca antes de llamar",
+      "p1": "La gestión de Google Ads para clínicas consiste en mostrar tu clínica o consultorio a quien busca una especialidad, un examen o un tratamiento en tu zona. En 3R Core lo trabajamos por especialidad, con landing propia y medición de citas, no de clics.",
+      "p2": "El paciente compara en Google: especialista, distrito, horario, si atiende con seguro. Los anuncios de búsqueda te ponen en esa lista con tu teléfono y tu WhatsApp, y solo pagas cuando alguien hace clic.",
+      "p3": "El rubro salud tiene reglas propias en Google Ads: hay contenidos restringidos y los anuncios pasan por la política de atención médica de Google. Redactamos anuncios y landings que cumplen esas reglas para que la campaña no se detenga por rechazos. Para especialidades concretas tenemos páginas de clínicas dentales y estéticas."
     },
     "benefits": {
       "badge": "Qué incluye",
-      "title": "Nuestro sistema de captación de pacientes",
+      "title": "La gestión de Google Ads para tu clínica",
       "items": [
         {
-          "title": "Google Ads de salud",
-          "description": "Campañas de búsqueda por especialidad y ubicación, con extensiones de llamada y agenda para captar en el momento de decisión."
+          "title": "Campañas por especialidad",
+          "description": "Cada especialidad o servicio con sus búsquedas, anuncios y presupuesto, para saber cuánto cuesta una cita en cada una."
         },
         {
-          "title": "SEO local y Google Maps",
-          "description": "Optimizamos tu web y tu ficha de Google Business Profile para aparecer en el mapa de tu distrito."
+          "title": "Segmentación por distrito",
+          "description": "Anuncios para las zonas desde donde tus pacientes realmente llegan, con horarios de atención."
         },
         {
-          "title": "Landing pages por especialidad",
-          "description": "Páginas de aterrizaje claras por tratamiento, con formularios y botón de WhatsApp para agendar."
+          "title": "Anuncios dentro de las políticas",
+          "description": "Textos y landings revisados según la política de atención médica de Google para evitar rechazos."
         },
         {
-          "title": "Meta Ads para tratamientos",
-          "description": "Campañas en Facebook e Instagram para procedimientos electivos y estéticos con segmentación local."
+          "title": "Llamada y WhatsApp en el anuncio",
+          "description": "El paciente agenda por el canal que prefiere y cada contacto queda registrado."
         },
         {
-          "title": "Cumplimiento del rubro salud",
-          "description": "Respetamos las políticas de publicidad en salud de Google y Meta para evitar rechazos y suspensiones."
+          "title": "Landing por servicio",
+          "description": "Qué incluye, quién atiende, dónde y cómo agendar: lo que el paciente necesita para decidir."
         },
         {
-          "title": "Medición del costo por cita",
-          "description": "Rastreamos llamadas, formularios y mensajes para saber cuánto cuesta cada paciente captado."
+          "title": "Reporte en citas",
+          "description": "Costo por contacto y por cita agendada, por especialidad."
         }
       ]
     },
     "process": {
-      "badge": "Cómo trabajamos",
-      "title": "Nuestro proceso para clínicas",
+      "badge": "Cómo funciona",
+      "title": "Cómo funciona Google Ads para clínicas",
       "steps": [
         {
-          "title": "Diagnóstico y especialidades",
-          "description": "Analizamos tus servicios más rentables, tu zona de influencia y la competencia local."
+          "title": "Especialidades y zonas",
+          "description": "Elegimos qué servicios quieres llenar y en qué distritos están tus pacientes."
         },
         {
-          "title": "Presencia local",
-          "description": "Optimizamos tu ficha de Google Business Profile, reseñas y SEO local por distrito."
+          "title": "Revisión de políticas",
+          "description": "Comprobamos qué se puede anunciar de cada servicio y redactamos dentro de esas reglas."
         },
         {
-          "title": "Campañas y landings",
-          "description": "Lanzamos Google Ads y Meta Ads con landing pages por especialidad y seguimiento de conversiones."
+          "title": "Landing y medición",
+          "description": "Página por especialidad con agenda por WhatsApp y teléfono, medida con el identificador del clic de Google."
         },
         {
-          "title": "Optimización por citas",
-          "description": "Ajustamos pujas, palabras y creatividades para bajar el costo por cita agendada."
+          "title": "Lanzamiento en búsqueda",
+          "description": "Empezamos por las búsquedas de mayor intención («consulta con dermatólogo en Miraflores»)."
         },
         {
-          "title": "Reporte de pacientes",
-          "description": "Entregamos un informe con contactos, citas y costo por paciente, más el plan del siguiente mes."
+          "title": "Optimización hacia citas",
+          "description": "Las citas que confirma tu recepción se suben como conversión para que la campaña aprenda de pacientes reales."
         }
       ]
     }
   },
   "MarketingClinicasFAQ": {
     "badge": "Preguntas frecuentes",
-    "title": "Preguntas frecuentes",
+    "title": "Preguntas frecuentes sobre Google Ads para clínicas",
     "faqs": {
       "q1": {
-        "question": "¿Puedo anunciar mi clínica en Google si es del rubro salud?",
-        "answer": "Sí, pero con reglas. Google y Meta tienen políticas específicas para salud que limitan ciertos términos y afirmaciones. En 3R Core diseñamos campañas que cumplen esas políticas para evitar rechazos y suspensiones de cuenta."
+        "question": "¿Se pueden anunciar servicios de salud en Google Ads en Perú?",
+        "answer": "Sí, la mayoría de servicios médicos se pueden anunciar. Google restringe algunos contenidos, como ciertos medicamentos con receta, y revisa los anuncios de salud con su política de atención médica. Revisamos cada servicio antes de lanzar."
       },
       "q2": {
-        "question": "¿Qué tipo de pacientes puedo captar con marketing digital?",
-        "answer": "Depende de tu especialidad, pero funcionan muy bien procedimientos electivos y consultas de alta intención: odontología, dermatología, oftalmología, estética, fisioterapia, salud mental y chequeos, entre otros."
+        "question": "¿Qué especialidades funcionan mejor con Google Ads?",
+        "answer": "Las que el paciente busca por nombre y con urgencia: odontología, dermatología, oftalmología, fisioterapia, ginecología, exámenes y chequeos. Lo confirmamos con los datos de búsqueda de tu zona."
       },
       "q3": {
-        "question": "¿Cuánto cuesta captar un paciente?",
-        "answer": "Varía según la especialidad y la competencia en tu distrito. Por eso medimos el costo por cita agendada y optimizamos hacia él, para que sepas exactamente cuánto te cuesta cada paciente y si es rentable."
+        "question": "¿Google Ads reemplaza a la ficha de Google Maps?",
+        "answer": "No, se complementan. La ficha de Google Business Profile aparece en el mapa de forma orgánica; Google Ads te pone arriba en las búsquedas donde la ficha todavía no sale."
       },
       "q4": {
-        "question": "¿Es importante Google Business Profile para una clínica?",
-        "answer": "Muchísimo. La mayoría de pacientes busca \"cerca de mí\" o por distrito. Una ficha bien optimizada, con reseñas y fotos, es clave para aparecer en el mapa y generar llamadas y visitas."
+        "question": "¿Cuánto demora en llegar el primer paciente?",
+        "answer": "Los anuncios de búsqueda se muestran en cuanto Google los aprueba, así que las primeras consultas pueden llegar en los primeros días. Afinar el costo por cita requiere varias semanas de datos."
       },
       "q5": {
-        "question": "¿Necesito una web o basta con redes?",
-        "answer": "Recomendamos al menos landing pages por especialidad con formulario y botón de WhatsApp. Convierten mucho mejor que enviar el tráfico al perfil de Instagram y permiten medir cada contacto."
+        "question": "¿Cuánto cuesta la gestión de Google Ads?",
+        "answer": "La gestión de Google Ads de 3R Core cuesta S/1,800 al mes + IGV (precio referencial). La inversión en anuncios se paga aparte y directo a Google desde tu propia tarjeta; como referencia, recomendamos empezar desde S/1,500 al mes de pauta."
       },
       "q6": {
-        "question": "¿Trabajan con consultorios individuales o solo clínicas grandes?",
-        "answer": "Con ambos. Adaptamos la estrategia y el presupuesto al tamaño del negocio, desde un consultorio de un especialista hasta clínicas con varias sedes."
+        "question": "¿La cuenta de Google Ads queda a nombre de mi empresa?",
+        "answer": "Sí. Creamos o usamos la cuenta de Google Ads a nombre de tu empresa y nos das acceso como administradores. Las campañas, el historial y los datos son tuyos aunque un día dejes de trabajar con nosotros."
       },
       "q7": {
-        "question": "¿Cómo protegen la reputación de mi marca?",
-        "answer": "Cuidamos los mensajes para no hacer promesas indebidas, cumplimos las políticas del rubro y podemos gestionar la estrategia de reseñas para fortalecer la confianza en tu clínica."
+        "question": "¿Cómo saben qué anuncio trajo cada cliente?",
+        "answer": "Cada contacto queda registrado con su origen: el formulario y el clic a WhatsApp guardan el identificador del clic de Google (GCLID), y las ventas que se cierran por WhatsApp se suben a Google Ads como conversión offline. Así la campaña aprende de las ventas reales y no de clics sueltos."
       },
       "q8": {
-        "question": "¿En cuánto tiempo veré más citas?",
-        "answer": "Las campañas de Google Ads suelen generar contactos desde la primera semana. El SEO local y las reseñas construyen resultados sostenibles en el mediano plazo."
+        "question": "¿Pueden revisar mis campañas actuales de Google Ads?",
+        "answer": "Sí. Si ya tienes campañas, empezamos por una auditoría de tu cuenta: revisamos qué se está contando como conversión, en qué búsquedas se va el presupuesto y qué páginas reciben el clic. Pídela por WhatsApp desde esta página."
       }
     }
   },
   "MarketingClinicasSEO": {
-    "seoTitle": "Marketing digital para clínicas en Lima con foco en pacientes",
-    "p1": "El paciente peruano investiga antes de elegir dónde atenderse: busca en Google, lee reseñas y compara opciones en redes. En 3R Core diseñamos estrategias de marketing digital para clínicas y consultorios en Lima que ponen tu servicio frente a ese paciente en el momento exacto de la decisión, priorizando siempre las citas agendadas.",
-    "p2": "Nuestro enfoque combina Google Ads de alta intención —búsquedas por especialidad y distrito— con SEO local y una ficha de Google Business Profile optimizada para aparecer en el mapa. Cuando alguien busca un dermatólogo en Miraflores o una clínica dental en San Isidro, queremos que te encuentre a ti.",
-    "p3": "Para tratamientos electivos y estéticos sumamos campañas de Meta Ads en Facebook e Instagram con segmentación local, y llevamos todo el tráfico a landing pages por especialidad con formulario y botón de WhatsApp. Cada canal se mide por su costo por cita, no por métricas de vanidad.",
-    "p4": "El rubro salud tiene reglas estrictas de publicidad. Conocemos las políticas de Google y Meta para el sector y diseñamos campañas que las cumplen, evitando promesas indebidas y protegiendo la reputación y la cuenta de tu clínica.",
-    "p5": "La confianza es determinante en salud, por eso trabajamos también las reseñas y la presencia local para que tu clínica proyecte solidez. Un paciente que ve buenas reseñas y una ficha completa tiene mucha más probabilidad de agendar.",
-    "p6": "Si buscas marketing digital para clínicas en Lima que se traduzca en más citas y no solo en más seguidores, en 3R Core construimos un sistema medible de captación de pacientes, con un panel donde ves de dónde viene cada contacto.",
+    "seoTitle": "Cómo funciona Google Ads para clínicas y consultorios",
+    "p1": "Google Ads para clínicas funciona porque el paciente busca antes de llamar. Escribe la especialidad y el distrito, compara dos o tres opciones y agenda con la que le da confianza y una respuesta rápida. El anuncio pone a tu clínica en esa comparación.",
+    "p2": "Cada especialidad se trabaja por separado. Un examen preventivo y una cirugía tienen búsquedas, ticket y tiempo de decisión distintos, así que cada una lleva sus anuncios, su landing y su presupuesto.",
+    "p3": "Las políticas de salud de Google se revisan antes de lanzar. Algunos contenidos están restringidos y otros requieren cuidado en el texto. Redactar dentro de esas reglas evita que la campaña se detenga por anuncios rechazados.",
+    "p4": "La medición se hace en citas. El formulario, la llamada y el WhatsApp guardan el identificador del clic de Google, y las citas que confirma tu recepción se pueden subir como conversión offline para que la puja optimice hacia pacientes, no hacia clics.",
+    "p5": "La gestión de Google Ads de 3R Core cuesta S/1,800 al mes + IGV (referencial), y la pauta se paga aparte a Google desde la cuenta de tu clínica. Si ya tienes campañas, empezamos por una auditoría.",
+    "p6": "Si buscas marketing digital para clínicas en Lima con Google Ads como motor de citas, conversemos. Te mostramos qué buscan los pacientes de tu especialidad y zona antes de invertir.",
     "relatedTitle": "Servicios relacionados"
   },
   "MarketingInmobiliariasLanding": {
     "hero": {
-      "badge": "Inmobiliario · Captación de leads",
-      "title": "Marketing digital para inmobiliarias en Lima que llena tu sala de ventas",
-      "subtitle": "Captamos leads calificados para tus proyectos de departamentos y lotes con Meta Ads, Google Ads y un embudo conectado a tu CRM y WhatsApp.",
-      "cta": "Quiero más leads calificados"
+      "badge": "Google Ads · Inmobiliarias",
+      "title": "Gestión de Google Ads para inmobiliarias que llena tu sala de ventas",
+      "subtitle": "Anuncios en Google para quien ya busca «departamentos en Surco» o «proyecto en Jesús María», con una landing por proyecto y cada lead medido hasta la visita.",
+      "cta": "Quiero más leads para mi proyecto",
+      "waCta": "Pedir auditoría por WhatsApp",
+      "waText": "Hola 3R Core, tengo una inmobiliaria y quiero una auditoría de Google Ads para mis proyectos.",
+      "serviceLink": "Ver el servicio completo de Google Ads"
     },
     "intro": {
-      "title": "Leads inmobiliarios que sí llegan a la separación",
-      "p1": "Vender un departamento o lote no es una compra por impulso: es un proceso largo, con un ticket alto y muchos actores. En 3R Core diseñamos embudos de marketing inmobiliario que no solo generan formularios, sino leads calificados que tu fuerza de ventas puede convertir en visitas a la sala de ventas y separaciones.",
-      "p2": "Combinamos Meta Ads para despertar el interés y llegar a compradores potenciales por zona, presupuesto y momento de vida, con Google Ads para capturar la demanda activa de quien ya busca \"departamentos en Surco\" o \"proyectos en Lima\". Cada campaña lleva a una landing page de proyecto con la información que el comprador peruano necesita: ubicación, áreas, precios desde, financiamiento y bono del buen pagador.",
-      "p3": "Conectamos los formularios con tu CRM y con WhatsApp para que ningún lead se enfríe, y medimos todo el embudo: costo por lead, costo por lead calificado y, cuando el CRM lo permite, costo por separación. Trabajamos con desarrolladoras y corredores en Lima y provincias que quieren un flujo predecible de oportunidades."
+      "title": "Google Ads para inmobiliarias: captar al comprador cuando busca",
+      "p1": "La gestión de Google Ads para inmobiliarias consiste en mostrar tus proyectos a las personas que en ese momento buscan comprar o alquilar en tu zona. En 3R Core lo trabajamos como un sistema de captación: búsquedas por distrito y tipo de inmueble, una landing por proyecto y un seguimiento que mide qué lead llegó a la sala de ventas.",
+      "p2": "Quien escribe en Google «departamentos de 3 dormitorios en San Miguel» o «proyecto inmobiliario entrega inmediata» ya está comparando. Esa intención es la que paga Google Ads: el anuncio aparece arriba de los resultados y solo cobras cuando alguien hace clic. Lo complementamos con remarketing para quien visitó el proyecto y no dejó sus datos.",
+      "p3": "Si además necesitas marketing digital inmobiliario completo, Google Ads es la pieza que captura la demanda activa; Meta Ads y el contenido despiertan la demanda que todavía no busca. Trabajamos con desarrolladoras, constructoras y corredores en Lima y provincias."
     },
     "benefits": {
       "badge": "Qué incluye",
-      "title": "Nuestro embudo de captación inmobiliaria",
+      "title": "La gestión de Google Ads para tu inmobiliaria",
       "items": [
         {
-          "title": "Meta Ads por proyecto y zona",
-          "description": "Campañas de prospección y retargeting segmentadas por distrito, presupuesto y momento de vida del comprador."
+          "title": "Campañas por proyecto y distrito",
+          "description": "Un grupo de anuncios por proyecto, con las búsquedas de su distrito, tipo de inmueble y etapa (preventa, en construcción, entrega inmediata)."
         },
         {
-          "title": "Google Ads de demanda activa",
-          "description": "Capturamos a quien ya busca departamentos o proyectos en tu zona con anuncios de búsqueda."
+          "title": "Palabras negativas desde el día uno",
+          "description": "Excluimos «alquiler» si vendes, «gratis», «trabajo», «planos» y las búsquedas que gastan sin traer compradores."
         },
         {
-          "title": "Landing pages de proyecto",
-          "description": "Páginas con ubicación, áreas, precios desde, financiamiento y formularios optimizados para conversión."
+          "title": "Landing por proyecto",
+          "description": "Ubicación, áreas, precios desde, financiamiento y formulario corto: la página que Google evalúa para tu nivel de calidad."
         },
         {
-          "title": "Integración con CRM",
-          "description": "Los leads entran directo a tu CRM con su origen, para que ventas los trabaje sin fricción."
+          "title": "Recursos de llamada y WhatsApp",
+          "description": "El anuncio muestra el teléfono y la landing abre WhatsApp, para atender al interesado mientras está caliente."
         },
         {
-          "title": "Seguimiento por WhatsApp",
-          "description": "Click-to-WhatsApp y respuestas rápidas para atender al lead en caliente, cuando más convierte."
+          "title": "Leads directo a tu CRM",
+          "description": "Cada contacto entra con su campaña y palabra de origen para que ventas lo trabaje sin perderlo."
         },
         {
-          "title": "Medición del costo por lead",
-          "description": "Reportamos costo por lead y por lead calificado para invertir donde mejor rinde cada proyecto."
+          "title": "Costo por lead calificado",
+          "description": "Reportamos costo por lead, por lead calificado y, si el CRM lo registra, por visita y separación."
         }
       ]
     },
     "process": {
-      "badge": "Cómo trabajamos",
-      "title": "Nuestro proceso para inmobiliarias",
+      "badge": "Cómo funciona",
+      "title": "Cómo funciona Google Ads para inmobiliarias",
       "steps": [
         {
-          "title": "Diagnóstico del proyecto",
-          "description": "Analizamos el proyecto, el perfil de comprador, el precio y la competencia en la zona."
+          "title": "Búsqueda de la demanda real",
+          "description": "Medimos qué se busca en tu zona: distrito, número de dormitorios, «estreno», «entrega inmediata», bono MiVivienda."
         },
         {
           "title": "Landing y medición",
-          "description": "Creamos la landing del proyecto, instalamos píxeles y conectamos el CRM y WhatsApp."
+          "description": "Montamos la landing del proyecto y conectamos formulario, WhatsApp y CRM con el identificador del clic de Google."
         },
         {
-          "title": "Campañas multicanal",
-          "description": "Lanzamos Meta Ads y Google Ads con mensajes por etapa del embudo y por zona."
+          "title": "Lanzamiento en la red de búsqueda",
+          "description": "Empezamos por anuncios de búsqueda, que son los de mayor intención; remarketing y otros formatos vienen después."
         },
         {
-          "title": "Calificación de leads",
-          "description": "Optimizamos hacia leads que cumplen el perfil y filtramos el tráfico que no separa."
+          "title": "Optimización hacia leads que separan",
+          "description": "Subimos a Google Ads qué leads llegaron a visita o separación para que la puja aprenda de ventas, no de formularios."
         },
         {
-          "title": "Reporte y escalamiento",
-          "description": "Entregamos el informe de costo por lead y ajustamos el presupuesto por proyecto y velocidad de venta."
+          "title": "Reporte mensual por proyecto",
+          "description": "Costo por lead calificado por proyecto y reasignación del presupuesto según la velocidad de venta de cada uno."
         }
       ]
     }
   },
   "MarketingInmobiliariasFAQ": {
     "badge": "Preguntas frecuentes",
-    "title": "Preguntas frecuentes",
+    "title": "Preguntas frecuentes sobre Google Ads para inmobiliarias",
     "faqs": {
       "q1": {
-        "question": "¿Cómo generan leads inmobiliarios de calidad y no solo formularios?",
-        "answer": "Segmentamos por zona, presupuesto y momento de vida, y llevamos el tráfico a landing pages con información real del proyecto (precios desde, áreas, financiamiento). Además filtramos y calificamos los leads antes de pasarlos a ventas."
+        "question": "¿Google Ads funciona para vender departamentos?",
+        "answer": "Sí, porque capta a quien ya busca un inmueble en una zona concreta. Es el canal de mayor intención; Meta Ads sirve más para generar interés en quien todavía no busca. Para un proyecto en venta solemos combinarlos."
       },
       "q2": {
-        "question": "¿Qué canales funcionan mejor para vender departamentos?",
-        "answer": "Meta Ads es excelente para despertar interés y llegar a compradores potenciales; Google Ads captura la demanda activa de quien ya busca. Los combinamos según la etapa del proyecto (preventa, lanzamiento o cierre)."
+        "question": "¿Qué búsquedas conviene anunciar para un proyecto inmobiliario?",
+        "answer": "Las que combinan tipo de inmueble y ubicación («departamento 2 dormitorios Pueblo Libre»), la etapa («entrega inmediata», «preventa») y el nombre del proyecto. Las búsquedas genéricas como «departamentos» gastan mucho y califican poco."
       },
       "q3": {
-        "question": "¿Se integran con nuestro CRM?",
-        "answer": "Sí. Conectamos los formularios y los leads de WhatsApp directamente a tu CRM con su origen y campaña, para que la fuerza de ventas los trabaje sin fricción y podamos medir el embudo completo."
+        "question": "¿Sirve para lotes, casas de playa u oficinas?",
+        "answer": "Sí. La estructura es la misma: búsquedas por zona y tipo de inmueble, landing propia y medición hasta la visita. Cambian las palabras y el perfil del comprador."
       },
       "q4": {
-        "question": "¿Cuánto presupuesto de pauta necesito por proyecto?",
-        "answer": "Depende del ticket y la velocidad de venta esperada, pero para proyectos activos solemos recomendar desde S/3,000 de pauta mensual por proyecto para mantener un flujo constante de leads calificados."
+        "question": "¿Trabajan con corredores o solo con desarrolladoras?",
+        "answer": "Con ambos. Para corredores armamos campañas por zona o por cartera de inmuebles en lugar de por proyecto."
       },
       "q5": {
-        "question": "¿Miden el costo por lead y por separación?",
-        "answer": "Sí. Reportamos costo por lead y por lead calificado siempre, y cuando el CRM registra las separaciones, también el costo por separación, para invertir donde cada proyecto rinde mejor."
+        "question": "¿Cuánto cuesta la gestión de Google Ads?",
+        "answer": "La gestión de Google Ads de 3R Core cuesta S/1,800 al mes + IGV (precio referencial). La inversión en anuncios se paga aparte y directo a Google desde tu propia tarjeta; como referencia, recomendamos empezar desde S/1,500 al mes de pauta."
       },
       "q6": {
-        "question": "¿Crean las landing pages de los proyectos?",
-        "answer": "Sí, diseñamos landing pages optimizadas para conversión con la información que el comprador peruano busca: ubicación, áreas, precios desde, financiamiento, bono del buen pagador y formularios claros."
+        "question": "¿La cuenta de Google Ads queda a nombre de mi empresa?",
+        "answer": "Sí. Creamos o usamos la cuenta de Google Ads a nombre de tu empresa y nos das acceso como administradores. Las campañas, el historial y los datos son tuyos aunque un día dejes de trabajar con nosotros."
       },
       "q7": {
-        "question": "¿Sirve para lotes y no solo departamentos?",
-        "answer": "Sí. Aplicamos la misma metodología a lotes, casas de playa, oficinas y proyectos de segunda vivienda, ajustando la segmentación y el mensaje al tipo de comprador."
+        "question": "¿Cómo saben qué anuncio trajo cada cliente?",
+        "answer": "Cada contacto queda registrado con su origen: el formulario y el clic a WhatsApp guardan el identificador del clic de Google (GCLID), y las ventas que se cierran por WhatsApp se suben a Google Ads como conversión offline. Así la campaña aprende de las ventas reales y no de clics sueltos."
       },
       "q8": {
-        "question": "¿Trabajan con corredores o solo con desarrolladoras?",
-        "answer": "Con ambos. Trabajamos con desarrolladoras, constructoras y corredores independientes que quieran un flujo predecible de oportunidades bien calificadas."
+        "question": "¿Pueden revisar mis campañas actuales de Google Ads?",
+        "answer": "Sí. Si ya tienes campañas, empezamos por una auditoría de tu cuenta: revisamos qué se está contando como conversión, en qué búsquedas se va el presupuesto y qué páginas reciben el clic. Pídela por WhatsApp desde esta página."
       }
     }
   },
   "MarketingInmobiliariasSEO": {
-    "seoTitle": "Marketing digital para inmobiliarias en Lima que genera oportunidades",
-    "p1": "Vender un inmueble no es una compra por impulso: es una decisión de alto ticket que involucra a toda una familia y un proceso que puede durar meses. En 3R Core diseñamos estrategias de marketing digital para inmobiliarias en Lima y el Perú que generan leads calificados, no solo formularios que nunca llegan a la sala de ventas.",
-    "p2": "Combinamos Meta Ads, ideal para despertar el interés y llegar a compradores potenciales por zona, presupuesto y momento de vida, con Google Ads para capturar a quien ya busca activamente departamentos o proyectos en un distrito específico. Cada canal cumple un rol según la etapa del proyecto.",
-    "p3": "Todo el tráfico llega a landing pages de proyecto diseñadas para convertir, con la información que el comprador peruano necesita: ubicación, áreas, precios desde, opciones de financiamiento y el bono del buen pagador. Un formulario claro y un botón de WhatsApp aceleran el primer contacto.",
-    "p4": "Conectamos los leads directamente a tu CRM y a WhatsApp para que ninguno se enfríe. Sabemos que en el negocio inmobiliario la velocidad de respuesta define la conversión, por eso estructuramos el seguimiento junto a tu equipo comercial.",
-    "p5": "Medimos todo el embudo: costo por lead, costo por lead calificado y, cuando el CRM lo permite, costo por separación. Con esa data reasignamos el presupuesto hacia los proyectos y canales que mejor rinden.",
-    "p6": "Si buscas marketing digital para inmobiliarias en Lima que llene tu sala de ventas con oportunidades reales, en 3R Core construimos un embudo medible y escalable, con reportes claros que tu gerencia comercial va a entender.",
+    "seoTitle": "Cómo funciona Google Ads para inmobiliarias en Lima",
+    "p1": "Google Ads para inmobiliarias funciona por intención: tu anuncio aparece cuando alguien busca un inmueble como el tuyo, en tu distrito, y pagas solo cuando hace clic. Por eso es el canal que más rápido llena la agenda de visitas de un proyecto que ya está a la venta.",
+    "p2": "La campaña se arma por proyecto. Cada uno tiene sus grupos de anuncios con las búsquedas de su zona («departamentos en Magdalena», «estreno en Lince»), sus palabras negativas y su landing. Así el presupuesto no se mezcla y sabes cuánto cuesta un lead de cada proyecto.",
+    "p3": "La landing es la mitad del resultado. Google mide la experiencia de la página de destino dentro del nivel de calidad, y el comprador decide en segundos si deja sus datos. Ubicación, metrajes, precio desde, financiamiento y un formulario corto con WhatsApp al lado.",
+    "p4": "Medimos el embudo completo. El formulario y el clic a WhatsApp guardan el identificador del clic de Google, y las visitas o separaciones que registra tu equipo se suben como conversión offline. La puja inteligente aprende entonces de compradores reales.",
+    "p5": "La gestión de Google Ads de 3R Core cuesta S/1,800 al mes + IGV (referencial), y la pauta se paga aparte a Google desde tu propia cuenta. Si ya tienes campañas, empezamos por una auditoría para ver dónde se está yendo el presupuesto.",
+    "p6": "Si buscas una agencia de marketing digital para inmobiliarias en Lima que trabaje Google Ads con foco en visitas y separaciones, conversemos. Te mostramos qué se busca en la zona de tu proyecto antes de pedirte un sol de pauta.",
     "relatedTitle": "Servicios relacionados"
   },
   "MarketingEcommerceLanding": {
     "hero": {
-      "badge": "E-commerce · Escala tus ventas",
-      "title": "Marketing digital para e-commerce en Perú que escala tus ventas",
-      "subtitle": "Google Shopping, Meta Ads con catálogo, email marketing y CRO trabajando juntos para bajar tu costo de adquisición y subir tu ROAS.",
-      "cta": "Escalar mi tienda online"
+      "badge": "Google Ads · E-commerce",
+      "title": "Gestión de Google Ads para e-commerce que vende con ROAS medible",
+      "subtitle": "Tus productos en Google Shopping y en la búsqueda cuando alguien los quiere comprar, con cada venta medida en tu tienda Shopify, WooCommerce o VTEX.",
+      "cta": "Quiero vender más en mi tienda",
+      "waCta": "Pedir auditoría por WhatsApp",
+      "waText": "Hola 3R Core, tengo una tienda online y quiero una auditoría de Google Ads.",
+      "serviceLink": "Ver el servicio completo de Google Ads"
     },
     "intro": {
-      "title": "Un sistema de crecimiento para tu tienda online",
-      "p1": "Tener una tienda en Shopify, WooCommerce o VTEX es solo el punto de partida. Lo difícil es conseguir tráfico rentable de forma sostenida. En 3R Core construimos un sistema de marketing para e-commerce en el Perú donde cada canal cumple un rol: adquisición, recuperación y fidelización, todo medido en ventas y ROAS.",
-      "p2": "En adquisición usamos Google Shopping y Performance Max para capturar la demanda de quien busca tus productos, y Meta Ads y TikTok Ads con catálogo dinámico para descubrir nuevos clientes y hacer retargeting a quienes vieron un producto o abandonaron el carrito. Sincronizamos tu feed de productos para que los anuncios muestren stock y precio real.",
-      "p3": "Pero la publicidad sola no basta: mejoramos tu tasa de conversión con CRO (fichas de producto, checkout, velocidad y confianza) y activamos flujos de email marketing para recuperar carritos y generar recompra. Así, cada sol de pauta rinde más porque la tienda convierte mejor y el cliente vuelve a comprar."
+      "title": "Google Ads para tiendas online: vender a quien ya busca el producto",
+      "p1": "La gestión de Google Ads para e-commerce consiste en mostrar tus productos, con foto y precio, a quien los busca para comprar. En 3R Core trabajamos Google Shopping, Performance Max y búsqueda conectados a tu catálogo, y optimizamos por retorno sobre la inversión publicitaria (ROAS), no por clics.",
+      "p2": "La base es el catálogo: un feed limpio en Google Merchant Center con títulos, precios y disponibilidad correctos. Sobre esa base, Shopping y Performance Max muestran tus productos en la búsqueda, YouTube y otras superficies de Google.",
+      "p3": "Medimos la compra en tu tienda (Shopify, WooCommerce o VTEX) y su valor, para que la puja aprenda qué productos y búsquedas dejan margen. Si además necesitas email o Meta Ads para tu tienda, se suman, pero Google Ads es donde está la demanda que ya quiere comprar."
     },
     "benefits": {
       "badge": "Qué incluye",
-      "title": "Nuestro sistema de crecimiento e-commerce",
+      "title": "La gestión de Google Ads para tu tienda online",
       "items": [
         {
-          "title": "Google Shopping y Performance Max",
-          "description": "Configuramos Merchant Center, el feed de productos y campañas que capturan la demanda de búsqueda."
+          "title": "Merchant Center y feed",
+          "description": "Catálogo en Google Merchant Center con títulos, categorías, precios y stock correctos, sin productos rechazados."
         },
         {
-          "title": "Meta y TikTok con catálogo",
-          "description": "Anuncios dinámicos de producto (DPA) para prospección y retargeting de carrito abandonado."
+          "title": "Shopping y Performance Max",
+          "description": "Campañas de catálogo segmentadas por margen, categoría o productos más vendidos."
         },
         {
-          "title": "Feed de productos optimizado",
-          "description": "Ordenamos títulos, imágenes y atributos del catálogo para mejorar la relevancia y el rendimiento."
+          "title": "Búsqueda de marca y categoría",
+          "description": "Protegemos tu marca y capturamos búsquedas de categoría con intención de compra."
         },
         {
-          "title": "Email marketing y recompra",
-          "description": "Flujos de carrito abandonado, post-compra y reactivación integrados con tu plataforma."
+          "title": "Medición de compras con valor",
+          "description": "Seguimiento de compra con su valor en tu plataforma para optimizar por ROAS."
         },
         {
-          "title": "CRO de la tienda",
-          "description": "Mejoramos fichas de producto, checkout, velocidad y señales de confianza para convertir más visitas."
+          "title": "Remarketing de catálogo",
+          "description": "Volvemos a mostrar los productos vistos a quien no completó la compra."
         },
         {
-          "title": "Optimización por ROAS",
-          "description": "Gestionamos toda la inversión por retorno y reportamos ingresos atribuidos a cada canal."
+          "title": "Reporte por producto",
+          "description": "Ventas, ROAS y costo por compra por categoría y producto, cada mes."
         }
       ]
     },
     "process": {
-      "badge": "Cómo trabajamos",
-      "title": "Nuestro proceso para e-commerce",
+      "badge": "Cómo funciona",
+      "title": "Cómo funciona Google Ads para e-commerce",
       "steps": [
         {
-          "title": "Auditoría de la tienda",
-          "description": "Revisamos tu plataforma, catálogo, analítica y embudo de compra para detectar fugas y oportunidades."
+          "title": "Auditoría del catálogo",
+          "description": "Revisamos el feed, los productos rechazados y la medición de compras de tu tienda."
         },
         {
-          "title": "Feed y medición",
-          "description": "Configuramos Merchant Center, el feed de productos, GA4, píxeles y eventos de e-commerce."
+          "title": "Segmentación por margen",
+          "description": "Agrupamos productos por margen y rotación para no gastar igual en todo el catálogo."
         },
         {
-          "title": "Lanzamiento multicanal",
-          "description": "Activamos Shopping, Performance Max, Meta y TikTok con catálogo y campañas de retargeting."
+          "title": "Lanzamiento de Shopping y búsqueda",
+          "description": "Activamos las campañas de catálogo y las de marca y categoría."
         },
         {
-          "title": "CRO y email",
-          "description": "Mejoramos la conversión de la tienda y activamos los flujos de recuperación y recompra."
+          "title": "Optimización por ROAS",
+          "description": "Ajustamos objetivos de retorno por grupo de productos con los datos de venta reales."
         },
         {
-          "title": "Escalamiento por ROAS",
-          "description": "Reasignamos presupuesto a los productos y canales más rentables y entregamos el reporte mensual."
+          "title": "Escalamiento",
+          "description": "Subimos presupuesto en lo que rinde y cortamos lo que no vende."
         }
       ]
     }
   },
   "MarketingEcommerceFAQ": {
     "badge": "Preguntas frecuentes",
-    "title": "Preguntas frecuentes",
+    "title": "Preguntas frecuentes sobre Google Ads para e-commerce",
     "faqs": {
       "q1": {
-        "question": "¿Con qué plataformas de e-commerce trabajan?",
-        "answer": "Trabajamos con Shopify, WooCommerce, VTEX y otras. Configuramos el feed de productos, la analítica y los píxeles en la que uses; si aún no tienes tienda, también podemos ayudarte a desarrollarla."
+        "question": "¿Qué es Google Shopping y por qué conviene a una tienda online?",
+        "answer": "Google Shopping muestra tus productos con foto, precio y nombre de la tienda en los resultados de Google. Quien hace clic ya vio el precio, así que llega con más intención de compra que en un anuncio de texto."
       },
       "q2": {
-        "question": "¿Qué es Google Shopping y por qué lo necesito?",
-        "answer": "Google Shopping muestra tus productos con foto, precio y tienda directamente en los resultados de búsqueda. Captura a compradores con alta intención y suele ser uno de los canales más rentables para e-commerce."
+        "question": "¿Necesito Google Merchant Center?",
+        "answer": "Sí. Shopping y Performance Max se alimentan del catálogo que subes a Google Merchant Center. Lo configuramos y lo conectamos a tu tienda."
       },
       "q3": {
-        "question": "¿Cómo bajan el costo de adquisición?",
-        "answer": "Con dos palancas: mejor pauta (segmentación, catálogos dinámicos, retargeting) y mejor conversión de la tienda vía CRO. Cuando la tienda convierte más, cada sol de publicidad rinde mejor."
+        "question": "¿Funciona con Shopify, WooCommerce y VTEX?",
+        "answer": "Sí. Las tres plataformas pueden enviar el catálogo a Merchant Center y registrar la compra con su valor para medir el ROAS."
       },
       "q4": {
-        "question": "¿El email marketing realmente aporta ventas en e-commerce?",
-        "answer": "Sí, y bastante. Los flujos de carrito abandonado, post-compra y reactivación suelen representar una porción significativa de los ingresos con una inversión muy baja."
+        "question": "¿Qué es el ROAS?",
+        "answer": "Es el retorno sobre la inversión publicitaria: cuántos soles vendes por cada sol invertido en anuncios. Optimizamos hacia el ROAS que deja margen según tu tipo de producto."
       },
       "q5": {
-        "question": "¿Qué presupuesto de pauta recomiendan para escalar?",
-        "answer": "Depende de tu margen y catálogo, pero para escalar de forma sostenida solemos empezar desde S/2,500 de pauta mensual, ajustando según el ROAS objetivo de tu negocio."
+        "question": "¿Cuánto cuesta la gestión de Google Ads?",
+        "answer": "La gestión de Google Ads de 3R Core cuesta S/1,800 al mes + IGV (precio referencial). La inversión en anuncios se paga aparte y directo a Google desde tu propia tarjeta; como referencia, recomendamos empezar desde S/1,500 al mes de pauta."
       },
       "q6": {
-        "question": "¿Optimizan también las fichas de producto?",
-        "answer": "Sí. El CRO incluye mejorar títulos, imágenes, descripciones, reseñas, velocidad y checkout, porque de nada sirve traer tráfico si la ficha no convierte."
+        "question": "¿La cuenta de Google Ads queda a nombre de mi empresa?",
+        "answer": "Sí. Creamos o usamos la cuenta de Google Ads a nombre de tu empresa y nos das acceso como administradores. Las campañas, el historial y los datos son tuyos aunque un día dejes de trabajar con nosotros."
       },
       "q7": {
-        "question": "¿Cómo miden el retorno de la inversión?",
-        "answer": "Configuramos GA4 y los eventos de e-commerce para atribuir ingresos por canal y reportar el ROAS real. Gestionamos toda la inversión por retorno, no por clics."
+        "question": "¿Cómo saben qué anuncio trajo cada cliente?",
+        "answer": "Cada contacto queda registrado con su origen: el formulario y el clic a WhatsApp guardan el identificador del clic de Google (GCLID), y las ventas que se cierran por WhatsApp se suben a Google Ads como conversión offline. Así la campaña aprende de las ventas reales y no de clics sueltos."
       },
       "q8": {
-        "question": "¿En cuánto tiempo se ven resultados?",
-        "answer": "Shopping y Meta suelen generar ventas desde las primeras semanas. La combinación de mejor pauta, CRO y email marketing hace que el rendimiento crezca de forma sostenida en los meses siguientes."
+        "question": "¿Pueden revisar mis campañas actuales de Google Ads?",
+        "answer": "Sí. Si ya tienes campañas, empezamos por una auditoría de tu cuenta: revisamos qué se está contando como conversión, en qué búsquedas se va el presupuesto y qué páginas reciben el clic. Pídela por WhatsApp desde esta página."
       }
     }
   },
   "MarketingEcommerceSEO": {
-    "seoTitle": "Marketing digital para e-commerce en Perú que escala ventas",
-    "p1": "Montar una tienda en Shopify, WooCommerce o VTEX es solo el comienzo; el verdadero reto es conseguir tráfico rentable de forma sostenida. En 3R Core construimos sistemas de marketing digital para e-commerce en el Perú donde cada canal cumple un rol claro: adquisición, recuperación y fidelización, todo medido en ventas y ROAS.",
-    "p2": "En adquisición aprovechamos Google Shopping y Performance Max para capturar a quien busca tus productos, junto a Meta Ads y TikTok Ads con catálogo dinámico para descubrir clientes nuevos y hacer retargeting a quienes vieron un producto o abandonaron el carrito. Sincronizamos tu feed para que los anuncios muestren stock y precio real.",
-    "p3": "La publicidad sola no basta: si la tienda no convierte, cada clic es dinero perdido. Por eso el CRO es parte central del servicio. Optimizamos fichas de producto, checkout, velocidad de carga y señales de confianza para que un mayor porcentaje de visitas termine en compra.",
-    "p4": "El email marketing cierra el círculo. Activamos flujos de carrito abandonado, post-compra y reactivación que recuperan ventas que de otro modo se perderían y aumentan el valor de cada cliente en el tiempo, con una inversión muy baja frente a su retorno.",
-    "p5": "Todo se gestiona con foco en el retorno. Configuramos GA4 y los eventos de e-commerce para atribuir ingresos por canal y tomar decisiones con datos: escalar lo que rinde, pausar lo que no y reasignar el presupuesto hacia los productos más rentables.",
-    "p6": "Si buscas marketing digital para e-commerce en Perú que se traduzca en ventas y un ROAS saludable, en 3R Core integramos pauta, CRO y email marketing en un solo motor de crecimiento, con reportes mensuales claros y accionables.",
+    "seoTitle": "Cómo funciona Google Ads para e-commerce en Perú",
+    "p1": "Google Ads para e-commerce funciona por catálogo. Subes tus productos a Google Merchant Center y Google los muestra con foto y precio a quien los busca. Quien hace clic ya conoce el precio, por eso Shopping suele traer compradores más decididos que un anuncio de texto.",
+    "p2": "Performance Max amplía ese catálogo a la búsqueda, YouTube, Gmail y la red de display desde una sola campaña. Funciona bien cuando la medición de compras es correcta; sin ella, optimiza a ciegas.",
+    "p3": "El catálogo se segmenta por margen. No todos los productos merecen la misma inversión: separamos los más vendidos, los de mayor margen y los que se quedan sin stock, para que el presupuesto vaya a lo rentable.",
+    "p4": "La medición es la compra con su valor. Conectamos la tienda para que Google Ads reciba cada pedido y su monto, y así optimizamos hacia el ROAS que tu margen permite.",
+    "p5": "La gestión de Google Ads de 3R Core cuesta S/1,800 al mes + IGV (referencial), y la pauta se paga aparte a Google desde la cuenta de tu tienda. Si ya tienes campañas, empezamos con una auditoría del catálogo y la medición.",
+    "p6": "Si buscas marketing para e-commerce en Perú con Google Ads como canal de venta principal, conversemos. Revisamos tu catálogo y tu medición antes de proponerte presupuesto.",
     "relatedTitle": "Servicios relacionados"
   },
   "MoreServices": {
@@ -2234,7 +2243,7 @@
       "/servicios/performance-marketing": "Performance Marketing",
       "/servicios/email-marketing": "Email Marketing",
       "/servicios/marketing-ecommerce": "Marketing E-commerce",
-      "/servicios/marketing-clinicas": "Marketing para Clínicas",
+      "/servicios/marketing-clinicas": "Google Ads para clínicas",
       "/servicios/marketing-inmobiliarias": "Marketing Inmobiliario",
       "/precios": "Precios",
       "/servicios": "Servicios"
@@ -2360,474 +2369,486 @@
   },
   "MarketingAbogadosLanding": {
     "hero": {
-      "badge": "Marketing jurídico · Lima, Perú",
-      "title": "Marketing digital para estudios de abogados en Lima que se mide en consultas, no en visitas",
-      "subtitle": "Quien busca un abogado no está comparando precios: está resolviendo un problema que le quita el sueño y quiere saber a quién puede confiárselo. Trabajamos la ficha de Google, el posicionamiento local y el contenido que genera esa confianza antes de la primera llamada.",
-      "cta": "Quiero más consultas"
+      "badge": "Google Ads · Estudios de abogados",
+      "title": "Gestión de Google Ads para abogados que convierte búsquedas en casos",
+      "subtitle": "Tu estudio arriba en Google cuando alguien busca «abogado laboralista en Lima» o «abogado de familia», con llamadas y consultas por WhatsApp medidas por especialidad.",
+      "cta": "Quiero más consultas para mi estudio",
+      "waCta": "Pedir auditoría por WhatsApp",
+      "waText": "Hola 3R Core, tengo un estudio de abogados y quiero una auditoría de Google Ads.",
+      "serviceLink": "Ver el servicio completo de Google Ads"
     },
     "intro": {
-      "title": "¿Por qué el marketing para abogados no se parece al del resto?",
-      "p1": "Porque la decisión es de confianza y no de precio. En casi cualquier otro sector el cliente compara opciones y elige la más conveniente; con un estudio jurídico, la persona llega asustada, con un plazo encima y sin saber distinguir a un buen abogado de uno malo. Elige a quien le transmite que ha resuelto antes un caso como el suyo.",
-      "p2": "Eso cambia dónde se juega el trabajo. La búsqueda casi siempre es local y urgente —«abogado laboral en Lima», «qué hago si me despiden»— y se resuelve en el mapa antes que en la web: la ficha de Google, con sus reseñas y su categoría bien puesta, decide más llamadas que la portada. Es lo primero que ordenamos.",
-      "p3": "Y cambia el contenido. Una página que explica con claridad qué hacer en las primeras 48 horas de un despido capta a alguien que necesita un abogado hoy. Un artículo genérico sobre «la importancia del derecho laboral» no capta a nadie. Escribimos lo primero."
+      "title": "Google Ads para abogados: estar cuando el cliente tiene el problema",
+      "p1": "La gestión de Google Ads para abogados consiste en mostrar tu estudio a la persona que busca ayuda legal en el momento en que tiene el problema: un despido, un divorcio, una deuda, una detención. En 3R Core armamos campañas por área de práctica para que cada consulta llegue a la especialidad correcta.",
+      "p2": "El cliente legal casi nunca sigue marcas en redes: busca en Google cuando lo necesita. Por eso los anuncios de búsqueda son el canal natural del rubro. Pagas por clic, eliges en qué distritos y horarios aparecer y puedes mostrar tu teléfono directamente en el anuncio.",
+      "p3": "Cuidamos el tono que exige la profesión: anuncios sobrios, sin promesas de resultado y con información clara de qué casos atiendes. Trabajamos con estudios jurídicos y abogados independientes de Lima y provincias."
     },
     "benefits": {
-      "badge": "Qué trabajamos",
-      "title": "Lo que mueve el teléfono de un estudio jurídico",
+      "badge": "Qué incluye",
+      "title": "La gestión de Google Ads para tu estudio",
       "items": [
         {
-          "title": "Ficha de Google ordenada",
-          "description": "Categoría correcta, áreas de práctica como servicios, horario real, fotos del estudio y respuesta a todas las reseñas. En un negocio local con oficina, el mapa reparte más llamadas que la web entera."
+          "title": "Campañas por área de práctica",
+          "description": "Laboral, familia, penal, civil, tributario o corporativo: cada área con sus búsquedas, anuncios y presupuesto."
         },
         {
-          "title": "Páginas por área de práctica",
-          "description": "Laboral, familia, penal, civil, notarial y corporativo tienen consultas, urgencias y clientes distintos. Una sola página de «servicios legales» no compite con ninguna de ellas; seis páginas específicas sí."
+          "title": "Filtro de consultas que no son casos",
+          "description": "Palabras negativas para «gratis», «modelo de», «curso», «trabajo de abogado» y búsquedas de estudiantes."
         },
         {
-          "title": "Contenido que responde la urgencia",
-          "description": "Qué hacer, en qué plazo y con qué documentos. Ese es el contenido que lee alguien con un problema encima, y el que hace que te llame a ti y no al siguiente resultado."
+          "title": "Llamadas desde el anuncio",
+          "description": "Recurso de llamada en horario de atención: en el rubro legal muchas consultas entran por teléfono."
         },
         {
-          "title": "Reseñas, que aquí pesan el doble",
-          "description": "Montamos el circuito para pedirlas sin incomodar al cliente y respondemos todas, también las malas. En un servicio de confianza, la reseña es la prueba que sustituye a la recomendación de un conocido."
+          "title": "Landing por especialidad",
+          "description": "Una página por área con qué casos atiendes, cómo es la primera consulta y un contacto directo."
         },
         {
-          "title": "Web rápida y clara en el móvil",
-          "description": "Buena parte de estas búsquedas se hacen desde el teléfono y en un mal momento. Si la web tarda o el teléfono no se puede pulsar, la consulta se va a otro estudio."
+          "title": "WhatsApp medido",
+          "description": "Cada consulta por WhatsApp queda registrada con la campaña que la trajo, en tu propio panel."
         },
         {
-          "title": "Medición de consultas reales",
-          "description": "Contamos llamadas, WhatsApp y formularios enviados, no visitas. Un reporte que celebra el tráfico y no dice cuántas consultas entraron no sirve para decidir nada."
+          "title": "Reporte en consultas, no en clics",
+          "description": "Costo por consulta y por caso tomado, por área de práctica."
         }
       ]
     },
     "process": {
-      "badge": "Cómo trabajamos",
-      "title": "Del primer diagnóstico a las primeras consultas",
+      "badge": "Cómo funciona",
+      "title": "Cómo funciona Google Ads para abogados",
       "steps": [
         {
-          "title": "1 · Diagnóstico del estudio",
-          "description": "Qué áreas quieren llenar, cuáles ya funcionan por recomendación y de dónde llegan hoy las consultas. Sin eso, cualquier plan es genérico."
+          "title": "Áreas y zonas",
+          "description": "Definimos qué áreas de práctica quieres crecer y en qué distritos o ciudades atiendes."
         },
         {
-          "title": "2 · Ficha de Google primero",
-          "description": "Es lo más rápido y lo que más mueve. Categoría, servicios, fotos, horario y reseñas antes de tocar una sola línea de la web."
+          "title": "Búsquedas con intención",
+          "description": "Elegimos búsquedas de quien necesita un abogado («abogado para despido arbitrario»), no de quien investiga el tema."
         },
         {
-          "title": "3 · Página por área de práctica",
-          "description": "Empezando por la que el estudio quiere llenar, no por la que más se busca: no sirve traer casos que no se quieren tomar."
+          "title": "Landing y medición",
+          "description": "Página por especialidad, recurso de llamada y WhatsApp con el identificador del clic de Google."
         },
         {
-          "title": "4 · Contenido de urgencia, escalonado",
-          "description": "Publicación repartida en el tiempo. Un estudio que publica veinte artículos en una semana no parece más solvente, parece automatizado."
+          "title": "Lanzamiento y filtrado",
+          "description": "Revisamos cada semana los términos de búsqueda reales y bloqueamos los que no traen casos."
         },
         {
-          "title": "5 · Reporte mensual de consultas",
-          "description": "Cuántas entraron, por qué área y por qué canal. Y qué cambia el mes siguiente."
+          "title": "Reporte por área",
+          "description": "Te mostramos cuánto cuesta una consulta y un caso en cada área para mover el presupuesto a la que más rinde."
         }
       ]
     }
   },
   "MarketingAbogadosFAQ": {
     "badge": "Preguntas frecuentes",
-    "title": "Marketing para abogados — preguntas frecuentes",
+    "title": "Preguntas frecuentes sobre Google Ads para abogados",
     "faqs": {
       "q1": {
-        "question": "¿Cuánto cuesta el marketing digital para un estudio de abogados en Lima?",
-        "answer": "En 3R Core se cotiza con los mismos precios publicados que el resto de servicios: posicionamiento SEO S/1,800 al mes, gestión de Google Ads S/1,800 al mes más la pauta, y página web desde S/1,800. No cobramos una tarifa distinta por ser un estudio jurídico. Precios netos en soles, sin IGV y sin contratos forzosos; puedes calcular el estimado de tu caso en nuestro cotizador. Los montos indicados son referenciales."
+        "question": "¿Google Ads sirve para conseguir clientes de un estudio de abogados?",
+        "answer": "Sí. La persona con un problema legal busca en Google en ese momento («abogado laboralista Lima», «cómo divorciarme rápido»). Los anuncios de búsqueda ponen a tu estudio frente a esa necesidad y solo pagas cuando hacen clic."
       },
       "q2": {
-        "question": "¿Qué da más resultado para un abogado, la web o la ficha de Google?",
-        "answer": "La ficha de Google, casi siempre, y por un margen amplio. La mayoría de búsquedas de abogado son locales y urgentes, y se resuelven en el mapa: la persona ve tres estudios con sus reseñas y llama. Por eso empezamos siempre por la ficha, aunque la web esté por rehacer: es lo que da resultado antes."
+        "question": "¿Qué áreas del derecho funcionan mejor en Google Ads?",
+        "answer": "Las que tienen urgencia y búsqueda directa: laboral, familia, penal y deudas suelen tener más búsquedas que corporativo o tributario. Lo confirmamos con los datos de búsqueda de tu zona antes de invertir."
       },
       "q3": {
-        "question": "¿Puede un abogado hacer publicidad de sus servicios en Perú?",
-        "answer": "La publicidad de servicios legales está sujeta a las normas deontológicas del colegio profesional correspondiente, que regulan cómo puede comunicarse un abogado. No reproducimos aquí ningún artículo concreto porque esas normas cambian y una cita equivocada te perjudicaría a ti, no a nosotros: antes de lanzar cualquier campaña revisamos contigo el código de ética de tu colegio y ajustamos los mensajes. Lo que sí podemos afirmar es que las prácticas que recomendamos —ficha de Google, contenido informativo y reseñas de clientes reales— son las más conservadoras del abanico."
+        "question": "¿Cómo evitan las consultas de gente que solo quiere asesoría gratis?",
+        "answer": "Con palabras negativas, anuncios que dicen claramente cómo es la primera consulta y una landing que filtra. Revisamos los términos de búsqueda reales cada semana."
       },
       "q4": {
-        "question": "¿Debo tener una página por cada área de práctica?",
-        "answer": "Sí, si quieres captar por esas áreas. Alguien que busca «abogado laboral» y alguien que busca «abogado de familia» tienen problemas distintos, urgencias distintas y palabras distintas. Una sola página de «servicios legales» no responde bien a ninguno de los dos, y en resultados de búsqueda pierde contra estudios que sí tienen la página específica."
+        "question": "¿Los anuncios pueden prometer resultados?",
+        "answer": "No lo hacemos. Los anuncios describen qué casos atiendes y cómo contactarte, con el tono sobrio que exige la profesión y sin garantizar resultados de un proceso."
       },
       "q5": {
-        "question": "¿Cómo consigo reseñas sin incomodar al cliente?",
-        "answer": "Pidiéndolas en el momento correcto: cuando el caso termina bien y el cliente lo acaba de saber. Montamos el circuito para que sea un mensaje breve con el enlace directo, no una petición incómoda en persona. Y se responden todas, incluidas las negativas, porque la respuesta la lee el siguiente cliente potencial."
+        "question": "¿Cuánto cuesta la gestión de Google Ads?",
+        "answer": "La gestión de Google Ads de 3R Core cuesta S/1,800 al mes + IGV (precio referencial). La inversión en anuncios se paga aparte y directo a Google desde tu propia tarjeta; como referencia, recomendamos empezar desde S/1,500 al mes de pauta."
       },
       "q6": {
-        "question": "¿Cuánto tarda en llegar la primera consulta?",
-        "answer": "Depende del área y de la competencia que tenga en tu ciudad, y no damos una fecha porque no la controlamos. Lo que suele moverse antes es la ficha de Google, en semanas, porque no depende de posicionar contenido nuevo. El posicionamiento orgánico de páginas nuevas es más lento y va por meses. Cualquiera que te prometa una fecha exacta te está prometiendo algo que no puede cumplir."
+        "question": "¿La cuenta de Google Ads queda a nombre de mi empresa?",
+        "answer": "Sí. Creamos o usamos la cuenta de Google Ads a nombre de tu empresa y nos das acceso como administradores. Las campañas, el historial y los datos son tuyos aunque un día dejes de trabajar con nosotros."
       },
       "q7": {
-        "question": "¿Trabajan con estudios pequeños o solo con firmas grandes?",
-        "answer": "Con los dos. Un abogado que trabaja solo suele necesitar exactamente lo mismo que una firma, en menor escala: ficha ordenada, una web que cargue rápido y dos o tres páginas de área bien escritas. De hecho, un estudio pequeño con una sola área bien trabajada compite mejor que una firma grande con una web genérica."
+        "question": "¿Cómo saben qué anuncio trajo cada cliente?",
+        "answer": "Cada contacto queda registrado con su origen: el formulario y el clic a WhatsApp guardan el identificador del clic de Google (GCLID), y las ventas que se cierran por WhatsApp se suben a Google Ads como conversión offline. Así la campaña aprende de las ventas reales y no de clics sueltos."
       },
       "q8": {
-        "question": "¿Qué NO recomendamos para un estudio jurídico?",
-        "answer": "Comprar bases de datos de contactos, prometer resultados de casos en la publicidad y publicar contenido que roce el consejo legal sin matices. Lo primero no funciona y molesta; lo segundo puede meterte en un problema con tu colegio; lo tercero genera consultas de gente que espera algo que no dijiste. Preferimos decir esto antes de empezar que discutirlo después."
+        "question": "¿Pueden revisar mis campañas actuales de Google Ads?",
+        "answer": "Sí. Si ya tienes campañas, empezamos por una auditoría de tu cuenta: revisamos qué se está contando como conversión, en qué búsquedas se va el presupuesto y qué páginas reciben el clic. Pídela por WhatsApp desde esta página."
       }
     }
   },
   "MarketingAbogadosSEO": {
-    "seoTitle": "Marketing digital para abogados y estudios jurídicos en Lima, Perú",
-    "p1": "3R Core hace marketing digital para estudios de abogados en Lima y en todo el Perú: ficha de Google, posicionamiento local por área de práctica y contenido que genera confianza antes de la primera llamada. Se cotiza con los precios publicados de la agencia —SEO S/1,800 al mes, web desde S/1,800— sin contratos forzosos. Los montos indicados son referenciales.",
-    "p2": "El marketing jurídico no se parece al del resto de sectores porque la decisión es de confianza y no de precio. Quien busca un abogado llega con un plazo encima y sin saber distinguir a uno bueno de uno malo, así que elige a quien le transmite que ya resolvió un caso como el suyo.",
-    "p3": "Por eso empezamos por la ficha de Google. La mayoría de estas búsquedas son locales y urgentes y se resuelven en el mapa: la persona ve tres estudios con sus reseñas y llama. La ficha, con su categoría correcta, sus áreas de práctica como servicios y sus reseñas respondidas, reparte más llamadas que la portada de la web.",
-    "p4": "Después, una página por área de práctica. Laboral, familia, penal, civil, notarial y corporativo tienen consultas, urgencias y clientes distintos, y una sola página de «servicios legales» no compite con ninguna de ellas.",
-    "p5": "El contenido que funciona es el que responde a la urgencia: qué hacer, en qué plazo y con qué documentos. Ese lo lee alguien que necesita un abogado hoy. Un artículo general sobre la importancia del derecho laboral no lo lee nadie que esté a punto de contratar.",
-    "p6": "Sobre publicidad y normas deontológicas: la comunicación de servicios legales está sujeta a las reglas del colegio profesional correspondiente. No citamos artículos concretos porque esas normas cambian y una cita equivocada perjudicaría al estudio; antes de lanzar campañas las revisamos con el cliente. Las prácticas que recomendamos —ficha de Google, contenido informativo y reseñas reales— son las más conservadoras del abanico.",
+    "seoTitle": "Cómo funciona Google Ads para estudios de abogados en Lima",
+    "p1": "Google Ads para abogados funciona porque el cliente legal busca cuando tiene el problema. Un trabajador despedido escribe «abogado laboral cerca de mí»; una pareja que se separa busca «abogado de familia Lima». El anuncio aparece arriba en ese momento y el estudio paga solo si hacen clic.",
+    "p2": "La campaña se divide por área de práctica. Cada área tiene sus búsquedas, sus anuncios y su presupuesto, para saber cuánto cuesta una consulta laboral frente a una de familia y no mezclar casos de ticket muy distinto.",
+    "p3": "El filtro es tan importante como el anuncio. En el rubro legal hay muchas búsquedas informativas, de estudiantes o de modelos de documentos. Las bloqueamos con palabras negativas y revisamos cada semana los términos reales que activaron los anuncios.",
+    "p4": "El contacto se mide de punta a punta. Las llamadas desde el anuncio, los formularios y los clics a WhatsApp quedan registrados con su campaña, y los casos que tu estudio toma se pueden subir a Google Ads como conversión para que la puja aprenda.",
+    "p5": "La gestión de Google Ads de 3R Core cuesta S/1,800 al mes + IGV (referencial), y la pauta se paga aparte a Google desde la cuenta de tu estudio. Si ya inviertes en Google Ads, empezamos con una auditoría de la cuenta.",
+    "p6": "Si buscas marketing digital para abogados en Lima centrado en consultas reales, conversemos. Te mostramos qué buscan los clientes de tu especialidad antes de invertir.",
     "relatedTitle": "Servicios relacionados"
   },
   "MarketingClinicasDentalesLanding": {
     "hero": {
-      "badge": "Odontología · Captación de pacientes",
-      "title": "Marketing digital para clínicas dentales en Lima",
-      "subtitle": "Atraemos pacientes para tu clínica dental o consultorio odontológico con Google Ads de salud, SEO local y ficha de Google. La gestión parte en S/1,800 al mes más IGV y se reporta en citas agendadas. Los montos indicados son referenciales.",
-      "cta": "Quiero más pacientes"
+      "badge": "Google Ads · Clínicas dentales",
+      "title": "Gestión de Google Ads para clínicas dentales que agenda pacientes",
+      "subtitle": "Tu clínica arriba en Google cuando alguien busca «implantes dentales en Lima», «ortodoncia en San Juan de Lurigancho» o «dentista de urgencia», con cada cita medida.",
+      "cta": "Quiero más pacientes",
+      "waCta": "Pedir auditoría por WhatsApp",
+      "waText": "Hola 3R Core, tengo una clínica dental y quiero una auditoría de Google Ads.",
+      "serviceLink": "Ver el servicio completo de Google Ads"
     },
     "intro": {
-      "title": "Citas agendadas, no seguidores",
-      "p1": "Quien necesita un dentista lo busca en Google en el momento en que le duele o cuando decide arreglarse la sonrisa. Ahí se define la clínica que gana la cita, y casi nunca es la que tiene más seguidores: es la que aparece en el mapa, responde rápido y explica su precio.",
-      "p2": "En 3R Core combinamos Google Ads de alta intención por tratamiento —implantes, ortodoncia, blanqueamiento— con SEO local y trabajo de ficha de Google, y enviamos ese tráfico a una landing por tratamiento en vez de a la página de inicio.",
-      "p3": "El rubro salud tiene reglas: Google restringe las promesas de resultado y prohíbe segmentar por datos sensibles. Escribimos las campañas dentro de esas reglas desde el primer día, que es la causa más común de que una cuenta dental se caiga."
+      "title": "Google Ads para dentistas: campañas por tratamiento",
+      "p1": "La gestión de Google Ads para clínicas dentales consiste en anunciar cada tratamiento ante quien ya lo busca: implantes, ortodoncia, carillas, blanqueamiento o una urgencia por dolor. En 3R Core armamos una campaña por tratamiento porque cada uno tiene un ticket y un paciente distintos.",
+      "p2": "El paciente dental busca por tratamiento y por cercanía. Los anuncios de búsqueda te ponen arriba en tu zona, con el teléfono y el WhatsApp visibles, y solo pagas cuando alguien hace clic.",
+      "p3": "Medimos en citas, no en clics: cada contacto queda registrado con el tratamiento y la campaña que lo trajo. Si además quieres trabajar SEO local y la ficha de Google, lo sumamos, pero Google Ads es lo que trae pacientes desde la primera semana de campaña aprobada."
     },
     "benefits": {
       "badge": "Qué incluye",
-      "title": "Nuestro sistema para clínicas dentales",
+      "title": "La gestión de Google Ads para tu clínica dental",
       "items": [
         {
-          "title": "Google Ads por tratamiento",
-          "description": "Campañas separadas por implantes, ortodoncia, blanqueamiento y urgencias, con palabras clave negativas desde el día uno para no pagar clics que no agendan."
+          "title": "Campañas por tratamiento",
+          "description": "Implantes, ortodoncia, carillas, blanqueamiento y urgencias, cada uno con su presupuesto y su costo por cita."
         },
         {
-          "title": "Ficha de Google Business Profile",
-          "description": "Categoría correcta, horarios reales, fotos del consultorio, servicios listados y respuesta a cada reseña. Es lo que aparece en el mapa cuando alguien busca «dentista en Surco»."
+          "title": "Urgencias con llamada",
+          "description": "Para dolor o emergencias, anuncios con llamada directa en tu horario de atención."
         },
         {
           "title": "Landing por tratamiento",
-          "description": "Una página por servicio desde S/1,800 más IGV, lista en 1 a 2 semanas, con lo que incluye, cuánto dura, cuánto cuesta y el botón de agendar. Los montos indicados son referenciales."
+          "description": "Qué incluye, cómo es la evaluación, ubicación y agenda por WhatsApp en una sola página."
         },
         {
-          "title": "SEO local por distrito",
-          "description": "Posicionamiento en Google y Google Maps por la zona de influencia real de la clínica, desde S/1,800 al mes más IGV. Los montos indicados son referenciales."
+          "title": "Filtro de búsquedas",
+          "description": "Bloqueamos «curso de ortodoncia», «trabajo de asistente dental» y búsquedas de otras ciudades."
         },
         {
-          "title": "Cumplimiento del rubro salud",
-          "description": "Redacción sin promesas de resultado clínico y sin segmentación por condición de salud, que es lo que exigen Google y Meta en esta categoría."
+          "title": "Segmentación por distrito",
+          "description": "Anuncios para la zona desde donde tus pacientes realmente llegan a la clínica."
         },
         {
-          "title": "Reporte de costo por cita",
-          "description": "Cada mes: lo invertido, las citas agendadas y el costo por cita. Sin capturas de alcance ni de impresiones sueltas."
+          "title": "Reporte en citas",
+          "description": "Costo por cita agendada por tratamiento, para invertir donde más rinde."
         }
       ]
     },
     "process": {
-      "badge": "Cómo trabajamos",
-      "title": "Nuestro proceso con una clínica dental",
+      "badge": "Cómo funciona",
+      "title": "Cómo funciona Google Ads para clínicas dentales",
       "steps": [
         {
-          "title": "Diagnóstico de tratamientos",
-          "description": "Qué tratamientos quiere llenar la clínica, cuál deja más margen y qué compite en su distrito."
+          "title": "Tratamientos prioritarios",
+          "description": "Elegimos qué tratamientos quieres llenar según tu capacidad y tu margen."
         },
         {
-          "title": "Ficha y presencia local",
-          "description": "Ordenamos la ficha de Google, las categorías, las fotos y las reseñas antes de invertir un sol en publicidad."
+          "title": "Búsquedas por tratamiento y zona",
+          "description": "Seleccionamos las búsquedas de quien quiere atenderse, no de quien investiga."
         },
         {
-          "title": "Campañas y landings",
-          "description": "Una campaña y una landing por tratamiento, con el presupuesto separado para que no se mezclen."
+          "title": "Landing y medición",
+          "description": "Página por tratamiento, llamada y WhatsApp con el identificador del clic de Google."
         },
         {
-          "title": "Medición por cita",
-          "description": "Se mide el costo por cita agendada durante el primer mes y esa es la línea base sobre la que se ajusta."
+          "title": "Lanzamiento y filtrado semanal",
+          "description": "Revisamos los términos reales cada semana y bloqueamos lo que no agenda."
         },
         {
-          "title": "Reporte y ajuste",
-          "description": "Reporte mensual en soles y ajuste de presupuesto hacia los tratamientos que sí están agendando."
+          "title": "Optimización hacia citas",
+          "description": "Las citas confirmadas se suben a Google Ads para que la campaña aprenda de pacientes reales."
         }
       ]
     }
   },
   "MarketingClinicasDentalesFAQ": {
     "badge": "Preguntas frecuentes",
-    "title": "Preguntas frecuentes",
+    "title": "Preguntas frecuentes sobre Google Ads para clínicas dentales",
     "faqs": {
       "q1": {
-        "question": "¿Cuánto cuesta el marketing digital para una clínica dental en Lima?",
-        "answer": "En 3R Core, la gestión de Google Ads para una clínica dental parte en S/1,800 al mes más IGV, y el SEO mensual también en S/1,800 más IGV. El manejo de redes sociales parte en S/1,500 al mes más IGV. La inversión en anuncios va aparte y la paga la clínica directamente a Google o a Meta. Los montos indicados son referenciales."
+        "question": "¿Qué tratamientos dentales conviene anunciar en Google Ads?",
+        "answer": "Los de mayor ticket y búsqueda directa, como implantes y ortodoncia, y las urgencias por dolor, que se buscan con prisa. La limpieza o el blanqueamiento sirven para captar pacientes nuevos a menor costo."
       },
       "q2": {
-        "question": "¿Puedo anunciar mi clínica dental en Google si es del rubro salud?",
-        "answer": "Sí. Google permite anunciar servicios odontológicos en el Perú, pero la categoría de salud tiene restricciones: no se puede prometer un resultado clínico ni segmentar por datos sensibles de salud. La campaña se arma por intención de búsqueda y por zona geográfica."
+        "question": "¿Google Ads permite anunciar clínicas dentales?",
+        "answer": "Sí. Los servicios odontológicos se pueden anunciar; los anuncios de salud pasan por la política de atención médica de Google. Redactamos sin promesas de resultado ni afirmaciones que Google rechace."
       },
       "q3": {
-        "question": "¿En cuánto tiempo llegan los primeros pacientes?",
-        "answer": "Con Google Ads, las primeras consultas suelen entrar durante la primera semana de campaña. Con SEO local, el efecto se nota entre el tercer y el cuarto mes, porque Google necesita tiempo para reposicionar la clínica y su ficha."
+        "question": "¿Sirve para un consultorio dental pequeño?",
+        "answer": "Sí, siempre que limitemos la zona y los tratamientos. Un consultorio de un distrito no necesita aparecer en todo Lima: concentramos el presupuesto donde están sus pacientes."
       },
       "q4": {
-        "question": "¿3R Core garantiza una cantidad de pacientes al mes?",
-        "answer": "No. 3R Core no garantiza un número de pacientes ni resultados clínicos. Lo que sí se compromete es el trabajo del plan, el reporte mensual con el costo por cita agendada y el ajuste de las campañas según ese dato."
+        "question": "¿Cómo se diferencia de las redes sociales?",
+        "answer": "En Google el paciente ya está buscando el tratamiento; en Instagram o Facebook hay que despertar el interés. Para llenar la agenda rápido, Google Ads va primero."
       },
       "q5": {
-        "question": "¿Cuánto cuesta conseguir un paciente dental en Lima?",
-        "answer": "No hay una cifra fija: depende del tratamiento, del distrito y de la competencia que puje por esa búsqueda. Captar para un blanqueamiento y para un implante no cuesta lo mismo. Se mide con los datos de cada clínica durante el primer mes y recién ahí se fija la meta."
+        "question": "¿Cuánto cuesta la gestión de Google Ads?",
+        "answer": "La gestión de Google Ads de 3R Core cuesta S/1,800 al mes + IGV (precio referencial). La inversión en anuncios se paga aparte y directo a Google desde tu propia tarjeta; como referencia, recomendamos empezar desde S/1,500 al mes de pauta."
       },
       "q6": {
-        "question": "¿Necesito una web nueva o basta con mi ficha de Google y mis redes?",
-        "answer": "Una clínica dental puede empezar a recibir pacientes solo con la ficha de Google bien trabajada. La web se vuelve necesaria cuando se quiere hacer publicidad: los anuncios necesitan una página donde el paciente agende, y esa página decide cuántos clics se convierten en citas."
+        "question": "¿La cuenta de Google Ads queda a nombre de mi empresa?",
+        "answer": "Sí. Creamos o usamos la cuenta de Google Ads a nombre de tu empresa y nos das acceso como administradores. Las campañas, el historial y los datos son tuyos aunque un día dejes de trabajar con nosotros."
       },
       "q7": {
-        "question": "¿Trabajan con clínicas dentales fuera de Lima?",
-        "answer": "Sí. 3R Core trabaja desde La Molina, Lima, y atiende clínicas de otras ciudades del Perú de forma remota. El trabajo de ficha de Google y campañas se hace igual; lo que cambia es la configuración geográfica de las campañas."
+        "question": "¿Cómo saben qué anuncio trajo cada cliente?",
+        "answer": "Cada contacto queda registrado con su origen: el formulario y el clic a WhatsApp guardan el identificador del clic de Google (GCLID), y las ventas que se cierran por WhatsApp se suben a Google Ads como conversión offline. Así la campaña aprende de las ventas reales y no de clics sueltos."
       },
       "q8": {
-        "question": "¿Los precios incluyen IGV? ¿Emiten factura?",
-        "answer": "Los precios publicados son netos y 3R Core emite factura, donde se suma el IGV del 18%. Una web corporativa de S/4,500 factura S/5,310 en total. El pago se hace en dos partes: 50% al iniciar el proyecto y 50% al entregarlo. Los montos indicados son referenciales."
+        "question": "¿Pueden revisar mis campañas actuales de Google Ads?",
+        "answer": "Sí. Si ya tienes campañas, empezamos por una auditoría de tu cuenta: revisamos qué se está contando como conversión, en qué búsquedas se va el presupuesto y qué páginas reciben el clic. Pídela por WhatsApp desde esta página."
       }
     }
   },
   "MarketingClinicasDentalesSEO": {
-    "seoTitle": "Marketing digital para clínicas dentales en Lima con foco en citas",
-    "p1": "El paciente dental peruano decide en Google. Busca «dentista cerca de mí» cuando le duele, y «cuánto cuesta un implante dental» cuando está evaluando. Son dos momentos distintos y necesitan dos respuestas distintas: la primera se gana con la ficha de Google y las campañas de búsqueda; la segunda, con una página del tratamiento que diga el precio.",
-    "p2": "En 3R Core trabajamos las dos. La gestión de Google Ads para una clínica dental parte en S/1,800 al mes más IGV y el SEO mensual en S/1,800 más IGV, con la inversión publicitaria aparte, que la clínica paga directo a la plataforma y decide cuánto es. Los montos indicados son referenciales.",
-    "p3": "Las landing pages por tratamiento cuestan S/1,800 más IGV cada una y están listas en 1 a 2 semanas. Cada una responde lo que el paciente pregunta antes de agendar: qué incluye el tratamiento, cuánto dura, cuánto cuesta y cómo se paga. Enviar el tráfico de una campaña de implantes a la página de inicio es la forma más cara de perder ese clic. Los montos indicados son referenciales.",
-    "p4": "El rubro salud tiene reglas propias y son la causa más frecuente de que una cuenta publicitaria dental se caiga. Google restringe el lenguaje que promete resultados y prohíbe construir públicos a partir de condiciones de salud. Nosotros escribimos las campañas dentro de esas reglas desde el primer día.",
-    "p5": "La ficha de Google Business Profile es lo más barato de arreglar y lo que más rinde en este rubro: es lo que ocupa la pantalla cuando alguien busca «dentista en Miraflores» desde el celular. Categoría correcta, horario real, fotos del consultorio y respuesta a cada reseña.",
-    "p6": "Reportamos en costo por cita agendada, no en alcance. Y pedimos a la clínica el dato de tratamiento cerrado desde su propio sistema, porque es lo único que convierte el reporte de clics en un reporte de soles.",
+    "seoTitle": "Cómo funciona Google Ads para clínicas dentales en Lima",
+    "p1": "Google Ads para clínicas dentales funciona por tratamiento. Quien busca «implantes dentales precio Lima» o «dentista de urgencia abierto hoy» quiere atenderse, y el anuncio pone a tu clínica arriba en ese momento. Solo pagas cuando hacen clic.",
+    "p2": "Cada tratamiento va en su campaña. Un implante y una limpieza tienen ticket, búsqueda y tiempo de decisión distintos; separarlos permite saber cuánto cuesta una cita de cada uno y mover el presupuesto a lo que deja más margen.",
+    "p3": "La landing por tratamiento convierte el clic en cita: qué incluye la evaluación, quién atiende, dónde está la clínica y un botón de WhatsApp. Google también la evalúa dentro del nivel de calidad, que influye en cuánto pagas por clic.",
+    "p4": "La medición termina en la cita. El WhatsApp, la llamada y el formulario guardan el identificador del clic de Google, y las citas confirmadas se suben como conversión offline para que la puja aprenda de pacientes reales.",
+    "p5": "La gestión de Google Ads de 3R Core cuesta S/1,800 al mes + IGV (referencial), y la pauta se paga aparte a Google desde la cuenta de tu clínica. Si ya tienes campañas, empezamos con una auditoría.",
+    "p6": "Si buscas una agencia de marketing para clínicas dentales en Lima que trabaje Google Ads con foco en citas, conversemos. Te mostramos qué tratamientos se buscan en tu zona antes de invertir.",
     "relatedTitle": "Servicios relacionados"
   },
   "MarketingClinicasEsteticasLanding": {
     "hero": {
-      "badge": "Estética · Captación de pacientes",
-      "title": "Marketing digital para clínicas estéticas en Lima",
-      "subtitle": "Atraemos pacientes para tu clínica estética o centro de medicina estética con Instagram, Meta Ads y SEO local. Las redes parten en S/1,500 al mes más IGV y se reporta en citas agendadas. Los montos indicados son referenciales.",
-      "cta": "Quiero más pacientes"
+      "badge": "Google Ads · Clínicas estéticas",
+      "title": "Gestión de Google Ads para clínicas estéticas que llena las valoraciones",
+      "subtitle": "Quien busca «depilación láser en Miraflores» o «bótox en Lima» ya decidió el tratamiento. Ponemos tu clínica arriba en Google y medimos cada valoración agendada.",
+      "cta": "Quiero más valoraciones",
+      "waCta": "Pedir auditoría por WhatsApp",
+      "waText": "Hola 3R Core, tengo una clínica estética y quiero una auditoría de Google Ads.",
+      "serviceLink": "Ver el servicio completo de Google Ads"
     },
     "intro": {
-      "title": "El tratamiento estético se descubre, no se busca",
-      "p1": "Quien necesita un dentista escribe «dentista cerca de mí». Quien termina agendando una limpieza facial muchas veces no la estaba buscando esa mañana: la vio. Por eso, en el rubro estético, Instagram y TikTok pesan más que la búsqueda, y el reparto del presupuesto es el inverso al de una clínica dental.",
-      "p2": "Eso no significa que Google no sirva. Sirve para los tratamientos que la gente escribe por su nombre: depilación láser, ácido hialurónico, tratamiento para el acné. Lo que hacemos es repartir según cómo se decide cada tratamiento, no aplicar la misma receta a todo.",
-      "p3": "La estética es de las categorías más vigiladas por las plataformas, y la mayoría de los rechazos vienen de la creatividad, no de la configuración. Meta restringe las fotos de antes y después en tratamientos corporales y los mensajes que señalan el cuerpo de quien mira."
+      "title": "Google Ads para clínicas estéticas: el tratamiento se busca por su nombre",
+      "p1": "La gestión de Google Ads para clínicas estéticas consiste en anunciar cada tratamiento ante quien lo busca por su nombre: depilación láser, toxina botulínica, ácido hialurónico, limpieza facial o tratamientos corporales. En 3R Core lo trabajamos por tratamiento y medimos en valoraciones agendadas.",
+      "p2": "En estética, las redes despiertan el deseo y Google captura la decisión. Quien escribe el tratamiento y el distrito está comparando precios y clínicas; el anuncio de búsqueda te pone en esa lista y solo pagas cuando hace clic.",
+      "p3": "Es un rubro con reglas: los anuncios de salud pasan por la política de atención médica de Google y algunos productos y afirmaciones están restringidos. Redactamos dentro de esas reglas, sin promesas de resultado, para que la campaña no se detenga."
     },
     "benefits": {
       "badge": "Qué incluye",
-      "title": "Nuestro sistema para clínicas estéticas",
+      "title": "La gestión de Google Ads para tu clínica estética",
       "items": [
         {
-          "title": "Contenido para Instagram y TikTok",
-          "description": "Entre 8 y 12 piezas en cada red que se maneje, desde S/1,500 al mes más IGV. En este rubro el video vertical de persona real rinde más que el diseño gráfico. Los montos indicados son referenciales."
+          "title": "Campañas por tratamiento",
+          "description": "Cada tratamiento con sus búsquedas, anuncios y presupuesto, para saber cuánto cuesta una valoración de cada uno."
         },
         {
-          "title": "Meta Ads por tratamiento",
-          "description": "Campañas separadas por procedimiento, escritas dentro de las reglas de la categoría: sin antes y después, sin señalar el cuerpo y sin prometer resultados."
-        },
-        {
-          "title": "Google Ads donde sí se busca",
-          "description": "Solo para los tratamientos que la gente escribe por su nombre. Gestión desde S/1,800 al mes más IGV, con la inversión publicitaria aparte. Los montos indicados son referenciales."
+          "title": "Anuncios dentro de las políticas",
+          "description": "Revisamos cada texto y landing según las reglas de salud de Google para evitar rechazos y suspensiones."
         },
         {
           "title": "Landing por tratamiento",
-          "description": "Una página por procedimiento desde S/1,800 más IGV, lista en 1 a 2 semanas, con qué es, cuánto dura, quién lo realiza y cómo se agenda. Los montos indicados son referenciales."
+          "description": "Qué es, para quién, cómo es la valoración y agenda por WhatsApp, sin fotos de antes y después que generen rechazos."
         },
         {
-          "title": "Ficha de Google y reseñas",
-          "description": "Fotos reales del local, horario, tratamientos listados y respuesta a cada reseña. En estética, las reseñas pesan tanto como la publicidad."
+          "title": "Segmentación por zona",
+          "description": "Anuncios para los distritos desde donde llegan tus pacientes, en tu horario de atención."
         },
         {
-          "title": "Reporte de costo por cita",
-          "description": "Cada mes: lo invertido, las citas agendadas y el costo por cita, más las que efectivamente llegaron."
+          "title": "Remarketing",
+          "description": "Recordamos el tratamiento a quien visitó la página y no agendó, dentro de lo que permiten las políticas."
+        },
+        {
+          "title": "Reporte en valoraciones",
+          "description": "Costo por valoración agendada y por paciente que inicia tratamiento."
         }
       ]
     },
     "process": {
-      "badge": "Cómo trabajamos",
-      "title": "Nuestro proceso con una clínica estética",
+      "badge": "Cómo funciona",
+      "title": "Cómo funciona Google Ads para clínicas estéticas",
       "steps": [
         {
-          "title": "Diagnóstico de tratamientos",
-          "description": "Qué procedimientos quiere llenar la clínica, cuál deja más margen y cuáles se buscan por su nombre en Google."
+          "title": "Tratamientos y margen",
+          "description": "Elegimos qué tratamientos impulsar según tu capacidad, ticket y temporada."
         },
         {
-          "title": "Contenido y prueba social",
-          "description": "Producción para Instagram y TikTok, con el equipo de la clínica y testimonios en video en vez de antes y después."
+          "title": "Revisión de políticas",
+          "description": "Comprobamos qué se puede anunciar de cada tratamiento y cómo redactarlo."
         },
         {
-          "title": "Campañas por procedimiento",
-          "description": "Meta Ads para lo que se descubre, Google Ads para lo que se busca. Presupuesto separado por tratamiento."
+          "title": "Landing y medición",
+          "description": "Página por tratamiento con WhatsApp y llamada, medida con el identificador del clic de Google."
         },
         {
-          "title": "Medición por cita",
-          "description": "Se mide el costo por cita agendada y cuántas llegaron, porque en estética la diferencia entre agendar y asistir suele ser grande."
+          "title": "Lanzamiento en búsqueda",
+          "description": "Empezamos por las búsquedas del tratamiento más el distrito, que son las de mayor intención."
         },
         {
-          "title": "Reporte y ajuste",
-          "description": "Reporte mensual en soles y ajuste hacia los tratamientos que sí están llenando la agenda."
+          "title": "Optimización hacia valoraciones",
+          "description": "Las valoraciones confirmadas se suben a Google Ads para que la campaña aprenda de pacientes reales."
         }
       ]
     }
   },
   "MarketingClinicasEsteticasFAQ": {
     "badge": "Preguntas frecuentes",
-    "title": "Preguntas frecuentes",
+    "title": "Preguntas frecuentes sobre Google Ads para clínicas estéticas",
     "faqs": {
       "q1": {
-        "question": "¿Cuánto cuesta el marketing digital para una clínica estética en Lima?",
-        "answer": "En 3R Core, la gestión de campañas para una clínica estética parte en S/1,800 al mes más IGV y el manejo de redes sociales en S/1,500 al mes más IGV. Una landing por tratamiento cuesta S/1,800 más IGV. La inversión publicitaria va aparte y la paga la clínica directamente a Meta o a Google. Los montos indicados son referenciales."
+        "question": "¿Se pueden anunciar tratamientos estéticos en Google Ads?",
+        "answer": "La mayoría sí. Los anuncios de salud pasan por la política de atención médica de Google y algunos productos, como ciertos medicamentos con receta, están restringidos. Revisamos cada tratamiento antes de lanzar."
       },
       "q2": {
-        "question": "¿Puedo poner fotos de antes y después en mis anuncios?",
-        "answer": "En Meta, no: la plataforma restringe las imágenes de antes y después para tratamientos corporales, y es una de las causas más comunes de rechazo de anuncios en el rubro estético. En su lugar se usa explicación del procedimiento, testimonio en video o contenido del equipo de la clínica."
+        "question": "¿Qué tratamientos estéticos funcionan mejor en Google?",
+        "answer": "Los que se buscan por su nombre y con ubicación: depilación láser, toxina botulínica, rellenos, tratamientos faciales. Lo confirmamos con las búsquedas de tu zona."
       },
       "q3": {
-        "question": "¿Qué funciona mejor para una clínica estética: Instagram o Google?",
-        "answer": "Para la mayoría de tratamientos estéticos, Instagram y TikTok funcionan mejor, porque el tratamiento se descubre antes de buscarse. Google funciona para los procedimientos que la gente escribe por su nombre, como depilación láser o ácido hialurónico. Lo habitual es combinar ambos."
+        "question": "¿Google Ads o Instagram para una clínica estética?",
+        "answer": "Se complementan. Instagram y TikTok generan deseo y confianza; Google Ads capta a quien ya decidió y está comparando dónde hacerse el tratamiento."
       },
       "q4": {
-        "question": "¿3R Core garantiza una cantidad de pacientes al mes?",
-        "answer": "No. 3R Core no garantiza un número de pacientes ni resultados estéticos. Lo que se compromete es el trabajo del plan, el reporte mensual con el costo por cita agendada y el ajuste de las campañas según ese dato."
+        "question": "¿Puedo usar fotos de antes y después?",
+        "answer": "Es un terreno delicado en las plataformas publicitarias y una causa frecuente de rechazos. En los anuncios y landings de Google priorizamos explicar el tratamiento y la valoración."
       },
       "q5": {
-        "question": "¿Cuánto tarda en verse el resultado de las campañas?",
-        "answer": "Con Meta Ads y Google Ads, las primeras consultas suelen entrar durante la primera semana. Con SEO local y trabajo de ficha de Google, el efecto se nota entre el tercer y el cuarto mes."
+        "question": "¿Cuánto cuesta la gestión de Google Ads?",
+        "answer": "La gestión de Google Ads de 3R Core cuesta S/1,800 al mes + IGV (precio referencial). La inversión en anuncios se paga aparte y directo a Google desde tu propia tarjeta; como referencia, recomendamos empezar desde S/1,500 al mes de pauta."
       },
       "q6": {
-        "question": "¿Cuánto cuesta captar un paciente en una clínica estética?",
-        "answer": "No hay un costo estándar: cambia según el tratamiento, el ticket y el distrito. Captar para una limpieza facial de bajo ticket y para un tratamiento de varios miles de soles no cuesta lo mismo ni se mide igual. Se mide con los datos de la clínica durante el primer mes."
+        "question": "¿La cuenta de Google Ads queda a nombre de mi empresa?",
+        "answer": "Sí. Creamos o usamos la cuenta de Google Ads a nombre de tu empresa y nos das acceso como administradores. Las campañas, el historial y los datos son tuyos aunque un día dejes de trabajar con nosotros."
       },
       "q7": {
-        "question": "¿Trabajan con clínicas estéticas fuera de Lima?",
-        "answer": "Sí. 3R Core trabaja desde La Molina, Lima, y atiende clínicas de otras ciudades del Perú de forma remota. Lo que cambia es la configuración geográfica de las campañas."
+        "question": "¿Cómo saben qué anuncio trajo cada cliente?",
+        "answer": "Cada contacto queda registrado con su origen: el formulario y el clic a WhatsApp guardan el identificador del clic de Google (GCLID), y las ventas que se cierran por WhatsApp se suben a Google Ads como conversión offline. Así la campaña aprende de las ventas reales y no de clics sueltos."
       },
       "q8": {
-        "question": "¿Los precios incluyen IGV? ¿Emiten factura?",
-        "answer": "Los precios publicados son netos y 3R Core emite factura, donde se suma el IGV del 18%. Una landing de S/1,800 factura S/2,124 en total. El pago se hace 50% al iniciar y 50% al entregar. Los montos indicados son referenciales."
+        "question": "¿Pueden revisar mis campañas actuales de Google Ads?",
+        "answer": "Sí. Si ya tienes campañas, empezamos por una auditoría de tu cuenta: revisamos qué se está contando como conversión, en qué búsquedas se va el presupuesto y qué páginas reciben el clic. Pídela por WhatsApp desde esta página."
       }
     }
   },
   "MarketingClinicasEsteticasSEO": {
-    "seoTitle": "Marketing digital para clínicas estéticas en Lima con foco en citas",
-    "p1": "Un tratamiento estético casi nunca se busca: se descubre. Esa sola diferencia cambia todo el reparto del presupuesto respecto a otras clínicas, porque el momento de decisión no ocurre en el buscador sino en el feed. Instagram y TikTok son el canal principal, y Google entra para los procedimientos que la gente sí escribe por su nombre.",
-    "p2": "En 3R Core el manejo de redes sociales para una clínica estética parte en S/1,500 al mes más IGV, con entre 8 y 12 piezas en cada red que se maneje. La gestión de campañas parte en S/1,800 al mes más IGV, con la inversión publicitaria aparte, que la clínica paga directo a la plataforma. Los montos indicados son referenciales.",
-    "p3": "En este rubro el video vertical de persona real rinde más que el diseño gráfico, y por eso el contenido de tipo UGC se combina con el manejo de redes cuando el presupuesto lo permite. No es una moda: es el formato con el que se decide un tratamiento estético.",
-    "p4": "La estética es de las categorías más vigiladas por las plataformas. Meta restringe explícitamente las fotos de antes y después en tratamientos corporales, rechaza los anuncios que señalan el cuerpo de quien mira y no permite segmentar por condiciones de salud. Estas reglas no las pone la agencia: las ponen las plataformas, y son la razón principal por la que se cae una cuenta publicitaria del rubro.",
-    "p5": "Las landing pages por tratamiento cuestan S/1,800 más IGV cada una y están listas en 1 a 2 semanas. Cada una responde qué es el procedimiento, cuánto dura, quién lo realiza y cómo se agenda, que es exactamente lo que el paciente quiere saber antes de escribir. Los montos indicados son referenciales.",
-    "p6": "Reportamos en costo por cita agendada y en citas que efectivamente llegaron, porque en estética la diferencia entre una cosa y la otra suele ser grande. El dato de tratamiento cerrado lo aporta la clínica desde su sistema y es lo que convierte el reporte en soles.",
+    "seoTitle": "Cómo funciona Google Ads para clínicas estéticas en Lima",
+    "p1": "Google Ads para clínicas estéticas funciona porque el paciente busca el tratamiento por su nombre. Quien escribe «depilación láser precio Surco» ya decidió qué quiere y está eligiendo dónde. El anuncio pone a tu clínica en esa elección y solo pagas por el clic.",
+    "p2": "Cada tratamiento va por separado, con su campaña, su landing y su presupuesto. Así sabes cuánto cuesta una valoración de láser frente a una de rellenos y puedes reforzar los que dejan más margen o tienen agenda libre.",
+    "p3": "Las políticas de salud se revisan antes de lanzar. Algunos productos están restringidos y ciertas afirmaciones generan rechazo. Escribir dentro de esas reglas mantiene la campaña activa y protege la cuenta.",
+    "p4": "La medición se hace en valoraciones. El WhatsApp, la llamada y el formulario guardan el identificador del clic de Google, y las valoraciones confirmadas se suben como conversión offline para que la puja optimice hacia pacientes.",
+    "p5": "La gestión de Google Ads de 3R Core cuesta S/1,800 al mes + IGV (referencial), y la pauta se paga aparte a Google desde la cuenta de tu clínica. Si ya tienes campañas, empezamos con una auditoría.",
+    "p6": "Si buscas una agencia de marketing para clínicas estéticas en Lima que trabaje Google Ads con foco en valoraciones, conversemos. Te mostramos qué tratamientos se buscan en tu zona antes de invertir.",
     "relatedTitle": "Servicios relacionados"
   },
   "MarketingVeterinariasLanding": {
     "hero": {
-      "badge": "Veterinarias · Captación de clientes",
-      "title": "Marketing digital para veterinarias en Lima",
-      "subtitle": "Atraemos clientes para tu veterinaria o clínica veterinaria con ficha de Google, SEO local y campañas. El SEO parte en S/1,800 al mes más IGV y la mayor parte del trabajo que rinde está en el mapa. Los montos indicados son referenciales.",
-      "cta": "Quiero más clientes"
+      "badge": "Google Ads · Veterinarias",
+      "title": "Gestión de Google Ads para veterinarias que trae dueños de mascotas",
+      "subtitle": "Tu veterinaria arriba en Google cuando alguien busca «veterinaria 24 horas en Surco» o «vacunas para perros en San Miguel», con llamadas y citas medidas.",
+      "cta": "Quiero más citas",
+      "waCta": "Pedir auditoría por WhatsApp",
+      "waText": "Hola 3R Core, tengo una veterinaria y quiero una auditoría de Google Ads.",
+      "serviceLink": "Ver el servicio completo de Google Ads"
     },
     "intro": {
-      "title": "Casi nadie elige veterinaria por su página web",
-      "p1": "La elige por el mapa. Cuando alguien busca «veterinaria cerca de mí» o «veterinaria 24 horas» desde el celular, lo que ocupa la pantalla es un bloque de fichas con las estrellas, el horario y el botón de llamar. Quien no está bien ahí no existe para esa búsqueda, por buena que sea su web.",
-      "p2": "Por eso en este rubro el trabajo empieza por la ficha de Google Business Profile: categoría correcta, horario real incluido el de emergencias, fotos del local y respuesta a cada reseña. Es lo más barato de arreglar y lo que más rinde.",
-      "p3": "En el rubro veterinario conviven dos búsquedas muy distintas: la urgente, que se decide por cercanía y por quién contesta el teléfono, y la planificada, que se compara por precio y por reseñas. Cada una necesita una respuesta distinta."
+      "title": "Google Ads para veterinarias: la decisión se toma cerca y rápido",
+      "p1": "La gestión de Google Ads para veterinarias consiste en mostrar tu clínica al dueño de mascota que busca un servicio cerca: una urgencia, vacunas, esterilización, peluquería o un especialista. En 3R Core lo trabajamos por servicio y por distrito, porque en este rubro casi nadie cruza la ciudad.",
+      "p2": "Una urgencia veterinaria se resuelve con una llamada. Por eso los anuncios llevan el teléfono visible en tu horario de atención, y el resto de servicios se agenda por WhatsApp. Solo pagas cuando alguien hace clic.",
+      "p3": "Google Ads complementa la ficha de Google Maps: la ficha aparece en el mapa de forma orgánica y los anuncios te ponen arriba en las búsquedas donde todavía no sales. Trabajamos con clínicas veterinarias y pet shops de Lima y provincias."
     },
     "benefits": {
       "badge": "Qué incluye",
-      "title": "Nuestro sistema para veterinarias",
+      "title": "La gestión de Google Ads para tu veterinaria",
       "items": [
         {
-          "title": "Ficha de Google Business Profile",
-          "description": "Categoría correcta, horario real incluido el de emergencias, servicios listados uno a uno, fotos del local y respuesta a cada reseña. Es lo que decide una llamada a las once de la noche."
+          "title": "Campañas por servicio",
+          "description": "Urgencias, vacunas, esterilización, peluquería y especialidades, cada una con su presupuesto."
         },
         {
-          "title": "SEO local por distrito",
-          "description": "Posicionamiento por la zona real de la veterinaria: «veterinaria en Surco», «veterinaria en San Borja». Desde S/1,800 al mes más IGV. Los montos indicados son referenciales."
+          "title": "Radio por distrito",
+          "description": "Anuncios solo para la zona desde donde llegan tus clientes, sin pagar clics de toda la ciudad."
         },
         {
-          "title": "Páginas por servicio con precio",
-          "description": "Vacunación, esterilización, baño y peluquería, consulta general y emergencias. Desde S/1,800 más IGV cada una, listas en 1 a 2 semanas. Los montos indicados son referenciales."
+          "title": "Llamada para urgencias",
+          "description": "Recurso de llamada en el horario en que atiendes, y campaña 24 horas si tu clínica la ofrece."
         },
         {
-          "title": "Google Ads para urgencias",
-          "description": "Campañas de búsqueda para captar cuando la decisión es inmediata. Gestión desde S/1,800 al mes más IGV, con la inversión aparte. Los montos indicados son referenciales."
+          "title": "Landing por servicio",
+          "description": "Qué incluye, precio referencial si lo publicas, ubicación y agenda por WhatsApp."
         },
         {
-          "title": "Redes sociales",
-          "description": "Desde S/1,500 al mes más IGV. En veterinaria funciona el contenido del día a día de la clínica, no el diseño publicitario. Los montos indicados son referenciales."
+          "title": "Filtro de búsquedas",
+          "description": "Bloqueamos «curso de veterinaria», «trabajo», «adopción» y otras búsquedas que no son clientes."
         },
         {
-          "title": "Tienda virtual, cuando aplica",
-          "description": "Si la veterinaria ya vende alimento y accesorios, una tienda de hasta 50 productos cuesta S/2,500 más IGV y convierte una compra puntual en recurrente. Los montos indicados son referenciales."
+          "title": "Reporte en citas y llamadas",
+          "description": "Costo por llamada y por cita agendada por servicio."
         }
       ]
     },
     "process": {
-      "badge": "Cómo trabajamos",
-      "title": "Nuestro proceso con una veterinaria",
+      "badge": "Cómo funciona",
+      "title": "Cómo funciona Google Ads para veterinarias",
       "steps": [
         {
-          "title": "Diagnóstico de la ficha",
-          "description": "Revisamos la ficha de Google, la categoría, los horarios y las reseñas antes de invertir un sol en publicidad."
+          "title": "Servicios y zona",
+          "description": "Definimos qué servicios quieres llenar y el radio desde donde llegan tus clientes."
         },
         {
-          "title": "Presencia local",
-          "description": "Ordenamos la ficha y trabajamos el posicionamiento por los distritos de los que realmente vienen los clientes."
+          "title": "Búsquedas locales",
+          "description": "Elegimos las búsquedas de servicio más zona y las de «cerca de mí»."
         },
         {
-          "title": "Páginas de servicio",
-          "description": "Una página por servicio con el precio o el rango, que después sirve como destino de las campañas."
+          "title": "Landing y medición",
+          "description": "Página por servicio, llamada y WhatsApp con el identificador del clic de Google."
         },
         {
-          "title": "Campañas, si hacen falta",
-          "description": "Las campañas entran cuando hay un servicio concreto que llenar, no por defecto."
+          "title": "Horarios",
+          "description": "Mostramos los anuncios de llamada solo cuando hay alguien para contestar."
         },
         {
-          "title": "Reporte y ajuste",
-          "description": "Llamadas desde la ficha, citas agendadas y costo por cita cuando hay campañas activas."
+          "title": "Optimización hacia citas",
+          "description": "Las citas confirmadas se suben a Google Ads para que la campaña aprenda de clientes reales."
         }
       ]
     }
   },
   "MarketingVeterinariasFAQ": {
     "badge": "Preguntas frecuentes",
-    "title": "Preguntas frecuentes",
+    "title": "Preguntas frecuentes sobre Google Ads para veterinarias",
     "faqs": {
       "q1": {
-        "question": "¿Cuánto cuesta el marketing digital para una veterinaria en Lima?",
-        "answer": "En 3R Core, el SEO local parte en S/1,800 al mes más IGV, la gestión de campañas también en S/1,800 al mes más IGV y el manejo de redes sociales en S/1,500 al mes más IGV. La inversión publicitaria va aparte y la paga la veterinaria directamente a Google o a Meta. Los montos indicados son referenciales."
+        "question": "¿Google Ads funciona para una veterinaria de barrio?",
+        "answer": "Sí, con un radio pequeño. Una veterinaria de distrito no necesita aparecer en todo Lima: concentramos el presupuesto en las calles desde donde llegan sus clientes."
       },
       "q2": {
-        "question": "¿Necesito una web o me basta con la ficha de Google?",
-        "answer": "Una veterinaria puede empezar a recibir clientes solo con la ficha de Google bien trabajada, porque la mayoría de estas búsquedas se resuelven en el mapa. La web se vuelve necesaria cuando se quiere hacer publicidad o publicar precios de servicios: los anuncios necesitan una página de destino y esa página decide cuántos clics se convierten en citas."
+        "question": "¿Qué servicios veterinarios conviene anunciar?",
+        "answer": "Las urgencias, que se buscan con prisa y se resuelven por llamada, y los servicios programados con búsqueda directa: vacunas, esterilización, peluquería y especialistas."
       },
       "q3": {
-        "question": "¿Qué es lo primero que debería hacer una veterinaria en Lima?",
-        "answer": "Ordenar la ficha de Google Business Profile: categoría correcta, horario real incluido el de emergencias, fotos del local y respuesta a todas las reseñas. Es lo más barato de arreglar y lo que más rinde, porque es lo que Google enseña cuando alguien busca «veterinaria cerca de mí»."
+        "question": "¿Google Ads reemplaza a la ficha de Google Maps?",
+        "answer": "No. La ficha de Google Business Profile es gratuita y aparece en el mapa; Google Ads te pone arriba en las búsquedas donde la ficha todavía no sale. Se complementan."
       },
       "q4": {
-        "question": "¿Sirve tener tienda virtual en una veterinaria?",
-        "answer": "Sirve cuando la veterinaria ya vende alimento, accesorios o antiparasitarios en el local, porque convierte una compra puntual en una recurrente. Una tienda de hasta 50 productos cuesta S/2,500 más IGV en 3R Core. Si solo se da servicio clínico, es mejor invertir primero en ficha de Google y páginas de servicio. Los montos indicados son referenciales."
+        "question": "¿Sirve también para un pet shop?",
+        "answer": "Sí. Para productos se puede usar Google Shopping con tu catálogo y, para servicios como baño y corte, campañas de búsqueda por zona."
       },
       "q5": {
-        "question": "¿3R Core garantiza una cantidad de clientes al mes?",
-        "answer": "No. 3R Core no garantiza un número de clientes. Lo que se compromete es el trabajo del plan, el reporte mensual con las llamadas y citas generadas, y el ajuste de las campañas según ese dato."
+        "question": "¿Cuánto cuesta la gestión de Google Ads?",
+        "answer": "La gestión de Google Ads de 3R Core cuesta S/1,800 al mes + IGV (precio referencial). La inversión en anuncios se paga aparte y directo a Google desde tu propia tarjeta; como referencia, recomendamos empezar desde S/1,500 al mes de pauta."
       },
       "q6": {
-        "question": "¿Cómo se capta a alguien que busca una veterinaria de urgencia?",
-        "answer": "Estando en el mapa y contestando. La búsqueda urgente casi no se gana con contenido: se decide por cercanía, por horario y por quién responde el teléfono. Por eso la ficha de Google con el horario de emergencias bien puesto vale más que cualquier artículo."
+        "question": "¿La cuenta de Google Ads queda a nombre de mi empresa?",
+        "answer": "Sí. Creamos o usamos la cuenta de Google Ads a nombre de tu empresa y nos das acceso como administradores. Las campañas, el historial y los datos son tuyos aunque un día dejes de trabajar con nosotros."
       },
       "q7": {
-        "question": "¿Trabajan con veterinarias fuera de Lima?",
-        "answer": "Sí. 3R Core trabaja desde La Molina, Lima, y atiende negocios de otras ciudades del Perú de forma remota. Lo que cambia es la configuración geográfica de la ficha y de las campañas."
+        "question": "¿Cómo saben qué anuncio trajo cada cliente?",
+        "answer": "Cada contacto queda registrado con su origen: el formulario y el clic a WhatsApp guardan el identificador del clic de Google (GCLID), y las ventas que se cierran por WhatsApp se suben a Google Ads como conversión offline. Así la campaña aprende de las ventas reales y no de clics sueltos."
       },
       "q8": {
-        "question": "¿Los precios incluyen IGV? ¿Emiten factura?",
-        "answer": "Los precios publicados son netos y 3R Core emite factura, donde se suma el IGV del 18%. Una tienda virtual de S/2,500 factura S/2,950 en total. El pago se hace 50% al iniciar y 50% al entregar. Los montos indicados son referenciales."
+        "question": "¿Pueden revisar mis campañas actuales de Google Ads?",
+        "answer": "Sí. Si ya tienes campañas, empezamos por una auditoría de tu cuenta: revisamos qué se está contando como conversión, en qué búsquedas se va el presupuesto y qué páginas reciben el clic. Pídela por WhatsApp desde esta página."
       }
     }
   },
   "MarketingVeterinariasSEO": {
-    "seoTitle": "Marketing digital para veterinarias en Lima con foco en el mapa",
-    "p1": "El dueño de una mascota casi nunca compara páginas web de veterinarias: mira el mapa, las estrellas y el horario. Cuando busca «veterinaria cerca de mí» desde el celular, lo que ocupa la pantalla es un bloque de fichas de empresa, y quien no está bien ahí no entra en la decisión.",
-    "p2": "Por eso el trabajo de una veterinaria empieza en la ficha de Google Business Profile y no en la web. Categoría correcta —«veterinario» y «clínica veterinaria» no compiten por lo mismo—, horario real incluido el de emergencias, fotos del local y del equipo, servicios listados uno a uno y respuesta a cada reseña.",
-    "p3": "Ese trabajo va dentro del plan de SEO local, que en 3R Core parte en S/1,800 al mes más IGV e incluye además el posicionamiento por distrito: «veterinaria en Surco», «veterinaria en San Borja», según de dónde vengan realmente los clientes. Los montos indicados son referenciales.",
-    "p4": "En el rubro conviven dos búsquedas que no se parecen. La urgente —«veterinaria 24 horas»— se decide por cercanía y por quién contesta, y casi no se puede ganar con contenido. La planificada —«cuánto cuesta esterilizar a un perro»— se compara por precio y por confianza, y esa sí se gana con una página del servicio que diga la cifra.",
-    "p5": "Las páginas por servicio cuestan desde S/1,800 más IGV cada una y están listas en 1 a 2 semanas. Después sirven como destino de las campañas, porque enviar un anuncio de esterilización a la página de inicio es la forma más cara de perder ese clic. Los montos indicados son referenciales.",
-    "p6": "Si la veterinaria ya vende alimento, accesorios o antiparasitarios en el local, una tienda virtual de hasta 50 productos cuesta S/2,500 más IGV y convierte una compra puntual en una recurrente. Es lo que separa a un local de barrio de un negocio con ingresos previsibles. Los montos indicados son referenciales.",
+    "seoTitle": "Cómo funciona Google Ads para veterinarias en Lima",
+    "p1": "Google Ads para veterinarias funciona por cercanía. El dueño de una mascota busca el servicio más la zona («veterinaria en Los Olivos», «vacuna antirrábica cerca de mí») y elige entre las primeras opciones. El anuncio pone a tu clínica en esa lista y solo pagas por el clic.",
+    "p2": "La segmentación geográfica es la clave del presupuesto. Limitamos los anuncios al radio desde donde realmente llegan tus clientes y usamos la opción de presencia en la zona, no solo interés, para no pagar clics de quien vive lejos.",
+    "p3": "Las urgencias se atienden por teléfono. Los anuncios de llamada se programan en tu horario de atención, y si tu clínica atiende 24 horas, esa campaña puede ser la que más rinde.",
+    "p4": "La medición termina en la cita. Las llamadas, el WhatsApp y el formulario quedan registrados con su campaña, y las citas confirmadas se pueden subir a Google Ads como conversión para que la puja aprenda.",
+    "p5": "La gestión de Google Ads de 3R Core cuesta S/1,800 al mes + IGV (referencial), y la pauta se paga aparte a Google desde la cuenta de tu veterinaria. Si ya tienes campañas, empezamos con una auditoría.",
+    "p6": "Si buscas marketing para veterinarias en Lima con Google Ads como motor de citas, conversemos. Te mostramos qué buscan los dueños de mascotas en tu zona antes de invertir.",
     "relatedTitle": "Servicios relacionados"
   }
 }

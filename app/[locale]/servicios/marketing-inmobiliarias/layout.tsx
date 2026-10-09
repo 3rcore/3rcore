@@ -8,9 +8,9 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
   return generatePageMetadata({
     locale,
     path: '/servicios/marketing-inmobiliarias',
-    titleEs: "Marketing Digital para Inmobiliarias en Lima, Perú | 3R Core",
+    titleEs: "Gestión de Google Ads para inmobiliarias en Lima | 3R Core",
     titleEn: 'Real Estate Marketing for U.S. Agents | 3R Core',
-    descriptionEs: "Captación de leads para inmobiliarias y proyectos en Lima: Meta Ads y Google Ads, landing por proyecto, CRM y WhatsApp con costo por lead medible.",
+    descriptionEs: "Gestión de Google Ads para inmobiliarias y proyectos en Lima: búsquedas por distrito, landing por proyecto y leads medidos hasta la visita. Marketing digital que vende.",
     descriptionEn: 'Lead generation for U.S. real estate: Meta and Google Ads for listings, CRM follow-up and measurable cost per qualified lead.',
     titleUs: 'Marketing para Inmobiliarias y Agentes en EE.UU.',
     descriptionUs: 'Captación de compradores hispanos en EE.UU. para inmobiliarias y agentes: Meta Ads, Google Ads, CRM y WhatsApp con costo por lead medible.',
@@ -41,14 +41,14 @@ export default async function MarketingInmobiliariasLayout({ children, params }:
   const serviceSchema = buildServiceSchema({
     locale,
     path: '/servicios/marketing-inmobiliarias',
-    nameEs: "Marketing Digital para Inmobiliarias en Lima",
+    nameEs: "Gestión de Google Ads para inmobiliarias en Lima",
     nameEn: "Digital Marketing for Real Estate",
-    descriptionEs: "Marketing digital para inmobiliarias, desarrolladoras y proyectos en Lima y Perú: campañas de captación de leads en Meta Ads y Google Ads, landing pages de proyecto, integración con CRM y seguimiento por WhatsApp con costo por lead medible.",
+    descriptionEs: "Gestión de campañas de Google Ads para inmobiliarias, desarrolladoras y corredores en Lima y Perú: anuncios de búsqueda por proyecto y distrito, landing por proyecto, integración con CRM y WhatsApp, y medición del costo por lead calificado.",
     descriptionEn: "Digital marketing for real estate developers and projects in the United States: lead generation campaigns on Meta Ads and Google Ads, project landing pages, CRM integration and WhatsApp follow-up with measurable cost per lead.",
-    serviceType: "Real Estate Marketing / Lead Generation",
-    minPriceEs: 3000,
+    serviceType: "Google Ads Management for Real Estate",
+    minPriceEs: 1800,
     maxPriceEs: 15000,
-    offerPriceEs: 3000,
+    offerPriceEs: 1800,
     offerPriceEn: 850,
     audienceTypes: ["Real estate developers", "Brokers", "Property projects"],
   })
@@ -60,7 +60,7 @@ export default async function MarketingInmobiliariasLayout({ children, params }:
   const faqSchema = buildFAQPageSchema(faqItems)
 
   const breadcrumbSchema = generateBreadcrumbSchema(
-    [{ name: isEn ? 'Home' : 'Inicio', path: '' }, { name: isEn ? 'Services' : 'Servicios', path: '/servicios' }, { name: isEn ? "Real Estate Marketing" : "Marketing Inmobiliario", path: '/servicios/marketing-inmobiliarias' }],
+    [{ name: isEn ? 'Home' : 'Inicio', path: '' }, { name: isEn ? 'Services' : 'Servicios', path: '/servicios' }, { name: isEn ? "Real Estate Marketing" : "Google Ads para inmobiliarias", path: '/servicios/marketing-inmobiliarias' }],
     locale
   )
 

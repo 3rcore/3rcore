@@ -39,7 +39,7 @@ export default function MarketingAbogados() {
         <SEOContentBlock
           namespace="MarketingAbogadosSEO"
           paragraphs={6}
-          relatedLinks={[{ href: "/posicionamiento-seo", label: "SEO local" }, { href: "/servicios/google-ads", label: "Google Ads" }, { href: "/servicios/web-development", label: "Página web" }, { href: "/cotizar", label: "Cotizador" }]}
+          relatedLinks={[{ href: "/servicios/google-ads", label: "Gestión de Google Ads" }, { href: "/posicionamiento-seo", label: "SEO local" }, { href: "/servicios/web-development", label: "Página web" }, { href: "/cotizar", label: "Cotizador" }]}
         />
         <ReviewsSection/>
         <ClientSection />

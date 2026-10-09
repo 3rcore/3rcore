@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react'
 import { WA_LEADS, waUrl } from '@/lib/contact'
+import { openWhatsAppNative } from '@/lib/wa-native-open'
 
 /**
  * Cotizador — calculadora de estimado referencial para 3R Core.
@@ -233,7 +234,8 @@ export default function Cotizador({ locale }: { locale: string }) {
     const msg = isEn
       ? `Hi, I'm ${nombre.trim()}. I want to get a quote for: ${specs}. Could you send me the exact quote?`
       : `Hola, soy ${nombre.trim()}. Quiero cotizar: ${specs}. ¿Me pasan la cotización exacta?`
-    window.open(waUrl(WA_LEADS, msg), '_blank', 'noopener,noreferrer')
+    // Sin pasar por el modal global (WhatsAppLeadGate): los datos ya se pidieron aquí.
+    openWhatsAppNative(waUrl(WA_LEADS, msg), '_blank', 'noopener,noreferrer')
     setLoading(false)
   }
 

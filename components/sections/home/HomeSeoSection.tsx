@@ -86,32 +86,32 @@ const COPY: Record<'es' | 'en' | 'us', {
     secondaryH3: 'SEO y Google Ads por sector',
     secondary: [
       {
-        h: 'Clínicas dentales',
+        h: 'Google Ads para clínicas dentales',
         p: 'Captación de pacientes para clínicas y consultorios dentales: búsquedas de tratamiento con intención real, no seguidores.',
         href: '/servicios/marketing-clinicas-dentales',
       },
       {
-        h: 'Clínicas estéticas',
+        h: 'Google Ads para clínicas estéticas',
         p: 'Medicina estética y dermatología: campañas y contenido que llenan la agenda de valoraciones sin quemar presupuesto.',
         href: '/servicios/marketing-clinicas-esteticas',
       },
       {
-        h: 'Veterinarias',
+        h: 'Google Ads para veterinarias',
         p: 'Clínicas y pet shops: posicionamiento por distrito y por servicio, donde el dueño de la mascota busca «veterinaria cerca de mí».',
         href: '/servicios/marketing-veterinarias',
       },
       {
-        h: 'Inmobiliarias',
+        h: 'Google Ads para inmobiliarias',
         p: 'Proyectos y corredoras: captación de leads calificados por proyecto, zona y tipo de departamento.',
         href: '/servicios/marketing-inmobiliarias',
       },
       {
-        h: 'Estudios de abogados',
+        h: 'Google Ads para abogados',
         p: 'Estudios jurídicos y abogados independientes: consultas desde Google por especialidad, con la cautela que exige el rubro.',
         href: '/servicios/marketing-abogados',
       },
       {
-        h: 'E-commerce y tiendas online',
+        h: 'Google Ads para e-commerce',
         p: 'Tiendas que ya venden: SEO de categorías y fichas, Google Shopping y recuperación de carritos.',
         href: '/servicios/marketing-ecommerce',
       },

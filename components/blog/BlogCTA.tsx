@@ -76,12 +76,12 @@ const SERVICES: Record<ServiceKey, ServiceCTA> = {
   },
   clinicas: {
     path: '/servicios/marketing-clinicas',
-    es: { eyebrow: 'Marketing para clínicas', headline: '¿Quieres llenar la agenda de tu clínica o consultorio?', sub: 'Captación de pacientes con Ads y redes medibles. Agenda una asesoría para tu clínica.', btn: 'Ver marketing para clínicas', wa: 'Agendar asesoría para mi clínica' },
+    es: { eyebrow: 'Google Ads para clínicas', headline: '¿Quieres llenar la agenda de tu clínica o consultorio?', sub: 'Captación de pacientes con Ads y redes medibles. Agenda una asesoría para tu clínica.', btn: 'Ver marketing para clínicas', wa: 'Agendar asesoría para mi clínica' },
     en: { eyebrow: 'Marketing for clinics', headline: 'Want to fill your clinic’s appointment book?', sub: 'Patient acquisition with measurable ads and social. Book a consultation.', btn: 'See marketing for clinics', wa: 'Book a consultation for my clinic' },
   },
   inmobiliarias: {
     path: '/servicios/marketing-inmobiliarias',
-    es: { eyebrow: 'Marketing inmobiliario', headline: '¿Necesitas leads de calidad para tus proyectos?', sub: 'Generación de leads para inmobiliarias y desarrolladores. Agenda una asesoría.', btn: 'Ver marketing inmobiliario', wa: 'Agendar asesoría inmobiliaria' },
+    es: { eyebrow: 'Google Ads para inmobiliarias', headline: '¿Necesitas leads de calidad para tus proyectos?', sub: 'Generación de leads para inmobiliarias y desarrolladores. Agenda una asesoría.', btn: 'Ver marketing inmobiliario', wa: 'Agendar asesoría inmobiliaria' },
     en: { eyebrow: 'Real estate marketing', headline: 'Need quality leads for your projects?', sub: 'Lead generation for real estate developers and agencies. Book a consultation.', btn: 'See real estate marketing', wa: 'Book a real estate consultation' },
   },
   tiendas: {
@@ -91,7 +91,7 @@ const SERVICES: Record<ServiceKey, ServiceCTA> = {
   },
   ecommerce: {
     path: '/servicios/marketing-ecommerce',
-    es: { eyebrow: 'Marketing para e-commerce', headline: '¿Quieres escalar las ventas de tu tienda online?', sub: 'Performance marketing para e-commerce: más ventas con inversión rentable. Cotiza tu estrategia.', btn: 'Ver marketing para e-commerce', wa: 'Cotizar estrategia de e-commerce' },
+    es: { eyebrow: 'Google Ads para e-commerce', headline: '¿Quieres escalar las ventas de tu tienda online?', sub: 'Performance marketing para e-commerce: más ventas con inversión rentable. Cotiza tu estrategia.', btn: 'Ver marketing para e-commerce', wa: 'Cotizar estrategia de e-commerce' },
     en: { eyebrow: 'E-commerce marketing', headline: 'Want to scale your online store’s sales?', sub: 'Performance marketing for e-commerce: more sales, profitable spend. Get a quote.', btn: 'See e-commerce marketing', wa: 'Quote my e-commerce strategy' },
   },
 }

@@ -8,9 +8,9 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
   return generatePageMetadata({
     locale,
     path: '/servicios/marketing-clinicas',
-    titleEs: "Marketing para Clínicas y Consultorios en Lima",
+    titleEs: "Google Ads para clínicas y consultorios en Lima | 3R Core",
     titleEn: 'Digital Marketing for U.S. Clinics & Practices | 3R Core',
-    descriptionEs: "Traemos pacientes a tu clínica en Lima con Google Ads de salud, SEO local y ficha de Google. Se mide en citas agendadas, no en «me gusta».",
+    descriptionEs: "Gestión de Google Ads para clínicas y consultorios en Lima: pacientes que buscan tu especialidad, citas por WhatsApp medidas y políticas de salud cuidadas.",
     descriptionEn: 'Patient acquisition for U.S. clinics: healthcare Google Ads, local SEO, Google Business Profile and bilingual campaigns.',
     titleUs: 'Marketing para Clínicas y Consultorios en EE.UU.',
     descriptionUs: 'Captación de pacientes hispanos en EE.UU.: Google Ads de salud, SEO local y ficha de Google. Se mide en citas agendadas, con precios en dólares.',
@@ -41,14 +41,14 @@ export default async function MarketingClinicasLayout({ children, params }: { ch
   const serviceSchema = buildServiceSchema({
     locale,
     path: '/servicios/marketing-clinicas',
-    nameEs: "Marketing Digital para Clínicas y Consultorios en Lima",
+    nameEs: "Gestión de Google Ads para clínicas y consultorios en Lima",
     nameEn: "Digital Marketing for Clinics and Medical Offices",
-    descriptionEs: "Marketing digital para clínicas, consultorios y profesionales de la salud en Lima y Perú: Google Ads y Meta Ads de salud, SEO local, Google Business Profile, landing pages y captación de pacientes con citas medibles.",
+    descriptionEs: "Gestión de campañas de Google Ads para clínicas, consultorios y profesionales de la salud en Lima y Perú: anuncios de búsqueda por especialidad y distrito, cumplimiento de las políticas de atención médica de Google, landing por especialidad y medición de citas.",
     descriptionEn: "Digital marketing for clinics, medical offices and healthcare professionals in the United States: healthcare Google Ads and Meta Ads, local SEO, Google Business Profile, landing pages and measurable patient acquisition.",
-    serviceType: "Healthcare Marketing / Medical Marketing",
-    minPriceEs: 2000,
+    serviceType: "Google Ads Management for Clinics",
+    minPriceEs: 1800,
     maxPriceEs: 10000,
-    offerPriceEs: 2000,
+    offerPriceEs: 1800,
     offerPriceEn: 560,
     audienceTypes: ["Clinics", "Medical offices", "Dental", "Aesthetic"],
   })
@@ -60,7 +60,7 @@ export default async function MarketingClinicasLayout({ children, params }: { ch
   const faqSchema = buildFAQPageSchema(faqItems)
 
   const breadcrumbSchema = generateBreadcrumbSchema(
-    [{ name: isEn ? 'Home' : 'Inicio', path: '' }, { name: isEn ? 'Services' : 'Servicios', path: '/servicios' }, { name: isEn ? "Marketing for Clinics" : "Marketing para Clínicas", path: '/servicios/marketing-clinicas' }],
+    [{ name: isEn ? 'Home' : 'Inicio', path: '' }, { name: isEn ? 'Services' : 'Servicios', path: '/servicios' }, { name: isEn ? "Marketing for Clinics" : "Google Ads para clínicas", path: '/servicios/marketing-clinicas' }],
     locale
   )
 

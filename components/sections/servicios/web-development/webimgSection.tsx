@@ -54,7 +54,7 @@ const WebImgSection = () => {
       <div ref={imageContainerRef} className="w-full h-[25vh] xl:h-[80vh] 2xl:h-[90vh] overflow-hidden">
         <img
           ref={imageRef}
-          src="/images/web/fondowoooo.png"
+          src="/images/web/fondowoooo.webp"
           alt={imgAlt}
           className="w-full h-full "
         />

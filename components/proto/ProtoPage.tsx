@@ -8,9 +8,13 @@ import Script from 'next/script';
 import '@/app/proto.css';
 import ProtoLeadWiring from './ProtoLeadWiring';
 
-export default function ProtoPage({ frag }: { frag: string }) {
+// `slots`: HTML que sustituye a cada marcador <!--slot:nombre--> del fragmento
+// (9-oct-2026, bloque de prueba común de lib/prueba-servicio.ts). Sin slots, el
+// fragmento se sirve exactamente igual que antes.
+export default function ProtoPage({ frag, slots }: { frag: string; slots?: Record<string, string> }) {
   const ruta = path.join(process.cwd(), 'proto-html', `${frag}.html`);
-  const html = fs.readFileSync(ruta, 'utf8');
+  let html = fs.readFileSync(ruta, 'utf8');
+  for (const [k, v] of Object.entries(slots || {})) html = html.split(`<!--slot:${k}-->`).join(v);
   return (
     <>
       <div className="proto" dangerouslySetInnerHTML={{ __html: html }} />

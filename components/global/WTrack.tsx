@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react'
 import { usePathname } from 'next/navigation'
 import { registrar, enviar, engancharSalida, medir, sesionId } from '@/lib/wtrack'
+import { trackConversion } from '@/lib/track'
 
 /**
  * Medición propia de 3rcore.com (la misma pieza que el panel de Websy).
@@ -55,8 +56,11 @@ export default function WTrack() {
       const texto = (el.getAttribute('aria-label') || el.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 120)
       const zona = el.closest('header,nav') ? 'menu' : el.closest('footer') ? 'footer' : el.closest('[class*=float],[class*=Float]') ? 'boton_flotante' : 'contenido'
       const p = { link_text: texto, cta_location: zona, link_url: href.slice(0, 300) }
-      if (/^tel:/i.test(href)) return registrar('phone_click', p)
-      if (/^mailto:/i.test(href)) return registrar('email_click', p)
+      // Teléfono y correo también van a GA4 (hasta el 9-oct no llegaban nunca: 0 desde mar-26).
+      // Una sola vez: dataLayer + gtag directo, porque GTM no tiene tag para ellos (ver GTM_TAGGED_EVENTS).
+      // No se marcan como evento clave: el contacto con nombre sigue siendo generate_lead / whatsapp_click.
+      if (/^tel:/i.test(href)) { trackConversion('phone_click', p, e); return registrar('phone_click', p) }
+      if (/^mailto:/i.test(href)) { trackConversion('email_click', p, e); return registrar('email_click', p) }
       if (/wa\.me|api\.whatsapp|whatsapp\.com/i.test(href)) return registrar('cta_click', { ...p, link_destination: 'whatsapp' })
       if (/^https?:\/\//i.test(href)) {
         try {

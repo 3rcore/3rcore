@@ -39,7 +39,7 @@ export interface CasoServicio {
 /** Vacío hasta que lleguen casos con cifra y permiso (ver MEGA-ESTRATEGIA §7.2). */
 export const CASOS_POR_SERVICIO: Partial<Record<ServicioPrueba, CasoServicio[]>> = {}
 
-const LOGOS: { src: string; alt: string }[] = [
+export const LOGOS: { src: string; alt: string }[] = [
   { src: 'Edifica.webp', alt: 'EDIFICA' },
   { src: 'clinicaFamilia.webp', alt: 'Clínica de la Familia' },
   { src: '2kLogo.webp', alt: '2K' },
@@ -65,7 +65,7 @@ const LOGOS: { src: string; alt: string }[] = [
 const esc = (s: string) =>
   s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
 
-const fecha = (iso: string) => {
+export const fecha = (iso: string) => {
   const [y, m] = iso.split('-')
   const meses = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic']
   return `${meses[Number(m) - 1]}. ${y}`

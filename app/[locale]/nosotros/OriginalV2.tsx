@@ -11,6 +11,7 @@ import Gallery from "@/components/sections/Nosotros/v2/Gallery";
 import HeroNosotros from "@/components/sections/Nosotros/v2/HeroNosotros";
 import NosotrosSection from "@/components/sections/Nosotros/v2/NosotrosSection";
 import Team from "@/components/sections/Nosotros/Team";
+import MetodoNosotros from "@/components/sections/Nosotros/v2/MetodoNosotros";
 
 import ScrollContactBtn from '@/components/ui/ScrollContactBtn'
 import { AnimatePresence } from "framer-motion";
@@ -33,6 +34,7 @@ export default function NosotrosV2() {
         <HeroNosotros />
       </div>
       <NosotrosSection />
+      <MetodoNosotros />
       <Founders />
       <Team />
       <Gallery/>

@@ -8,6 +8,8 @@ import ServiceFAQ from "@/components/seo/ServiceFAQ";
 import SEOContentBlock from "@/components/seo/SEOContentBlock";
 import { useScrollToSection } from '@/components/ui/useScrollToSection';
 import { useTranslations } from 'next-intl';
+import { useLocale } from 'next-intl';
+import MetaAdsExtra from "@/components/sections/servicios/meta-ads/MetaAdsExtra";
 
 import { useIndividualPageLoader } from '@/components/layout/useIndividualPageLoader'
 import { AnimatePresence } from 'framer-motion';
@@ -24,6 +26,7 @@ export default function MetaAds() {
       checkVideos: true
     });
   const tH1 = useTranslations('HiddenH1');
+  const locale = useLocale();
 
   return (
     <>
@@ -35,6 +38,7 @@ export default function MetaAds() {
         <div id="hero">
           <ServiceLanding namespace="MetaAdsLanding" />
         </div>
+        {locale === 'es' && <MetaAdsExtra />}
         <ServiceFAQ namespace="MetaAdsFAQ" count={8} />
         <SEOContentBlock
           namespace="MetaAdsSEO"

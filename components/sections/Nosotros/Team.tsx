@@ -32,6 +32,7 @@ const members = [
   { id: 15, name: "Valentina", role: "Content Media Creator", image: "/images/Equipo/Valentina.webp", area: "social media" },
   { id: 16, name: "Nicole", role: "Content Manager", image: "/images/Equipo/Nicole.webp", area: "social media" },
   { id: 17, name: "Claudia", role: "Content Manager", image: "/images/Equipo/Claudia.webp", area: "social media" },
+  { id: 34, name: "Luis Fernando", role: "Google Paid Media", image: "/images/Equipo/Luis_Fernando.webp", area: "social media" },
 
   // DESIGN MULTIMEDIA
   { id: 18, name: "Aaron", role: "Designer", image: "/images/Equipo/Aaron.webp", area: "design multimedia" },

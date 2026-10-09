@@ -131,6 +131,10 @@ function contextoDeLlegada() {
     utm_content: p.get("utm_content") || "",
     gclid: p.get("gclid") || "",
     fbclid: p.get("fbclid") || "",
+    // Para separar en el panel Google Ads (gbraid/wbraid en iOS) y Microsoft Ads (msclkid).
+    gbraid: p.get("gbraid") || "",
+    wbraid: p.get("wbraid") || "",
+    msclkid: p.get("msclkid") || "",
     pantalla: `${window.screen?.width ?? 0}x${window.screen?.height ?? 0}`,
     idioma: navigator.language || "",
   };

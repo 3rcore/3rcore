@@ -26,7 +26,7 @@ const members = [
 
   // SOCIAL MEDIA
   { id: 11, name: "Grecia", role: "Growth Marketer", image: "/images/Equipo/Grecia.webp", area: "social media" },
-  { id: 12, name: "Sofia", role: "Content Manager Senior", image: "/images/Equipo/Sofia-new.webp", area: "social media" },
+  //{ id: 12, name: "Sofia", role: "Content Manager Senior", image: "/images/Equipo/Sofia-new.webp", area: "social media" },
   { id: 13, name: "Mateo", role: "Content Creator Jr.", image: "/images/Equipo/Mateo.webp", area: "social media" },
   { id: 14, name: "Ariana", role: "Media Creator", image: "/images/Equipo/Arianna.webp", area: "social media" },
   { id: 15, name: "Valentina", role: "Content Media Creator", image: "/images/Equipo/Valentina.webp", area: "social media" },

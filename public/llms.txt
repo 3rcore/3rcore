@@ -13,30 +13,38 @@
 - Tax ID (RUC): 20609008211
 - Track record: 1,000+ brands worked with, 3 countries, 5+ years (figures confirmed by the company, 2026-08-31)
 
-## Services
-- [Branding](https://3rcore.com/es/servicios/branding): Visual identity design, brand manuals, logos, and brand applications
-- [Social Media Management](https://3rcore.com/es/servicios/socialmedia): Content strategy, post design, editorial grids, and social media management
-- [Online Stores / Tiendas Virtuales](https://3rcore.com/es/tiendas-virtuales-lima): E-commerce stores on Shopify, WooCommerce or Tiendanube with local Peruvian payment gateways (Culqi, Niubiz, Izipay, Yape, Mercado Pago), ready to sell
-- [Web Development](https://3rcore.com/es/servicios/web-development): Websites, e-commerce (Shopify/WooCommerce), landing pages, e-learning platforms
-- [Google Ads / SEM](https://3rcore.com/es/servicios/google-ads): Google Ads campaigns, search intent segmentation, budget optimization
-- [SEO Positioning](https://3rcore.com/es/posicionamiento-seo): Organic SEO, keyword strategy, content optimization, monthly reporting (S/1,800/month)
-- [Meta Ads (Facebook & Instagram)](https://3rcore.com/es/servicios/meta-ads): Facebook and Instagram advertising campaigns, audience targeting, creative and retargeting for Peru.
-- [TikTok Ads](https://3rcore.com/es/servicios/tiktok-ads): TikTok advertising campaigns, native creative and audience targeting to reach younger buyers.
-- [Performance Marketing](https://3rcore.com/es/servicios/performance-marketing): ROI/ROAS-focused acquisition across paid channels, funnels and measurement.
-- [Email Marketing](https://3rcore.com/es/servicios/email-marketing): email campaigns and automation, list segmentation and nurturing flows.
-- [Marketing for clinics](https://3rcore.com/es/servicios/marketing-clinicas): digital marketing for clinics and medical practices to fill their appointment agenda.
-- [Marketing for real estate](https://3rcore.com/es/servicios/marketing-inmobiliarias): lead generation for real estate developers and agencies.
-- [Marketing for e-commerce](https://3rcore.com/es/servicios/marketing-ecommerce): performance marketing to scale online stores and sales.
+## Services in Peru (Spanish site, /es)
+Prices below are the reference prices each page publishes, in Peruvian soles, net of 18% IGV unless the page says otherwise.
+- [SEO positioning](https://3rcore.com/es/posicionamiento-seo): in-house team doing technical SEO, content and links, with the client's own Search Console access; from S/1,800 per month.
+- [Google Ads / SEM](https://3rcore.com/es/servicios/google-ads): Search, Performance Max and Shopping run inside the client's own Google Ads account; management from S/1,800 per month.
+- [Meta Ads (Facebook & Instagram)](https://3rcore.com/es/servicios/meta-ads): campaigns with retargeting, catalog and messages to WhatsApp; management from S/1,500 per month.
+- [TikTok Ads](https://3rcore.com/es/servicios/tiktok-ads): Spark Ads, native video and in-house UGC creators; management from S/1,500 per month with a monthly report.
+- [Performance marketing](https://3rcore.com/es/servicios/performance-marketing): Google, Meta and TikTok run together with end-to-end measurement, optimized for CAC and ROAS.
+- [AI search positioning (GEO)](https://3rcore.com/es/servicios/posicionamiento-ia): work so that ChatGPT, Perplexity and Copilot cite the client's business; from S/1,800 per month.
+- [Web design and development](https://3rcore.com/es/servicios/web-development): corporate sites, landing pages and e-commerce (Shopify, WooCommerce) with technical SEO; from S/1,800.
+- [Online stores](https://3rcore.com/es/tiendas-virtuales-lima): Shopify, WooCommerce or Tiendanube stores with Yape, Culqi and Izipay and technical SEO; from S/1,500.
+- [Branding](https://3rcore.com/es/servicios/branding): visual identity, logo, brand manual and applications; from S/500, delivered in 7 days.
+- [Social media management](https://3rcore.com/es/servicios/socialmedia): TikTok, LinkedIn, Instagram and Facebook with strategy, design, copy and reports; from S/1,500.
+- [UGC video](https://3rcore.com/es/servicios/ugc): creator videos with scripts, filming, editing and test variants for Meta, TikTok and YouTube, usage rights included.
+- [Influencer marketing](https://3rcore.com/es/servicios/influencer-marketing): creators chosen by real audience, contracts, usage rights and link-based attribution of sales.
+- [Public relations](https://3rcore.com/es/servicios/relaciones-publicas): press strategy, newsworthy angles, media relations and spokespeople; earned coverage, not paid articles.
+- [Email marketing and automation](https://3rcore.com/es/servicios/email-marketing): automated flows, newsletters and CRM, including abandoned-cart recovery and repeat purchases.
+- [Google Ads for clinics](https://3rcore.com/es/servicios/marketing-clinicas): campaigns for clinics and medical practices with appointments via WhatsApp measured and health ad policies respected.
+- [Google Ads for dental clinics](https://3rcore.com/es/servicios/marketing-clinicas-dentales): implants, orthodontics and emergencies with measured appointments; from S/1,800 per month + IGV.
+- [Google Ads for aesthetic clinics](https://3rcore.com/es/servicios/marketing-clinicas-esteticas): treatments searched by name, ads within health policies and measured consultations.
+- [Google Ads for veterinary clinics](https://3rcore.com/es/servicios/marketing-veterinarias): emergencies, vaccines and grooming advertised by district, with calls and WhatsApp measured.
+- [Google Ads for law firms](https://3rcore.com/es/servicios/marketing-abogados): inquiries by practice area (labor, family, criminal) with calls and WhatsApp measured.
+- [Google Ads for real estate](https://3rcore.com/es/servicios/marketing-inmobiliarias): searches by district, one landing page per project and leads measured up to the site visit.
+- [Google Ads for e-commerce](https://3rcore.com/es/servicios/marketing-ecommerce): Shopping, Performance Max and Search optimized for ROAS on Shopify, WooCommerce or VTEX.
+- [Digital marketing agency in Lima](https://3rcore.com/es/agencia-marketing-digital-lima): who the agency is: office in La Molina, published prices, no lock-in contract, and the client owns the work from day one.
+- [Restaurant websites in Lima](https://3rcore.com/es/diseno-web-restaurantes-lima): digital menu, WhatsApp reservations and online orders with Yape or Plin; from S/1,800.
+- [SEO agency for Arequipa](https://3rcore.com/es/agencia-seo-arequipa): SEO for Arequipa businesses served remotely from Lima, with website, Google Business Profile and reporting in the client's Search Console; from S/1,800 per month.
+- [Digital marketing for Miraflores businesses](https://3rcore.com/es/agencia-marketing-digital-miraflores): Google Ads, SEO, websites and social media for businesses in Miraflores, served from La Molina.
+- [All services](https://3rcore.com/es/servicios) · [Pricing](https://3rcore.com/es/precios): branding from S/500, SEO S/1,800 per month, Google Ads management from S/1,800 per month and websites from S/1,800, net + 18% IGV.
 
 ## Pages
 - [Home](https://3rcore.com/es): Agency overview and value proposition (online stores + SEO + Google Ads)
-- [Online Stores in Lima (Tiendas Virtuales)](https://3rcore.com/es/tiendas-virtuales-lima): E-commerce on Shopify, WooCommerce or Tiendanube with local Peruvian payment gateways, ready to sell
-- [SEO Positioning](https://3rcore.com/es/posicionamiento-seo): Organic Google positioning, technical SEO and local SEO from S/1,800/month
-- [Google Ads / SEM](https://3rcore.com/es/servicios/google-ads): Search, Performance Max, YouTube, Display and Shopping campaigns with Looker Studio reporting
-- [Pricing](https://3rcore.com/es/precios): Published pricing for branding, social media, SEO, Google Ads, web development and e-commerce, with reference monthly budgets
 - [About](https://3rcore.com/es/nosotros): Team, founders (Alejandro and Piero Roque), and methodology
-- [Services Overview](https://3rcore.com/es/servicios): Full catalog of digital marketing services
-- [Digital Marketing Agency in Lima](https://3rcore.com/es/agencia-marketing-digital-lima): Who the agency is, what it charges, where it operates and the questions clients ask before hiring
 - [FAQ](https://3rcore.com/es/preguntas): Frequently asked questions about services, timelines, and pricing
 - [Blog](https://3rcore.com/es/blogs): Articles on marketing, SEO, branding, and web development
 
@@ -86,12 +94,19 @@
 - [SEO agency pricing](https://3rcore.com/en/blogs/seo-agency-pricing-what-you-should-get): what each retainer band buys
 - [Best ecommerce platform for small business](https://3rcore.com/en/blogs/best-ecommerce-platform-for-small-business): Shopify vs WooCommerce with real fees
 
-## United States market
-3R Core is a PERUVIAN agency serving U.S. clients remotely through its U.S. subsidiary. It does not present itself as a U.S. agency. In the United States it sells three services only: websites, SEO and online stores.
-- [3R Core for U.S. brands](https://3rcore.com/en): English site
-- [SEO agency](https://3rcore.com/en/seo-agency): $500/month, no mandatory contract
-- [Spanish SEO services](https://3rcore.com/en/spanish-seo-services): Spanish-language SEO for U.S. businesses
-- [Hispanic marketing agency](https://3rcore.com/en/hispanic-marketing-agency): reaching Spanish-speaking customers in the U.S.
-- [Ecommerce development](https://3rcore.com/en/ecommerce-development): Shopify and WooCommerce from $1,750
-- [U.S. pricing](https://3rcore.com/en/pricing): in U.S. dollars
-- [Marketing en español para EE.UU.](https://3rcore.com/us): es-US site for the U.S. Hispanic market
+## United States (English site, /en)
+Prices are the reference prices each page publishes, in U.S. dollars.
+- [3R Core for U.S. brands](https://3rcore.com/en): English site.
+- [SEO agency](https://3rcore.com/en/seo-agency): keyword research, technical SEO, content and link building by an in-house team; from $500 per month.
+- [Spanish SEO services](https://3rcore.com/en/spanish-seo-services): native Spanish keyword research, hreflang repair and Spanish pages for U.S. businesses; from $500 per month, no contract.
+- [SEO for Hispanic businesses](https://3rcore.com/en/seo-for-hispanic-businesses): bilingual local SEO with English and Spanish pages and a Google Business Profile in both languages; from $500 per month.
+- [Hispanic marketing agency](https://3rcore.com/en/hispanic-marketing-agency): websites, SEO and online stores written in Spanish by native speakers, not translated.
+- [Nearshore marketing agency](https://3rcore.com/en/nearshore-marketing-agency): UGC video, paid media, SEO and Shopify builds delivered in U.S. business hours and billed in USD.
+- [Web design and development](https://3rcore.com/en/services/web-development): corporate sites, landing pages and e-commerce with technical SEO included; from $850 with hosting.
+- [Bilingual website design](https://3rcore.com/en/bilingual-website-design): English and Spanish sites with their own URLs, hreflang and Spanish written from scratch; landing pages from $850.
+- [Ecommerce development](https://3rcore.com/en/ecommerce-development): Shopify and WooCommerce stores with payment gateway, catalog, tax setup and technical SEO; from $1,750.
+- [Website cost calculator](https://3rcore.com/en/website-cost-calculator): estimate of a small business website cost by site type, pages, online sales and languages, based on published reference prices.
+- [All services](https://3rcore.com/en/services) · [U.S. pricing](https://3rcore.com/en/pricing): SEO $500 per month, websites from $850 and online stores from $1,750, no mandatory contracts.
+
+## Spanish-language site for the U.S. Hispanic market (/us)
+- [Marketing en español para EE.UU.](https://3rcore.com/us): es-US site for the U.S. Hispanic market.

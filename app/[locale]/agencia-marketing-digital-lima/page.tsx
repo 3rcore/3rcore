@@ -1,6 +1,9 @@
 import Link from "next/link"
 import { setRequestLocale } from "next-intl/server"
 import { COPY } from './copy'
+import { PILAR } from './pilar'
+import PillarWaCapture from "@/components/ui/PillarWaCapture"
+import PruebaServicio from "@/components/seo/PruebaServicio"
 
 interface Props { params: Promise<{ locale: string }> }
 
@@ -31,6 +34,12 @@ export default async function LimaLandingPage({ params }: Props) {
 
   const t = locale === 'en' ? COPY.en : COPY.es
   const link = (href: string) => `/${locale}${href}`
+  // 9-oct-2026: los bloques del pilar (pilar.ts) solo se pintan en /es, que es
+  // la única versión indexable de esta URL.
+  const es = locale === 'es'
+  const p = PILAR
+  // FAQ del pilar: las 7 nuevas + la de precio, que ya se publicaba aquí.
+  const faq = es ? [...p.faq.map((f) => ({ q: f.q, a: f.a })), t.qa[0]] : t.qa
 
   return (
     <main className="text-white">
@@ -51,7 +60,73 @@ export default async function LimaLandingPage({ params }: Props) {
           <Link href={link(t.ctaHref)} className="inline-block bg-white text-black px-8 py-4 rounded-full font-semibold hover:bg-white/90 transition">{t.cta}</Link>
           <Link href={link(t.ctaSecondaryHref)} className="inline-block border border-white/30 px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition">{t.ctaSecondary}</Link>
         </div>
+        {es && (
+          <div id="formulario" className="mt-12 grid md:grid-cols-2 gap-8 items-start border border-white/10 rounded-2xl p-6 md:p-8">
+            <div>
+              <p className="pilar-respuesta text-white/80 leading-relaxed mb-4">{p.respuesta}</p>
+              <h2 className="text-xl md:text-2xl font-semibold mb-2">{p.formH2}</h2>
+              <p className="text-white/60 text-sm">{p.formP}</p>
+            </div>
+            <PillarWaCapture locale={locale} service={p.servicioForm} />
+          </div>
+        )}
       </section>
+
+      {es && (
+        <section className="px-6 md:px-10 lg:px-20 py-16 max-w-6xl mx-auto border-t border-white/10">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">{p.queH2}</h2>
+          <p className="text-white/70 max-w-3xl mb-10 leading-relaxed">{p.queP}</p>
+          <ul className="grid md:grid-cols-2 gap-4">
+            {p.cuatro.map((s) => (
+              <li key={s.href} className="border border-white/10 rounded-2xl p-6">
+                <h3 className="text-xl font-semibold mb-2"><Link href={link(s.href)} className="hover:underline underline-offset-4">{s.name}</Link></h3>
+                <p className="text-white/70 leading-relaxed">{s.desc}</p>
+              </li>
+            ))}
+          </ul>
+          <p className="text-white/60 max-w-3xl mt-6">
+            {p.complementos}{' '}
+            <Link href={link('/servicios/socialmedia')} className="underline underline-offset-4">Redes sociales</Link>,{' '}
+            <Link href={link('/servicios/meta-ads')} className="underline underline-offset-4">Meta Ads</Link> y{' '}
+            <Link href={link('/servicios/branding')} className="underline underline-offset-4">branding</Link>.
+          </p>
+        </section>
+      )}
+
+      {es && (
+        <section className="px-6 md:px-10 lg:px-20 py-16 max-w-6xl mx-auto border-t border-white/10">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">{p.procesoH2}</h2>
+          <p className="text-white/60 max-w-3xl mb-10">{p.procesoP}</p>
+          <ol className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {p.proceso.map((s) => (
+              <li key={s.t} className="border border-white/10 rounded-2xl p-6">
+                <h3 className="text-lg font-semibold mb-2">{s.t}</h3>
+                <p className="text-white/70 text-sm leading-relaxed">{s.d}</p>
+              </li>
+            ))}
+          </ol>
+        </section>
+      )}
+
+      {es && <PruebaServicio servicio="general" titulo={p.pruebaH2} intro={p.pruebaP} />}
+
+      {es && (
+        <section className="px-6 md:px-10 lg:px-20 py-16 max-w-6xl mx-auto border-t border-white/10">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">{p.medimosH2}</h2>
+          <p className="text-white/70 max-w-3xl mb-8 leading-relaxed">{p.medimosP}</p>
+          <ul className="grid md:grid-cols-2 gap-4 mb-6">
+            {p.medimos.map((m) => (
+              <li key={m.t} className="border border-white/10 rounded-2xl p-6">
+                <h3 className="text-lg font-semibold mb-2">{m.t}</h3>
+                <p className="text-white/70 text-sm leading-relaxed">{m.d}</p>
+              </li>
+            ))}
+          </ul>
+          <p className="text-white/60 max-w-3xl">
+            {p.medimosNota} <Link href={link(p.medimosLink.href)} className="underline underline-offset-4">{p.medimosLink.name}</Link>.
+          </p>
+        </section>
+      )}
 
       <section className="px-6 md:px-10 lg:px-20 py-16 max-w-6xl mx-auto border-t border-white/10">
         <h2 className="text-3xl md:text-4xl font-bold mb-6">{t.whyH2}</h2>
@@ -90,6 +165,31 @@ export default async function LimaLandingPage({ params }: Props) {
         <p className="text-white/70 max-w-3xl">{t.refNote}</p>
       </section>
 
+      {es && (
+        <section className="px-6 md:px-10 lg:px-20 py-16 max-w-6xl mx-auto border-t border-white/10">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">{p.vsH2}</h2>
+          <p className="text-white/70 max-w-3xl mb-8 leading-relaxed">{p.vsP}</p>
+          <div className="overflow-x-auto">
+            <table className="w-full min-w-[640px] text-left text-sm border-collapse">
+              <thead>
+                <tr>{p.vsCols.map((c, i) => <th key={i} scope="col" className="p-3 border-b border-white/20 font-semibold">{c}</th>)}</tr>
+              </thead>
+              <tbody>
+                {p.vsRows.map((r) => (
+                  <tr key={r[0]}>
+                    <th scope="row" className="p-3 border-b border-white/10 font-semibold align-top">{r[0]}</th>
+                    {r.slice(1).map((c, i) => <td key={i} className="p-3 border-b border-white/10 text-white/70 align-top">{c}</td>)}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-white/60 max-w-3xl mt-6">
+            {p.vsNota} <Link href={link(p.vsLink.href)} className="underline underline-offset-4">{p.vsLink.name}</Link> lo explicamos con más detalle.
+          </p>
+        </section>
+      )}
+
       <section className="px-6 md:px-10 lg:px-20 py-16 max-w-6xl mx-auto border-t border-white/10">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">{t.zonesH2}</h2>
         <p className="text-white/70 max-w-3xl mb-8 leading-relaxed">{t.zonesP}</p>
@@ -107,9 +207,9 @@ export default async function LimaLandingPage({ params }: Props) {
       </section>
 
       <section className="px-6 md:px-10 lg:px-20 py-16 max-w-6xl mx-auto border-t border-white/10">
-        <h2 className="text-3xl md:text-4xl font-bold mb-10">{t.qaH2}</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-10">{es ? p.faqH2 : t.qaH2}</h2>
         <div className="space-y-6 max-w-3xl">
-          {t.qa.map((f) => (
+          {faq.map((f) => (
             <div key={f.q}>
               <h3 className="faq-question text-lg md:text-xl font-semibold mb-2">{f.q}</h3>
               <p className="faq-answer text-white/70 leading-relaxed">{f.a}</p>
@@ -122,6 +222,13 @@ export default async function LimaLandingPage({ params }: Props) {
         <h2 className="text-3xl md:text-4xl font-bold mb-5">{t.closeH2}</h2>
         <p className="text-white/70 max-w-2xl mb-8 leading-relaxed">{t.closeP}</p>
         <Link href={link(t.ctaHref)} className="inline-block bg-white text-black px-8 py-4 rounded-full font-semibold hover:bg-white/90 transition mb-12">{t.cta}</Link>
+        {es && (
+          <div className="mb-12 border border-white/10 rounded-2xl p-6 md:p-8">
+            <h3 className="text-xl font-semibold mb-2">{p.cierreH2}</h3>
+            <p className="text-white/60 text-sm mb-6">{p.cierreP}</p>
+            <PillarWaCapture locale={locale} service={p.servicioForm} />
+          </div>
+        )}
         <h3 className="text-base font-semibold mb-4 text-white/90">{t.moreH3}</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {t.more.map((m) => (

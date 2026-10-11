@@ -154,6 +154,10 @@ export function frame(img: string, alt: string, url: string) {
 }
 
 /** Selector de precio al instante (lo anima proto.js). Solo precios publicados. */
+// 9-oct-2026 (JEV-002). El título del cotizador iba en <h3> justo debajo del H1
+// (salto H1→H3) y los pasos en <h4> bajo un H2 (salto H2→H4). El título pasa a
+// párrafo con el mismo aspecto y los pasos a <h3>; proto.css ya estiliza .step h3
+// igual que .step h4.
 export function cotiza(o: { title: string; opts: { label: string; price: string; note: string; msg: string }[] }) {
   const btns = o.opts
     .map(
@@ -162,7 +166,7 @@ export function cotiza(o: { title: string; opts: { label: string; price: string;
     )
     .join('')
   return `<div class="cotiza rv">
-    <div class="cz-h"><h3 style="font-size:1.25rem;margin-bottom:.2rem">${esc(o.title)}</h3>
+    <div class="cz-h"><p class="cz-t" style="font-family:var(--f-disp);font-weight:600;font-size:1.25rem;line-height:1.4;color:var(--ink-2);text-wrap:balance;margin:0 0 .2rem">${esc(o.title)}</p>
     <p class="mini" style="font-size:.8rem;color:var(--gris);margin:0">Elige y mira el precio al instante, sin dejar tus datos. Los precios son referenciales y varían según el alcance del proyecto.</p></div>
     <div class="opts">${btns}</div>
     <div class="cz-out" aria-live="polite">
@@ -206,7 +210,7 @@ export function steps(items: { h: string; p: string; t: string }[]) {
   return `<div class="steps stack" style="margin-top:2.4rem">${items
     .map(
       (x, i) =>
-        `<div class="step rv rv-d${(i % 5) + 1}"><h4>${esc(x.h)}</h4><p>${x.p}</p><span class="t">${esc(x.t)}</span></div>`
+        `<div class="step rv rv-d${(i % 5) + 1}"><h3>${esc(x.h)}</h3><p>${x.p}</p><span class="t">${esc(x.t)}</span></div>`
     )
     .join('')}</div>`
 }

@@ -199,3 +199,109 @@ export function conEnlaceDeServicio(slug: string, html: string): string {
   const corte = fin + '</p>'.length
   return html.slice(0, corte) + '\n' + frase + html.slice(corte)
 }
+
+/**
+ * 9-oct-2026 (plan Mega SEO + leads). Segundo enlace contextual, A MITAD del
+ * texto, para:
+ *  · las 4 páginas que Google no indexa (mejores-agencias-google-ads-lima,
+ *    agencia-marketing-digital-miraflores, diseno-web-restaurantes-lima y
+ *    agencia-seo-arequipa), que solo recibían enlaces de menú y pie;
+ *  · las páginas de nicho de Google Ads, que los posts de su sector no enlazaban;
+ *  · el pilar /es/agencia-marketing-digital-lima, la oferta de branding en
+ *    manual-marca (240 visitas, 0 leads) y un CTA de auditoría de Meta Ads a
+ *    mitad de cuanto-cuesta-publicidad-facebook (107 visitas, 0 leads).
+ * Solo se AÑADE un párrafo antes del H2 más cercano a la mitad del artículo; el
+ * texto del post no se toca. Si el cuerpo ya lleva ese enlace con esa ancla,
+ * no se añade (así no se duplica cuando el texto se edite en Supabase).
+ */
+const EXTRA_A_MITAD: Record<string, Frase> = {
+  'manual-marca-estructura-plantilla': {
+    enlaces: [{ href: '/es/servicios/branding', ancla: 'te armamos el manual de marca' }],
+    html: `<p><strong>¿Prefieres no hacerlo solo?</strong> En 3R Core <a href="/es/servicios/branding">te armamos el manual de marca</a> junto con el logotipo, la paleta, la tipografía y las aplicaciones esenciales, después de una sesión de descubrimiento con tu equipo. El branding inicial parte desde S/ 500 (monto referencial) y la propuesta llega por escrito. Si ya tienes logo y solo te falta el manual, cuéntanos en el <a href="/es/cotizar">cotizador</a>.</p>`,
+  },
+  'cuanto-cuesta-publicidad-facebook-instagram-peru-2026': {
+    enlaces: [{ href: '/es/servicios/meta-ads', ancla: 'auditoría gratis de tu cuenta de Meta Ads' }],
+    html: `<p><strong>¿Ya estás invirtiendo y no sabes si rinde?</strong> Pide una <a href="/es/servicios/meta-ads">auditoría gratis de tu cuenta de Meta Ads</a>: revisamos el Pixel y la API de Conversiones, qué se está contando como resultado, los públicos y las creatividades activas. Si la cuenta está bien armada, te lo decimos.</p>`,
+  },
+  'agencia-google-ads-inmobiliarias-lima': {
+    enlaces: [{ href: '/es/servicios/marketing-inmobiliarias', ancla: 'Google Ads para inmobiliarias' }],
+    html: `<p>Si tu inmobiliaria quiere que un equipo arme estas campañas por proyecto, con su landing y el seguimiento de cada lead por WhatsApp, mira cómo trabajamos la <a href="/es/servicios/marketing-inmobiliarias">Google Ads para inmobiliarias</a>.</p>`,
+  },
+  'marketing-digital-inmobiliarias-peru-generar-leads-calidad': {
+    enlaces: [{ href: '/es/servicios/marketing-inmobiliarias', ancla: 'gestión de Google Ads para inmobiliarias' }],
+    html: `<p>Si quieres llevar esto a campañas medidas por costo por lead, en 3R Core hacemos la <a href="/es/servicios/marketing-inmobiliarias">gestión de Google Ads para inmobiliarias</a>, con una landing por proyecto y la cuenta a nombre de la inmobiliaria.</p>`,
+  },
+  'agencia-google-ads-clinicas-dentistas-lima': {
+    enlaces: [{ href: '/es/servicios/marketing-clinicas-dentales', ancla: 'Google Ads para clínicas dentales' }],
+    html: `<p>El detalle de cómo armamos y medimos estas campañas para consultorios odontológicos está en la página de <a href="/es/servicios/marketing-clinicas-dentales">Google Ads para clínicas dentales</a>.</p>`,
+  },
+  'marketing-digital-clinicas-consultorios-peru-agenda': {
+    enlaces: [{ href: '/es/servicios/marketing-clinicas-dentales', ancla: 'campañas de Google Ads para clínicas dentales' }],
+    html: `<p>Si tu consultorio es odontológico, lo que cambia en el anuncio y en la medición de citas lo explicamos en las <a href="/es/servicios/marketing-clinicas-dentales">campañas de Google Ads para clínicas dentales</a>.</p>`,
+  },
+  'cuanto-cuesta-google-ads-lima-agencia-2026': {
+    enlaces: [{ href: '/es/mejores-agencias-google-ads-lima', ancla: 'comparativa de agencias de Google Ads en Lima' }],
+    html: `<p>Si quieres comparar estos montos con los de otras agencias, en la <a href="/es/mejores-agencias-google-ads-lima">comparativa de agencias de Google Ads en Lima</a> reunimos lo que cada una publica en su propia web y siete criterios que puedes comprobar tú mismo.</p>`,
+  },
+  'por-que-google-ads-no-trae-clientes': {
+    enlaces: [{ href: '/es/mejores-agencias-google-ads-lima', ancla: 'cómo comparar agencias de Google Ads en Lima' }],
+    html: `<p>Si estás pensando en cambiar de agencia por alguno de estos problemas, antes revisa <a href="/es/mejores-agencias-google-ads-lima">cómo comparar agencias de Google Ads en Lima</a> con criterios que se pueden comprobar en tu propia cuenta.</p>`,
+  },
+  'seo-local-peru-aparecer-cerca-de-mi-2026': {
+    enlaces: [{ href: '/es/agencia-seo-arequipa', ancla: 'SEO para negocios de Arequipa' }],
+    html: `<p>Lo mismo vale fuera de Lima: el mapa de Google ordena por cercanía en cualquier ciudad. Si tu negocio está en el sur del país, mira cómo trabajamos el <a href="/es/agencia-seo-arequipa">SEO para negocios de Arequipa</a>, con reuniones por videollamada.</p>`,
+  },
+  'cuanto-cuesta-agencia-seo-lima-2026': {
+    enlaces: [{ href: '/es/agencia-seo-arequipa', ancla: 'agencia SEO en Arequipa' }],
+    html: `<p>Estos rangos aplican también si tu empresa no está en Lima. Para negocios del sur trabajamos como <a href="/es/agencia-seo-arequipa">agencia SEO en Arequipa</a>, con el mismo reporte mensual y reuniones por videollamada.</p>`,
+  },
+  'marketing-digital-restaurantes-peru-redes-ads': {
+    enlaces: [{ href: '/es/diseno-web-restaurantes-lima', ancla: 'diseño web para restaurantes en Lima' }],
+    html: `<p>Las redes y los anuncios llevan gente a algún lado, y para un restaurante ese lado suele ser la carta y la reserva. Lo que tiene que tener esa página lo contamos en <a href="/es/diseno-web-restaurantes-lima">diseño web para restaurantes en Lima</a>.</p>`,
+  },
+  'como-elegir-agencia-diseno-web-lima': {
+    enlaces: [{ href: '/es/diseno-web-restaurantes-lima', ancla: 'páginas web para restaurantes' }],
+    html: `<p>Si tu negocio es un restaurante, pide además ejemplos de carta, reservas y pedidos: es otro tipo de web. Lo explicamos en <a href="/es/diseno-web-restaurantes-lima">páginas web para restaurantes</a>.</p>`,
+  },
+  'como-elegir-agencia-marketing-digital-lima': {
+    enlaces: [
+      { href: '/es/agencia-marketing-digital-lima', ancla: 'agencia de marketing digital en Lima' },
+      { href: '/es/agencia-marketing-digital-miraflores', ancla: 'agencia de marketing digital en Miraflores' },
+    ],
+    html: `<p>Si quieres ver cómo respondemos estas mismas preguntas nosotros, está en la página de <a href="/es/agencia-marketing-digital-lima">agencia de marketing digital en Lima</a>. Y si tu negocio está en Miraflores, cómo compiten en Google los negocios del distrito lo contamos en <a href="/es/agencia-marketing-digital-miraflores">agencia de marketing digital en Miraflores</a>.</p>`,
+  },
+  'cuanto-cobra-agencia-marketing-digital-peru-2026': {
+    enlaces: [{ href: '/es/agencia-marketing-digital-miraflores', ancla: 'marketing digital para negocios de Miraflores' }],
+    html: `<p>Los montos no cambian por distrito, pero la competencia sí: en zonas con mucha oferta, como Miraflores, el mismo presupuesto rinde distinto. Lo explicamos en <a href="/es/agencia-marketing-digital-miraflores">marketing digital para negocios de Miraflores</a>.</p>`,
+  },
+  'contratar-agencia-marketing-digital-generar-leads-calidad': {
+    enlaces: [{ href: '/es/agencia-marketing-digital-lima', ancla: 'agencia de marketing digital en Lima' }],
+    html: `<p>Si quieres ver cómo medimos cada lead y qué incluye el trabajo, entra a nuestra página de <a href="/es/agencia-marketing-digital-lima">agencia de marketing digital en Lima</a>.</p>`,
+  },
+  'maximiza-tu-roi-con-google-ads-y-meta-ads': {
+    enlaces: [{ href: '/es/servicios/meta-ads', ancla: 'gestión de Meta Ads' }],
+    html: `<p>Si la parte de Facebook e Instagram es la que te falta, en 3R Core hacemos la <a href="/es/servicios/meta-ads">gestión de Meta Ads</a> con Pixel, API de Conversiones y campañas a WhatsApp medidas por costo por lead.</p>`,
+  },
+}
+
+/** Inserta el párrafo antes del H2 más cercano a la mitad (o tras un </p> si no hay H2). */
+function aMitad(html: string, frase: string): string {
+  const mitad = html.length / 2
+  const h2s = [...html.matchAll(/<h2[\s>]/gi)].map((m) => m.index as number).filter((i) => i > 0)
+  let corte: number
+  if (h2s.length) {
+    corte = h2s.reduce((a, b) => (Math.abs(b - mitad) < Math.abs(a - mitad) ? b : a))
+  } else {
+    const ps = [...html.matchAll(/<\/p>/gi)].map((m) => (m.index as number) + 4)
+    if (!ps.length) return html + '\n' + frase
+    corte = ps.reduce((a, b) => (Math.abs(b - mitad) < Math.abs(a - mitad) ? b : a))
+  }
+  return html.slice(0, corte) + frase + '\n' + html.slice(corte)
+}
+
+/** Añade el enlace a mitad del texto si el post está en EXTRA_A_MITAD y aún no lo tiene. */
+export function conEnlaceAMitad(slug: string, html: string): string {
+  const extra = EXTRA_A_MITAD[slug]
+  if (!extra || extra.enlaces.every((e) => tieneEnlace(html, e))) return html
+  return aMitad(html, extra.html)
+}

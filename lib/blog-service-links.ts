@@ -278,6 +278,24 @@ const EXTRA_A_MITAD: Record<string, Frase> = {
     enlaces: [{ href: '/es/agencia-marketing-digital-lima', ancla: 'agencia de marketing digital en Lima' }],
     html: `<p>Si quieres ver cómo medimos cada lead y qué incluye el trabajo, entra a nuestra página de <a href="/es/agencia-marketing-digital-lima">agencia de marketing digital en Lima</a>.</p>`,
   },
+  // 11-oct-2026. Posts de sector que seguían sin enlazar su página de nicho
+  // (rastreo de los 160 posts /es publicados en Supabase).
+  'marketing-inmobiliario': {
+    enlaces: [{ href: '/es/servicios/marketing-inmobiliarias', ancla: 'Google Ads para inmobiliarias' }],
+    html: `<p>Si tu inmobiliaria quiere campañas medidas por costo por lead, con una landing por proyecto y la cuenta a su nombre, mira cómo trabajamos la <a href="/es/servicios/marketing-inmobiliarias">Google Ads para inmobiliarias</a>.</p>`,
+  },
+  'google-ads-shopping-tiendas-online-peru': {
+    enlaces: [{ href: '/es/servicios/marketing-ecommerce', ancla: 'Google Ads para e-commerce' }],
+    html: `<p>Cómo combinamos Google Shopping, Performance Max y Meta Ads con catálogo en una tienda online lo explicamos en <a href="/es/servicios/marketing-ecommerce">Google Ads para e-commerce</a>.</p>`,
+  },
+  'ventas-tienda-online': {
+    enlaces: [{ href: '/es/servicios/marketing-ecommerce', ancla: 'campañas de Google Ads para tiendas online' }],
+    html: `<p>Si la tienda ya está lista y lo que falta son visitas que compren, en 3R Core armamos <a href="/es/servicios/marketing-ecommerce">campañas de Google Ads para tiendas online</a> con el feed de productos conectado.</p>`,
+  },
+  'meta-ads-clinicas-dentales-esteticas-lima': {
+    enlaces: [{ href: '/es/servicios/marketing-clinicas-esteticas', ancla: 'Google Ads para clínicas estéticas' }],
+    html: `<p>Para los tratamientos que la gente sí busca por su nombre en Google, y lo que las políticas de salud permiten anunciar, mira nuestra página de <a href="/es/servicios/marketing-clinicas-esteticas">Google Ads para clínicas estéticas</a>.</p>`,
+  },
   'maximiza-tu-roi-con-google-ads-y-meta-ads': {
     enlaces: [{ href: '/es/servicios/meta-ads', ancla: 'gestión de Meta Ads' }],
     html: `<p>Si la parte de Facebook e Instagram es la que te falta, en 3R Core hacemos la <a href="/es/servicios/meta-ads">gestión de Meta Ads</a> con Pixel, API de Conversiones y campañas a WhatsApp medidas por costo por lead.</p>`,

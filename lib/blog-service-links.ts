@@ -161,9 +161,25 @@ const POR_SLUG: Record<string, Frase> = {
   },
   // SERP de «agencia google ads lima» (28-sep, desde Perú): 3rcore sale 2.º con
   // este post y no con la página de servicio. El enlace le pasa esa señal.
+  // 11-oct-2026: este post (pos. 4,5) le gana «google ads para inmobiliarias» a
+  // la página de servicio (pos. 9). El primer enlace del texto pasa a ser el de
+  // la página del sector con el ancla exacta; se conserva el de Google Ads.
   'agencia-google-ads-inmobiliarias-lima': {
-    enlaces: [ADS],
-    html: `<p>Si prefieres que un equipo lleve las campañas de tu proyecto, en 3R Core trabajamos como ${a(ADS)}: armamos la cuenta dentro de tu propio Google Ads y cada mes te enviamos el reporte con tu coste por lead.</p>`,
+    enlaces: [{ href: '/es/servicios/marketing-inmobiliarias', ancla: 'gestión de Google Ads para inmobiliarias' }, ADS],
+    html: `<p>Si prefieres que un equipo lleve las campañas de tu proyecto, en 3R Core hacemos la <a href="/es/servicios/marketing-inmobiliarias">gestión de Google Ads para inmobiliarias</a> como ${a(ADS)}: armamos la cuenta dentro de tu propio Google Ads y cada mes te enviamos el reporte con tu coste por lead.</p>`,
+  },
+  // 11-oct-2026: mismo caso con dentistas (el post tiene 44 impr. y la página
+  // de servicio, 0).
+  'agencia-google-ads-clinicas-dentistas-lima': {
+    enlaces: [{ href: '/es/servicios/marketing-clinicas-dentales', ancla: 'gestión de Google Ads para clínicas dentales' }],
+    html: `<p>Si prefieres que un equipo arme y mida estas campañas por ti, en 3R Core hacemos la <a href="/es/servicios/marketing-clinicas-dentales">gestión de Google Ads para clínicas dentales</a>, con la cuenta a nombre de tu consultorio y las citas medidas por tratamiento.</p>`,
+  },
+  // 11-oct-2026: el post de restaurantes (37 impr., pos. 6,6) pasa a ser la
+  // pieza informativa y empuja a la página nueva de Google Ads del sector
+  // (a mitad del texto ya lleva el enlace a diseno-web-restaurantes-lima).
+  'marketing-digital-restaurantes-peru-redes-ads': {
+    enlaces: [{ href: '/es/servicios/google-ads-restaurantes', ancla: 'Google Ads para restaurantes' }],
+    html: `<p>Si lo que quieres es salir arriba cuando alguien busca dónde comer o pedir en tu zona, el detalle de las campañas de búsqueda, llamada y delivery está en nuestra página de <a href="/es/servicios/google-ads-restaurantes">Google Ads para restaurantes</a>.</p>`,
   },
   'mejores-agencias-seo-lima-como-elegir-2026': {
     enlaces: [SEO],
@@ -225,7 +241,7 @@ const EXTRA_A_MITAD: Record<string, Frase> = {
   },
   'agencia-google-ads-inmobiliarias-lima': {
     enlaces: [{ href: '/es/servicios/marketing-inmobiliarias', ancla: 'Google Ads para inmobiliarias' }],
-    html: `<p>Si tu inmobiliaria quiere que un equipo arme estas campañas por proyecto, con su landing y el seguimiento de cada lead por WhatsApp, mira cómo trabajamos la <a href="/es/servicios/marketing-inmobiliarias">Google Ads para inmobiliarias</a>.</p>`,
+    html: `<p>Si tu inmobiliaria quiere que un equipo arme estas campañas por proyecto, con su landing y el seguimiento de cada lead por WhatsApp, mira cómo trabajamos <a href="/es/servicios/marketing-inmobiliarias">Google Ads para inmobiliarias</a>.</p>`,
   },
   'marketing-digital-inmobiliarias-peru-generar-leads-calidad': {
     enlaces: [{ href: '/es/servicios/marketing-inmobiliarias', ancla: 'gestión de Google Ads para inmobiliarias' }],

@@ -85,6 +85,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${baseUrl}/es/diseno-web-restaurantes-lima`, priority: 0.85 },
     { url: `${baseUrl}/es/agencia-seo-arequipa`, priority: 0.85 },
     { url: `${baseUrl}/es/agencia-marketing-digital-miraflores`, priority: 0.85 },
+    // 11-oct-2026. Google Ads por sector: solo /es (404 en /en y /us).
+    { url: `${baseUrl}/es/servicios/google-ads-psicologos`, priority: 0.85 },
+    { url: `${baseUrl}/es/servicios/google-ads-hoteles`, priority: 0.85 },
+    { url: `${baseUrl}/es/servicios/google-ads-restaurantes`, priority: 0.85 },
+    { url: `${baseUrl}/es/servicios/google-ads-colegios`, priority: 0.85 },
+    { url: `${baseUrl}/es/servicios/google-ads-empresas-industriales`, priority: 0.85 },
+    { url: `${baseUrl}/es/servicios/google-ads-contadores`, priority: 0.85 },
     // 28-sep-2026. «cuánto cuesta seo perú»: solo /es.
     { url: `${baseUrl}/es/cuanto-cuesta-el-seo-en-peru`, priority: 0.8 },
   ]

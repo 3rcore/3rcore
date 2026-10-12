@@ -37,6 +37,13 @@ const MARKET_ONLY: Record<string, string> = {
   '/diseno-web-restaurantes-lima': 'es',
   '/agencia-seo-arequipa': 'es',
   '/agencia-marketing-digital-miraflores': 'es',
+  // Google Ads por sector (11-oct-2026), solo /es
+  '/servicios/google-ads-psicologos': 'es',
+  '/servicios/google-ads-hoteles': 'es',
+  '/servicios/google-ads-restaurantes': 'es',
+  '/servicios/google-ads-colegios': 'es',
+  '/servicios/google-ads-empresas-industriales': 'es',
+  '/servicios/google-ads-contadores': 'es',
 }
 
 export function isIndexableIn(path: string, locale: string): boolean {

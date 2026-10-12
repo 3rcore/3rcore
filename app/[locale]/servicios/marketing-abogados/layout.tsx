@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 import { generatePageMetadata, generateBreadcrumbSchema } from "@/lib/metadata"
 import { buildFAQPageSchema, buildServiceSchema } from "@/lib/seoSchemas"
+import { NextIntlClientProvider } from "next-intl"
+import { sectorPageMessages } from "@/lib/pickMessages"
 import { getMessages } from "next-intl/server"
 
 export async function generateMetadata({ params }: { params: any }): Promise<Metadata> {
@@ -8,9 +10,9 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
   return generatePageMetadata({
     locale,
     path: '/servicios/marketing-abogados',
-    titleEs: "Gestión de Google Ads para abogados en Lima | 3R Core",
+    titleEs: "Google Ads para abogados: publicidad en Lima | 3R Core",
     titleEn: "Digital Marketing for Law Firms | 3R Core",
-    descriptionEs: "Google Ads para estudios de abogados en Lima: consultas por especialidad (laboral, familia, penal), llamadas y WhatsApp medidos. Marketing digital para abogados.",
+    descriptionEs: "Publicidad en Google para abogados en Lima: anuncios por área de práctica que cumplen las políticas de Google y cada consulta medida hasta el caso.",
     descriptionEn: "Client acquisition for law firms: local SEO, Google Business Profile and content that builds trust before the first call.",
     titleUs: "Marketing Digital para Abogados en Estados Unidos",
     descriptionUs: "Captación de consultas para despachos hispanos en EE.UU.: SEO local en español, ficha de Google y contenido que genera confianza.",
@@ -70,7 +72,10 @@ export default async function MarketingClinicasLayout({ children, params }: { ch
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify([serviceSchema, faqSchema, breadcrumbSchema]) }}
       />
-      {children}
+      {/* 11-oct-2026: la guía del sector (solo /es) no va en el provider raíz. */}
+      {locale === 'es'
+        ? <NextIntlClientProvider messages={sectorPageMessages(messages, 'MarketingAbogados')}>{children}</NextIntlClientProvider>
+        : children}
     </>
   )
 }

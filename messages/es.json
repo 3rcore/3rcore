@@ -2646,8 +2646,8 @@
           "description": "Anuncios para los distritos desde donde llegan tus pacientes, en tu horario de atención."
         },
         {
-          "title": "Remarketing",
-          "description": "Recordamos el tratamiento a quien visitó la página y no agendó, dentro de lo que permiten las políticas."
+          "title": "Campaña de marca",
+          "description": "Protegemos las búsquedas con el nombre de tu clínica. No usamos remarketing: la política de salud de Google no lo permite en estética."
         },
         {
           "title": "Reporte en valoraciones",
@@ -2850,5 +2850,1969 @@
     "p5": "La gestión de Google Ads de 3R Core cuesta S/1,800 al mes + IGV (referencial), y la pauta se paga aparte a Google desde la cuenta de tu veterinaria. Si ya tienes campañas, empezamos con una auditoría.",
     "p6": "Si buscas marketing para veterinarias en Lima con Google Ads como motor de citas, conversemos. Te mostramos qué buscan los dueños de mascotas en tu zona antes de invertir.",
     "relatedTitle": "Servicios relacionados"
+  },
+  "GoogleAdsPsicologosLanding": {
+    "hero": {
+      "badge": "Google Ads · Psicólogos",
+      "title": "Google Ads para psicólogos que llenan horas de consulta",
+      "subtitle": "Quien escribe «psicólogo en Surco» o «terapia online» a las once de la noche está decidiendo pedir ayuda. Tu consulta aparece arriba en Google y cada cita queda medida.",
+      "cta": "Quiero más pacientes",
+      "waCta": "Pedir auditoría por WhatsApp",
+      "waText": "Hola 3R Core, soy psicólogo/a y quiero anunciar mi consulta en Google Ads.",
+      "serviceLink": "Ver el servicio completo de Google Ads"
+    },
+    "intro": {
+      "title": "Publicidad en Google para psicólogos: la primera cita se decide en una búsqueda",
+      "p1": "La gestión de Google Ads para psicólogos en 3R Core consiste en mostrar tu consulta a quien busca terapia en Google, separar las campañas por motivo de consulta y modalidad (presencial u online) y medir citas agendadas, no clics.",
+      "p2": "El paciente de psicología compara poco y decide rápido cuando se anima. Mira si eres colegiado, si atiendes su tema (ansiedad, pareja, niños), cuánto cuesta la sesión y si puede escribirte por WhatsApp sin hablar por teléfono. Tu anuncio y tu página tienen que responder eso en segundos.",
+      "p3": "La salud mental es una categoría sensible para Google. Eso cambia cómo se segmenta: los anuncios para psicólogos no pueden usar remarketing ni listas propias de pacientes. 3R Core arma la campaña con búsqueda y ubicación, que sí están permitidas."
+    },
+    "benefits": {
+      "badge": "Qué incluye",
+      "title": "Lo que incluye la gestión de Google Ads para tu consulta",
+      "items": [
+        {
+          "title": "Campañas por motivo de consulta",
+          "description": "Ansiedad, terapia de pareja, psicología infantil o evaluaciones van en grupos separados, con su anuncio y su presupuesto."
+        },
+        {
+          "title": "Presencial y online por separado",
+          "description": "La consulta presencial se anuncia en los distritos cercanos; la terapia online, en todo Perú y, si atiendes, a peruanos en el extranjero."
+        },
+        {
+          "title": "Segmentación permitida",
+          "description": "Trabajamos con palabras clave y ubicación, sin remarketing ni listas de pacientes, como exige la política de salud de Google."
+        },
+        {
+          "title": "Filtro de búsquedas de cursos",
+          "description": "Negativas para que no pagues clics de estudiantes que buscan diplomados, libros o cursos de psicología."
+        },
+        {
+          "title": "Agenda por WhatsApp",
+          "description": "Botón de WhatsApp con un mensaje inicial neutro: el paciente no tiene que contar su caso para pedir horario."
+        },
+        {
+          "title": "Reporte en citas",
+          "description": "Cuántas conversaciones llegaron, cuántas agendaron y cuánto costó cada cita, por motivo y modalidad."
+        }
+      ]
+    },
+    "process": {
+      "badge": "Cómo funciona",
+      "title": "Cómo funciona Google Ads para psicólogos",
+      "steps": [
+        {
+          "title": "Temas y modalidad",
+          "description": "Definimos qué motivos de consulta quieres llenar, en qué horarios y si atiendes online, presencial o ambos."
+        },
+        {
+          "title": "Revisión de políticas",
+          "description": "Redactamos anuncios y página según las reglas de salud de Google y confirmamos tu número de colegiatura."
+        },
+        {
+          "title": "Página y medición",
+          "description": "Página por servicio con WhatsApp y formulario que guardan el identificador del clic de Google (GCLID)."
+        },
+        {
+          "title": "Lanzamiento en búsqueda",
+          "description": "Empezamos por búsquedas con intención de cita, como «psicólogo para ansiedad en Lima» o «terapia de pareja online»."
+        },
+        {
+          "title": "Optimización con citas reales",
+          "description": "Las citas que confirmas se suben como conversión offline para que Google puje por pacientes y no por curiosos."
+        }
+      ]
+    },
+    "h1": "Google Ads para psicólogos y consultorios de psicología en Lima y Perú"
+  },
+  "GoogleAdsPsicologosGuia": {
+    "badge": "Guía del sector",
+    "title": "Guía de anuncios en Google para psicólogos en Perú",
+    "sections": [
+      {
+        "h": "¿Qué políticas de Google Ads aplican a un psicólogo?",
+        "p": [
+          "A un psicólogo le aplican dos políticas de Google: «Salud en la publicidad personalizada» y «Cuidado de la salud y medicamentos». La primera menciona como ejemplo los servicios de asesoramiento para depresión, ansiedad y adicciones, y prohíbe usar públicos seleccionados por el anunciante.",
+          "En la práctica, 3R Core no usa remarketing, segmentación por clientes, segmentos basados en tus datos, expansión del público ni segmentos similares en campañas de psicología. Sí se pueden usar palabras clave, ubicación y los públicos predefinidos de Google. Si tu consulta trata adicciones a drogas o alcohol, ese servicio entra además en la categoría restringida «Servicios relacionados con adicciones» y se revisa antes de anunciarlo."
+        ]
+      },
+      {
+        "h": "¿Qué busca en Google un paciente de psicología en Perú?",
+        "p": [
+          "El paciente de psicología en Perú busca por tema, por distrito o por modalidad. Estas son búsquedas típicas que 3R Core separa en grupos de anuncios:"
+        ],
+        "list": [
+          "psicólogo en Miraflores, psicólogo cerca de mí, psicóloga en San Borja",
+          "terapia online Perú, psicólogo online precio, terapia por videollamada",
+          "psicólogo para ansiedad, terapia para depresión, ataques de pánico tratamiento",
+          "terapia de pareja Lima, psicólogo de pareja online",
+          "psicólogo infantil Surco, psicólogo para adolescentes",
+          "evaluación psicológica para trabajo, certificado psicológico"
+        ]
+      },
+      {
+        "h": "¿Qué tipo de campaña conviene a un psicólogo?",
+        "p": [
+          "Para un psicólogo conviene empezar con campañas de Búsqueda, porque capturan a quien ya decidió pedir terapia y no dependen de públicos propios, que la política de salud no permite. 3R Core separa una campaña presencial con radio alrededor del consultorio y otra online para todo el Perú.",
+          "Performance Max puede sumar después, cuando ya hay citas suficientes para que aprenda, siempre sin cargar listas de pacientes. Las evaluaciones para trabajo o colegio, que tienen otra intención y otro precio, van en una campaña aparte."
+        ]
+      },
+      {
+        "h": "¿Qué anuncios funcionan para psicólogos?",
+        "p": [
+          "Los anuncios que funcionan para psicólogos describen el servicio, la modalidad y cómo agendar. 3R Core evita promesas de curación y frases que den a entender que conoces el problema de quien lee. Estos son ejemplos adaptables:"
+        ],
+        "ads": [
+          {
+            "headline": "Psicóloga en Miraflores | Terapia para ansiedad | Agenda por WhatsApp",
+            "url": "tuconsulta.pe/ansiedad",
+            "desc": "Sesiones presenciales con psicóloga colegiada. Escríbenos y te pasamos horarios hoy."
+          },
+          {
+            "headline": "Terapia online en todo Perú | Sesiones por videollamada | Primera cita esta semana",
+            "url": "tuconsulta.pe/terapia-online",
+            "desc": "Atención a adultos y adolescentes desde tu casa. Pide tu horario por WhatsApp."
+          },
+          {
+            "headline": "Terapia de pareja en Surco | Presencial u online | Psicólogo colegiado C.Ps.P.",
+            "url": "tuconsulta.pe/pareja",
+            "desc": "Sesiones para parejas con cita previa. Consulta la tarifa y la disponibilidad."
+          }
+        ]
+      },
+      {
+        "h": "¿Qué palabras clave negativas necesita un psicólogo?",
+        "p": [
+          "Un psicólogo necesita negativas desde el primer día, porque muchas búsquedas con «psicología» son de estudiantes, empleo o cursos. En Perú aparecen seguido búsquedas de cursos de coaching y desarrollo personal, como los de Juan Baruk o los vendidos por Hotmart. 3R Core parte de esta lista y la amplía cada semana con el informe de términos de búsqueda:"
+        ],
+        "chips": [
+          "gratis",
+          "curso",
+          "diplomado",
+          "maestría",
+          "carrera",
+          "universidad",
+          "juan baruk",
+          "hotmart",
+          "coaching",
+          "libro",
+          "pdf",
+          "frases",
+          "test gratis",
+          "sueldo",
+          "trabajo",
+          "prácticas",
+          "convocatoria",
+          "essalud"
+        ]
+      },
+      {
+        "h": "¿Cómo se mide una cita de terapia que llega por WhatsApp?",
+        "p": [
+          "Una cita de terapia se mide cuando se agenda, no cuando alguien abre el chat. 3R Core guarda el GCLID en el clic al WhatsApp y en el formulario; cuando confirmas la cita, esa conversación se sube a Google Ads como conversión offline.",
+          "Por la confidencialidad propia de la psicología, a Google no se le envía nada del motivo de consulta: solo el identificador del clic, la fecha y que hubo cita. El mensaje predeterminado de WhatsApp dice algo neutro como «Hola, quiero información para agendar una sesión», para que nadie tenga que explicar su caso en el primer mensaje."
+        ]
+      },
+      {
+        "h": "¿Cuánto cuesta la publicidad en Google para un psicólogo?",
+        "p": [
+          "La gestión de Google Ads de 3R Core cuesta S/1,800 al mes + IGV (precio referencial). La pauta se paga aparte, directo a Google, desde la tarjeta del psicólogo o del centro; recomendamos empezar desde S/1,500 al mes.",
+          "Si atiendes solo y tu agenda tiene pocas horas libres, conviene concentrar ese monto en un tema y una modalidad (por ejemplo, terapia online para ansiedad) en lugar de repartirlo entre todo lo que haces."
+        ]
+      }
+    ]
+  },
+  "GoogleAdsPsicologosFAQ": {
+    "badge": "Preguntas frecuentes",
+    "title": "Preguntas frecuentes sobre Google Ads para psicólogos",
+    "faqs": {
+      "q1": {
+        "question": "¿Puedo hacer remarketing a quien visitó mi página de terapia?",
+        "answer": "No. Google trata la salud mental como categoría sensible y no permite públicos seleccionados por el anunciante, como remarketing o listas de clientes. 3R Core trabaja con búsquedas y ubicación, que sí están permitidas."
+      },
+      "q2": {
+        "question": "¿Sirve Google Ads para terapia online en todo el Perú?",
+        "answer": "Sí. La terapia online se puede anunciar en todo el país, y en el extranjero si atiendes a peruanos fuera. 3R Core la separa de la consulta presencial para medir cuánto cuesta cada cita."
+      },
+      "q3": {
+        "question": "¿Tengo que estar colegiado para anunciarme?",
+        "answer": "El paciente sí la busca antes de escribirte. 3R Core recomienda mostrar tu número de colegiatura del Colegio de Psicólogos del Perú en la página y, cuando entra en el título, también en el anuncio."
+      },
+      "q4": {
+        "question": "¿Por qué me llegan clics de gente que busca cursos?",
+        "answer": "Porque «psicología» y «terapia» también se buscan para estudiar o comprar cursos. Las palabras clave negativas (curso, diplomado, Hotmart, coaching) cortan ese gasto."
+      },
+      "q5": {
+        "question": "¿Puedo anunciar tratamiento de adicciones?",
+        "answer": "Es un servicio restringido en la política «Cuidado de la salud y medicamentos» de Google. 3R Core lo revisa aparte antes de incluirlo en la campaña."
+      },
+      "q6": {
+        "question": "¿Qué datos del paciente se envían a Google?",
+        "answer": "Ninguno sobre su salud. Solo el identificador del clic y que hubo una cita. El motivo de consulta se queda en tu consulta."
+      },
+      "q7": {
+        "question": "¿Cuánto cuesta la gestión de Google Ads para un psicólogo?",
+        "answer": "La gestión de Google Ads de 3R Core cuesta S/1,800 al mes + IGV (precio referencial). La pauta se paga aparte a Google desde tu tarjeta; recomendamos empezar desde S/1,500 al mes."
+      },
+      "q8": {
+        "question": "¿Google Ads reemplaza a las plataformas de directorios de psicólogos?",
+        "answer": "No las reemplaza. En un directorio compites en la misma lista con otros colegas; con Google Ads el paciente llega a tu página y te escribe directo a ti."
+      }
+    }
+  },
+  "GoogleAdsPsicologosSEO": {
+    "seoTitle": "Cómo funciona la publicidad en Google para psicólogos",
+    "p1": "Google Ads para psicólogos funciona porque la decisión de pedir terapia suele empezar en una búsqueda. El paciente escribe su tema o su distrito, abre dos o tres resultados y escribe a quien le transmite confianza.",
+    "p2": "Los anuncios para psicólogos se separan por motivo de consulta y por modalidad. La terapia online se puede anunciar en todo el Perú; la presencial, en los distritos desde donde tus pacientes llegan sin problema.",
+    "p3": "La salud mental es categoría sensible en la publicidad personalizada de Google. Por eso la campaña se apoya en palabras clave y ubicación, sin remarketing ni listas de pacientes.",
+    "p4": "La medición se hace en citas. El clic a WhatsApp y el formulario guardan el GCLID, y las citas confirmadas se suben como conversión offline sin enviar a Google ningún dato de salud.",
+    "p5": "La gestión de Google Ads de 3R Core cuesta S/1,800 al mes + IGV (referencial), con la pauta pagada aparte a Google desde la cuenta del psicólogo, que queda a su nombre.",
+    "p6": "El posicionamiento orgánico de tu web de psicología es otro servicio. Si lo que buscas es publicidad para psicólogos en Google con citas medidas, escríbenos por WhatsApp.",
+    "relatedTitle": "Servicios relacionados"
+  },
+  "GoogleAdsHotelesLanding": {
+    "hero": {
+      "badge": "Google Ads · Hoteles",
+      "title": "Google Ads para hoteles que quieren más reservas directas",
+      "subtitle": "Quien busca «hotel en Cusco centro» o el nombre de tu hotel suele terminar reservando en una agencia online. Hacemos que reserve en tu web y medimos cada reserva.",
+      "cta": "Quiero más reservas directas",
+      "waCta": "Pedir auditoría por WhatsApp",
+      "waText": "Hola 3R Core, tengo un hotel y quiero más reservas directas con Google Ads.",
+      "serviceLink": "Ver el servicio completo de Google Ads"
+    },
+    "intro": {
+      "title": "Publicidad en Google para hoteles: el huésped compara precios antes de reservar",
+      "p1": "La gestión de Google Ads para hoteles en 3R Core consiste en mostrar tu tarifa y tu web en Google cuando un viajero busca alojamiento en tu destino o el nombre de tu hotel, para que reserve directo contigo y no a través de Booking o Expedia.",
+      "p2": "El viajero en Perú planifica en Google: busca el destino, abre el mapa, compara la tarifa en dos o tres sitios y reserva donde ve el precio más claro. Si la agencia online aparece antes que tu web, la comisión se la lleva ella aunque el huésped ya te conocía.",
+      "p3": "Los anuncios de hoteles tienen reglas propias de precio. El total que muestra Google tiene que coincidir con el de tu motor de reservas, con impuestos y cargos incluidos. 3R Core revisa eso antes de activar cualquier campaña con tarifas."
+    },
+    "benefits": {
+      "badge": "Qué incluye",
+      "title": "Lo que incluye la gestión de Google Ads para tu hotel",
+      "items": [
+        {
+          "title": "Campaña de marca",
+          "description": "Tu hotel aparece primero cuando buscan su nombre, con enlace a la reserva en tu web y no a una OTA."
+        },
+        {
+          "title": "Performance Max para viajes",
+          "description": "Campaña con objetivo de viajes conectada a Hotel Center, que muestra tu hotel con su tarifa en la búsqueda y en Maps."
+        },
+        {
+          "title": "Búsqueda por destino",
+          "description": "Anuncios para «hotel en Paracas» o «hospedaje en Huaraz», separados por tipo de habitación o de viaje."
+        },
+        {
+          "title": "Mercados por idioma",
+          "description": "Campañas en español para Lima y el resto del Perú, y en inglés para viajeros del extranjero."
+        },
+        {
+          "title": "Calendario de temporadas",
+          "description": "Presupuesto que sube antes de feriados largos y de tu temporada alta, y baja cuando ya no hay disponibilidad."
+        },
+        {
+          "title": "Reporte en reservas",
+          "description": "Reservas, noches y valor reservado por campaña, sumando las que se cierran por WhatsApp."
+        }
+      ]
+    },
+    "process": {
+      "badge": "Cómo funciona",
+      "title": "Cómo funciona Google Ads para hoteles",
+      "steps": [
+        {
+          "title": "Diagnóstico de canales",
+          "description": "Vemos qué parte de tus reservas llega por OTA, por web y por WhatsApp, y desde qué mercados."
+        },
+        {
+          "title": "Motor de reservas y precios",
+          "description": "Revisamos que el total en tu motor coincida con lo que verá el huésped en Google, impuestos incluidos."
+        },
+        {
+          "title": "Medición de la reserva",
+          "description": "Conversión con valor en la confirmación de la reserva, y GCLID en el WhatsApp y el formulario."
+        },
+        {
+          "title": "Lanzamiento",
+          "description": "Primero la campaña de marca y la de destino; después Performance Max para viajes con Hotel Center."
+        },
+        {
+          "title": "Ajuste por temporada",
+          "description": "Movemos el presupuesto según ocupación, feriados y mercados que más reservan."
+        }
+      ]
+    },
+    "h1": "Google Ads para hoteles en Lima y Perú: reservas directas desde Google"
+  },
+  "GoogleAdsHotelesGuia": {
+    "badge": "Guía del sector",
+    "title": "Guía de anuncios en Google para hoteles en Perú",
+    "sections": [
+      {
+        "h": "¿Qué reglas de Google aplican a los anuncios de hoteles?",
+        "p": [
+          "A los anuncios de hoteles con tarifa les aplica la Política de Precisión de Precios (Price Accuracy Policy) de Hotel Center. El total en tu página de reserva tiene que verse claro, ser igual al que muestra Google, corresponder a una estadía de una noche (no uso por horas) e incluir impuestos y cargos obligatorios.",
+          "Google revisa una muestra de tus precios y te da una puntuación de precisión; si falla, puede penalizar o suspender la cuenta. Además, la campaña Performance Max para objetivos de viajes exige vincular Google Ads con Hotel Center y está limitada a cuentas de hasta 100 hoteles. Por eso 3R Core revisa el motor de reservas antes de lanzar."
+        ]
+      },
+      {
+        "h": "¿Qué tipo de campaña conviene a un hotel?",
+        "p": [
+          "A un hotel le conviene combinar tres campañas con objetivos distintos. 3R Core las arma en este orden:"
+        ],
+        "list": [
+          "Búsqueda de marca: recupera a quien ya busca tu hotel por su nombre y hoy termina en una agencia online.",
+          "Búsqueda por destino: capta a quien aún no te conoce («hotel en Cusco centro», «hotel en Máncora frente al mar»).",
+          "Performance Max para objetivos de viajes: muestra tu hotel con su tarifa en Google y Maps, conectado a Hotel Center."
+        ]
+      },
+      {
+        "h": "¿Qué busca en Google un viajero que reserva hotel en Perú?",
+        "p": [
+          "El viajero que reserva hotel en Perú busca por destino, por zona y por tipo de viaje. El turista extranjero, además, busca en inglés. Estas son búsquedas típicas del rubro:"
+        ],
+        "list": [
+          "hotel en Cusco centro histórico, hotel cerca de la Plaza de Armas Cusco",
+          "hotel en Miraflores frente al mar, hotel cerca del aeropuerto Jorge Chávez",
+          "hospedaje en Paracas, hotel en Máncora, hotel en Lunahuaná con piscina",
+          "hotel en Aguas Calientes, hotel en el Valle Sagrado",
+          "hotel pet friendly, hotel para familias, hotel con cochera",
+          "hotels in Cusco near Plaza de Armas, boutique hotel Lima"
+        ]
+      },
+      {
+        "h": "¿Qué anuncios funcionan para hoteles?",
+        "p": [
+          "Los anuncios que funcionan para hoteles dicen dónde estás, qué tipo de viaje resuelves y que la reserva es directa con el hotel. 3R Core no anuncia una tarifa que tu motor de reservas no muestre. Ejemplos adaptables:"
+        ],
+        "ads": [
+          {
+            "headline": "Hotel en Cusco centro | A pasos de la Plaza de Armas | Reserva en la web del hotel",
+            "url": "tuhotel.pe/reservar",
+            "desc": "Habitaciones con desayuno y calefacción. Reserva directo o escríbenos por WhatsApp."
+          },
+          {
+            "headline": "Hotel frente al mar en Paracas | Escapada de fin de semana | Reserva directa con el hotel",
+            "url": "tuhotel.pe/paracas",
+            "desc": "Habitaciones para parejas y familias. Mira la disponibilidad para el próximo feriado."
+          },
+          {
+            "headline": "Hotel in Cusco Old Town | Book direct with the hotel | Near Plaza de Armas",
+            "url": "tuhotel.pe/en",
+            "desc": "Breakfast included and 24-hour front desk. Message us on WhatsApp in English."
+          }
+        ]
+      },
+      {
+        "h": "¿Qué palabras clave negativas necesita un hotel?",
+        "p": [
+          "Un hotel necesita negativas para no pagar clics de quien busca empleo, estudia hotelería o quiere alquilar por meses. 3R Core parte de esta lista y la ajusta con los términos de búsqueda reales:"
+        ],
+        "chips": [
+          "trabajo",
+          "empleo",
+          "convocatoria",
+          "recepcionista",
+          "sueldo",
+          "curso",
+          "carrera",
+          "hotelería",
+          "gratis",
+          "por horas",
+          "alquiler mensual",
+          "cuarto en alquiler",
+          "traspaso",
+          "venta de hotel",
+          "plano",
+          "maqueta",
+          "hotel transylvania"
+        ]
+      },
+      {
+        "h": "¿Cómo se mide una reserva que llega desde Google Ads?",
+        "p": [
+          "Una reserva de hotel se mide en la página de confirmación del motor de reservas, con el valor de la estadía, para que Google aprenda qué búsquedas traen noches reservadas. Si tu motor está en otro dominio, 3R Core configura la medición entre dominios.",
+          "Muchos huéspedes peruanos preguntan por WhatsApp antes de pagar. El clic al WhatsApp guarda el GCLID y, cuando la reserva se confirma con depósito o transferencia, se sube a Google Ads como conversión offline con su valor."
+        ]
+      },
+      {
+        "h": "¿Cuándo sube la demanda hotelera en Perú y cuánto invertir?",
+        "p": [
+          "La demanda sube en Semana Santa, en el Inti Raymi del 24 de junio en Cusco, en Fiestas Patrias (feriados del 28 y 29 de julio), en Navidad y Año Nuevo y en los feriados largos que se arman con días no laborables. El Camino Inca cierra cada febrero por mantenimiento, lo que cambia la demanda en Cusco ese mes. 3R Core sube la puja semanas antes, cuando el viajero de Lima reserva.",
+          "La gestión de Google Ads de 3R Core cuesta S/1,800 al mes + IGV (precio referencial). La pauta se paga aparte, directo a Google, desde la tarjeta del hotel; recomendamos empezar desde S/1,500 al mes."
+        ]
+      }
+    ]
+  },
+  "GoogleAdsHotelesFAQ": {
+    "badge": "Preguntas frecuentes",
+    "title": "Preguntas frecuentes sobre Google Ads para hoteles",
+    "faqs": {
+      "q1": {
+        "question": "¿Por qué pagar anuncios por el nombre de mi propio hotel?",
+        "answer": "Porque si una agencia online aparece arriba cuando buscan tu nombre, la reserva que ya era tuya sale con comisión. La campaña de marca lleva ese clic a tu motor de reservas."
+      },
+      "q2": {
+        "question": "¿Necesito Hotel Center para anunciar mi hotel?",
+        "answer": "Para Performance Max con objetivo de viajes, sí: Google exige vincular la cuenta de Google Ads con Hotel Center. Las campañas de búsqueda funcionan sin él."
+      },
+      "q3": {
+        "question": "¿Qué pasa si mi motor de reservas muestra un precio distinto al de Google?",
+        "answer": "Google exige que el total coincida, con impuestos y cargos incluidos. Si no coincide, baja tu puntuación de precisión de precios y la cuenta puede ser penalizada."
+      },
+      "q4": {
+        "question": "¿Sirve para un hostal o un lodge pequeño?",
+        "answer": "Sí, si tiene motor de reservas o al menos WhatsApp con respuesta rápida. Con pocas habitaciones, 3R Core concentra la pauta en marca y en las fechas con disponibilidad."
+      },
+      "q5": {
+        "question": "¿Pueden anunciar mi hotel en inglés para turistas extranjeros?",
+        "answer": "Sí. 3R Core arma campañas en inglés aparte, con su página en inglés, para medir qué mercados reservan de verdad."
+      },
+      "q6": {
+        "question": "¿Cuánto cuesta la gestión de Google Ads para un hotel?",
+        "answer": "La gestión de Google Ads de 3R Core cuesta S/1,800 al mes + IGV (precio referencial). La pauta se paga aparte a Google desde la tarjeta del hotel; recomendamos empezar desde S/1,500 al mes."
+      },
+      "q7": {
+        "question": "¿Tengo que dejar de vender por Booking o Expedia?",
+        "answer": "No. Las OTAs te traen huéspedes que no te encontrarían de otro modo. Google Ads busca que quien ya te eligió reserve en tu web."
+      },
+      "q8": {
+        "question": "¿Cuándo conviene subir la inversión?",
+        "answer": "Semanas antes de Fiestas Patrias, Semana Santa, fin de año y los feriados largos, que es cuando el viajero de Lima reserva. Cuando ya no hay habitaciones, se baja."
+      }
+    }
+  },
+  "GoogleAdsHotelesSEO": {
+    "seoTitle": "Cómo funciona la publicidad en Google para hoteles en Perú",
+    "p1": "Google Ads para hoteles funciona porque el viajero decide en Google: busca el destino o el nombre del hotel, compara la tarifa y reserva donde la ve más clara.",
+    "p2": "La campaña de marca protege las reservas que ya son tuyas. La de destino capta viajeros nuevos, y Performance Max para objetivos de viajes muestra tu tarifa en Google y Maps.",
+    "p3": "Los anuncios con tarifa siguen la política de precisión de precios de Hotel Center: el total en tu motor tiene que coincidir con el de Google, con impuestos incluidos.",
+    "p4": "La medición se hace en reservas con valor. El motor de reservas registra la conversión y las reservas cerradas por WhatsApp se suben como conversión offline con su GCLID.",
+    "p5": "La gestión de Google Ads de 3R Core cuesta S/1,800 al mes + IGV (referencial). La pauta se paga aparte a Google y la cuenta queda a nombre del hotel.",
+    "p6": "El SEO de la web de tu hotel es otro servicio. Si buscas publicidad en Google para hoteles con reservas medidas, escríbenos por WhatsApp.",
+    "relatedTitle": "Servicios relacionados"
+  },
+  "GoogleAdsRestaurantesLanding": {
+    "hero": {
+      "badge": "Google Ads · Restaurantes",
+      "title": "Google Ads para restaurantes que llena mesas y suma pedidos",
+      "subtitle": "Tu restaurante arriba en Google cuando alguien busca «cevichería en Barranco», «pollería delivery en Los Olivos» o «menú ejecutivo en San Isidro», con cada reserva y pedido medido.",
+      "cta": "Quiero más reservas y pedidos",
+      "waCta": "Pedir auditoría por WhatsApp",
+      "waText": "Hola 3R Core, tengo un restaurante y quiero más reservas y pedidos con Google Ads.",
+      "serviceLink": "Ver el servicio completo de Google Ads"
+    },
+    "intro": {
+      "title": "Publicidad en Google para restaurantes: se decide en minutos y a pocas cuadras",
+      "p1": "La gestión de Google Ads para restaurantes en 3R Core consiste en poner tu local delante de quien está decidiendo dónde comer o qué pedir, en su zona y a la hora en que tiene hambre. Separamos reservas en salón y pedidos de delivery porque se buscan distinto y se miden distinto.",
+      "p2": "Quien busca «pollería cerca de mí» a las 7 de la noche llama a la primera opción que le resuelve. Por eso el anuncio lleva teléfono, ubicación y WhatsApp.",
+      "p3": "Esta página trata solo de anuncios en Google. Las redes sociales y la página web del restaurante son otros servicios de 3R Core, con su propia página."
+    },
+    "benefits": {
+      "badge": "Qué incluye",
+      "title": "La gestión de Google Ads para tu restaurante",
+      "items": [
+        {
+          "title": "Reserva y delivery por separado",
+          "description": "Una campaña para llenar mesas y otra para pedidos, cada una con su presupuesto y su forma de medir."
+        },
+        {
+          "title": "Radio real de reparto",
+          "description": "Los anuncios de delivery salen solo en los distritos donde tu moto llega a tiempo."
+        },
+        {
+          "title": "Horario por turno",
+          "description": "Pauta concentrada en almuerzo y cena, y apagada cuando la cocina está cerrada."
+        },
+        {
+          "title": "Llamada y WhatsApp en el anuncio",
+          "description": "Recurso de llamada y enlace a WhatsApp para que el pedido entre sin pasar por formularios."
+        },
+        {
+          "title": "Anuncios de alcohol revisados",
+          "description": "Si promocionas tu barra, redactamos según la política de Google de bebidas alcohólicas."
+        },
+        {
+          "title": "Reporte en reservas y pedidos",
+          "description": "Cuánto te costó cada reserva y cada pedido, por local y por turno."
+        }
+      ]
+    },
+    "process": {
+      "badge": "Cómo funciona",
+      "title": "Cómo funciona Google Ads para restaurantes",
+      "steps": [
+        {
+          "title": "Platos y turnos que quieres vender",
+          "description": "Vemos qué turno tiene mesas vacías, qué platos dejan margen y hasta dónde reparte tu delivery."
+        },
+        {
+          "title": "Búsquedas por plato y distrito",
+          "description": "Elegimos búsquedas de quien quiere comer hoy, como «chifa delivery en Surco», y descartamos recetas y curiosidad."
+        },
+        {
+          "title": "Ficha, WhatsApp y medición",
+          "description": "Vinculamos tu ficha de Google y marcamos llamadas y clics a WhatsApp con el identificador del clic (GCLID)."
+        },
+        {
+          "title": "Lanzamiento por turno",
+          "description": "Programamos la pauta en las horas en que atiendes y revisamos cada semana los términos de búsqueda reales."
+        },
+        {
+          "title": "Ajuste según ventas",
+          "description": "Las reservas cumplidas y los pedidos cobrados se suben como conversión offline para que Google aprenda de clientes que pagaron."
+        }
+      ]
+    },
+    "h1": "Google Ads para restaurantes en Lima y todo el Perú"
+  },
+  "GoogleAdsRestaurantesGuia": {
+    "badge": "Guía del sector",
+    "title": "Guía de Google Ads para restaurantes en Perú",
+    "sections": [
+      {
+        "h": "¿Qué busca en Google quien quiere comer fuera o pedir delivery?",
+        "p": [
+          "En los restaurantes de Lima, la búsqueda casi siempre junta plato, zona y momento. 3R Core arma los grupos de anuncios con esa lógica, y no con el nombre genérico del rubro. El autocompletado de Google en Perú lo confirma: aparecen «publicidad para cevichería» y «publicidad para pollería», porque cada tipo de restaurante se vende distinto.",
+          "Estos son ejemplos de búsquedas que suelen traer clientes listos para pedir o reservar:"
+        ],
+        "list": [
+          "cevichería en Barranco",
+          "pollería delivery Los Olivos",
+          "chifa cerca de mí",
+          "menú ejecutivo San Isidro",
+          "restaurante para cumpleaños en Miraflores",
+          "almuerzo para empresas Lima",
+          "parrillas abiertas hoy"
+        ]
+      },
+      {
+        "h": "¿Qué tipo de campaña de Google Ads conviene a un restaurante?",
+        "p": [
+          "Para un restaurante, 3R Core empieza casi siempre con Búsqueda: anuncios por plato y distrito con recursos de llamada, ubicación y WhatsApp. Es la campaña que más se parece a cómo decide el cliente.",
+          "Desde febrero de 2026 Google ya no deja crear anuncios solo de llamada (los que existen dejan de mostrarse en febrero de 2027). La llamada va como recurso dentro del anuncio de búsqueda adaptable.",
+          "Si la ficha de Google del local está bien trabajada, sumamos Performance Max con la ficha vinculada para salir también en Maps."
+        ]
+      },
+      {
+        "h": "¿Qué dice Google Ads sobre anunciar bebidas alcohólicas?",
+        "p": [
+          "Google Ads tiene una política propia llamada «Bebidas alcohólicas», y Perú figura entre los países donde se permite este tipo de anuncios. Si tu restaurante o bar promociona tragos, 3R Core redacta el anuncio dentro de esas reglas:"
+        ],
+        "list": [
+          "No mostrar a menores de edad ni a embarazadas tomando, ni dirigir el anuncio a quien no tiene edad legal para comprar alcohol.",
+          "No incitar al consumo excesivo o irresponsable. Una promoción tipo «toma todo lo que puedas» se cae.",
+          "No atribuir beneficios para la salud a una bebida ni mostrar consumo antes de manejar.",
+          "Estos anuncios no se muestran a usuarios con Búsqueda Segura activada, así que la carta y el delivery van en anuncios aparte."
+        ]
+      },
+      {
+        "h": "¿Cómo se reparte el presupuesto entre reserva, delivery y fechas fuertes?",
+        "p": [
+          "En 3R Core la campaña de reserva apunta a búsquedas de ocasión (cumpleaños, almuerzo de negocios, grupo) y la de delivery se limita al radio que tu reparto cubre a tiempo, programada por turno. Si también vendes por Rappi o PedidosYa, Google Ads busca el pedido directo por llamada o WhatsApp.",
+          "La pauta sube unos días antes de las fechas fuertes:"
+        ],
+        "list": [
+          "Día de la Madre y Día del Padre, con reservas de grupo y delivery en casa.",
+          "Día Nacional del Ceviche, el 28 de junio (Resolución Ministerial 708-2008-PRODUCE).",
+          "Día del Pollo a la Brasa, el tercer domingo de julio (Resolución Ministerial 0441-2010-AG).",
+          "Fiestas Patrias, cenas de fin de año de empresas y Navidad."
+        ]
+      },
+      {
+        "h": "¿Cómo se mide si Google Ads trajo reservas y pedidos reales?",
+        "p": [
+          "En un restaurante, 3R Core mide la reserva cumplida y el pedido cobrado. La llamada y el clic al botón de WhatsApp guardan el GCLID; cuando el pedido se paga o la mesa se ocupa, ese contacto se sube a Google Ads como conversión offline.",
+          "Así sabes cuánto te cuesta un pedido de delivery frente a una reserva de grupo, y la campaña aprende de clientes que pagaron."
+        ]
+      },
+      {
+        "h": "¿Qué anuncios funcionan para restaurantes?",
+        "p": [
+          "Funcionan los anuncios que dicen el plato, la zona y cómo pedir. Estos son ejemplos que 3R Core adapta a cada carta; no son anuncios de clientes:"
+        ],
+        "ads": [
+          {
+            "headline": "Cevichería en Barranco | Reserva por WhatsApp | Pesca del día",
+            "url": "tucevicheria.pe/reservas",
+            "desc": "Ceviche, tiradito y jalea con pesca del día para el almuerzo. Reserva tu mesa por WhatsApp, también para grupos y cumpleaños."
+          },
+          {
+            "headline": "Pollo a la brasa delivery | Reparto en Los Olivos | Pide por WhatsApp",
+            "url": "tupolleria.pe/delivery",
+            "desc": "Pollo a la brasa con papas y ensalada, delivery en Los Olivos y SMP. Llámanos o escríbenos y te decimos el tiempo de entrega."
+          },
+          {
+            "headline": "Menú ejecutivo San Isidro | Pedidos para oficinas | Factura electrónica",
+            "url": "turestaurante.pe/empresas",
+            "desc": "Almuerzo ejecutivo con entrada y fondo para equipos de trabajo. Pide antes de las 11 de la mañana y coordina la entrega por WhatsApp."
+          }
+        ]
+      },
+      {
+        "h": "¿Qué palabras clave negativas usa un restaurante en Google Ads?",
+        "p": [
+          "Las negativas evitan pagar por quien busca cocinar, trabajar o leer sobre comida. 3R Core empieza con esta lista y la amplía cada semana con los términos reales:"
+        ],
+        "chips": [
+          "receta",
+          "cómo preparar",
+          "ingredientes",
+          "calorías",
+          "trabajo",
+          "se busca cocinero",
+          "curso de cocina",
+          "instituto de gastronomía",
+          "traspaso",
+          "alquiler de local",
+          "franquicia",
+          "historia del ceviche",
+          "dibujo",
+          "gratis",
+          "concurso",
+          "libro de reclamaciones"
+        ]
+      }
+    ]
+  },
+  "GoogleAdsRestaurantesFAQ": {
+    "badge": "Preguntas frecuentes",
+    "title": "Preguntas frecuentes sobre Google Ads para restaurantes",
+    "faqs": {
+      "q1": {
+        "question": "¿Google Ads sirve para una cevichería o pollería de barrio?",
+        "answer": "Sí, con un radio pequeño y la pauta en las horas de atención. Una pollería de distrito no necesita salir en todo Lima: basta con aparecer en las calles a las que llega su delivery."
+      },
+      "q2": {
+        "question": "¿Conviene anunciar en Google si ya estoy en Rappi o PedidosYa?",
+        "answer": "Puede convenir: en Google el cliente te pide directo por llamada o WhatsApp, y ese pedido queda medido con su anuncio."
+      },
+      "q3": {
+        "question": "¿Puedo anunciar tragos y happy hour en Google Ads?",
+        "answer": "Sí, dentro de la política «Bebidas alcohólicas» de Google, que permite estos anuncios en Perú. El anuncio no puede invitar al consumo excesivo ni dirigirse a menores, y no se muestra a quien tiene activada la Búsqueda Segura."
+      },
+      "q4": {
+        "question": "¿A qué hora deben salir los anuncios de un restaurante?",
+        "answer": "En las horas en que alguien puede reservar o pedir y tú puedes atender: antes y durante el almuerzo, y antes y durante la cena. Fuera de ese horario la pauta se apaga."
+      },
+      "q5": {
+        "question": "¿Cuánto cuesta la gestión de Google Ads para un restaurante?",
+        "answer": "La gestión de Google Ads de 3R Core cuesta S/1,800 al mes + IGV (precio referencial). La pauta se paga aparte, directo a Google, desde la tarjeta del restaurante; recomendamos empezar desde S/1,500 al mes."
+      },
+      "q6": {
+        "question": "¿Qué conviene más: campaña de reservas o de delivery?",
+        "answer": "Depende de dónde tienes capacidad libre. Si el salón está vacío al mediodía, empieza por reservas; si la cocina aguanta más pedidos de noche, por delivery. Se pueden tener las dos con presupuestos separados."
+      },
+      "q7": {
+        "question": "¿Sirve para restaurantes de provincia?",
+        "answer": "Sí. En Arequipa, Trujillo o Piura se trabaja igual, por plato, distrito y turno."
+      },
+      "q8": {
+        "question": "¿Necesito una página web para anunciar mi restaurante?",
+        "answer": "Los anuncios de búsqueda necesitan una página de destino con carta, ubicación y botón de WhatsApp. Si no la tienes, la página web es otro servicio de 3R Core; los anuncios pueden empezar con una landing sencilla."
+      }
+    }
+  },
+  "GoogleAdsRestaurantesSEO": {
+    "seoTitle": "Cómo funciona la publicidad en Google para restaurantes en Lima",
+    "p1": "Google Ads para restaurantes funciona por cercanía y por hora. Quien busca «chifa delivery en Surco» quiere comer pronto, y el anuncio pone tu local delante en ese momento. Solo pagas cuando hacen clic.",
+    "p2": "Reserva y delivery van en campañas distintas. La reserva se apoya en la ocasión (cumpleaños, almuerzo de trabajo, grupo) y el delivery se limita al radio que tu reparto cubre a tiempo.",
+    "p3": "La llamada va como recurso dentro del anuncio de búsqueda, junto con la ubicación y el WhatsApp.",
+    "p4": "Los tragos se pueden anunciar en Perú bajo la política «Bebidas alcohólicas» de Google, sin menores ni consumo excesivo.",
+    "p5": "La gestión de Google Ads de 3R Core cuesta S/1,800 al mes + IGV (referencial), y la pauta se paga aparte a Google desde la cuenta de tu restaurante, que queda a tu nombre.",
+    "p6": "Si buscas publicidad para tu cevichería, pollería o restaurante en Lima, escríbenos y revisamos qué se busca en tu zona antes de invertir.",
+    "relatedTitle": "Servicios relacionados"
+  },
+  "GoogleAdsColegiosLanding": {
+    "hero": {
+      "badge": "Google Ads · Colegios y universidades",
+      "title": "Google Ads para colegios que llena la campaña de admisión",
+      "subtitle": "Tu colegio, instituto o universidad arriba en Google cuando un padre busca «colegio bilingüe en La Molina» o un postulante busca «admisión instituto de diseño en Lima», con cada solicitud medida.",
+      "cta": "Quiero más postulantes",
+      "waCta": "Pedir auditoría por WhatsApp",
+      "waText": "Hola 3R Core, tengo un colegio y quiero más solicitudes de admisión con Google Ads.",
+      "serviceLink": "Ver el servicio completo de Google Ads"
+    },
+    "intro": {
+      "title": "Publicidad en Google para colegios: la decisión dura meses y la toman los padres",
+      "p1": "La gestión de Google Ads para colegios en 3R Core consiste en encontrar a las familias y postulantes que están buscando vacante, por nivel y por distrito, en los meses en que eligen. Trabajamos con colegios privados, institutos y universidades, cada uno con su calendario de admisión.",
+      "p2": "Elegir colegio no se decide en un clic. Los padres comparan pensiones, visitan, piden informes y vuelven a buscar. Por eso la campaña busca la solicitud de informes y la visita al local, y sigue ese contacto hasta la matrícula.",
+      "p3": "Esta página trata solo de anuncios en Google. El posicionamiento orgánico y la web del colegio son otros servicios de 3R Core."
+    },
+    "benefits": {
+      "badge": "Qué incluye",
+      "title": "La gestión de Google Ads para tu colegio o universidad",
+      "items": [
+        {
+          "title": "Campañas por nivel o carrera",
+          "description": "Inicial, primaria y secundaria por separado; en institutos y universidades, una campaña por carrera o programa."
+        },
+        {
+          "title": "Calendario de admisión",
+          "description": "La pauta sube cuando las familias eligen y baja cuando las vacantes se llenan."
+        },
+        {
+          "title": "Formulario para padres",
+          "description": "Formulario corto en la landing y formulario de clientes potenciales de Google en el anuncio."
+        },
+        {
+          "title": "Video del colegio en YouTube",
+          "description": "Recorrido del local o testimonio de un profesor para quien todavía está comparando."
+        },
+        {
+          "title": "Segmentación a adultos",
+          "description": "Anuncios dirigidos a padres y postulantes adultos, dentro de las reglas de Google para menores."
+        },
+        {
+          "title": "Reporte hasta la matrícula",
+          "description": "Costo por solicitud, por visita y por matrícula, separado por nivel o carrera."
+        }
+      ]
+    },
+    "process": {
+      "badge": "Cómo funciona",
+      "title": "Cómo funciona Google Ads para colegios",
+      "steps": [
+        {
+          "title": "Vacantes y fechas",
+          "description": "Vemos cuántas vacantes quieres llenar por nivel o carrera y cuándo cierra tu proceso de admisión."
+        },
+        {
+          "title": "Búsquedas de padres y postulantes",
+          "description": "Elegimos búsquedas de quien busca vacante, como «colegio con inicial en Surco», y descartamos tareas, trabajo docente y trámites públicos."
+        },
+        {
+          "title": "Formulario y medición",
+          "description": "Formulario con el identificador del clic de Google (GCLID) y botón de WhatsApp marcado para la oficina de admisión."
+        },
+        {
+          "title": "Lanzamiento por temporada",
+          "description": "Búsqueda primero; YouTube y formularios de Google cuando el proceso de admisión está abierto."
+        },
+        {
+          "title": "Ajuste según matrículas",
+          "description": "Las visitas agendadas y las matrículas se suben como conversión offline para que Google aprenda de familias que se inscribieron."
+        }
+      ]
+    },
+    "h1": "Google Ads para colegios, institutos y universidades en Lima y Perú"
+  },
+  "GoogleAdsColegiosGuia": {
+    "badge": "Guía del sector",
+    "title": "Guía de Google Ads para colegios, institutos y universidades en Perú",
+    "sections": [
+      {
+        "h": "¿Qué buscan en Google los padres y postulantes en Perú?",
+        "p": [
+          "Los padres buscan por nivel, distrito y tipo de colegio; los postulantes, por carrera y modalidad. 3R Core arma la campaña de admisión con esas búsquedas reales:"
+        ],
+        "list": [
+          "colegio bilingüe en La Molina",
+          "colegios privados en Surco pensiones",
+          "nido para niños de 3 años en San Borja",
+          "colegio con vacantes para primaria",
+          "instituto de diseño gráfico en Lima admisión",
+          "universidad con carrera de psicología en Lima",
+          "maestría en gestión pública fines de semana"
+        ]
+      },
+      {
+        "h": "¿Qué reglas de Google Ads aplican a colegios y universidades?",
+        "p": [
+          "En la política «Segmentación restringida de la publicidad personalizada», educación no figura como categoría sensible, así que un colegio puede usar sus propias audiencias. La regla que sí pesa en este rubro es otra: los usuarios menores de 18 años no pueden recibir publicidad personalizada de ningún tipo.",
+          "Por eso 3R Core dirige las audiencias a padres y a postulantes adultos, y para los escolares que eligen carrera confía en la búsqueda, que responde a lo que escriben. El formulario de clientes potenciales de Google pide además un enlace a la política de privacidad del colegio."
+        ]
+      },
+      {
+        "h": "¿Qué campañas convienen para una campaña de admisión?",
+        "p": [
+          "Para un colegio o universidad, 3R Core combina tres frentes según el momento de la admisión:"
+        ],
+        "list": [
+          "Búsqueda: capta al padre que ya escribe «colegio con inicial en Surco» y lo lleva a la landing del nivel.",
+          "Formulario de clientes potenciales: el padre deja sus datos sin salir de Google. Funciona en Búsqueda y Performance Max, y exige una puja orientada a conversiones.",
+          "YouTube: un recorrido del local o una clase muestra lo que la foto no cuenta, para quien todavía compara."
+        ]
+      },
+      {
+        "h": "¿Cuándo se lanza la campaña de admisión en Perú?",
+        "p": [
+          "El año escolar en Perú empieza en marzo: para 2026, el Minedu fijó el inicio de clases el 16 de marzo, y varios colegios privados empezaron antes. Las familias eligen colegio en los meses previos, así que 3R Core arranca la campaña cuando el colegio abre su proceso de admisión y la sube cerca del cierre de vacantes.",
+          "Institutos y universidades tienen su propio calendario, a menudo con más de un proceso de admisión al año. Cada proceso lleva su campaña, sus fechas y sus anuncios."
+        ]
+      },
+      {
+        "h": "¿Cómo se mide un lead de admisión?",
+        "p": [
+          "Un colegio mide solicitudes, visitas y matrículas, no clics. En 3R Core cada formulario y cada clic a WhatsApp guarda el GCLID, y la oficina de admisión marca qué familias visitaron el local y cuáles se matricularon. Esas etapas se suben a Google Ads como conversiones offline.",
+          "El costo por lead cambia por nivel: un nido, una secundaria y una maestría no cuestan lo mismo ni se deciden igual. Por eso el reporte se separa por nivel o programa, y el presupuesto se mueve hacia los niveles que todavía tienen vacantes y convierten en matrícula."
+        ]
+      },
+      {
+        "h": "¿Qué anuncios funcionan para colegios y universidades?",
+        "p": [
+          "Funcionan los anuncios que dicen el nivel, el distrito y el siguiente paso (visita, informes, examen). Estos son ejemplos que 3R Core adapta; no son anuncios de clientes:"
+        ],
+        "ads": [
+          {
+            "headline": "Colegio bilingüe en La Molina | Admisión inicial y primaria | Agenda tu visita",
+            "url": "tucolegio.edu.pe/admision",
+            "desc": "Conoce el local, el plan de estudios y las pensiones en una visita guiada. Deja tus datos y la oficina de admisión te escribe por WhatsApp."
+          },
+          {
+            "headline": "Instituto de diseño en Lima | Admisión abierta | Pide informes",
+            "url": "tuinstituto.edu.pe/diseno",
+            "desc": "Diseño gráfico con talleres desde el primer ciclo, de mañana o de noche. Pide la malla curricular y las fechas del examen de admisión."
+          },
+          {
+            "headline": "Maestría fines de semana | Gestión pública en Lima | Descarga el plan",
+            "url": "tuuniversidad.edu.pe/maestria",
+            "desc": "Clases los sábados y domingos, pensadas para quien trabaja. Deja tus datos y recibe el plan de estudios y la fecha de inicio."
+          }
+        ]
+      },
+      {
+        "h": "¿Qué palabras clave negativas usa un colegio en Google Ads?",
+        "p": [
+          "Las negativas filtran a alumnos que hacen tareas, a docentes que buscan plaza y a familias que buscan colegios públicos. 3R Core empieza con esta lista:"
+        ],
+        "chips": [
+          "tareas",
+          "solucionario",
+          "examen resuelto",
+          "pdf",
+          "intranet",
+          "notas",
+          "plaza docente",
+          "trabajo de profesor",
+          "nombramiento",
+          "colegio nacional",
+          "colegio estatal",
+          "Beca 18",
+          "uniforme",
+          "útiles escolares",
+          "lista de útiles",
+          "gratis"
+        ]
+      }
+    ]
+  },
+  "GoogleAdsColegiosFAQ": {
+    "badge": "Preguntas frecuentes",
+    "title": "Preguntas frecuentes sobre Google Ads para colegios",
+    "faqs": {
+      "q1": {
+        "question": "¿Cuándo debe empezar un colegio su campaña de Google Ads?",
+        "answer": "Cuando abre su proceso de admisión, no en marzo. Las familias eligen en los meses previos al año escolar, y para entonces la campaña ya debe tener datos para ajustar."
+      },
+      "q2": {
+        "question": "¿Se puede anunciar a los alumnos directamente?",
+        "answer": "No con audiencias personalizadas: Google no muestra publicidad personalizada a menores de 18 años. La campaña se dirige a padres, y a los escolares les llega por la búsqueda que ellos mismos hacen."
+      },
+      "q3": {
+        "question": "¿El formulario de Google sirve para un colegio?",
+        "answer": "Sí. El padre deja nombre y teléfono sin salir del anuncio, y la oficina de admisión lo recibe. Pide un enlace a tu política de privacidad y una estrategia de puja orientada a conversiones."
+      },
+      "q4": {
+        "question": "¿Sirve también para un nido o un instituto pequeño?",
+        "answer": "Sí, con un radio corto y pocas búsquedas. Un nido de barrio solo necesita aparecer en los distritos desde donde llegan sus familias."
+      },
+      "q5": {
+        "question": "¿Cuánto cuesta la gestión de Google Ads para un colegio?",
+        "answer": "La gestión de Google Ads de 3R Core cuesta S/1,800 al mes + IGV (precio referencial). La pauta se paga aparte, directo a Google, desde la tarjeta del colegio; recomendamos empezar desde S/1,500 al mes y subir en los meses de admisión."
+      },
+      "q6": {
+        "question": "¿Debo poner la pensión en el anuncio?",
+        "answer": "No es obligatorio, pero filtra. Si el padre ve la pensión en la landing antes de llamar, la oficina de admisión recibe menos consultas que no van a matricularse."
+      },
+      "q7": {
+        "question": "¿Qué pasa cuando se llenan las vacantes?",
+        "answer": "Bajamos o pausamos la campaña de ese nivel y movemos el presupuesto al que todavía tiene cupo. Por eso cada nivel va en su propia campaña."
+      },
+      "q8": {
+        "question": "¿YouTube vale la pena para un colegio?",
+        "answer": "Sirve para quien todavía compara opciones. Un video del local o de una clase acompaña a la búsqueda; no la reemplaza."
+      }
+    }
+  },
+  "GoogleAdsColegiosSEO": {
+    "seoTitle": "Cómo funciona la publicidad en Google para colegios en Lima",
+    "p1": "Google Ads para colegios funciona por nivel, distrito y temporada. Quien busca «colegio con inicial en Surco» está eligiendo, y el anuncio pone tu colegio en esa lista.",
+    "p2": "La campaña de admisión sigue el calendario del colegio: sube cuando abre el proceso y baja cuando se llenan las vacantes de cada nivel.",
+    "p3": "Los anuncios se dirigen a padres y a postulantes adultos, porque Google no muestra publicidad personalizada a menores de 18 años.",
+    "p4": "El formulario de Google, YouTube y la búsqueda trabajan juntos, y cada solicitud se sigue hasta la visita y la matrícula con el GCLID.",
+    "p5": "La gestión de Google Ads de 3R Core cuesta S/1,800 al mes + IGV (referencial), y la pauta se paga aparte a Google desde la cuenta del colegio, que queda a su nombre.",
+    "p6": "Si buscas publicidad para tu colegio, instituto o universidad en Lima con admisiones medidas, escríbenos y revisamos qué buscan las familias de tu zona.",
+    "relatedTitle": "Servicios relacionados"
+  },
+  "GoogleAdsEmpresasIndustrialesLanding": {
+    "hero": {
+      "badge": "Google Ads · Empresas industriales",
+      "title": "Google Ads para empresas industriales que trae pedidos de cotización",
+      "subtitle": "Anuncios en Google para quien busca «plancha ASTM A36 3/8» o «fabricación de estructuras metálicas en Lima», con cada cotización seguida en tu CRM hasta la orden de compra.",
+      "cta": "Quiero más cotizaciones",
+      "waCta": "Pedir auditoría por WhatsApp",
+      "waText": "Hola 3R Core, tengo una empresa industrial y quiero que Google Ads me traiga cotizaciones.",
+      "serviceLink": "Ver el servicio completo de Google Ads"
+    },
+    "intro": {
+      "title": "Publicidad en Google para empresas industriales: llegar a quien pide la cotización",
+      "p1": "La gestión de Google Ads para empresas industriales consiste en poner tus productos y servicios técnicos frente al ingeniero, el jefe de compras o el dueño de planta que busca en Google lo que tiene que cotizar. En 3R Core la conversión que perseguimos es la solicitud de cotización, y la seguimos hasta saber cuál terminó en orden de compra.",
+      "p2": "Una empresa industrial no vende en un clic. Entre la primera búsqueda y la factura pasan semanas o meses, con visitas técnicas y aprobaciones internas. Por eso 3R Core cruza cada cotización con lo que pasó después en tu CRM.",
+      "p3": "Trabajamos con fabricantes, distribuidores de insumos, metalmecánicas y empresas de servicios industriales en Lima y regiones. El canal es Google: Búsqueda y, si hay catálogo con precios, Shopping o Performance Max. LinkedIn Ads no forma parte de este servicio."
+    },
+    "benefits": {
+      "badge": "Qué incluye",
+      "title": "La gestión de Google Ads para tu empresa industrial",
+      "items": [
+        {
+          "title": "Campañas por línea de producto",
+          "description": "Tuberías, válvulas, EPP o fabricación a medida: cada línea con sus búsquedas, su presupuesto y su página de destino."
+        },
+        {
+          "title": "Keywords técnicas de cola larga",
+          "description": "Códigos, normas, materiales y medidas: pocas búsquedas, pero de quien ya sabe qué va a comprar."
+        },
+        {
+          "title": "Formulario de cotización que filtra",
+          "description": "Pide RUC, producto, cantidad y plazo de entrega. Llegan menos curiosos y tu área comercial responde más rápido."
+        },
+        {
+          "title": "Ventas del CRM de vuelta a Google",
+          "description": "Las cotizaciones aprobadas se suben a Google Ads con el GCLID del clic que las originó, como conversión offline."
+        },
+        {
+          "title": "Fuera postulantes y estudiantes",
+          "description": "Negativas para «trabajo», «practicante», «tesis» o «PDF», búsquedas que en el rubro industrial se comen el presupuesto."
+        },
+        {
+          "title": "Reporte por línea y monto cotizado",
+          "description": "Costo por cotización, cotizaciones ganadas y monto vendido en cada línea de producto, cada mes."
+        }
+      ]
+    },
+    "process": {
+      "badge": "Cómo funciona",
+      "title": "Cómo funciona Google Ads para empresas industriales",
+      "steps": [
+        {
+          "title": "Líneas y márgenes",
+          "description": "Definimos con tu equipo qué líneas tienen margen y capacidad de planta, y qué pedidos quieres recibir."
+        },
+        {
+          "title": "Mapa de búsquedas técnicas",
+          "description": "Listamos los códigos, normas, materiales y aplicaciones con los que tus compradores buscan."
+        },
+        {
+          "title": "Medición de punta a punta",
+          "description": "Formulario y WhatsApp con GCLID, y un proceso simple para que ventas marque en el CRM qué cotización se ganó."
+        },
+        {
+          "title": "Lanzamiento y limpieza",
+          "description": "Arrancamos en Búsqueda y revisamos cada semana los términos reales para cortar lo que no es un comprador."
+        },
+        {
+          "title": "Puja con ventas reales",
+          "description": "Cuando ya hay órdenes de compra subidas, la puja aprende de ellas y deja de perseguir formularios."
+        }
+      ]
+    },
+    "h1": "Google Ads para empresas industriales en Lima y todo el Perú"
+  },
+  "GoogleAdsEmpresasIndustrialesGuia": {
+    "badge": "Guía del sector",
+    "title": "Guía de Google Ads para empresas industriales en Perú",
+    "sections": [
+      {
+        "h": "¿Qué busca en Google un comprador industrial en Perú?",
+        "p": [
+          "Un comprador industrial busca con el lenguaje de la ficha técnica: código, norma, material y medida. 3R Core arma las campañas de empresas industriales con esas palabras, porque las escribe quien ya tiene el requerimiento en la mano y necesita precio y plazo.",
+          "Cada búsqueda tiene poco volumen y Google Ads puede dejar de mostrar una palabra suelta por bajo volumen. Por eso las agrupamos por familia de producto."
+        ],
+        "list": [
+          "«tubo de acero sin costura ASTM A106»",
+          "«plancha inoxidable 304 2 mm Lima»",
+          "«válvula de bola 2 pulgadas clase 150»",
+          "«fabricación de estructuras metálicas Lima»",
+          "«mantenimiento de calderas industriales»",
+          "«pernos grado 8 por millar»"
+        ]
+      },
+      {
+        "h": "¿Qué políticas de Google Ads afectan a una empresa industrial?",
+        "p": [
+          "La mayoría de productos industriales se anuncian en Google Ads sin restricciones especiales. Antes de lanzar, 3R Core revisa dos políticas que sí tocan al rubro: «Productos o servicios peligrosos» y «Marcas».",
+          "«Productos o servicios peligrosos» no admite anuncios de productos diseñados para explotar ni de armas: un proveedor de explosivos para voladura no puede anunciarlos aunque su negocio sea legal. La política de «Marcas» permite que un distribuidor use la marca que vende si el anuncio y la página dejan claro que es revendedor."
+        ]
+      },
+      {
+        "h": "¿Qué tipo de campaña conviene a una empresa industrial?",
+        "p": [
+          "Para casi todas las empresas industriales, 3R Core empieza con campañas de Búsqueda, porque permiten controlar qué término técnico activa cada anuncio. Los demás formatos se suman según lo que vendes."
+        ],
+        "list": [
+          "Búsqueda: una campaña por línea de producto y grupos por familia, norma o servicio.",
+          "Shopping o Performance Max: solo si tienes catálogo con precios publicados y feed en Merchant Center, como un distribuidor de EPP o ferretería industrial.",
+          "Recurso de llamada: para el repuesto urgente o la parada de planta que no espera un correo.",
+          "Segmentos de datos en Búsqueda: para volver a aparecer ante quien vio tu ficha técnica."
+        ]
+      },
+      {
+        "h": "¿Cómo se mide una cotización industrial en Google Ads?",
+        "p": [
+          "En 3R Core la solicitud de cotización es la conversión principal y la venta cerrada es la que enseña a la campaña. El formulario y el botón de WhatsApp guardan el GCLID; tu equipo comercial marca en el CRM qué cotización se aprobó y por cuánto, y ese dato se sube a Google Ads.",
+          "Con un ciclo de venta largo, los primeros meses la puja se apoya en cotizaciones calificadas y luego pasa a optimizar por el valor vendido. No necesitas cambiar de CRM: basta un campo de estado y el monto."
+        ]
+      },
+      {
+        "h": "¿Qué anuncios funcionan para una empresa industrial?",
+        "p": [
+          "Los anuncios que mejor filtran repiten el término técnico de la búsqueda y piden datos de compra, no promesas. Estos son ejemplos que 3R Core adapta a cada línea de producto:"
+        ],
+        "ads": [
+          {
+            "headline": "Plancha ASTM A36 en Lima | Corte a medida en planta | Cotiza con tu RUC",
+            "url": "tuempresa.pe/planchas-acero",
+            "desc": "Indica espesor, medida y cantidad, y te enviamos la cotización formal. Certificado de calidad del fabricante en cada lote."
+          },
+          {
+            "headline": "Estructuras metálicas Lima | Fabricación y montaje | Visita técnica a tu obra",
+            "url": "tuempresa.pe/estructuras",
+            "desc": "Naves industriales, techos y plataformas según tus planos. Envía tus planos y recibe la propuesta técnica y económica."
+          },
+          {
+            "headline": "Válvulas clase 150 y 300 | Acero al carbono e inox | Stock en Lima",
+            "url": "tuempresa.pe/valvulas",
+            "desc": "Bola, compuerta y check para agua, vapor e hidrocarburos. Cotiza por WhatsApp con el código de tu requerimiento."
+          }
+        ]
+      },
+      {
+        "h": "¿Qué palabras clave negativas usa una empresa industrial?",
+        "p": [
+          "Las búsquedas técnicas atraen a estudiantes, postulantes y gente que quiere la norma en PDF. 3R Core carga estas negativas desde el primer día y las amplía cada semana con los términos reales de tu cuenta."
+        ],
+        "chips": [
+          "gratis",
+          "pdf",
+          "tesis",
+          "monografía",
+          "ppt",
+          "qué es",
+          "definición",
+          "curso",
+          "capacitación",
+          "trabajo",
+          "empleo",
+          "practicante",
+          "convocatoria",
+          "sueldo",
+          "usado",
+          "segunda mano",
+          "descargar norma"
+        ]
+      },
+      {
+        "h": "¿Cuánto invierte una empresa industrial y cuándo compra su cliente?",
+        "p": [
+          "La gestión de Google Ads de 3R Core cuesta S/1,800 al mes + IGV (precio referencial). La pauta se paga aparte, directo a Google, desde la tarjeta de tu empresa; recomendamos empezar desde S/1,500 al mes.",
+          "Con keywords de poco volumen, a veces el presupuesto no se gasta completo, y es mejor que inflarlo con búsquedas genéricas. La estacionalidad la marca tu cliente: cierres de presupuesto, paradas de planta y licitaciones. Con esas fechas subimos la pauta antes de que empiece la compra."
+        ]
+      }
+    ]
+  },
+  "GoogleAdsEmpresasIndustrialesFAQ": {
+    "badge": "Preguntas frecuentes",
+    "title": "Preguntas frecuentes sobre Google Ads para empresas industriales",
+    "faqs": {
+      "q1": {
+        "question": "¿Google Ads sirve para vender productos industriales de alto valor?",
+        "answer": "Sí, cuando la conversión es la cotización y no la compra en línea. El comprador industrial busca en Google con el código o la norma del producto; si tu anuncio aparece con ese término exacto, llega alguien con un requerimiento real."
+      },
+      "q2": {
+        "question": "¿Qué pasa si mis productos casi no tienen búsquedas?",
+        "answer": "Es normal en el rubro. Agrupamos las keywords por familia para que juntas tengan volumen, y medimos el costo por cotización."
+      },
+      "q3": {
+        "question": "¿Cuánto tarda en verse una venta si mi ciclo comercial dura meses?",
+        "answer": "Las cotizaciones llegan desde las primeras semanas; las ventas tardan lo que tarde tu ciclo. Por eso el reporte separa cotizaciones del mes y ventas cerradas de campañas anteriores."
+      },
+      "q4": {
+        "question": "¿Puedo anunciar las marcas que distribuyo?",
+        "answer": "Sí. La política de Marcas de Google Ads permite usar la marca que revendes si el anuncio y la página dejan claro que eres distribuidor. Revisamos cada caso antes de publicar."
+      },
+      "q5": {
+        "question": "¿Necesito publicar precios en mi web?",
+        "answer": "Para campañas de Búsqueda, no: muchas empresas industriales cotizan caso por caso. Para Shopping o Performance Max con catálogo, sí, porque el feed de Merchant Center exige precio."
+      },
+      "q6": {
+        "question": "¿Cuánto cuesta Google Ads para una empresa industrial?",
+        "answer": "La gestión de 3R Core cuesta S/1,800 al mes + IGV (precio referencial). La pauta se paga aparte, directo a Google, desde tu tarjeta; recomendamos empezar desde S/1,500 al mes."
+      },
+      "q7": {
+        "question": "¿Mi equipo comercial tiene que cambiar su forma de trabajar?",
+        "answer": "Solo un poco. Le pedimos marcar en el CRM o en una hoja compartida el estado de cada cotización y su monto. Con eso subimos las ventas a Google Ads."
+      },
+      "q8": {
+        "question": "¿El servicio incluye LinkedIn Ads?",
+        "answer": "No. Esta gestión cubre solo Google Ads: Búsqueda, Shopping, Performance Max y los recursos de llamada."
+      }
+    }
+  },
+  "GoogleAdsEmpresasIndustrialesSEO": {
+    "seoTitle": "Cómo funciona la publicidad en Google para empresas industriales en Perú",
+    "p1": "Google Ads para empresas industriales funciona cuando el anuncio aparece ante la búsqueda técnica exacta: el código del tubo, la norma de la plancha, la clase de la válvula. Quien escribe eso ya tiene un requerimiento y necesita cotización.",
+    "p2": "La campaña se arma por línea de producto, con su presupuesto y su página, para saber cuánto cuesta una cotización de fabricación a medida frente a una de insumos de stock.",
+    "p3": "La conversión es la cotización, y el formulario la filtra con RUC, cantidad y plazo.",
+    "p4": "Las ventas cerradas vuelven a Google Ads: 3R Core sube desde tu CRM las cotizaciones aprobadas con su monto, y la puja aprende qué búsquedas terminan en orden de compra.",
+    "p5": "La gestión de Google Ads de 3R Core cuesta S/1,800 al mes + IGV (referencial), y la pauta se paga aparte a Google desde la cuenta de tu empresa.",
+    "p6": "Si buscas anuncios en Google para tu empresa industrial, conversemos. Revisamos qué buscan tus compradores antes de proponerte presupuesto.",
+    "relatedTitle": "Servicios relacionados"
+  },
+  "GoogleAdsContadoresLanding": {
+    "hero": {
+      "badge": "Google Ads · Contadores",
+      "title": "Google Ads para contadores que suma clientes de pago mensual",
+      "subtitle": "Tu estudio contable arriba en Google cuando una mype busca «contador para mi empresa» o «estudio contable en Lima», con cada consulta por WhatsApp medida hasta que firma.",
+      "cta": "Quiero más clientes para mi estudio",
+      "waCta": "Pedir auditoría por WhatsApp",
+      "waText": "Hola 3R Core, tengo un estudio contable y quiero conseguir clientes con Google Ads.",
+      "serviceLink": "Ver el servicio completo de Google Ads"
+    },
+    "intro": {
+      "title": "Publicidad en Google para estudios contables: el cliente que busca contador hoy",
+      "p1": "La gestión de Google Ads para contadores consiste en mostrar tu estudio contable a la mype o al independiente que busca en Google quién le lleve la contabilidad. En 3R Core armamos campañas por servicio y por zona, y medimos qué consulta terminó en un cliente que paga cada mes.",
+      "p2": "El dueño de una mype suele buscar contador en dos momentos: cuando abre la empresa y cuando se le viene encima un vencimiento con SUNAT. Google Ads te pone frente a esa persona en el momento en que necesita resolverlo, y solo pagas cuando hace clic.",
+      "p3": "Un cliente contable vale por los meses que se queda, no por la primera consulta. Por eso 3R Core reporta cuántos contratos firmaste, además de cuántos mensajes llegaron. Trabajamos con contadores independientes y estudios contables de Lima y provincias."
+    },
+    "benefits": {
+      "badge": "Qué incluye",
+      "title": "La gestión de Google Ads para tu estudio contable",
+      "items": [
+        {
+          "title": "Campañas por servicio",
+          "description": "Contabilidad mensual, declaración anual, planillas o regularización: cada servicio con sus búsquedas y su presupuesto."
+        },
+        {
+          "title": "Pauta según el cronograma de SUNAT",
+          "description": "Subimos la inversión antes de los vencimientos mensuales y de la declaración anual, cuando más se busca contador."
+        },
+        {
+          "title": "Anuncios por distrito",
+          "description": "Si atiendes en persona, mostramos el anuncio en tu zona y con tu dirección; si trabajas en remoto, en todo el país."
+        },
+        {
+          "title": "Filtro de consultas que no son clientes",
+          "description": "Negativas para «curso», «Clave SOL», «consulta RUC» y búsquedas de estudiantes de contabilidad."
+        },
+        {
+          "title": "WhatsApp y llamada medidos",
+          "description": "Cada consulta queda registrada con la campaña y la palabra que la trajo, en tu propio panel."
+        },
+        {
+          "title": "Reporte en contratos firmados",
+          "description": "Costo por consulta y por cliente firmado, separado por servicio, cada mes."
+        }
+      ]
+    },
+    "process": {
+      "badge": "Cómo funciona",
+      "title": "Cómo funciona Google Ads para contadores",
+      "steps": [
+        {
+          "title": "Servicios y tipo de cliente",
+          "description": "Definimos qué clientes quieres: mypes del Nuevo RUS, del RER o del régimen MYPE Tributario, independientes o empresas más grandes."
+        },
+        {
+          "title": "Búsquedas y calendario",
+          "description": "Elegimos las búsquedas de quien contrata y cruzamos el plan con las fechas del cronograma de SUNAT."
+        },
+        {
+          "title": "Landing y medición",
+          "description": "Página por servicio con tu forma de trabajo y honorarios desde, WhatsApp y llamada con el identificador del clic."
+        },
+        {
+          "title": "Lanzamiento y filtrado",
+          "description": "Revisamos cada semana los términos reales y bloqueamos los que traen estudiantes o trámites gratuitos."
+        },
+        {
+          "title": "Optimización por contratos",
+          "description": "Subimos a Google Ads qué consultas firmaron para que la puja aprenda de clientes y no de mensajes."
+        }
+      ]
+    },
+    "h1": "Google Ads para contadores y estudios contables en Lima y Perú"
+  },
+  "GoogleAdsContadoresGuia": {
+    "badge": "Guía del sector",
+    "title": "Guía de Google Ads para contadores y estudios contables en Perú",
+    "sections": [
+      {
+        "h": "¿Qué busca en Google una mype que necesita contador?",
+        "p": [
+          "Una mype que necesita contador busca por servicio, por régimen tributario o por zona. 3R Core organiza las campañas de estudios contables con esos tres criterios, porque cada uno trae a un cliente distinto y con un honorario distinto."
+        ],
+        "list": [
+          "«contador para mi empresa»",
+          "«estudio contable en Lima»",
+          "«contador para empresa RER»",
+          "«contabilidad para mype precio»",
+          "«declaración anual de renta empresa»",
+          "«regularizar declaraciones SUNAT»",
+          "«contador en Los Olivos»"
+        ]
+      },
+      {
+        "h": "¿Un estudio contable necesita verificación de servicios financieros en Google Ads?",
+        "p": [
+          "Según las páginas de Google que revisamos, no hay indicios de que la contabilidad lo requiera, pero Google no lo dice de forma expresa. La política «Productos y servicios financieros» trata productos para gestionar o invertir dinero, y la verificación por país se pide para banca, créditos, inversiones y seguros. La contabilidad y la asesoría tributaria no aparecen en esa lista, y Perú no figuraba entre los países con verificación cuando la revisamos.",
+          "Si tu estudio también ofrece préstamos, factoring o seguros, 3R Core revisa el requisito antes de anunciar esos servicios. Y si anuncias trámites como sacar el RUC, comprobamos la sección «Documentos oficiales y servicios públicos» de la política de Otros negocios restringidos."
+        ]
+      },
+      {
+        "h": "¿Cuándo buscan contador las empresas en Perú?",
+        "p": [
+          "La demanda de un estudio contable sigue el cronograma de SUNAT, y 3R Core sube la pauta unas semanas antes de cada pico. Las fechas cambian cada año, así que las tomamos del cronograma oficial publicado en sunat.gob.pe."
+        ],
+        "list": [
+          "Obligaciones mensuales: vencen según el último dígito del RUC. El periodo setiembre 2026, por ejemplo, vence entre el 16 y el 26 de octubre de 2026.",
+          "Declaración anual de renta 2025, cronograma general: del 26 de marzo al 13 de abril de 2026.",
+          "Declaración anual de renta 2025 para personas naturales y mypes de la Ley 31940: del 27 de mayo al 10 de junio de 2026.",
+          "Inicio de año: quien abre empresa en enero busca contador antes de su primera declaración."
+        ]
+      },
+      {
+        "h": "¿Qué tipo de campaña conviene a un estudio contable?",
+        "p": [
+          "Para un estudio contable, 3R Core empieza con campañas de Búsqueda por servicio, con recurso de llamada en horario de oficina y recurso de ubicación si recibes clientes en persona. El cliente contable compara dos o tres opciones y suele llamar antes de decidir.",
+          "Performance Max y YouTube no son el punto de partida: el volumen de búsquedas de contador es acotado y conviene controlar cada término. El remarketing sí ayuda en la declaración anual, cuando la mype que te visitó en marzo todavía no decide."
+        ]
+      },
+      {
+        "h": "¿Cómo se mide un cliente contable que paga cada mes?",
+        "p": [
+          "En 3R Core un lead contable se mide en dos pasos: la consulta y el contrato. El formulario y el clic a WhatsApp guardan el GCLID; cuando el cliente firma, subimos esa venta a Google Ads como conversión offline con el valor del honorario mensual.",
+          "Así la puja deja de premiar al que pregunta cuánto cuesta una declaración suelta y prioriza al que contrata contabilidad mensual. Separamos también las consultas puntuales de temporada para que no inflen el reporte."
+        ]
+      },
+      {
+        "h": "¿Qué anuncios funcionan para contadores?",
+        "p": [
+          "Los anuncios de un estudio contable funcionan mejor si dicen a qué régimen atiendes y cómo trabajas, sin usar el nombre ni el logo de SUNAT. Ejemplos que 3R Core adapta:"
+        ],
+        "ads": [
+          {
+            "headline": "Contador para tu mype | Régimen MYPE y RER | Consulta por WhatsApp",
+            "url": "tuestudio.pe/contabilidad-mensual",
+            "desc": "Llevamos tu contabilidad, declaraciones mensuales y planillas. Honorario fijo según tus comprobantes del mes."
+          },
+          {
+            "headline": "Estudio contable en Lima | Declaración anual 2026 | Agenda tu revisión",
+            "url": "tuestudio.pe/renta-anual",
+            "desc": "Revisamos tus libros antes de presentar la renta anual. Atendemos por llamada, WhatsApp o en la oficina."
+          }
+        ]
+      },
+      {
+        "h": "¿Qué palabras clave negativas usa un estudio contable?",
+        "p": [
+          "Las búsquedas contables atraen a estudiantes, a quien quiere hacerlo solo y a quien busca un trámite de SUNAT. 3R Core bloquea estas palabras desde el inicio y revisa cada semana los términos reales."
+        ],
+        "chips": [
+          "gratis",
+          "curso",
+          "carrera de contabilidad",
+          "universidad",
+          "examen",
+          "trabajo",
+          "empleo",
+          "practicante",
+          "sueldo",
+          "plantilla excel",
+          "pdf",
+          "clave sol",
+          "consulta ruc",
+          "sunat teléfono",
+          "colegio de contadores",
+          "libro contable"
+        ]
+      }
+    ]
+  },
+  "GoogleAdsContadoresFAQ": {
+    "badge": "Preguntas frecuentes",
+    "title": "Preguntas frecuentes sobre Google Ads para contadores",
+    "faqs": {
+      "q1": {
+        "question": "¿Google Ads le sirve a un contador independiente o solo a estudios grandes?",
+        "answer": "Sirve a los dos. Un contador independiente puede limitar los anuncios a su distrito y a un solo servicio, como contabilidad mensual para mypes, y crecer desde ahí."
+      },
+      "q2": {
+        "question": "¿Cuándo conviene subir la publicidad de un estudio contable?",
+        "answer": "Antes de los picos del cronograma de SUNAT: la declaración anual de renta y los vencimientos mensuales por último dígito del RUC. Tomamos las fechas del cronograma oficial de cada año."
+      },
+      "q3": {
+        "question": "¿Qué búsquedas traen clientes que pagan cada mes?",
+        "answer": "Las que nombran el servicio continuo y el tipo de empresa, como «contador para mi empresa» o «contabilidad mensual mype». Las búsquedas de una declaración suelta traen clientes de una sola vez."
+      },
+      "q4": {
+        "question": "¿Puedo anunciar «declaración de renta» si no soy SUNAT?",
+        "answer": "Sí, como servicio de tu estudio. El anuncio y la página deben dejar claro que eres un estudio privado, sin logo ni colores que den a entender que eres SUNAT."
+      },
+      "q5": {
+        "question": "¿Mi estudio contable necesita verificación de servicios financieros?",
+        "answer": "Según lo que revisamos, la contabilidad no aparece entre los servicios que Google somete a esa verificación, aunque Google no lo dice de forma expresa. Si además ofreces créditos o seguros, lo comprobamos antes de anunciarlos."
+      },
+      "q6": {
+        "question": "¿Cuánto cuesta Google Ads para un estudio contable?",
+        "answer": "La gestión de Google Ads de 3R Core cuesta S/1,800 al mes + IGV (precio referencial). La pauta se paga aparte, directo a Google, desde tu tarjeta; recomendamos empezar desde S/1,500 al mes."
+      },
+      "q7": {
+        "question": "¿Cómo saben si un cliente que llegó por Google Ads sigue conmigo?",
+        "answer": "Marcas en una hoja o CRM qué consultas firmaron. Con eso subimos cada contrato a Google Ads y te reportamos cuántos clientes activos vinieron de los anuncios."
+      },
+      "q8": {
+        "question": "¿Pueden mostrar mis anuncios solo en algunos distritos?",
+        "answer": "Sí. Si atiendes en persona, segmentamos por distrito o por radio alrededor de tu oficina; si trabajas en remoto, ampliamos a todo el Perú."
+      }
+    }
+  },
+  "GoogleAdsContadoresSEO": {
+    "seoTitle": "Cómo funciona la publicidad en Google para estudios contables en Lima",
+    "p1": "Google Ads para contadores funciona porque la mype busca contador cuando lo necesita: al abrir la empresa o cuando se acerca un vencimiento. El anuncio aparece en ese momento y el estudio paga solo si hacen clic.",
+    "p2": "La campaña se divide por servicio. Contabilidad mensual, declaración anual, planillas y regularización tienen búsquedas y honorarios distintos, y conviene medirlos por separado.",
+    "p3": "El calendario manda. 3R Core ajusta la pauta al cronograma de SUNAT de cada año, con más inversión antes de la declaración anual y de los vencimientos mensuales.",
+    "p4": "El contacto se mide hasta el contrato. WhatsApp, llamada y formulario guardan su campaña de origen, y los clientes que firman se suben a Google Ads como conversión offline.",
+    "p5": "La gestión de Google Ads de 3R Core cuesta S/1,800 al mes + IGV (referencial). La pauta se paga aparte a Google desde la cuenta de tu estudio, que queda a tu nombre.",
+    "p6": "Si buscas publicidad para tu estudio contable o despacho contable en Lima, conversemos. Te mostramos qué buscan las mypes de tu zona antes de invertir.",
+    "relatedTitle": "Servicios relacionados"
+  },
+  "MarketingAbogadosGuia": {
+    "badge": "Guía del sector",
+    "title": "Guía de Google Ads para estudios de abogados en Perú",
+    "sections": [
+      {
+        "h": "¿Qué dice la política de Google Ads sobre los servicios legales?",
+        "p": [
+          "Google Ads no tiene una política propia que restrinja anunciar servicios legales, así que un estudio de abogados en Perú puede anunciarse sin certificación previa. Lo que 3R Core revisa en cada cuenta legal son tres reglas concretas que sí aplican.",
+          "Los anuncios de abogados tienen además un límite profesional: el Código de Ética del Abogado vigente en el Perú permite la publicidad, pero ofrecer o garantizar el resultado de un proceso cruza la línea. 3R Core escribe los anuncios con lo que el estudio controla: áreas que atiende, cómo es la primera consulta y dónde atiende."
+        ],
+        "list": [
+          "«Otros negocios restringidos»: prohíbe los servicios de fianzas judiciales que ofrecen avales para pagar fianzas. Representar a un detenido sí se puede anunciar.",
+          "«Requisitos legales»: el anuncio tiene que cumplir la ley del lugar donde se muestra, además de las políticas de Google.",
+          "Política de publicidad personalizada: limita el remarketing en áreas sensibles como familia (lo vemos en la siguiente sección)."
+        ]
+      },
+      {
+        "h": "¿Puede un estudio de abogados hacer remarketing en Google Ads?",
+        "p": [
+          "Depende del área de práctica. La política de publicidad personalizada de Google incluye categorías de intereses sensibles, y en ellas no se pueden usar audiencias propias del anunciante: ni listas de visitantes de la web, ni listas de clientes, ni segmentos similares.",
+          "Google menciona de forma expresa los servicios de divorcio dentro de «Dificultades en las relaciones». La misma lista incluye «Comisión de un delito» y «Situación financiera desfavorable», que 3R Core trata con el mismo cuidado en campañas de derecho penal y de deudas. En esas áreas trabajamos con Búsqueda y audiencias predefinidas de Google, que ya excluyen las señales sensibles.",
+          "En corporativo, tributario o propiedad intelectual el remarketing sí es posible, y sirve: el gerente que buscó «abogado para constituir empresa» rara vez contrata en la primera visita."
+        ]
+      },
+      {
+        "h": "¿Qué campañas convienen según el área del derecho?",
+        "p": [
+          "Para un estudio de abogados, 3R Core decide el formato según la urgencia del caso. No todas las áreas se compran igual, y mezclar penal con corporativo en una sola campaña reparte mal el presupuesto."
+        ],
+        "list": [
+          "Penal y detenciones: Búsqueda con recurso de llamada y programación de anuncios fuera de horario si el estudio atiende emergencias.",
+          "Familia y laboral: Búsqueda por distrito, con recurso de ubicación vinculado a tu Perfil de Empresa en Google.",
+          "Corporativo y tributario: Búsqueda con formulario de contacto y remarketing, porque la decisión pasa por varias personas.",
+          "Marca del estudio: una campaña pequeña para tu nombre, para que otro estudio no quede arriba cuando te buscan."
+        ]
+      },
+      {
+        "h": "¿Cómo se mide una consulta legal que llega por llamada?",
+        "p": [
+          "En un estudio de abogados muchas consultas entran por teléfono, y 3R Core las mide con el seguimiento de llamadas de Google Ads: solo cuenta como conversión la llamada que supera una duración mínima, así un número equivocado o una pregunta de dos frases no se cuenta como cliente.",
+          "Después separamos consulta de caso. Tu equipo marca en una hoja o CRM qué consultas se convirtieron en patrocinio y con qué honorario, y esos casos se suben a Google Ads. Una consulta laboral y un caso corporativo no valen lo mismo, y la puja tiene que saberlo."
+        ]
+      },
+      {
+        "h": "¿Cómo se ve un anuncio de abogados que cumple las reglas?",
+        "p": [
+          "Un buen anuncio legal nombra el problema, el área y la forma de contacto, sin cifras de éxito ni promesas sobre el fallo. Estos ejemplos de búsqueda los adapta 3R Core a cada estudio:"
+        ],
+        "ads": [
+          {
+            "headline": "Abogado laboral en Lima | Despidos y beneficios | Primera consulta clara",
+            "url": "tuestudio.pe/laboral",
+            "desc": "Revisamos tu caso de despido, CTS o vacaciones truncas. Te decimos qué opciones tienes y cuánto cuesta el proceso."
+          },
+          {
+            "headline": "Abogado de familia en Surco | Divorcio y alimentos | Agenda tu cita",
+            "url": "tuestudio.pe/familia",
+            "desc": "Atención reservada para divorcio, tenencia y pensión de alimentos. Citas presenciales o por videollamada."
+          },
+          {
+            "headline": "Abogado penalista Lima | Atención fuera de horario | Llama ahora",
+            "url": "tuestudio.pe/penal",
+            "desc": "Defensa en investigaciones fiscales y procesos penales. Un abogado del estudio te atiende por teléfono."
+          }
+        ]
+      },
+      {
+        "h": "¿Qué palabras clave negativas necesita un estudio de abogados?",
+        "p": [
+          "En el rubro legal, la mitad de las búsquedas viene de estudiantes, de gente que busca un modelo de documento o de quien quiere el servicio gratuito del Estado. 3R Core carga estas negativas desde el primer día y suma las que aparecen en los términos reales de tu cuenta."
+        ],
+        "chips": [
+          "gratis",
+          "gratuito",
+          "modelo de",
+          "formato",
+          "plantilla",
+          "pdf",
+          "ejemplo de demanda",
+          "curso",
+          "diplomado",
+          "maestría",
+          "tesis",
+          "trabajo",
+          "practicante",
+          "sueldo de abogado",
+          "defensa pública",
+          "consultorio jurídico gratuito",
+          "colegio de abogados",
+          "qué dice el artículo"
+        ]
+      }
+    ]
+  },
+  "MarketingClinicasGuia": {
+    "badge": "Guía del sector",
+    "title": "Guía de anuncios en Google para clínicas en Perú",
+    "sections": [
+      {
+        "h": "¿Qué políticas de Google Ads aplican a una clínica?",
+        "p": [
+          "A una clínica le aplican dos políticas de Google. «Cuidado de la salud y medicamentos» limita qué se puede anunciar: entre sus categorías restringidas están los servicios de medicamentos que requieren receta, los tratamientos experimentales o sin comprobación científica, el control de natalidad y la fertilidad, y los servicios de adicciones.",
+          "«Salud en la publicidad personalizada» limita a quién se le puede mostrar el anuncio. Cubre afecciones físicas o mentales, salud íntima y procedimientos invasivos, y prohíbe los públicos seleccionados por el anunciante: segmentación por clientes, segmentos basados en tus datos, expansión del público y segmentos similares. Para una clínica eso significa que no hay remarketing a pacientes ni listas de correos cargadas en Google Ads. 3R Core trabaja con palabras clave, ubicación y públicos predefinidos de Google, que sí están permitidos."
+        ]
+      },
+      {
+        "h": "¿Qué tipo de campaña conviene a una clínica en Lima?",
+        "p": [
+          "A una clínica le conviene una campaña de Búsqueda por especialidad como base, porque el paciente escribe exactamente lo que necesita. 3R Core suma otras campañas según el caso:",
+          "La programación también importa. 3R Core muestra los anuncios con llamada solo en el horario en que la recepción contesta; fuera de ese horario, el anuncio lleva al WhatsApp o al formulario y la cita se confirma a primera hora del día siguiente."
+        ],
+        "list": [
+          "Búsqueda por especialidad y examen: «cardiólogo en San Borja», «resonancia magnética precio Lima», «chequeo preventivo ejecutivo».",
+          "Búsqueda de marca: protege el nombre de la clínica cuando otra aparece arriba al buscarte.",
+          "Campaña con llamada como objetivo: para urgencias, laboratorio y servicios donde el paciente prefiere hablar antes de ir.",
+          "Performance Max con tu ficha de Google Business Profile: suma Maps y visitas a la sede, sin listas de pacientes."
+        ]
+      },
+      {
+        "h": "¿Qué anuncios funcionan para clínicas?",
+        "p": [
+          "Los anuncios que funcionan para clínicas nombran la especialidad, el distrito y la forma de agendar, sin prometer curas ni resultados. 3R Core redacta ejemplos como estos y los adapta a cada sede:",
+          "Debajo del texto van los recursos de llamada y de ubicación, con el teléfono y la dirección de la sede. En clínicas con varias sedes, cada grupo de anuncios apunta a la sede más cercana al distrito que el paciente escribió, para que no le ofrezcas una cita al otro lado de Lima."
+        ],
+        "ads": [
+          {
+            "headline": "Cardiólogo en San Borja | Citas de lunes a sábado | Agenda por WhatsApp",
+            "url": "tuclinica.pe/cardiologia",
+            "desc": "Consulta y electrocardiograma en la misma sede. Escríbenos y te damos el horario."
+          },
+          {
+            "headline": "Chequeo preventivo en Lima | Resultados en tu correo | Atendemos con EPS",
+            "url": "tuclinica.pe/chequeos",
+            "desc": "Paquetes para adultos y empresas. Agenda tu chequeo por teléfono o por WhatsApp."
+          },
+          {
+            "headline": "Fisioterapia en Surco | Terapia para lesiones | Primera evaluación",
+            "url": "tuclinica.pe/fisioterapia",
+            "desc": "Sesiones con fisioterapeuta colegiado. Consulta la disponibilidad de esta semana."
+          }
+        ]
+      },
+      {
+        "h": "¿Qué palabras clave negativas necesita una clínica?",
+        "p": [
+          "Una clínica necesita negativas para no pagar clics de quien busca empleo, estudia medicina o quiere atención pública gratuita. 3R Core parte de esta lista y la revisa cada semana con los términos de búsqueda reales de la cuenta:"
+        ],
+        "chips": [
+          "trabajo",
+          "convocatoria",
+          "residentado",
+          "internado",
+          "sueldo",
+          "curso",
+          "diplomado",
+          "universidad",
+          "síntomas",
+          "qué es",
+          "gratis",
+          "minsa",
+          "sis",
+          "essalud cita",
+          "telefono essalud",
+          "pdf",
+          "tesis"
+        ]
+      },
+      {
+        "h": "¿Cómo se mide una cita que llega por WhatsApp o por llamada?",
+        "p": [
+          "En una clínica la cita se mide cuando la recepción la confirma. 3R Core guarda el GCLID en el clic al WhatsApp y en el formulario, y las llamadas desde el anuncio se registran como conversión de llamada con duración mínima, para no contar llamadas cortadas.",
+          "Al final del día, la recepción marca qué conversaciones terminaron en cita. Esas citas se suben a Google Ads como conversión offline, solo con el identificador del clic y la fecha: a Google no se le envía el diagnóstico ni la especialidad del paciente. Con ese dato la puja aprende qué búsquedas traen pacientes que sí llegan a la consulta."
+        ]
+      },
+      {
+        "h": "¿Conviene anunciar que la clínica atiende con seguro o EPS?",
+        "p": [
+          "Sí, si es verdad para esa especialidad. Muchos pacientes en Lima buscan añadiendo el nombre de su seguro o la palabra «EPS», y un anuncio que lo dice filtra al paciente que puede pagar con su cobertura.",
+          "3R Core separa los grupos de anuncios de pacientes con seguro y particulares, porque el ticket y la conversión no son iguales. El texto nombra solo las aseguradoras con convenio vigente y la página aclara qué cubre cada una. Si una aseguradora deja de tener convenio, se retira del anuncio ese mismo día para no generar citas que la recepción tendrá que rechazar."
+        ]
+      }
+    ]
+  },
+  "MarketingClinicasDentalesGuia": {
+    "badge": "Guía del sector",
+    "title": "Guía de Google Ads para clínicas dentales en Perú",
+    "sections": [
+      {
+        "h": "¿Qué políticas de Google Ads aplican a una clínica dental?",
+        "p": [
+          "Una clínica dental anuncia bajo la política «Atención sanitaria y medicamentos» de Google Ads. Los servicios odontológicos se pueden anunciar; lo que se restringe es otra cosa. Para campañas fuera de EE. UU., Canadá y Nueva Zelanda, como las de Perú, la política «Términos sobre medicamentos restringidos» no permite usar términos de medicamentos con receta en los anuncios ni en las páginas de destino.",
+          "En la práctica, 3R Core revisa cada landing dental antes de lanzar:"
+        ],
+        "list": [
+          "Nada de nombres de antibióticos, analgésicos con receta o anestésicos en el texto del anuncio ni en la página.",
+          "La sedación o el tratamiento sin dolor se describen como servicio, sin nombrar el fármaco.",
+          "Se aceptan avisos legales y de salud pública, que la política considera uso no promocional."
+        ]
+      },
+      {
+        "h": "¿Por qué una clínica dental no puede hacer remarketing en Google Ads?",
+        "p": [
+          "La política «Segmentación restringida de la publicidad personalizada» incluye la salud entre las categorías sensibles. Quien promociona productos o servicios de salud no puede usar audiencias seleccionadas por él mismo: los segmentos de datos (antes llamados remarketing) y las listas de clientes quedan fuera.",
+          "Para una clínica dental eso significa que no hay anuncios persiguiendo a quien visitó la página de implantes. 3R Core compensa con lo que sí está permitido: búsquedas bien elegidas, audiencias predefinidas de Google (que excluyen las señales sensibles) y una landing que convierta en la primera visita. Subir citas como conversión offline sí está permitido, porque mide resultados y no crea una audiencia."
+        ]
+      },
+      {
+        "h": "¿Cómo se reparte la cuenta entre implantes, ortodoncia y urgencias?",
+        "p": [
+          "En 3R Core cada tratamiento dental tiene un tiempo de decisión distinto, y la cuenta se arma según eso. La urgencia por dolor se decide en minutos; un implante o una ortodoncia, en semanas, después de comparar precios y pedir una evaluación.",
+          "Por eso la urgencia va en Búsqueda con recurso de llamada, programada en el horario en que alguien contesta. Desde febrero de 2026 Google no deja crear anuncios solo de llamada, así que la llamada va dentro del anuncio de búsqueda adaptable. Implantes y ortodoncia van en Búsqueda con landing propia y formulario de evaluación, y Performance Max entra solo si la clínica tiene ficha de Google con reseñas y fotos reales.",
+          "El presupuesto se asigna por tratamiento, según la capacidad del sillón y el margen de cada uno, y se revisa con datos de citas, no de clics."
+        ]
+      },
+      {
+        "h": "¿Cómo se mide una cita dental que empieza por WhatsApp?",
+        "p": [
+          "En una clínica dental, 3R Core mide en dos etapas. La primera es la evaluación agendada: el clic a WhatsApp y el formulario guardan el GCLID, y la recepción marca qué contactos llegaron a sentarse en el sillón. La segunda es el tratamiento iniciado, que en ortodoncia o implantes vale mucho más que una limpieza.",
+          "Subimos ambas como conversión offline con valores distintos. Así la puja aprende a buscar pacientes que empiezan tratamiento, en lugar de llenar la agenda con evaluaciones que no siguen."
+        ]
+      },
+      {
+        "h": "¿Qué anuncios funcionan para clínicas dentales?",
+        "p": [
+          "Funcionan los anuncios que nombran el tratamiento, la zona y el primer paso, sin prometer resultados ni nombrar medicamentos. Estos son ejemplos que 3R Core adapta; no son anuncios de clientes:"
+        ],
+        "ads": [
+          {
+            "headline": "Implantes dentales en Surco | Evaluación con tomografía | Agenda por WhatsApp",
+            "url": "tuclinicadental.pe/implantes",
+            "desc": "Evaluación con especialista en implantes y plan de tratamiento por escrito. Escríbenos por WhatsApp y elige el día de tu evaluación en la clínica."
+          },
+          {
+            "headline": "Dentista de urgencia en Lima | Atención hoy | Llama ahora",
+            "url": "tuclinicadental.pe/urgencias",
+            "desc": "Dolor de muela o diente roto: atendemos urgencias en horario extendido. Llama y te decimos a qué hora puedes venir hoy."
+          },
+          {
+            "headline": "Ortodoncia en San Borja | Brackets y alineadores | Primera consulta",
+            "url": "tuclinicadental.pe/ortodoncia",
+            "desc": "Brackets metálicos, estéticos o alineadores según tu caso. Agenda tu primera consulta y recibe el plan con tiempos y cuotas."
+          }
+        ]
+      },
+      {
+        "h": "¿Qué palabras clave negativas usa una clínica dental?",
+        "p": [
+          "Además de cursos y empleo, que la campaña ya filtra, 3R Core bloquea búsquedas de remedios caseros, atención pública y compras de productos. Esta es la lista base para una clínica dental en Lima:"
+        ],
+        "chips": [
+          "remedio casero",
+          "qué tomar para",
+          "pastilla",
+          "SIS",
+          "EsSalud",
+          "posta",
+          "hospital",
+          "seguro integral",
+          "tesis",
+          "pdf",
+          "imágenes",
+          "dibujo",
+          "kit de blanqueamiento",
+          "mercado libre",
+          "venta de brackets",
+          "para perros"
+        ]
+      }
+    ]
+  },
+  "MarketingClinicasEsteticasGuia": {
+    "badge": "Guía del sector",
+    "title": "Guía de anuncios en Google para clínicas estéticas en Perú",
+    "sections": [
+      {
+        "h": "¿Qué políticas de Google Ads aplican a una clínica estética?",
+        "p": [
+          "A una clínica estética le aplica la política «Salud en la publicidad personalizada», que nombra de forma expresa los procedimientos médicos invasivos, como cirugías estéticas o inyecciones. Para esos anuncios Google prohíbe los públicos seleccionados por el anunciante: segmentación por clientes, segmentos basados en tus datos, expansión del público y segmentos similares.",
+          "En la práctica, 3R Core no hace remarketing ni carga listas de pacientes en campañas de rellenos, toxina botulínica o cirugía. También aplica la política «Cuidado de la salud y medicamentos», que restringe los términos de medicamentos de receta. Como la toxina botulínica es un medicamento de receta, 3R Core anuncia el tratamiento por lo que hace (líneas de expresión, arrugas del entrecejo) y deja la marca comercial fuera del texto."
+        ]
+      },
+      {
+        "h": "¿Qué tipo de campaña conviene a una clínica estética?",
+        "p": [
+          "A una clínica estética le conviene Búsqueda por tratamiento como campaña principal, porque el paciente escribe el nombre del procedimiento y su distrito. 3R Core organiza la cuenta así:",
+          "Cada campaña se limita a los distritos desde donde tus pacientes llegan sin problema y a tu horario de valoraciones. Si la clínica tiene una sola sede, 3R Core prioriza las búsquedas que nombran ese distrito o los vecinos, que suelen ser las de más intención."
+        ],
+        "list": [
+          "Búsqueda para tratamientos con aguja o cirugía, sin públicos propios, como pide la política de salud.",
+          "Búsqueda para tratamientos faciales y corporales sin aguja, con presupuesto propio porque su ticket es distinto.",
+          "Búsqueda de marca para quien te vio en Instagram o TikTok y busca tu nombre en Google.",
+          "Performance Max con tu ficha de Google Business Profile para sumar Maps, siempre sin listas de pacientes."
+        ]
+      },
+      {
+        "h": "¿Qué anuncios funcionan para clínicas estéticas?",
+        "p": [
+          "Los anuncios que funcionan para clínicas estéticas nombran el tratamiento, quién lo aplica y cómo se agenda la valoración, sin prometer resultados ni comparar cuerpos. Ejemplos adaptables de 3R Core:"
+        ],
+        "ads": [
+          {
+            "headline": "Depilación láser en Miraflores | Valoración con especialista | Agenda por WhatsApp",
+            "url": "tuclinica.pe/depilacion-laser",
+            "desc": "Sesiones para rostro y cuerpo. Escríbenos y te contamos cómo es la primera cita."
+          },
+          {
+            "headline": "Líneas de expresión en Surco | Aplicación por médico | Valoración previa",
+            "url": "tuclinica.pe/lineas-de-expresion",
+            "desc": "Te explicamos el procedimiento en la valoración. Agenda tu cita por WhatsApp."
+          },
+          {
+            "headline": "Limpieza facial en San Isidro | Cabina con cosmiatra | Citas de lunes a sábado",
+            "url": "tuclinica.pe/limpieza-facial",
+            "desc": "Limpieza según tu tipo de piel. Revisa horarios y separa tu cita por WhatsApp."
+          }
+        ]
+      },
+      {
+        "h": "¿Qué palabras clave negativas necesita una clínica estética?",
+        "p": [
+          "Una clínica estética necesita negativas para no pagar clics de quien busca cursos de cosmetología, equipos o tratamientos caseros. 3R Core empieza con esta lista y la amplía cada semana:"
+        ],
+        "chips": [
+          "curso",
+          "certificación",
+          "diplomado",
+          "cosmiatría estudiar",
+          "trabajo",
+          "sueldo",
+          "comprar",
+          "venta",
+          "máquina",
+          "equipo láser",
+          "casero",
+          "en casa",
+          "mascarilla",
+          "mal hecho",
+          "efectos secundarios",
+          "demanda",
+          "gratis"
+        ]
+      },
+      {
+        "h": "¿Cómo se mide una valoración agendada por WhatsApp?",
+        "p": [
+          "En una clínica estética la conversión es la valoración confirmada, no el mensaje. 3R Core guarda el GCLID en el clic al WhatsApp; cuando la asesora confirma la valoración, esa conversación se sube a Google Ads como conversión offline.",
+          "Se puede ir un paso más allá y subir también el inicio de tratamiento con su valor, porque una valoración de láser y una de rellenos no dejan lo mismo. A Google solo se le envía el identificador del clic, la fecha y el valor, nunca el tratamiento ni datos de la paciente.",
+          "Las valoraciones agendadas que no asisten se marcan aparte. Así 3R Core puede ver qué búsquedas traen pacientes que reservan y no llegan, y bajar la puja en esas palabras antes de que se coman el presupuesto del mes."
+        ]
+      },
+      {
+        "h": "¿Conviene poner precios en los anuncios de una clínica estética?",
+        "p": [
+          "Conviene cuando el precio es fijo y competitivo, como en una limpieza facial o un paquete de sesiones de láser. Google Ads tiene recursos de precio que muestran varios tratamientos con su tarifa debajo del anuncio, y te ahorran clics de quien no puede pagar esa tarifa.",
+          "En tratamientos con aguja o cirugía, donde el precio depende de la valoración, 3R Core prefiere «desde» o no mostrar precio, porque un monto que luego cambia genera desconfianza y citas que no se concretan. Las promociones de temporada van con fecha de fin en el anuncio y en la página, y se apagan el mismo día que terminan."
+        ]
+      }
+    ]
+  },
+  "MarketingEcommerceGuia": {
+    "badge": "Guía del sector",
+    "title": "Guía de Google Ads para tiendas online en Perú",
+    "sections": [
+      {
+        "h": "¿Qué políticas de Shopping revisa 3R Core antes de subir tu catálogo?",
+        "p": [
+          "Antes de activar Shopping o Performance Max para una tienda online, 3R Core revisa el catálogo contra las políticas de anuncios de Shopping de Google Merchant Center. Un producto rechazado no se muestra, y varios rechazos por la misma causa pueden afectar a toda la cuenta.",
+          "Las secciones que más pesan en una tienda peruana son estas:"
+        ],
+        "list": [
+          "«Contenido prohibido»: productos falsificados, productos peligrosos y los que faciliten conductas fraudulentas. Las réplicas de marca no pasan.",
+          "«Prácticas prohibidas»: incluye la información engañosa. El precio, el stock y las condiciones que ve el comprador en el anuncio tienen que ser los de tu página.",
+          "Contenido restringido: bebidas alcohólicas, productos de salud, contenido sexual o protección de menores se pueden anunciar, pero con limitaciones.",
+          "«Requisitos del sitio»: la tienda tiene que funcionar en navegadores comunes, sin páginas en construcción ni el botón de volver bloqueado."
+        ]
+      },
+      {
+        "h": "¿Qué hace que un feed de Merchant Center venda en Shopping?",
+        "p": [
+          "En un e-commerce, el feed es el anuncio: Google arma el anuncio de Shopping con el título, la foto y el precio que vienen del catálogo. 3R Core trabaja el feed como trabajaría el texto de un anuncio de búsqueda.",
+          "Los ajustes que más cambian el rendimiento de una tienda en Perú:"
+        ],
+        "list": [
+          "Títulos con marca, tipo de producto y atributo que se busca: «Zapatillas running Adidas mujer talla 38» y no «Modelo AX-22».",
+          "Precio en soles y disponibilidad iguales a los de la página; si no coinciden, Merchant Center rechaza el producto.",
+          "GTIN o código de barras cuando el producto lo tiene, para que Google lo identifique.",
+          "Envío configurado por zona, porque el comprador de provincia filtra por costo de envío.",
+          "Etiquetas personalizadas por margen y rotación, para pujar distinto por cada grupo."
+        ]
+      },
+      {
+        "h": "¿Shopping estándar o Performance Max para una tienda online?",
+        "p": [
+          "Para la mayoría de tiendas online, 3R Core empieza con Performance Max sobre el catálogo y deja una campaña de Shopping estándar para los productos que necesitan control fino. Performance Max reparte el catálogo entre búsqueda, YouTube, Gmail y display desde una sola campaña; Shopping estándar muestra solo en Google y deja ver y excluir búsquedas una por una.",
+          "Usamos Shopping estándar cuando el margen es muy delgado, cuando hay que proteger una categoría o cuando la medición todavía no es confiable. En Performance Max excluimos las búsquedas de tu marca, que de todas formas llegarían, para que el reporte muestre clientes nuevos y no ventas que ya eran tuyas."
+        ]
+      },
+      {
+        "h": "¿Cómo se mide la venta cuando el cliente paga por Yape o contra entrega?",
+        "p": [
+          "En Perú muchas tiendas cierran ventas fuera del checkout: el cliente escribe por WhatsApp, paga por Yape o transferencia, o paga contra entrega. Si Google Ads solo mide el checkout, la campaña aprende de una parte de las ventas y subestima los productos que se venden por chat.",
+          "3R Core guarda el GCLID cuando el comprador hace clic al botón de WhatsApp desde la ficha del producto. Cuando tu equipo confirma el pago, esa venta se sube a Google Ads como conversión offline con su monto. Si el pedido contra entrega se cancela, no se sube: la puja aprende de ventas cobradas y no de pedidos que nunca se entregaron."
+        ]
+      },
+      {
+        "h": "¿Qué anuncios de búsqueda acompañan a Shopping en un e-commerce?",
+        "p": [
+          "Shopping muestra el producto, pero las búsquedas de categoría y de marca rinden mejor con anuncios de texto que llevan a la página de categoría. Ejemplos que 3R Core adapta a cada tienda:"
+        ],
+        "ads": [
+          {
+            "headline": "Zapatillas running mujer | Envíos a todo el Perú | Cambios de talla",
+            "url": "tutienda.pe/running-mujer",
+            "desc": "Modelos para pista y trail en tallas 35 a 40. Paga con tarjeta, Yape o contra entrega en Lima."
+          },
+          {
+            "headline": "Tienda oficial de tu marca | Compra segura en línea | Despacho en 48 h Lima",
+            "url": "tutienda.pe",
+            "desc": "Catálogo completo con stock actualizado. Atención por WhatsApp antes y después de tu compra."
+          }
+        ]
+      },
+      {
+        "h": "¿Qué palabras clave negativas y fechas importan a una tienda online?",
+        "p": [
+          "En e-commerce las negativas protegen el margen: búsquedas de reparación, de segunda mano o de manuales no compran. 3R Core revisa cada semana el informe de términos de búsqueda y las estadísticas de búsqueda de Performance Max para sumar las que aparezcan.",
+          "Las fechas de compra fuertes en Perú, como el Día de la Madre, Fiestas Patrias, los Cyber y Navidad, se preparan con el feed y el presupuesto listos semanas antes, no el mismo día."
+        ],
+        "chips": [
+          "gratis",
+          "segunda mano",
+          "usado",
+          "reparación",
+          "repuesto",
+          "manual",
+          "pdf",
+          "cómo hacer",
+          "tutorial",
+          "trabajo",
+          "empleo",
+          "mayorista",
+          "por mayor",
+          "réplica",
+          "imitación",
+          "precio en dólares",
+          "olx",
+          "mercado libre"
+        ]
+      }
+    ]
+  },
+  "MarketingInmobiliariasGuia": {
+    "badge": "Guía del sector",
+    "title": "Guía de Google Ads para inmobiliarias en Perú",
+    "sections": [
+      {
+        "h": "¿Cómo se arma una cuenta de Google Ads para una inmobiliaria?",
+        "p": [
+          "Una cuenta de Google Ads para inmobiliarias se arma con una campaña por proyecto, no una campaña para toda la empresa. 3R Core lo hace así porque cada proyecto tiene su propio stock, su etapa de venta y su velocidad, y el presupuesto tiene que poder moverse entre ellos.",
+          "Dentro de cada proyecto separamos las búsquedas por lo que el comprador ya decidió:"
+        ],
+        "list": [
+          "Nombre del proyecto: quien lo escribe vio un panel o un aviso y quiere el precio.",
+          "Distrito y tipología: «departamento 3 dormitorios en Pueblo Libre».",
+          "Etapa: «entrega inmediata», «preventa», «estreno».",
+          "Financiamiento: búsquedas con «Mivivienda» o «Techo Propio» si el proyecto califica.",
+          "Marca de la inmobiliaria: una campaña pequeña aparte, para que un competidor no quede arriba cuando te buscan por nombre."
+        ]
+      },
+      {
+        "h": "¿La restricción de vivienda de Google Ads aplica en Perú?",
+        "p": [
+          "No. En la política de publicidad personalizada, la vivienda es una de las categorías de acceso a oportunidades, junto con empleo y banca de consumo. Allí Google prohíbe segmentar por sexo, edad, estado parental, estado civil o código postal, pero esa restricción se aplica solo en Estados Unidos y Canadá.",
+          "En Perú una inmobiliaria puede usar datos demográficos y listas propias. 3R Core igual los usa con criterio: excluir por edad a un comprador de 60 años que paga al contado sale caro, y en vivienda social excluir a nadie por perfil no tiene sentido. Las listas de clientes tienen que cumplir la Ley de Protección de Datos Personales, así que solo subimos contactos que aceptaron tu política de privacidad."
+        ]
+      },
+      {
+        "h": "¿Conviene el formulario de Google (lead form) a una inmobiliaria?",
+        "p": [
+          "Sí, como complemento de la landing del proyecto. El formulario para clientes potenciales deja que el interesado envíe sus datos sin salir del anuncio, y en móvil eso sube el volumen de leads. A cambio, el lead llega menos pensado.",
+          "3R Core lo configura con preguntas que filtran (cuántos dormitorios busca, cuándo piensa comprar, si tiene crédito preaprobado) y lo conecta a tu CRM por webhook para que ventas llame en minutos. Google pide dos condiciones: un buen historial de cumplimiento de políticas en la cuenta y un enlace a tu política de privacidad. Si no se conecta al CRM, hay que descargar los leads con frecuencia, porque Google Ads solo los guarda un tiempo limitado."
+        ]
+      },
+      {
+        "h": "¿Cómo se usa Performance Max con señales de audiencia en un proyecto inmobiliario?",
+        "p": [
+          "Performance Max sirve a una inmobiliaria cuando la campaña de Búsqueda del proyecto ya funciona y la medición devuelve visitas o separaciones. 3R Core la usa para llegar a YouTube, Discover y Gmail con las fotos y el video del proyecto.",
+          "Las señales de audiencia son pistas, no límites: le indican a Google qué tipo de persona buscar y la campaña puede mostrarse fuera de ellas si detecta a alguien con probabilidad de convertir. Las señales que cargamos son la lista de interesados del CRM, los visitantes de la página del proyecto y un segmento personalizado con búsquedas como «departamentos en Magdalena». Google indica que la campaña puede tardar hasta dos semanas en integrar señales nuevas, así que no las cambiamos cada lunes. También excluimos de Performance Max las búsquedas con el nombre del proyecto, para que no se lleve el crédito de las búsquedas de marca."
+        ]
+      },
+      {
+        "h": "¿Qué anuncios funcionan para un proyecto inmobiliario?",
+        "p": [
+          "Los anuncios inmobiliarios que mejor califican nombran el distrito, la tipología y la etapa, y dejan el precio para la landing si cambia seguido. Ejemplos de búsqueda que 3R Core adapta a cada proyecto:"
+        ],
+        "ads": [
+          {
+            "headline": "Departamentos en Jesús María | 2 y 3 dormitorios | Entrega inmediata",
+            "url": "tuproyecto.pe/jesus-maria",
+            "desc": "Visita el departamento piloto este fin de semana. Separa tu unidad con asesoría de crédito hipotecario."
+          },
+          {
+            "headline": "Preventa en Surco | Desde 1 dormitorio | Agenda tu visita",
+            "url": "tuproyecto.pe/preventa-surco",
+            "desc": "Conoce planos, áreas y fecha de entrega. Escríbenos por WhatsApp y te enviamos la lista de precios."
+          },
+          {
+            "headline": "Proyecto con Mivivienda | Departamentos en Lima Norte | Pide tu cotización",
+            "url": "tuproyecto.pe/mivivienda",
+            "desc": "Te ayudamos a revisar si calificas al financiamiento. Sala de ventas abierta de lunes a domingo."
+          }
+        ]
+      },
+      {
+        "h": "¿Qué palabras clave negativas necesita una inmobiliaria?",
+        "p": [
+          "En el rubro inmobiliario el presupuesto se va en búsquedas de alquiler, de remates y de estudiantes de arquitectura. 3R Core arma la lista por proyecto: si vendes, «alquiler» va como negativa; si es vivienda social, «lujo» también."
+        ],
+        "chips": [
+          "alquiler",
+          "alquilo",
+          "cuarto",
+          "habitación",
+          "remate",
+          "subasta",
+          "adjudicación",
+          "segunda mano",
+          "gratis",
+          "planos dwg",
+          "maqueta",
+          "tesis",
+          "arquitectura curso",
+          "trabajo",
+          "asesor inmobiliario empleo",
+          "terreno agrícola",
+          "invasión",
+          "Techo Propio requisitos pdf"
+        ]
+      }
+    ]
+  },
+  "MarketingVeterinariasGuia": {
+    "badge": "Guía del sector",
+    "title": "Guía de Google Ads para veterinarias en Perú",
+    "sections": [
+      {
+        "h": "¿Se pueden anunciar medicamentos para mascotas en Google Ads?",
+        "p": [
+          "No con nombres de medicamentos con receta. La política «Términos sobre medicamentos restringidos» de Google Ads tiene un apartado para medicamentos veterinarios con receta, pero solo lo aplica a campañas en EE. UU. y Canadá. Para el resto de países, Perú incluido, la regla general dice que no se pueden usar términos de medicamentos con receta en anuncios ni en páginas de destino, y no hay excepción veterinaria.",
+          "Por eso 3R Core trabaja así con una veterinaria peruana:"
+        ],
+        "list": [
+          "El anuncio habla del servicio (consulta, desparasitación, tratamiento de piel), no del fármaco.",
+          "La landing describe el tratamiento sin marcas de antibióticos, antiinflamatorios ni anestésicos con receta.",
+          "Los productos de venta libre, como champús o accesorios, sí se pueden mostrar.",
+          "El remarketing se arma con cuidado: la política «Segmentación restringida de la publicidad personalizada» trata los medicamentos con receta como categoría sensible, salvo los de uso solo animal sin potencial de abuso humano. Las páginas que nombran fármacos quedan fuera de las audiencias."
+        ]
+      },
+      {
+        "h": "¿Cómo se mide una urgencia o una cita veterinaria?",
+        "p": [
+          "En una veterinaria, 3R Core mide por separado la llamada de urgencia y la cita programada. La llamada que entra desde el recurso del anuncio se cuenta como conversión de llamada, y el clic a WhatsApp guarda el GCLID para saber qué campaña trajo cada cita de vacuna, esterilización o peluquería.",
+          "Después, la recepción marca qué mascotas llegaron a la clínica y cuánto se cobró. Esas atenciones se suben a Google Ads como conversión offline, con un valor mayor para una cirugía o un chequeo completo que para un baño. Así el presupuesto se mueve hacia los servicios que dejan margen, y una campaña de peluquería con muchos mensajes no se confunde con una que llena el quirófano."
+        ]
+      },
+      {
+        "h": "¿Cómo se anuncia un pet shop con Google Shopping?",
+        "p": [
+          "Un pet shop anuncia sus productos en Google Shopping con un catálogo en Merchant Center, separado de la campaña de servicios veterinarios. En 3R Core el catálogo se limpia antes de subirlo: cualquier producto que requiera receta sale del feed, porque Shopping usa el título y la página del producto como anuncio y ahí no puede aparecer un medicamento con receta.",
+          "Alimento, arena, juguetes, camas y accesorios son lo que se lleva el presupuesto. La medición va por venta en la tienda online o por pedido confirmado por WhatsApp."
+        ]
+      },
+      {
+        "h": "¿Cómo cambia la campaña entre urgencias, vacunas y peluquería?",
+        "p": [
+          "Cada servicio veterinario tiene su propio ritmo. La urgencia nocturna se resuelve por teléfono: en 3R Core va en Búsqueda con recurso de llamada y solo en las horas en que hay un veterinario para contestar. Desde febrero de 2026 Google ya no deja crear anuncios solo de llamada, así que la llamada va dentro del anuncio de búsqueda.",
+          "Las vacunas se buscan por fecha y por calendario del cachorro, y la peluquería se repite cada pocas semanas. Cuando el Estado hace campañas gratuitas de vacunación antirrábica, suben las búsquedas de vacuna gratis; esas se excluyen para no pagar clics de quien busca la campaña pública."
+        ]
+      },
+      {
+        "h": "¿Qué anuncios funcionan para veterinarias?",
+        "p": [
+          "Funcionan los anuncios que nombran el servicio, el distrito y cómo contactar, sin mencionar medicamentos con receta. Estos son ejemplos que 3R Core adapta; no son anuncios de clientes:"
+        ],
+        "ads": [
+          {
+            "headline": "Veterinaria 24 horas en Surco | Urgencias para mascotas | Llama ahora",
+            "url": "tuveterinaria.pe/urgencias",
+            "desc": "Atendemos urgencias de perros y gatos de día y de noche. Llama antes de venir y te orientamos en el camino."
+          },
+          {
+            "headline": "Vacunas para cachorros | Calendario completo | Agenda por WhatsApp",
+            "url": "tuveterinaria.pe/vacunas",
+            "desc": "Vacunas y desparasitación según la edad de tu cachorro. Agenda por WhatsApp y recibe el aviso de la siguiente dosis."
+          },
+          {
+            "headline": "Baño y corte en San Miguel | Peluquería canina | Recojo a domicilio",
+            "url": "tuveterinaria.pe/peluqueria",
+            "desc": "Baño, corte y limpieza de oídos con cita por WhatsApp. Recogemos a tu mascota en San Miguel y Magdalena."
+          }
+        ]
+      },
+      {
+        "h": "¿Qué palabras clave negativas usa una veterinaria?",
+        "p": [
+          "Además de cursos, empleo y adopción, que la campaña ya filtra, 3R Core bloquea consultas de dosis caseras, campañas públicas y venta de animales:"
+        ],
+        "chips": [
+          "remedio casero",
+          "qué le doy",
+          "dosis",
+          "pastilla para humanos",
+          "vacunación gratuita",
+          "campaña municipal",
+          "Minsa",
+          "Senasa",
+          "venta de cachorros",
+          "regalo perros",
+          "nombres para perros",
+          "dibujos",
+          "tesis",
+          "pdf",
+          "seguro de mascota",
+          "memes"
+        ]
+      }
+    ]
   }
 }

@@ -8,7 +8,7 @@ import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { getMessages, setRequestLocale } from "next-intl/server";
-import { omitMessages } from "@/lib/pickMessages"
+import { omitMessages, omitSectorMessages } from "@/lib/pickMessages"
 import ParticlesBackground from "@/components/ui/AnimatedBackground";
 import WhatsAppBtn from "@/components/ui/WhatsAppBtn";
 import WhatsAppLeadGate from "@/components/global/WhatsAppLeadGate";
@@ -178,13 +178,15 @@ export default async function RootLayout({
   // "/tiendas-virtuales-lima" (slug de ruta compartido con /es y /us, no una
   // mencion de lugar) -- no se tocan.
   const EN_ONLY_NAMESPACES = ["NearshoreLanding", "NearshoreSEO", "NearshoreFAQ", "PrivacyPolicy", "Terms"]
-  const clientMessages = locale === 'en'
+  // 11-oct-2026: los namespaces de las páginas de sector solo van en su ruta
+  // (ver omitSectorMessages en lib/pickMessages.ts).
+  const clientMessages = omitSectorMessages(locale === 'en'
     ? (() => {
         const trimmed = omitMessages(messages, EN_ONLY_NAMESPACES) as Record<string, unknown>
         const { nearshore, ...hiddenH1Rest } = (trimmed.HiddenH1 as Record<string, string>) ?? {}
         return { ...trimmed, HiddenH1: hiddenH1Rest }
       })()
-    : messages
+    : messages)
 
   // 4,7★ con 42 reseñas reales de la ficha de Google que hasta ahora ningún
   // marcado declaraba (0 de 27 páginas). Se leen en el servidor con caché de

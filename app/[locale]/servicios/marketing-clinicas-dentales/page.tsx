@@ -5,9 +5,10 @@ import ClientSection from "@/components/layout/ClientSection";
 import ReviewsSection from "@/components/layout/ReviewsSection";
 import ServiceLanding from "@/components/sections/servicios/generic/ServiceLanding";
 import ServiceFAQ from "@/components/seo/ServiceFAQ";
+import SectorAdsGuide from "@/components/seo/SectorAdsGuide";
 import SEOContentBlock from "@/components/seo/SEOContentBlock";
 import { useScrollToSection } from '@/components/ui/useScrollToSection';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 import { useIndividualPageLoader } from '@/components/layout/useIndividualPageLoader'
 import { AnimatePresence } from 'framer-motion';
@@ -24,6 +25,8 @@ export default function MarketingClinicasDentales() {
       checkVideos: true
     });
   const tH1 = useTranslations('HiddenH1');
+  // La guía del sector (11-oct-2026) solo existe en /es.
+  const locale = useLocale();
 
   return (
     <>
@@ -35,6 +38,7 @@ export default function MarketingClinicasDentales() {
         <div id="hero">
           <ServiceLanding namespace="MarketingClinicasDentalesLanding" />
         </div>
+        {locale === "es" && <SectorAdsGuide namespace="MarketingClinicasDentalesGuia" />}
         <ServiceFAQ namespace="MarketingClinicasDentalesFAQ" count={8} />
         <SEOContentBlock
           namespace="MarketingClinicasDentalesSEO"

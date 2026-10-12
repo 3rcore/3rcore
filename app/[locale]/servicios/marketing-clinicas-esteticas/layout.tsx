@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 import { generatePageMetadata, generateBreadcrumbSchema } from "@/lib/metadata"
 import { buildFAQPageSchema, buildServiceSchema } from "@/lib/seoSchemas"
+import { NextIntlClientProvider } from "next-intl"
+import { sectorPageMessages } from "@/lib/pickMessages"
 import { getMessages } from "next-intl/server"
 
 export async function generateMetadata({ params }: { params: any }): Promise<Metadata> {
@@ -10,7 +12,7 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
     path: '/servicios/marketing-clinicas-esteticas',
     titleEs: "Gestión de Google Ads para clínicas estéticas en Lima | 3R Core",
     titleEn: "Digital Marketing for Aesthetic Clinics | 3R Core",
-    descriptionEs: "Google Ads para clínicas estéticas en Lima: tratamientos que se buscan por nombre, anuncios dentro de las políticas de salud y valoraciones medidas. Marketing estético.",
+    descriptionEs: "Anuncios en Google para clínicas estéticas en Lima: campañas por tratamiento que cumplen las políticas de salud, con cada valoración medida.",
     descriptionEn: "Digital marketing for U.S. aesthetic clinics and medspas: social media management, Meta Ads, Google Ads, local SEO and per-treatment landing pages.",
     titleUs: "Marketing Digital para Clínicas Estéticas en EE.UU.",
     descriptionUs: "Agencia de marketing para clínicas estéticas en Lima: Meta Ads, Google Ads y SEO local. Redes desde S/1,500/mes + IGV, con reporte de citas.",
@@ -67,7 +69,10 @@ export default async function MarketingClinicasEsteticasLayout({ children, param
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify([serviceSchema, faqSchema, breadcrumbSchema]) }}
       />
-      {children}
+      {/* 11-oct-2026: la guía del sector (solo /es) no va en el provider raíz. */}
+      {locale === 'es'
+        ? <NextIntlClientProvider messages={sectorPageMessages(messages, 'MarketingClinicasEsteticas')}>{children}</NextIntlClientProvider>
+        : children}
     </>
   )
 }

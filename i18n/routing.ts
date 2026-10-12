@@ -61,6 +61,15 @@ export const pathnames = {
   '/servicios/marketing-clinicas-esteticas': {es: '/servicios/marketing-clinicas-esteticas', us: '/servicios/marketing-clinicas-esteticas', en: '/services/aesthetic-clinic-marketing'},
   '/servicios/marketing-veterinarias': {es: '/servicios/marketing-veterinarias', us: '/servicios/marketing-veterinarias', en: '/services/veterinary-marketing'},
 
+  // 11-oct-2026. Google Ads por sector con demanda medida (autocompletado de
+  // Google Perú). Solo /es: en /en y /us dan 404.
+  '/servicios/google-ads-psicologos': '/servicios/google-ads-psicologos',
+  '/servicios/google-ads-hoteles': '/servicios/google-ads-hoteles',
+  '/servicios/google-ads-restaurantes': '/servicios/google-ads-restaurantes',
+  '/servicios/google-ads-colegios': '/servicios/google-ads-colegios',
+  '/servicios/google-ads-empresas-industriales': '/servicios/google-ads-empresas-industriales',
+  '/servicios/google-ads-contadores': '/servicios/google-ads-contadores',
+
   // Páginas ancla de un solo mercado
   '/nearshore-marketing-agency': '/nearshore-marketing-agency',
   '/marketing-para-negocios-hispanos': '/marketing-para-negocios-hispanos',

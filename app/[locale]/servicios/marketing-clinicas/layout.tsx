@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 import { generatePageMetadata, generateBreadcrumbSchema } from "@/lib/metadata"
 import { buildFAQPageSchema, buildServiceSchema } from "@/lib/seoSchemas"
+import { NextIntlClientProvider } from "next-intl"
+import { sectorPageMessages } from "@/lib/pickMessages"
 import { getMessages } from "next-intl/server"
 
 export async function generateMetadata({ params }: { params: any }): Promise<Metadata> {
@@ -8,9 +10,9 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
   return generatePageMetadata({
     locale,
     path: '/servicios/marketing-clinicas',
-    titleEs: "Google Ads para clínicas y consultorios en Lima | 3R Core",
+    titleEs: "Google Ads para clínicas: anuncios en Lima | 3R Core",
     titleEn: 'Digital Marketing for U.S. Clinics & Practices | 3R Core',
-    descriptionEs: "Gestión de Google Ads para clínicas y consultorios en Lima: pacientes que buscan tu especialidad, citas por WhatsApp medidas y políticas de salud cuidadas.",
+    descriptionEs: "Publicidad en Google para clínicas y consultorios en Lima: anuncios por especialidad dentro de las políticas de salud y cada cita medida.",
     descriptionEn: 'Patient acquisition for U.S. clinics: healthcare Google Ads, local SEO, Google Business Profile and bilingual campaigns.',
     titleUs: 'Marketing para Clínicas y Consultorios en EE.UU.',
     descriptionUs: 'Captación de pacientes hispanos en EE.UU.: Google Ads de salud, SEO local y ficha de Google. Se mide en citas agendadas, con precios en dólares.',
@@ -70,7 +72,10 @@ export default async function MarketingClinicasLayout({ children, params }: { ch
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify([serviceSchema, faqSchema, breadcrumbSchema]) }}
       />
-      {children}
+      {/* 11-oct-2026: la guía del sector (solo /es) no va en el provider raíz. */}
+      {locale === 'es'
+        ? <NextIntlClientProvider messages={sectorPageMessages(messages, 'MarketingClinicas')}>{children}</NextIntlClientProvider>
+        : children}
     </>
   )
 }

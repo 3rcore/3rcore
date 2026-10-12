@@ -44,6 +44,17 @@ const MARKET_ONLY: Record<string, string> = {
   '/servicios/google-ads-colegios': 'es',
   '/servicios/google-ads-empresas-industriales': 'es',
   '/servicios/google-ads-contadores': 'es',
+  // Páginas «SEO para <sector>» (11-oct-2026), solo existen en /es
+  '/servicios/seo-para-clinicas': 'es',
+  '/servicios/seo-para-dentistas': 'es',
+  '/servicios/seo-para-clinicas-esteticas': 'es',
+  '/servicios/seo-para-psicologos': 'es',
+  '/servicios/seo-para-abogados': 'es',
+  '/servicios/seo-para-inmobiliarias': 'es',
+  '/servicios/seo-para-hoteles': 'es',
+  '/servicios/seo-para-restaurantes': 'es',
+  '/servicios/seo-para-colegios': 'es',
+  '/servicios/seo-para-empresas-b2b': 'es',
 }
 
 export function isIndexableIn(path: string, locale: string): boolean {

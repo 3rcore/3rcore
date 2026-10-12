@@ -94,6 +94,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${baseUrl}/es/servicios/google-ads-contadores`, priority: 0.85 },
     // 28-sep-2026. «cuánto cuesta seo perú»: solo /es.
     { url: `${baseUrl}/es/cuanto-cuesta-el-seo-en-peru`, priority: 0.8 },
+    // 11-oct-2026. «SEO para <sector>»: solo /es (lib/seo-sectores.ts).
+    { url: `${baseUrl}/es/servicios/seo-para-clinicas`, priority: 0.85 },
+    { url: `${baseUrl}/es/servicios/seo-para-dentistas`, priority: 0.85 },
+    { url: `${baseUrl}/es/servicios/seo-para-clinicas-esteticas`, priority: 0.85 },
+    { url: `${baseUrl}/es/servicios/seo-para-psicologos`, priority: 0.85 },
+    { url: `${baseUrl}/es/servicios/seo-para-abogados`, priority: 0.85 },
+    { url: `${baseUrl}/es/servicios/seo-para-inmobiliarias`, priority: 0.85 },
+    { url: `${baseUrl}/es/servicios/seo-para-hoteles`, priority: 0.85 },
+    { url: `${baseUrl}/es/servicios/seo-para-restaurantes`, priority: 0.85 },
+    { url: `${baseUrl}/es/servicios/seo-para-colegios`, priority: 0.85 },
+    { url: `${baseUrl}/es/servicios/seo-para-empresas-b2b`, priority: 0.85 },
   ]
 
   // Antes el sitemap listaba SOLO /es (163 URLs, cero /en como <loc>): las

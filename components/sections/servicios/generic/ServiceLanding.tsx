@@ -59,7 +59,7 @@ export default function ServiceLanding({ namespace }: Props) {
           </div>
           {t.has("hero.serviceLink") && (
             <p className="mt-6 text-sm text-gray-300">
-              <Link href="/servicios/google-ads" className="underline underline-offset-4 hover:text-white">
+              <Link href={t.has("hero.serviceHref") ? (t("hero.serviceHref") as "/posicionamiento-seo") : "/servicios/google-ads"} className="underline underline-offset-4 hover:text-white">
                 {t("hero.serviceLink")}
               </Link>
             </p>

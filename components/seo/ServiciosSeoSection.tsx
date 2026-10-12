@@ -142,6 +142,27 @@ const COPY = {
   },
 }
 
+// 11-oct-2026. Páginas «SEO para <sector>» (solo /es; en /en y /us dan 404).
+// Van en su propio bloque, separado de «Gestión de Google Ads por sector»:
+// son otra intención y otra URL por sector.
+const SEO_POR_SECTOR = {
+  h2: 'SEO por sector',
+  intro:
+    'Diez rubros tienen página propia de posicionamiento SEO porque su cliente busca distinto: el paciente busca por especialidad o tratamiento, el comprador de un departamento compite contra los portales y el huésped compara contra Booking.',
+  sectores: [
+    { name: 'SEO para clínicas y médicos', detail: 'Fichas por especialidad, médico con colegiatura visible y una ficha de Google por sede.', href: '/servicios/seo-para-clinicas' },
+    { name: 'SEO para dentistas', detail: 'Páginas por tratamiento, urgencias dentales y Google Maps por distrito.', href: '/servicios/seo-para-dentistas' },
+    { name: 'SEO para clínicas estéticas', detail: 'Búsquedas por tratamiento, del Instagram a Google, dentro de las reglas de publicidad en salud.', href: '/servicios/seo-para-clinicas-esteticas' },
+    { name: 'SEO para psicólogos', detail: 'Búsquedas por problema, terapia online y confidencialidad en cada página.', href: '/servicios/seo-para-psicologos' },
+    { name: 'SEO para abogados', detail: 'Una página por área de práctica y SEO local para consultas urgentes.', href: '/servicios/seo-para-abogados' },
+    { name: 'SEO para inmobiliarias y constructoras', detail: 'Páginas por proyecto y distrito para competir con los portales inmobiliarios.', href: '/servicios/seo-para-inmobiliarias' },
+    { name: 'SEO para hoteles y turismo', detail: 'Más reservas directas frente a las agencias online, con la web en inglés para el turista extranjero.', href: '/servicios/seo-para-hoteles' },
+    { name: 'SEO para restaurantes', detail: 'Google Maps, reseñas y una carta publicada en texto, no solo en foto.', href: '/servicios/seo-para-restaurantes' },
+    { name: 'SEO para colegios y universidades', detail: 'Admisión, búsquedas de padres y de alumnos, páginas por nivel y por carrera.', href: '/servicios/seo-para-colegios' },
+    { name: 'SEO para empresas B2B', detail: 'Fichas técnicas indexables, páginas por línea de producto y la cotización como conversión.', href: '/servicios/seo-para-empresas-b2b' },
+  ] as { name: string; detail: string; href: AppPathname }[],
+}
+
 export default function ServiciosSeoSection({ locale }: { locale: string }) {
   // /us es español pero factura en dólares: comparte el texto de /es salvo la
   // referencia de presupuesto, que allí se dice en dólares.
@@ -226,6 +247,27 @@ export default function ServiciosSeoSection({ locale }: { locale: string }) {
           </div>
         ))}
       </div>
+
+      {locale === 'es' && (
+        <>
+          <h2 className="text-2xl md:text-4xl font-semibold text-white mb-4 tracking-tight">{SEO_POR_SECTOR.h2}</h2>
+          <p className="text-white/55 text-sm md:text-base leading-relaxed max-w-3xl mb-10">{SEO_POR_SECTOR.intro}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-16">
+            {SEO_POR_SECTOR.sectores.map((c) => (
+              <div key={c.name} className="rounded-[18px] border border-white/10 bg-white/[0.03] p-6">
+                <h3 className="text-base font-semibold mb-2 text-white/90">{c.name}</h3>
+                <p className="text-white/50 text-sm leading-relaxed mb-3">{c.detail}</p>
+                <Link
+                  href={c.href}
+                  className="text-white/70 text-[11px] font-bold uppercase tracking-[0.18em] underline decoration-[#A21F8A]/50 underline-offset-4 hover:text-white transition-colors"
+                >
+                  {t.verMas}
+                </Link>
+              </div>
+            ))}
+          </div>
+        </>
+      )}
 
       <div className="rounded-[20px] border border-white/10 bg-white/[0.03] p-7 md:p-9">
         <h2 className="text-xl md:text-2xl font-semibold mb-3 text-white">{t.h2Como}</h2>

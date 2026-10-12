@@ -34,7 +34,7 @@ export default function GoogleAdsColegios() {
         <SEOContentBlock
           namespace="GoogleAdsColegiosSEO"
           paragraphs={6}
-          relatedLinks={[{ href: "/servicios/google-ads", label: "Gestión de Google Ads" }, { href: "/servicios/meta-ads", label: "Meta Ads" }, { href: "/posicionamiento-seo", label: "SEO" }]}
+          relatedLinks={[{ href: "/servicios/google-ads", label: "Gestión de Google Ads" }, { href: "/servicios/seo-para-colegios", label: "SEO para colegios" }, { href: "/servicios/meta-ads", label: "Meta Ads" }, { href: "/posicionamiento-seo", label: "SEO" }]}
         />
         <ReviewsSection/>
         <ClientSection />

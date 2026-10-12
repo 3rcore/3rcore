@@ -34,7 +34,7 @@ export default function GoogleAdsHoteles() {
         <SEOContentBlock
           namespace="GoogleAdsHotelesSEO"
           paragraphs={6}
-          relatedLinks={[{ href: "/servicios/google-ads", label: "Gestión de Google Ads" }, { href: "/servicios/meta-ads", label: "Meta Ads" }, { href: "/posicionamiento-seo", label: "SEO" }]}
+          relatedLinks={[{ href: "/servicios/google-ads", label: "Gestión de Google Ads" }, { href: "/servicios/seo-para-hoteles", label: "SEO para hoteles" }, { href: "/servicios/meta-ads", label: "Meta Ads" }, { href: "/posicionamiento-seo", label: "SEO" }]}
         />
         <ReviewsSection/>
         <ClientSection />

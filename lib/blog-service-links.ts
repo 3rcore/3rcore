@@ -231,6 +231,24 @@ export function conEnlaceDeServicio(slug: string, html: string): string {
  * no se añade (así no se duplica cuando el texto se edite en Supabase).
  */
 const EXTRA_A_MITAD: Record<string, Frase> = {
+  // 11-oct-2026. Páginas «SEO para <sector>»: dos posts de SEO sin clics en
+  // GSC 90 d (no se tocan los que ya generan) las enlazan a mitad del texto.
+  'cuanto-tarda-el-seo-en-dar-resultados-peru': {
+    enlaces: [
+      { href: '/es/servicios/seo-para-inmobiliarias', ancla: 'SEO para inmobiliarias' },
+      { href: '/es/servicios/seo-para-restaurantes', ancla: 'SEO para restaurantes' },
+      { href: '/es/servicios/seo-para-clinicas', ancla: 'SEO para clínicas' },
+    ],
+    html: `<p>El plazo también depende de contra quién compites en tu rubro. En el <a href="/es/servicios/seo-para-inmobiliarias">SEO para inmobiliarias</a> la primera página la ocupan los portales; en el <a href="/es/servicios/seo-para-restaurantes">SEO para restaurantes</a> y el <a href="/es/servicios/seo-para-clinicas">SEO para clínicas</a> pesa mucho el mapa de Google. En cada página explicamos qué se trabaja primero en ese sector.</p>`,
+  },
+  'auditoria-seo-que-incluye': {
+    enlaces: [
+      { href: '/es/servicios/seo-para-abogados', ancla: 'SEO para abogados' },
+      { href: '/es/servicios/seo-para-hoteles', ancla: 'SEO para hoteles' },
+      { href: '/es/servicios/seo-para-empresas-b2b', ancla: 'SEO para empresas B2B' },
+    ],
+    html: `<p>La auditoría cambia según el rubro. En un estudio de abogados revisamos si cada área de práctica tiene su propia página (<a href="/es/servicios/seo-para-abogados">SEO para abogados</a>); en un hotel, si la web puede ganarle la reserva directa a las agencias online (<a href="/es/servicios/seo-para-hoteles">SEO para hoteles</a>); en una empresa industrial, si las fichas técnicas se pueden encontrar en Google (<a href="/es/servicios/seo-para-empresas-b2b">SEO para empresas B2B</a>).</p>`,
+  },
   'manual-marca-estructura-plantilla': {
     enlaces: [{ href: '/es/servicios/branding', ancla: 'te armamos el manual de marca' }],
     html: `<p><strong>¿Prefieres no hacerlo solo?</strong> En 3R Core <a href="/es/servicios/branding">te armamos el manual de marca</a> junto con el logotipo, la paleta, la tipografía y las aplicaciones esenciales, después de una sesión de descubrimiento con tu equipo. El branding inicial parte desde S/ 500 (monto referencial) y la propuesta llega por escrito. Si ya tienes logo y solo te falta el manual, cuéntanos en el <a href="/es/cotizar">cotizador</a>.</p>`,

@@ -34,7 +34,7 @@ export default function GoogleAdsPsicologos() {
         <SEOContentBlock
           namespace="GoogleAdsPsicologosSEO"
           paragraphs={6}
-          relatedLinks={[{ href: "/servicios/google-ads", label: "Gestión de Google Ads" }, { href: "/servicios/marketing-clinicas", label: "Google Ads para clínicas" }, { href: "/posicionamiento-seo", label: "SEO" }]}
+          relatedLinks={[{ href: "/servicios/google-ads", label: "Gestión de Google Ads" }, { href: "/servicios/seo-para-psicologos", label: "SEO para psicólogos" }, { href: "/servicios/marketing-clinicas", label: "Google Ads para clínicas" }, { href: "/posicionamiento-seo", label: "SEO" }]}
         />
         <ReviewsSection/>
         <ClientSection />

@@ -34,7 +34,7 @@ export default function GoogleAdsEmpresasIndustriales() {
         <SEOContentBlock
           namespace="GoogleAdsEmpresasIndustrialesSEO"
           paragraphs={6}
-          relatedLinks={[{ href: "/servicios/google-ads", label: "Gestión de Google Ads" }, { href: "/servicios/web-development", label: "Diseño web" }, { href: "/posicionamiento-seo", label: "SEO" }]}
+          relatedLinks={[{ href: "/servicios/google-ads", label: "Gestión de Google Ads" }, { href: "/servicios/seo-para-empresas-b2b", label: "SEO para empresas B2B" }, { href: "/servicios/web-development", label: "Diseño web" }, { href: "/posicionamiento-seo", label: "SEO" }]}
         />
         <ReviewsSection/>
         <ClientSection />

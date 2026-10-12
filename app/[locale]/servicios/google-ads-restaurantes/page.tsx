@@ -34,7 +34,7 @@ export default function GoogleAdsRestaurantes() {
         <SEOContentBlock
           namespace="GoogleAdsRestaurantesSEO"
           paragraphs={6}
-          relatedLinks={[{ href: "/servicios/google-ads", label: "Gestión de Google Ads" }, { href: "/diseno-web-restaurantes-lima", label: "Diseño web para restaurantes" }, { href: "/servicios/meta-ads", label: "Meta Ads" }]}
+          relatedLinks={[{ href: "/servicios/google-ads", label: "Gestión de Google Ads" }, { href: "/servicios/seo-para-restaurantes", label: "SEO para restaurantes" }, { href: "/diseno-web-restaurantes-lima", label: "Diseño web para restaurantes" }, { href: "/servicios/meta-ads", label: "Meta Ads" }]}
         />
         <ReviewsSection/>
         <ClientSection />

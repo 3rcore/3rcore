@@ -109,6 +109,18 @@ export const pathnames = {
   '/agencia-marketing-digital-miraflores': '/agencia-marketing-digital-miraflores',
   // 28-sep-2026. Precio del SEO en Perú. Solo /es.
   '/cuanto-cuesta-el-seo-en-peru': '/cuanto-cuesta-el-seo-en-peru',
+  // 11-oct-2026. «SEO para <sector>»: solo /es (404 en /en y /us). Config en
+  // lib/seo-sectores.ts; demanda medida en autocompletado + SERP de Google Perú.
+  '/servicios/seo-para-clinicas': '/servicios/seo-para-clinicas',
+  '/servicios/seo-para-dentistas': '/servicios/seo-para-dentistas',
+  '/servicios/seo-para-clinicas-esteticas': '/servicios/seo-para-clinicas-esteticas',
+  '/servicios/seo-para-psicologos': '/servicios/seo-para-psicologos',
+  '/servicios/seo-para-abogados': '/servicios/seo-para-abogados',
+  '/servicios/seo-para-inmobiliarias': '/servicios/seo-para-inmobiliarias',
+  '/servicios/seo-para-hoteles': '/servicios/seo-para-hoteles',
+  '/servicios/seo-para-restaurantes': '/servicios/seo-para-restaurantes',
+  '/servicios/seo-para-colegios': '/servicios/seo-para-colegios',
+  '/servicios/seo-para-empresas-b2b': '/servicios/seo-para-empresas-b2b',
 
   // Institucionales
   '/nosotros': {es: '/nosotros', us: '/nosotros', en: '/about'},

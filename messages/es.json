@@ -2743,7 +2743,7 @@
           "title": "¿Qué páginas salen al buscar un tratamiento estético y cuáles necesita tu web?",
           "paragraphs": [
             "Para búsquedas como «rinoplastia precio lima» suelen aparecer comparadores de precios, notas de prensa sobre cuánto cuesta una cirugía, directorios médicos con preguntas de pacientes y pocas webs de clínicas. Tu página de cada tratamiento tiene que responder mejor: qué es, quién lo realiza, cuántas sesiones requiere, de qué depende el costo, cómo es la recuperación y qué riesgos tiene.",
-            "Las fotos de antes y después ayudan, con límites. Una foto de un paciente es información de salud, y la Ley 29733 trata esa información como dato sensible, así que cada imagen necesita consentimiento por escrito. 3R Core las publica con la misma luz y ángulo, sin retoques y aclarando que cada resultado varía. Lo mismo vale para videos de pacientes."
+            "Las fotos de antes y después son el terreno más delicado del rubro. El Código de Ética y Deontología del Colegio Médico del Perú (art. 86) indica que las imágenes o videos relacionados con actos médicos no deben publicarse en redes sociales, y la foto de un paciente es además un dato sensible para la Ley 29733. Por eso 3R Core no construye la estrategia sobre galerías de pacientes: la confianza se gana explicando bien cada tratamiento, mostrando al médico que lo realiza con su CMP y publicando reseñas reales. Si la clínica quiere mostrar algún caso, lo valida antes con su asesor legal."
           ]
         },
         {
@@ -2786,8 +2786,8 @@
           "description": "Ficha con nombre, CMP, especialidad registrada y procedimientos que realiza, para que el paciente sepa quién lo va a tratar."
         },
         {
-          "title": "Antes y después con consentimiento",
-          "description": "Galería por tratamiento, con fotos autorizadas por escrito, sin retoques y aclarando que cada resultado es distinto."
+          "title": "Confianza sin exponer pacientes",
+          "description": "Tratamiento bien explicado, médico con CMP visible y reseñas reales, en lugar de galerías de pacientes que el Código de Ética del CMP desaconseja."
         },
         {
           "title": "Google Maps por sede",
@@ -2837,8 +2837,8 @@
         "answer": "El Código de Ética del Colegio Médico prohíbe a los médicos promocionar sus servicios por precios o promociones. 3R Core trabaja la búsqueda «precio» con contenido informativo: de qué depende el costo, qué incluye la evaluación y por qué el monto final lo define el médico. Ante un texto dudoso, consulta a tu asesor legal."
       },
       "q2": {
-        "question": "¿Las fotos de antes y después ayudan al SEO?",
-        "answer": "Ayudan a que el paciente confíe y se quede en la página, siempre que sean reales. Cada foto necesita consentimiento escrito del paciente, porque es información de salud. Evita retoques, recortes engañosos y frases como «resultado garantizado», y agrupa las fotos por tratamiento."
+        "question": "¿Puedo publicar fotos de antes y después en la web?",
+        "answer": "Con mucho cuidado. El art. 86 del Código de Ética del Colegio Médico del Perú señala que las imágenes o videos de actos médicos no deben publicarse en redes sociales, y la foto de un paciente es un dato sensible para la Ley 29733. Para el SEO no hacen falta: rinde más una página que explique bien el tratamiento, el médico con su CMP y reseñas reales. Si igual quieres mostrar algún caso, valídalo antes con tu asesor legal."
       },
       "q3": {
         "question": "¿Cuánto cuesta el SEO para una clínica estética?",

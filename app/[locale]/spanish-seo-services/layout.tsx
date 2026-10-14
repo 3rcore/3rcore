@@ -19,8 +19,11 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
   // blog queda como guía «how to» y esta página se queda «services / agency /
   // pricing». Ningún competidor de la SERP publica precio: el «From $500/mo»
   // va en el title, y el aviso de precio referencial en la descripción.
-  const title = "Spanish SEO Services & Agency | From $500/mo | 3R Core"
-  const description = "Spanish SEO agency for U.S. businesses: native Spanish keyword research, hreflang repair and Spanish pages. From $500/mo (reference price), no contract."
+  // 14-oct-2026. GSC 90 d: «spanish seo» 166 impr., «seo spanish» 108 y «seo in spanish» 78
+  // siguen yendo al blog. Regla del cliente: sin precios en title ni H1; el precio
+  // pasa a la descripción.
+  const title = "Spanish SEO Services for U.S. Businesses | 3R Core"
+  const description = "Spanish SEO services for U.S. businesses: native Spanish keyword research, hreflang repair and Spanish pages. From $500/mo (reference price), no contract."
 
   return {
     title,

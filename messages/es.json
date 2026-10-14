@@ -668,7 +668,7 @@
     "metaads": "Agencia de Meta Ads en Lima: publicidad en Facebook e Instagram para empresas de todo el Perú",
     "tiktokads": "Agencia de TikTok Ads en Lima, Perú",
     "performance": "Agencia de performance marketing y adquisición con ROI en Lima, Perú",
-    "emailmarketing": "Agencia de email marketing y automatización en Lima, Perú",
+    "emailmarketing": "Empresa de email marketing y mailing en Lima, Perú: automatización, newsletters y CRM",
     "clinicas": "Gestión de Google Ads para clínicas y consultorios en Lima, Perú",
     "inmobiliarias": "Gestión de Google Ads para inmobiliarias en Lima, Perú",
     "ecommerce": "Gestión de Google Ads para e-commerce y tiendas online en Perú",
@@ -1444,7 +1444,7 @@
     }
   },
   "EmailMarketingSEO": {
-    "seoTitle": "Agencia de email marketing y automatización en Lima",
+    "seoTitle": "Empresa de email marketing y automatización en Lima",
     "p1": "El email marketing es, año tras año, uno de los canales más rentables del marketing digital, y sin embargo muchas empresas peruanas lo desaprovechan enviando correos masivos sin estrategia. En 3R Core convertimos tu base de contactos en un activo que vende, mediante automatización y segmentación inteligente.",
     "p2": "En lugar del clásico envío único a toda la lista, construimos flujos que reaccionan al comportamiento del usuario: un correo de bienvenida cuando alguien se suscribe, una secuencia de recuperación cuando abandona el carrito, mensajes post-compra para generar recompra y reseñas, y campañas de reactivación para clientes dormidos.",
     "p3": "Cuidamos la entregabilidad como una prioridad. Configuramos la autenticación del dominio (SPF, DKIM y DMARC) y aplicamos buenas prácticas de envío para que tus correos lleguen a la bandeja principal y no a la carpeta de spam, protegiendo la reputación de tu marca.",
@@ -6450,6 +6450,65 @@
           "pdf",
           "seguro de mascota",
           "memes"
+        ]
+      }
+    ]
+  },
+  "EmailMarketingMore": {
+    "sections": [
+      {
+        "title": "Empresa de email marketing y mailing: qué contratas exactamente",
+        "paragraphs": [
+          "Quien busca una «empresa de mailing» suele pensar en envíos masivos a una lista. Hacemos las dos cosas: las campañas puntuales (newsletter, promociones, lanzamientos) y los flujos automáticos que salen solos según lo que hizo cada contacto. La diferencia importa porque el envío masivo a una lista sin segmentar es lo que más castiga la entregabilidad, y un correo que cae en spam no vende.",
+          "Esto es lo que entra en el servicio, en el orden en que lo hacemos:"
+        ],
+        "bullets": [
+          "Elección y configuración de la plataforma que mejor encaja con tu negocio: Mailchimp, Klaviyo, Brevo, ActiveCampaign u otra.",
+          "Autenticación del dominio con SPF, DKIM y DMARC antes del primer envío, para que los correos lleguen a la bandeja principal.",
+          "Revisión e importación de tu base de contactos: solo personas que dieron su consentimiento, con opción de baja en cada correo, como pide la Ley de Protección de Datos Personales del Perú.",
+          "Redacción y diseño de las plantillas y de cada campaña. Tú apruebas antes de que salga.",
+          "Flujos automáticos de bienvenida, carrito abandonado, post-compra y reactivación de clientes inactivos.",
+          "Reporte de aperturas, clics, conversiones y, cuando la plataforma lo permite, ingresos atribuidos a cada flujo y campaña."
+        ],
+        "note": "No enviamos a bases compradas o alquiladas: además de ir contra la ley de datos personales, hunden la reputación del dominio para todos tus envíos.",
+        "links": [
+          {
+            "before": "Si vendes online, el email rinde más dentro de una estrategia de ",
+            "label": "marketing para e-commerce",
+            "href": "/servicios/marketing-ecommerce",
+            "after": "."
+          }
+        ]
+      }
+    ]
+  },
+  "TikTokAdsMore": {
+    "sections": [
+      {
+        "title": "Cómo elegir una agencia de TikTok Ads en Perú",
+        "paragraphs": [
+          "Una agencia de TikTok Ads no solo sube anuncios: tiene que producir video que funcione en el feed, renovarlo seguido y medir qué venta salió de cada campaña. Estas son las preguntas que conviene hacerle a cualquier agencia antes de contratar, incluida la nuestra."
+        ],
+        "bullets": [
+          "¿La cuenta publicitaria y el píxel quedan a nombre de tu empresa? Si la agencia se va, el historial y las audiencias deben quedarse contigo.",
+          "¿Quién produce los videos y cada cuánto se renuevan? En TikTok un creativo se agota rápido; sin producción constante, el costo por resultado sube.",
+          "¿Usan Spark Ads? Permiten pautar publicaciones de tu cuenta o de creadores, con su autorización, y se ven como contenido nativo y no como un anuncio.",
+          "¿Cómo miden las ventas? Píxel de TikTok y API de eventos instalados, y un criterio claro para los contactos que terminan cerrando por WhatsApp.",
+          "¿Separan la pauta del fee? La pauta se le paga a TikTok y el fee a la agencia; en el reporte mensual deberías ver las dos cifras por separado."
+        ],
+        "links": [
+          {
+            "before": "Si antes de decidir quieres cifras de CPM, CPC y CPA en soles, revisa ",
+            "label": "cuánto cuesta anunciar en TikTok en Perú",
+            "href": "/blogs/cuanto-cuesta-anunciar-tiktok-peru-cpm-cpa",
+            "after": "."
+          },
+          {
+            "before": "Para los videos podemos guionizar y dirigir la producción, o trabajarlos con nuestro servicio de ",
+            "label": "producción de contenido UGC",
+            "href": "/servicios/ugc",
+            "after": ", pensado para la pauta desde el guion."
+          }
         ]
       }
     ]

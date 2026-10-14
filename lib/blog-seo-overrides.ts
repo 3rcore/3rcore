@@ -57,9 +57,12 @@ export const BLOG_SEO_OVERRIDES: Record<string, BlogSeoOverride> = {
   // branding integral con manual desde S/6,500 · rebranding desde S/12,000.
   // 28-sep-2026 (plan Perú §5). Las búsquedas son «logo precio» y «marca precios».
   'cuanto-cuesta-branding-peru-2026': {
-    title: 'Precio de un logo y branding en Perú 2026: desde S/800',
+    // 14-oct-2026. GSC 28 d: 1.139 impr., pos. 5, CTR 2,1 %. Consultas: «branding peru»,
+    // «marca precios», «logo precio», «cuanto cuesta un manual de marca». Antes:
+    // 'Precio de un logo y branding en Perú 2026: desde S/800'.
+    title: 'Branding en Perú 2026: precios de logo, marca y manual',
     description:
-      'Logo desde S/800, identidad visual desde S/3,500 y branding con manual de marca desde S/6,500 (montos referenciales). Qué incluye cada nivel.',
+      'Logo desde S/800, identidad visual desde S/3,500 y branding con manual de marca desde S/6,500 (referenciales). Qué incluye cada nivel y cuál te conviene.',
   },
   // Resumen: piso práctico S/600/mes · rangos S/1,500–8,000 según rubro ·
   // CPM S/8–25 · CPC S/0.30–1.50 · costo por lead S/3–40.
@@ -67,9 +70,12 @@ export const BLOG_SEO_OVERRIDES: Record<string, BlogSeoOverride> = {
   // cifra del title es la del propio resumen del artículo, y el artículo la marca
   // como referencial (lib/blog-service-links.ts y el seed).
   'cuanto-cuesta-publicidad-facebook-instagram-peru-2026': {
-    title: '¿Cuánto cuesta la publicidad en Facebook en Perú? Desde S/600',
+    // 14-oct-2026. GSC 28 d: 2.625 impr., pos. 5,1, CTR 0,7 %. Las consultas que traen
+    // impresiones dicen «costo»/«coste» y «cuánto cobra Facebook (al mes)», no
+    // «cuánto cuesta». Antes: '¿Cuánto cuesta la publicidad en Facebook en Perú? Desde S/600'.
+    title: 'Costo de publicidad en Facebook en Perú: cuánto cobra al mes',
     description:
-      'Desde S/600 al mes de pauta; CPM de S/8 a S/25, CPC de S/0.30 a S/1.50 y costo por lead de S/3 a S/40 según rubro, más IGV. Montos referenciales.',
+      'Facebook cobra por subasta: desde S/600 al mes de pauta, CPM de S/8 a S/25 y costo por lead de S/3 a S/40 según rubro, más IGV. Montos referenciales.',
   },
   // Resumen: implementación S/1,500–25,000 · tienda estándar S/1,500–4,000 ·
   // mensualidad: Shopify desde USD 39, Tiendanube desde S/89, Woo solo hosting.
@@ -112,7 +118,9 @@ export const BLOG_SEO_OVERRIDES: Record<string, BlogSeoOverride> = {
   // Resumen: piso práctico S/700/mes en medios · CPM S/6–20 · CPC S/0.20–1.20 ·
   // CPA S/5–45 según rubro.
   'cuanto-cuesta-anunciar-tiktok-peru-cpm-cpa': {
-    title: '¿Cuánto cuesta anunciar en TikTok en Perú? CPM y CPA',
+    // 14-oct-2026. GSC 90 d: la consulta principal es «cuanto cuesta la publicidad en
+    // tiktok perú» (pos. 6). Antes: '¿Cuánto cuesta anunciar en TikTok en Perú? CPM y CPA'.
+    title: '¿Cuánto cuesta la publicidad en TikTok en Perú? Desde S/700',
     description:
       'Piso práctico de S/700 al mes, CPM de S/6 a S/20, CPC de S/0.20 a S/1.20 y CPA de S/5 a S/45 según rubro (referenciales). Qué encarece tu campaña.',
   },
@@ -174,9 +182,12 @@ export const BLOG_SEO_OVERRIDES: Record<string, BlogSeoOverride> = {
   // 28-sep-2026 (plan Perú §5). El artículo sigue teniendo CINCO claves y no trae
   // ejemplos por punto: el title no promete diez ni «con ejemplos».
   'caracteristicas-de-la-publicidad-importancia-y-claves-para-el-exito': {
-    title: 'Características de la publicidad: 5 claves que sí funcionan',
+    // 14-oct-2026. GSC 28 d: 2.013 impr., pos. 10,2, CTR 0,5 %. Se recupera
+    // «importancia» (182 impr. de «porque es importante la publicidad») y la
+    // descripción responde «cuáles son». Antes: 'Características de la publicidad: 5 claves que sí funcionan'.
+    title: 'Características de la publicidad: las 5 y su importancia',
     description:
-      'Las 5 características de una buena publicidad: creatividad, segmentación, mensaje claro, conexión emocional y llamada a la acción. Qué aporta cada una.',
+      'Cuáles son las 5 características de la publicidad (creatividad, segmentación, mensaje claro, emoción y llamada a la acción) y por qué importa cada una.',
     heading: 'Las 5 características de la publicidad y por qué importan',
     lead:
       '<p><strong>Las cinco características de la publicidad que funciona son la creatividad y originalidad, la segmentación y relevancia, un mensaje claro y conciso, la conexión emocional y una llamada a la acción.</strong> Juntas deciden si un anuncio se distingue en un mercado saturado, si llega a las personas con más probabilidad de interesarse y si consigue que hagan algo concreto: comprar, suscribirse o visitar un sitio web. Abajo se explica cada una.</p>',
@@ -232,10 +243,14 @@ export const BLOG_SEO_OVERRIDES: Record<string, BlogSeoOverride> = {
 export const BLOG_SEO_OVERRIDES_EN: Record<string, BlogSeoOverride> = {
   // Artículo: Shopify $25–$399/mes; WooCommerce gratis + hosting $25–$350/mes.
   // 28-sep-2026. The article already has a Squarespace/Wix/BigCommerce section.
+  // 9-oct-2026 (plan Mega SEO): GSC 90 d, 289 impresiones en posición 6,6 y 0
+  // clics. El title anterior (28-sep) se queda en la reversión (REVERTIR.md).
+  // Mismas cifras del artículo; el title dice para quién es y la descripción
+  // abre con lo que ningún comparador afiliado dice: no cobramos comisión.
   'best-ecommerce-platform-for-small-business': {
-    title: 'Ecommerce Platform Comparison 2026: Shopify vs WooCommerce vs Wix',
+    title: 'Ecommerce Platform Comparison 2026: Best Fit for Small Business',
     description:
-      'Shopify costs $25–$399 a month; WooCommerce is free, hosting $25–$350. Wix, Squarespace and BigCommerce too. Prices for reference, no affiliate links.',
+      'No affiliate links. Shopify runs $25–$399 a month; WooCommerce is free plus $25–$350 hosting. Where Wix, Squarespace and BigCommerce fit, and how to choose.',
   },
   // Artículo: «Roughly 40 million U.S. residents speak Spanish at home».
   // 28-sep-2026. Separación de intenciones (plan USA): este post se llevaba las

@@ -111,6 +111,20 @@ export function buildAuthorNode(name?: string | null, locale?: string) {
       "url": `${BASE_URL}${about}`,
     }
   }
+  // 9-oct-2026. Piero Roque firma los posts y es fundador: mismo @id que el
+  // nodo `founder` del Organization (app/[locale]/layout.tsx) para que Google
+  // y la IA lo lean como una sola persona. Solo datos que la web ya muestra
+  // (nombre, foto de /nosotros, empresa); sin cargos ni credenciales nuevas.
+  if (/^piero\s+roque$/i.test(n)) {
+    return {
+      "@type": "Person",
+      "@id": `${BASE_URL}/#piero-roque`,
+      "name": "Piero Roque",
+      "url": `${BASE_URL}${about}`,
+      "image": `${BASE_URL}/images/Fundadores/PieroAlta.webp`,
+      "worksFor": { "@id": `${BASE_URL}/#organization` },
+    }
+  }
   return { "@type": "Person", "name": n }
 }
 

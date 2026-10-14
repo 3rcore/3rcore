@@ -8,9 +8,12 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
   return generatePageMetadata({
     locale,
     path: '/servicios/branding',
-    titleEs: 'Agencia de Branding e Identidad de Marca en Lima | 3R Core',
+    // 14-oct-2026. GSC 90 d: «empresa de identidad corporativa» 83 impr. pos. 77 y
+    // «agencia de identidad corporativa» pos. 29. La meta anterior prometía 7 días
+    // y la FAQ de la página dice cuatro semanas: se alinea con la FAQ.
+    titleEs: 'Agencia de Branding e Identidad Corporativa en Lima | 3R Core',
     titleEn: 'Branding Agency for U.S. Brands | 3R Core',
-    descriptionEs: 'Diseño de identidad visual, logotipo, manual de marca y aplicaciones. Agencia de branding en Lima, Perú desde S/500 (referencial), entrega en 7 días.',
+    descriptionEs: 'Empresa de identidad corporativa en Lima: logotipo, manual de marca, papelería y aplicaciones en unas cuatro semanas. Branding desde S/500 (referencial).',
     descriptionEn: 'Visual identity, logo, brand manual and corporate applications designed by an in-house team for U.S. businesses. Full identity projects from $500 in USD.',
     titleUs: 'Branding e Identidad de Marca para EE.UU. | 3R Core',
     descriptionUs: 'Diseño de identidad visual, logotipo, manual de marca y aplicaciones corporativas para negocios en Estados Unidos. Proyectos integrales desde $500, con propuesta tras una sesión inicial de descubrimiento.',

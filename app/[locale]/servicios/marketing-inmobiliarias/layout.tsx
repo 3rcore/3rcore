@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 import { generatePageMetadata, generateBreadcrumbSchema } from "@/lib/metadata"
 import { buildFAQPageSchema, buildServiceSchema } from "@/lib/seoSchemas"
+import { NextIntlClientProvider } from "next-intl"
+import { sectorPageMessages } from "@/lib/pickMessages"
 import { getMessages } from "next-intl/server"
 
 export async function generateMetadata({ params }: { params: any }): Promise<Metadata> {
@@ -8,9 +10,9 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
   return generatePageMetadata({
     locale,
     path: '/servicios/marketing-inmobiliarias',
-    titleEs: "Gestión de Google Ads para inmobiliarias en Lima | 3R Core",
+    titleEs: "Google Ads para inmobiliarias: publicidad y leads | 3R Core",
     titleEn: 'Real Estate Marketing for U.S. Agents | 3R Core',
-    descriptionEs: "Gestión de Google Ads para inmobiliarias y proyectos en Lima: búsquedas por distrito, landing por proyecto y leads medidos hasta la visita. Marketing digital que vende.",
+    descriptionEs: "Publicidad en Google para inmobiliarias en Lima: campañas por proyecto, formularios de Google y Performance Max, con cada lead medido hasta la separación.",
     descriptionEn: 'Lead generation for U.S. real estate: Meta and Google Ads for listings, CRM follow-up and measurable cost per qualified lead.',
     titleUs: 'Marketing para Inmobiliarias y Agentes en EE.UU.',
     descriptionUs: 'Captación de compradores hispanos en EE.UU. para inmobiliarias y agentes: Meta Ads, Google Ads, CRM y WhatsApp con costo por lead medible.',
@@ -70,7 +72,10 @@ export default async function MarketingInmobiliariasLayout({ children, params }:
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify([serviceSchema, faqSchema, breadcrumbSchema]) }}
       />
-      {children}
+      {/* 11-oct-2026: la guía del sector (solo /es) no va en el provider raíz. */}
+      {locale === 'es'
+        ? <NextIntlClientProvider messages={sectorPageMessages(messages, 'MarketingInmobiliarias')}>{children}</NextIntlClientProvider>
+        : children}
     </>
   )
 }

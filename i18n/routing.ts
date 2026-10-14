@@ -61,6 +61,15 @@ export const pathnames = {
   '/servicios/marketing-clinicas-esteticas': {es: '/servicios/marketing-clinicas-esteticas', us: '/servicios/marketing-clinicas-esteticas', en: '/services/aesthetic-clinic-marketing'},
   '/servicios/marketing-veterinarias': {es: '/servicios/marketing-veterinarias', us: '/servicios/marketing-veterinarias', en: '/services/veterinary-marketing'},
 
+  // 11-oct-2026. Google Ads por sector con demanda medida (autocompletado de
+  // Google Perú). Solo /es: en /en y /us dan 404.
+  '/servicios/google-ads-psicologos': '/servicios/google-ads-psicologos',
+  '/servicios/google-ads-hoteles': '/servicios/google-ads-hoteles',
+  '/servicios/google-ads-restaurantes': '/servicios/google-ads-restaurantes',
+  '/servicios/google-ads-colegios': '/servicios/google-ads-colegios',
+  '/servicios/google-ads-empresas-industriales': '/servicios/google-ads-empresas-industriales',
+  '/servicios/google-ads-contadores': '/servicios/google-ads-contadores',
+
   // Páginas ancla de un solo mercado
   '/nearshore-marketing-agency': '/nearshore-marketing-agency',
   '/marketing-para-negocios-hispanos': '/marketing-para-negocios-hispanos',
@@ -100,6 +109,18 @@ export const pathnames = {
   '/agencia-marketing-digital-miraflores': '/agencia-marketing-digital-miraflores',
   // 28-sep-2026. Precio del SEO en Perú. Solo /es.
   '/cuanto-cuesta-el-seo-en-peru': '/cuanto-cuesta-el-seo-en-peru',
+  // 11-oct-2026. «SEO para <sector>»: solo /es (404 en /en y /us). Config en
+  // lib/seo-sectores.ts; demanda medida en autocompletado + SERP de Google Perú.
+  '/servicios/seo-para-clinicas': '/servicios/seo-para-clinicas',
+  '/servicios/seo-para-dentistas': '/servicios/seo-para-dentistas',
+  '/servicios/seo-para-clinicas-esteticas': '/servicios/seo-para-clinicas-esteticas',
+  '/servicios/seo-para-psicologos': '/servicios/seo-para-psicologos',
+  '/servicios/seo-para-abogados': '/servicios/seo-para-abogados',
+  '/servicios/seo-para-inmobiliarias': '/servicios/seo-para-inmobiliarias',
+  '/servicios/seo-para-hoteles': '/servicios/seo-para-hoteles',
+  '/servicios/seo-para-restaurantes': '/servicios/seo-para-restaurantes',
+  '/servicios/seo-para-colegios': '/servicios/seo-para-colegios',
+  '/servicios/seo-para-empresas-b2b': '/servicios/seo-para-empresas-b2b',
 
   // Institucionales
   '/nosotros': {es: '/nosotros', us: '/nosotros', en: '/about'},

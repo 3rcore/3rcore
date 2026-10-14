@@ -8,9 +8,10 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
   return generatePageMetadata({
     locale,
     path: '/servicios/email-marketing',
-    titleEs: "Email Marketing y Automatización en Lima | 3R Core",
+    // 14-oct-2026. GSC 90 d: «empresa de email marketing» 32 impr. pos. 57 y «empresa de mailing» 26 pos. 64.
+    titleEs: "Empresa de Email Marketing y Mailing en Lima | 3R Core",
     titleEn: 'Email Marketing & Automation Agency | 3R Core',
-    descriptionEs: "Flujos automáticos, newsletters y CRM para negocios en Perú: recupera carritos abandonados y vuelve a vender a quien ya te compró una vez.",
+    descriptionEs: "Empresa de email marketing y mailing en Lima: newsletters, flujos automáticos y CRM para recuperar carritos y volver a venderle a quien ya te compró.",
     descriptionEn: 'Automated flows, newsletters, segmentation and CRM integration for U.S. businesses, built by an in-house team. Recover carts and sell on autopilot.',
     titleUs: 'Email Marketing y Automatización para EE.UU.',
     descriptionUs: 'Flujos automáticos, newsletters y CRM en español e inglés para negocios de EE.UU.: recupera carritos y vuelve a vender a tus clientes actuales.',

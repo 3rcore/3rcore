@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 import { generatePageMetadata, generateBreadcrumbSchema } from "@/lib/metadata"
 import { buildFAQPageSchema, buildServiceSchema } from "@/lib/seoSchemas"
+import { NextIntlClientProvider } from "next-intl"
+import { sectorPageMessages } from "@/lib/pickMessages"
 import { getMessages } from "next-intl/server"
 
 export async function generateMetadata({ params }: { params: any }): Promise<Metadata> {
@@ -8,9 +10,9 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
   return generatePageMetadata({
     locale,
     path: '/servicios/marketing-veterinarias',
-    titleEs: "Gestión de Google Ads para veterinarias en Lima | 3R Core",
+    titleEs: "Google Ads para veterinarias: anuncios en Lima | 3R Core",
     titleEn: "Digital Marketing for Veterinary Clinics | 3R Core",
-    descriptionEs: "Google Ads para veterinarias en Lima: urgencias, vacunas y peluquería anunciadas por distrito, con llamadas y WhatsApp medidos. Marketing para veterinarias.",
+    descriptionEs: "Anuncios en Google para veterinarias y pet shops en Lima: urgencias por llamada, citas por WhatsApp y campañas dentro de las políticas de medicamentos.",
     descriptionEn: "Digital marketing for veterinary clinics and pet shops in the United States: local SEO, Google Business Profile, campaigns and per-service pages.",
     titleUs: "Marketing Digital para Veterinarias en EE.UU.",
     descriptionUs: "Agencia de marketing para veterinarias en Lima: ficha de Google, SEO local y campañas. Desde S/1,800/mes + IGV, medido en citas.",
@@ -67,7 +69,10 @@ export default async function MarketingVeterinariasLayout({ children, params }: 
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify([serviceSchema, faqSchema, breadcrumbSchema]) }}
       />
-      {children}
+      {/* 11-oct-2026: la guía del sector (solo /es) no va en el provider raíz. */}
+      {locale === 'es'
+        ? <NextIntlClientProvider messages={sectorPageMessages(messages, 'MarketingVeterinarias')}>{children}</NextIntlClientProvider>
+        : children}
     </>
   )
 }

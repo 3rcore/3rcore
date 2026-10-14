@@ -8,7 +8,7 @@ import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { getMessages, setRequestLocale } from "next-intl/server";
-import { omitMessages } from "@/lib/pickMessages"
+import { omitMessages, omitSectorMessages } from "@/lib/pickMessages"
 import ParticlesBackground from "@/components/ui/AnimatedBackground";
 import WhatsAppBtn from "@/components/ui/WhatsAppBtn";
 import WhatsAppLeadGate from "@/components/global/WhatsAppLeadGate";
@@ -178,13 +178,15 @@ export default async function RootLayout({
   // "/tiendas-virtuales-lima" (slug de ruta compartido con /es y /us, no una
   // mencion de lugar) -- no se tocan.
   const EN_ONLY_NAMESPACES = ["NearshoreLanding", "NearshoreSEO", "NearshoreFAQ", "PrivacyPolicy", "Terms"]
-  const clientMessages = locale === 'en'
+  // 11-oct-2026: los namespaces de las páginas de sector solo van en su ruta
+  // (ver omitSectorMessages en lib/pickMessages.ts).
+  const clientMessages = omitSectorMessages(locale === 'en'
     ? (() => {
         const trimmed = omitMessages(messages, EN_ONLY_NAMESPACES) as Record<string, unknown>
         const { nearshore, ...hiddenH1Rest } = (trimmed.HiddenH1 as Record<string, string>) ?? {}
         return { ...trimmed, HiddenH1: hiddenH1Rest }
       })()
-    : messages
+    : messages)
 
   // 4,7★ con 42 reseñas reales de la ficha de Google que hasta ahora ningún
   // marcado declaraba (0 de 27 páginas). Se leen en el servidor con caché de
@@ -300,7 +302,20 @@ export default async function RootLayout({
       "https://www.instagram.com/3rcore_/",
       "https://www.linkedin.com/company/3r-core/",
       "https://www.tiktok.com/@3rcore",
-      ...(locale === 'en' ? [] : ["https://pe.linkedin.com/company/3r-core"]),
+      // 9-oct-2026. Perfiles de terceros que la IA y Google leen como la misma
+      // entidad (comprobados uno a uno ese día). Todos dicen Perú, La Molina o
+      // Lima, así que solo van en /es: el /en no menciona Perú. Se quitó
+      // pe.linkedin.com, que es la misma página que www.linkedin.com.
+      ...(locale === 'en' ? [] : [
+        "https://clutch.co/profile/3r-core-agencia-de-marketing",
+        "https://themanifest.com/company/3r-core-agencia-de-marketing",
+        "https://www.sortlist.com/es/agency/3r-core-agencia-de-marketing",
+        "https://www.goodfirms.co/company/3r-core-marketing-agency",
+        "https://www.behance.net/3rcore",
+        "https://www.youtube.com/@3rcore606",
+        "https://github.com/3rcore",
+        "https://www.trustpilot.com/review/3rcore.com",
+      ]),
     ],
     "areaServed": locale === 'en'
       ? [{ "@type": "Country", "name": "United States" }]
@@ -377,7 +392,10 @@ export default async function RootLayout({
       },
       {
         "@type": "Person",
+        // 9-oct-2026. Mismo @id que el autor de los posts (lib/seoSchemas.ts).
+        "@id": `${BASE_URL}/#piero-roque`,
         "name": "Piero Roque",
+        "image": `${BASE_URL}/images/Fundadores/PieroAlta.webp`,
         "jobTitle": locale === 'en' ? "SEO / Ads Director" : "Director SEO / Ads",
         "worksFor": { "@id": `${BASE_URL}/#organization` }
       }

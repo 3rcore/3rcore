@@ -12,6 +12,14 @@
  *    septiembre de 2026 (peru-raw/serp y peru-raw/competidores).
  *  - 3R Core NO se declara Google Partner en su web: no se afirma.
  * Si un dato cambia en la web de una agencia, se corrige aquí o se quita.
+ *
+ * 9-oct-2026 (comparativa honesta, plan Mega SEO): se añade arriba una
+ * respuesta directa y una tabla de CRITERIOS VERIFICABLES (qué mirar, por qué
+ * y cómo comprobarlo uno mismo), que es el formato que citan las respuestas de
+ * IA para «mejores agencias de Google Ads en Lima». Regla añadida: no se
+ * incluye ninguna empresa relacionada con la familia del cliente; ninguna de
+ * las siete lo es según lo que consta en el proyecto (revisar antes de añadir
+ * otra). Jerarquía de encabezados comprobada sin saltos (JEV-002).
  */
 import {
   bridges, frame, closing, faqBlock, hero, numlist, page, prose, sec, table,
@@ -118,9 +126,51 @@ const faq: Faq[] = [
     a: 'Cinco cosas: si la cuenta queda a tu nombre, cuánto es el fee y cuánto la pauta por separado, qué conversión se va a medir y cómo, cada cuánto recibes el reporte y si hay permanencia mínima.',
   },
   {
+    q: '¿Cómo compruebo lo que dice una agencia sobre sí misma?',
+    a: 'Con fuentes que la agencia no controla: el directorio oficial de Google Partners para la insignia, su ficha de Google para las reseñas y tu propia cuenta de Google Ads para saber quién es el propietario y qué conversiones se están contando.',
+  },
+  {
     q: '¿Quién escribió esta comparativa?',
     a: 'El equipo de 3R Core, que también aparece en la lista. Por eso no ponemos notas ni opiniones sobre las demás agencias: solo datos que ellas publican en su propia web, con el enlace para que los compruebes.',
   },
+]
+
+const CRITERIOS: string[][] = [
+  [
+    'La cuenta de Google Ads queda a tu nombre',
+    'Si la cuenta es de la agencia, el historial, las audiencias y las conversiones se quedan con ella cuando termines.',
+    'Pide acceso de administrador desde el primer día y revisa en Google Ads › Administrador › Acceso y seguridad quién es el propietario.',
+  ],
+  [
+    'Fee y pauta por separado y por escrito',
+    'Así sabes cuánto de tu dinero llega a Google y cuánto es el trabajo de la agencia. Algunas cobran además un porcentaje de la pauta.',
+    'Compara la propuesta con el precio publicado en su web, si lo publica, y con la facturación de Google en tu cuenta.',
+  ],
+  [
+    'Qué conversión se mide',
+    'Si se mide el clic y no el contacto, Google aprende a traer clics baratos. Un buen montaje mide formularios, llamadas y WhatsApp, y evita contar el mismo lead dos veces.',
+    'En Google Ads › Objetivos › Conversiones mira qué acciones están como principales y si coinciden con los leads que de verdad recibes.',
+  ],
+  [
+    'Insignia de Google Partner',
+    'Indica que la agencia cumple requisitos de inversión gestionada, rendimiento y certificaciones que pide Google. No garantiza resultados, pero es un dato comprobable.',
+    'Busca el nombre en el directorio oficial de Google Partners (partnersdirectory.withgoogle.com). Lo que diga su web no basta.',
+  ],
+  [
+    'Reseñas de clientes con nombre',
+    'Las reseñas de un perfil de Google o de un directorio como Clutch dicen más que los testimonios que una agencia elige para su propia web.',
+    'Lee las reseñas recientes de su ficha de Google y mira si responden a las negativas.',
+  ],
+  [
+    'Reporte con costo por lead',
+    'Impresiones y clics no pagan facturas. El reporte útil trae inversión, leads, costo por lead y lo que se va a cambiar el mes siguiente.',
+    'Pide un reporte de ejemplo, con los datos de otro cliente ocultos, antes de firmar.',
+  ],
+  [
+    'Permanencia',
+    'Una campaña necesita semanas de aprendizaje, pero una permanencia larga sin salida te ata aunque no funcione.',
+    'Revisa si su web dice que trabaja sin permanencia y que el contrato diga lo mismo.',
+  ],
 ]
 
 const filas = AGENCIAS.map((a) => [
@@ -145,6 +195,22 @@ const html = page(
     second: { href: '#comparativa', label: 'Ver la tabla' },
     bg: '/proto/img/hero/seoCarrubg.webp',
     art: frame('/proto/img/hero/seoCarru1.webp', 'Ilustración de anuncios de Google Ads', '3rcore.com/es/mejores-agencias-google-ads-lima'),
+  }),
+
+  sec({
+    slim: true,
+    h2: 'Respuesta corta',
+    body: prose([
+      'No hay una agencia de Google Ads que sea la mejor para todos. La que te conviene es la que deja la cuenta a tu nombre, te da el fee y la pauta por separado, mide contactos reales (formularios, llamadas y WhatsApp) y te reporta cada mes el costo por lead. Abajo tienes siete criterios que puedes comprobar tú mismo y siete agencias que salen en Google Perú, con lo que cada una publica en su web.',
+    ]),
+  }),
+
+  sec({
+    alt: true,
+    id: 'criterios',
+    h2: 'Siete criterios para comparar agencias de Google Ads',
+    intro: 'Ninguno depende de lo que te digan en la reunión: todos se pueden comprobar en tu cuenta, en la web de la agencia o en un directorio público.',
+    body: table(['Criterio', 'Por qué importa', 'Cómo comprobarlo'], CRITERIOS),
   }),
 
   sec({

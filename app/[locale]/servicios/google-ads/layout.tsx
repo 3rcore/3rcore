@@ -8,9 +8,11 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
   return generatePageMetadata({
     locale,
     path: '/servicios/google-ads',
-    titleEs: 'Agencia de Google Ads en Lima y Perú — Campañas SEM | 3R Core',
+    // 14-oct-2026. GSC 90 d: «google ads perú» 157 impr. pos. 38, «google ads en perú» 99 y
+    // «google ads peru» 72 los rankeaba el blog de Shopping; la intención es de esta página.
+    titleEs: 'Agencia de Google Ads en Perú: Campañas SEM en Lima | 3R Core',
     titleEn: 'Google Ads Agency for U.S. Brands | 3R Core',
-    descriptionEs: 'Agencia de Google Ads en Lima con equipo propio: Search, Performance Max y Shopping en tu propia cuenta. 4,7★ en Google. Desde S/1,800/mes (referencial).',
+    descriptionEs: 'Google Ads en Perú con equipo propio en Lima: Search, Performance Max y Shopping en tu propia cuenta. 4,7★ en Google. Desde S/1,800/mes (referencial).',
     descriptionEn: 'Google Ads managed by an in-house team for U.S. businesses through our U.S. subsidiary: Search, Performance Max, YouTube and Shopping. From $800/month.',
     titleUs: 'Agencia de Google Ads en Español para EE.UU. | 3R Core',
     descriptionUs: 'Campañas de Google Ads segmentadas por idioma y ciudad para llegar al público hispano en Estados Unidos: Search, Performance Max, YouTube, Display y Shopping. Gestión desde $800/mes con reportes mensuales.',

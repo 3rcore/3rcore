@@ -5,9 +5,10 @@ import ClientSection from "@/components/layout/ClientSection";
 import ReviewsSection from "@/components/layout/ReviewsSection";
 import ServiceLanding from "@/components/sections/servicios/generic/ServiceLanding";
 import ServiceFAQ from "@/components/seo/ServiceFAQ";
+import SectorAdsGuide from "@/components/seo/SectorAdsGuide";
 import SEOContentBlock from "@/components/seo/SEOContentBlock";
 import { useScrollToSection } from '@/components/ui/useScrollToSection';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 import { useIndividualPageLoader } from '@/components/layout/useIndividualPageLoader'
 import { AnimatePresence } from 'framer-motion';
@@ -24,6 +25,8 @@ export default function MarketingClinicas() {
       checkVideos: true
     });
   const tH1 = useTranslations('HiddenH1');
+  // La guía del sector (11-oct-2026) solo existe en /es.
+  const locale = useLocale();
 
   return (
     <>
@@ -35,11 +38,12 @@ export default function MarketingClinicas() {
         <div id="hero">
           <ServiceLanding namespace="MarketingClinicasLanding" />
         </div>
+        {locale === "es" && <SectorAdsGuide namespace="MarketingClinicasGuia" />}
         <ServiceFAQ namespace="MarketingClinicasFAQ" count={8} />
         <SEOContentBlock
           namespace="MarketingClinicasSEO"
           paragraphs={6}
-          relatedLinks={[{ href: "/servicios/google-ads", label: "Gestión de Google Ads" }, { href: "/servicios/marketing-clinicas-dentales", label: "Clínicas Dentales" }, { href: "/servicios/marketing-clinicas-esteticas", label: "Clínicas Estéticas" }, { href: "/posicionamiento-seo", label: "SEO Local" }]}
+          relatedLinks={[{ href: "/servicios/google-ads", label: "Gestión de Google Ads" }, { href: "/servicios/seo-para-clinicas", label: "SEO para clínicas" }, { href: "/servicios/marketing-clinicas-dentales", label: "Clínicas Dentales" }, { href: "/servicios/marketing-clinicas-esteticas", label: "Clínicas Estéticas" }, { href: "/posicionamiento-seo", label: "SEO Local" }]}
         />
         <ReviewsSection/>
         <ClientSection />

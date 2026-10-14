@@ -7,7 +7,8 @@ import ServiceLanding from "@/components/sections/servicios/generic/ServiceLandi
 import ServiceFAQ from "@/components/seo/ServiceFAQ";
 import SEOContentBlock from "@/components/seo/SEOContentBlock";
 import { useScrollToSection } from '@/components/ui/useScrollToSection';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
+import LandingSections from "@/components/seo/LandingSections";
 
 import { useIndividualPageLoader } from '@/components/layout/useIndividualPageLoader'
 import { AnimatePresence } from 'framer-motion';
@@ -24,6 +25,7 @@ export default function TikTokAds() {
       checkVideos: true
     });
   const tH1 = useTranslations('HiddenH1');
+  const locale = useLocale();
 
   return (
     <>
@@ -35,6 +37,8 @@ export default function TikTokAds() {
         <div id="hero">
           <ServiceLanding namespace="TikTokAdsLanding" />
         </div>
+        {/* 14-oct-2026: sección de compra solo para /es (datos GSC de la ronda seo-leads) */}
+        {locale === 'es' && <LandingSections namespace="TikTokAdsMore" />}
         <ServiceFAQ namespace="TikTokAdsFAQ" count={8} />
         <SEOContentBlock
           namespace="TikTokAdsSEO"

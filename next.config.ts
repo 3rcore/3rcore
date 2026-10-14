@@ -3,6 +3,33 @@ import createNextIntlPlugin from 'next-intl/plugin';
 
 const withNextIntl = createNextIntlPlugin();
 
+type Redirect = Awaited<ReturnType<NonNullable<NextConfig['redirects']>>>[number];
+
+// Ver skipTrailingSlashRedirect más abajo. Cada regla va seguida de su gemela
+// con barra final (mismo destino, un solo salto) y una regla final quita la
+// barra a cualquier otra ruta, como hacía Next por defecto.
+const STRIP_SLASH: Redirect = { source: '/:path+/', destination: '/:path+', permanent: true }
+
+function withTrailingSlashVariants(rules: Redirect[]): Redirect[] {
+  const out: Redirect[] = []
+  for (const r of rules) {
+    if (r.source !== '/' && !r.source.endsWith('/')) {
+      // En la regla general las exclusiones terminan en `$` (fin de la ruta);
+      // con la barra detrás, el fin pasa a ser `/` (si no, /performance-marketing/
+      // o /admin/ caerían en /es/...).
+      const source = r.source.includes('(?!') ? r.source.replace(/\$/g, '/') : r.source
+      out.push({ ...r, source: `${source}/` })
+    }
+    // La regla general (/:path((?!…)…) → /es/:path) también atraparía una ruta
+    // con barra final que no excluye con barra (p. ej. /performance-marketing/);
+    // por eso el quitar-la-barra va justo antes de ella y no al final.
+    if (r.source.includes('(?!')) out.push(STRIP_SLASH)
+    out.push(r)
+  }
+  if (!out.includes(STRIP_SLASH)) out.push(STRIP_SLASH)
+  return out
+}
+
 const nextConfig: NextConfig = {
   images: {
     // 30-sep-2026. Se agotó la cuota de optimización de imágenes de Vercel:
@@ -55,8 +82,17 @@ const nextConfig: NextConfig = {
       { source: '/panel/:path*', destination: `${PANEL}/panel/:path*` },
     ];
   },
+  // 9-oct-2026. Las URLs viejas de WordPress terminan en barra
+  // (/2022/11/08/campana-publicitaria-peru/) y daban DOS saltos: 308 de Next
+  // quitando la barra y otro 308 al destino real. Next quita la barra ANTES de
+  // mirar los redirects propios, así que no se podía resolver desde la lista.
+  // Se apaga esa normalización interna y se replica abajo: cada regla tiene su
+  // variante con barra que va directo al MISMO destino, y al final una regla
+  // genérica quita la barra a todo lo demás (lo mismo que hacía Next).
+  // Revertir: borrar esta línea y la función withTrailingSlashVariants.
+  skipTrailingSlashRedirect: true,
   async redirects() {
-    return [
+    return withTrailingSlashVariants([
       // ── LA RAÍZ DEVOLVÍA 307 TEMPORAL (2026-08-29) ────────────────────────
       // Medido en vivo: `curl -I https://3rcore.com/` daba HTTP 307 hacia /es.
       // Un 307 es TEMPORAL, y ante un redirect temporal Google conserva en su
@@ -326,7 +362,7 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
 
-    ];
+    ]);
   },
   experimental: {
     optimizeCss: true,

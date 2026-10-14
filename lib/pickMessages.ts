@@ -38,3 +38,30 @@ export function omitMessages(messages: Messages, namespaces: string[]): Messages
   for (const ns of namespaces) delete result[ns]
   return result
 }
+
+/**
+ * 11-oct-2026. Namespaces de las páginas «Google Ads para <sector>»: las 6
+ * nuevas (GoogleAds<Sector>*) y las guías añadidas a las 7 existentes
+ * (Marketing<Sector>Guia). Suman ~120 KB; si fueran en el provider raíz se
+ * incrustarían en el HTML de TODAS las páginas. El layout raíz los quita y
+ * cada layout de sector los vuelve a dar solo a su propia ruta.
+ */
+const SECTOR_NS = /^(GoogleAds(Psicologos|Hoteles|Restaurantes|Colegios|EmpresasIndustriales|Contadores)(Landing|Guia|FAQ|SEO)|Marketing[A-Za-z]+Guia)$/
+
+export function omitSectorMessages(messages: Messages): Messages {
+  return omitMessages(messages, Object.keys(messages).filter((k) => SECTOR_NS.test(k)))
+}
+
+/**
+ * Lo que necesita en el cliente una página de sector, verificado contra el
+ * árbol real (11-oct-2026): ServiceLanding/ServiceFAQ/SEOContentBlock/
+ * SectorAdsGuide (namespaces propios + ServiceLinks), ContactForm
+ * (ContactSection), ClientSection (ClientsSection), PageLoader (preload) y
+ * el H1 oculto de las existentes (HiddenH1).
+ */
+export function sectorPageMessages(messages: Messages, prefix: string): Messages {
+  return pickMessages(messages, [
+    `${prefix}Landing`, `${prefix}Guia`, `${prefix}FAQ`, `${prefix}SEO`,
+    'ServiceLinks', 'ContactSection', 'ClientsSection', 'preload', 'HiddenH1',
+  ])
+}

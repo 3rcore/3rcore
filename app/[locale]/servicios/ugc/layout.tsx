@@ -8,7 +8,7 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
   return generatePageMetadata({
     locale,
     path: '/servicios/ugc',
-    titleEs: "Producción de Contenido UGC en Lima, Perú | 3R Core",
+    titleEs: "Agencia UGC en Perú: videos UGC producidos en Lima | 3R Core",
     titleEn: 'UGC Content Production for U.S. Brands | 3R Core',
     titleUs: "Producción de Contenido UGC en Español para EE.UU. | 3R Core",
     descriptionEs: "Producimos video UGC con creadores propios en Lima: guiones, grabación, edición y variantes para testear en Meta, TikTok y YouTube. Derechos incluidos.",

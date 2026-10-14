@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 import { generatePageMetadata, generateBreadcrumbSchema } from "@/lib/metadata"
 import { buildFAQPageSchema, buildServiceSchema } from "@/lib/seoSchemas"
+import { NextIntlClientProvider } from "next-intl"
+import { sectorPageMessages } from "@/lib/pickMessages"
 import { getMessages } from "next-intl/server"
 
 export async function generateMetadata({ params }: { params: any }): Promise<Metadata> {
@@ -8,9 +10,9 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
   return generatePageMetadata({
     locale,
     path: '/servicios/marketing-ecommerce',
-    titleEs: "Gestión de Google Ads para e-commerce en Perú | 3R Core",
+    titleEs: "Google Ads para e-commerce: Shopping y anuncios | 3R Core",
     titleEn: 'E-commerce Marketing for U.S. Online Stores | 3R Core',
-    descriptionEs: "Google Ads para e-commerce y tiendas online en Perú: Shopping, Performance Max y búsqueda optimizados por ROAS en Shopify, WooCommerce o VTEX. Marketing para tiendas.",
+    descriptionEs: "Publicidad en Google para tiendas online en Perú: Merchant Center, Shopping y Performance Max con feed limpio y cada venta medida con su valor.",
     descriptionEn: 'Google Shopping, Meta Ads, catalog feeds, email flows and CRO for U.S. online stores, with measurable ROAS and pricing in USD.',
     titleUs: 'Marketing para E-commerce y Tiendas Online en EE.UU.',
     descriptionUs: 'Google Shopping, Meta Ads con catálogo, email y CRO para tiendas online en EE.UU., en español e inglés. Se optimiza por ROAS y se paga en dólares.',
@@ -70,7 +72,10 @@ export default async function MarketingEcommerceLayout({ children, params }: { c
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify([serviceSchema, faqSchema, breadcrumbSchema]) }}
       />
-      {children}
+      {/* 11-oct-2026: la guía del sector (solo /es) no va en el provider raíz. */}
+      {locale === 'es'
+        ? <NextIntlClientProvider messages={sectorPageMessages(messages, 'MarketingEcommerce')}>{children}</NextIntlClientProvider>
+        : children}
     </>
   )
 }

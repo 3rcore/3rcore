@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 import { generatePageMetadata, generateBreadcrumbSchema } from "@/lib/metadata"
 import { buildFAQPageSchema, buildServiceSchema } from "@/lib/seoSchemas"
+import { NextIntlClientProvider } from "next-intl"
+import { sectorPageMessages } from "@/lib/pickMessages"
 import { getMessages } from "next-intl/server"
 
 export async function generateMetadata({ params }: { params: any }): Promise<Metadata> {
@@ -8,9 +10,9 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
   return generatePageMetadata({
     locale,
     path: '/servicios/marketing-clinicas-dentales',
-    titleEs: "Gestión de Google Ads para clínicas dentales en Lima | 3R Core",
+    titleEs: "Google Ads para clínicas dentales: anuncios | 3R Core",
     titleEn: "Digital Marketing for Dental Clinics | 3R Core",
-    descriptionEs: "Google Ads para clínicas dentales en Lima: implantes, ortodoncia y urgencias con citas medidas. Agencia de marketing para dentistas. Desde S/1,800/mes + IGV.",
+    descriptionEs: "Anuncios en Google para clínicas dentales en Lima: campañas por tratamiento dentro de las políticas de salud, con cada cita medida hasta el paciente.",
     descriptionEn: "Digital marketing for U.S. dental clinics and orthodontic practices: healthcare Google Ads, local SEO, Google Business Profile and per-treatment landing pages.",
     titleUs: "Marketing Digital para Clínicas Dentales en EE.UU.",
     descriptionUs: "Agencia de marketing para clínicas dentales en Lima: Google Ads de salud, SEO local y ficha de Google. Gestión desde S/1,800/mes + IGV.",
@@ -67,7 +69,10 @@ export default async function MarketingClinicasDentalesLayout({ children, params
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify([serviceSchema, faqSchema, breadcrumbSchema]) }}
       />
-      {children}
+      {/* 11-oct-2026: la guía del sector (solo /es) no va en el provider raíz. */}
+      {locale === 'es'
+        ? <NextIntlClientProvider messages={sectorPageMessages(messages, 'MarketingClinicasDentales')}>{children}</NextIntlClientProvider>
+        : children}
     </>
   )
 }

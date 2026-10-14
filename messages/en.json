@@ -659,7 +659,7 @@
     "pr": "Public relations, press coverage and reputation management for U.S. brands, run by our in-house team",
     "nearshore": "Nearshore marketing agency for U.S. brands, working U.S. business hours and invoicing through its U.S. subsidiary",
     "hispanic": "Hispanic marketing agency for U.S. brands: websites, SEO and online stores written in Spanish, not translated",
-    "spanishseo": "Spanish SEO services and Spanish SEO agency for U.S. businesses, from $500/mo (reference price)",
+    "spanishseo": "Spanish SEO services and SEO in Spanish for U.S. businesses",
     "posicionamientoia": "Generative engine optimization for U.S. brands: get cited by ChatGPT, Perplexity and Copilot",
     "abogados": "Marketing digital para estudios de abogados",
     "clinicasdentales": "Digital marketing agency for dental clinics and dental practices in the United States",
@@ -2453,7 +2453,7 @@
     },
     "benefits": {
       "badge": "What the engagement includes",
-      "title": "What we run every month",
+      "title": "Spanish SEO services: what we run every month",
       "items": [
         {
           "title": "Keyword research done in Spanish",
@@ -3161,7 +3161,7 @@
   "SpanishSeoMore": {
     "sections": [
       {
-        "title": "What the Spanish SEO plan includes",
+        "title": "What our Spanish SEO services include",
         "paragraphs": [
           "The Spanish SEO plan costs $500 per month as a reference price, with no mandatory contract. It covers the same work an English SEO engagement does, done in Spanish by native speakers on our in-house team:"
         ],

@@ -61,7 +61,7 @@ const COPY = {
     ] as { name: string; detail: string; href: AppPathname }[],
     h2Sectores: 'Gestión de Google Ads por sector',
     introSectores:
-      'Siete sectores tienen página propia de Google Ads porque sus búsquedas, sus reglas y su costo por contacto no se parecen al resto.',
+      'Trece sectores tienen página propia de Google Ads porque sus búsquedas, sus reglas y su costo por contacto no se parecen al resto.',
     sectores: [
       { name: 'Clínicas y consultorios', detail: 'Google Ads de salud, SEO local, Google Business Profile y captación de pacientes con citas medibles.', href: '/servicios/marketing-clinicas' },
       { name: 'Inmobiliarias y proyectos', detail: 'Meta Ads y Google Ads para captar leads, landing por proyecto, CRM y seguimiento por WhatsApp con costo por lead medible.', href: '/servicios/marketing-inmobiliarias' },
@@ -70,6 +70,12 @@ const COPY = {
       { name: 'Clínicas estéticas', detail: 'Instagram y TikTok como canal principal, Meta Ads dentro de las reglas de la categoría, y Google Ads para los tratamientos que sí se buscan por su nombre.', href: '/servicios/marketing-clinicas-esteticas' },
       { name: 'Veterinarias', detail: 'Ficha de Google Business Profile, SEO local por distrito y páginas por servicio con precio. En este rubro la decisión se toma en el mapa.', href: '/servicios/marketing-veterinarias' },
       { name: 'Estudios de abogados', detail: 'Captación de casos por área de práctica con Google Ads de alta intención, SEO local y landing por especialidad.', href: '/servicios/marketing-abogados' },
+      { name: "Psicólogos y terapeutas", detail: "Terapia presencial en Lima y online en todo Perú, con campañas que respetan las reglas de salud de Google y citas medidas por WhatsApp.", href: '/servicios/google-ads-psicologos' },
+      { name: "Hoteles y hospedajes", detail: "Hotel Ads, Performance Max para viajes y búsqueda de marca para que el huésped reserve en tu web y no en una OTA.", href: '/servicios/google-ads-hoteles' },
+      { name: "Restaurantes", detail: "Anuncios para restaurantes, cevicherías y pollerías: reservas y delivery por zona y turno, con llamadas y pedidos por WhatsApp medidos.", href: '/servicios/google-ads-restaurantes' },
+      { name: "Colegios, institutos y universidades", detail: "Anuncios de admisión para colegios privados, institutos y universidades: campañas por nivel y temporada, con solicitudes y matrículas medidas.", href: '/servicios/google-ads-colegios' },
+      { name: "Empresas industriales y B2B", detail: "Cotizaciones de compradores técnicos: keywords por código, norma y material, y ventas del CRM subidas a Google Ads.", href: '/servicios/google-ads-empresas-industriales' },
+      { name: "Contadores y estudios contables", detail: "Mypes que buscan contador: campañas por servicio y distrito, con la pauta ajustada al cronograma de SUNAT.", href: '/servicios/google-ads-contadores' },
     ] as { name: string; detail: string; href: AppPathname }[],
     h2Como: 'Quiénes somos',
     // Fuente: messages/es.json → FAQ.faqs.q2 y q1, literal.
@@ -134,6 +140,27 @@ const COPY = {
       { name: 'Quote calculator', detail: 'An estimate for your project without leaving your email.', href: '/cotizar' },
     ] as { name: string; detail: string; href: AppPathname }[],
   },
+}
+
+// 11-oct-2026. Páginas «SEO para <sector>» (solo /es; en /en y /us dan 404).
+// Van en su propio bloque, separado de «Gestión de Google Ads por sector»:
+// son otra intención y otra URL por sector.
+const SEO_POR_SECTOR = {
+  h2: 'SEO por sector',
+  intro:
+    'Diez rubros tienen página propia de posicionamiento SEO porque su cliente busca distinto: el paciente busca por especialidad o tratamiento, el comprador de un departamento compite contra los portales y el huésped compara contra Booking.',
+  sectores: [
+    { name: 'SEO para clínicas y médicos', detail: 'Fichas por especialidad, médico con colegiatura visible y una ficha de Google por sede.', href: '/servicios/seo-para-clinicas' },
+    { name: 'SEO para dentistas', detail: 'Páginas por tratamiento, urgencias dentales y Google Maps por distrito.', href: '/servicios/seo-para-dentistas' },
+    { name: 'SEO para clínicas estéticas', detail: 'Búsquedas por tratamiento, del Instagram a Google, dentro de las reglas de publicidad en salud.', href: '/servicios/seo-para-clinicas-esteticas' },
+    { name: 'SEO para psicólogos', detail: 'Búsquedas por problema, terapia online y confidencialidad en cada página.', href: '/servicios/seo-para-psicologos' },
+    { name: 'SEO para abogados', detail: 'Una página por área de práctica y SEO local para consultas urgentes.', href: '/servicios/seo-para-abogados' },
+    { name: 'SEO para inmobiliarias y constructoras', detail: 'Páginas por proyecto y distrito para competir con los portales inmobiliarios.', href: '/servicios/seo-para-inmobiliarias' },
+    { name: 'SEO para hoteles y turismo', detail: 'Más reservas directas frente a las agencias online, con la web en inglés para el turista extranjero.', href: '/servicios/seo-para-hoteles' },
+    { name: 'SEO para restaurantes', detail: 'Google Maps, reseñas y una carta publicada en texto, no solo en foto.', href: '/servicios/seo-para-restaurantes' },
+    { name: 'SEO para colegios y universidades', detail: 'Admisión, búsquedas de padres y de alumnos, páginas por nivel y por carrera.', href: '/servicios/seo-para-colegios' },
+    { name: 'SEO para empresas B2B', detail: 'Fichas técnicas indexables, páginas por línea de producto y la cotización como conversión.', href: '/servicios/seo-para-empresas-b2b' },
+  ] as { name: string; detail: string; href: AppPathname }[],
 }
 
 export default function ServiciosSeoSection({ locale }: { locale: string }) {
@@ -220,6 +247,27 @@ export default function ServiciosSeoSection({ locale }: { locale: string }) {
           </div>
         ))}
       </div>
+
+      {locale === 'es' && (
+        <>
+          <h2 className="text-2xl md:text-4xl font-semibold text-white mb-4 tracking-tight">{SEO_POR_SECTOR.h2}</h2>
+          <p className="text-white/55 text-sm md:text-base leading-relaxed max-w-3xl mb-10">{SEO_POR_SECTOR.intro}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-16">
+            {SEO_POR_SECTOR.sectores.map((c) => (
+              <div key={c.name} className="rounded-[18px] border border-white/10 bg-white/[0.03] p-6">
+                <h3 className="text-base font-semibold mb-2 text-white/90">{c.name}</h3>
+                <p className="text-white/50 text-sm leading-relaxed mb-3">{c.detail}</p>
+                <Link
+                  href={c.href}
+                  className="text-white/70 text-[11px] font-bold uppercase tracking-[0.18em] underline decoration-[#A21F8A]/50 underline-offset-4 hover:text-white transition-colors"
+                >
+                  {t.verMas}
+                </Link>
+              </div>
+            ))}
+          </div>
+        </>
+      )}
 
       <div className="rounded-[20px] border border-white/10 bg-white/[0.03] p-7 md:p-9">
         <h2 className="text-xl md:text-2xl font-semibold mb-3 text-white">{t.h2Como}</h2>

@@ -5,9 +5,10 @@ import ClientSection from "@/components/layout/ClientSection";
 import ReviewsSection from "@/components/layout/ReviewsSection";
 import ServiceLanding from "@/components/sections/servicios/generic/ServiceLanding";
 import ServiceFAQ from "@/components/seo/ServiceFAQ";
+import SectorAdsGuide from "@/components/seo/SectorAdsGuide";
 import SEOContentBlock from "@/components/seo/SEOContentBlock";
 import { useScrollToSection } from '@/components/ui/useScrollToSection';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 import { useIndividualPageLoader } from '@/components/layout/useIndividualPageLoader'
 import { AnimatePresence } from 'framer-motion';
@@ -24,6 +25,8 @@ export default function MarketingAbogados() {
       checkVideos: true
     });
   const tH1 = useTranslations('HiddenH1');
+  // La guía del sector (11-oct-2026) solo existe en /es.
+  const locale = useLocale();
 
   return (
     <>
@@ -35,11 +38,12 @@ export default function MarketingAbogados() {
         <div id="hero">
           <ServiceLanding namespace="MarketingAbogadosLanding" />
         </div>
+        {locale === "es" && <SectorAdsGuide namespace="MarketingAbogadosGuia" />}
         <ServiceFAQ namespace="MarketingAbogadosFAQ" count={8} />
         <SEOContentBlock
           namespace="MarketingAbogadosSEO"
           paragraphs={6}
-          relatedLinks={[{ href: "/servicios/google-ads", label: "Gestión de Google Ads" }, { href: "/posicionamiento-seo", label: "SEO local" }, { href: "/servicios/web-development", label: "Página web" }, { href: "/cotizar", label: "Cotizador" }]}
+          relatedLinks={[{ href: "/servicios/google-ads", label: "Gestión de Google Ads" }, { href: "/servicios/seo-para-abogados", label: "SEO para abogados" }, { href: "/posicionamiento-seo", label: "SEO local" }, { href: "/servicios/web-development", label: "Página web" }, { href: "/cotizar", label: "Cotizador" }]}
         />
         <ReviewsSection/>
         <ClientSection />

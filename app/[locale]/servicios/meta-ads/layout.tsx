@@ -2,15 +2,17 @@ import type { Metadata } from "next"
 import { generatePageMetadata, generateBreadcrumbSchema } from "@/lib/metadata"
 import { buildFAQPageSchema, buildServiceSchema } from "@/lib/seoSchemas"
 import { getMessages } from "next-intl/server"
+import { META_FAQ_EXTRA } from "@/components/sections/servicios/meta-ads/MetaAdsExtra"
 
 export async function generateMetadata({ params }: { params: any }): Promise<Metadata> {
   const { locale } = await params
   return generatePageMetadata({
     locale,
     path: '/servicios/meta-ads',
-    titleEs: "Agencia de Meta Ads en Lima, Perú | 3R Core",
+    // 14-oct-2026. GSC 90 d: «agencia meta ads» 79 impr. pos. 32 y «agencia anuncios facebook» pos. 22.
+    titleEs: "Agencia de Meta Ads: Facebook e Instagram en Lima | 3R Core",
     titleEn: 'Meta Ads Agency for U.S. Brands | 3R Core',
-    descriptionEs: "Campañas de Facebook e Instagram en Perú con retargeting, catálogo y mensajes directos a WhatsApp. Desde S/1,500/mes (referencial), con ROAS medible.",
+    descriptionEs: "Agencia de publicidad en Facebook e Instagram en Lima: Meta Ads con retargeting, catálogo y mensajes a WhatsApp. Desde S/1,500/mes (referencial).",
     descriptionEn: 'Facebook and Instagram campaigns for U.S. businesses, with advanced targeting, retargeting and in-house UGC creative.',
     titleUs: 'Agencia de Meta Ads en Español para EE.UU. | 3R Core',
     descriptionUs: 'Facebook e Instagram para el público hispano de EE.UU.: segmentación por idioma y ciudad, retargeting y creatividades UGC. Desde $800/mes.',
@@ -57,6 +59,8 @@ export default async function MetaAdsLayout({ children, params }: { children: Re
     question: q.question,
     answer: q.answer,
   }))
+  // 9-oct-2026: en /es la página muestra además las preguntas de MetaAdsExtra.
+  if (locale === 'es') faqItems.push(...META_FAQ_EXTRA.map((f) => ({ question: f.q, answer: f.a })))
   const faqSchema = buildFAQPageSchema(faqItems)
 
   const breadcrumbSchema = generateBreadcrumbSchema(

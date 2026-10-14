@@ -5,9 +5,10 @@ import ClientSection from "@/components/layout/ClientSection";
 import ReviewsSection from "@/components/layout/ReviewsSection";
 import ServiceLanding from "@/components/sections/servicios/generic/ServiceLanding";
 import ServiceFAQ from "@/components/seo/ServiceFAQ";
+import SectorAdsGuide from "@/components/seo/SectorAdsGuide";
 import SEOContentBlock from "@/components/seo/SEOContentBlock";
 import { useScrollToSection } from '@/components/ui/useScrollToSection';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 import { useIndividualPageLoader } from '@/components/layout/useIndividualPageLoader'
 import { AnimatePresence } from 'framer-motion';
@@ -24,6 +25,8 @@ export default function MarketingInmobiliarias() {
       checkVideos: true
     });
   const tH1 = useTranslations('HiddenH1');
+  // La guía del sector (11-oct-2026) solo existe en /es.
+  const locale = useLocale();
 
   return (
     <>
@@ -35,11 +38,12 @@ export default function MarketingInmobiliarias() {
         <div id="hero">
           <ServiceLanding namespace="MarketingInmobiliariasLanding" />
         </div>
+        {locale === "es" && <SectorAdsGuide namespace="MarketingInmobiliariasGuia" />}
         <ServiceFAQ namespace="MarketingInmobiliariasFAQ" count={8} />
         <SEOContentBlock
           namespace="MarketingInmobiliariasSEO"
           paragraphs={6}
-          relatedLinks={[{ href: "/servicios/google-ads", label: "Gestión de Google Ads" }, { href: "/servicios/meta-ads", label: "Meta Ads" }, { href: "/servicios/performance-marketing", label: "Performance Marketing" }, { href: "/servicios/web-development", label: "Landing Pages" }]}
+          relatedLinks={[{ href: "/servicios/google-ads", label: "Gestión de Google Ads" }, { href: "/servicios/seo-para-inmobiliarias", label: "SEO para inmobiliarias" }, { href: "/servicios/meta-ads", label: "Meta Ads" }, { href: "/servicios/performance-marketing", label: "Performance Marketing" }, { href: "/servicios/web-development", label: "Landing Pages" }]}
         />
         <ReviewsSection/>
         <ClientSection />

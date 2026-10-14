@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 import { generatePageMetadata, generateBreadcrumbSchema, BASE_URL } from "@/lib/metadata"
-import { buildServiceItemList, buildSpeakableSchema } from "@/lib/seoSchemas"
+import { buildServiceItemList, buildSpeakableSchema, buildFAQPageSchema } from "@/lib/seoSchemas"
+import { PILAR } from "./pilar"
+import { COPY } from "./copy"
 
 export const revalidate = 3600
 
@@ -88,11 +90,19 @@ export default async function LimaLandingLayout({ children, params }: { children
     "speakable": buildSpeakableSchema(['h1', 'h2', '.local-intro']),
   }
 
+  // 9-oct-2026: FAQPage con las preguntas VISIBLES del pilar (solo /es, la
+  // única versión indexable). Mismo orden y mismo texto que page.tsx.
+  const faqSchema = buildFAQPageSchema(
+    [...PILAR.faq, COPY.es.qa[0]].map((f) => ({ question: f.q, answer: f.a }))
+  )
+  const nodes: any[] = [webPageSchema, itemList, breadcrumbSchema]
+  if (locale === 'es') nodes.push(faqSchema)
+
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify([webPageSchema, itemList, breadcrumbSchema]) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(nodes) }}
       />
       {children}
     </>

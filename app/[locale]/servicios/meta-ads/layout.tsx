@@ -9,9 +9,10 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
   return generatePageMetadata({
     locale,
     path: '/servicios/meta-ads',
-    titleEs: "Agencia de Meta Ads en Lima, Perú | 3R Core",
+    // 14-oct-2026. GSC 90 d: «agencia meta ads» 79 impr. pos. 32 y «agencia anuncios facebook» pos. 22.
+    titleEs: "Agencia de Meta Ads: Facebook e Instagram en Lima | 3R Core",
     titleEn: 'Meta Ads Agency for U.S. Brands | 3R Core',
-    descriptionEs: "Campañas de Facebook e Instagram en Perú con retargeting, catálogo y mensajes directos a WhatsApp. Desde S/1,500/mes (referencial), con ROAS medible.",
+    descriptionEs: "Agencia de publicidad en Facebook e Instagram en Lima: Meta Ads con retargeting, catálogo y mensajes a WhatsApp. Desde S/1,500/mes (referencial).",
     descriptionEn: 'Facebook and Instagram campaigns for U.S. businesses, with advanced targeting, retargeting and in-house UGC creative.',
     titleUs: 'Agencia de Meta Ads en Español para EE.UU. | 3R Core',
     descriptionUs: 'Facebook e Instagram para el público hispano de EE.UU.: segmentación por idioma y ciudad, retargeting y creatividades UGC. Desde $800/mes.',

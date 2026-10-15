@@ -144,13 +144,20 @@ export function companyLeadSubject(d: { nombre: string; locale?: string; mensaje
 
 /**
  * mailto: del botón RESPONDER. Abre la respuesta ya dirigida al lead, con el
- * asunto del correo que llegó («Re: …») y solo el saludo: el mensaje original
- * del lead no se cita, la respuesta sale limpia.
+ * asunto del correo que llegó («Re: …») y, en el mensaje, el saludo y abajo
+ * el nombre y correo del cliente. El texto que escribió el lead no se cita.
+ *
+ * La dirección va sin codificar (`%40` en vez de `@` deja el «Para» vacío en
+ * algunos clientes de correo); solo se le quitan caracteres que romperían el
+ * enlace.
  */
 function replyMailto(d: CompanyLeadEmailData, isEn: boolean): string {
   const subject = `Re: ${companyLeadSubject(d)}`;
-  const body = isEn ? `Hi ${d.nombre},\n\n` : `Hola ${d.nombre},\n\n`;
-  return `mailto:${encodeURIComponent(d.email)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  const to = String(d.email || '').trim().replace(/[\s?&#"<>]/g, '');
+  const body = isEn
+    ? `Hi ${d.nombre},\n\n\n\nClient: ${d.nombre} <${to}>`
+    : `Hola ${d.nombre},\n\n\n\nCliente: ${d.nombre} <${to}>`;
+  return `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
 
 const LABEL = `color:rgba(255,255,255,0.50); font-size:13px; font-weight:400; font-family:${FONT}; line-height:20px;`;

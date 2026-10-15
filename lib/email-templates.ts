@@ -144,15 +144,12 @@ export function companyLeadSubject(d: { nombre: string; locale?: string; mensaje
 
 /**
  * mailto: del botón RESPONDER. Abre la respuesta ya dirigida al lead, con el
- * asunto del correo que llegó («Re: …») y, abajo, el mensaje original del
- * lead citado con su nombre y correo, para responder sin copiar nada a mano.
+ * asunto del correo que llegó («Re: …») y solo el saludo: el mensaje original
+ * del lead no se cita, la respuesta sale limpia.
  */
 function replyMailto(d: CompanyLeadEmailData, isEn: boolean): string {
   const subject = `Re: ${companyLeadSubject(d)}`;
-  const quoted = String(d.mensaje || '').split(/\r?\n/).map((l) => `> ${l}`).join('\n');
-  const body = isEn
-    ? `Hi ${d.nombre},\n\n\n\n--- Original message from ${d.nombre} <${d.email}> ---\n${quoted}`
-    : `Hola ${d.nombre},\n\n\n\n--- Mensaje original de ${d.nombre} <${d.email}> ---\n${quoted}`;
+  const body = isEn ? `Hi ${d.nombre},\n\n` : `Hola ${d.nombre},\n\n`;
   return `mailto:${encodeURIComponent(d.email)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
 

@@ -1,7 +1,7 @@
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
 import { readAttribution } from '@/lib/attribution';
-import { companyLeadEmail, leadReplyEmail } from '@/lib/email-templates';
+import { companyLeadEmail, companyLeadLang, companyLeadSubject, leadReplyEmail } from '@/lib/email-templates';
 
 // Registra el lead en el panel (CRM) a través del endpoint público del panel —
 // mismo patrón que /api/landing. Best-effort con timeout: si el panel no
@@ -77,7 +77,9 @@ export async function POST(request: Request) {
       {
         from: 'Sistema 3RCORE <administracion@3rcore.com>',
         to: 'alejandro.roque@3rcore.com',
-        subject: `Nuevo contacto: ${nombre} quiere hablar con 3RCORE`,
+        subject: companyLeadSubject({ nombre, locale, mensaje }),
+        // «Responder» de Gmail va directo al lead, no a administracion@.
+        replyTo: email,
         html: companyLeadEmail({
           nombre,
           empresa: apellido,
@@ -85,7 +87,8 @@ export async function POST(request: Request) {
           telefono,
           servicio: servicioTxt,
           mensaje,
-          origen: page ? `Página: ${page}` : undefined,
+          origen: page ? `${companyLeadLang({ locale, mensaje }) === 'en' ? 'Page' : 'Página'}: ${page}` : undefined,
+          locale,
         }),
       },
       {

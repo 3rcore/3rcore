@@ -1,7 +1,7 @@
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
 import { readAttribution } from '@/lib/attribution';
-import { companyLeadEmail, leadReplyEmail } from '@/lib/email-templates';
+import { companyLeadEmail, companyLeadLang, companyLeadSubject, leadReplyEmail } from '@/lib/email-templates';
 
 // Registra el lead en el panel (CRM) a través del endpoint público del panel.
 // Ventaja: NO requiere credenciales de Supabase en este proyecto (Vercel del
@@ -67,7 +67,9 @@ export async function POST(request: Request) {
       {
         from: 'Sistema 3RCORE <administracion@3rcore.com>',
         to: 'piero.roque@3rcore.com',
-        subject: `Nuevo contacto: ${nombre} quiere hablar con 3RCORE`,
+        subject: companyLeadSubject({ nombre, mensaje }),
+        // «Responder» de Gmail va directo al lead, no a administracion@.
+        replyTo: email,
         html: companyLeadEmail({
           nombre,
           empresa: apellido,
@@ -75,7 +77,7 @@ export async function POST(request: Request) {
           telefono,
           servicio: servicioTxt,
           mensaje,
-          origen: `Página: ${website}${origenTxt ? ` · Origen: ${origenTxt}` : ''}`,
+          origen: `${companyLeadLang({ mensaje }) === 'en' ? 'Page' : 'Página'}: ${website}${origenTxt ? ` · Origen: ${origenTxt}` : ''}`,
         }),
       },
       {

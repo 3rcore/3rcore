@@ -103,6 +103,57 @@ export interface CompanyLeadEmailData {
   mensaje: string;
   /** Línea discreta bajo el mensaje: página de origen, UTM, referente. */
   origen?: string;
+  /** Idioma de la página del lead. Junto con el idioma del mensaje decide en
+   *  qué idioma se pinta el correo (ver `companyLeadLang`). */
+  locale?: string;
+}
+
+// Palabras muy frecuentes de cada idioma: bastan para saber en qué idioma
+// escribió la persona sin depender de un servicio externo.
+const EN_WORDS = new Set(['the','and','to','of','is','are','for','with','you','your','my','we','our','i',"we're","i'm",'would','like','need','want','have','this','that','can','do','please','hello','hi','website','store','help','in','on','it','be','looking','about','how','what','price','thanks']);
+const ES_WORDS = new Set(['el','la','los','las','de','del','que','y','en','un','una','para','con','por','mi','mis','me','quiero','necesito','tengo','es','son','hola','buenas','gracias','pagina','página','web','tienda','ayuda','como','cómo','precio','cuanto','cuánto','sobre','al','se','lo','su','nuestra','nuestro']);
+
+/** 'en' si el texto está mayormente en inglés; si no, 'es'. */
+export function detectLang(text: string): 'es' | 'en' {
+  const words = String(text || '').toLowerCase().match(/[a-záéíóúñü']+/g) || [];
+  let en = 0, es = 0;
+  for (const w of words) {
+    if (EN_WORDS.has(w)) en++;
+    if (ES_WORDS.has(w)) es++;
+  }
+  return en > es ? 'en' : 'es';
+}
+
+/**
+ * Idioma del correo a la agencia. Gmail solo ofrece «Traducir mensaje» cuando
+ * el correo entero está en un idioma: si la estructura sale en español y el
+ * mensaje del lead en inglés, la detección se confunde y no aparece. Por eso,
+ * si el lead escribió en inglés (venga de /es o de /en), todo el correo sale
+ * en inglés y Gmail lo traduce al español con un clic.
+ */
+export function companyLeadLang(d: { locale?: string; mensaje?: string }): 'es' | 'en' {
+  return d.locale === 'en' || detectLang(d.mensaje || '') === 'en' ? 'en' : 'es';
+}
+
+/** Asunto del correo a la agencia, en el mismo idioma que el cuerpo. */
+export function companyLeadSubject(d: { nombre: string; locale?: string; mensaje?: string }): string {
+  return companyLeadLang(d) === 'en'
+    ? `New contact: ${d.nombre} wants to talk to 3RCORE`
+    : `Nuevo contacto: ${d.nombre} quiere hablar con 3RCORE`;
+}
+
+/**
+ * mailto: del botón RESPONDER. Abre la respuesta ya dirigida al lead, con el
+ * asunto del correo que llegó («Re: …») y, abajo, el mensaje original del
+ * lead citado con su nombre y correo, para responder sin copiar nada a mano.
+ */
+function replyMailto(d: CompanyLeadEmailData, isEn: boolean): string {
+  const subject = `Re: ${companyLeadSubject(d)}`;
+  const quoted = String(d.mensaje || '').split(/\r?\n/).map((l) => `> ${l}`).join('\n');
+  const body = isEn
+    ? `Hi ${d.nombre},\n\n\n\n--- Original message from ${d.nombre} <${d.email}> ---\n${quoted}`
+    : `Hola ${d.nombre},\n\n\n\n--- Mensaje original de ${d.nombre} <${d.email}> ---\n${quoted}`;
+  return `mailto:${encodeURIComponent(d.email)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
 
 const LABEL = `color:rgba(255,255,255,0.50); font-size:13px; font-weight:400; font-family:${FONT}; line-height:20px;`;
@@ -123,23 +174,44 @@ function infoRow(label: string, valueHtml: string, isLast: boolean): string {
     </tr>`;
 }
 
+const SERVICIO_EN: Record<string, string> = {
+  'Desarrollo web y tiendas virtuales': 'Web Development & Online Stores',
+  'Social media ADS': 'Social Media Ads',
+  'Otro': 'Other',
+  'No especificado': 'Not specified',
+};
+
 export function companyLeadEmail(d: CompanyLeadEmailData): string {
+  const isEn = companyLeadLang(d) === 'en';
+  const t = isEn
+    ? {
+        person: 'Person', company: 'Company', mail: 'Email', phone: 'WhatsApp / Phone', service: 'Service of interest',
+        info: 'CONTACT INFORMATION', message: 'MESSAGE', reply: 'REPLY', badge: 'NEW LEAD',
+        tipA: 'Reply', tipB: ' within the next 24 hours to maximize conversion.',
+        sent: 'Sent automatically from the 3RCORE form',
+      }
+    : {
+        person: 'Persona', company: 'Empresa', mail: 'Correo', phone: 'WhatsApp / Tel', service: 'Servicio de interés',
+        info: 'INFORMACIÓN DEL CONTACTO', message: 'MENSAJE', reply: 'RESPONDER', badge: 'NUEVO LEAD',
+        tipA: 'Responde', tipB: ' dentro de las próximas 24 horas para maximizar la conversión.',
+        sent: 'Enviado automáticamente desde el formulario de 3RCORE',
+      };
   const rows: Array<[string, string]> = [
-    ['Persona', esc(d.nombre)],
-    ['Empresa', esc(d.empresa?.trim() || '—')],
+    [t.person, esc(d.nombre)],
+    [t.company, esc(d.empresa?.trim() || '—')],
     [
-      'Correo',
+      t.mail,
       `<a href="mailto:${esc(d.email)}" style="color:#FF5C93; text-decoration:none; font-weight:600;">${esc(d.email)}</a>`,
     ],
-    ['WhatsApp / Tel', esc(d.telefono?.trim() || '—')],
+    [t.phone, esc(d.telefono?.trim() || '—')],
   ];
 
   // El servicio de interés solo existe en los formularios de landing; si no
   // viene, la tarjeta se queda con las cuatro filas de siempre.
   if (d.servicio?.trim()) {
     rows.push([
-      'Servicio de interés',
-      `<span style="display:inline-block; padding:6px 14px; background-color:#E91E63; background-image:linear-gradient(90deg,#E91E63 0%,#9C27B0 100%); border-radius:100px; color:#ffffff; font-size:11px; font-weight:700; letter-spacing:0.5px; font-family:${FONT};">${esc(d.servicio)}</span>`,
+      t.service,
+      `<span style="display:inline-block; padding:6px 14px; background-color:#E91E63; background-image:linear-gradient(90deg,#E91E63 0%,#9C27B0 100%); border-radius:100px; color:#ffffff; font-size:11px; font-weight:700; letter-spacing:0.5px; font-family:${FONT};">${esc(isEn ? SERVICIO_EN[d.servicio.trim()] || d.servicio : d.servicio)}</span>`,
     ]);
   }
 
@@ -152,7 +224,7 @@ export function companyLeadEmail(d: CompanyLeadEmailData): string {
     <tr>
       <td class="pad" style="padding:40px 40px 44px 40px;">
 
-        <p style="margin:0 0 18px 0; text-align:center; color:#ffffff; font-size:12px; font-weight:700; letter-spacing:2px; font-family:${FONT};">INFORMACIÓN DEL CONTACTO</p>
+        <p style="margin:0 0 18px 0; text-align:center; color:#ffffff; font-size:12px; font-weight:700; letter-spacing:2px; font-family:${FONT};">${t.info}</p>
 
         <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:rgba(255,255,255,0.04); border-radius:16px; border:1px solid rgba(255,255,255,0.10);">
           ${rowsHtml}
@@ -162,7 +234,7 @@ export function companyLeadEmail(d: CompanyLeadEmailData): string {
 
         <div style="height:2px; line-height:2px; font-size:0; background-color:#E91E63; background-image:linear-gradient(90deg,#E91E63 0%,#9C27B0 100%); border-radius:10px;">&nbsp;</div>
 
-        <p style="margin:16px 0; color:#FF5C93; font-size:12px; font-weight:700; letter-spacing:2px; font-family:${FONT};">MENSAJE</p>
+        <p style="margin:16px 0; color:#FF5C93; font-size:12px; font-weight:700; letter-spacing:2px; font-family:${FONT};">${t.message}</p>
 
         <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:rgba(255,255,255,0.04); border-radius:14px; border:1px solid rgba(255,255,255,0.10);">
           <tr>
@@ -180,7 +252,7 @@ export function companyLeadEmail(d: CompanyLeadEmailData): string {
         <table role="presentation" align="center" cellpadding="0" cellspacing="0" border="0" style="margin:0 auto;">
           <tr>
             <td align="center" bgcolor="#E91E63" style="background-color:#E91E63; background-image:linear-gradient(90deg,#E91E63 0%,#9C27B0 100%); border-radius:100px;">
-              <a href="mailto:${esc(d.email)}" style="display:inline-block; padding:10px 28px 10px 33px; color:#ffffff; font-size:11px; font-weight:700; letter-spacing:5px; font-family:${FONT}; text-decoration:none;">RESPONDER</a>
+              <a href="${esc(replyMailto(d, isEn))}" style="display:inline-block; padding:10px 28px 10px 33px; color:#ffffff; font-size:11px; font-weight:700; letter-spacing:5px; font-family:${FONT}; text-decoration:none;">${t.reply}</a>
             </td>
           </tr>
         </table>
@@ -190,7 +262,7 @@ export function companyLeadEmail(d: CompanyLeadEmailData): string {
         <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:rgba(255,255,255,0.04); border-radius:14px; border:1px solid rgba(255,255,255,0.12);">
           <tr>
             <td align="center" style="padding:10px 20px; font-family:${FONT}; font-size:10px; line-height:20px;">
-              <span style="color:#FF2E88;">Responde</span><span style="color:rgba(255,255,255,0.60);"> dentro de las próximas 24 horas para maximizar la conversión.</span>
+              <span style="color:#FF2E88;">${t.tipA}</span><span style="color:rgba(255,255,255,0.60);">${t.tipB}</span>
             </td>
           </tr>
         </table>
@@ -201,12 +273,12 @@ export function companyLeadEmail(d: CompanyLeadEmailData): string {
     <!-- Pie -->
     <tr>
       <td class="pad" align="center" bgcolor="#0D0316" style="background-color:#0D0316; padding:26px 40px; border-top:1px solid rgba(255,255,255,0.08);">
-        <p style="margin:0 0 8px 0; color:rgba(255,255,255,0.40); font-size:12px; font-family:${FONT};">Enviado automáticamente desde el formulario de 3RCORE</p>
+        <p style="margin:0 0 8px 0; color:rgba(255,255,255,0.40); font-size:12px; font-family:${FONT};">${t.sent}</p>
         <a href="https://3rcore.com" style="color:#FF5C93; font-size:11px; font-family:${FONT}; text-decoration:none;">3rcore.com</a>
       </td>
     </tr>`;
 
-  return shell('NUEVO LEAD', content);
+  return shell(t.badge, content, isEn ? 'en' : 'es');
 }
 
 /* ------------------------------------------------------------------ *

@@ -55,6 +55,8 @@ const COPY = {
     name: 'Tu nombre',
     phone: 'Tu WhatsApp (ej. 999 999 999)',
     msg: '¿En qué te ayudamos?',
+    service: 'Servicio de interés',
+    servicePlaceholder: 'Elige un servicio',
     submit: 'Continuar a WhatsApp',
     sending: 'Guardando…',
     close: 'Cerrar',
@@ -66,12 +68,24 @@ const COPY = {
     name: 'Your name',
     phone: 'Your WhatsApp number',
     msg: 'What do you need?',
+    service: 'Service of interest',
+    servicePlaceholder: 'Choose a service',
     submit: 'Continue to WhatsApp',
     sending: 'Saving…',
     close: 'Close',
     privacy: 'Your data is only used to reply on WhatsApp.',
   },
 } as const
+
+/** El `value` viaja siempre en español (mismo criterio que ContactForm y el
+ *  panel); la etiqueta que ve la persona se traduce. */
+const SERVICIOS = [
+  { value: 'Desarrollo web y tiendas virtuales', es: 'Desarrollo web y tiendas virtuales', en: 'Web Development & Online Stores' },
+  { value: 'Google SEO / SEM', es: 'Google SEO / SEM', en: 'Google SEO / SEM' },
+  { value: 'Social media ADS', es: 'Social media ADS', en: 'Social Media Ads' },
+  { value: 'Branding', es: 'Branding', en: 'Branding' },
+  { value: 'Otro', es: 'Otro', en: 'Other' },
+] as const
 
 type Pending = { phone: string; targetWin: string; features?: string; origin: string }
 
@@ -120,6 +134,7 @@ export default function WhatsAppLeadGate() {
   const [nombre, setNombre] = useState('')
   const [celular, setCelular] = useState('')
   const [mensaje, setMensaje] = useState('')
+  const [servicio, setServicio] = useState('')
   const [loading, setLoading] = useState(false)
   // Un envío = un lead y un solo par generate_lead/whatsapp_click. `loading`
   // es estado de React y no frena un doble toque/Enter que llega antes del
@@ -183,15 +198,16 @@ export default function WhatsAppLeadGate() {
     setNombre('')
     setCelular('')
     setMensaje('')
+    setServicio('')
   }
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
-    if (!pending || !nombre.trim() || !celular.trim() || loading || sending.current) return
+    if (!pending || !nombre.trim() || !celular.trim() || !servicio || loading || sending.current) return
     sending.current = true
     setLoading(true)
 
-    const finalMsg = `Hola, soy ${nombre.trim()}. ${mensaje.trim()}`.trim()
+    const finalMsg = `Hola, soy ${nombre.trim()}. Me interesa: ${servicio}. ${mensaje.trim()}`.trim()
     const waUrl = `https://wa.me/${pending.phone}?text=${encodeURIComponent(finalMsg)}`
 
     // Guarda el lead en el panel/CRM (mismo endpoint que PillarWaCapture,
@@ -203,7 +219,9 @@ export default function WhatsAppLeadGate() {
         body: JSON.stringify({
           nombre: nombre.trim(),
           celular: celular.trim(),
+          servicio,
           proyecto: mensaje.trim(),
+          locale,
           origin: pending.origin,
         }),
         keepalive: true,
@@ -269,6 +287,18 @@ export default function WhatsAppLeadGate() {
             required
             className="w-full px-4 py-3 bg-white/5 border border-white/15 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-[#25d366] transition"
           />
+          <select
+            value={servicio}
+            onChange={(e) => setServicio(e.target.value)}
+            required
+            aria-label={t.service}
+            className={`w-full px-4 py-3 bg-white/5 border border-white/15 rounded-xl focus:outline-none focus:border-[#25d366] transition ${servicio ? 'text-white' : 'text-white/40'}`}
+          >
+            <option value="" disabled>{t.service} — {t.servicePlaceholder}</option>
+            {SERVICIOS.map((s) => (
+              <option key={s.value} value={s.value} className="text-black">{locale === 'en' ? s.en : s.es}</option>
+            ))}
+          </select>
           <input
             type="text"
             value={mensaje}

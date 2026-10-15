@@ -1,4 +1,5 @@
-import { Montserrat, Poppins, Playfair_Display, Josefin_Sans } from "next/font/google"
+import { Montserrat, Poppins, Playfair_Display } from "next/font/google"
+import localFont from "next/font/local"
 
 /**
  * Fuente única de tipografías del sitio. Antes cada componente instanciaba la
@@ -33,10 +34,15 @@ export const playfair = Playfair_Display({
 })
 
 // Josefin Sans la introduce el rediseño de Aymar (TeamSection y NosotrosSection
-// v2). Solo los pesos que esas secciones usan de verdad: declarar los 7 con
-// itálicas precargaba 14 woff2 compitiendo con el video del hero.
-export const josefin = Josefin_Sans({
-  subsets: ["latin"],
-  weight: ["300", "400", "600", "700"],
+// v2) y va alojada en el repo (app/fonts) en vez de next/font/google: desde el
+// 15-oct-2026 Google le sirve a los builds de Vercel URLs `/l/font?kit=…&skey=…`
+// y Next 16.1.1 (Turbopack) no sabe resolverlas — el build fallaba con
+// «next/font/google queries have exactly one entry». Es la fuente variable
+// oficial (subset latin, el mismo que se pedía), así que cubre los pesos
+// 300–700 que usan esas secciones con un solo woff2 de 28 KB.
+export const josefin = localFont({
+  src: "../app/fonts/JosefinSans-latin.woff2",
+  weight: "300 700",
+  style: "normal",
   display: "swap",
 })

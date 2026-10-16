@@ -3,6 +3,7 @@
 import { useMemo, useState } from 'react'
 import { WA_LEADS, waUrl } from '@/lib/contact'
 import { openWhatsAppNative } from '@/lib/wa-native-open'
+import ConsentCheckbox, { useMarketingConsentCopy } from '@/components/ui/ConsentCheckbox'
 
 /**
  * Cotizador — calculadora de estimado referencial para 3R Core.
@@ -151,6 +152,8 @@ export default function Cotizador({ locale }: { locale: string }) {
   const [selected, setSelected] = useState<Record<string, string>>({})
   const [nombre, setNombre] = useState('')
   const [celular, setCelular] = useState('')
+  const [consentimiento, setConsentimiento] = useState(false)
+  const consent = useMarketingConsentCopy()
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
 
@@ -220,6 +223,7 @@ export default function Cotizador({ locale }: { locale: string }) {
           celular: celular.trim(),
           proyecto: `Cotizador: ${specs}`,
           origin: typeof window !== 'undefined' ? window.location.pathname : '/cotizar',
+          consentimiento_publicidad: consentimiento,
         }),
         keepalive: true,
       }).catch(() => {})
@@ -326,6 +330,15 @@ export default function Cotizador({ locale }: { locale: string }) {
               <input
                 type="tel" value={celular} onChange={(e) => setCelular(e.target.value)} placeholder={t.phone}
                 className="w-full px-4 py-3 bg-white/5 border border-white/15 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-[#25d366] transition"
+              />
+              {/* Opcional y desmarcada (Ley 29733): no bloquea el envío. */}
+              <ConsentCheckbox
+                id="cotizador-consentimiento"
+                {...consent}
+                checked={consentimiento}
+                onChange={setConsentimiento}
+                className="text-white/55 text-xs leading-relaxed"
+                linkClassName="text-white/80"
               />
               {error && <p className="text-[#ff8fa3] text-xs">{error}</p>}
               <button

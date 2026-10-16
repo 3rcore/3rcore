@@ -8,6 +8,7 @@ import { companyLeadEmail, companyLeadLang, companyLeadSubject, leadReplyEmail }
 // responde, los correos igual salen y el formulario no se entera.
 async function saveLeadToPanel(d: {
   nombre: string; apellido?: string; email: string; telefono?: string; mensaje?: string; website?: string; attribution?: unknown;
+  consentimiento_publicidad: boolean;
 }) {
   const ctl = new AbortController();
   const t = setTimeout(() => ctl.abort(), 6000);
@@ -26,6 +27,7 @@ async function saveLeadToPanel(d: {
         mensaje: d.mensaje,
         website: d.website,
         attribution: d.attribution,
+        consentimiento_publicidad: d.consentimiento_publicidad,
       }),
       signal: ctl.signal,
     });
@@ -40,7 +42,7 @@ export async function POST(request: Request) {
   const resend = new Resend(process.env.RESEND_API_KEY);
 
   try {
-    const { nombre, apellido, email, telefono, mensaje, servicio, page, sitio_web, locale } = await request.json();
+    const { nombre, apellido, email, telefono, mensaje, servicio, page, sitio_web, locale, consentimiento_publicidad } = await request.json();
     // El correo de respuesta al lead salía SIEMPRE en español. Un contacto
     // desde /en recibía su primer mensaje de la agencia en un idioma que
     // puede no entender.
@@ -71,6 +73,8 @@ export async function POST(request: Request) {
       mensaje: servicioTxt ? `Servicio: ${servicioTxt}\n\n${mensaje}` : mensaje,
       website: `Formulario web${page ? ` ${page}` : ''}`,
       attribution: readAttribution(request, 'contact'),
+      // Casilla opcional de comunicaciones por correo: true solo si se marcó.
+      consentimiento_publicidad: consentimiento_publicidad === true,
     });
 
     const result = await resend.batch.send([

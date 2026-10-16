@@ -63,5 +63,7 @@ export function sectorPageMessages(messages: Messages, prefix: string): Messages
   return pickMessages(messages, [
     `${prefix}Landing`, `${prefix}Guia`, `${prefix}FAQ`, `${prefix}SEO`,
     'ServiceLinks', 'ContactSection', 'ClientsSection', 'preload', 'HiddenH1',
+    // Casilla de consentimiento del formulario de contacto (ConsentCheckbox).
+    'MarketingConsent',
   ])
 }

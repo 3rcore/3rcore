@@ -10,7 +10,7 @@ export const dynamic = 'force-dynamic';
 // El token del panel queda en el servidor, no se expone en el navegador.
 export async function POST(request: Request) {
   try {
-    const { nombre, celular, proyecto, servicio, origin, gclid, sitio_web } = await request.json();
+    const { nombre, celular, proyecto, servicio, origin, gclid, sitio_web, consentimiento_publicidad } = await request.json();
     if (!nombre || !celular) {
       return NextResponse.json({ ok: false, error: 'name_and_phone_required' }, { status: 400 });
     }
@@ -55,6 +55,9 @@ export async function POST(request: Request) {
           // en /posicionamiento-seo y otras páginas, no solo en la landing).
           website: origin ? `WhatsApp ${origin}` : 'WhatsApp /performance-marketing',
           attribution: readAttribution(request, 'wa-lead'),
+          // Casilla opcional de comunicaciones por correo (Ley 28493/29733):
+          // true solo si la persona la marcó.
+          consentimiento_publicidad: consentimiento_publicidad === true,
         }),
         signal: ctl.signal,
       });

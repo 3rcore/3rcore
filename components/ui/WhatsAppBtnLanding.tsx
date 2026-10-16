@@ -6,6 +6,7 @@ import { useLocale } from 'next-intl';
 import { gsap } from 'gsap';
 import { trackConversion } from '@/lib/track';
 import { openWhatsAppNative } from '@/lib/wa-native-open';
+import ConsentCheckbox, { useMarketingConsentCopy } from '@/components/ui/ConsentCheckbox';
 
 const COPY = {
   es: {
@@ -34,6 +35,9 @@ const WhatsAppBtnLanding = () => {
     correo: '',
     proyecto: ''
   });
+
+  const [consentimiento, setConsentimiento] = useState(false);
+  const consent = useMarketingConsentCopy();
 
   const containerRef = useRef(null);
   const buttonContentRef = useRef(null);
@@ -84,7 +88,7 @@ const WhatsAppBtnLanding = () => {
       })
       .to(containerRef.current, {
         width: '350px',
-        height: '520px',
+        height: '580px',
         borderRadius: '16px',
         duration: 0.5,
         ease: 'power3.out'
@@ -200,6 +204,7 @@ const WhatsAppBtnLanding = () => {
             celular: `${formData.codigoPais} ${formData.numero}`.trim(),
             proyecto: [formData.proyecto, formData.correo, formData.paginaWeb].filter(Boolean).join(' · '),
             origin,
+            consentimiento_publicidad: consentimiento,
           }),
           keepalive: true,
         }).catch(() => {});
@@ -226,6 +231,7 @@ const WhatsAppBtnLanding = () => {
         correo: '',
         proyecto: ''
       });
+      setConsentimiento(false);
       setIsExpanded(false);
     };
 
@@ -396,6 +402,17 @@ const WhatsAppBtnLanding = () => {
               className="w-full px-3 py-2.5 bg-gray-50 border border-[#25d366] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#25d366] focus:bg-white resize-none text-sm text-gray-800 placeholder-gray-500 transition-all"
             />
           </div>
+
+          {/* Opcional y desmarcada (Ley 29733): no bloquea el envío. */}
+          <ConsentCheckbox
+            id="wa-landing-consentimiento"
+            {...consent}
+            checked={consentimiento}
+            onChange={setConsentimiento}
+            accent="#25d366"
+            className="text-gray-600 text-xs leading-snug"
+            linkClassName="text-[#128c7e]"
+          />
 
           <button
             type="submit"

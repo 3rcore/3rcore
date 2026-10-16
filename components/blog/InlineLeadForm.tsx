@@ -2,6 +2,7 @@
 
 import { useRef, useState } from 'react'
 import { trackConversion } from '@/lib/track'
+import ConsentCheckbox from '@/components/ui/ConsentCheckbox'
 
 /**
  * Mini-formulario de captación DENTRO del artículo, solo para el mercado de
@@ -46,6 +47,8 @@ export default function InlineLeadForm({ slug, service }: { slug: string; servic
           mensaje: mensaje || `Asked about ${service} from the article "${slug}".`,
           page: `/blogs/${slug}`,
           locale: 'en',
+          // La casilla llega del FormData como "on" o no llega: al panel va boolean.
+          consentimiento_publicidad: fd.get('consentimiento_publicidad') === 'on',
         }),
       })
       if (!r.ok) throw new Error('bad_status')
@@ -92,6 +95,16 @@ export default function InlineLeadForm({ slug, service }: { slug: string; servic
       <input
         id={`lf-msg-${slug}`} name="mensaje" type="text" placeholder="What do you need? (optional)"
         className="mt-3 w-full rounded-xl border border-white/20 bg-black/30 px-4 py-3 text-sm text-white placeholder-white/40 outline-none focus:border-[#E91E63]"
+      />
+
+      {/* Optional and unchecked by default (Ley 29733): it never blocks sending. */}
+      <ConsentCheckbox
+        id={`lf-consent-${slug}`}
+        text="I agree to receive news and offers from 3R CORE by email. I can unsubscribe at any time."
+        privacyLabel="Privacy policy"
+        privacyHref="/en/privacy-policy"
+        className="mt-3 text-xs leading-relaxed text-white/60"
+        linkClassName="text-white/80"
       />
 
       {/* honeypot: invisible para personas */}

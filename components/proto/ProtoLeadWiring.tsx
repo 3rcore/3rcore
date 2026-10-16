@@ -50,6 +50,8 @@ export default function ProtoLeadWiring() {
       const celular = (f.querySelector('input[type="tel"]') as HTMLInputElement)?.value?.trim()
         || (f.querySelectorAll('input')[1] as HTMLInputElement)?.value?.trim() || ''
       const servicio = (f.querySelector('select') as HTMLSelectElement)?.value?.trim() || ''
+      // Casilla opcional de comunicaciones por correo (desmarcada por defecto).
+      const consentimiento_publicidad = (f.querySelector('input[name="consentimiento_publicidad"]') as HTMLInputElement | null)?.checked === true
 
       if (!nombre || !celular) {
         const err = f.querySelector('.proto-lead-err') as HTMLElement | null
@@ -66,7 +68,7 @@ export default function ProtoLeadWiring() {
         await fetch('/api/wa-lead', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ nombre, celular, proyecto: servicio, origin, gclid }),
+          body: JSON.stringify({ nombre, celular, proyecto: servicio, origin, gclid, consentimiento_publicidad }),
           keepalive: true,
         })
       } catch {}

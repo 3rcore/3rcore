@@ -290,6 +290,7 @@ export function closing(o: { h2: string; lede: string; waMsg: string; first?: st
             .map((x) => `<option>${esc(x)}</option>`)
             .join('')}</select></div>
           <p class="proto-lead-err" style="display:none;color:#ff8fa3;font-size:.8rem"></p>
+          <div class="proto-consent"><input type="checkbox" id="proto-consentimiento" name="consentimiento_publicidad"><p><label for="proto-consentimiento">Acepto recibir novedades y ofertas de 3R CORE por correo. Puedo darme de baja cuando quiera.</label> <a href="/es/politicas" target="_blank" rel="noopener">Política de privacidad</a></p></div>
           <button class="btn btn-1" type="submit">Quiero mi cotización${ICON_ARROW}</button>
         </form>
       </div>

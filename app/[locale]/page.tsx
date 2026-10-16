@@ -19,7 +19,7 @@ export default async function HomePage({ params }: { params: any }) {
   // diccionario completo del locale (que incluye Nearshore, legales, etc.).
   // /es queda fuera a propósito: no se toca su comportamiento.
   const homeMessages = pickMessages(await getMessages(), [
-    "CTA", "ClientsSection", "ContactSection", "HeroHome", "NewsSection",
+    "CTA", "ClientsSection", "ContactSection", "HeroHome", "MarketingConsent", "NewsSection",
     "SocialMediaHero", "TeamSection", "preload",
   ])
 

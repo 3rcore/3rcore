@@ -227,6 +227,13 @@
 .proto .field input:focus,.proto .field select:focus{outline:0;border-color:var(--mag)}
 .proto .field input::placeholder{color:var(--gris-2)}
 .proto .fform .btn{width:100%;margin-top:.4rem}
+/* Casilla de consentimiento de comunicaciones por correo (opcional, desmarcada) */
+.proto .proto-consent{display:flex;align-items:flex-start;gap:.6rem;margin:.2rem 0 1rem;font-size:.78rem;line-height:1.45;color:var(--gris)}
+.proto .proto-consent p{margin:0}
+.proto .proto-consent label{cursor:pointer}
+.proto .proto-consent a{text-decoration:underline;text-underline-offset:2px}
+.proto .proto-consent input{width:1rem;height:1rem;flex:none;margin:.1rem 0 0;accent-color:var(--mag);cursor:pointer}
+.proto .proto-consent input:focus-visible{outline:2px solid #FF6FA0;outline-offset:2px}
 
 /* ── REJILLAS ────────────────────────────────────────────────── */
 .proto .grid{display:grid;gap:1px;background:var(--linea-s)}

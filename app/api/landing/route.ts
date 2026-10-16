@@ -9,6 +9,7 @@ import { companyLeadEmail, companyLeadLang, companyLeadSubject, leadReplyEmail }
 // Si el panel no responde, no rompe nada: los correos igual se envían.
 async function saveLeadToPanel(d: {
   nombre: string; apellido?: string; email: string; telefono?: string; mensaje?: string; website?: string; attribution?: unknown;
+  consentimiento_publicidad: boolean;
 }) {
   // Timeout duro (6s): si el panel está lento o caído, NO bloquea ni retrasa el
   // envío de los correos. El lead igual queda en el correo aunque el panel falle.
@@ -29,6 +30,7 @@ async function saveLeadToPanel(d: {
         mensaje: d.mensaje,
         website: d.website,
         attribution: d.attribution,
+        consentimiento_publicidad: d.consentimiento_publicidad,
       }),
       signal: ctl.signal,
     });
@@ -44,7 +46,7 @@ export async function POST(request: Request) {
 
   try {
     const body = await request.json();
-    const { nombre, apellido, email, mensaje, website, servicio, utm, referrer } = body;
+    const { nombre, apellido, email, mensaje, website, servicio, utm, referrer, consentimiento_publicidad } = body;
     // El formulario de los pilares (landingContact) manda el teléfono como `number`: sin esto llegaba vacío.
     const telefono = body.telefono ?? body.number;
 
@@ -61,7 +63,8 @@ export async function POST(request: Request) {
     const origenTxt = [utm, referrer].filter(Boolean).join(' · ').trim();
 
     // Guarda el lead en el panel/CRM antes de enviar los correos.
-    await saveLeadToPanel({ nombre, apellido, email, telefono, mensaje, website, attribution: readAttribution(request, 'landing') });
+    // consentimiento_publicidad: casilla opcional de comunicaciones por correo, true solo si se marcó.
+    await saveLeadToPanel({ nombre, apellido, email, telefono, mensaje, website, attribution: readAttribution(request, 'landing'), consentimiento_publicidad: consentimiento_publicidad === true });
 
     const result = await resend.batch.send([
       {

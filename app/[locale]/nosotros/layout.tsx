@@ -92,7 +92,7 @@ export default async function NosotrosLayout({ children, params }: { children: R
   // diccionario completo del locale. /es usa OriginalV2 (otro árbol) y queda
   // fuera del recorte para no arriesgar nada de ese mercado.
   const aboutMessages = pickMessages(await getMessages(), [
-    "AboutSection", "ContactSection", "FoundersSection", "MomentsSection", "OurTeamSection", "preload",
+    "AboutSection", "ContactSection", "FoundersSection", "MarketingConsent", "MomentsSection", "OurTeamSection", "preload",
   ])
 
   return (

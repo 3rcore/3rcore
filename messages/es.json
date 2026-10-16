@@ -89,6 +89,10 @@
     "buttonSend": "Enviar",
     "buttonSending": "Enviando..."
   },
+  "MarketingConsent": {
+    "text": "Acepto recibir novedades y ofertas de 3R CORE por correo. Puedo darme de baja cuando quiera.",
+    "privacy": "Política de privacidad"
+  },
   "Navbar": {
     "title": "Navegador",
     "regular": "Tu Éxito",

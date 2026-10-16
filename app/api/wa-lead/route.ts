@@ -10,7 +10,7 @@ export const dynamic = 'force-dynamic';
 // El token del panel queda en el servidor, no se expone en el navegador.
 export async function POST(request: Request) {
   try {
-    const { nombre, celular, proyecto, servicio, origin, gclid, sitio_web, consentimiento_publicidad } = await request.json();
+    const { nombre, celular, proyecto, servicio, origin, gclid, sitio_web, consentimiento_publicidad, email, empresa, web, consulta } = await request.json();
     if (!nombre || !celular) {
       return NextResponse.json({ ok: false, error: 'name_and_phone_required' }, { status: 400 });
     }
@@ -33,6 +33,9 @@ export async function POST(request: Request) {
       // y es su servicio; el modal global manda `servicio` + consulta aparte.
       servicio ? `Servicio: ${servicio}` : proyecto ? `Servicio: ${proyecto}` : null,
       servicio && proyecto ? `Consulta: ${proyecto}` : null,
+      // Formularios largos (home, /nosotros): web y mensaje de la persona.
+      web ? `Web: ${String(web).slice(0, 200)}` : null,
+      consulta ? `Mensaje: ${String(consulta).slice(0, 2000)}` : null,
       gclid ? `GCLID: ${gclid}` : null,
       origin ? `Origen: ${origin}` : null,
     ].filter(Boolean).join('\n');
@@ -50,6 +53,8 @@ export async function POST(request: Request) {
         body: JSON.stringify({
           nombre,
           telefono: celular,
+          email: typeof email === 'string' ? email.trim().slice(0, 200) : '',
+          apellido: typeof empresa === 'string' ? empresa.trim().slice(0, 120) : '',
           mensaje,
           // La fuente refleja la página real de origen (el widget también vive
           // en /posicionamiento-seo y otras páginas, no solo en la landing).

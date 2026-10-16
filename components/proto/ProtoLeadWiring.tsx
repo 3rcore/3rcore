@@ -45,8 +45,16 @@ export default function ProtoLeadWiring() {
       const f = e.currentTarget as HTMLFormElement
       if (f.dataset.sending === '1') return
 
-      const nombre = (f.querySelector('input:not([type="tel"]):not([type="email"]):not([type="hidden"])') as HTMLInputElement)?.value?.trim()
-        || (f.querySelector('input') as HTMLInputElement)?.value?.trim() || ''
+      // En home y /nosotros el primer campo es «Sitio web»: el nombre se busca
+      // por su placeholder y solo si no existe se toma el primer campo de texto.
+      const campo = (re: RegExp) => Array.from(f.querySelectorAll<HTMLInputElement>('input[type="text"], input:not([type])'))
+        .find((i) => re.test(i.placeholder || ''))?.value?.trim() || ''
+      const nombre = campo(/^tu nombre/i)
+        || (f.querySelector('input:not([type="tel"]):not([type="email"]):not([type="hidden"]):not([type="checkbox"])') as HTMLInputElement)?.value?.trim() || ''
+      const email = (f.querySelector('input[type="email"]') as HTMLInputElement | null)?.value?.trim() || ''
+      const empresa = campo(/^(?!www\.).*empresa/i) // «www.tuempresa.com» es la web, no la empresa
+      const web = campo(/www\.|sitio|web/i)
+      const consulta = (f.querySelector('textarea') as HTMLTextAreaElement | null)?.value?.trim() || ''
       const celular = (f.querySelector('input[type="tel"]') as HTMLInputElement)?.value?.trim()
         || (f.querySelectorAll('input')[1] as HTMLInputElement)?.value?.trim() || ''
       const servicio = (f.querySelector('select') as HTMLSelectElement)?.value?.trim() || ''
@@ -68,7 +76,7 @@ export default function ProtoLeadWiring() {
         await fetch('/api/wa-lead', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ nombre, celular, proyecto: servicio, origin, gclid, consentimiento_publicidad }),
+          body: JSON.stringify({ nombre, celular, proyecto: servicio, origin, gclid, consentimiento_publicidad, email, empresa, web, consulta }),
           keepalive: true,
         })
       } catch {}

@@ -262,6 +262,16 @@ body{
 .ga .lead-form button:hover{transform:translateY(-2px);background:#1a0420}
 .ga .lead-form button:disabled{opacity:.6;cursor:not-allowed;transform:none}
 .ga .form-note{font-size:12px;color:rgba(255,255,255,.85);margin-top:12px;text-align:center}
+/* Casilla de consentimiento de comunicaciones por correo (opcional, desmarcada) */
+.ga .consent{display:flex;align-items:flex-start;gap:9px;font-size:12px;line-height:1.45;color:rgba(255,255,255,.85);text-align:left}
+.ga .consent p{margin:0}
+.ga .consent label{cursor:pointer}
+.ga .consent a{text-decoration:underline;text-underline-offset:2px}
+.ga .lead-form .consent input,.ga .wa-modal-form .consent input{width:16px;height:16px;flex:none;margin:1px 0 0;padding:0;border:0;accent-color:var(--magenta);cursor:pointer}
+.ga .consent input:focus-visible{outline:2px solid var(--magenta);outline-offset:2px}
+.ga .wa-modal-form .consent{color:#475569}
+.ga .wa-modal-form .consent input{accent-color:var(--wa)}
+.ga .wa-modal-form .consent input:focus-visible{outline-color:var(--wa-dark)}
 .ga .form-ok{position:relative;z-index:2;background:rgba(13,0,16,.34);border:1px solid rgba(255,255,255,.28);border-radius:18px;padding:40px 26px;text-align:center;backdrop-filter:blur(6px)}
 .ga .form-ok .ok-ic{width:62px;height:62px;border-radius:50%;background:#fff;display:grid;place-items:center;margin:0 auto 18px;color:#15a05a}
 .ga .form-ok h3{color:#fff;font-size:22px;font-weight:700;margin-bottom:10px}

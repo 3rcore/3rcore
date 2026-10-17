@@ -44,6 +44,7 @@ import { useEffect, useRef, useState, type FormEvent } from 'react'
 import { useLocale } from 'next-intl'
 import { trackConversion } from '@/lib/track'
 import { openWhatsAppNative } from '@/lib/wa-native-open'
+import ConsentCheckbox, { useMarketingConsentCopy } from '@/components/ui/ConsentCheckbox'
 
 const DEDUP_KEY = '3r_wa_lead'
 const DEDUP_WINDOW_MS = 12 * 60 * 60 * 1000 // 12h
@@ -135,6 +136,8 @@ export default function WhatsAppLeadGate() {
   const [celular, setCelular] = useState('')
   const [mensaje, setMensaje] = useState('')
   const [servicio, setServicio] = useState('')
+  const [consentimiento, setConsentimiento] = useState(false)
+  const consent = useMarketingConsentCopy()
   const [loading, setLoading] = useState(false)
   // Un envío = un lead y un solo par generate_lead/whatsapp_click. `loading`
   // es estado de React y no frena un doble toque/Enter que llega antes del
@@ -199,6 +202,7 @@ export default function WhatsAppLeadGate() {
     setCelular('')
     setMensaje('')
     setServicio('')
+    setConsentimiento(false)
   }
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
@@ -223,6 +227,7 @@ export default function WhatsAppLeadGate() {
           proyecto: mensaje.trim(),
           locale,
           origin: pending.origin,
+          consentimiento_publicidad: consentimiento,
         }),
         keepalive: true,
       })
@@ -305,6 +310,16 @@ export default function WhatsAppLeadGate() {
             onChange={(e) => setMensaje(e.target.value)}
             placeholder={t.msg}
             className="w-full px-4 py-3 bg-white/5 border border-white/15 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-[#25d366] transition"
+          />
+          {/* Opcional y desmarcada (Ley 29733): no bloquea el envío. */}
+          <ConsentCheckbox
+            id="wa-gate-consentimiento"
+            {...consent}
+            checked={consentimiento}
+            onChange={setConsentimiento}
+            accent="#25d366"
+            className="text-white/60 text-xs leading-relaxed"
+            linkClassName="text-white/80"
           />
           <button
             type="submit"

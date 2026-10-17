@@ -327,6 +327,8 @@ export default function LandingClient() {
     const nombre = String(d.get("wa_nombre") || "").trim();
     const celular = String(d.get("wa_celular") || "").trim();
     const proyecto = String(d.get("wa_proyecto") || "").trim();
+    // Casilla opcional de comunicaciones por correo: "on" si se marcó.
+    const consentimiento_publicidad = d.get("consentimiento_publicidad") === "on";
     if (!nombre || !celular) return;
     setWaSending(true);
 
@@ -340,7 +342,7 @@ export default function LandingClient() {
       await fetch("/api/wa-lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ nombre, celular, proyecto, origin: utm, gclid }),
+        body: JSON.stringify({ nombre, celular, proyecto, origin: utm, gclid, consentimiento_publicidad }),
       });
     } catch { /* aunque falle el guardado, igual abrimos el chat */ }
 
@@ -375,6 +377,8 @@ export default function LandingClient() {
     const celular = String(d.get("celular") || "");
     const correo = String(d.get("correo") || "");
     const necesidad = String(d.get("necesidad") || "");
+    // Casilla opcional de comunicaciones por correo: "on" si se marcó.
+    const consentimiento_publicidad = d.get("consentimiento_publicidad") === "on";
     // Captura de origen para el panel/CRM (gclid persistido + utm) para poder
     // importar la conversión offline a Google Ads cuando el lead cierre.
     const click = getClickData();
@@ -410,7 +414,7 @@ export default function LandingClient() {
       const r = await fetch("/api/landing", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ nombre, apellido: empresa || "-", email: correo, telefono: celular, mensaje, website: "Landing /performance-marketing", servicio: necesidad, utm, gclid, referrer: ref }),
+        body: JSON.stringify({ nombre, apellido: empresa || "-", email: correo, telefono: celular, mensaje, website: "Landing /performance-marketing", servicio: necesidad, utm, gclid, referrer: ref, consentimiento_publicidad }),
       });
       delivered = r.ok;
     } catch { /* still confirm to user */ }
@@ -708,6 +712,11 @@ export default function LandingClient() {
                     <option>Meta Ads (Facebook / Instagram)</option>
                     <option>TikTok Ads</option>
                   </select>
+                  {/* Opcional y desmarcada (Ley 29733): no bloquea el envío. */}
+                  <div className="consent">
+                    <input type="checkbox" id="pm-consentimiento" name="consentimiento_publicidad" />
+                    <p><label htmlFor="pm-consentimiento">Acepto recibir novedades y ofertas de 3R CORE por correo. Puedo darme de baja cuando quiera.</label> <a href="/es/politicas" target="_blank" rel="noopener">Política de privacidad</a></p>
+                  </div>
                   <button type="submit" disabled={sending}>{sending ? "Enviando…" : "Quiero mi diagnóstico"}</button>
                 </div>
                 <p className="form-note">Te respondemos el mismo día hábil. Tus datos están seguros con nosotros.</p>
@@ -781,6 +790,11 @@ export default function LandingClient() {
                 <option>Social Media / Community</option>
                 <option>No estoy seguro / asesoría</option>
               </select>
+              {/* Opcional y desmarcada (Ley 29733): no bloquea el envío. */}
+              <div className="consent">
+                <input type="checkbox" id="pm-wa-consentimiento" name="consentimiento_publicidad" />
+                <p><label htmlFor="pm-wa-consentimiento">Acepto recibir novedades y ofertas de 3R CORE por correo. Puedo darme de baja cuando quiera.</label> <a href="/es/politicas" target="_blank" rel="noopener">Política de privacidad</a></p>
+              </div>
               <button type="submit" className="btn btn-wa" disabled={waSending}>
                 <WaIcon /> {waSending ? "Abriendo…" : "Iniciar chat"}
               </button>

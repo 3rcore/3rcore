@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react'
 import { Link } from '@/i18n/routing'
+import ConsentCheckbox from '@/components/ui/ConsentCheckbox'
 
 /**
  * Calculadora de coste de una web para /en/website-cost-calculator (28-sep-2026).
@@ -134,6 +135,7 @@ export default function WebsiteCostCalculator() {
   const [phone, setPhone] = useState('')
   const [email, setEmail] = useState('')
   const [honey, setHoney] = useState('')
+  const [consentimiento, setConsentimiento] = useState(false)
   const [sending, setSending] = useState(false)
   const [sent, setSent] = useState(false)
   const [error, setError] = useState('')
@@ -167,6 +169,7 @@ export default function WebsiteCostCalculator() {
           proyecto: `Website cost calculator: ${specs}${email.trim() ? ` · Email: ${email.trim()}` : ''}`,
           origin: typeof window !== 'undefined' ? window.location.pathname : '/en/website-cost-calculator',
           sitio_web: honey,
+          consentimiento_publicidad: consentimiento,
         }),
       })
       if (!res.ok) throw new Error('lead')
@@ -270,6 +273,17 @@ export default function WebsiteCostCalculator() {
             <input
               type="text" name="sitio_web" tabIndex={-1} autoComplete="off" value={honey} onChange={(e) => setHoney(e.target.value)}
               className="hidden" aria-hidden="true"
+            />
+            {/* Optional and unchecked by default (Ley 29733): it never blocks sending. */}
+            <ConsentCheckbox
+              id="wcc-consentimiento"
+              text="I agree to receive news and offers from 3R CORE by email. I can unsubscribe at any time."
+              privacyLabel="Privacy policy"
+              privacyHref="/en/privacy-policy"
+              checked={consentimiento}
+              onChange={setConsentimiento}
+              className="text-white/60 text-xs leading-relaxed"
+              linkClassName="text-white/80"
             />
             {error && <p className="text-[#ff8fa3] text-xs">{error}</p>}
             <button

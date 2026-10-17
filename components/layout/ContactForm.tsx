@@ -1,6 +1,7 @@
 "use client";
 import { poppins } from "@/lib/fonts"
 import BrandOrb from "@/components/ui/BrandOrb";
+import ConsentCheckbox, { useMarketingConsentCopy } from "@/components/ui/ConsentCheckbox";
 
 import { useEffect, useRef, useState } from "react";
 import { useTranslations, useLocale } from "next-intl"
@@ -44,6 +45,7 @@ const ContactForm = () => {
   const [isInteractive, setIsInteractive] = useState(false);
   const mapRef = useRef<HTMLDivElement>(null);
   const t = useTranslations('ContactSection');
+  const consent = useMarketingConsentCopy();
 
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState<{ type: 'success' | 'error' | ''; message: string }>({ type: '', message: '' });
@@ -94,7 +96,8 @@ const ContactForm = () => {
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
-        body: JSON.stringify({ ...data, locale }),
+        // La casilla llega del FormData como "on" o no llega: al panel va boolean.
+        body: JSON.stringify({ ...data, locale, consentimiento_publicidad: formData.get('consentimiento_publicidad') === 'on' }),
         headers: { 'Content-Type': 'application/json' },
       });
 
@@ -270,6 +273,14 @@ const ContactForm = () => {
                 <FieldBorder />
               </div>
             </div>
+
+            {/* Opcional y desmarcada (Ley 29733): no bloquea el envío. */}
+            <ConsentCheckbox
+              id="contact-consentimiento"
+              {...consent}
+              className="text-white/60 text-[12px] leading-relaxed"
+              linkClassName="text-white/80"
+            />
 
             <div className="flex flex-col gap-4">
               <button

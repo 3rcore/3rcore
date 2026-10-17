@@ -1,6 +1,7 @@
 'use client'
 
-import { useState } from 'react'
+import { useId, useState } from 'react'
+import ConsentCheckbox, { useMarketingConsentCopy } from '@/components/ui/ConsentCheckbox'
 import { WA_LEADS } from '@/lib/contact'
 import { trackConversion } from '@/lib/track'
 import { openWhatsAppNative } from '@/lib/wa-native-open'
@@ -45,6 +46,9 @@ export default function PillarWaCapture({ locale, service }: { locale: string; s
   const [nombre, setNombre] = useState('')
   const [celular, setCelular] = useState('')
   const [proyecto, setProyecto] = useState('')
+  const [consentimiento, setConsentimiento] = useState(false)
+  const consent = useMarketingConsentCopy()
+  const consentId = useId()
   const [loading, setLoading] = useState(false)
 
   const origin = typeof window !== 'undefined' ? window.location.pathname : ''
@@ -70,6 +74,7 @@ export default function PillarWaCapture({ locale, service }: { locale: string; s
           celular: celular.trim(),
           proyecto: [`Servicio: ${service}`, proyecto.trim()].filter(Boolean).join(' · '),
           origin,
+          consentimiento_publicidad: consentimiento,
         }),
         keepalive: true,
       }).catch(() => {})
@@ -118,6 +123,16 @@ export default function PillarWaCapture({ locale, service }: { locale: string; s
           onChange={(e) => setProyecto(e.target.value)}
           placeholder={t.project}
           className="w-full px-4 py-3 bg-white/5 border border-white/15 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-[#25d366] transition"
+        />
+        {/* Opcional y desmarcada (Ley 29733): no bloquea el envío. */}
+        <ConsentCheckbox
+          id={consentId}
+          {...consent}
+          checked={consentimiento}
+          onChange={setConsentimiento}
+          accent="#25d366"
+          className="text-white/60 text-xs leading-relaxed"
+          linkClassName="text-white/80"
         />
         <button
           type="submit"

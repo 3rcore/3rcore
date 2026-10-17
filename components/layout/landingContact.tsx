@@ -4,6 +4,7 @@ import { montserrat } from "@/lib/fonts"
 import { useState } from "react"; 
 import { useTranslations, useLocale } from "next-intl"
 import { useRouter } from "next/navigation";
+import ConsentCheckbox, { useMarketingConsentCopy } from "@/components/ui/ConsentCheckbox";
 
 
 const LandingContact = () => {
@@ -15,6 +16,7 @@ const LandingContact = () => {
 
   const router = useRouter();
   const t = useTranslations('LandingContactSection');
+  const consent = useMarketingConsentCopy();
   
 
   const [loading, setLoading] = useState(false);
@@ -48,7 +50,8 @@ const LandingContact = () => {
     try {
       const response = await fetch('/api/landing', {
         method: 'POST',
-        body: JSON.stringify(data),
+        // La casilla llega del FormData como "on" o no llega: al panel va boolean.
+        body: JSON.stringify({ ...data, consentimiento_publicidad: formData.get('consentimiento_publicidad') === 'on' }),
         headers: { 'Content-Type': 'application/json' },
       });
       
@@ -136,6 +139,14 @@ const LandingContact = () => {
                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-[#E91E63] to-[#9C27B0] transition-all duration-500 peer-focus:w-full"></span>
               </div>
               
+
+              {/* Opcional y desmarcada (Ley 29733): no bloquea el envío. */}
+              <ConsentCheckbox
+                id="landing-consentimiento"
+                {...consent}
+                className="md:col-span-2 text-white/60 text-[11px] leading-relaxed"
+                linkClassName="text-white/80"
+              />
 
               <div className="md:col-span-2 flex flex-col gap-4 mt-6">
                 <button 

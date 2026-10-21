@@ -6516,5 +6516,868 @@
         ]
       }
     ]
+  },
+  "GoogleAdsDentistasLanding": {
+    "hero": {
+      "badge": "Google Ads · Dentistas y clínicas dentales",
+      "title": "Google Ads para dentistas que llena la agenda de pacientes",
+      "subtitle": "Tu consultorio arriba en Google cuando alguien busca «dentista cerca de mí», «implantes dentales en Surco» o «ortodoncia en Miraflores», con cada llamada y cita por WhatsApp medida.",
+      "cta": "Quiero más pacientes",
+      "waCta": "Pedir auditoría por WhatsApp",
+      "waText": "Hola 3R Core, tengo un consultorio dental y quiero más pacientes con Google Ads.",
+      "serviceLink": "Ver el servicio completo de Google Ads"
+    },
+    "intro": {
+      "title": "Publicidad en Google para dentistas: intención alta y decisión local",
+      "p1": "La gestión de Google Ads para dentistas en 3R Core consiste en poner tu consultorio delante de quien busca atención en su distrito y, muchas veces, para hoy. Separamos los tratamientos (urgencia, limpieza, ortodoncia, implantes) porque cada uno tiene un valor y una búsqueda distintos.",
+      "p2": "Quien busca «dentista de urgencia» con dolor llama a la primera opción que le resuelve y queda cerca. Por eso el anuncio lleva teléfono, ubicación y WhatsApp.",
+      "p3": "La odontología entra en la categoría de salud de Google Ads: cada anuncio se redacta sin prometer resultados garantizados y sin segmentar por condiciones sensibles. Esta página trata solo de anuncios en Google; la web y las redes del consultorio son otros servicios de 3R Core."
+    },
+    "benefits": {
+      "badge": "Qué incluye",
+      "title": "La gestión de Google Ads para tu consultorio dental",
+      "items": [
+        {
+          "title": "Un grupo por tratamiento",
+          "description": "Urgencias, limpieza, ortodoncia, implantes y estética dental separados, cada uno con su presupuesto y su mensaje."
+        },
+        {
+          "title": "Radio real de pacientes",
+          "description": "Los anuncios salen en los distritos desde los que un paciente de verdad llega a tu consultorio."
+        },
+        {
+          "title": "Llamada y WhatsApp en el anuncio",
+          "description": "Recurso de llamada y enlace a WhatsApp para que la cita entre sin pasar por formularios largos."
+        },
+        {
+          "title": "Anuncios dentro de la política de salud",
+          "description": "Redacción sin promesas de resultados ni términos que Google restringe en salud, para que la cuenta no se suspenda."
+        },
+        {
+          "title": "Urgencias en horario de atención",
+          "description": "La pauta de urgencias se concentra cuando puedes atender y se apaga cuando el consultorio está cerrado."
+        },
+        {
+          "title": "Reporte en citas, no en clics",
+          "description": "Cuánto te costó cada cita agendada y cada paciente nuevo, por tratamiento y por sede."
+        }
+      ]
+    },
+    "process": {
+      "badge": "Cómo funciona",
+      "title": "Cómo funciona Google Ads para dentistas",
+      "steps": [
+        {
+          "title": "Tratamientos que quieres llenar",
+          "description": "Vemos qué sillón tiene horas libres, qué tratamientos dejan margen y cuáles traen al paciente que luego se queda."
+        },
+        {
+          "title": "Búsquedas por tratamiento y distrito",
+          "description": "Elegimos búsquedas de quien quiere atenderse, como «implantes dentales en Surco», y descartamos tareas, precios de estudios y empleo."
+        },
+        {
+          "title": "Ficha, WhatsApp y medición",
+          "description": "Vinculamos tu ficha de Google y marcamos llamadas y clics a WhatsApp con el identificador del clic (GCLID)."
+        },
+        {
+          "title": "Lanzamiento con reglas de salud",
+          "description": "Programamos la pauta en tu horario y revisamos cada semana los términos de búsqueda reales y la política de salud."
+        },
+        {
+          "title": "Ajuste según citas cumplidas",
+          "description": "Las citas que se cumplen se suben como conversión offline para que Google aprenda de pacientes reales, no de clics."
+        }
+      ]
+    },
+    "h1": "Google Ads para dentistas y clínicas dentales en Lima y todo el Perú"
+  },
+  "GoogleAdsDentistasGuia": {
+    "badge": "Guía del sector",
+    "title": "Guía de Google Ads para dentistas en Perú",
+    "sections": [
+      {
+        "h": "¿Qué busca en Google quien necesita un dentista?",
+        "p": [
+          "En odontología la búsqueda junta tratamiento, zona y, muchas veces, urgencia. 3R Core arma los grupos de anuncios con esa lógica, no con la palabra genérica «dentista». El autocompletado de Google en Perú lo confirma: aparecen «dentista cerca de mí», «implantes dentales precio» y «ortodoncia invisible», y cada uno es un paciente distinto.",
+          "Estos son ejemplos de búsquedas que suelen traer pacientes listos para agendar:"
+        ],
+        "list": [
+          "dentista de urgencia cerca de mí",
+          "implantes dentales en Surco",
+          "ortodoncia en Miraflores",
+          "limpieza dental San Juan de Lurigancho",
+          "endodoncia precio Lima",
+          "diseño de sonrisa en San Isidro",
+          "dentista para niños La Molina"
+        ]
+      },
+      {
+        "h": "¿Qué dice Google Ads sobre anunciar servicios dentales?",
+        "p": [
+          "La odontología entra en la política de «Atención médica y medicamentos» de Google. Los servicios dentales se pueden anunciar en Perú, pero hay límites que 3R Core respeta al redactar la cuenta:"
+        ],
+        "list": [
+          "Sin prometer resultados garantizados ni «sonrisa perfecta asegurada»: Google restringe las afirmaciones que no se pueden sostener.",
+          "Sin publicidad personalizada basada en la salud del usuario: la segmentación por condiciones médicas está restringida.",
+          "Cumpliendo la norma peruana de publicidad sanitaria; el anunciante responde por lo que ofrece.",
+          "Con la ubicación, el horario y la vía de contacto claros, porque el paciente decide por cercanía y disponibilidad."
+        ]
+      },
+      {
+        "h": "¿Qué tipo de campaña conviene a un consultorio dental?",
+        "p": [
+          "Para un consultorio, 3R Core empieza casi siempre con Búsqueda: anuncios por tratamiento y distrito con recursos de llamada, ubicación y WhatsApp. Es la campaña que mejor acompaña a quien decide por urgencia o cercanía.",
+          "Desde febrero de 2026 Google ya no deja crear anuncios solo de llamada; la llamada va como recurso dentro del anuncio de búsqueda adaptable.",
+          "Si la ficha de Google del consultorio está bien trabajada, sumamos Performance Max con la ficha vinculada para salir también en Maps cuando alguien busca un dentista cerca."
+        ]
+      },
+      {
+        "h": "¿Cómo se mide si Google Ads trajo pacientes reales?",
+        "p": [
+          "En un consultorio, 3R Core mide la cita agendada y la cita cumplida, no el clic. La llamada y el clic al botón de WhatsApp guardan el GCLID; cuando el paciente asiste, ese contacto se sube a Google Ads como conversión offline.",
+          "Así sabes cuánto te costó un paciente de ortodoncia frente a uno de limpieza, y la campaña aprende de las citas que de verdad se cumplieron."
+        ]
+      },
+      {
+        "h": "¿Qué anuncios funcionan para dentistas?",
+        "p": [
+          "Funcionan los anuncios que dicen el tratamiento, la zona y cómo agendar. Estos son ejemplos que 3R Core adapta a cada consultorio; no son anuncios de clientes ni prometen resultados:"
+        ],
+        "ads": [
+          {
+            "headline": "Dentista de urgencia en Surco | Atención hoy | Reserva por WhatsApp",
+            "url": "tuconsultorio.pe/urgencias",
+            "desc": "Dolor, fractura o pieza suelta: atención el mismo día en Surco. Escríbenos por WhatsApp y coordinamos tu hora."
+          },
+          {
+            "headline": "Ortodoncia en Miraflores | Evaluación inicial | Planes a tu medida",
+            "url": "tuconsultorio.pe/ortodoncia",
+            "desc": "Brackets y alineadores con evaluación inicial. Agenda tu cita por WhatsApp y conversamos tu caso."
+          },
+          {
+            "headline": "Implantes dentales en Lima | Consulta de diagnóstico | Agenda fácil",
+            "url": "tuconsultorio.pe/implantes",
+            "desc": "Evaluación con especialista para tu caso de implantes. Llámanos o escríbenos y revisamos tu diagnóstico."
+          }
+        ]
+      },
+      {
+        "h": "¿Qué palabras clave negativas usa un dentista en Google Ads?",
+        "p": [
+          "Las negativas evitan pagar por quien busca estudiar, trabajar o resolver una tarea. 3R Core empieza con esta lista y la amplía cada semana con los términos reales:"
+        ],
+        "chips": [
+          "gratis",
+          "sis",
+          "essalud",
+          "campaña gratuita",
+          "sueldo de dentista",
+          "estudiar odontología",
+          "universidad",
+          "práctica dental",
+          "trabajo",
+          "se busca odontólogo",
+          "instrumental",
+          "tarea",
+          "cómo hacer",
+          "casero",
+          "libro de reclamaciones"
+        ]
+      }
+    ]
+  },
+  "GoogleAdsDentistasFAQ": {
+    "badge": "Preguntas frecuentes",
+    "title": "Preguntas frecuentes sobre Google Ads para dentistas",
+    "faqs": {
+      "q1": {
+        "question": "¿Google Ads sirve para un consultorio dental de barrio?",
+        "answer": "Sí, con un radio pequeño y la pauta en las horas de atención. Un consultorio de distrito no necesita salir en todo Lima: basta con aparecer en las zonas desde las que un paciente llega a atenderse."
+      },
+      "q2": {
+        "question": "¿Puedo anunciar servicios dentales en Google sin que me suspendan la cuenta?",
+        "answer": "Sí, dentro de la política de «Atención médica» de Google: sin prometer resultados garantizados, sin segmentar por condiciones de salud y cumpliendo la norma sanitaria peruana. 3R Core redacta la cuenta con esas reglas para evitar suspensiones."
+      },
+      "q3": {
+        "question": "¿Conviene anunciar implantes y ortodoncia por separado?",
+        "answer": "Sí. Son tratamientos con valor y búsqueda distintos: conviene un grupo de anuncios para cada uno, con su propio presupuesto y su página de destino."
+      },
+      "q4": {
+        "question": "¿A qué hora deben salir los anuncios de un dentista?",
+        "answer": "Las urgencias, en las horas en que puedes atender el mismo día; los tratamientos planificados pueden correr más amplio. Fuera de tu horario la pauta de urgencias se apaga para no pagar llamadas que no contestas."
+      },
+      "q5": {
+        "question": "¿Cuánto cuesta la gestión de Google Ads para un consultorio dental?",
+        "answer": "La inversión se define en la reunión según tus tratamientos, tu zona y la competencia. La pauta se paga aparte, directo a Google, desde una cuenta que queda a tu nombre; la gestión de 3R Core se cotiza sin montos inventados y sin permanencia."
+      },
+      "q6": {
+        "question": "¿Qué tratamiento conviene promocionar primero?",
+        "answer": "El que tenga horas libres y buen margen. Si el sillón está vacío de mañana, suele empezarse por limpieza y urgencias; si buscas casos de mayor valor, por ortodoncia o implantes."
+      },
+      "q7": {
+        "question": "¿Sirve para consultorios de provincia?",
+        "answer": "Sí. En Arequipa, Trujillo o Piura se trabaja igual, por tratamiento, distrito y horario de atención."
+      },
+      "q8": {
+        "question": "¿Necesito una página web para anunciar mi consultorio?",
+        "answer": "Los anuncios de búsqueda necesitan una página de destino con el tratamiento, la ubicación y el botón de WhatsApp. Si no la tienes, la página web es otro servicio de 3R Core; los anuncios pueden empezar con una landing sencilla."
+      }
+    }
+  },
+  "GoogleAdsDentistasSEO": {
+    "seoTitle": "Cómo funciona la publicidad en Google para dentistas en Lima",
+    "p1": "Google Ads para dentistas funciona por cercanía, por tratamiento y, muchas veces, por urgencia. Quien busca «dentista de urgencia cerca de mí» quiere atenderse pronto, y el anuncio pone tu consultorio delante en ese momento. Solo pagas cuando hacen clic.",
+    "p2": "Cada tratamiento va en su propio grupo de anuncios: urgencias, limpieza, ortodoncia, implantes y estética dental se buscan y se valoran distinto.",
+    "p3": "La llamada va como recurso dentro del anuncio de búsqueda, junto con la ubicación y el WhatsApp, para que agendar sea en un toque.",
+    "p4": "La odontología es categoría de salud en Google Ads: los anuncios se redactan sin prometer resultados y sin segmentar por condiciones sensibles, cumpliendo la política de «Atención médica» y la norma sanitaria peruana.",
+    "p5": "La inversión se define en la reunión según tus tratamientos y tu zona; la pauta se paga aparte a Google desde una cuenta que queda a tu nombre.",
+    "p6": "Si buscas publicidad para tu consultorio dental en Lima, escríbenos y revisamos qué se busca en tu distrito antes de invertir.",
+    "relatedTitle": "Servicios relacionados"
+  },
+  "GoogleAdsClinicasEsteticasLanding": {
+    "hero": {
+      "badge": "Google Ads · Clínicas estéticas",
+      "title": "Google Ads para clínicas estéticas que agenda consultas de verdad",
+      "subtitle": "Tu clínica arriba en Google cuando alguien busca «depilación láser en Miraflores», «limpieza facial en San Isidro» o «tratamiento corporal en Surco», con cada consulta por WhatsApp medida.",
+      "cta": "Quiero más consultas",
+      "waCta": "Pedir auditoría por WhatsApp",
+      "waText": "Hola 3R Core, tengo una clínica estética y quiero más consultas con Google Ads.",
+      "serviceLink": "Ver el servicio completo de Google Ads"
+    },
+    "intro": {
+      "title": "Publicidad en Google para clínicas estéticas: por tratamiento y por zona",
+      "p1": "La gestión de Google Ads para clínicas estéticas en 3R Core consiste en poner tu clínica delante de quien busca un tratamiento concreto en su distrito. Separamos faciales, corporales y depilación porque se buscan distinto, se valoran distinto y tienen reglas de publicidad distintas.",
+      "p2": "Quien busca «depilación láser cerca de mí» compara pocas opciones y escribe a la que le da confianza y queda cerca. Por eso el anuncio lleva ubicación, WhatsApp y una propuesta clara, sin prometer milagros.",
+      "p3": "Los tratamientos estéticos entran en la categoría de salud de Google Ads: cada anuncio se redacta sin prometer resultados garantizados y sin segmentar por condiciones sensibles. Esta página trata solo de anuncios en Google; la web y las redes son otros servicios de 3R Core."
+    },
+    "benefits": {
+      "badge": "Qué incluye",
+      "title": "La gestión de Google Ads para tu clínica estética",
+      "items": [
+        {
+          "title": "Un grupo por tratamiento",
+          "description": "Depilación láser, limpieza facial, corporales y antiedad separados, cada uno con su presupuesto y su mensaje."
+        },
+        {
+          "title": "Radio real de pacientes",
+          "description": "Los anuncios salen en los distritos desde los que una paciente de verdad llega a tu clínica."
+        },
+        {
+          "title": "WhatsApp y llamada en el anuncio",
+          "description": "Enlace a WhatsApp y recurso de llamada para que la consulta entre sin formularios largos."
+        },
+        {
+          "title": "Anuncios dentro de la política de salud",
+          "description": "Redacción sin promesas de resultados ni términos que Google restringe en salud, para que la cuenta no se suspenda."
+        },
+        {
+          "title": "Campañas por temporada",
+          "description": "La pauta sube antes de verano, fechas y fin de año, cuando más se buscan depilación y tratamientos corporales."
+        },
+        {
+          "title": "Reporte en consultas, no en clics",
+          "description": "Cuánto te costó cada consulta agendada y cada paciente nuevo, por tratamiento y por sede."
+        }
+      ]
+    },
+    "process": {
+      "badge": "Cómo funciona",
+      "title": "Cómo funciona Google Ads para clínicas estéticas",
+      "steps": [
+        {
+          "title": "Tratamientos que quieres llenar",
+          "description": "Vemos qué cabina tiene horas libres, qué tratamientos dejan margen y cuáles traen a la paciente que repite."
+        },
+        {
+          "title": "Búsquedas por tratamiento y distrito",
+          "description": "Elegimos búsquedas de quien quiere atenderse, como «depilación láser en Miraflores», y descartamos tareas, precios de cursos y empleo."
+        },
+        {
+          "title": "WhatsApp y medición",
+          "description": "Vinculamos tu ficha de Google y marcamos llamadas y clics a WhatsApp con el identificador del clic (GCLID)."
+        },
+        {
+          "title": "Lanzamiento con reglas de salud",
+          "description": "Programamos la pauta en tu horario y revisamos cada semana los términos de búsqueda reales y la política de salud."
+        },
+        {
+          "title": "Ajuste según consultas cumplidas",
+          "description": "Las consultas que se cumplen se suben como conversión offline para que Google aprenda de pacientes reales, no de clics."
+        }
+      ]
+    },
+    "h1": "Google Ads para clínicas estéticas en Lima y todo el Perú"
+  },
+  "GoogleAdsClinicasEsteticasGuia": {
+    "badge": "Guía del sector",
+    "title": "Guía de Google Ads para clínicas estéticas en Perú",
+    "sections": [
+      {
+        "h": "¿Qué busca en Google quien quiere un tratamiento estético?",
+        "p": [
+          "En estética la búsqueda junta el tratamiento y la zona, casi nunca el nombre genérico de la clínica. 3R Core arma los grupos de anuncios con esa lógica. El autocompletado de Google en Perú lo confirma: aparecen «depilación láser precio», «limpieza facial cerca de mí» y «tratamiento para manchas», y cada uno es una paciente distinta.",
+          "Estos son ejemplos de búsquedas que suelen traer consultas listas para agendar:"
+        ],
+        "list": [
+          "depilación láser en Miraflores",
+          "limpieza facial profunda San Isidro",
+          "tratamiento corporal reductor Surco",
+          "radiofrecuencia facial Lima",
+          "manchas en la cara tratamiento",
+          "peeling precio La Molina",
+          "clínica estética cerca de mí"
+        ]
+      },
+      {
+        "h": "¿Qué dice Google Ads sobre anunciar tratamientos estéticos?",
+        "p": [
+          "Los tratamientos estéticos entran en la política de «Atención médica y medicamentos» de Google. Se pueden anunciar en Perú, pero con límites que 3R Core respeta al redactar la cuenta:"
+        ],
+        "list": [
+          "Sin prometer resultados garantizados ni «resultados permanentes»: Google restringe las afirmaciones que no se pueden sostener.",
+          "Sin publicidad personalizada basada en la salud o el aspecto físico del usuario: esa segmentación está restringida.",
+          "Con prudencia en los antes/después: no se pueden exagerar resultados ni usar imágenes que incomoden; conviene revisar también la política de la red donde se publique.",
+          "Cumpliendo la norma peruana de publicidad sanitaria; el anunciante responde por lo que ofrece."
+        ]
+      },
+      {
+        "h": "¿Qué tipo de campaña conviene a una clínica estética?",
+        "p": [
+          "Para una clínica estética, 3R Core empieza con Búsqueda: anuncios por tratamiento y distrito con enlace a WhatsApp, ubicación y recurso de llamada. Es la campaña que mejor acompaña a quien ya decidió qué quiere hacerse.",
+          "Desde febrero de 2026 Google ya no deja crear anuncios solo de llamada; la llamada va como recurso dentro del anuncio de búsqueda adaptable.",
+          "Si la ficha de Google de la clínica está trabajada, sumamos Performance Max con la ficha vinculada para salir también en Maps cuando buscan una clínica cerca."
+        ]
+      },
+      {
+        "h": "¿Cómo se mide si Google Ads trajo pacientes reales?",
+        "p": [
+          "En una clínica, 3R Core mide la consulta agendada y la consulta cumplida, no el clic. El clic al botón de WhatsApp y la llamada guardan el GCLID; cuando la paciente asiste, ese contacto se sube a Google Ads como conversión offline.",
+          "Así sabes cuánto te costó una consulta de depilación frente a una de tratamiento corporal, y la campaña aprende de las consultas que de verdad se cumplieron."
+        ]
+      },
+      {
+        "h": "¿Qué anuncios funcionan para clínicas estéticas?",
+        "p": [
+          "Funcionan los anuncios que dicen el tratamiento, la zona y cómo agendar, sin prometer milagros. Estos son ejemplos que 3R Core adapta a cada clínica; no son anuncios de clientes:"
+        ],
+        "ads": [
+          {
+            "headline": "Depilación láser en Miraflores | Evaluación inicial | Agenda por WhatsApp",
+            "url": "tuclinica.pe/laser",
+            "desc": "Sesiones de depilación láser con evaluación de tu piel. Escríbenos por WhatsApp y coordinamos tu primera consulta."
+          },
+          {
+            "headline": "Limpieza facial profunda en San Isidro | Consulta con especialista",
+            "url": "tuclinica.pe/facial",
+            "desc": "Limpieza facial y tratamiento para el cuidado de tu piel. Agenda tu consulta por WhatsApp y revisamos tu caso."
+          },
+          {
+            "headline": "Tratamientos corporales en Surco | Plan a tu medida | Reserva fácil",
+            "url": "tuclinica.pe/corporal",
+            "desc": "Tratamientos corporales con evaluación previa. Llámanos o escríbenos y conversamos qué conviene a tu caso."
+          }
+        ]
+      },
+      {
+        "h": "¿Qué palabras clave negativas usa una clínica estética en Google Ads?",
+        "p": [
+          "Las negativas evitan pagar por quien busca estudiar, trabajar o resolver algo en casa. 3R Core empieza con esta lista y la amplía cada semana con los términos reales:"
+        ],
+        "chips": [
+          "gratis",
+          "casero",
+          "en casa",
+          "remedio casero",
+          "cómo hacer",
+          "curso",
+          "capacitación",
+          "diplomado",
+          "trabajo",
+          "se busca cosmetóloga",
+          "sueldo",
+          "productos al por mayor",
+          "tarea",
+          "concurso",
+          "libro de reclamaciones"
+        ]
+      }
+    ]
+  },
+  "GoogleAdsClinicasEsteticasFAQ": {
+    "badge": "Preguntas frecuentes",
+    "title": "Preguntas frecuentes sobre Google Ads para clínicas estéticas",
+    "faqs": {
+      "q1": {
+        "question": "¿Google Ads sirve para una clínica estética pequeña?",
+        "answer": "Sí, con un radio pequeño y la pauta por tratamiento. Una clínica de distrito no necesita salir en todo Lima: basta con aparecer en las zonas desde las que una paciente llega a atenderse."
+      },
+      "q2": {
+        "question": "¿Puedo anunciar tratamientos estéticos sin que me suspendan la cuenta?",
+        "answer": "Sí, dentro de la política de «Atención médica» de Google: sin prometer resultados garantizados, sin segmentar por la salud o el aspecto del usuario y con cuidado en los antes/después. 3R Core redacta la cuenta con esas reglas para evitar suspensiones."
+      },
+      "q3": {
+        "question": "¿Puedo usar fotos de antes y después en los anuncios?",
+        "answer": "Con prudencia: no se pueden exagerar resultados ni usar imágenes que incomoden, y conviene revisar la política de cada red donde se publique. En búsqueda, el peso lo lleva el texto claro del tratamiento, no la promesa."
+      },
+      "q4": {
+        "question": "¿Conviene anunciar depilación y faciales por separado?",
+        "answer": "Sí. Son tratamientos con valor y búsqueda distintos: conviene un grupo de anuncios para cada uno, con su propio presupuesto y su página de destino."
+      },
+      "q5": {
+        "question": "¿Cuánto cuesta la gestión de Google Ads para una clínica estética?",
+        "answer": "La inversión se define en la reunión según tus tratamientos, tu zona y la competencia. La pauta se paga aparte, directo a Google, desde una cuenta que queda a tu nombre; la gestión de 3R Core se cotiza sin montos inventados y sin permanencia."
+      },
+      "q6": {
+        "question": "¿Cuándo conviene subir la pauta?",
+        "answer": "Antes de verano y de fechas fuertes, cuando suben las búsquedas de depilación y tratamientos corporales. La campaña se programa para pisar fuerte esas semanas y bajar cuando la demanda cede."
+      },
+      "q7": {
+        "question": "¿Sirve para clínicas de provincia?",
+        "answer": "Sí. En Arequipa, Trujillo o Piura se trabaja igual, por tratamiento, distrito y temporada."
+      },
+      "q8": {
+        "question": "¿Necesito una página web para anunciar mi clínica?",
+        "answer": "Los anuncios de búsqueda necesitan una página de destino con el tratamiento, la ubicación y el botón de WhatsApp. Si no la tienes, la página web es otro servicio de 3R Core; los anuncios pueden empezar con una landing sencilla."
+      }
+    }
+  },
+  "GoogleAdsClinicasEsteticasSEO": {
+    "seoTitle": "Cómo funciona la publicidad en Google para clínicas estéticas en Lima",
+    "p1": "Google Ads para clínicas estéticas funciona por tratamiento y por cercanía. Quien busca «depilación láser en Miraflores» ya decidió qué quiere hacerse, y el anuncio pone tu clínica delante en ese momento. Solo pagas cuando hacen clic.",
+    "p2": "Cada tratamiento va en su propio grupo de anuncios: depilación, faciales, corporales y antiedad se buscan y se valoran distinto.",
+    "p3": "El enlace a WhatsApp y la llamada van como recurso dentro del anuncio de búsqueda, junto con la ubicación, para que agendar la consulta sea en un toque.",
+    "p4": "La estética es categoría de salud en Google Ads: los anuncios se redactan sin prometer resultados y sin segmentar por la salud o el aspecto del usuario, con cuidado en los antes/después y cumpliendo la norma sanitaria peruana.",
+    "p5": "La inversión se define en la reunión según tus tratamientos y tu zona; la pauta se paga aparte a Google desde una cuenta que queda a tu nombre.",
+    "p6": "Si buscas publicidad para tu clínica estética en Lima, escríbenos y revisamos qué se busca en tu distrito antes de invertir.",
+    "relatedTitle": "Servicios relacionados"
+  },
+  "GoogleAdsAbogadosLanding": {
+    "hero": {
+      "badge": "Google Ads · Abogados y estudios jurídicos",
+      "title": "Google Ads para abogados que trae consultas, no curiosos",
+      "subtitle": "Tu estudio arriba en Google cuando alguien busca «abogado laboral en Lima», «abogado de divorcios cerca de mí» o «abogado penalista urgente», con cada consulta por WhatsApp medida.",
+      "cta": "Quiero más consultas",
+      "waCta": "Pedir auditoría por WhatsApp",
+      "waText": "Hola 3R Core, tengo un estudio jurídico y quiero más consultas con Google Ads.",
+      "serviceLink": "Ver el servicio completo de Google Ads"
+    },
+    "intro": {
+      "title": "Publicidad en Google para abogados: intención alta y por materia",
+      "p1": "La gestión de Google Ads para abogados en 3R Core consiste en poner tu estudio delante de quien tiene un problema legal concreto y busca resolverlo ya. Separamos las materias (laboral, familia, penal, civil, migratorio) porque cada una tiene su urgencia, su valor y su búsqueda.",
+      "p2": "Quien busca «abogado de alimentos» o «me despidieron qué hago» quiere hablar con alguien hoy. Por eso el anuncio lleva teléfono, WhatsApp y una propuesta clara, y filtra a quien solo busca información gratis.",
+      "p3": "Esta página trata solo de anuncios en Google. La web del estudio y las redes son otros servicios de 3R Core, con su propia página."
+    },
+    "benefits": {
+      "badge": "Qué incluye",
+      "title": "La gestión de Google Ads para tu estudio jurídico",
+      "items": [
+        {
+          "title": "Una campaña por materia",
+          "description": "Laboral, familia, penal, civil y migratorio separados, cada uno con su presupuesto y su mensaje."
+        },
+        {
+          "title": "Filtro de curiosos",
+          "description": "Negativas y textos que apartan a quien busca información gratis, modelos de documentos o sueldos de abogado."
+        },
+        {
+          "title": "WhatsApp y llamada en el anuncio",
+          "description": "Enlace a WhatsApp y recurso de llamada para que la consulta entre sin pasar por formularios largos."
+        },
+        {
+          "title": "Urgencias con pauta por horario",
+          "description": "Las materias urgentes (penal, detención) corren en las horas en que el estudio contesta de verdad."
+        },
+        {
+          "title": "Zona y competencia revisadas",
+          "description": "Anuncios donde buscan tus clientes (Lima, provincia o nacional) y un CPC vigilado, porque legal es una categoría cara."
+        },
+        {
+          "title": "Reporte en consultas calificadas",
+          "description": "Cuánto te costó cada consulta que valía la pena, por materia, para saber dónde invertir más."
+        }
+      ]
+    },
+    "process": {
+      "badge": "Cómo funciona",
+      "title": "Cómo funciona Google Ads para abogados",
+      "steps": [
+        {
+          "title": "Materias que quieres atender",
+          "description": "Vemos qué casos te dejan margen, cuáles atiendes mejor y hasta dónde cubres: un distrito, Lima o todo el país."
+        },
+        {
+          "title": "Búsquedas por materia e intención",
+          "description": "Elegimos búsquedas de quien quiere contratar, como «abogado laboral despido en Lima», y descartamos tareas, modelos gratis y empleo."
+        },
+        {
+          "title": "WhatsApp y medición",
+          "description": "Marcamos llamadas y clics a WhatsApp con el identificador del clic (GCLID) y, si usas ficha de Google, la vinculamos."
+        },
+        {
+          "title": "Lanzamiento con CPC vigilado",
+          "description": "Legal es una categoría cara: programamos la pauta por horario y revisamos cada semana los términos de búsqueda reales para no quemar presupuesto."
+        },
+        {
+          "title": "Ajuste según consultas que valieron",
+          "description": "Las consultas que se vuelven caso se suben como conversión offline para que Google aprenda del cliente que de verdad contrata."
+        }
+      ]
+    },
+    "h1": "Google Ads para abogados y estudios jurídicos en Lima y todo el Perú"
+  },
+  "GoogleAdsAbogadosGuia": {
+    "badge": "Guía del sector",
+    "title": "Guía de Google Ads para abogados en Perú",
+    "sections": [
+      {
+        "h": "¿Qué busca en Google quien necesita un abogado?",
+        "p": [
+          "En servicios legales la búsqueda junta la materia, la situación y, muchas veces, la urgencia. 3R Core arma las campañas por materia, no con la palabra genérica «abogado». El autocompletado de Google en Perú lo confirma: aparecen «abogado laboral», «abogado de familia» y «abogado penalista», y cada uno es un cliente distinto.",
+          "Estos son ejemplos de búsquedas que suelen traer consultas listas para contratar:"
+        ],
+        "list": [
+          "abogado laboral despido en Lima",
+          "abogado de divorcios cerca de mí",
+          "abogado de alimentos pensión",
+          "abogado penalista urgente",
+          "abogado civil desalojo",
+          "abogado migratorio carné de extranjería",
+          "estudio jurídico empresas Lima"
+        ]
+      },
+      {
+        "h": "¿Qué dice Google Ads sobre anunciar servicios legales?",
+        "p": [
+          "Los servicios legales se pueden anunciar en Google Ads en Perú y no están en una categoría restringida como salud o finanzas. Aun así, 3R Core cuida que la cuenta cumpla las reglas generales:"
+        ],
+        "list": [
+          "Sin prometer ganar el caso ni resultados garantizados: eso es publicidad engañosa y arriesga la cuenta.",
+          "Con el nombre del estudio y la vía de contacto claros, sin hacerse pasar por una entidad pública o por el Poder Judicial.",
+          "Cumpliendo la norma peruana de publicidad y las reglas del colegio de abogados que apliquen al anunciante.",
+          "Con una página de destino que diga qué materia se atiende y cómo escribir, sin exagerar."
+        ]
+      },
+      {
+        "h": "¿Qué tipo de campaña conviene a un estudio jurídico?",
+        "p": [
+          "Para un estudio, 3R Core empieza con Búsqueda: anuncios por materia con enlace a WhatsApp, recurso de llamada y, si hay sede física, ubicación. Es la campaña que mejor acompaña a quien tiene un problema y quiere resolverlo.",
+          "Desde febrero de 2026 Google ya no deja crear anuncios solo de llamada; la llamada va como recurso dentro del anuncio de búsqueda adaptable.",
+          "Legal tiene uno de los CPC más altos del país, así que el foco está en la negativa y en la calidad de la consulta, no en el volumen de clics."
+        ]
+      },
+      {
+        "h": "¿Cómo se mide si Google Ads trajo clientes reales?",
+        "p": [
+          "En un estudio, 3R Core mide la consulta calificada y el caso que se firma, no el clic. La llamada y el clic al botón de WhatsApp guardan el GCLID; cuando la consulta se vuelve caso, ese contacto se sube a Google Ads como conversión offline.",
+          "Así sabes cuánto te costó un cliente de laboral frente a uno de familia, y la campaña aprende del cliente que de verdad contrata, no del que preguntó por preguntar."
+        ]
+      },
+      {
+        "h": "¿Qué anuncios funcionan para abogados?",
+        "p": [
+          "Funcionan los anuncios que dicen la materia, la zona y cómo escribir, sin prometer el resultado. Estos son ejemplos que 3R Core adapta a cada estudio; no son anuncios de clientes:"
+        ],
+        "ads": [
+          {
+            "headline": "Abogado laboral en Lima | Despidos y beneficios | Consulta por WhatsApp",
+            "url": "tuestudio.pe/laboral",
+            "desc": "¿Te despidieron o te deben beneficios? Revisamos tu caso laboral. Escríbenos por WhatsApp y coordinamos tu consulta."
+          },
+          {
+            "headline": "Abogado de familia | Divorcios y alimentos | Atención en Lima",
+            "url": "tuestudio.pe/familia",
+            "desc": "Divorcio, tenencia y pensión de alimentos con acompañamiento claro. Agenda tu consulta por WhatsApp."
+          },
+          {
+            "headline": "Abogado penalista | Atención de urgencia | Disponibilidad inmediata",
+            "url": "tuestudio.pe/penal",
+            "desc": "Defensa penal con atención de urgencia. Llámanos o escríbenos y coordinamos de inmediato."
+          }
+        ]
+      },
+      {
+        "h": "¿Qué palabras clave negativas usa un abogado en Google Ads?",
+        "p": [
+          "En legal la negativa es lo que cuida el presupuesto: aparta a quien busca información gratis, modelos o empleo. 3R Core empieza con esta lista y la amplía cada semana:"
+        ],
+        "chips": [
+          "gratis",
+          "consulta gratis",
+          "modelo de demanda",
+          "formato word",
+          "pdf",
+          "qué es",
+          "código penal",
+          "sueldo de abogado",
+          "estudiar derecho",
+          "universidad",
+          "trabajo",
+          "se busca abogado",
+          "prácticas",
+          "tarea",
+          "defensoría del pueblo"
+        ]
+      }
+    ]
+  },
+  "GoogleAdsAbogadosFAQ": {
+    "badge": "Preguntas frecuentes",
+    "title": "Preguntas frecuentes sobre Google Ads para abogados",
+    "faqs": {
+      "q1": {
+        "question": "¿Google Ads sirve para un estudio jurídico pequeño?",
+        "answer": "Sí, si se enfoca en una o dos materias y en una zona. Un estudio pequeño rinde más concentrando el presupuesto en la materia que atiende mejor que repartiéndolo en todas."
+      },
+      "q2": {
+        "question": "¿Por qué el clic de legal es tan caro?",
+        "answer": "Porque muchos estudios compiten por las mismas búsquedas y cada cliente vale mucho. Por eso el trabajo está en la negativa y en la calidad de la consulta: pagar menos clics, pero mejores."
+      },
+      "q3": {
+        "question": "¿Puedo prometer que gano el caso en el anuncio?",
+        "answer": "No. Prometer ganar o resultados garantizados es publicidad engañosa y arriesga la cuenta. El anuncio dice qué materia atiendes y cómo escribirte, sin exagerar."
+      },
+      "q4": {
+        "question": "¿Conviene separar laboral, familia y penal?",
+        "answer": "Sí. Son clientes con urgencia y valor distintos: conviene una campaña por materia, con su propio presupuesto, su mensaje y su página de destino."
+      },
+      "q5": {
+        "question": "¿Cuánto cuesta la gestión de Google Ads para un estudio jurídico?",
+        "answer": "La inversión se define en la reunión según tus materias, tu zona y la competencia. La pauta se paga aparte, directo a Google, desde una cuenta que queda a nombre del estudio; la gestión de 3R Core se cotiza sin montos inventados y sin permanencia."
+      },
+      "q6": {
+        "question": "¿Cómo evito pagar por quien solo quiere información gratis?",
+        "answer": "Con una lista de palabras clave negativas (modelos, formatos, «qué es», «gratis») que se amplía cada semana con los términos reales, y con anuncios que dejan claro que es un servicio profesional."
+      },
+      "q7": {
+        "question": "¿Sirve para abogados de provincia o que atienden a todo el país?",
+        "answer": "Sí. Se puede trabajar por distrito, por región o a nivel nacional según a quién atiendas; el radio de los anuncios se ajusta a tu alcance real."
+      },
+      "q8": {
+        "question": "¿Necesito una página web para anunciar mi estudio?",
+        "answer": "Los anuncios de búsqueda necesitan una página de destino con la materia, la experiencia y el botón de WhatsApp. Si no la tienes, la página web es otro servicio de 3R Core; los anuncios pueden empezar con una landing sencilla."
+      }
+    }
+  },
+  "GoogleAdsAbogadosSEO": {
+    "seoTitle": "Cómo funciona la publicidad en Google para abogados en Lima",
+    "p1": "Google Ads para abogados funciona por materia y por intención. Quien busca «abogado laboral despido en Lima» tiene un problema concreto y quiere resolverlo, y el anuncio pone tu estudio delante en ese momento. Solo pagas cuando hacen clic.",
+    "p2": "Cada materia va en su propia campaña: laboral, familia, penal, civil y migratorio se buscan con urgencia y valor distintos.",
+    "p3": "El enlace a WhatsApp y la llamada van como recurso dentro del anuncio de búsqueda, para que la consulta entre sin formularios largos.",
+    "p4": "Legal es una de las categorías más caras de Google Ads: el foco está en la palabra clave negativa y en la calidad de la consulta, no en el volumen de clics.",
+    "p5": "La inversión se define en la reunión según tus materias y tu zona; la pauta se paga aparte a Google desde una cuenta que queda a nombre del estudio.",
+    "p6": "Si buscas publicidad para tu estudio jurídico en Lima, escríbenos y revisamos qué se busca en tu materia antes de invertir.",
+    "relatedTitle": "Servicios relacionados"
+  },
+  "GoogleAdsInmobiliariasLanding": {
+    "hero": {
+      "badge": "Google Ads · Inmobiliarias y proyectos",
+      "title": "Google Ads para inmobiliarias que genera leads que sí compran",
+      "subtitle": "Tu proyecto arriba en Google cuando alguien busca «departamentos en venta en Miraflores», «proyectos en planos Surco» o «alquiler de oficinas San Isidro», con cada lead por WhatsApp medido.",
+      "cta": "Quiero más leads calificados",
+      "waCta": "Pedir auditoría por WhatsApp",
+      "waText": "Hola 3R Core, tengo una inmobiliaria y quiero más leads calificados con Google Ads.",
+      "serviceLink": "Ver el servicio completo de Google Ads"
+    },
+    "intro": {
+      "title": "Publicidad en Google para inmobiliarias: por proyecto, zona y tipo de operación",
+      "p1": "La gestión de Google Ads para inmobiliarias en 3R Core consiste en poner tu proyecto delante de quien busca comprar o alquilar en una zona concreta. Separamos venta, alquiler, residencial y comercial porque se buscan distinto, se valoran distinto y el lead llega en momentos distintos.",
+      "p2": "Quien busca «departamentos en planos en Surco» está comparando pocos proyectos y deja sus datos al que le responde rápido. Por eso el anuncio lleva WhatsApp, la zona y los dormitorios, y filtra a quien solo busca alquiler barato o trabajo.",
+      "p3": "Esta página trata solo de anuncios en Google. La web del proyecto y las redes son otros servicios de 3R Core, con su propia página."
+    },
+    "benefits": {
+      "badge": "Qué incluye",
+      "title": "La gestión de Google Ads para tu inmobiliaria",
+      "items": [
+        {
+          "title": "Campañas por proyecto y zona",
+          "description": "Cada proyecto con su campaña por distrito, tipo de operación y rango de dormitorios, con su propio presupuesto."
+        },
+        {
+          "title": "Filtro de leads que no compran",
+          "description": "Negativas y textos que apartan a quien busca alquiler barato, remates, trabajo o planos gratis."
+        },
+        {
+          "title": "WhatsApp y formulario en el anuncio",
+          "description": "Enlace a WhatsApp y formularios de contacto para que el lead entre con zona, presupuesto y dormitorios."
+        },
+        {
+          "title": "Performance Max con feed",
+          "description": "Si tienes catálogo de unidades, sumamos Performance Max con feed para mostrar el proyecto en toda la red de Google."
+        },
+        {
+          "title": "Remarketing a quien ya miró",
+          "description": "Reimpacto a quien visitó el proyecto y no dejó datos, porque la decisión de compra toma semanas."
+        },
+        {
+          "title": "Reporte en leads calificados",
+          "description": "Cuánto te costó cada lead con intención real de compra o alquiler, por proyecto, para saber dónde invertir más."
+        }
+      ]
+    },
+    "process": {
+      "badge": "Cómo funciona",
+      "title": "Cómo funciona Google Ads para inmobiliarias",
+      "steps": [
+        {
+          "title": "Proyectos y operaciones que quieres mover",
+          "description": "Vemos qué proyecto tiene stock, qué unidades dejan margen y si buscas venta, alquiler o ambas."
+        },
+        {
+          "title": "Búsquedas por zona y tipo",
+          "description": "Elegimos búsquedas de quien quiere comprar o alquilar, como «departamentos en venta en Miraflores», y descartamos empleo, remates y planos gratis."
+        },
+        {
+          "title": "WhatsApp, formulario y medición",
+          "description": "Marcamos los formularios y los clics a WhatsApp con el identificador del clic (GCLID) y conectamos tu CRM si lo tienes."
+        },
+        {
+          "title": "Lanzamiento con remarketing",
+          "description": "Programamos Búsqueda y, si hay catálogo, Performance Max, con remarketing a quien ya miró, y revisamos los términos reales cada semana."
+        },
+        {
+          "title": "Ajuste según leads calificados",
+          "description": "Los leads que avanzan a visita o separación se suben como conversión offline para que Google aprenda del comprador real, no del curioso."
+        }
+      ]
+    },
+    "h1": "Google Ads para inmobiliarias y proyectos en Lima y todo el Perú"
+  },
+  "GoogleAdsInmobiliariasGuia": {
+    "badge": "Guía del sector",
+    "title": "Guía de Google Ads para inmobiliarias en Perú",
+    "sections": [
+      {
+        "h": "¿Qué busca en Google quien quiere comprar o alquilar?",
+        "p": [
+          "En inmobiliario la búsqueda junta la zona, el tipo de operación y, muchas veces, el rango de dormitorios o el presupuesto. 3R Core arma las campañas con esa lógica, no con la palabra genérica «inmobiliaria». El autocompletado de Google en Perú lo confirma: aparecen «departamentos en venta», «proyectos en planos» y «alquiler de oficinas», y cada uno es un lead distinto.",
+          "Estos son ejemplos de búsquedas que suelen traer leads listos para visitar o separar:"
+        ],
+        "list": [
+          "departamentos en venta en Miraflores",
+          "proyectos en planos Surco",
+          "departamento 2 dormitorios Jesús María",
+          "alquiler de oficinas San Isidro",
+          "casas en venta La Molina",
+          "terrenos en venta Lurín",
+          "departamentos de estreno Magdalena"
+        ]
+      },
+      {
+        "h": "¿Qué tipo de campaña conviene a una inmobiliaria?",
+        "p": [
+          "Para una inmobiliaria, 3R Core empieza con Búsqueda por zona y operación con enlace a WhatsApp y formulario. Es la campaña que capta a quien ya está buscando dónde comprar o alquilar.",
+          "Si tienes catálogo de unidades, sumamos Performance Max con feed para mostrar el proyecto en búsqueda, Maps, YouTube y Display con la IA de Google.",
+          "El remarketing es clave: la compra de un inmueble toma semanas, así que reimpactamos a quien visitó el proyecto y no dejó datos."
+        ]
+      },
+      {
+        "h": "¿Cómo se consigue un lead que de verdad compra y no un curioso?",
+        "p": [
+          "El lead calificado se consigue en el anuncio y en la página de destino: diciendo zona, dormitorios, etapa (en planos, en construcción, de estreno) y rango de forma clara para que el que no encaja no deje sus datos.",
+          "La lista de palabras clave negativas aparta a quien busca alquiler barato, remates judiciales o trabajo, y el formulario pide los campos que separan al comprador del que solo mira."
+        ]
+      },
+      {
+        "h": "¿Cómo se mide si Google Ads trajo compradores reales?",
+        "p": [
+          "En inmobiliario, 3R Core mide el lead calificado y el avance a visita o separación, no el clic. El formulario y el clic al botón de WhatsApp guardan el GCLID; cuando el lead avanza en el CRM, ese contacto se sube a Google Ads como conversión offline.",
+          "Así sabes cuánto te costó un comprador de un proyecto frente a otro, y la campaña aprende del lead que de verdad avanzó, no del que preguntó el precio y se fue."
+        ]
+      },
+      {
+        "h": "¿Qué anuncios funcionan para inmobiliarias?",
+        "p": [
+          "Funcionan los anuncios que dicen la zona, la operación y la etapa del proyecto. Estos son ejemplos que 3R Core adapta a cada proyecto; no son anuncios de clientes:"
+        ],
+        "ads": [
+          {
+            "headline": "Departamentos en venta en Miraflores | De estreno | Agenda tu visita",
+            "url": "tuproyecto.pe/miraflores",
+            "desc": "Departamentos de 1, 2 y 3 dormitorios en Miraflores. Escríbenos por WhatsApp y coordina tu visita al piloto."
+          },
+          {
+            "headline": "Proyecto en planos en Surco | Precio de preventa | Separa con poco",
+            "url": "tuproyecto.pe/surco",
+            "desc": "Departamentos en planos en Surco con precio de preventa. Déjanos tus datos y te enviamos brochure y plan de pagos."
+          },
+          {
+            "headline": "Alquiler de oficinas en San Isidro | Desde 80 m² | Entrega inmediata",
+            "url": "tuproyecto.pe/oficinas",
+            "desc": "Oficinas en San Isidro listas para mudarte. Escríbenos por WhatsApp y coordinamos una visita."
+          }
+        ]
+      },
+      {
+        "h": "¿Qué palabras clave negativas usa una inmobiliaria en Google Ads?",
+        "p": [
+          "Las negativas evitan pagar por quien busca algo que no vendes: alquiler barato, remates, empleo o planos gratis. 3R Core empieza con esta lista y la amplía cada semana:"
+        ],
+        "chips": [
+          "gratis",
+          "alquiler barato",
+          "remate judicial",
+          "subasta",
+          "airbnb",
+          "por días",
+          "trabajo",
+          "se busca",
+          "sueldo de agente",
+          "plano gratis",
+          "autoconstrucción",
+          "cómo construir",
+          "mi vivienda requisitos",
+          "estafa",
+          "libro de reclamaciones"
+        ]
+      }
+    ]
+  },
+  "GoogleAdsInmobiliariasFAQ": {
+    "badge": "Preguntas frecuentes",
+    "title": "Preguntas frecuentes sobre Google Ads para inmobiliarias",
+    "faqs": {
+      "q1": {
+        "question": "¿Google Ads sirve para una inmobiliaria con un solo proyecto?",
+        "answer": "Sí. Con un proyecto se concentra todo el presupuesto en su zona y su tipo de operación, que suele rendir mejor que repartirlo. El anuncio y la página de destino hablan solo de ese proyecto."
+      },
+      "q2": {
+        "question": "¿Cómo consigo leads que de verdad compren y no curiosos?",
+        "answer": "Diciendo zona, dormitorios, etapa y rango en el anuncio y la página, usando palabras clave negativas que apartan alquiler barato y remates, y midiendo el lead que avanza en el CRM, no el clic."
+      },
+      "q3": {
+        "question": "¿Conviene separar venta y alquiler?",
+        "answer": "Sí. Son leads con intención y valor distintos: conviene una campaña para venta y otra para alquiler, cada una con su presupuesto, su mensaje y su página de destino."
+      },
+      "q4": {
+        "question": "¿Sirve Performance Max para un proyecto inmobiliario?",
+        "answer": "Sí, sobre todo si tienes catálogo de unidades: Performance Max con feed muestra el proyecto en búsqueda, Maps, YouTube y Display. Se suele combinar con Búsqueda y remarketing."
+      },
+      "q5": {
+        "question": "¿Cuánto cuesta la gestión de Google Ads para una inmobiliaria?",
+        "answer": "La inversión se define en la reunión según tus proyectos, sus zonas y la competencia. La pauta se paga aparte, directo a Google, desde una cuenta que queda a nombre de la inmobiliaria; la gestión de 3R Core se cotiza sin montos inventados y sin permanencia."
+      },
+      "q6": {
+        "question": "¿Por qué el remarketing importa tanto en inmobiliario?",
+        "answer": "Porque comprar un inmueble toma semanas y casi nadie deja sus datos en la primera visita a la web. El remarketing reimpacta a quien ya miró el proyecto mientras sigue decidiendo."
+      },
+      "q7": {
+        "question": "¿Sirve para proyectos fuera de Lima?",
+        "answer": "Sí. En Arequipa, Trujillo, Piura o en zonas de playa se trabaja igual, por zona, tipo de operación y etapa del proyecto."
+      },
+      "q8": {
+        "question": "¿Necesito una página web para anunciar mi proyecto?",
+        "answer": "Los anuncios de búsqueda necesitan una página de destino con la zona, los dormitorios, el brochure y el botón de WhatsApp. Si no la tienes, la página web es otro servicio de 3R Core; los anuncios pueden empezar con una landing del proyecto."
+      }
+    }
+  },
+  "GoogleAdsInmobiliariasSEO": {
+    "seoTitle": "Cómo funciona la publicidad en Google para inmobiliarias en Lima",
+    "p1": "Google Ads para inmobiliarias funciona por zona y por tipo de operación. Quien busca «departamentos en venta en Miraflores» ya está comparando proyectos, y el anuncio pone el tuyo delante en ese momento. Solo pagas cuando hacen clic.",
+    "p2": "Venta y alquiler, residencial y comercial van en campañas distintas: se buscan y se valoran distinto, y el lead llega en momentos distintos.",
+    "p3": "El enlace a WhatsApp y el formulario van en el anuncio y en la página de destino, pidiendo zona, presupuesto y dormitorios para separar al comprador del curioso.",
+    "p4": "Si tienes catálogo de unidades, Performance Max con feed muestra el proyecto en toda la red de Google, y el remarketing reimpacta a quien ya miró mientras decide.",
+    "p5": "La inversión se define en la reunión según tus proyectos y sus zonas; la pauta se paga aparte a Google desde una cuenta que queda a nombre de la inmobiliaria.",
+    "p6": "Si buscas publicidad para tu inmobiliaria o tu proyecto en Lima, escríbenos y revisamos qué se busca en tu zona antes de invertir.",
+    "relatedTitle": "Servicios relacionados"
   }
 }

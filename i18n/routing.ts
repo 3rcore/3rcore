@@ -69,6 +69,13 @@ export const pathnames = {
   '/servicios/google-ads-colegios': '/servicios/google-ads-colegios',
   '/servicios/google-ads-empresas-industriales': '/servicios/google-ads-empresas-industriales',
   '/servicios/google-ads-contadores': '/servicios/google-ads-contadores',
+  // 21-oct-2026. Cuatro sectores más con demanda medida en el autocompletado
+  // de Google Perú. Solo /es (404 en /en y /us). Dentistas y clínicas estéticas
+  // van bajo la política de salud de Google Ads; restaurantes ya existe arriba.
+  '/servicios/google-ads-dentistas': '/servicios/google-ads-dentistas',
+  '/servicios/google-ads-clinicas-esteticas': '/servicios/google-ads-clinicas-esteticas',
+  '/servicios/google-ads-abogados': '/servicios/google-ads-abogados',
+  '/servicios/google-ads-inmobiliarias': '/servicios/google-ads-inmobiliarias',
 
   // Páginas ancla de un solo mercado
   '/nearshore-marketing-agency': '/nearshore-marketing-agency',

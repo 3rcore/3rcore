@@ -92,6 +92,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${baseUrl}/es/servicios/google-ads-colegios`, priority: 0.85 },
     { url: `${baseUrl}/es/servicios/google-ads-empresas-industriales`, priority: 0.85 },
     { url: `${baseUrl}/es/servicios/google-ads-contadores`, priority: 0.85 },
+    // 21-oct-2026. Cuatro sectores más de Google Ads: solo /es (404 en /en y /us).
+    { url: `${baseUrl}/es/servicios/google-ads-dentistas`, priority: 0.85 },
+    { url: `${baseUrl}/es/servicios/google-ads-clinicas-esteticas`, priority: 0.85 },
+    { url: `${baseUrl}/es/servicios/google-ads-abogados`, priority: 0.85 },
+    { url: `${baseUrl}/es/servicios/google-ads-inmobiliarias`, priority: 0.85 },
     // 28-sep-2026. «cuánto cuesta seo perú»: solo /es.
     { url: `${baseUrl}/es/cuanto-cuesta-el-seo-en-peru`, priority: 0.8 },
     // 11-oct-2026. «SEO para <sector>»: solo /es (lib/seo-sectores.ts).

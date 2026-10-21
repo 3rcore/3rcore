@@ -46,7 +46,7 @@ export function omitMessages(messages: Messages, namespaces: string[]): Messages
  * incrustarían en el HTML de TODAS las páginas. El layout raíz los quita y
  * cada layout de sector los vuelve a dar solo a su propia ruta.
  */
-const SECTOR_NS = /^(GoogleAds(Psicologos|Hoteles|Restaurantes|Colegios|EmpresasIndustriales|Contadores)(Landing|Guia|FAQ|SEO)|Marketing[A-Za-z]+Guia)$/
+const SECTOR_NS = /^(GoogleAds(Psicologos|Hoteles|Restaurantes|Colegios|EmpresasIndustriales|Contadores|Dentistas|ClinicasEsteticas|Abogados|Inmobiliarias)(Landing|Guia|FAQ|SEO)|Marketing[A-Za-z]+Guia)$/
 
 export function omitSectorMessages(messages: Messages): Messages {
   return omitMessages(messages, Object.keys(messages).filter((k) => SECTOR_NS.test(k)))

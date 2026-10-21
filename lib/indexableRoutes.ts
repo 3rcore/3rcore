@@ -44,6 +44,11 @@ const MARKET_ONLY: Record<string, string> = {
   '/servicios/google-ads-colegios': 'es',
   '/servicios/google-ads-empresas-industriales': 'es',
   '/servicios/google-ads-contadores': 'es',
+  // Google Ads por sector (21-oct-2026), solo /es
+  '/servicios/google-ads-dentistas': 'es',
+  '/servicios/google-ads-clinicas-esteticas': 'es',
+  '/servicios/google-ads-abogados': 'es',
+  '/servicios/google-ads-inmobiliarias': 'es',
   // Páginas «SEO para <sector>» (11-oct-2026), solo existen en /es
   '/servicios/seo-para-clinicas': 'es',
   '/servicios/seo-para-dentistas': 'es',

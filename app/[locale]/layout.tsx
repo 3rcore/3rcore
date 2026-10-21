@@ -72,7 +72,7 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
     ? "SEO, Web Development & Online Stores Agency | 3R Core"
     : locale === 'us'
       ? "Marketing Digital en Español para EE.UU. | 3R Core"
-      : "Agencia de Marketing Digital, SEO y Google Ads en Lima, Perú | 3R Core"
+      : "Agencia de Marketing, SEO y Google Ads en Lima, Perú | 3R Core"
 
   const description = locale === 'en'
     ? "SEO, web development and online stores for businesses across the U.S. In-house team, U.S. business hours and fixed scopes in USD. 4.7 stars from 42 reviews."
@@ -92,7 +92,7 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
         ? "3R Core | SEO, Web Development & Online Stores Agency"
         : locale === 'us'
           ? "3R Core | Marketing Digital en Español para EE.UU."
-          : "3R Core | Agencia de Marketing Digital, SEO y Google Ads en Lima, Perú",
+          : "3R Core | Agencia de Marketing, SEO y Google Ads en Lima, Perú",
       description: locale === 'en'
         ? "SEO, web development and online stores for businesses across the U.S., with contracts and invoicing through our U.S. subsidiary. U.S. hours, fixed scopes in USD."
         : locale === 'us'
@@ -111,7 +111,7 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
             ? '3R Core - SEO, Web Development & Online Stores'
             : locale === 'us'
               ? '3R Core - Agencia de Marketing Digital'
-              : '3R Core - Agencia de Marketing Digital, SEO y Google Ads en Lima, Perú',
+              : '3R Core - Agencia de Marketing, SEO y Google Ads en Lima, Perú',
         },
       ],
     },
@@ -121,7 +121,7 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
         ? "3R Core - SEO, Web Development & Online Stores"
         : locale === 'us'
           ? "3R Core - Agencia de Marketing Digital"
-          : "3R Core - Agencia de Marketing Digital, SEO y Google Ads en Lima, Perú",
+          : "3R Core - Agencia de Marketing, SEO y Google Ads en Lima, Perú",
       description: locale === 'en'
         ? "SEO, web development and online stores for businesses across the U.S. — in-house team, U.S. subsidiary, fixed scopes in USD."
         : locale === 'us'

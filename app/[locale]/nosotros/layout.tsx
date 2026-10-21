@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
     path: '/nosotros',
     titleEs: 'Nosotros — El equipo detrás de 3R Core',
     titleEn: 'About Us — The Team Behind 3R Core',
-    descriptionEs: 'Los hermanos Roque y su equipo propio de diseño, programación y posicionamiento: SEO, SEM y Google Ads con resultados medibles. 4,7★ en 42 reseñas de Google.',
+    descriptionEs: 'Los hermanos Roque y su equipo propio de diseño, programación y posicionamiento: Marketing Digital, SEO y Google Ads con resultados medibles. 4,7★ en 42 reseñas de Google.',
     descriptionEn: '3R Core is a family-run SEO, web development and online stores agency serving businesses across the U.S., on U.S. business hours and billing in USD through its U.S. subsidiary.',
     titleUs: 'Nosotros — Equipo en Lima para EE.UU. | 3R Core',
     descriptionUs: 'Agencia familiar con equipo propio en Lima que atiende a negocios de EE.UU. en horario compatible y factura en dólares a través de su filial.',
@@ -50,7 +50,7 @@ export default async function NosotrosLayout({ children, params }: { children: R
       ? "3R Core is a family-owned SEO, web development and online stores agency serving businesses across the United States, combining Experience, Vision and Technology."
       : isUs
         ? "3R Core es una agencia familiar de marketing digital en Lima, Perú que combina Experiencia, Visión y Tecnología en branding, social media, SEO, Google Ads y desarrollo web."
-        : "3R Core es una agencia familiar de SEO, SEM y Google Ads con equipo propio que combina Experiencia, Visión y Tecnología en Google Ads, posicionamiento SEO, desarrollo web y social media.",
+        : "3R Core es una agencia familiar de Marketing Digital, SEO y Google Ads con equipo propio que combina Experiencia, Visión y Tecnología en Google Ads, posicionamiento SEO, desarrollo web y social media.",
     "mainEntity": { "@id": `${BASE_URL}/#organization` },
     "inLanguage": isEn ? 'en' : 'es',
     "speakable": buildSpeakableSchema(['h1', 'h2', '.hidden-h1', '.about-intro']),

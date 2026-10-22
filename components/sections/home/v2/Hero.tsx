@@ -25,6 +25,7 @@ export default function HeroHome() {
       ? {
           line2: "SEO, Web Development",
           connector: "&",
+          line2b: "",
           line3: "Online Stores",
           tagline: "Serving the U.S. Nationwide - Your success, our success",
           services: "SEE SERVICES",
@@ -35,6 +36,9 @@ export default function HeroHome() {
         ? {
             line2: "Agencia",
             connector: "de",
+            // «Agencia de Marketing» en la misma fila; la palabra sale de
+            // messages/<locale>.json (HeroHome.marketingWord) para que sea traducible.
+            line2b: t.has("marketingWord") ? t("marketingWord") : "Marketing",
             line3: "SEO, SEM y Google Ads",
             tagline: "Lima, Perú - Tu éxito, nuestro éxito",
             services: "VER SERVICIOS",
@@ -44,6 +48,7 @@ export default function HeroHome() {
         : {
             line2: t("agency2") || "Agencia",
             connector: t("d") || "de",
+            line2b: "",
             line3: t("marketing") || "Marketing Digital",
             tagline: "Lima, Perú - Tu éxito, nuestro éxito",
             services: "VER SERVICIOS",
@@ -144,8 +149,15 @@ export default function HeroHome() {
             3R CORE
           </p>
 
-          <p className="text-2xl sm:text-3xl md:text-6xl lg:text-[4.5rem] font-medium text-white leading-tight my-1">
+          <p
+            className={`font-medium text-white leading-tight my-1 whitespace-nowrap ${
+              copy.line2b
+                ? "text-xl sm:text-2xl md:text-5xl lg:text-[3.4rem] xl:text-[4rem]"
+                : "text-2xl sm:text-3xl md:text-6xl lg:text-[4.5rem]"
+            }`}
+          >
             {copy.line2} <span className="italic font-serif font-light">{copy.connector}</span>
+            {copy.line2b ? <> {copy.line2b}</> : null}
           </p>
 
           <p

@@ -16,9 +16,9 @@ export default function PruebaServicio({ servicio, titulo, intro }: { servicio: 
       <p className="text-white/70 max-w-3xl mb-8 leading-relaxed">{intro}</p>
       <ul className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 gap-3 mb-10">
         {LOGOS.map((l) => (
-          <li key={l.src} className="flex items-center justify-center rounded-xl border border-white/10 bg-white/90 p-3 h-16">
+          <li key={l.src} className="flex items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] p-3 h-16 transition-colors hover:bg-white/10">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={`/proto/img/logos/${l.src}`} alt={l.alt} loading="lazy" width={120} height={34} className="max-h-9 w-auto object-contain" />
+            <img src={`/proto/img/logos/${l.src}`} alt={l.alt} loading="lazy" width={120} height={34} className="max-h-9 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
           </li>
         ))}
       </ul>

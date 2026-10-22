@@ -173,7 +173,7 @@
 .proto .btn-o{background:transparent}
 .proto .btn-w{background:#fff;color:#130218;border-color:#fff}
 .proto .btn-wa{background:var(--wa);border-color:var(--wa);color:#fff}
-.proto .btn-wa:hover{background:var(--ink);border-color:var(--ink)}
+.proto .btn-wa:hover{background:var(--ink);border-color:#0E6B39;color:#fff}
 .proto .btn-s{min-height:44px;padding:.72rem 1.35rem;font-size:.76rem}
 .proto .btns{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2.2rem}
 
@@ -584,7 +584,10 @@
 /* ── Botón con relleno que sube desde abajo ──────────────────── */
 .proto .btn{position:relative;overflow:hidden;z-index:1}
 .proto .btn > *{position:relative;z-index:1}
-.proto .btn::before{content:'';position:absolute;inset:0;z-index:0;background:var(--grad);
+/* z-index:-1 (no 0): el texto del botón es un nodo de texto suelto, no un
+   hijo con position, así que con 0 el relleno lo tapaba al pasar el cursor y
+   solo quedaba visible el icono. Con -1 queda sobre el fondo y bajo el texto. */
+.proto .btn::before{content:'';position:absolute;inset:0;z-index:-1;background:var(--grad);
   transform:translateY(101%);transition:transform .55s var(--e)}
 .proto .btn:hover::before{transform:translateY(0)}
 .proto .btn-1::before{background:#fff}

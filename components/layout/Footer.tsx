@@ -139,20 +139,6 @@ const Footer = () => {
                   </a>
                 </li>
               </ul>
-              {/* 28-sep-2026 (Tanda 2 Perú): guías y zonas que solo existen en
-                  /es. Un enlace desde cada página es lo que las saca de
-                  «descubierta, sin indexar» (lo que pasó con las anclas de /en). */}
-              {locale === 'es' && (
-                <ul className="space-y-3 text-sm lg:text-xs xl:text-sm text-gray-200 mt-6 pt-6 border-t border-white/10">
-                  {PERU_GUIDES.map((g) => (
-                    <li key={g.href}>
-                      <Link href={g.href} className="hover:text-pink-500 transition-colors duration-300">
-                        {g.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              )}
             </div>
           </div>
 
@@ -198,7 +184,27 @@ const Footer = () => {
               <SocialIcon href="https://www.tiktok.com/@3rcore" icon={<FaTiktok />} />
             </div>
           </div>
+
         </div>
+
+        {/* 28-sep-2026 (Tanda 2 Perú): guías y zonas que solo existen en
+            /es. Un enlace desde cada página es lo que las saca de
+            «descubierta, sin indexar» (lo que pasó con las anclas de /en).
+            Fila propia debajo de las columnas, con los enlaces en horizontal. */}
+        {locale === 'es' && (
+          <div className="border-t border-white/10 pt-8 mb-16">
+            <h3 className="text-white font-bold lg:text-sm 2xl:text-base uppercase tracking-widest mb-5">Más información</h3>
+            <ul className="flex flex-wrap gap-x-8 gap-y-3 text-sm lg:text-xs xl:text-sm text-gray-200">
+              {PERU_GUIDES.map((g) => (
+                <li key={g.href}>
+                  <Link href={g.href} className="hover:text-pink-500 transition-colors duration-300">
+                    {g.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
       <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex gap-8 text-[10px] tracking-widest text-gray-200">

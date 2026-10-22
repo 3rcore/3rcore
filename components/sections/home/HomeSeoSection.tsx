@@ -62,13 +62,13 @@ const COPY: Record<'es' | 'en' | 'us', {
       },
       {
         h: 'Desarrollo web',
-        p: 'Webs corporativas y landing pages rápidas, con SEO técnico y formularios que capturan leads.',
+        p: 'Webs corporativas y landing pages rápidas, con SEO técnico y formularios que capturan leads. Diseño web a medida en Next.js y WordPress, optimizado para Core Web Vitals, velocidad en móvil y conversión, con diseño UX/UI en Figma y formularios conectados a tu WhatsApp.',
         href: '/servicios/web-development',
         cta: 'Ver desarrollo web',
       },
       {
         h: 'Social Media',
-        p: 'Estrategia, contenido y gestión de redes que construyen marca y generan comunidad.',
+        p: 'Estrategia, contenido y gestión de redes que construyen marca y generan comunidad. Community management en Instagram, Facebook, TikTok y LinkedIn, con calendario de publicaciones, diseño de piezas, pauta en Meta Ads y reportes mensuales de alcance e interacción.',
         href: '/servicios/socialmedia',
         cta: 'Ver social media',
       },

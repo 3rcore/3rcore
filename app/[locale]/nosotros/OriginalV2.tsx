@@ -34,10 +34,10 @@ export default function NosotrosV2() {
         <HeroNosotros />
       </div>
       <NosotrosSection />
-      <MetodoNosotros />
       <Founders />
       <Team />
       <Gallery/>
+      <MetodoNosotros />
       <ContactAnchor>
         <ContactForm/>
       </ContactAnchor>

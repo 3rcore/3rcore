@@ -52,6 +52,7 @@ export default function GoogleAds(){
           paragraphs={4}
           relatedLinks={[
             { href: "/posicionamiento-seo", label: "SEO Orgánico" },
+            { href: "/servicios/meta-ads", label: "Meta Ads" },
             { href: "/servicios/web-development", label: "Diseño Web" },
             { href: "/servicios/socialmedia", label: "Redes Sociales" },
             { href: "/servicios/branding", label: "Branding" },

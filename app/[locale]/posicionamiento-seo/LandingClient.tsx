@@ -47,6 +47,7 @@ export default function Landing() {
         paragraphs={4}
         relatedLinks={[
           { href: "/servicios/google-ads", label: "Google Ads" },
+          { href: "/servicios/meta-ads", label: "Meta Ads" },
           { href: "/servicios/web-development", label: "Diseño Web" },
           { href: "/servicios/branding", label: "Branding" },
           { href: "/servicios/socialmedia", label: "Redes Sociales" },

@@ -9,7 +9,7 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
   return generatePageMetadata({
     locale,
     path: '/agencia-seo-lima',
-    titleEs: 'Agencia SEO en Lima, Perú — Posicionamiento Orgánico en Google | 3R Core',
+    titleEs: 'Agencia SEO en Lima — Posicionamiento Orgánico en Google | 3R Core',
     titleEn: 'SEO Agency in Lima, Peru — Organic Google Positioning | 3R Core',
     descriptionEs: 'Agencia SEO en Lima especializada en posicionamiento orgánico en Google: keyword research, SEO técnico, contenidos, link building y SEO local desde S/1,800/mes. Auditorías gratuitas para empresas en Perú y Estados Unidos.',
     descriptionEn: 'SEO agency for US-based clients: keyword research, technical SEO, content, link building and local SEO from $500/month. Free audits.',

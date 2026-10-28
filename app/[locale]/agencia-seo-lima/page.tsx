@@ -32,6 +32,12 @@ const COPY = {
     pricingDesc: 'Tier Local Pyme desde S/1,800/mes · Tier Competitivo desde S/3,000/mes · Tier Enterprise desde S/5,000/mes. Precios netos, factura electrónica suma 18% de IGV. Mínimo 3 meses recomendado para resultados visibles. Los montos indicados son referenciales.',
     contact: 'Auditoría SEO gratuita antes de cotizar',
     contactCta: 'Mándanos tu URL y palabras clave objetivo. En 48 h te enviamos una auditoría inicial con quickwins, gaps frente a competencia y propuesta personalizada.',
+    related: 'Potencia tu SEO con pauta y redes que convierten',
+    relatedDesc: 'El posicionamiento orgánico construye tráfico sostenible; para acelerar las conversiones lo combinamos con campañas de pago en Meta y gestión de redes sociales.',
+    relatedLinks: [
+      { label: 'Agencia de Meta Ads en Lima', path: '/servicios/meta-ads' },
+      { label: 'Gestión de redes sociales', path: '/servicios/socialmedia' },
+    ],
   },
   en: {
     eyebrow: '3R Core · SEO · Lima · Peru',
@@ -61,6 +67,12 @@ const COPY = {
     pricingDesc: 'Local SMB tier from $500/month · Competitive tier from $1,000/month · Enterprise tier from $1,500/month. Net prices for US clients. Minimum 3 months recommended for visible results.',
     contact: 'Free SEO audit before quoting',
     contactCta: 'Send us your URL and target keywords. In 48 h we deliver an initial audit with quickwins, gaps against competitors and a custom proposal.',
+    related: 'Pair your SEO with paid media and social that convert',
+    relatedDesc: 'Organic positioning builds sustainable traffic; to accelerate conversions we combine it with paid campaigns on Meta and social media management.',
+    relatedLinks: [
+      { label: 'Meta Ads management', path: '/services/meta-ads' },
+      { label: 'Social media management', path: '/services/social-media' },
+    ],
   },
 }
 
@@ -125,6 +137,18 @@ export default async function AgenciaSeoLimaPage({ params }: Props) {
         <h2 className="text-3xl md:text-4xl font-bold mb-4">{t.pricing}</h2>
         <p className="text-white/70 max-w-3xl">{t.pricingDesc}</p>
       </section>
+
+      {locale !== 'us' && (
+      <section className="px-6 md:px-10 lg:px-20 py-16 max-w-6xl mx-auto border-t border-white/10">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">{t.related}</h2>
+        <p className="text-white/70 max-w-3xl mb-6">{t.relatedDesc}</p>
+        <div className="flex flex-wrap gap-3">
+          {t.relatedLinks.map((r: any, i: number) => (
+            <Link key={i} href={`/${locale}${r.path}`} className="inline-block px-5 py-3 border border-white/20 rounded-full text-sm text-white/90 hover:bg-white/10 transition">{r.label}</Link>
+          ))}
+        </div>
+      </section>
+      )}
 
       <section className="px-6 md:px-10 lg:px-20 py-20 max-w-6xl mx-auto border-t border-white/10 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-6">{t.contact}</h2>

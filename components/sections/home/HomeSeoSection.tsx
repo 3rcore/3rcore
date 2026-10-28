@@ -130,6 +130,11 @@ const COPY: Record<'es' | 'en' | 'us', {
         p: 'Todo el servicio en una sola página: qué hacemos, cómo lo medimos y cómo trabajamos mes a mes.',
         href: '/agencia-marketing-digital-lima',
       },
+      {
+        h: 'Publicidad en Meta Ads',
+        p: 'Campañas en Facebook e Instagram que convierten: segmentación, creativos y medición real para sumar ventas a tu SEO.',
+        href: '/servicios/meta-ads',
+      },
     ],
     localH3: 'SEO y Google Ads para empresas de Lima y todo el Perú',
     local:

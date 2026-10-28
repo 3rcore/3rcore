@@ -34,6 +34,12 @@ const COPY = {
     transparencyDesc: 'La cuenta Google Ads es tuya. Te damos acceso de administrador desde el día uno y la billing va con tu tarjeta o factura electrónica directa con Google. Si algún día decides cambiar de agencia, te llevas todo: cuenta, audiencias, conversiones e histórico.',
     contact: 'Solicita auditoría gratuita en 48 h',
     contactCta: 'Compártenos acceso de lectura a Google Ads y GA4 o el ID de tu cuenta. En 48 h te enviamos auditoría con quickwins, gaps frente a competencia y propuesta personalizada.',
+    related: 'Suma orgánico a tu inversión en Google Ads',
+    relatedDesc: 'Google Ads capta demanda activa; para cubrir todo el funnel lo complementamos con campañas en Meta y gestión de redes sociales.',
+    relatedLinks: [
+      { label: 'Agencia de Meta Ads en Lima', path: '/servicios/meta-ads' },
+      { label: 'Gestión de redes sociales', path: '/servicios/socialmedia' },
+    ],
   },
   en: {
     eyebrow: '3R Core · Google Ads · Lima · Peru',
@@ -65,6 +71,12 @@ const COPY = {
     transparencyDesc: 'The Google Ads account is yours. We grant you admin access from day one and billing goes on your own card or Google electronic invoice. If you ever switch agency, you keep everything: account, audiences, conversions and history.',
     contact: 'Request a free audit within 48 h',
     contactCta: 'Share read-only access to your Google Ads and GA4 or your account ID. In 48 h we deliver an audit with quickwins, gaps vs competitors and a tailored proposal.',
+    related: 'Add organic reach to your Google Ads investment',
+    relatedDesc: 'Google Ads captures active demand; to cover the full funnel we complement it with Meta campaigns and social media management.',
+    relatedLinks: [
+      { label: 'Meta Ads management', path: '/services/meta-ads' },
+      { label: 'Social media management', path: '/services/social-media' },
+    ],
   },
 }
 
@@ -129,6 +141,18 @@ export default async function GoogleAdsLimaPage({ params }: Props) {
         <h2 className="text-3xl md:text-4xl font-bold mb-4">{t.transparency}</h2>
         <p className="text-white/70 max-w-3xl">{t.transparencyDesc}</p>
       </section>
+
+      {locale !== 'us' && (
+      <section className="px-6 md:px-10 lg:px-20 py-16 max-w-6xl mx-auto border-t border-white/10">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">{t.related}</h2>
+        <p className="text-white/70 max-w-3xl mb-6">{t.relatedDesc}</p>
+        <div className="flex flex-wrap gap-3">
+          {t.relatedLinks.map((r: any, i: number) => (
+            <Link key={i} href={`/${locale}${r.path}`} className="inline-block px-5 py-3 border border-white/20 rounded-full text-sm text-white/90 hover:bg-white/10 transition">{r.label}</Link>
+          ))}
+        </div>
+      </section>
+      )}
 
       <section className="px-6 md:px-10 lg:px-20 py-20 max-w-6xl mx-auto border-t border-white/10 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-6">{t.contact}</h2>

@@ -9,9 +9,9 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
   return generatePageMetadata({
     locale,
     path: '/agencia-google-ads-lima',
-    titleEs: 'Agencia Google Ads en Lima, Perú — Campañas Search, PMax, YouTube | 3R Core',
+    titleEs: 'Agencia de Google Ads en Lima — Campañas Search, PMax y YouTube | 3R Core',
     titleEn: 'Google Ads Agency in Lima, Peru — Search, PMax, YouTube Campaigns | 3R Core',
-    descriptionEs: 'Agencia certificada Google Partner en Lima. Campañas Search, Performance Max, YouTube, Display y Shopping con fee desde S/1,800/mes. Auditoría gratuita de cuentas activas y reportes Looker Studio.',
+    descriptionEs: 'Agencia de Google Ads en Lima certificada Google Partner: campañas Search, Performance Max, YouTube, Display y Shopping con fee desde S/1,800/mes. Auditoría gratuita de cuentas activas y reportes Looker Studio.',
     descriptionEn: 'Google Partner certified agency for US clients. Search, Performance Max, YouTube, Display and Shopping campaigns with fee from $800/month. Free audits for active accounts and Looker Studio reporting.',
     ogImage: {
       url: 'https://3rcore.com/og/default.jpg',

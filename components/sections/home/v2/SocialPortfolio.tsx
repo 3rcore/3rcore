@@ -29,7 +29,7 @@ export default function SocialPortfolio() {
   const copy = useLocale() === "en" ? COPY.en : COPY.es;
 
   return (
-    <main className="lg:py-10 xl:py-20 px-10 xl:px-4">
+    <main className="lg:pt-10 xl:pt-20 lg:pb-2 xl:pb-4 px-10 xl:px-4">
       <div className="max-w-6xl 2xl:mx-w-7xl mx-auto">
 
         {/* Cabecera con el diseño original y las proporciones exactas */}
@@ -48,7 +48,7 @@ export default function SocialPortfolio() {
             <span
               className="text-transparent inline-block relative pb-2"
               style={{
-                WebkitTextStroke: '1.5px rgba(255, 255, 255, 0.4)',
+                WebkitTextStroke: '1.5px rgba(244, 38, 110, 0.75)',
               }}
             >
               {copy.line2}

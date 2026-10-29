@@ -163,7 +163,7 @@ export default function ReviewsSection() {
           className="text-3xl md:text-4xl xl:text-5xl font-black leading-tight mb-4 pb-2 inline-block"
           style={{
             color: "transparent",
-            WebkitTextStroke: "1px rgba(255,255,255,0.15)",
+            WebkitTextStroke: "1.5px rgba(244, 38, 110, 0.75)",
             borderBottom: "3px solid",
             borderImage: "linear-gradient(90deg, #E91E63, #9C27B0) 1",
           }}

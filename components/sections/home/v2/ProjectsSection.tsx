@@ -201,7 +201,7 @@ export default function ServicesGridSection() {
   const gridCols = cards.length === 4 ? 'md:grid-cols-2 xl:grid-cols-4' : 'md:grid-cols-2 lg:grid-cols-3';
 
   return (
-    <section className="w-full text-white py-16 md:py-24 px-6 md:px-12 flex justify-center">
+    <section className="w-full text-white pt-6 md:pt-8 pb-16 md:pb-24 px-6 md:px-12 flex justify-center">
       <div className="max-w-7xl w-full">
 
         {/* Cabecera de la sección */}
@@ -219,7 +219,7 @@ export default function ServicesGridSection() {
               {head.line1}<br />
               <span
                 className="text-transparent"
-                style={{ WebkitTextStroke: '1.5px rgba(255, 255, 255, 0.4)' }}
+                style={{ WebkitTextStroke: '1.5px rgba(244, 38, 110, 0.75)' }}
               >
                 {head.line2}
               </span>

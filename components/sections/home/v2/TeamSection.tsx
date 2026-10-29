@@ -40,7 +40,7 @@ const TeamSection = () => {
 
   }, { scope: containerRef });
   return (
-    <section ref={containerRef} className="relative w-full py-16 md:py-24 px-5 flex justify-center items-center overflow-hidden">
+    <section ref={containerRef} className="relative w-full pt-8 md:pt-10 pb-6 md:pb-8 px-5 flex justify-center items-center overflow-hidden">
       
       <div className="relative z-10 max-w-6xl mx-auto text-center flex flex-col items-center">
         

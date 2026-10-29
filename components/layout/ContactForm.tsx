@@ -34,7 +34,9 @@ const FieldBorder = () => (
   <span aria-hidden="true" className="field-border pointer-events-none absolute inset-0 rounded-[12px]" />
 );
 
-const ContactForm = () => {
+// `compact` reduce el relleno vertical (lo usa el home, donde la sección
+// anterior ya deja aire). El resto de páginas conserva el espaciado original.
+const ContactForm = ({ compact = false }: { compact?: boolean }) => {
   // El formulario respondía SIEMPRE en español: un lead de EE.UU. enviaba sus
   // datos y leía "¡Mensaje enviado con éxito!".
   const locale = useLocale();
@@ -126,7 +128,7 @@ const ContactForm = () => {
 
   return (
     <section
-      className={`${poppins.className} relative w-full overflow-hidden bg-[#16021B] py-20 lg:py-[140px] flex flex-col justify-center items-center`}
+      className={`${poppins.className} relative w-full overflow-hidden bg-[#16021B] ${compact ? "py-10 lg:py-16" : "py-20 lg:py-[140px]"} flex flex-col justify-center items-center`}
       style={{
         backgroundImage: "url('/images/Formulario/wmremove-transformed-8-1-1.webp')",
         backgroundSize: 'cover',

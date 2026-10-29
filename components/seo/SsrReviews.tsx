@@ -20,7 +20,7 @@ export default async function SsrReviews({ locale }: { locale: string }) {
   return (
     <section
       aria-label={isEn ? 'Client reviews' : 'Reseñas de clientes'}
-      className="relative z-10 px-6 md:px-12 py-14 md:py-20 max-w-6xl mx-auto"
+      className="relative z-10 px-6 md:px-12 py-8 md:py-10 max-w-6xl mx-auto"
     >
       <h2 className="text-2xl md:text-3xl font-semibold text-white mb-3">
         {isEn

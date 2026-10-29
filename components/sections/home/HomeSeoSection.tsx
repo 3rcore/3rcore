@@ -245,7 +245,7 @@ export default function HomeSeoSection({ locale }: { locale: string }) {
   return (
     <section
       aria-labelledby="home-seo-heading"
-      className="relative z-10 bg-[#0D0010] text-white px-6 md:px-12 py-20 md:py-28"
+      className="relative z-10 bg-[#0D0010] text-white px-6 md:px-12 py-10 md:py-14"
     >
       <div className="max-w-6xl mx-auto">
         <p className="text-[11px] tracking-[0.35em] uppercase text-[#E91E63] font-medium mb-4">

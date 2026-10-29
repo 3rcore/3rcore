@@ -86,12 +86,12 @@ const StatsAndMarquee = () => {
   return (
     <section
       ref={containerRef}
-      className="w-full py-12 lg:py-20 flex flex-col items-center gap-16 lg:gap-24 overflow-hidden "
+      className="w-full py-4 lg:py-8 flex flex-col items-center gap-10 lg:gap-14 overflow-hidden "
     >
       <style jsx>{`
         .stroke-text {
           color: transparent;
-          -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.3);
+          -webkit-text-stroke: 1.5px rgba(244, 38, 110, 0.75);
         }
         .animate-marquee {
           display: flex;
@@ -109,7 +109,7 @@ const StatsAndMarquee = () => {
       `}</style>
 
       {/* CARRUSEL INFINITO SUPERIOR */}
-      <div className="w-full overflow-hidden whitespace-nowrap flex items-center py-4">
+      <div className="w-full overflow-hidden whitespace-nowrap flex items-center py-1">
         <div className="animate-marquee items-center">
           {marqueeItems.map((service, index) => (
             <div key={index} className="flex items-center">

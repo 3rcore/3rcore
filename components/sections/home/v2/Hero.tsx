@@ -142,7 +142,7 @@ export default function HeroHome() {
         {/* Lado Izquierdo: Textos Principales */}
         <div className="w-full md:w-1/2 flex flex-col justify-center text-left md:mt-16 md:mt-0 items-start">
           <p
-            className="text-4xl sm:text-5xl md:text-7xl lg:text-[6rem] bg-gradient-to-r from-[#a630cd] to-[#f4266e]
+            className="text-[2.1rem] sm:text-[2.6rem] md:text-6xl lg:text-[5.4rem] bg-gradient-to-r from-[#a630cd] to-[#f4266e]
               bg-clip-text text-transparent font-bold tracking-tighter leading-tight"
             style={{ paintOrder: "stroke fill" }}
           >
@@ -152,7 +152,7 @@ export default function HeroHome() {
           <p
             className={`font-medium text-white leading-tight my-1 whitespace-nowrap ${
               copy.line2b
-                ? "text-xl sm:text-2xl md:text-5xl lg:text-[3.4rem] xl:text-[4rem]"
+                ? "text-lg sm:text-xl md:text-[2.6rem] lg:text-[3rem] xl:text-[3.6rem]"
                 : "text-2xl sm:text-3xl md:text-6xl lg:text-[4.5rem]"
             }`}
           >
@@ -161,7 +161,7 @@ export default function HeroHome() {
           </p>
 
           <p
-            className="text-3xl sm:text-4xl md:text-7xl lg:text-[6rem] bg-gradient-to-r from-[#f4266e] to-[#a630cd]
+            className="text-[1.7rem] sm:text-[2.2rem] md:text-6xl lg:text-[5.4rem] bg-gradient-to-r from-[#f4266e] to-[#a630cd]
               bg-clip-text text-transparent font-bold tracking-tighter leading-tight"
             style={{ paintOrder: "stroke fill" }}
           >

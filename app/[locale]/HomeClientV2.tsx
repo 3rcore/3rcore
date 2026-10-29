@@ -59,7 +59,7 @@ export default function HomeClientV2() {
         <ReviewsSection />
 
         <ContactAnchor>
-          <ContactForm />
+          <ContactForm compact />
         </ContactAnchor>
         <ScrollContactBtn />
       </main>

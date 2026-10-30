@@ -193,6 +193,17 @@ export default async function LimaLandingPage({ params }: Props) {
       <section className="px-6 md:px-10 lg:px-20 py-16 max-w-6xl mx-auto border-t border-white/10">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">{t.zonesH2}</h2>
         <p className="text-white/70 max-w-3xl mb-8 leading-relaxed">{t.zonesP}</p>
+        {/* 30-oct-2026. Señal local: el mapa de la ficha de Google (mismo embed que el
+            formulario de contacto). Solo /es: el /en no menciona Perú. */}
+        {es && (
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.3044063260063!2d-76.9519657249382!3d-12.09130088814899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c710419b833d%3A0xd38447313365f798!2s3R%20Core%20-%20Agencia%20de%20Marketing!5e0!3m2!1ses-419!2spe!4v1768342086873!5m2!1ses-419!2spe"
+            title="Oficina de 3R Core en La Molina, Lima"
+            className="w-full h-72 rounded-2xl border border-white/10 mb-8"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        )}
         <p className="text-white/60 max-w-3xl mb-6">{t.sectorsP}</p>
         <ul className="grid md:grid-cols-3 gap-4">
           {t.sectors.map((s) => (

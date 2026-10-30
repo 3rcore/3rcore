@@ -8,7 +8,9 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
   return generatePageMetadata({
     locale,
     path: '/servicios',
-    titleEs: 'Servicios de Marketing Digital en Lima | 3R Core',
+    // 30-oct-2026. «Lima y Perú»: la competencia directa (Media Lab) posiciona su /servicios/
+    // como «Servicios de Marketing Digital en Perú» y atendemos todo el país.
+    titleEs: 'Servicios de Marketing Digital en Lima y Perú | 3R Core',
     titleEn: 'Digital Marketing Services for U.S. Brands | 3R Core',
     descriptionEs: 'Branding, redes sociales, Google Ads, SEO y desarrollo web en Lima. Precio de cada servicio publicado, reportes mensuales y resultados medibles.',
     descriptionEn: 'UGC video, influencer campaigns, PR, Google Ads, Meta Ads, SEO, branding and web development for U.S. businesses, by an in-house team with pricing in USD.',

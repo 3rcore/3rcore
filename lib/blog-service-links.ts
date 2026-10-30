@@ -308,6 +308,16 @@ const EXTRA_A_MITAD: Record<string, Frase> = {
     enlaces: [{ href: '/es/agencia-marketing-digital-miraflores', ancla: 'marketing digital para negocios de Miraflores' }],
     html: `<p>Los montos no cambian por distrito, pero la competencia sí: en zonas con mucha oferta, como Miraflores, el mismo presupuesto rinde distinto. Lo explicamos en <a href="/es/agencia-marketing-digital-miraflores">marketing digital para negocios de Miraflores</a>.</p>`,
   },
+  // 30-oct-2026. Plan frente a Media Lab: la home (/es) es la página de «agencia de marketing
+  // digital en Perú» y no recibía enlaces desde los posts que comparan agencias.
+  'mejores-agencias-de-marketing-digital': {
+    enlaces: [{ href: '/es', ancla: 'agencia de marketing digital en Perú' }],
+    html: `<p>Si estás comparando, cómo trabajamos en 3R Core como <a href="/es">agencia de marketing digital en Perú</a> —servicios, precios publicados y reseñas de Google— lo tienes en nuestra página principal.</p>`,
+  },
+  'contrato-agencia-marketing-digital-peru-que-firmar': {
+    enlaces: [{ href: '/es', ancla: 'agencia de marketing digital en Perú' }],
+    html: `<p>En 3R Core trabajamos sin permanencia y con las cuentas a nombre del cliente desde el primer día; lo explicamos en nuestra página de <a href="/es">agencia de marketing digital en Perú</a>.</p>`,
+  },
   'contratar-agencia-marketing-digital-generar-leads-calidad': {
     enlaces: [{ href: '/es/agencia-marketing-digital-lima', ancla: 'agencia de marketing digital en Lima' }],
     html: `<p>Si quieres ver cómo medimos cada lead y qué incluye el trabajo, entra a nuestra página de <a href="/es/agencia-marketing-digital-lima">agencia de marketing digital en Lima</a>.</p>`,

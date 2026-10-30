@@ -5,6 +5,7 @@ import { useEffect, useRef } from "react"
 import Image from "next/image"
 import { Link } from "@/i18n/navigation"
 import BlogCTA from "@/components/blog/BlogCTA"
+import NewsletterSignup from "@/components/blog/NewsletterSignup"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import type { BlogPost } from "@/lib/supabase/types"
@@ -189,6 +190,9 @@ export default function BlogPostView({ post, locale, minutesRead, relatedPosts =
             </a>
           </div>
         </div>
+
+        {/* Newsletter mensual (solo /es: el envío se redacta en español) */}
+        {locale === 'es' && <NewsletterSignup />}
 
         {/* Related posts */}
         {relatedPosts && relatedPosts.length > 0 && (

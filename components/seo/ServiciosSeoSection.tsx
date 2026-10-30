@@ -180,6 +180,14 @@ export default function ServiciosSeoSection({ locale }: { locale: string }) {
 
   return (
     <section className="relative z-10 px-6 md:px-12 py-16 md:py-24 max-w-6xl mx-auto">
+      {/* 30-oct-2026. Respuesta directa para buscadores e IA: el H1 del índice es
+          sr-only y lo visible arriba es un titular animado sin definición. Cada dato
+          sale de esta misma página o de /precios. */}
+      {locale === 'es' && (
+        <p className="text-white/80 text-base md:text-lg leading-relaxed max-w-3xl mb-12">
+          3R Core es una agencia de marketing digital con oficina en La Molina, Lima, que trabaja Google Ads, posicionamiento SEO, redes sociales, branding y desarrollo web para empresas de todo el Perú. Cada servicio tiene su precio publicado, se contrata sin permanencia forzosa y lleva un reporte mensual.
+        </p>
+      )}
       <h2 className="text-2xl md:text-4xl font-semibold text-white mb-4 tracking-tight">{t.h2Precios}</h2>
       <p className="text-white/55 text-sm md:text-base leading-relaxed max-w-3xl mb-10">{t.introPrecios}</p>
 

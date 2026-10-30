@@ -241,6 +241,10 @@ const Footer = () => {
 };
 
 const PERU_GUIDES: { href: AppPathname; label: string }[] = [
+  // 30-oct-2026. La landing de Lima recibía 6 enlaces desde el contenido y casos de
+  // éxito 8: sin enlaces externos, el pie es la forma más directa de subirlos.
+  { href: '/agencia-marketing-digital-lima', label: 'Agencia de marketing digital en Lima' },
+  { href: '/casos-de-exito', label: 'Casos de éxito' },
   { href: '/cuanto-cuesta-una-pagina-web-en-peru', label: 'Cuánto cuesta una página web' },
   { href: '/cotizar', label: 'Cotizador de páginas web' },
   { href: '/mejores-agencias-google-ads-lima', label: 'Agencias de Google Ads en Lima' },

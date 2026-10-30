@@ -1,6 +1,7 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useMemo, useRef, useState } from 'react'
+import { trackConversion } from '@/lib/track'
 import { WA_LEADS, waUrl } from '@/lib/contact'
 import { openWhatsAppNative } from '@/lib/wa-native-open'
 import ConsentCheckbox, { useMarketingConsentCopy } from '@/components/ui/ConsentCheckbox'
@@ -176,7 +177,14 @@ export default function Cotizador({ locale }: { locale: string }) {
     ? SERVICES.filter((s) => ['tienda', 'web', 'seo'].includes(s.key))
     : SERVICES
 
+  // 30-oct-2026. Microconversión (no evento clave): cuánta gente empieza a cotizar
+  // frente a cuánta termina en generate_lead. Una vez por visita al cotizador.
+  const inicioMedido = useRef(false)
   const toggle = (s: Service, scopeId: string) => {
+    if (!inicioMedido.current) {
+      inicioMedido.current = true
+      trackConversion('cotizador_inicio', { servicio: s.key, page_path: typeof location !== 'undefined' ? location.pathname : '' })
+    }
     setSelected((prev) => {
       const next = { ...prev }
       if (next[s.key] === scopeId) delete next[s.key]

@@ -4,6 +4,7 @@ import BrandOrb from "@/components/ui/BrandOrb";
 import ConsentCheckbox, { useMarketingConsentCopy } from "@/components/ui/ConsentCheckbox";
 
 import { useEffect, useRef, useState } from "react";
+import { trackConversion } from "@/lib/track";
 import { useTranslations, useLocale } from "next-intl"
 
 /**
@@ -55,6 +56,7 @@ const ContactForm = ({ compact = false }: { compact?: boolean }) => {
   // enviarse el formulario (los bots lo llenan en <3s; el tráfico "Direct"
   // de EE.UU. sobre /en venía llenando el form y generando leads falsos).
   const mountedAt = useRef(Date.now());
+  const formStarted = useRef(false);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -151,8 +153,15 @@ const ContactForm = ({ compact = false }: { compact?: boolean }) => {
         </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-[820fr_700fr] gap-10 lg:gap-16 items-stretch">
+          {/* 30-oct-2026. form_start (microconversión, no evento clave): el primer foco
+              en el formulario, para ver cuántos lo empiezan frente a cuántos lo envían. */}
           <form
             onSubmit={handleSubmit}
+            onFocusCapture={(e) => {
+              if (formStarted.current) return
+              formStarted.current = true
+              trackConversion('form_start', { form_id: 'contacto', page_path: location.pathname }, e.nativeEvent)
+            }}
             className="flex flex-col gap-[26px] rounded-[28px] bg-white/[0.04] border border-white/[0.12] shadow-[0_20px_60px_rgba(230,26,128,0.02)] p-7 md:p-12"
           >
             {/* Honeypot: campo invisible para humanos; los bots lo rellenan.

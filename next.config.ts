@@ -78,7 +78,9 @@ const nextConfig: NextConfig = {
     // password hashing + brute-force lockout + security headers + Supabase env).
     // 2-nov-2026: moved off Vercel (team blocked) to 3R Core's BanaHosting cPanel,
     // a Node app mounted at 3rcommerce.com/_r3p that serves the same /panel/*.
-    const PANEL = 'https://3rcommerce.com/_r3p';
+    // The host's Imunify anti-bot challenges Vercel's IPs (lost logins and
+    // leads), so requests go through the VPS, which relays to 3rcommerce.com/_r3p.
+    const PANEL = 'https://r3c-datos.josegaspard.dev/_r3p';
     return [
       { source: '/panel', destination: `${PANEL}/panel` },
       { source: '/panel/:path*', destination: `${PANEL}/panel/:path*` },

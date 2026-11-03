@@ -85,6 +85,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${baseUrl}/es/diseno-web-restaurantes-lima`, priority: 0.85 },
     { url: `${baseUrl}/es/agencia-seo-arequipa`, priority: 0.85 },
     { url: `${baseUrl}/es/agencia-marketing-digital-miraflores`, priority: 0.85 },
+    // 3-nov-2026. Glosario de marketing digital: solo /es.
+    { url: `${baseUrl}/es/glosario-marketing-digital`, priority: 0.8 },
     // 11-oct-2026. Google Ads por sector: solo /es (404 en /en y /us).
     { url: `${baseUrl}/es/servicios/google-ads-psicologos`, priority: 0.85 },
     { url: `${baseUrl}/es/servicios/google-ads-hoteles`, priority: 0.85 },

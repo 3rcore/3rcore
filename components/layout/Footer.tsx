@@ -251,6 +251,7 @@ const PERU_GUIDES: { href: AppPathname; label: string }[] = [
   { href: '/diseno-web-restaurantes-lima', label: 'Web para restaurantes' },
   { href: '/agencia-marketing-digital-miraflores', label: 'Marketing digital en Miraflores' },
   { href: '/agencia-seo-arequipa', label: 'SEO en Arequipa' },
+  { href: '/glosario-marketing-digital', label: 'Glosario de marketing digital' },
 ];
 
 const SocialIcon = ({ href, icon }: { href: string; icon: React.ReactNode }) => {

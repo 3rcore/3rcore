@@ -114,6 +114,8 @@ export const pathnames = {
   '/diseno-web-restaurantes-lima': '/diseno-web-restaurantes-lima',
   '/agencia-seo-arequipa': '/agencia-seo-arequipa',
   '/agencia-marketing-digital-miraflores': '/agencia-marketing-digital-miraflores',
+  // 3-nov-2026. Glosario (idea de flamacreators.com), solo /es.
+  '/glosario-marketing-digital': '/glosario-marketing-digital',
   // 28-sep-2026. Precio del SEO en Perú. Solo /es.
   '/cuanto-cuesta-el-seo-en-peru': '/cuanto-cuesta-el-seo-en-peru',
   // 11-oct-2026. «SEO para <sector>»: solo /es (404 en /en y /us). Config en

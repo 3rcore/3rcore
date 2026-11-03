@@ -37,6 +37,7 @@ const MARKET_ONLY: Record<string, string> = {
   '/diseno-web-restaurantes-lima': 'es',
   '/agencia-seo-arequipa': 'es',
   '/agencia-marketing-digital-miraflores': 'es',
+  '/glosario-marketing-digital': 'es',
   // Google Ads por sector (11-oct-2026), solo /es
   '/servicios/google-ads-psicologos': 'es',
   '/servicios/google-ads-hoteles': 'es',

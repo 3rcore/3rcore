@@ -1,6 +1,8 @@
 # 3R Core
 > Digital marketing agency in Lima, Peru specializing in online stores / e-commerce (Shopify, WooCommerce, Tiendanube), SEO positioning and Google Ads, plus web development, branding and social media management. Operating in Peru and the United States.
 
+Last updated: 2026-11-03
+
 ## About
 3R Core is a full-service digital marketing agency based in La Molina, Lima, Peru. The agency combines three generations of experience, strategic vision, and technology to create personalized digital marketing strategies. Founded with the mission to help businesses grow their digital presence across Peru and the United States.
 
@@ -47,6 +49,8 @@ Prices below are the reference prices each page publishes, in Peruvian soles, ne
 - [About](https://3rcore.com/es/nosotros): Team, founders (Alejandro and Piero Roque), and methodology
 - [FAQ](https://3rcore.com/es/preguntas): Frequently asked questions about services, timelines, and pricing
 - [Blog](https://3rcore.com/es/blogs): Articles on marketing, SEO, branding, and web development
+- [Digital marketing glossary](https://3rcore.com/es/glosario-marketing-digital): 39 terms (ROAS, CAC, LTV, CPC, CPM, Performance Max, SEO, GEO, AI Overviews, GA4…) defined in two or three lines in Spanish, each linking to a longer guide.
+- [Blog RSS feed](https://3rcore.com/feed.xml): the 30 latest Spanish articles.
 
 ## Blog — guides on paid ads, SEO and marketing in Peru
 - [Meta Ads para pymes en Perú: primera campaña rentable](https://3rcore.com/es/blogs/meta-ads-pymes-peru-guia-primera-campana-rentable)

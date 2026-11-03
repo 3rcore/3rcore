@@ -631,6 +631,11 @@ export default async function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify([organizationSchema, websiteSchema, ...siteNavigationSchema]) }}
         />
+        {/* 3-nov-2026. Igual que flamacreators.com: el <head> anuncia el resumen
+            para IA (llms.txt) y el RSS del blog, para que los rastreadores los
+            encuentren sin adivinar la ruta. */}
+        <link rel="alternate" type="text/plain" title="Resumen para IA (llms.txt)" href="/llms.txt" />
+        <link rel="alternate" type="application/rss+xml" title="Blog de 3R Core" href="/feed.xml" />
       </head>
       <ReactLenis root options={lenisOptions}>
         <body className={`${poppins.className} text-white`} suppressHydrationWarning={true}>

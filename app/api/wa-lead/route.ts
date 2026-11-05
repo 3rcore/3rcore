@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { readAttribution } from '@/lib/attribution';
+import { postLeadToPanel } from '@/lib/panel-lead';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -40,36 +41,22 @@ export async function POST(request: Request) {
       origin ? `Origen: ${origin}` : null,
     ].filter(Boolean).join('\n');
 
-    const ctl = new AbortController();
-    const t = setTimeout(() => ctl.abort(), 6000);
-    let ok = false;
-    try {
-      const r = await fetch('https://3rcore.com/panel/api/lead-ingest', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'x-3r-key': '3rlead_k7Qm2Xp9vR4nT8wL6sB1yH3dZ',
-        },
-        body: JSON.stringify({
-          nombre,
-          telefono: celular,
-          email: typeof email === 'string' ? email.trim().slice(0, 200) : '',
-          apellido: typeof empresa === 'string' ? empresa.trim().slice(0, 120) : '',
-          mensaje,
-          // La fuente refleja la página real de origen (el widget también vive
-          // en /posicionamiento-seo y otras páginas, no solo en la landing).
-          website: origin ? `WhatsApp ${origin}` : 'WhatsApp /performance-marketing',
-          attribution: readAttribution(request, 'wa-lead'),
-          // Casilla opcional de comunicaciones por correo (Ley 28493/29733):
-          // true solo si la persona la marcó.
-          consentimiento_publicidad: consentimiento_publicidad === true,
-        }),
-        signal: ctl.signal,
-      });
-      ok = r.ok;
-    } finally {
-      clearTimeout(t);
-    }
+    // Solo cuenta si el panel confirmó con JSON ok:true (ver lib/panel-lead.ts).
+    const ok = await postLeadToPanel({
+      nombre,
+      telefono: celular,
+      email: typeof email === 'string' ? email.trim().slice(0, 200) : '',
+      apellido: typeof empresa === 'string' ? empresa.trim().slice(0, 120) : '',
+      mensaje,
+      // La fuente refleja la página real de origen (el widget también vive
+      // en /posicionamiento-seo y otras páginas, no solo en la landing).
+      website: origin ? `WhatsApp ${origin}` : 'WhatsApp /performance-marketing',
+      attribution: readAttribution(request, 'wa-lead'),
+      // Casilla opcional de comunicaciones por correo (Ley 28493/29733):
+      // true solo si la persona la marcó.
+      consentimiento_publicidad: consentimiento_publicidad === true,
+    });
+    if (!ok) console.error('LEAD DE WHATSAPP SIN GUARDAR EN EL PANEL', origin);
     return NextResponse.json({ ok });
   } catch {
     return NextResponse.json({ ok: false }, { status: 500 });

@@ -1,6 +1,7 @@
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
 import { readAttribution } from '@/lib/attribution';
+import { postLeadToPanel } from '@/lib/panel-lead';
 import { companyLeadEmail, companyLeadLang, companyLeadSubject, leadReplyEmail } from '@/lib/email-templates';
 
 // Registra el lead en el panel (CRM) a través del endpoint público del panel —
@@ -10,32 +11,19 @@ async function saveLeadToPanel(d: {
   nombre: string; apellido?: string; email: string; telefono?: string; mensaje?: string; website?: string; attribution?: unknown;
   consentimiento_publicidad: boolean;
 }) {
-  const ctl = new AbortController();
-  const t = setTimeout(() => ctl.abort(), 6000);
-  try {
-    await fetch('https://3rcore.com/panel/api/lead-ingest', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-3r-key': '3rlead_k7Qm2Xp9vR4nT8wL6sB1yH3dZ',
-      },
-      body: JSON.stringify({
-        nombre: d.nombre,
-        apellido: d.apellido,
-        email: d.email,
-        telefono: d.telefono,
-        mensaje: d.mensaje,
-        website: d.website,
-        attribution: d.attribution,
-        consentimiento_publicidad: d.consentimiento_publicidad,
-      }),
-      signal: ctl.signal,
-    });
-  } catch (e) {
-    console.error('panel lead-ingest failed', e);
-  } finally {
-    clearTimeout(t);
-  }
+  // Comprueba que el panel respondió JSON ok:true (un 200 con HTML del antibots
+  // no cuenta) y reintenta por la otra ruta. Si aun así falla, el correo sale igual.
+  const ok = await postLeadToPanel({
+    nombre: d.nombre,
+    apellido: d.apellido,
+    email: d.email,
+    telefono: d.telefono,
+    mensaje: d.mensaje,
+    website: d.website,
+    attribution: d.attribution,
+    consentimiento_publicidad: d.consentimiento_publicidad,
+  });
+  if (!ok) console.error('LEAD SIN GUARDAR EN EL PANEL (solo va por correo)', d.email, d.website);
 }
 
 export async function POST(request: Request) {

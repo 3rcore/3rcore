@@ -139,7 +139,17 @@ export default async function LimaLandingPage({ params }: Props) {
 
       <section className="px-6 md:px-10 lg:px-20 py-16 max-w-6xl mx-auto border-t border-white/10">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">{t.servicesH2}</h2>
-        <p className="text-white/60 max-w-3xl mb-10">{t.servicesP}</p>
+        <p className="text-white/60 max-w-3xl mb-10">
+          {t.servicesP}
+          {/* 5-nov-2026. Enlace al home, que es la página de «agencia de
+              marketing digital en Perú» (esta es la de Lima). */}
+          {es && (
+            <>
+              {' '}¿Tu empresa está fuera de Lima? También trabajamos con negocios de provincias:{' '}
+              <Link href={link('')} className="underline underline-offset-4">así trabaja nuestra agencia de marketing digital en Perú</Link>.
+            </>
+          )}
+        </p>
         <ul className="grid md:grid-cols-2 gap-4">
           {t.services.map((s) => (
             <li key={s.href}>

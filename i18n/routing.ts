@@ -130,6 +130,17 @@ export const pathnames = {
   '/servicios/seo-para-restaurantes': '/servicios/seo-para-restaurantes',
   '/servicios/seo-para-colegios': '/servicios/seo-para-colegios',
   '/servicios/seo-para-empresas-b2b': '/servicios/seo-para-empresas-b2b',
+  // 5-nov-2026. «Marketing digital para <sector>»: solo /es. Config en
+  // lib/marketing-sectores/ (las 7 marketing-* anteriores siguen arriba).
+  '/servicios/marketing-restaurantes': '/servicios/marketing-restaurantes',
+  '/servicios/marketing-constructoras': '/servicios/marketing-constructoras',
+  '/servicios/marketing-colegios': '/servicios/marketing-colegios',
+  '/servicios/marketing-psicologos': '/servicios/marketing-psicologos',
+  '/servicios/marketing-hoteles': '/servicios/marketing-hoteles',
+  '/servicios/marketing-gimnasios': '/servicios/marketing-gimnasios',
+  '/servicios/marketing-contadores': '/servicios/marketing-contadores',
+  '/servicios/marketing-empresas-industriales': '/servicios/marketing-empresas-industriales',
+  '/servicios/marketing-salones-de-belleza': '/servicios/marketing-salones-de-belleza',
 
   // Institucionales
   '/nosotros': {es: '/nosotros', us: '/nosotros', en: '/about'},

@@ -34,7 +34,7 @@ export default function GoogleAdsInmobiliarias() {
         <SEOContentBlock
           namespace="GoogleAdsInmobiliariasSEO"
           paragraphs={6}
-          relatedLinks={[{ href: "/servicios/google-ads", label: "Gestión de Google Ads" }, { href: "/servicios/marketing-inmobiliarias", label: "Marketing para inmobiliarias" }, { href: "/servicios/seo-para-inmobiliarias", label: "SEO para inmobiliarias" }, { href: "/servicios/meta-ads", label: "Meta Ads" }]}
+          relatedLinks={[{ href: "/servicios/google-ads", label: "Gestión de Google Ads" }, { href: "/servicios/marketing-inmobiliarias", label: "Marketing digital para inmobiliarias" }, { href: "/servicios/seo-para-inmobiliarias", label: "SEO para inmobiliarias" }, { href: "/servicios/meta-ads", label: "Meta Ads" }]}
         />
         <ReviewsSection/>
         <ClientSection />

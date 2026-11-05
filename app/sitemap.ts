@@ -112,6 +112,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${baseUrl}/es/servicios/seo-para-restaurantes`, priority: 0.85 },
     { url: `${baseUrl}/es/servicios/seo-para-colegios`, priority: 0.85 },
     { url: `${baseUrl}/es/servicios/seo-para-empresas-b2b`, priority: 0.85 },
+    // 5-nov-2026. «Marketing digital para <sector>»: solo /es (lib/marketing-sectores/).
+    { url: `${baseUrl}/es/servicios/marketing-restaurantes`, priority: 0.85 },
+    { url: `${baseUrl}/es/servicios/marketing-constructoras`, priority: 0.85 },
+    { url: `${baseUrl}/es/servicios/marketing-colegios`, priority: 0.85 },
+    { url: `${baseUrl}/es/servicios/marketing-psicologos`, priority: 0.85 },
+    { url: `${baseUrl}/es/servicios/marketing-hoteles`, priority: 0.85 },
+    { url: `${baseUrl}/es/servicios/marketing-gimnasios`, priority: 0.85 },
+    { url: `${baseUrl}/es/servicios/marketing-contadores`, priority: 0.85 },
+    { url: `${baseUrl}/es/servicios/marketing-empresas-industriales`, priority: 0.85 },
+    { url: `${baseUrl}/es/servicios/marketing-salones-de-belleza`, priority: 0.85 },
   ]
 
   // Antes el sitemap listaba SOLO /es (163 URLs, cero /en como <loc>): las

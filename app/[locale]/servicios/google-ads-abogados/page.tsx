@@ -34,7 +34,7 @@ export default function GoogleAdsAbogados() {
         <SEOContentBlock
           namespace="GoogleAdsAbogadosSEO"
           paragraphs={6}
-          relatedLinks={[{ href: "/servicios/google-ads", label: "Gestión de Google Ads" }, { href: "/servicios/marketing-abogados", label: "Marketing para abogados" }, { href: "/servicios/seo-para-abogados", label: "SEO para abogados" }, { href: "/servicios/meta-ads", label: "Meta Ads" }]}
+          relatedLinks={[{ href: "/servicios/google-ads", label: "Gestión de Google Ads" }, { href: "/servicios/marketing-abogados", label: "Marketing digital para abogados" }, { href: "/servicios/seo-para-abogados", label: "SEO para abogados" }, { href: "/servicios/meta-ads", label: "Meta Ads" }]}
         />
         <ReviewsSection/>
         <ClientSection />

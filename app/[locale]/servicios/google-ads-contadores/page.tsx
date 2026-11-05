@@ -34,7 +34,7 @@ export default function GoogleAdsContadores() {
         <SEOContentBlock
           namespace="GoogleAdsContadoresSEO"
           paragraphs={6}
-          relatedLinks={[{ href: "/servicios/google-ads", label: "Gestión de Google Ads" }, { href: "/servicios/marketing-abogados", label: "Google Ads para abogados" }, { href: "/posicionamiento-seo", label: "SEO" }]}
+          relatedLinks={[{ href: "/servicios/google-ads", label: "Gestión de Google Ads" }, { href: "/servicios/marketing-contadores", label: "Marketing digital para contadores" }, { href: "/posicionamiento-seo", label: "SEO" }]}
         />
         <ReviewsSection/>
         <ClientSection />

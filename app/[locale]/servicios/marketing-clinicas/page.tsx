@@ -1,57 +1,17 @@
-'use client';
-import ContactForm from "@/components/layout/ContactForm";
-import ContactAnchor from "@/components/layout/ContactAnchor";
-import ClientSection from "@/components/layout/ClientSection";
-import ReviewsSection from "@/components/layout/ReviewsSection";
-import ServiceLanding from "@/components/sections/servicios/generic/ServiceLanding";
-import ServiceFAQ from "@/components/seo/ServiceFAQ";
-import SectorAdsGuide from "@/components/seo/SectorAdsGuide";
-import SEOContentBlock from "@/components/seo/SEOContentBlock";
-import { useScrollToSection } from '@/components/ui/useScrollToSection';
-import { useLocale, useTranslations } from 'next-intl';
+import { setRequestLocale } from "next-intl/server"
+import MarketingSectorPage from "@/components/seo/MarketingSectorPage"
+import { MARKETING_SECTORES } from "@/lib/marketing-sectores"
+import LegacyPage from "./LegacyPage"
 
-import { useIndividualPageLoader } from '@/components/layout/useIndividualPageLoader'
-import { AnimatePresence } from 'framer-motion';
-import PageLoader from '@/components/layout/PageLoader';
+// 5-nov-2026. /es pasa a «Marketing digital para <sector>» (texto en
+// lib/marketing-sectores/data/marketing-clinicas.ts). /en y /us siguen con la página anterior
+// (noindex, sin cambios). La URL no cambia.
+const SLUG = 'marketing-clinicas'
 
-import ScrollContactBtn from '@/components/ui/ScrollContactBtn'
-
-export default function MarketingClinicas() {
-
-  useScrollToSection();
-  const isLoading = useIndividualPageLoader({
-      timeout: 4000,
-      minLoadingTime: 1200,
-      checkVideos: true
-    });
-  const tH1 = useTranslations('HiddenH1');
-  // La guía del sector (11-oct-2026) solo existe en /es.
-  const locale = useLocale();
-
-  return (
-    <>
-      <AnimatePresence mode="wait">
-        {isLoading && <PageLoader key="home-loader" />}
-      </AnimatePresence>
-      <main>
-        <h1 className="sr-only">{tH1('clinicas')}</h1>
-        <div id="hero">
-          <ServiceLanding namespace="MarketingClinicasLanding" />
-        </div>
-        {locale === "es" && <SectorAdsGuide namespace="MarketingClinicasGuia" />}
-        <ServiceFAQ namespace="MarketingClinicasFAQ" count={8} />
-        <SEOContentBlock
-          namespace="MarketingClinicasSEO"
-          paragraphs={6}
-          relatedLinks={[{ href: "/servicios/google-ads", label: "Gestión de Google Ads" }, { href: "/servicios/seo-para-clinicas", label: "SEO para clínicas" }, { href: "/servicios/marketing-clinicas-dentales", label: "Clínicas Dentales" }, { href: "/servicios/marketing-clinicas-esteticas", label: "Clínicas Estéticas" }, { href: "/posicionamiento-seo", label: "SEO Local" }]}
-        />
-        <ReviewsSection/>
-        <ClientSection />
-        <ContactAnchor>
-          <ContactForm/>
-        </ContactAnchor>
-        <ScrollContactBtn />
-      </main>
-    </>
-  );
+export default async function Page({ params }: { params: any }) {
+  const { locale } = await params
+  setRequestLocale(locale)
+  if (locale !== 'es') return <LegacyPage />
+  const s = MARKETING_SECTORES[SLUG]
+  return <MarketingSectorPage ns={s.ns} servicioForm={s.servicioForm} seo={s.seo} ads={s.ads} extra={s.extra} />
 }

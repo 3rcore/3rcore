@@ -23,6 +23,7 @@ export default function SeoSectorPage({ slug }: { slug: string }) {
   const related: { href: AppPathname; label: string }[] = [
     { href: '/posicionamiento-seo', label: 'Agencia SEO en Lima' },
     ...(sector.ads ? [sector.ads] : []),
+    ...(sector.marketing ? [sector.marketing] : []),
     { href: '/servicios/posicionamiento-ia', label: 'Posicionamiento en IA' },
     { href: '/cuanto-cuesta-el-seo-en-peru', label: 'Cuánto cuesta el SEO en Perú' },
   ];

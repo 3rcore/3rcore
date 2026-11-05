@@ -34,7 +34,7 @@ export default function GoogleAdsDentistas() {
         <SEOContentBlock
           namespace="GoogleAdsDentistasSEO"
           paragraphs={6}
-          relatedLinks={[{ href: "/servicios/google-ads", label: "Gestión de Google Ads" }, { href: "/servicios/marketing-clinicas-dentales", label: "Marketing para clínicas dentales" }, { href: "/servicios/seo-para-dentistas", label: "SEO para dentistas" }, { href: "/servicios/meta-ads", label: "Meta Ads" }]}
+          relatedLinks={[{ href: "/servicios/google-ads", label: "Gestión de Google Ads" }, { href: "/servicios/marketing-clinicas-dentales", label: "Marketing digital para clínicas dentales" }, { href: "/servicios/seo-para-dentistas", label: "SEO para dentistas" }, { href: "/servicios/meta-ads", label: "Meta Ads" }]}
         />
         <ReviewsSection/>
         <ClientSection />

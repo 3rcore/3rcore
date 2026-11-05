@@ -61,6 +61,16 @@ const MARKET_ONLY: Record<string, string> = {
   '/servicios/seo-para-restaurantes': 'es',
   '/servicios/seo-para-colegios': 'es',
   '/servicios/seo-para-empresas-b2b': 'es',
+  // «Marketing digital para <sector>» (5-nov-2026), solo /es
+  '/servicios/marketing-restaurantes': 'es',
+  '/servicios/marketing-constructoras': 'es',
+  '/servicios/marketing-colegios': 'es',
+  '/servicios/marketing-psicologos': 'es',
+  '/servicios/marketing-hoteles': 'es',
+  '/servicios/marketing-gimnasios': 'es',
+  '/servicios/marketing-contadores': 'es',
+  '/servicios/marketing-empresas-industriales': 'es',
+  '/servicios/marketing-salones-de-belleza': 'es',
 }
 
 export function isIndexableIn(path: string, locale: string): boolean {

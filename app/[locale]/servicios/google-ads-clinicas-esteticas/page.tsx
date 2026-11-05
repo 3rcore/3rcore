@@ -34,7 +34,7 @@ export default function GoogleAdsClinicasEsteticas() {
         <SEOContentBlock
           namespace="GoogleAdsClinicasEsteticasSEO"
           paragraphs={6}
-          relatedLinks={[{ href: "/servicios/google-ads", label: "Gestión de Google Ads" }, { href: "/servicios/marketing-clinicas-esteticas", label: "Marketing para clínicas estéticas" }, { href: "/servicios/seo-para-clinicas-esteticas", label: "SEO para clínicas estéticas" }, { href: "/servicios/meta-ads", label: "Meta Ads" }]}
+          relatedLinks={[{ href: "/servicios/google-ads", label: "Gestión de Google Ads" }, { href: "/servicios/marketing-clinicas-esteticas", label: "Marketing digital para clínicas estéticas" }, { href: "/servicios/seo-para-clinicas-esteticas", label: "SEO para clínicas estéticas" }, { href: "/servicios/meta-ads", label: "Meta Ads" }]}
         />
         <ReviewsSection/>
         <ClientSection />

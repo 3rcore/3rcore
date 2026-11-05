@@ -1,11 +1,12 @@
 import type { Metadata } from "next"
+import { marketingSectorMetadata, MarketingSectorShell } from "@/components/seo/MarketingSectorShell"
 import { generatePageMetadata, generateBreadcrumbSchema } from "@/lib/metadata"
 import { buildFAQPageSchema, buildServiceSchema } from "@/lib/seoSchemas"
 import { NextIntlClientProvider } from "next-intl"
 import { sectorPageMessages } from "@/lib/pickMessages"
 import { getMessages } from "next-intl/server"
 
-export async function generateMetadata({ params }: { params: any }): Promise<Metadata> {
+async function legacyMetadata({ params }: { params: any }): Promise<Metadata> {
   const { locale } = await params
   return generatePageMetadata({
     locale,
@@ -34,7 +35,7 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
   })
 }
 
-export default async function MarketingClinicasLayout({ children, params }: { children: React.ReactNode; params: any }) {
+async function LegacyLayout({ children, params }: { children: React.ReactNode; params: any }) {
   const { locale } = await params
   const messages = (await getMessages()) as any
   const isEn = locale === 'en'
@@ -78,4 +79,20 @@ export default async function MarketingClinicasLayout({ children, params }: { ch
         : children}
     </>
   )
+}
+
+// 5-nov-2026. /es = «Marketing digital para <sector>» (MarketingSectorShell);
+// /en y /us conservan el layout anterior.
+const SLUG = 'marketing-abogados'
+
+export async function generateMetadata({ params }: { params: any }): Promise<Metadata> {
+  const { locale } = await params
+  if (locale === 'es') return marketingSectorMetadata(SLUG)
+  return legacyMetadata({ params })
+}
+
+export default async function Layout({ children, params }: { children: React.ReactNode; params: any }) {
+  const { locale } = await params
+  if (locale === 'es') return <MarketingSectorShell slug={SLUG}>{children}</MarketingSectorShell>
+  return LegacyLayout({ children, params })
 }

@@ -78,7 +78,7 @@ const Footer = () => {
             <div className="relative w-60 h-30">
               <Image
                 src="/icons/LogoLetrasBlanco.webp"
-                alt="3R Core Logo"
+                alt={locale === 'en' ? "3R Core" : "3R Core, agencia de marketing digital en Perú"}
                 fill
                 className="object-contain object-left"
               />

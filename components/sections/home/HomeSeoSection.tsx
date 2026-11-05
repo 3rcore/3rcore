@@ -39,14 +39,14 @@ const COPY: Record<'es' | 'en' | 'us', {
   quoteCta: string
 }> = {
   es: {
-    eyebrow: 'Agencia de SEO, SEM y Google Ads',
+    eyebrow: 'Agencia de marketing digital en Perú',
     h2: 'SEO y Google Ads que traen clientes, no solo visitas',
     intro:
       'En 3R Core ayudamos a negocios y pymes del Perú a conseguir clientes desde Google: te posicionamos en los resultados orgánicos con SEO y gestionamos tus campañas de Google Ads (SEM), con desarrollo web y social media como apoyo. Todo con equipo propio, medición real, reportes mensuales y foco en el retorno de tu inversión (ROI), no en métricas de vanidad.',
     // Párrafo-definición citable (GEO): responde "¿qué es 3R Core?" con datos
     // concretos ya publicados en el sitio, en un solo pasaje autosuficiente.
     definition:
-      '3R Core es una agencia de SEO, SEM y Google Ads fundada por los hermanos Alejandro y Piero Roque, con oficina en La Molina, Lima (Alameda de la Paz 187, primer piso), que atiende a empresas de todo el Perú y de Estados Unidos. Con un equipo propio de diseño, programación y posicionamiento trabaja cuatro servicios —Google Ads, posicionamiento SEO, desarrollo web y social media— sin intermediarios y sin contratos forzosos.',
+      '3R Core es una agencia de marketing digital especializada en SEO y Google Ads, fundada por los hermanos Alejandro y Piero Roque, con oficina en La Molina, Lima (Alameda de la Paz 187, primer piso), que atiende a empresas de todo el Perú y de Estados Unidos. Con un equipo propio de diseño, programación y posicionamiento trabaja cuatro servicios —Google Ads, posicionamiento SEO, desarrollo web y social media— sin intermediarios y sin contratos forzosos.',
     pillars: [
       {
         h: 'Google Ads y campañas SEM',
@@ -83,7 +83,9 @@ const COPY: Record<'es' | 'en' | 'us', {
     // también tiendas-virtuales-lima, que perdió los enlaces del menú y del home
     // con el plan de reposicionamiento del 13-set y es la página de dinero mejor
     // colocada (posición 9,8).
-    secondaryH3: 'SEO y Google Ads por sector',
+    // 5-nov-2026. Inmobiliarias, e-commerce y Meta Ads salen de aquí: el bloque
+    // «Explora» (MoreServicesSection) ya las enlaza justo debajo de los servicios.
+    secondaryH3: 'Por sector y especialidad',
     secondary: [
       {
         h: 'Google Ads para clínicas dentales',
@@ -101,19 +103,9 @@ const COPY: Record<'es' | 'en' | 'us', {
         href: '/servicios/marketing-veterinarias',
       },
       {
-        h: 'Google Ads para inmobiliarias',
-        p: 'Proyectos y corredoras: captación de leads calificados por proyecto, zona y tipo de departamento.',
-        href: '/servicios/marketing-inmobiliarias',
-      },
-      {
         h: 'Google Ads para abogados',
         p: 'Estudios jurídicos y abogados independientes: consultas desde Google por especialidad, con la cautela que exige el rubro.',
         href: '/servicios/marketing-abogados',
-      },
-      {
-        h: 'Google Ads para e-commerce',
-        p: 'Tiendas que ya venden: SEO de categorías y fichas, Google Shopping y recuperación de carritos.',
-        href: '/servicios/marketing-ecommerce',
       },
       {
         h: 'Diseño de tiendas virtuales',
@@ -129,11 +121,6 @@ const COPY: Record<'es' | 'en' | 'us', {
         h: 'Agencia de marketing digital en Lima',
         p: 'Todo el servicio en una sola página: qué hacemos, cómo lo medimos y cómo trabajamos mes a mes.',
         href: '/agencia-marketing-digital-lima',
-      },
-      {
-        h: 'Publicidad en Meta Ads',
-        p: 'Campañas en Facebook e Instagram que convierten: segmentación, creativos y medición real para sumar ventas a tu SEO.',
-        href: '/servicios/meta-ads',
       },
     ],
     localH3: 'SEO y Google Ads para empresas de Lima y todo el Perú',

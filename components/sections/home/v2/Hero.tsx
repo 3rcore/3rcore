@@ -39,7 +39,9 @@ export default function HeroHome() {
             // «Agencia de Marketing» en la misma fila; la palabra sale de
             // messages/<locale>.json (HeroHome.marketingWord) para que sea traducible.
             line2b: t.has("marketingWord") ? t("marketingWord") : "Marketing",
-            line3: "SEO, SEM y Google Ads",
+            // 5-nov-2026: se lee «Agencia de Marketing / Digital, SEO y Google Ads»,
+            // la keyword principal que fijó Piero Roque.
+            line3: "Digital, SEO y Google Ads",
             tagline: "Lima, Perú - Tu éxito, nuestro éxito",
             services: "VER SERVICIOS",
             contact: "CONTÁCTANOS",

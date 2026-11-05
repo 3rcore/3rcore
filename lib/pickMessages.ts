@@ -46,7 +46,9 @@ export function omitMessages(messages: Messages, namespaces: string[]): Messages
  * incrustarían en el HTML de TODAS las páginas. El layout raíz los quita y
  * cada layout de sector los vuelve a dar solo a su propia ruta.
  */
-const SECTOR_NS = /^(GoogleAds(Psicologos|Hoteles|Restaurantes|Colegios|EmpresasIndustriales|Contadores|Dentistas|ClinicasEsteticas|Abogados|Inmobiliarias)(Landing|Guia|FAQ|SEO)|Marketing[A-Za-z]+Guia)$/
+// 5-nov-2026. También los 10 «SEO para <sector>» (SeoPara*, ~116 KB): los
+// devuelve SeoSectorShell solo a su ruta. El home /es pasaba de 500 KB.
+const SECTOR_NS = /^(GoogleAds(Psicologos|Hoteles|Restaurantes|Colegios|EmpresasIndustriales|Contadores|Dentistas|ClinicasEsteticas|Abogados|Inmobiliarias)(Landing|Guia|FAQ|SEO)|Marketing[A-Za-z]+Guia|SeoPara[A-Za-z0-9]+)$/
 
 export function omitSectorMessages(messages: Messages): Messages {
   return omitMessages(messages, Object.keys(messages).filter((k) => SECTOR_NS.test(k)))

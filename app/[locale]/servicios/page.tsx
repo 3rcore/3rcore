@@ -8,6 +8,7 @@ import MoreServicesSection from "@/components/sections/servicios/MoreServicesSec
 import { buildSpeakableWebPage } from "@/lib/seoSchemas";
 import { buildServiciosIndexSchemas } from "@/lib/servicios-index-schema";
 import ServiciosSeoSection from "@/components/seo/ServiciosSeoSection";
+import EspecializacionesSection from "@/components/seo/EspecializacionesSection";
 import { setRequestLocale } from "next-intl/server"
 
 export default async function Servicios({ params }: { params: any }) {
@@ -54,6 +55,7 @@ export default async function Servicios({ params }: { params: any }) {
           (cinco estaban huérfanas y Google nunca las rastreó) y las respuestas
           de dinero que ya rankean sin recibir clics. */}
       <ServiciosSeoSection locale={locale} />
+      {locale === 'es' && <EspecializacionesSection />}
       <ProjectsSection/>
       <ClientsSection/>
       <ContactForm></ContactForm>

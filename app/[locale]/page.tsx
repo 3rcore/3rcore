@@ -4,6 +4,7 @@ import { pickMessages } from "@/lib/pickMessages"
 import HomeClientV2 from "./HomeClientV2"
 import HomeSeoSection from "@/components/sections/home/HomeSeoSection"
 import SsrReviews from "@/components/seo/SsrReviews"
+import EspecializacionesSection from "@/components/seo/EspecializacionesSection"
 import { buildServiceItemList, buildSpeakableWebPage } from "@/lib/seoSchemas"
 
 export default async function HomePage({ params }: { params: any }) {
@@ -84,6 +85,7 @@ export default async function HomePage({ params }: { params: any }) {
           ejecutan JS. HomeClientV2 (arriba) es 'use client' y se hidrata en el
           navegador. */}
       <HomeSeoSection locale={locale} />
+      {locale === 'es' && <EspecializacionesSection />}
       {/* Reputación en el HTML inicial: el carrusel de reseñas es cliente y los
           bots de IA no ejecutan JS. Mismas reseñas que el JSON-LD. */}
       <SsrReviews locale={locale} />

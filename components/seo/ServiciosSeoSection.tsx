@@ -56,8 +56,6 @@ const COPY = {
       { name: 'Performance marketing', detail: 'Google Ads, Meta Ads y TikTok Ads coordinados, medición end-to-end, CRO y gestión por CAC, ROAS y LTV.', href: '/servicios/performance-marketing' },
       { name: 'Email marketing y automatización', detail: 'Flujos de bienvenida, recuperación de carritos, newsletters, segmentación y automatización con CRM.', href: '/servicios/email-marketing' },
       { name: 'Contenido UGC', detail: 'Producción de video con creadores propios: definición de ángulos de venta y guion por pieza.', href: '/servicios/ugc' },
-      { name: 'Influencer marketing', detail: 'Selección de creadores por datos de audiencia, negociación de tarifas y medición del resultado.', href: '/servicios/influencer-marketing' },
-      { name: 'Relaciones públicas', detail: 'Mapa de medios por relevancia comercial, identificación del ángulo noticiable y gestión de la publicación.', href: '/servicios/relaciones-publicas' },
     ] as { name: string; detail: string; href: AppPathname }[],
     h2Sectores: 'Gestión de Google Ads por sector',
     introSectores:
@@ -116,8 +114,6 @@ const COPY = {
       { name: 'Performance marketing', detail: 'Google Ads, Meta Ads and TikTok Ads coordinated, end-to-end measurement, CRO and management by CAC, ROAS and LTV.', href: '/servicios/performance-marketing' },
       { name: 'Email marketing and automation', detail: 'Welcome flows, cart recovery, newsletters, segmentation and CRM automation.', href: '/servicios/email-marketing' },
       { name: 'UGC content', detail: 'Video production with in-house creators: selling-angle research and per-asset scripting.', href: '/servicios/ugc' },
-      { name: 'Influencer marketing', detail: 'Creator selection on audience data, rate negotiation and result measurement.', href: '/servicios/influencer-marketing' },
-      { name: 'Public relations', detail: 'Media mapping by commercial relevance, newsworthy angle identification and placement.', href: '/servicios/relaciones-publicas' },
     ] as { name: string; detail: string; href: AppPathname }[],
     h2Sectores: 'Digital marketing by industry',
     introSectores:

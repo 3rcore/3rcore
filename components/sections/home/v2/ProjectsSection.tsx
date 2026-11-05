@@ -93,31 +93,6 @@ const services: { id: string; title: string; desc: string; price: string; href: 
     )
   },
   {
-    id: 'pr',
-    title: 'Relaciones públicas',
-    desc: 'Prensa, notas, vocerías y reputación online para que los medios hablen de tu marca.',
-    price: 'POR PROYECTO',
-    href: '/servicios/relaciones-publicas',
-    icon: (
-      <svg className="w-6 h-6 text-[#f4266e]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
-        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
-        <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
-      </svg>
-    )
-  },
-  {
-    id: 'influencer',
-    title: 'Influencer marketing',
-    desc: 'Campañas con creadores: casting, acuerdos por escrito y ROI medido al cierre.',
-    price: 'POR CAMPAÑA',
-    href: '/servicios/influencer-marketing',
-    icon: (
-      <svg className="w-6 h-6 text-[#f4266e]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
-        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-      </svg>
-    )
-  },
-  {
     id: 'ugc',
     title: 'Contenido UGC',
     desc: 'Videos de creador para Meta Ads y TikTok Ads, producidos por nuestro equipo in-house.',

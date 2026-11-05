@@ -7,6 +7,7 @@ import { serviceForSlug, guidesFor, type ServiceKey } from '@/lib/blog-cta-map'
 import { WA_LEADS } from '@/lib/contact'
 import { trackConversion } from '@/lib/track'
 import InlineLeadForm from '@/components/blog/InlineLeadForm'
+import { registrar } from '@/lib/wtrack'
 
 /**
  * BlogCTA — bloque de conversión al final (y opcionalmente en medio) de cada blog.
@@ -96,6 +97,20 @@ const SERVICES: Record<ServiceKey, ServiceCTA> = {
   },
 }
 
+/**
+ * Embudo de 3 posiciones (5-nov-2026): intro (variant 'top'), medio ('inline')
+ * y final ('end'). Cada clic emite `cta_blog_<posición>` a GA4 (dataLayer +
+ * gtag, vía trackConversion con el filtro de bots) y a la medición propia
+ * (wtrack → panel), con blog_slug, cta_service, cta_target (form|whatsapp) y
+ * locale. El formulario está en el bloque final; los CTA de intro y medio
+ * llevan a él y dejan anotado desde qué posición llegó el lector, para que el
+ * lead entre al panel con su post y su posición de origen.
+ */
+type Pos = 'intro' | 'medio' | 'final'
+const POS: Record<'top' | 'inline' | 'end', Pos> = { top: 'intro', inline: 'medio', end: 'final' }
+let formOrigin: Pos = 'final'
+const getFormOrigin = () => formOrigin
+
 function pushDL(payload: Record<string, unknown>) {
   if (typeof window === 'undefined') return
   ;(window as any).dataLayer = (window as any).dataLayer || []
@@ -117,6 +132,18 @@ export default function BlogCTA({ slug, locale, variant = 'end' }: { slug: strin
   const guides = guidesFor(slug, 2, locale)
   const ref = useRef<HTMLDivElement>(null)
   const seen = useRef(false)
+  const pos = POS[variant]
+  const formStarted = useRef(false)
+
+  // Un solo evento por clic, mismo nombre en GA4 y en el panel. Si el filtro
+  // de bots lo descarta en GA4 tampoco se cuenta en el panel.
+  const trackFunnel = (target: 'form' | 'whatsapp', e?: { isTrusted?: boolean } | null) => {
+    const name = `cta_blog_${pos}`
+    const params = { blog_slug: slug, cta_service: key, cta_target: target, locale, cta_position: pos }
+    if (trackConversion(name, params, e)) {
+      registrar(name, { ...params, cta_location: `blog_${pos}`, page_path: window.location.pathname })
+    }
+  }
 
   const waMsg = encodeURIComponent(
     isEn
@@ -125,6 +152,35 @@ export default function BlogCTA({ slug, locale, variant = 'end' }: { slug: strin
   )
   const waUrl = `https://wa.me/${WA_PHONE}?text=${waMsg}`
 
+  // WhatsApp sale por window.open: WhatsAppLeadGate (montado en el layout)
+  // lo intercepta, pide nombre + WhatsApp, registra el lead en /api/wa-lead y
+  // recién abre el chat. Con un <a href="wa.me"> el gate se adelanta en fase
+  // de captura y el onClick de aquí no llegaba a correr (blog_cta_whatsapp
+  // nunca se emitía).
+  const onWaButton = (e: React.MouseEvent) => {
+    trackFunnel('whatsapp', e.nativeEvent)
+    trackConversion('blog_cta_whatsapp', { blog_slug: slug, cta_service: key, cta_variant: variant }, e.nativeEvent)
+    window.open(waUrl, '_blank')
+  }
+  // Intro y medio: baja al formulario del bloque final y lo deja listo.
+  const onFormJump = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    formOrigin = pos
+    trackFunnel('form', e.nativeEvent)
+    const form = document.getElementById('blog-lead-form')
+    if (form) {
+      e.preventDefault()
+      form.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      window.setTimeout(() => (form.querySelector('input[name=nombre]') as HTMLInputElement | null)?.focus({ preventScroll: true }), 450)
+    }
+  }
+  // Final: el formulario ya está ahí; cuenta como clic al empezar a escribir,
+  // salvo que el lector haya llegado desde el CTA de intro o de medio.
+  const onFinalFormFocus = (e: React.FocusEvent) => {
+    if (formStarted.current) return
+    formStarted.current = true
+    if (formOrigin === 'final') trackFunnel('form', e.nativeEvent)
+  }
+
   useEffect(() => {
     const el = ref.current
     if (!el) return
@@ -132,7 +188,7 @@ export default function BlogCTA({ slug, locale, variant = 'end' }: { slug: strin
       entries.forEach((e) => {
         if (e.isIntersecting && !seen.current) {
           seen.current = true
-          pushDL({ event: 'blog_cta_view', blog_slug: slug, cta_service: key, cta_variant: variant, cta_target: svc.path })
+          pushDL({ event: 'blog_cta_view', blog_slug: slug, cta_service: key, cta_variant: variant, cta_position: POS[variant], cta_target: svc.path })
           io.disconnect()
         }
       })
@@ -159,50 +215,36 @@ export default function BlogCTA({ slug, locale, variant = 'end' }: { slug: strin
 
   const onServiceClick = (e: React.MouseEvent) =>
     trackConversion('blog_cta_click', { blog_slug: slug, cta_service: key, cta_variant: variant, cta_target: svc.path }, e.nativeEvent)
-  const onWaClick = (e: React.MouseEvent) =>
-    trackConversion('blog_cta_whatsapp', { blog_slug: slug, cta_service: key, cta_variant: variant }, e.nativeEvent)
 
-  // Variante compacta para el arranque del post (tras la intro): una sola
-  // barra discreta, sin robarle protagonismo al contenido. Emite los mismos
-  // eventos con cta_variant='top' para comparar posiciones en GA4.
-  if (variant === 'top') {
+  // Variantes compactas (intro y medio): una línea + dos botones, sin robarle
+  // protagonismo al contenido. Formulario (ancla al bloque final) y WhatsApp
+  // (pasa por WhatsAppLeadGate, que registra el lead antes de abrir el chat).
+  if (variant === 'top' || variant === 'inline') {
     return (
       <div
         ref={ref}
-        className="blog-cta not-prose my-8 rounded-[16px] border border-[#A21F8A]/25 bg-[#2F0729]/60 px-5 py-4 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4"
+        data-cta-position={pos}
+        className="blog-cta not-prose my-8 rounded-[14px] border border-[#A21F8A]/25 bg-[#2F0729]/60 px-4 py-3.5 sm:px-5 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4"
       >
-        <p className="text-white/80 text-sm leading-snug flex-1 min-w-0">
-          <span className="text-[#E91E63] font-bold uppercase tracking-[0.18em] text-[10px] block mb-1">{t.eyebrow}</span>
-          {t.headline}
-        </p>
-        <div className="flex flex-wrap gap-2 shrink-0">
+        <p className="text-white/85 text-sm leading-snug flex-1 min-w-0 m-0">{t.headline}</p>
+        <div className="grid grid-cols-2 gap-2 shrink-0 sm:flex">
           <a
-            href={waUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={onWaClick}
-            data-gtm="blog-cta-whatsapp"
-            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-[10px] font-bold uppercase tracking-[0.15em] text-[10px] text-white bg-gradient-to-r from-[#E91E63] to-[#9C27B0] hover:-translate-y-0.5 transition-all"
+            href="#blog-lead-form"
+            onClick={onFormJump}
+            data-cta={`cta_blog_${pos}_form`}
+            className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-[10px] font-bold uppercase tracking-[0.15em] text-[10px] text-white bg-gradient-to-r from-[#E91E63] to-[#9C27B0] hover:-translate-y-0.5 transition-all"
+          >
+            {isEn ? 'Get an estimate' : 'Pedir propuesta'}
+          </a>
+          <button
+            type="button"
+            onClick={onWaButton}
+            data-cta={`cta_blog_${pos}_whatsapp`}
+            className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-[10px] font-bold uppercase tracking-[0.15em] text-[10px] text-white border border-[#A21F8A]/50 bg-[#A21F8A]/10 hover:border-[#25d366] hover:text-[#25d366] transition-all"
           >
             <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884" /></svg>
-            {t.wa}
-          </a>
-          <Link
-            href="/cotizar"
-            onClick={onQuoteClick}
-            data-gtm="blog-cta-cotizador"
-            className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-[10px] font-bold uppercase tracking-[0.15em] text-[10px] text-white border border-[#A21F8A]/50 bg-[#A21F8A]/10 hover:bg-[#A21F8A]/20 transition-all"
-          >
-            {isEn ? 'Calculate the price' : 'Calcular el precio'}
-          </Link>
-          <Link
-            href={svc.path}
-            onClick={onServiceClick}
-            data-gtm="blog-cta-service"
-            className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-[10px] font-bold uppercase tracking-[0.15em] text-[10px] text-white/70 border border-white/15 hover:text-white hover:border-[#A21F8A]/60 transition-all"
-          >
-            {t.btn}
-          </Link>
+            WhatsApp
+          </button>
         </div>
       </div>
     )
@@ -228,11 +270,11 @@ export default function BlogCTA({ slug, locale, variant = 'end' }: { slug: strin
           los que más apariciones acumulan allí y ninguno tenía un formulario
           dentro — la única vía era un WhatsApp peruano. Un comprador
           estadounidense deja su correo, no escribe a un +51. */}
-      {(isEn || isUs) && (
-        <div className="relative z-10 mb-7">
-          <InlineLeadForm slug={slug} service={key} />
-        </div>
-      )}
+      {/* Formulario en todos los mercados (antes solo /en y /us): es el destino
+          de los CTA de intro y medio, que anotan su posición en formOrigin. */}
+      <div className="relative z-10 mb-7 scroll-mt-28" onFocusCapture={onFinalFormFocus}>
+        <InlineLeadForm slug={slug} service={key} locale={locale} getPosition={getFormOrigin} />
+      </div>
       <div className="flex flex-col sm:flex-row gap-3 relative z-10">
         <Link
           href="/cotizar"
@@ -256,17 +298,16 @@ export default function BlogCTA({ slug, locale, variant = 'end' }: { slug: strin
             <path d="M1 7h12M13 7L8 2M13 7l-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </Link>
-        <a
-          href={waUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={onWaClick}
+        <button
+          type="button"
+          onClick={onWaButton}
           data-gtm="blog-cta-whatsapp"
+          data-cta="cta_blog_final_whatsapp"
           className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-[14px] font-bold uppercase tracking-[0.18em] text-[11px] text-white border border-white/20 hover:border-[#25d366] hover:text-[#25d366] transition-all duration-300"
         >
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884" /></svg>
           {t.wa}
-        </a>
+        </button>
       </div>
       {guides.length > 0 && (
         <p className="text-white/50 text-sm mt-6 relative z-10">

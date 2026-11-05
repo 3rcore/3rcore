@@ -199,10 +199,14 @@ export const BLOG_SEO_OVERRIDES: Record<string, BlogSeoOverride> = {
   // con el H1 «¿Mes morado sin milagro?…». El artículo lista TRES causas (status quo
   // de la chicha morada, imagen inconsistente, investigación sesgada) y no da fechas
   // ni cifras de venta, así que el title no promete ninguna.
+  // 5-nov-2026 · GSC 6-oct→2-nov: 1.350 impr., pos. 5,4, 5 clics. «la moradita de inca kola»
+  // 308 impr. pos. 6-8,7 y 0 clics; «inca kola chicha morada» 190 impr. pos. 2,7-3,7 y 1 clic;
+  // «inca kola moradita» 95 impr. pos. 3,5-4,9 y 0. Escritorio y móvil repartidos: es gente.
+  // Antes: 'Por qué fracasó La Moradita de Inca Kola: 3 errores'. Los 3 errores son los H3.
   'mes-morado-sin-milagro-el-fracaso-comercial-de-la-moradita-de-inca-kola': {
-    title: 'Por qué fracasó La Moradita de Inca Kola: 3 errores',
+    title: 'Inca Kola de chicha morada: los 3 errores de La Moradita',
     description:
-      'Inca Kola subestimó la tradición de la chicha morada. Los 3 errores que hundieron La Moradita y qué revisar antes de lanzar un producto nuevo.',
+      'La Moradita fue la gaseosa de Inca Kola con sabor a chicha morada. Sus 3 errores: romper la tradición, una imagen confusa y una investigación con sesgos.',
   },
 
   // 28-sep-2026. Titles de 66 a 70 caracteres (jev-seo, JEV-007): el meta_title

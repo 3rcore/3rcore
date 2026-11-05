@@ -190,8 +190,6 @@ const Navbar = () => {
     { href: "/tiendas-virtuales-lima", label: t("services.ecommerce") },
     { href: "/servicios/web-development", label: t("services.webDesign") },
     { href: "/servicios/ugc", label: t("services.ugc") },
-    { href: "/servicios/influencer-marketing", label: t("services.influencers") },
-    { href: "/servicios/relaciones-publicas", label: t("services.pr") },
     { href: "/servicios/socialmedia", label: t("services.socialMedia") },
     { href: "/servicios/branding", label: t("services.branding") },
   ];

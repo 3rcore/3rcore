@@ -1,5 +1,7 @@
 import type { Metadata } from "next"
 import { getMessages } from "next-intl/server"
+import { NextIntlClientProvider } from "next-intl"
+import { pickMessages } from "@/lib/pickMessages"
 import { generatePageMetadata, generateBreadcrumbSchema } from "@/lib/metadata"
 import { buildFAQPageSchema, buildServiceSchema } from "@/lib/seoSchemas"
 import { SEO_SECTORES } from "@/lib/seo-sectores"
@@ -70,7 +72,15 @@ export async function SeoSectorShell({ slug, locale, children }: { slug: string;
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify([serviceSchema, faqSchema, breadcrumbSchema]) }}
       />
-      {children}
+      {/* El layout raíz ya no lleva los SeoPara* (ver omitSectorMessages):
+          solo esta ruta recibe su namespace, con lo que usa SeoSectorPage. */}
+      <NextIntlClientProvider
+        messages={pickMessages(messages, [
+          s.ns, 'ServiceLinks', 'ContactSection', 'ClientsSection', 'preload', 'HiddenH1', 'MarketingConsent',
+        ])}
+      >
+        {children}
+      </NextIntlClientProvider>
     </>
   )
 }

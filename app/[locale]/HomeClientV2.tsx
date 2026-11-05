@@ -24,10 +24,13 @@ import PageLoader from '@/components/layout/PageLoader';
 import ScrollContactBtn from '@/components/ui/ScrollContactBtn'
 import ReviewsSection from '@/components/layout/ReviewsSection';
 import SocialPortfolio from '@/components/sections/home/v2/SocialPortfolio';
+import MoreServicesSection from '@/components/sections/servicios/MoreServicesSection';
+import { useLocale } from 'next-intl';
 
 export default function HomeClientV2() {
 
   useScrollToSection();
+  const locale = useLocale();
   // El cargador ya no espera a los vídeos: el hero pinta su póster al
   // instante y los del portafolio se cargan al llegar a ellos. Esperarlos
   // dejaba al visitante mirando la pantalla de carga los 4 segundos completos.
@@ -51,6 +54,11 @@ export default function HomeClientV2() {
         <div id="servicios">
           <ProjectsSection />
         </div>
+        {/* 5-nov-2026. El bloque «Explora» de /es/servicios, con el mismo
+            componente: las tarjetas de arriba son los cuatro servicios
+            principales y estas enlazan el resto (UGC, Meta Ads, TikTok Ads,
+            email, sectores…). Solo /es: /en y /us venden otro catálogo. */}
+        {locale === 'es' && <MoreServicesSection />}
         <StatsAndCTA />
         <MosaicoParallax />
         <ClientSection />

@@ -349,7 +349,7 @@ const Navbar = () => {
                 <div className="relative h-15 w-28 cursor-pointer">
                   <Image
                     src="/icons/LogoFull.webp"
-                    alt="3RCORE Logo"
+                    alt={currentLocale === "en" ? "3R Core" : "3R Core, agencia de marketing digital"}
                     fill
                     className="object-contain object-left"
                     priority
@@ -522,7 +522,7 @@ const Navbar = () => {
             >
               <Image
                 src="/icons/LogoFull.webp"
-                alt="3RCORE Logo Large"
+                alt={currentLocale === "en" ? "3R Core" : "3R Core, agencia de marketing digital"}
                 fill
                 className="object-contain"
                 priority

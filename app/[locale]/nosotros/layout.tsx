@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
   return generatePageMetadata({
     locale,
     path: '/nosotros',
-    titleEs: 'Nosotros — El equipo detrás de 3R Core',
+    titleEs: 'Nosotros: el equipo de 3R Core, agencia de marketing digital',
     titleEn: 'About Us — The Team Behind 3R Core',
     descriptionEs: 'Los hermanos Roque y su equipo propio de diseño, programación y posicionamiento: Marketing Digital, SEO y Google Ads con resultados medibles. 4,7★ en 42 reseñas de Google.',
     descriptionEn: '3R Core is a family-run SEO, web development and online stores agency serving businesses across the U.S., on U.S. business hours and billing in USD through its U.S. subsidiary.',

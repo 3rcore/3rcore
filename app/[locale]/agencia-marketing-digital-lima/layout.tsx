@@ -24,7 +24,9 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
     // caracteres (≈765 px): Google lo cortaba a media frase. En 90 días ninguna
     // búsqueda de esta página contiene «precios publicados» ni «permanencia»;
     // la diferencia se queda en la descripción.
-    titleEs: 'Agencia de Marketing Digital en Lima, Perú | 3R Core',
+    // 5-nov-2026. El home pasa a «Agencia de Marketing Digital en Perú»: esta
+    // página se queda con la variante local (Lima, La Molina) sin repetir Perú.
+    titleEs: 'Agencia de Marketing Digital en Lima · La Molina | 3R Core',
     titleEn: 'Digital Marketing Agency for U.S. Brands | 3R Core',
     descriptionEs: 'Agencia peruana con oficina en La Molina. Precios publicados, sin permanencia y el trabajo es tuyo desde el primer día. 4,7★ en 42 reseñas de Google.',
     descriptionEn: 'Digital marketing agency serving businesses across the U.S. Published pricing, no lock-in and you own the work from day one. 4.7 stars from 42 Google reviews.',

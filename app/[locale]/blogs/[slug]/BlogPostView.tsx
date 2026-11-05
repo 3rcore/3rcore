@@ -97,32 +97,58 @@ export default function BlogPostView({ post, locale, minutesRead, relatedPosts =
       {/* Article content */}
       <article ref={contentRef} className="relative z-10 max-w-3xl mx-auto px-6 md:px-12 lg:px-0 py-16">
         {(() => {
-          // Tres CTAs medibles por posición (cta_variant en dataLayer):
-          // 'top' compacto tras la intro (antes del primer H2), 'inline' a
-          // mitad del artículo (tras la 2ª sección) y 'end' al final.
+          // Embudo de 3 CTAs medibles por posición (cta_blog_intro / _medio /
+          // _final): intro compacto tras la intro, medio compacto en el H2 del
+          // centro del artículo y el bloque grande al final.
           const html = post.content || ''
-          // Corte del CTA top: justo antes del primer <h2 (fin de la intro).
-          const firstH2 = html.search(/<h2[\s>]/)
-          const topCut = firstH2 > 200 && html.length > 3000 ? firstH2 : -1
-          // Corte del CTA inline: ANTES del 3er H2, es decir al FINAL de la 2ª
-          // sección, no pegado al encabezado.
-          //
-          // 29-ago-2026. Antes cortaba justo
-          // después de `</h2>`: el anuncio quedaba entre el encabezado y su
-          // primera palabra. Un modelo de lenguaje que extrae el pasaje que
-          // responde a ese H2 se encontraba el bloque de contacto y cero
-          // respuesta. Y este sitio recibe de la IA un tráfico que convierte al
-          // 12,23% frente al 4,03% del orgánico, así que el pasaje vale dinero.
-          //
-          // Ahora el CTA cae donde termina la sección, que además es donde tiene
-          // sentido para el lector: ha entendido algo y ahí se le ofrece hablar.
+          // Solo se corta en el nivel raíz del HTML: partir dentro de una lista,
+          // tabla o cita rompería el marcado al repartirlo en varios <div>.
+          const raiz = (i: number) => {
+            const antes = html.slice(0, i)
+            const abre = (antes.match(/<(div|ul|ol|table|blockquote|section|figure|details)[\s>]/gi) || []).length
+            const cierra = (antes.match(/<\/(div|ul|ol|table|blockquote|section|figure|details)>/gi) || []).length
+            return abre === cierra
+          }
           const h2s: number[] = []
           const reH2 = /<h2[\s>]/g
           let mH2: RegExpExecArray | null
-          while ((mH2 = reH2.exec(html)) !== null) h2s.push(mH2.index)
-          const antesDelTercerH2 = h2s.length >= 3 ? h2s[2] : -1
-          const inlineCut =
-            antesDelTercerH2 !== -1 && html.length - antesDelTercerH2 > 900 ? antesDelTercerH2 : -1
+          while ((mH2 = reH2.exec(html)) !== null) if (raiz(mH2.index)) h2s.push(mH2.index)
+          // Intro: justo antes del primer H2 (fin de la intro). Si la intro es
+          // demasiado corta o no hay H2, tras el primer párrafo.
+          let topCut = -1
+          if (html.length > 2500) {
+            if (h2s.length && h2s[0] > 200) topCut = h2s[0]
+            else {
+              const reP = /<\/p>/g
+              let mP: RegExpExecArray | null
+              while ((mP = reP.exec(html)) !== null) {
+                const fin = mP.index + 4
+                if (fin > 200 && raiz(fin)) { topCut = fin; break }
+              }
+            }
+          }
+          // Medio: ANTES del H2 central (al cierre de la sección anterior, nunca
+          // entre un encabezado y su respuesta: 29-ago-2026, el pasaje que cita
+          // la IA). Sin H2 suficientes, tras el párrafo más cercano a la mitad.
+          let inlineCut = -1
+          const libre = (c: number) => c - topCut > 1200 && html.length - c > 900
+          const centrales = h2s.filter((i) => i > topCut)
+          if (centrales.length >= 2) {
+            const mitad = html.length / 2
+            const cand = centrales.slice(1).filter(libre).sort((a, b) => Math.abs(a - mitad) - Math.abs(b - mitad))
+            if (cand.length) inlineCut = cand[0]
+          }
+          if (inlineCut === -1 && topCut !== -1) {
+            const mitad = html.length / 2
+            const reP = /<\/p>/g
+            let mP: RegExpExecArray | null
+            let mejor = -1
+            while ((mP = reP.exec(html)) !== null) {
+              const fin = mP.index + 4
+              if (libre(fin) && raiz(fin) && (mejor === -1 || Math.abs(fin - mitad) < Math.abs(mejor - mitad))) mejor = fin
+            }
+            inlineCut = mejor
+          }
 
           if (topCut === -1 && inlineCut === -1) {
             return <div className="post-content prose-content" dangerouslySetInnerHTML={{ __html: html }} />
@@ -139,7 +165,7 @@ export default function BlogPostView({ post, locale, minutesRead, relatedPosts =
           return <>{parts}</>
         })()}
 
-        {/* CTA a servicio (medido en GTM) */}
+        {/* CTA final: bloque grande con el formulario (medido en GA4 y panel) */}
         <BlogCTA slug={post.slug} locale={locale} variant="end" />
 
         {/* Share */}

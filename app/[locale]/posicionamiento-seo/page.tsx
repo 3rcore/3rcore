@@ -18,11 +18,13 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
     // 30-oct-2026. Sin precio en el title (regla de la casa: cifras y precios van en la
     // descripción). GSC 90 d: «agencia seo en lima» puesto 6,6 con 0 clics en esta URL.
     titleEs: 'Agencia SEO en Lima y Perú: Posicionamiento Web | 3R Core',
-    titleEn: 'SEO Agency for U.S. Brands | 3R Core',
+    // 6-nov-2026. Miami (Semrush US): «seo miami» 1.600 KD 18, «seo agency miami» 1.300 KD 23.
+    titleEn: 'SEO Agency in Miami & Across the U.S. | 3R Core',
     descriptionEs: 'Agencia SEO en Lima: SEO técnico, contenido y enlaces con acceso a tu Search Console y reporte cada mes. 4,7★ en Google. Desde S/1,800/mes + IGV (referencial).',
-    descriptionEn: 'SEO for U.S. businesses by an in-house team, contracted through our U.S. subsidiary: keyword research, technical SEO, content and link building. From $500/month.',
-    titleUs: 'Posicionamiento SEO en Español para EE.UU. | 3R Core',
-    descriptionUs: 'Posicionamiento SEO en español e inglés para negocios en Estados Unidos: keyword research, SEO técnico, contenido y SEO local. Las búsquedas en español suelen tener menos competencia. Desde $500/mes sin contratos forzosos.',
+    descriptionEn: 'SEO for Miami and U.S. businesses by an in-house team, contracted through our U.S. subsidiary: technical SEO, local SEO, content and links in English and Spanish. From $500/month.',
+    // 6-nov-2026. «agencia seo miami» 210/mes, KD 8 (Semrush US).
+    titleUs: 'Agencia SEO en Miami: Posicionamiento en Español | 3R Core',
+    descriptionUs: 'Agencia SEO para negocios de Miami y EE. UU.: SEO técnico, SEO local y contenido en español e inglés. Las búsquedas en español tienen menos competencia. Desde $500/mes, sin contratos forzosos.',
     ogImage: {
       url: 'https://3rcore.com/og/posicionamiento-seo.jpg',
       width: 1200,

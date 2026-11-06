@@ -97,6 +97,11 @@ export const pathnames = {
   //    blogs pequeños, sin landings de agencia fuertes. No se crea versión /us:
   //    ese eje ya lo cubren /us/servicios/desarrollo-web y
   //    /us/marketing-para-negocios-hispanos.
+  // 6-nov-2026. Piero Roque: «3R CORE USA es para MIAMI». Una sola ruta interna
+  // con slug por idioma: /en/miami-web-design (inglés) y /us/diseno-web-miami
+  // (español de EE. UU.). En /es da 404. Semrush US: «web design miami» 1.300/mes,
+  // «website design miami» 1.000, «diseño web miami» 260.
+  '/diseno-web-miami': {es: '/diseno-web-miami', us: '/diseno-web-miami', en: '/miami-web-design'},
   '/website-cost-calculator': '/website-cost-calculator',
   '/bilingual-website-design': '/bilingual-website-design',
   '/seo-for-hispanic-businesses': '/seo-for-hispanic-businesses',

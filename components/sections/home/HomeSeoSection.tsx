@@ -166,9 +166,9 @@ const COPY: Record<'es' | 'en' | 'us', {
       { h: 'Contenido en español', p: 'Páginas escritas para lo que tu cliente busca de verdad, con el vocabulario de su comunidad.', href: '/posicionamiento-seo' },
       { h: 'Cobros e impuestos de EE.UU.', p: 'Pasarela configurada y cálculo de impuestos por estado, la parte que suele quedar mal.', href: '/tiendas-virtuales-lima' },
     ],
-    localH3: 'Marketing en español para negocios hispanos en Estados Unidos',
+    localH3: 'Agencia de marketing digital en Miami',
     local:
-      'Trabajamos con negocios en las áreas de mayor población hispana del país —Miami, Los Ángeles, Nueva York, Houston, Chicago y Dallas, entre otras— adaptando el español a la comunidad que atiendes en lugar de usar un español neutro que no le suena natural a nadie. Nuestro equipo está en Lima y opera en horario compatible con Estados Unidos: la diferencia con la costa este es de cero a una hora.',
+      'Nuestro mercado en Estados Unidos es Miami y el sur de Florida: Brickell, Doral, Coral Gables, Wynwood, Miami Beach, Hialeah y Fort Lauderdale. También atendemos otras ciudades con mucha población hispana, adaptando el español a la comunidad que atiendes en lugar de usar un español neutro que no le suena natural a nadie. Nuestro equipo está en Lima y opera en horario compatible con Estados Unidos: la diferencia con la costa este es de cero a una hora.',
     closing:
       '¿Tu publicidad está solo en inglés y tus clientes buscan en español? Conversemos: armamos una propuesta a tu medida, con precios en dólares, en la primera reunión.',
     quoteCta: 'Calcula el estimado de tu proyecto',
@@ -209,9 +209,9 @@ const COPY: Record<'es' | 'en' | 'us', {
       { h: 'Spanish where it pays', p: 'A real indexable Spanish version — usually the cheapest qualified traffic a U.S. business can reach.', href: '/posicionamiento-seo', cta: 'SEO services, English and Spanish' },
       { h: 'U.S. payments and sales tax', p: 'Gateway configured and state-level tax calculation working, the piece most commonly left broken.', href: '/tiendas-virtuales-lima', cta: 'Online store development' },
     ],
-    localH3: 'Serving businesses across the U.S.',
+    localH3: 'Digital marketing agency for Miami businesses',
     local:
-      'We work with businesses nationwide, on U.S. business hours, with fixed scopes in USD and contracts and invoicing through our U.S. subsidiary.',
+      'Our U.S. focus is Miami and South Florida: Brickell, Downtown, Doral, Coral Gables, Wynwood, Miami Beach and Fort Lauderdale. We work Eastern Time business hours, with fixed scopes in USD and contracts and invoicing through our U.S. subsidiary.',
     closing:
       'Have a business and want to sell more online? Let’s talk: we build a tailored proposal in the first meeting, no commitment.',
     quoteCta: 'Book a meeting',
@@ -314,6 +314,17 @@ export default function HomeSeoSection({ locale }: { locale: string }) {
                 Conoce nuestra agencia de marketing digital en Lima
               </Link>
               : oficina en La Molina y sin permanencia.
+            </p>
+          )}
+          {/* 6-nov-2026. Enlace contextual desde el home de /en y /us hacia la
+              landing de Miami (3R Core USA = Miami). */}
+          {locale !== 'es' && (
+            <p className="text-white/55 text-sm md:text-base leading-relaxed mb-6">
+              {locale === 'en' ? 'Building a site or a store in South Florida? ' : '¿Necesitas una web o una tienda en el sur de Florida? '}
+              <Link href="/diseno-web-miami" className="text-[#E91E63] underline underline-offset-4 hover:text-white transition-colors">
+                {locale === 'en' ? 'See our web design in Miami' : 'Mira nuestro diseño web en Miami'}
+              </Link>
+              {locale === 'en' ? ': websites and online stores with prices in USD.' : ': páginas web y tiendas virtuales con precios en dólares.'}
             </p>
           )}
           {locale === 'us' ? (

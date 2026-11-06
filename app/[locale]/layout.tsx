@@ -68,10 +68,15 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
   //  - /en: «SEO, Web Development & Online Stores Agency», para todo EE. UU. y
   //    sin ninguna referencia a Perú, Lima ni facturación peruana.
   //  - /us se queda como estaba.
+  // 6-nov-2026. Piero Roque: «3R CORE USA es para MIAMI» (3-nov: «agencia de
+  //  marketing digital que hace diseño web y tiendas virtuales»). /en y /us
+  //  apuntan a Miami. Semrush US: «digital marketing agency miami» 1.300/mes
+  //  (KD 32), «agencia de marketing digital en miami» 170 (KD 33). El diseño web
+  //  de Miami lo ataca /diseno-web-miami para no disputar la misma consulta.
   const title = locale === 'en'
-    ? "SEO, Web Development & Online Stores Agency | 3R Core"
+    ? "Miami Digital Marketing Agency: Web Design & Stores | 3R Core"
     : locale === 'us'
-      ? "Marketing Digital en Español para EE.UU. | 3R Core"
+      ? "Agencia de Marketing Digital en Miami: Webs y Tiendas | 3R Core"
       // 5-nov-2026. Piero Roque: la keyword principal pasa a ser «agencia de
       // marketing digital». El home es la de Perú; la variante local (Lima) es
       // /es/agencia-marketing-digital-lima, para que no se disputen la consulta.
@@ -80,9 +85,9 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
       : "Agencia de Marketing Digital en Lima, Perú | 3R Core"
 
   const description = locale === 'en'
-    ? "SEO, web development and online stores for businesses across the U.S. In-house team, U.S. business hours and fixed scopes in USD. 4.7 stars from 42 reviews."
+    ? "Miami digital marketing agency: web design, Shopify and WooCommerce stores, and SEO. In-house team on Eastern Time, fixed scopes in USD. 4.7 stars, 42 reviews."
     : locale === 'us'
-      ? "Marketing en español para negocios hispanos en EE.UU.: video UGC, Google Ads, Meta Ads, SEO y tiendas online. Precios en dólares y reportes cada mes."
+      ? "Agencia de marketing digital en Miami: diseño web bilingüe, tiendas virtuales en Shopify o WooCommerce y SEO en español. Precios en dólares, sin contratos forzosos."
       : "Agencia de marketing digital en Lima, Perú: Google Ads, SEO, desarrollo web y redes sociales con equipo propio. Reportes cada mes y 4,7★ en 42 reseñas."
 
   return {
@@ -94,14 +99,14 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
     },
     openGraph: {
       title: locale === 'en'
-        ? "3R Core | SEO, Web Development & Online Stores Agency"
+        ? "3R Core | Miami Digital Marketing Agency: Web Design & Online Stores"
         : locale === 'us'
-          ? "3R Core | Marketing Digital en Español para EE.UU."
+          ? "3R Core | Agencia de Marketing Digital en Miami"
           : "3R Core | Agencia de Marketing Digital en Lima, Perú",
       description: locale === 'en'
-        ? "SEO, web development and online stores for businesses across the U.S., with contracts and invoicing through our U.S. subsidiary. U.S. hours, fixed scopes in USD."
+        ? "Web design, online stores and SEO for Miami and South Florida businesses, with contracts and invoicing through our U.S. subsidiary. Eastern Time, fixed scopes in USD."
         : locale === 'us'
-          ? "Marketing digital en español para negocios hispanos en Estados Unidos: video UGC, Google Ads, Meta Ads, SEO y tiendas online. Precios en dólares."
+          ? "Diseño web, tiendas virtuales y SEO en español para negocios de Miami y el sur de Florida. Precios en dólares."
           : "Agencia de marketing digital en Lima, Perú, con equipo propio: posicionamiento en Google, campañas de Google Ads, desarrollo web y social media con resultados medibles.",
       url: `${BASE_URL}/${locale}`,
       siteName: "3R Core",
@@ -322,8 +327,16 @@ export default async function RootLayout({
         "https://www.trustpilot.com/review/3rcore.com",
       ]),
     ],
-    "areaServed": locale === 'en'
-      ? [{ "@type": "Country", "name": "United States" }]
+    // 6-nov-2026. 3R Core USA = Miami: área de servicio, SIN dirección en EE. UU.
+    // (no hay oficina confirmada allí; no se inventa una).
+    "areaServed": locale !== 'es'
+      ? [
+          { "@type": "City", "name": "Miami", "containedInPlace": { "@type": "State", "name": "Florida" } },
+          { "@type": "AdministrativeArea", "name": "Miami-Dade County" },
+          { "@type": "AdministrativeArea", "name": "Broward County" },
+          { "@type": "State", "name": "Florida" },
+          { "@type": "Country", "name": "United States" }
+        ]
       : [
           { "@type": "Country", "name": "Peru" },
           { "@type": "Country", "name": "United States" },

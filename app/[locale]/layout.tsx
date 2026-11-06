@@ -75,13 +75,15 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
       // 5-nov-2026. Piero Roque: la keyword principal pasa a ser «agencia de
       // marketing digital». El home es la de Perú; la variante local (Lima) es
       // /es/agencia-marketing-digital-lima, para que no se disputen la consulta.
-      : "Agencia de Marketing Digital en Perú: SEO y Google Ads | 3R Core"
+      // 5-nov-2026 (tarde). Piero: «recuerda colocar en Lima también» → el home
+      // lleva Lima y Perú; la landing de Lima sigue con La Molina.
+      : "Agencia de Marketing Digital en Lima, Perú | 3R Core"
 
   const description = locale === 'en'
     ? "SEO, web development and online stores for businesses across the U.S. In-house team, U.S. business hours and fixed scopes in USD. 4.7 stars from 42 reviews."
     : locale === 'us'
       ? "Marketing en español para negocios hispanos en EE.UU.: video UGC, Google Ads, Meta Ads, SEO y tiendas online. Precios en dólares y reportes cada mes."
-      : "Agencia de marketing digital en Perú con equipo propio en Lima: Google Ads, SEO, desarrollo web y redes sociales. Reportes cada mes y 4,7★ en 42 reseñas."
+      : "Agencia de marketing digital en Lima, Perú: Google Ads, SEO, desarrollo web y redes sociales con equipo propio. Reportes cada mes y 4,7★ en 42 reseñas."
 
   return {
     title,
@@ -95,12 +97,12 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
         ? "3R Core | SEO, Web Development & Online Stores Agency"
         : locale === 'us'
           ? "3R Core | Marketing Digital en Español para EE.UU."
-          : "3R Core | Agencia de Marketing Digital en Perú: SEO y Google Ads",
+          : "3R Core | Agencia de Marketing Digital en Lima, Perú",
       description: locale === 'en'
         ? "SEO, web development and online stores for businesses across the U.S., with contracts and invoicing through our U.S. subsidiary. U.S. hours, fixed scopes in USD."
         : locale === 'us'
           ? "Marketing digital en español para negocios hispanos en Estados Unidos: video UGC, Google Ads, Meta Ads, SEO y tiendas online. Precios en dólares."
-          : "Agencia de marketing digital en Perú con equipo propio en Lima: posicionamiento en Google, campañas de Google Ads, desarrollo web y social media con resultados medibles.",
+          : "Agencia de marketing digital en Lima, Perú, con equipo propio: posicionamiento en Google, campañas de Google Ads, desarrollo web y social media con resultados medibles.",
       url: `${BASE_URL}/${locale}`,
       siteName: "3R Core",
       locale: locale === 'en' ? 'en_US' : locale === 'us' ? 'es_US' : 'es_PE',
@@ -114,7 +116,7 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
             ? '3R Core - SEO, Web Development & Online Stores'
             : locale === 'us'
               ? '3R Core - Agencia de Marketing Digital'
-              : '3R Core - Agencia de Marketing Digital en Perú',
+              : '3R Core - Agencia de Marketing Digital en Lima, Perú',
         },
       ],
     },
@@ -124,12 +126,12 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
         ? "3R Core - SEO, Web Development & Online Stores"
         : locale === 'us'
           ? "3R Core - Agencia de Marketing Digital"
-          : "3R Core - Agencia de Marketing Digital en Perú: SEO y Google Ads",
+          : "3R Core - Agencia de Marketing Digital en Lima, Perú",
       description: locale === 'en'
         ? "SEO, web development and online stores for businesses across the U.S. — in-house team, U.S. subsidiary, fixed scopes in USD."
         : locale === 'us'
           ? "Combinamos Experiencia, Visión y Tecnología en estrategias de marketing digital."
-          : "Agencia de marketing digital en Perú: SEO, Google Ads y desarrollo web con equipo propio en Lima y resultados medibles.",
+          : "Agencia de marketing digital en Lima, Perú: SEO, Google Ads y desarrollo web con equipo propio y resultados medibles.",
       images: [`${BASE_URL}/og/default.jpg`],
     },
     metadataBase: new URL(BASE_URL),

@@ -370,7 +370,7 @@ const htmlUs = page(
 const us: LandingMiami = {
   title: 'Diseño Web en Miami: Páginas y Tiendas Virtuales | 3R Core',
   description:
-    'Diseño de páginas web en Miami en español e inglés: webs corporativas, landing pages y tiendas virtuales Shopify o WooCommerce con SEO. Desde $850 (referencial).',
+    'Diseño de páginas web en Miami en español e inglés: webs corporativas, landing pages y tiendas virtuales Shopify o WooCommerce con SEO. Desde $850.',
   breadcrumbHome: 'Inicio',
   breadcrumb: 'Diseño web en Miami',
   inLanguage: 'es-US',

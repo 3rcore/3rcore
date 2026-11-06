@@ -21,10 +21,10 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
     // 6-nov-2026. Miami (Semrush US): «seo miami» 1.600 KD 18, «seo agency miami» 1.300 KD 23.
     titleEn: 'SEO Agency in Miami & Across the U.S. | 3R Core',
     descriptionEs: 'Agencia SEO en Lima: SEO técnico, contenido y enlaces con acceso a tu Search Console y reporte cada mes. 4,7★ en Google. Desde S/1,800/mes + IGV (referencial).',
-    descriptionEn: 'SEO for Miami and U.S. businesses by an in-house team, contracted through our U.S. subsidiary: technical SEO, local SEO, content and links in English and Spanish. From $500/month.',
+    descriptionEn: 'SEO agency in Miami: technical SEO, local SEO and content in English and Spanish by an in-house team. U.S. subsidiary, from $500/month, no contract.',
     // 6-nov-2026. «agencia seo miami» 210/mes, KD 8 (Semrush US).
     titleUs: 'Agencia SEO en Miami: Posicionamiento en Español | 3R Core',
-    descriptionUs: 'Agencia SEO para negocios de Miami y EE. UU.: SEO técnico, SEO local y contenido en español e inglés. Las búsquedas en español tienen menos competencia. Desde $500/mes, sin contratos forzosos.',
+    descriptionUs: 'Agencia SEO en Miami: SEO técnico, SEO local y contenido en español e inglés, con menos competencia en español. Desde $500/mes, sin contratos forzosos.',
     ogImage: {
       url: 'https://3rcore.com/og/posicionamiento-seo.jpg',
       width: 1200,

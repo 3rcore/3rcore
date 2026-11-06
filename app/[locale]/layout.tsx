@@ -87,7 +87,7 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
   const description = locale === 'en'
     ? "Miami digital marketing agency: web design, Shopify and WooCommerce stores, and SEO. In-house team on Eastern Time, fixed scopes in USD. 4.7 stars, 42 reviews."
     : locale === 'us'
-      ? "Agencia de marketing digital en Miami: diseño web bilingüe, tiendas virtuales en Shopify o WooCommerce y SEO en español. Precios en dólares, sin contratos forzosos."
+      ? "Agencia de marketing digital en Miami: diseño web bilingüe, tiendas virtuales Shopify o WooCommerce y SEO en español. Precios en dólares."
       : "Agencia de marketing digital en Lima, Perú: Google Ads, SEO, desarrollo web y redes sociales con equipo propio. Reportes cada mes y 4,7★ en 42 reseñas."
 
   return {

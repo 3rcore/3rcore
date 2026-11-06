@@ -230,9 +230,12 @@ const Navbar = () => {
       // razón que las dos de arriba (sin enlace desde cada página no se indexan).
       { href: "/bilingual-website-design", label: t("services.bilingualWeb") },
       { href: "/seo-for-hispanic-businesses", label: t("services.hispanicSeo") },
+      // 6-nov-2026. 3R Core USA = Miami (Piero Roque).
+      { href: "/diseno-web-miami", label: "Web Design in Miami" },
     ],
     us: [
       { href: "/marketing-para-negocios-hispanos", label: t("services.hispanic") },
+      { href: "/diseno-web-miami", label: "Diseño web en Miami" },
     ],
   };
   const pickServices = (hrefs: AppPathname[]) =>

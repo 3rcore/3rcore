@@ -51,6 +51,8 @@ const Footer = () => {
           { href: '/bilingual-website-design', label: tn('services.bilingualWeb') },
           { href: '/seo-for-hispanic-businesses', label: tn('services.hispanicSeo') },
           { href: '/website-cost-calculator', label: tn('services.costCalculator') },
+          // 6-nov-2026. 3R Core USA = Miami.
+          { href: '/diseno-web-miami', label: 'Web Design in Miami' },
         ]
       : [
           { href: '/servicios', label: tn('services.todos') },
@@ -58,6 +60,7 @@ const Footer = () => {
           { href: '/posicionamiento-seo', label: tn('services.seo') },
           { href: '/tiendas-virtuales-lima', label: tn('services.ecommerce') },
           { href: '/marketing-para-negocios-hispanos', label: tn('services.hispanic') },
+          { href: '/diseno-web-miami', label: 'Diseño web en Miami' },
         ];
 
 

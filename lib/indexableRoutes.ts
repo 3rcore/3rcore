@@ -19,7 +19,7 @@
 const SERVICES_SOLD_IN_US = ['/servicios/web-development']
 
 // Páginas que existen en UN solo mercado.
-const MARKET_ONLY: Record<string, string> = {
+const MARKET_ONLY: Record<string, string | string[]> = {
   '/nearshore-marketing-agency': 'en',
   '/hispanic-marketing-agency': 'en',
   '/spanish-seo-services': 'en',
@@ -28,6 +28,8 @@ const MARKET_ONLY: Record<string, string> = {
   '/agencia-marketing-digital-lima': 'es',
   // Páginas nuevas de USA (PR #101), solo existen en /en
   '/website-cost-calculator': 'en',
+  // 6-nov-2026. Landing de Miami: existe en /en y /us (gemelas con hreflang), no en /es.
+  '/diseno-web-miami': ['en', 'us'],
   '/bilingual-website-design': 'en',
   '/seo-for-hispanic-businesses': 'en',
   // Páginas nuevas de Perú (tandas del 28-sep), solo existen en /es
@@ -74,7 +76,10 @@ const MARKET_ONLY: Record<string, string> = {
 }
 
 export function isIndexableIn(path: string, locale: string): boolean {
-  if (path in MARKET_ONLY) return MARKET_ONLY[path] === locale
+  if (path in MARKET_ONLY) {
+    const m = MARKET_ONLY[path]
+    return Array.isArray(m) ? m.includes(locale) : m === locale
+  }
   if (locale !== 'es' && path.startsWith('/servicios/')) {
     return SERVICES_SOLD_IN_US.includes(path)
   }

@@ -86,7 +86,7 @@ const StatsAndMarquee = () => {
   return (
     <section
       ref={containerRef}
-      className="w-full py-4 lg:py-8 flex flex-col items-center gap-10 lg:gap-14 overflow-hidden "
+      className="w-full pt-4 lg:pt-8 pb-12 lg:pb-16 flex flex-col items-center gap-10 lg:gap-14 overflow-hidden "
     >
       <style jsx>{`
         .stroke-text {

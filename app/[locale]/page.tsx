@@ -4,6 +4,7 @@ import { pickMessages } from "@/lib/pickMessages"
 import HomeClientV2 from "./HomeClientV2"
 import HomeSeoSection from "@/components/sections/home/HomeSeoSection"
 import SsrReviews from "@/components/seo/SsrReviews"
+import MoreServicesSection from "@/components/sections/servicios/MoreServicesSection"
 import EspecializacionesSection from "@/components/seo/EspecializacionesSection"
 import { buildServiceItemList, buildSpeakableWebPage } from "@/lib/seoSchemas"
 
@@ -88,6 +89,10 @@ export default async function HomePage({ params }: { params: any }) {
       {locale === 'es' && <EspecializacionesSection />}
       {/* Reputación en el HTML inicial: el carrusel de reseñas es cliente y los
           bots de IA no ejecutan JS. Mismas reseñas que el JSON-LD. */}
+      {/* El bloque «Explora» de /es/servicios: enlaza el resto de servicios
+          (UGC, Meta Ads, TikTok Ads, email, sectores…), justo antes de la
+          valoración de Google. Solo /es: /en y /us venden otro catálogo. */}
+      {locale === 'es' && <MoreServicesSection />}
       <SsrReviews locale={locale} />
     </>
   )

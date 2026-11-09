@@ -11,6 +11,7 @@ import { getMessages, setRequestLocale } from "next-intl/server";
 import { omitMessages, omitSectorMessages } from "@/lib/pickMessages"
 import ParticlesBackground from "@/components/ui/AnimatedBackground";
 import WhatsAppBtn from "@/components/ui/WhatsAppBtn";
+import CustomCursor from "@/components/ui/CustomCursor";
 import WhatsAppLeadGate from "@/components/global/WhatsAppLeadGate";
 import AttributionCapture from "@/components/global/AttributionCapture";
 import WTrack from "@/components/global/WTrack";
@@ -679,6 +680,8 @@ export default async function RootLayout({
             <WhatsAppLeadGate />
             <AttributionCapture />
             <WTrack />
+            {/* Cursor con los colores de 3R Core (solo con mouse) */}
+            <CustomCursor />
           </NextIntlClientProvider>
           <noscript>
             <iframe

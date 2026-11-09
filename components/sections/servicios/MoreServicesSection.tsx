@@ -17,7 +17,7 @@ export default function MoreServicesSection() {
     <section className="relative z-10 px-6 md:px-10 py-20">
       <div className="max-w-6xl mx-auto">
         <header className="mb-10 border-b border-white/30 pb-6">
-          <p className="text-white/80 text-sm uppercase tracking-widest font-light mb-2">
+          <p className="text-[#d11e68] text-sm uppercase tracking-widest font-medium mb-2">
             {t("badge")}
           </p>
           <h2 className="leading-tight font-bold italic text-3xl md:text-5xl bg-gradient-to-r from-[#9C27B0] to-[#E91E63] bg-clip-text text-transparent">

@@ -143,7 +143,7 @@ export default function HeroHome() {
       <div className="relative z-20 w-full mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-center md:justify-between items-start md:items-center h-full gap-10 md:gap-0">
 
         {/* Lado Izquierdo: Textos Principales */}
-        <div className="w-full md:w-1/2 flex flex-col justify-center text-left md:mt-16 md:mt-0 items-start">
+        <div className="w-full md:w-1/2 xl:w-[58%] flex flex-col justify-center text-left md:mt-16 md:mt-0 items-start">
           <p
             className="text-[2.1rem] sm:text-[2.6rem] md:text-6xl lg:text-[5.4rem] bg-gradient-to-r from-[#a630cd] to-[#f4266e]
               bg-clip-text text-transparent font-bold tracking-tighter leading-tight"
@@ -153,27 +153,29 @@ export default function HeroHome() {
           </p>
 
           <p
-            className={`font-medium text-white leading-tight my-1 whitespace-nowrap ${
+            className={`leading-tight my-1 whitespace-nowrap ${
               copy.line2b
-                ? "text-lg sm:text-xl md:text-[2.6rem] lg:text-[3rem] xl:text-[3.6rem]"
-                : "text-2xl sm:text-3xl md:text-6xl lg:text-[4.5rem]"
+                ? // «Agencia de» con el mismo tamaño y grosor que «Marketing Digital»
+                  "text-[1.7rem] sm:text-[2.2rem] md:text-6xl lg:text-[5.4rem] font-bold tracking-tighter text-white"
+                : "font-medium text-white text-2xl sm:text-3xl md:text-6xl lg:text-[4.5rem]"
             }`}
           >
-            {copy.line2} <span className="italic font-serif font-light">{copy.connector}</span>
-            {copy.line2b ? <> {copy.line2b}</> : null}
+            {copy.line2} {copy.connector}
           </p>
 
           <p
             className="text-[1.7rem] sm:text-[2.2rem] md:text-6xl lg:text-[5.4rem] bg-gradient-to-r from-[#f4266e] to-[#a630cd]
-              bg-clip-text text-transparent font-bold tracking-tighter leading-tight"
+              bg-clip-text text-transparent font-bold tracking-tighter leading-tight xl:whitespace-nowrap"
             style={{ paintOrder: "stroke fill" }}
           >
+            {/* «Marketing» va en la fila de «Digital» y con su degradado */}
+            {copy.line2b ? <>{copy.line2b} </> : null}
             {copy.line3}
           </p>
         </div>
 
         {/* Lado Derecho: Botones y Subtítulo */}
-        <div className="w-full md:w-1/2 flex flex-col justify-center items-start md:items-end gap-5 mt-2">
+        <div className="w-full md:w-1/2 xl:w-[42%] flex flex-col justify-center items-start md:items-end gap-5 mt-2">
           <p className="text-white text-[11px] md:text-xs tracking-[0.25em] font-semibold uppercase text-left md:text-right">
             {copy.tagline}
           </p>

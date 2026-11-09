@@ -3,7 +3,8 @@ import { NextIntlClientProvider } from "next-intl"
 import { pickMessages } from "@/lib/pickMessages"
 import HomeClientV2 from "./HomeClientV2"
 import HomeSeoSection from "@/components/sections/home/HomeSeoSection"
-import SsrReviews from "@/components/seo/SsrReviews"
+// Oculta por ahora (9-nov-2026), ver el comentario junto a <SsrReviews> abajo.
+// import SsrReviews from "@/components/seo/SsrReviews"
 import MoreServicesSection from "@/components/sections/servicios/MoreServicesSection"
 import EspecializacionesSection from "@/components/seo/EspecializacionesSection"
 import { buildServiceItemList, buildSpeakableWebPage } from "@/lib/seoSchemas"
@@ -90,10 +91,14 @@ export default async function HomePage({ params }: { params: any }) {
       {/* Reputación en el HTML inicial: el carrusel de reseñas es cliente y los
           bots de IA no ejecutan JS. Mismas reseñas que el JSON-LD. */}
       {/* El bloque «Explora» de /es/servicios: enlaza el resto de servicios
-          (UGC, Meta Ads, TikTok Ads, email, sectores…), justo antes de la
+          (UGC, Meta Ads, TikTok Ads, email, sectores…), donde iba antes de la
           valoración de Google. Solo /es: /en y /us venden otro catálogo. */}
       {locale === 'es' && <MoreServicesSection />}
-      <SsrReviews locale={locale} />
+      {/* 9-nov-2026: «Lo que dicen nuestros clientes: 4.7 sobre 5…» oculta
+          por ahora; para volver a mostrarla, descomentar esta línea y el
+          import de SsrReviews de arriba. Las estrellas siguen en el JSON-LD
+          del layout. */}
+      {/* <SsrReviews locale={locale} /> */}
     </>
   )
 }

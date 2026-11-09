@@ -39,9 +39,10 @@ export default function HeroHome() {
             // «Agencia de Marketing» en la misma fila; la palabra sale de
             // messages/<locale>.json (HeroHome.marketingWord) para que sea traducible.
             line2b: t.has("marketingWord") ? t("marketingWord") : "Marketing",
-            // 5-nov-2026: se lee «Agencia de Marketing / Digital, SEO y Google Ads»,
-            // la keyword principal que fijó Piero Roque.
-            line3: "Digital, SEO y Google Ads",
+            // 9-nov-2026: Piero pide el hero limpio «Agencia de Marketing Digital»
+            // (desde noviembre 3R Core es full marketing digital). SEO y Google Ads
+            // siguen en el H1 sr-only y en el title.
+            line3: "Digital",
             tagline: "Lima, Perú - Tu éxito, nuestro éxito",
             services: "VER SERVICIOS",
             contact: "CONTÁCTANOS",

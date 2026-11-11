@@ -232,10 +232,15 @@ const Navbar = () => {
       { href: "/seo-for-hispanic-businesses", label: t("services.hispanicSeo") },
       // 6-nov-2026. 3R Core USA = Miami (Piero Roque).
       { href: "/diseno-web-miami", label: "Web Design in Miami" },
+      // 11-nov-2026. Marketing digital y tiendas en Miami.
+      { href: "/agencia-marketing-digital-miami", label: "Digital Marketing in Miami" },
+      { href: "/tiendas-virtuales-miami", label: "Ecommerce in Miami" },
     ],
     us: [
       { href: "/marketing-para-negocios-hispanos", label: t("services.hispanic") },
       { href: "/diseno-web-miami", label: "Diseño web en Miami" },
+      { href: "/agencia-marketing-digital-miami", label: "Marketing digital en Miami" },
+      { href: "/tiendas-virtuales-miami", label: "Tiendas virtuales en Miami" },
     ],
   };
   const pickServices = (hrefs: AppPathname[]) =>

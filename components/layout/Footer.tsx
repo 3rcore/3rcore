@@ -53,6 +53,9 @@ const Footer = () => {
           { href: '/website-cost-calculator', label: tn('services.costCalculator') },
           // 6-nov-2026. 3R Core USA = Miami.
           { href: '/diseno-web-miami', label: 'Web Design in Miami' },
+          // 11-nov-2026. Marketing digital y tiendas en Miami.
+          { href: '/agencia-marketing-digital-miami', label: 'Digital Marketing in Miami' },
+          { href: '/tiendas-virtuales-miami', label: 'Ecommerce in Miami' },
         ]
       : [
           { href: '/servicios', label: tn('services.todos') },
@@ -61,6 +64,8 @@ const Footer = () => {
           { href: '/tiendas-virtuales-lima', label: tn('services.ecommerce') },
           { href: '/marketing-para-negocios-hispanos', label: tn('services.hispanic') },
           { href: '/diseno-web-miami', label: 'Diseño web en Miami' },
+          { href: '/agencia-marketing-digital-miami', label: 'Marketing digital en Miami' },
+          { href: '/tiendas-virtuales-miami', label: 'Tiendas virtuales en Miami' },
         ];
 
 

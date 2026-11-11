@@ -15,6 +15,9 @@ export type ServiceKey =
 
 // Mapeo explícito slug → servicio (cluster completo, 2026-07-16).
 export const SLUG_MAP: Record<string, ServiceKey> = {
+  // ---- Miami /us (11-nov-2026) ----
+  'como-elegir-agencia-de-marketing-digital-en-miami': 'performance',
+  'como-crear-una-tienda-online-en-miami': 'tiendas',
   'cuanto-cuesta-pagina-web-peru-2026': 'web',
   'shopify-vs-woocommerce-peru-2026': 'tiendas',
   // ---- refresh 2026-07-28 ----
@@ -351,8 +354,25 @@ function desplazamiento(slug: string, total: number, toma: number): number {
  * destinos distintos y la tabla entera acaba enlazada, de forma determinística
  * y estable entre builds. Es el mismo patrón que ya usa getRelatedPosts.
  */
+// 11-nov-2026. /us usaba la tabla de Perú y sus «Sigue leyendo» apuntaban a
+// /us/blogs/*-peru-*, que hacen 308 a /es. En /us solo se enlazan posts es-US.
+const US_GUIDES: { slug: string; title: string }[] = [
+  { slug: 'como-elegir-agencia-de-marketing-digital-en-miami', title: 'Cómo elegir una agencia de marketing digital en Miami' },
+  { slug: 'como-crear-una-tienda-online-en-miami', title: 'Cómo crear una tienda online en Miami' },
+  { slug: 'cuanto-cobra-una-agencia-de-marketing-digital-en-estados-unidos', title: '¿Cuánto cobra una agencia de marketing digital en Estados Unidos?' },
+  { slug: 'cuanto-cuesta-una-pagina-web-en-estados-unidos', title: '¿Cuánto cuesta una página web en Estados Unidos?' },
+  { slug: 'como-crear-una-tienda-online-en-estados-unidos', title: 'Cómo crear una tienda online en Estados Unidos' },
+  { slug: 'como-vender-online-en-estados-unidos', title: 'Cómo vender online en Estados Unidos' },
+  { slug: 'cuanto-tarda-una-pagina-web-en-aparecer-en-google', title: '¿Cuánto tarda una página web en aparecer en Google?' },
+]
+
 export function guidesFor(slug: string, max = 2, locale = 'es'): { slug: string; title: string }[] {
   const key = serviceForSlug(slug)
+  if (locale === 'us') {
+    const pool = US_GUIDES.filter((g) => g.slug !== slug)
+    const off = desplazamiento(slug, pool.length, max)
+    return pool.slice(off, off + max)
+  }
   const table = locale === 'en' ? SERVICE_GUIDES_EN : SERVICE_GUIDES
   const pool = (table[key] || []).filter((g) => g.slug !== slug)
   const off = desplazamiento(slug, pool.length, max)

@@ -30,6 +30,9 @@ const MARKET_ONLY: Record<string, string | string[]> = {
   '/website-cost-calculator': 'en',
   // 6-nov-2026. Landing de Miami: existe en /en y /us (gemelas con hreflang), no en /es.
   '/diseno-web-miami': ['en', 'us'],
+  // 11-nov-2026. Marketing digital y tiendas virtuales en Miami: /en y /us.
+  '/agencia-marketing-digital-miami': ['en', 'us'],
+  '/tiendas-virtuales-miami': ['en', 'us'],
   '/bilingual-website-design': 'en',
   '/seo-for-hispanic-businesses': 'en',
   // Páginas nuevas de Perú (tandas del 28-sep), solo existen en /es

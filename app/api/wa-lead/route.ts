@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { readAttribution } from '@/lib/attribution';
 import { postLeadToPanel } from '@/lib/panel-lead';
+import { guardarEnCrm } from '@/lib/crm-lead';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -11,7 +12,8 @@ export const dynamic = 'force-dynamic';
 // El token del panel queda en el servidor, no se expone en el navegador.
 export async function POST(request: Request) {
   try {
-    const { nombre, celular, proyecto, servicio, origin, gclid, sitio_web, consentimiento_publicidad, email, empresa, web, consulta } = await request.json();
+    const body = await request.json();
+    const { nombre, celular, proyecto, servicio, origin, gclid, sitio_web, consentimiento_publicidad, email, empresa, web, consulta } = body;
     if (!nombre || !celular) {
       return NextResponse.json({ ok: false, error: 'name_and_phone_required' }, { status: 400 });
     }
@@ -42,7 +44,7 @@ export async function POST(request: Request) {
     ].filter(Boolean).join('\n');
 
     // Solo cuenta si el panel confirmó con JSON ok:true (ver lib/panel-lead.ts).
-    const ok = await postLeadToPanel({
+    const [ok] = await Promise.all([postLeadToPanel({
       nombre,
       telefono: celular,
       email: typeof email === 'string' ? email.trim().slice(0, 200) : '',
@@ -55,7 +57,20 @@ export async function POST(request: Request) {
       // Casilla opcional de comunicaciones por correo (Ley 28493/29733):
       // true solo si la persona la marcó.
       consentimiento_publicidad: consentimiento_publicidad === true,
-    });
+    }),
+      // CRM propio (crm.3rcore.com, MySQL), en paralelo con el panel anterior.
+      guardarEnCrm(request, 'whatsapp', {
+        formulario: origin ? `WhatsApp ${origin}` : 'WhatsApp',
+        nombre,
+        telefono: celular,
+        email: typeof email === 'string' ? email : undefined,
+        empresa: typeof empresa === 'string' ? empresa : undefined,
+        servicio: servicio || proyecto,
+        mensaje: [servicio && proyecto ? `Consulta: ${proyecto}` : null, web ? `Web: ${web}` : null, consulta || null]
+          .filter(Boolean).join('\n') || undefined,
+        consentimiento_publicidad: consentimiento_publicidad === true,
+      }, body),
+    ]);
     if (!ok) console.error('LEAD DE WHATSAPP SIN GUARDAR EN EL PANEL', origin);
     return NextResponse.json({ ok });
   } catch {

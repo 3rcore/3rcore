@@ -1,5 +1,6 @@
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
+import { guardarEnCrm } from '@/lib/crm-lead';
 
 const logoUrl = 'https://3-rcore.vercel.app/icons/LOGO3R.png';
 
@@ -7,11 +8,21 @@ export async function POST(request: Request) {
   const resend = new Resend(process.env.RESEND_API_KEY);
 
   try {
-    const { nombre, apellido, email, telefono, tipoDocumento, numeroDocumento, tipoReclamacion, detalle, pedido } = await request.json();
+    const body = await request.json();
+    const { nombre, apellido, email, telefono, tipoDocumento, numeroDocumento, tipoReclamacion, detalle, pedido } = body;
 
     if (!nombre || !apellido || !email || !tipoDocumento || !numeroDocumento || !tipoReclamacion || !detalle || !pedido) {
       return NextResponse.json({ error: 'Faltan campos requeridos' }, { status: 400 });
     }
+
+    // Libro de reclamaciones también al CRM propio (crm.3rcore.com, MySQL).
+    await guardarEnCrm(request, 'reclamo', {
+      formulario: `Libro de reclamaciones (${tipoReclamacion})`,
+      nombre: `${nombre} ${apellido}`,
+      email, telefono,
+      servicio: tipoReclamacion,
+      mensaje: `Detalle: ${detalle}\n\nPedido: ${pedido}\n\nDocumento: ${tipoDocumento} ${numeroDocumento}`,
+    }, body);
 
     const responsiveStyles = `
       <style>

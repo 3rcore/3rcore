@@ -2,6 +2,7 @@ import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
 import { readAttribution } from '@/lib/attribution';
 import { postLeadToPanel } from '@/lib/panel-lead';
+import { guardarEnCrm } from '@/lib/crm-lead';
 import { companyLeadEmail, companyLeadLang, companyLeadSubject, leadReplyEmail } from '@/lib/email-templates';
 
 // Registra el lead en el panel (CRM) a través del endpoint público del panel.
@@ -52,7 +53,17 @@ export async function POST(request: Request) {
 
     // Guarda el lead en el panel/CRM antes de enviar los correos.
     // consentimiento_publicidad: casilla opcional de comunicaciones por correo, true solo si se marcó.
-    await saveLeadToPanel({ nombre, apellido, email, telefono, mensaje, website, attribution: readAttribution(request, 'landing'), consentimiento_publicidad: consentimiento_publicidad === true });
+    // En paralelo: panel anterior + CRM propio (crm.3rcore.com, MySQL).
+    await Promise.all([
+      saveLeadToPanel({ nombre, apellido, email, telefono, mensaje, website, attribution: readAttribution(request, 'landing'), consentimiento_publicidad: consentimiento_publicidad === true }),
+      guardarEnCrm(request, 'landing', {
+        formulario: `Landing ${website}`,
+        nombre, empresa: apellido, email, telefono,
+        servicio: servicioTxt === 'No especificado' ? undefined : servicioTxt,
+        mensaje,
+        consentimiento_publicidad: consentimiento_publicidad === true,
+      }, body),
+    ]);
 
     const result = await resend.batch.send([
       {

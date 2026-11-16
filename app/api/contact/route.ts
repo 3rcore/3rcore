@@ -2,6 +2,7 @@ import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
 import { readAttribution } from '@/lib/attribution';
 import { postLeadToPanel } from '@/lib/panel-lead';
+import { guardarEnCrm } from '@/lib/crm-lead';
 import { companyLeadEmail, companyLeadLang, companyLeadSubject, leadReplyEmail } from '@/lib/email-templates';
 
 // Registra el lead en el panel (CRM) a través del endpoint público del panel —
@@ -30,7 +31,8 @@ export async function POST(request: Request) {
   const resend = new Resend(process.env.RESEND_API_KEY);
 
   try {
-    const { nombre, apellido, email, telefono, mensaje, servicio, page, sitio_web, locale, consentimiento_publicidad } = await request.json();
+    const body = await request.json();
+    const { nombre, apellido, email, telefono, mensaje, servicio, page, sitio_web, locale, consentimiento_publicidad } = body;
     // El correo de respuesta al lead salía SIEMPRE en español. Un contacto
     // desde /en recibía su primer mensaje de la agencia en un idioma que
     // puede no entender.
@@ -56,14 +58,23 @@ export async function POST(request: Request) {
     // y el panel nunca veía los leads del formulario del sitio).
     // El servicio va dentro del mensaje porque el panel recibe campos fijos:
     // mismo formato "Servicio: X" que ya usan las landings.
-    await saveLeadToPanel({
-      nombre, apellido, email, telefono,
-      mensaje: servicioTxt ? `Servicio: ${servicioTxt}\n\n${mensaje}` : mensaje,
-      website: `Formulario web${page ? ` ${page}` : ''}`,
-      attribution: readAttribution(request, 'contact'),
-      // Casilla opcional de comunicaciones por correo: true solo si se marcó.
-      consentimiento_publicidad: consentimiento_publicidad === true,
-    });
+    // En paralelo: panel anterior + CRM propio (crm.3rcore.com, MySQL).
+    await Promise.all([
+      saveLeadToPanel({
+        nombre, apellido, email, telefono,
+        mensaje: servicioTxt ? `Servicio: ${servicioTxt}\n\n${mensaje}` : mensaje,
+        website: `Formulario web${page ? ` ${page}` : ''}`,
+        attribution: readAttribution(request, 'contact'),
+        // Casilla opcional de comunicaciones por correo: true solo si se marcó.
+        consentimiento_publicidad: consentimiento_publicidad === true,
+      }),
+      guardarEnCrm(request, 'contacto', {
+        formulario: `Formulario web${page ? ` ${page}` : ''}`,
+        nombre, empresa: apellido, email, telefono,
+        servicio: servicioTxt, mensaje, idioma: locale,
+        consentimiento_publicidad: consentimiento_publicidad === true,
+      }, body),
+    ]);
 
     const result = await resend.batch.send([
       {

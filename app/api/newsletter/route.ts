@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { guardarEnCrm } from '@/lib/crm-lead';
 
 // 30-oct-2026. Suscripción a la newsletter (plan SEO frente a Media Lab, O11).
 // Pasa al panel propio (/panel/api/newsletter-ingest), que da de alta el contacto
@@ -7,6 +8,16 @@ import { NextResponse } from 'next/server';
 export async function POST(request: Request) {
   let body: any;
   try { body = await request.json(); } catch { return NextResponse.json({ ok: false }, { status: 400 }); }
+
+  // CRM propio (crm.3rcore.com, MySQL): arranca ya y se espera al final.
+  const crm = typeof body?.email === 'string' && body.email.includes('@')
+    ? guardarEnCrm(request, 'newsletter', {
+        formulario: `Newsletter${typeof body?.pagina === 'string' ? ` ${body.pagina}` : ''}`,
+        nombre: body?.nombre,
+        email: body.email,
+        consentimiento_publicidad: true,
+      }, body ?? {})
+    : Promise.resolve(false);
 
   const ctl = new AbortController();
   const t = setTimeout(() => ctl.abort(), 6000);
@@ -18,9 +29,11 @@ export async function POST(request: Request) {
       signal: ctl.signal,
     });
     const d = await r.json().catch(() => ({}));
+    await crm;
     return NextResponse.json(d, { status: r.status });
   } catch (e) {
     console.error('Error en /api/newsletter:', e);
+    await crm;
     return NextResponse.json({ ok: false }, { status: 502 });
   } finally {
     clearTimeout(t);

@@ -83,13 +83,17 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
       // /es/agencia-marketing-digital-lima, para que no se disputen la consulta.
       // 5-nov-2026 (tarde). Piero: «recuerda colocar en Lima también» → el home
       // lleva Lima y Perú; la landing de Lima sigue con La Molina.
-      : "Agencia de Marketing Digital en Lima, Perú | 3R Core"
+      // 16-nov-2026. GSC 18-oct→14-nov: «agencia de marketing digital (en) lima»
+      // se reparte entre el home (pos. 28-64) y /es/agencia-marketing-digital-lima
+      // (38-45). El title del home vuelve a «Perú»; Lima sigue en el home (meta y
+      // schema: equipo propio en Lima) y la consulta local es de la landing de Lima.
+      : "Agencia de Marketing Digital en Perú | 3R Core"
 
   const description = locale === 'en'
     ? "Miami digital marketing agency: web design, Shopify and WooCommerce stores, and SEO. In-house team on Eastern Time, fixed scopes in USD. 4.7 stars, 42 reviews."
     : locale === 'us'
       ? "Agencia de marketing digital en Miami: diseño web bilingüe, tiendas virtuales Shopify o WooCommerce y SEO en español. Precios en dólares."
-      : "Agencia de marketing digital en Lima, Perú: Google Ads, SEO, desarrollo web y redes sociales con equipo propio. Reportes cada mes y 4,7★ en 42 reseñas."
+      : "Agencia de marketing digital en Perú con equipo propio en Lima: Google Ads, SEO, desarrollo web y redes sociales. Reportes cada mes y 4,7★ en 42 reseñas."
 
   return {
     title,
@@ -103,12 +107,12 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
         ? "3R Core | Miami Digital Marketing Agency: Web Design & Online Stores"
         : locale === 'us'
           ? "3R Core | Agencia de Marketing Digital en Miami"
-          : "3R Core | Agencia de Marketing Digital en Lima, Perú",
+          : "3R Core | Agencia de Marketing Digital en Perú",
       description: locale === 'en'
         ? "Web design, online stores and SEO for Miami and South Florida businesses, with contracts and invoicing through our U.S. subsidiary. Eastern Time, fixed scopes in USD."
         : locale === 'us'
           ? "Diseño web, tiendas virtuales y SEO en español para negocios de Miami y el sur de Florida. Precios en dólares."
-          : "Agencia de marketing digital en Lima, Perú, con equipo propio: posicionamiento en Google, campañas de Google Ads, desarrollo web y social media con resultados medibles.",
+          : "Agencia de marketing digital en Perú con equipo propio en Lima: posicionamiento en Google, campañas de Google Ads, desarrollo web y social media con resultados medibles.",
       url: `${BASE_URL}/${locale}`,
       siteName: "3R Core",
       locale: locale === 'en' ? 'en_US' : locale === 'us' ? 'es_US' : 'es_PE',
@@ -122,7 +126,7 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
             ? '3R Core - SEO, Web Development & Online Stores'
             : locale === 'us'
               ? '3R Core - Agencia de Marketing Digital'
-              : '3R Core - Agencia de Marketing Digital en Lima, Perú',
+              : '3R Core - Agencia de Marketing Digital en Perú',
         },
       ],
     },
@@ -132,12 +136,12 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
         ? "3R Core - SEO, Web Development & Online Stores"
         : locale === 'us'
           ? "3R Core - Agencia de Marketing Digital"
-          : "3R Core - Agencia de Marketing Digital en Lima, Perú",
+          : "3R Core - Agencia de Marketing Digital en Perú",
       description: locale === 'en'
         ? "SEO, web development and online stores for businesses across the U.S. — in-house team, U.S. subsidiary, fixed scopes in USD."
         : locale === 'us'
           ? "Combinamos Experiencia, Visión y Tecnología en estrategias de marketing digital."
-          : "Agencia de marketing digital en Lima, Perú: SEO, Google Ads y desarrollo web con equipo propio y resultados medibles.",
+          : "Agencia de marketing digital en Perú: SEO, Google Ads y desarrollo web con equipo propio en Lima y resultados medibles.",
       images: [`${BASE_URL}/og/default.jpg`],
     },
     metadataBase: new URL(BASE_URL),

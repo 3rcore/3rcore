@@ -209,6 +209,17 @@ export const BLOG_SEO_OVERRIDES: Record<string, BlogSeoOverride> = {
       'La Moradita fue la gaseosa de Inca Kola con sabor a chicha morada. Sus 3 errores: romper la tradición, una imagen confusa y una investigación con sesgos.',
   },
 
+  // 16-nov-2026. GSC 18-oct→15-nov: «agencia de marketing integral» 120 impr. en
+  // pos. 15 y 0 clics, todas a este post; el title de la base («Agencia de
+  // Marketing y Publicidad: Un Enfoque Integral») no lleva la búsqueda. Es la
+  // única consulta de intención comercial que el post atrae. Las 4 ventajas y
+  // las 4 estrategias de la descripción son los H3 del propio artículo.
+  'agencia-marketing-publicidad-enfoque-integral': {
+    title: 'Agencia de marketing integral: qué hace y por qué conviene',
+    description:
+      'Qué hace una agencia de marketing integral, sus 4 ventajas (experiencia, enfoque integral, ahorro y resultados medibles) y cómo combina SEO, redes y pauta.',
+  },
+
   // 28-sep-2026. Titles de 66 a 70 caracteres (jev-seo, JEV-007): el meta_title
   // de la base les añade « | 3R Core» y Google los cortaba. Se quita solo la
   // marca —la keyword y el resto del texto quedan igual— y la descripción de la

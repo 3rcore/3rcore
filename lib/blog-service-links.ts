@@ -314,6 +314,13 @@ const EXTRA_A_MITAD: Record<string, Frase> = {
     enlaces: [{ href: '/es', ancla: 'agencia de marketing digital en Perú' }],
     html: `<p>Si estás comparando, cómo trabajamos en 3R Core como <a href="/es">agencia de marketing digital en Perú</a> —servicios, precios publicados y reseñas de Google— lo tienes en nuestra página principal.</p>`,
   },
+  // 16-nov-2026. «agencia de marketing integral» (120 impr., pos. 15) cae en este
+  // post; el enlace con esa ancla pasa la señal a la página principal. La frase
+  // solo dice lo que ya publica el home (equipo propio, reporte mensual).
+  'agencia-marketing-publicidad-enfoque-integral': {
+    enlaces: [{ href: '/es', ancla: 'agencia de marketing digital integral' }],
+    html: `<p>En 3R Core trabajamos como <a href="/es">agencia de marketing digital integral</a>: SEO, Google Ads, desarrollo web y redes sociales con equipo propio y un reporte cada mes.</p>`,
+  },
   'contrato-agencia-marketing-digital-peru-que-firmar': {
     enlaces: [{ href: '/es', ancla: 'agencia de marketing digital en Perú' }],
     html: `<p>En 3R Core trabajamos sin permanencia y con las cuentas a nombre del cliente desde el primer día; lo explicamos en nuestra página de <a href="/es">agencia de marketing digital en Perú</a>.</p>`,

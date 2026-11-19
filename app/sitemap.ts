@@ -104,6 +104,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${baseUrl}/es/servicios/google-ads-inmobiliarias`, priority: 0.85 },
     // 28-sep-2026. «cuánto cuesta seo perú»: solo /es.
     { url: `${baseUrl}/es/cuanto-cuesta-el-seo-en-peru`, priority: 0.8 },
+    // 19-nov-2026. Calculadora de Meta Ads con IGV: solo /es.
+    { url: `${baseUrl}/es/calculadora-publicidad-facebook-instagram`, priority: 0.85 },
     // 11-oct-2026. «SEO para <sector>»: solo /es (lib/seo-sectores.ts).
     { url: `${baseUrl}/es/servicios/seo-para-clinicas`, priority: 0.85 },
     { url: `${baseUrl}/es/servicios/seo-para-dentistas`, priority: 0.85 },

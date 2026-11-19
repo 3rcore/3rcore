@@ -34,6 +34,7 @@ const MARKET_ONLY: Record<string, string | string[]> = {
   '/seo-for-hispanic-businesses': 'en',
   // Páginas nuevas de Perú (tandas del 28-sep), solo existen en /es
   '/cuanto-cuesta-el-seo-en-peru': 'es',
+  '/calculadora-publicidad-facebook-instagram': 'es',
   '/cuanto-cuesta-una-pagina-web-en-peru': 'es',
   '/mejores-agencias-google-ads-lima': 'es',
   '/diseno-web-restaurantes-lima': 'es',

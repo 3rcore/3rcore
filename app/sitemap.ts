@@ -77,6 +77,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // 6-nov-2026. Landing de Miami (3R Core USA = Miami): gemelas /en y /us.
     { url: `${baseUrl}/en/miami-web-design`, priority: 0.95 },
     { url: `${baseUrl}/us/diseno-web-miami`, priority: 0.95 },
+    // 11-nov-2026. Marketing digital y tiendas virtuales en Miami.
+    { url: `${baseUrl}/en/miami-digital-marketing-agency`, priority: 0.95 },
+    { url: `${baseUrl}/us/agencia-marketing-digital-miami`, priority: 0.95 },
+    { url: `${baseUrl}/en/miami-ecommerce-agency`, priority: 0.95 },
+    { url: `${baseUrl}/us/tiendas-virtuales-miami`, priority: 0.95 },
     { url: `${baseUrl}/es/casos-de-exito`, priority: 0.8 },
     // Página madre del negocio, recuperada el 26-ago-2026 (ya no 301 hacia
     // /servicios). Solo /es: el slug es español y en /en el mercado se ataca

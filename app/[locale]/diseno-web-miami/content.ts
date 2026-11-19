@@ -15,75 +15,9 @@
  * $1,200–$2,400, tienda desde $1,750). /en no menciona Perú (plan USA del
  * 13-sep). Sin dirección de Miami: no hay oficina confirmada allí.
  */
-import { esc, cklist, numlist, page, prose, sec, steps, table, wa, type Faq } from '@/lib/landings-peru'
+import { cklist, numlist, page, prose, sec, steps, table, wa, type Faq } from '@/lib/landings-peru'
+import { ZONES, closing, faqBlock, hero, zones } from '@/lib/landings-miami-blocks'
 import type { LandingMiami } from '@/lib/landings-miami-route'
-
-const ARROW =
-  '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M12.5 5.5L19 12l-6.5 6.5"/></svg>'
-
-function hero(o: { home: string; homeLabel: string; crumb: string; h1: string; lede: string; cta: { href: string; label: string }; second: { href: string; label: string }; img: string; alt: string; url: string; aria: string }) {
-  return `<header class="hero8">
-  <div class="hbg" aria-hidden="true"><img src="/proto/img/hero/serviciosbg.webp" alt="" fetchpriority="high" aria-hidden="true" width="1600" height="900"></div>
-  <div class="wrap">
-    <nav class="crumbs" aria-label="${esc(o.aria)}"><a href="${o.home}">${esc(o.homeLabel)}</a><i>›</i><b>${esc(o.crumb)}</b></nav>
-    <div class="grid8">
-      <div class="rv in">
-        <h1 class=" h1-m">${o.h1}</h1>
-        <p class="lede">${o.lede}</p>
-        <div class="btns">
-          <a class="btn btn-1" href="${o.cta.href}">${esc(o.cta.label)}${ARROW}</a>
-          <a class="btn btn-o" href="${o.second.href}">${esc(o.second.label)}${ARROW}</a>
-        </div>
-      </div>
-      <div class="art8 rv rv-d2"><div class="bframe rv"><div class="bar"><i></i><i></i><i></i><span class="url">${esc(o.url)}</span></div><img src="${o.img}" alt="${esc(o.alt)}" width="800" height="500" style="aspect-ratio:16/10;object-fit:cover;width:100%;display:block"></div></div>
-    </div>
-  </div>
-</header>`
-}
-
-function faqBlock(items: Faq[], h2: string, intro: string) {
-  const det = items
-    .map(
-      (f, i) => `<details class="rv rv-d${(i % 4) + 1}"${i === 0 ? ' open' : ''}>
-    <summary>${esc(f.q)}<span class="pm"></span></summary><div class="a"><p>${esc(f.a)}</p></div>
-  </details>`
-    )
-    .join('')
-  return `<section class="slim"><div class="wrap" id="faq">
-  <div class="sec-h rv"><h2>${esc(h2)}</h2><p class="intro">${esc(intro)}</p></div>
-  <div class="faq" style="margin-top:2.2rem">${det}</div>
-</div></section>`
-}
-
-function zones(h2: string, p: string, list: string[]) {
-  return `<section class="slim"><div class="wrap">
-  <div class="localb rv">
-    <div><h2>${esc(h2)}</h2><p>${p}</p><div class="zones">${list.map((z, i) => `<span${i < 3 ? ' class="hot"' : ''}>${esc(z)}</span>`).join('')}</div></div>
-    <div class="pic"><img src="/proto/img/hero/poster-web.jpg" alt="${esc(h2)}" loading="lazy" width="640" height="480"></div>
-  </div>
-</div></section>`
-}
-
-function closing(o: { eyebrow: string; h2: string; lede: string; cta: { href: string; label: string }; second: { href: string; label: string }; waHref: string; waLabel: string }) {
-  return `<section>
-  <div class="wrap">
-    <div class="closing rv">
-      <div>
-        <span class="eyebrow">${esc(o.eyebrow)}</span>
-        <h2>${esc(o.h2)}</h2>
-        <p class="lede">${o.lede}</p>
-        <div class="btns">
-          <a class="btn btn-1" href="${o.cta.href}">${esc(o.cta.label)}${ARROW}</a>
-          <a class="btn btn-wa" href="${o.waHref}" target="_blank" rel="noopener">${esc(o.waLabel)}${ARROW}</a>
-          <a class="btn btn-g" href="${o.second.href}">${esc(o.second.label)}${ARROW}</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>`
-}
-
-const ZONES = ['Brickell', 'Downtown Miami', 'Doral', 'Coral Gables', 'Wynwood', 'Miami Beach', 'Little Havana', 'Hialeah', 'Kendall', 'Aventura', 'Fort Lauderdale']
 
 /* ───────────────────────────── /en/miami-web-design ───────────────────────────── */
 
@@ -204,7 +138,7 @@ const htmlEn = page(
     slim: true,
     h2: 'Keep going',
     body: prose([
-      'The full scope of our builds is on <a href="/en/services/web-development">web development</a> and <a href="/en/ecommerce-development">ecommerce development</a>. To rank once the site is live, see our <a href="/en/seo-agency">SEO agency in Miami</a> plans, or use the <a href="/en/website-cost-calculator">website cost calculator</a> to price your project in two minutes.',
+      'The full scope of our builds is on <a href="/en/services/web-development">web development</a> and <a href="/en/ecommerce-development">ecommerce development</a>. To rank once the site is live, see our <a href="/en/seo-agency">SEO agency in Miami</a> plans, or use the <a href="/en/website-cost-calculator">website cost calculator</a> to price your project in two minutes. Selling online? See our <a href="/en/miami-ecommerce-agency">ecommerce agency in Miami</a>. Want ads, social media and SEO from the same team? See our <a href="/en/miami-digital-marketing-agency">digital marketing agency in Miami</a>.',
     ]),
   }),
 
@@ -352,7 +286,7 @@ const htmlUs = page(
     slim: true,
     h2: 'Sigue por aquí',
     body: prose([
-      'El detalle de cada servicio está en <a href="/us/servicios/desarrollo-web">desarrollo web</a> y <a href="/us/tiendas-online">tiendas online</a>. Para aparecer en Google cuando la web ya esté publicada, mira nuestra <a href="/us/posicionamiento-seo">agencia SEO en Miami</a>, y si tu negocio le vende a la comunidad hispana, <a href="/us/marketing-para-negocios-hispanos">marketing para negocios hispanos</a>.',
+      'El detalle de cada servicio está en <a href="/us/servicios/desarrollo-web">desarrollo web</a> y <a href="/us/tiendas-online">tiendas online</a>. Para aparecer en Google cuando la web ya esté publicada, mira nuestra <a href="/us/posicionamiento-seo">agencia SEO en Miami</a>, y si tu negocio le vende a la comunidad hispana, <a href="/us/marketing-para-negocios-hispanos">marketing para negocios hispanos</a>. Si vas a vender online, mira <a href="/us/tiendas-virtuales-miami">tiendas virtuales en Miami</a>; si quieres anuncios, redes y SEO con el mismo equipo, nuestra <a href="/us/agencia-marketing-digital-miami">agencia de marketing digital en Miami</a>.',
     ]),
   }),
 

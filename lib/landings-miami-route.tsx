@@ -31,6 +31,43 @@ export interface LandingMiami {
   html: string
 }
 
+export interface MiamiRouteConfig {
+  /** Ruta interna (clave de i18n/routing.ts). */
+  path: string
+  serviceType: string
+  offers: { name: string; price?: number; minPrice?: number; maxPrice?: number }[]
+  dateModified: string
+}
+
+// Valores de la landing de diseño web (6-nov-2026). Las landings del 11-nov
+// (marketing digital y tiendas virtuales) pasan su propia configuración.
+const WEB_DESIGN_CONFIG: MiamiRouteConfig = {
+  path: MIAMI_PATH,
+  serviceType: 'Web design and e-commerce development',
+  offers: [
+    { name: 'Landing page', price: 850 },
+    { name: 'Corporate website', price: 1200 },
+    { name: 'Online store (Shopify or WooCommerce)', price: 1750 },
+  ],
+  dateModified: '2026-11-06',
+}
+
+function offer(o: MiamiRouteConfig['offers'][number], url: string): object {
+  if (o.price !== undefined) return { '@type': 'Offer', name: o.name, price: o.price, priceCurrency: 'USD', url }
+  return {
+    '@type': 'Offer',
+    name: o.name,
+    url,
+    priceSpecification: {
+      '@type': 'UnitPriceSpecification',
+      minPrice: o.minPrice,
+      maxPrice: o.maxPrice,
+      priceCurrency: 'USD',
+      unitText: 'MONTH',
+    },
+  }
+}
+
 const AREA_SERVED = [
   { '@type': 'City', name: 'Miami', containedInPlace: { '@type': 'State', name: 'Florida' } },
   { '@type': 'AdministrativeArea', name: 'Miami-Dade County' },
@@ -39,8 +76,8 @@ const AREA_SERVED = [
   { '@type': 'State', name: 'Florida' },
 ]
 
-function jsonLd(p: LandingMiami, locale: string): object[] {
-  const url = localizedUrl(MIAMI_PATH, locale)
+function jsonLd(p: LandingMiami, locale: string, cfg: MiamiRouteConfig): object[] {
+  const url = localizedUrl(cfg.path, locale)
   return [
     {
       '@context': 'https://schema.org',
@@ -53,7 +90,7 @@ function jsonLd(p: LandingMiami, locale: string): object[] {
       isPartOf: { '@id': `${BASE_URL}/#website` },
       about: { '@id': `${BASE_URL}/#organization` },
       publisher: { '@id': `${BASE_URL}/#organization` },
-      dateModified: '2026-11-06',
+      dateModified: cfg.dateModified,
       speakable: buildSpeakableSchema(['h1', '.sec-h h2', '.lede']),
     },
     {
@@ -61,21 +98,17 @@ function jsonLd(p: LandingMiami, locale: string): object[] {
       '@type': 'Service',
       name: p.serviceName,
       description: p.serviceDescription,
-      serviceType: 'Web design and e-commerce development',
+      serviceType: cfg.serviceType,
       provider: { '@id': `${BASE_URL}/#organization` },
       areaServed: AREA_SERVED,
       url,
-      offers: [
-        { '@type': 'Offer', name: 'Landing page', price: 850, priceCurrency: 'USD', url },
-        { '@type': 'Offer', name: 'Corporate website', price: 1200, priceCurrency: 'USD', url },
-        { '@type': 'Offer', name: 'Online store (Shopify or WooCommerce)', price: 1750, priceCurrency: 'USD', url },
-      ],
+      offers: cfg.offers.map((o) => offer(o, url)),
     },
     buildFAQPageSchema(p.faq.map((f) => ({ question: f.q, answer: f.a }))),
     generateBreadcrumbSchema(
       [
         { name: p.breadcrumbHome, path: '' },
-        { name: p.breadcrumb, path: MIAMI_PATH },
+        { name: p.breadcrumb, path: cfg.path },
       ],
       locale
     ),
@@ -84,14 +117,14 @@ function jsonLd(p: LandingMiami, locale: string): object[] {
 
 type Params = { params: Promise<{ locale: string }> }
 
-export function miamiRoute(pages: { en: LandingMiami; us: LandingMiami }) {
+export function miamiRoute(pages: { en: LandingMiami; us: LandingMiami }, cfg: MiamiRouteConfig = WEB_DESIGN_CONFIG) {
   async function generateMetadata({ params }: Params): Promise<Metadata> {
     const { locale } = await params
     setRequestLocale(locale)
     if (locale !== 'en' && locale !== 'us') return { robots: { index: false, follow: false } }
     return generatePageMetadata({
       locale,
-      path: MIAMI_PATH,
+      path: cfg.path,
       titleEs: pages.us.title,
       titleEn: pages.en.title,
       descriptionEs: pages.us.description,
@@ -110,7 +143,7 @@ export function miamiRoute(pages: { en: LandingMiami; us: LandingMiami }) {
     const p = pages[locale]
     return (
       <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd(p, locale)) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd(p, locale, cfg)) }} />
         <ProtoHtml html={p.html} />
       </>
     )

@@ -325,6 +325,16 @@ export default function HomeSeoSection({ locale }: { locale: string }) {
                 {locale === 'en' ? 'See our web design in Miami' : 'Mira nuestro diseño web en Miami'}
               </Link>
               {locale === 'en' ? ': websites and online stores with prices in USD.' : ': páginas web y tiendas virtuales con precios en dólares.'}
+              {/* 11-nov-2026. Marketing digital y tiendas en Miami. */}
+              {locale === 'en' ? ' Need ads, social media and SEO too? Meet our ' : ' ¿También anuncios, redes y SEO? Conoce nuestra '}
+              <Link href="/agencia-marketing-digital-miami" className="text-[#E91E63] underline underline-offset-4 hover:text-white transition-colors">
+                {locale === 'en' ? 'digital marketing agency in Miami' : 'agencia de marketing digital en Miami'}
+              </Link>
+              {locale === 'en' ? ', or see our ' : ', o mira nuestras '}
+              <Link href="/tiendas-virtuales-miami" className="text-[#E91E63] underline underline-offset-4 hover:text-white transition-colors">
+                {locale === 'en' ? 'ecommerce agency in Miami' : 'tiendas virtuales en Miami'}
+              </Link>
+              .
             </p>
           )}
           {locale === 'us' ? (

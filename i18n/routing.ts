@@ -102,6 +102,13 @@ export const pathnames = {
   // (español de EE. UU.). En /es da 404. Semrush US: «web design miami» 1.300/mes,
   // «website design miami» 1.000, «diseño web miami» 260.
   '/diseno-web-miami': {es: '/diseno-web-miami', us: '/diseno-web-miami', en: '/miami-web-design'},
+  // 11-nov-2026. Piero: «desde este mes somos FULL marketing digital» y USA = Miami.
+  // Semrush US (6-nov): «digital marketing agency miami» 1.300 (KD 32), «marketing
+  // agency miami» 720, «agencia de marketing digital en miami» 170. Tiendas:
+  // autocompletado «shopify agency miami», «shopify developer miami» (50, KD 1),
+  // «ecommerce website design miami» (50), «tiendas virtuales miami» (20).
+  '/agencia-marketing-digital-miami': {es: '/agencia-marketing-digital-miami', us: '/agencia-marketing-digital-miami', en: '/miami-digital-marketing-agency'},
+  '/tiendas-virtuales-miami': {es: '/tiendas-virtuales-miami', us: '/tiendas-virtuales-miami', en: '/miami-ecommerce-agency'},
   '/website-cost-calculator': '/website-cost-calculator',
   '/bilingual-website-design': '/bilingual-website-design',
   '/seo-for-hispanic-businesses': '/seo-for-hispanic-businesses',

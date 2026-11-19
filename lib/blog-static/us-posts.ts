@@ -1,6 +1,7 @@
 import type { BlogPost } from "@/lib/supabase/types"
 import { USA4_US_POSTS } from "@/lib/blog-seed/posts-usa4-us-2026-08"
 import { HUECOS_POSTS_2026_08 } from "@/lib/blog-seed/posts-huecos-2026-08"
+import { MIAMI_US_POSTS } from "@/lib/blog-seed/posts-miami-us-2026-11"
 
 /**
  * Artículos de /us servidos DESDE EL CÓDIGO, no desde Supabase.
@@ -29,10 +30,10 @@ import { HUECOS_POSTS_2026_08 } from "@/lib/blog-seed/posts-huecos-2026-08"
 
 const STAMP = '2026-08-28T22:00:00.000Z'
 
-function toBlogPost(p: (typeof USA4_US_POSTS)[number], i: number): BlogPost {
+function toBlogPost(p: (typeof USA4_US_POSTS)[number], i: number, stamp = STAMP): BlogPost {
   // Sellos escalonados media hora, como hace el seed: publicar cuatro piezas
   // con la misma marca al milisegundo es una huella de publicación en lote.
-  const published = new Date(new Date(STAMP).getTime() - i * 30 * 60 * 1000).toISOString()
+  const published = new Date(new Date(stamp).getTime() - i * 30 * 60 * 1000).toISOString()
   return {
     id: `static-us-${p.slug}`,
     title: p.title,
@@ -64,7 +65,13 @@ function toBlogPost(p: (typeof USA4_US_POSTS)[number], i: number): BlogPost {
 // CHECK de la base no admita el locale 'us'.
 const TODOS_US = [...USA4_US_POSTS, ...HUECOS_POSTS_2026_08.filter((p) => p.locale === 'us')]
 
-export const STATIC_US_POSTS: BlogPost[] = TODOS_US.map(toBlogPost)
+// 11-nov-2026. Los dos de Miami llevan su propia fecha de publicación.
+const STAMP_MIAMI = '2026-11-11T15:00:00.000Z'
+
+export const STATIC_US_POSTS: BlogPost[] = [
+  ...MIAMI_US_POSTS.map((p, i) => toBlogPost(p, i, STAMP_MIAMI)),
+  ...TODOS_US.map((p, i) => toBlogPost(p, i)),
+]
 
 export function getStaticUsPost(slug: string): BlogPost | null {
   return STATIC_US_POSTS.find((p) => p.slug === slug) ?? null

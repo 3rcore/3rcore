@@ -123,6 +123,8 @@ export const pathnames = {
   '/glosario-marketing-digital': '/glosario-marketing-digital',
   // 28-sep-2026. Precio del SEO en Perú. Solo /es.
   '/cuanto-cuesta-el-seo-en-peru': '/cuanto-cuesta-el-seo-en-peru',
+  // 19-nov-2026. Calculadora de presupuesto e IGV de Meta Ads. Solo /es.
+  '/calculadora-publicidad-facebook-instagram': '/calculadora-publicidad-facebook-instagram',
   // 11-oct-2026. «SEO para <sector>»: solo /es (404 en /en y /us). Config en
   // lib/seo-sectores.ts; demanda medida en autocompletado + SERP de Google Perú.
   '/servicios/seo-para-clinicas': '/servicios/seo-para-clinicas',

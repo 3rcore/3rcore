@@ -1,5 +1,6 @@
 /**
- * Plantillas de correo de 3RCORE (diseño oscuro con la marca).
+ * Plantillas de correo de 3RCORE. El correo interno es claro (fondo blanco);
+ * el acuse para la persona mantiene el diseño oscuro de la marca.
  *
  * Dos piezas, las mismas que salen de cada formulario:
  *  - `companyLeadEmail`  → el que le llega a la agencia con los datos del lead.
@@ -51,16 +52,22 @@ const HEAD = `
   </style>
 `;
 
-/** Envoltorio común: fondo, tarjeta y cabecera con el logo y la etiqueta. */
-function shell(badge: string, content: string, lang = 'es'): string {
+/** Envoltorio común: fondo, tarjeta y cabecera con el logo y la etiqueta.
+ *  `claro`: fondo blanco y texto oscuro (correo interno del equipo, más legible). */
+function shell(badge: string, content: string, lang = 'es', claro = false): string {
+  const fondo = claro ? '#F3EFF5' : '#0A0110';
+  const tarjeta = claro
+    ? 'bgcolor="#FFFFFF" style="width:600px; max-width:600px; background-color:#FFFFFF; border-radius:24px; border:1px solid #E6DEEA; overflow:hidden;"'
+    : 'bgcolor="#1A0828" style="width:600px; max-width:600px; background-color:#1A0828; background-image:linear-gradient(110deg,#170722 0%,#1D0A2E 100%); border-radius:24px; border:1px solid rgba(255,255,255,0.08); overflow:hidden;"';
+  const head = claro ? HEAD.replace(/content="dark"/g, 'content="light"') : HEAD;
   return `<!DOCTYPE html>
 <html lang="${lang}">
-  <head>${HEAD}</head>
-  <body style="margin:0; padding:0; background-color:#0A0110;">
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#0A0110" style="background-color:#0A0110;">
+  <head>${head}</head>
+  <body style="margin:0; padding:0; background-color:${fondo};">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="${fondo}" style="background-color:${fondo};">
       <tr>
         <td align="center" style="padding:40px 16px;">
-          <table role="presentation" class="container" width="600" cellpadding="0" cellspacing="0" border="0" bgcolor="#1A0828" style="width:600px; max-width:600px; background-color:#1A0828; background-image:linear-gradient(110deg,#170722 0%,#1D0A2E 100%); border-radius:24px; border:1px solid rgba(255,255,255,0.08); overflow:hidden;">
+          <table role="presentation" class="container" width="600" cellpadding="0" cellspacing="0" border="0" ${tarjeta}>
 
             <!-- Cabecera -->
             <tr>
@@ -106,6 +113,9 @@ export interface CompanyLeadEmailData {
   /** Idioma de la página del lead. Junto con el idioma del mensaje decide en
    *  qué idioma se pinta el correo (ver `companyLeadLang`). */
   locale?: string;
+  /** Responsable del área (p. ej. «Karla Toscano») y copias, para el pie. */
+  responsable?: string;
+  copia?: string[];
 }
 
 // Palabras muy frecuentes de cada idioma: bastan para saber en qué idioma
@@ -160,14 +170,24 @@ function replyMailto(d: CompanyLeadEmailData, isEn: boolean): string {
   return `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
 
-const LABEL = `color:rgba(255,255,255,0.50); font-size:13px; font-weight:400; font-family:${FONT}; line-height:20px;`;
-const VALUE = `color:#ffffff; font-size:14px; font-weight:600; font-family:${FONT}; line-height:20px;`;
+// Paleta clara del correo interno: fondo blanco, texto casi negro y el rosado
+// de 3R Core solo en acentos, para que todo se lea bien.
+const C = {
+  texto: '#1F1225',
+  suave: '#6B5C72',
+  tenue: '#9A8DA0',
+  borde: '#ECE5EF',
+  caja: '#FAF7FB',
+  rosa: '#C2185B',
+};
+const LABEL = `color:${C.suave}; font-size:13px; font-weight:400; font-family:${FONT}; line-height:20px;`;
+const VALUE = `color:${C.texto}; font-size:14px; font-weight:600; font-family:${FONT}; line-height:20px;`;
 
 /** Una fila «etiqueta → valor» de la tarjeta de datos del contacto. */
 function infoRow(label: string, valueHtml: string, isLast: boolean): string {
   return `
     <tr>
-      <td class="row-pad" style="padding:16px 26px; ${isLast ? '' : 'border-bottom:1px solid rgba(255,255,255,0.08);'}">
+      <td class="row-pad" style="padding:15px 24px; ${isLast ? '' : `border-bottom:1px solid ${C.borde};`}">
         <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
           <tr>
             <td align="left" style="${LABEL}">${label}</td>
@@ -190,34 +210,34 @@ export function companyLeadEmail(d: CompanyLeadEmailData): string {
   const t = isEn
     ? {
         person: 'Person', company: 'Company', mail: 'Email', phone: 'WhatsApp / Phone', service: 'Service of interest',
-        info: 'CONTACT INFORMATION', message: 'MESSAGE', reply: 'REPLY', badge: 'NEW LEAD',
+        owner: 'Assigned to', info: 'CONTACT INFORMATION', message: 'MESSAGE', reply: 'REPLY', badge: 'NEW LEAD',
         tipA: 'Reply', tipB: ' within the next 24 hours to maximize conversion.',
-        sent: 'Sent automatically from the 3RCORE form',
+        sent: 'Sent automatically from the 3RCORE form', cc: 'Copy', saved: 'Also saved in the CRM',
       }
     : {
         person: 'Persona', company: 'Empresa', mail: 'Correo', phone: 'WhatsApp / Tel', service: 'Servicio de interés',
-        info: 'INFORMACIÓN DEL CONTACTO', message: 'MENSAJE', reply: 'RESPONDER', badge: 'NUEVO LEAD',
+        owner: 'Responsable', info: 'INFORMACIÓN DEL CONTACTO', message: 'MENSAJE', reply: 'RESPONDER', badge: 'NUEVO LEAD',
         tipA: 'Responde', tipB: ' dentro de las próximas 24 horas para maximizar la conversión.',
-        sent: 'Enviado automáticamente desde el formulario de 3RCORE',
+        sent: 'Enviado automáticamente desde el formulario de 3RCORE', cc: 'Copia', saved: 'También quedó registrado en el CRM',
       };
   const rows: Array<[string, string]> = [
     [t.person, esc(d.nombre)],
     [t.company, esc(d.empresa?.trim() || '—')],
     [
       t.mail,
-      `<a href="mailto:${esc(d.email)}" style="color:#FF5C93; text-decoration:none; font-weight:600;">${esc(d.email)}</a>`,
+      `<a href="mailto:${esc(d.email)}" style="color:${C.rosa}; text-decoration:none; font-weight:600;">${esc(d.email)}</a>`,
     ],
     [t.phone, esc(d.telefono?.trim() || '—')],
   ];
 
-  // El servicio de interés solo existe en los formularios de landing; si no
-  // viene, la tarjeta se queda con las cuatro filas de siempre.
+  // El servicio de interés no siempre viene (el formulario del blog no lo tiene).
   if (d.servicio?.trim()) {
     rows.push([
       t.service,
       `<span style="display:inline-block; padding:6px 14px; background-color:#E91E63; background-image:linear-gradient(90deg,#E91E63 0%,#9C27B0 100%); border-radius:100px; color:#ffffff; font-size:11px; font-weight:700; letter-spacing:0.5px; font-family:${FONT};">${esc(isEn ? SERVICIO_EN[d.servicio.trim()] || d.servicio : d.servicio)}</span>`,
     ]);
   }
+  if (d.responsable?.trim()) rows.push([t.owner, esc(d.responsable)]);
 
   const rowsHtml = rows
     .map(([label, value], i) => infoRow(label, value, i === rows.length - 1))
@@ -226,47 +246,47 @@ export function companyLeadEmail(d: CompanyLeadEmailData): string {
   const content = `
     <!-- Cuerpo -->
     <tr>
-      <td class="pad" style="padding:40px 40px 44px 40px;">
+      <td class="pad" bgcolor="#FFFFFF" style="background-color:#FFFFFF; padding:36px 40px 40px 40px;">
 
-        <p style="margin:0 0 18px 0; text-align:center; color:#ffffff; font-size:12px; font-weight:700; letter-spacing:2px; font-family:${FONT};">${t.info}</p>
+        <p style="margin:0 0 16px 0; text-align:center; color:${C.suave}; font-size:12px; font-weight:700; letter-spacing:2px; font-family:${FONT};">${t.info}</p>
 
-        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:rgba(255,255,255,0.04); border-radius:16px; border:1px solid rgba(255,255,255,0.10);">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="${C.caja}" style="background-color:${C.caja}; border-radius:16px; border:1px solid ${C.borde};">
           ${rowsHtml}
         </table>
 
-        <div style="height:32px; line-height:32px; font-size:0;">&nbsp;</div>
+        <div style="height:28px; line-height:28px; font-size:0;">&nbsp;</div>
 
         <div style="height:2px; line-height:2px; font-size:0; background-color:#E91E63; background-image:linear-gradient(90deg,#E91E63 0%,#9C27B0 100%); border-radius:10px;">&nbsp;</div>
 
-        <p style="margin:16px 0; color:#FF5C93; font-size:12px; font-weight:700; letter-spacing:2px; font-family:${FONT};">${t.message}</p>
+        <p style="margin:16px 0; color:${C.rosa}; font-size:12px; font-weight:700; letter-spacing:2px; font-family:${FONT};">${t.message}</p>
 
-        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:rgba(255,255,255,0.04); border-radius:14px; border:1px solid rgba(255,255,255,0.10);">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="${C.caja}" style="background-color:${C.caja}; border-radius:14px; border:1px solid ${C.borde};">
           <tr>
-            <td style="padding:22px; color:rgba(255,255,255,0.75); font-size:14px; font-weight:400; line-height:25px; font-family:${FONT};">${escMultiline(d.mensaje)}</td>
+            <td style="padding:20px 22px; color:${C.texto}; font-size:14px; font-weight:400; line-height:24px; font-family:${FONT};">${escMultiline(d.mensaje)}</td>
           </tr>
         </table>
         ${
           d.origen?.trim()
-            ? `<p style="margin:12px 0 0 0; color:rgba(255,255,255,0.40); font-size:12px; line-height:19px; font-family:${FONT};">📍 ${esc(d.origen)}</p>`
+            ? `<p style="margin:12px 0 0 0; color:${C.suave}; font-size:12px; line-height:19px; font-family:${FONT};">📍 ${esc(d.origen)}</p>`
             : ''
         }
 
-        <div style="height:32px; line-height:32px; font-size:0;">&nbsp;</div>
+        <div style="height:28px; line-height:28px; font-size:0;">&nbsp;</div>
 
         <table role="presentation" align="center" cellpadding="0" cellspacing="0" border="0" style="margin:0 auto;">
           <tr>
             <td align="center" bgcolor="#E91E63" style="background-color:#E91E63; background-image:linear-gradient(90deg,#E91E63 0%,#9C27B0 100%); border-radius:100px;">
-              <a href="${esc(replyMailto(d, isEn))}" style="display:inline-block; padding:10px 28px 10px 33px; color:#ffffff; font-size:11px; font-weight:700; letter-spacing:5px; font-family:${FONT}; text-decoration:none;">${t.reply}</a>
+              <a href="${esc(replyMailto(d, isEn))}" style="display:inline-block; padding:11px 30px 11px 35px; color:#ffffff; font-size:12px; font-weight:700; letter-spacing:5px; font-family:${FONT}; text-decoration:none;">${t.reply}</a>
             </td>
           </tr>
         </table>
 
-        <div style="height:32px; line-height:32px; font-size:0;">&nbsp;</div>
+        <div style="height:24px; line-height:24px; font-size:0;">&nbsp;</div>
 
-        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:rgba(255,255,255,0.04); border-radius:14px; border:1px solid rgba(255,255,255,0.12);">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FDF2F7" style="background-color:#FDF2F7; border-radius:12px; border:1px solid #F8D3E4;">
           <tr>
-            <td align="center" style="padding:10px 20px; font-family:${FONT}; font-size:10px; line-height:20px;">
-              <span style="color:#FF2E88;">${t.tipA}</span><span style="color:rgba(255,255,255,0.60);">${t.tipB}</span>
+            <td align="center" style="padding:10px 20px; font-family:${FONT}; font-size:12px; line-height:20px;">
+              <span style="color:${C.rosa}; font-weight:700;">${t.tipA}</span><span style="color:${C.texto};">${t.tipB}</span>
             </td>
           </tr>
         </table>
@@ -276,13 +296,14 @@ export function companyLeadEmail(d: CompanyLeadEmailData): string {
 
     <!-- Pie -->
     <tr>
-      <td class="pad" align="center" bgcolor="#0D0316" style="background-color:#0D0316; padding:26px 40px; border-top:1px solid rgba(255,255,255,0.08);">
-        <p style="margin:0 0 8px 0; color:rgba(255,255,255,0.40); font-size:12px; font-family:${FONT};">${t.sent}</p>
-        <a href="https://3rcore.com" style="color:#FF5C93; font-size:11px; font-family:${FONT}; text-decoration:none;">3rcore.com</a>
+      <td class="pad" align="center" bgcolor="${C.caja}" style="background-color:${C.caja}; padding:22px 40px; border-top:1px solid ${C.borde};">
+        ${d.copia?.length ? `<p style="margin:0 0 6px 0; color:${C.suave}; font-size:12px; font-family:${FONT};">${t.cc}: ${d.copia.map(esc).join(', ')}</p>` : ''}
+        <p style="margin:0 0 6px 0; color:${C.tenue}; font-size:12px; font-family:${FONT};">${t.sent} · ${t.saved}</p>
+        <a href="https://crm.3rcore.com" style="color:${C.rosa}; font-size:12px; font-weight:600; font-family:${FONT}; text-decoration:none;">crm.3rcore.com</a>
       </td>
     </tr>`;
 
-  return shell(t.badge, content, isEn ? 'en' : 'es');
+  return shell(t.badge, content, isEn ? 'en' : 'es', true);
 }
 
 /* ------------------------------------------------------------------ *

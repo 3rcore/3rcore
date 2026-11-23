@@ -74,8 +74,9 @@ export async function POST(request: Request) {
             to: dest.para,
             cc: dest.copia,
             subject: asuntoEquipo,
-            // «Responder» de Gmail va directo al lead, no a administracion@.
-            replyTo: email,
+            // «Responder» de Gmail va al lead y además a Alejandro y Piero
+            // (las copias según el servicio), no a administracion@.
+            replyTo: [email, ...dest.copia.filter((c) => c.toLowerCase() !== String(email).toLowerCase())],
             html: companyLeadEmail({
               nombre,
               empresa: apellido,

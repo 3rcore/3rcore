@@ -167,7 +167,14 @@ function replyMailto(d: CompanyLeadEmailData, isEn: boolean): string {
   const body = isEn
     ? `Hi ${d.nombre},\n\n\n\nClient: ${d.nombre} <${to}>`
     : `Hola ${d.nombre},\n\n\n\nCliente: ${d.nombre} <${to}>`;
-  return `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  // 23-nov-2026. La respuesta de la responsable (Karla / Mafer) lleva en copia a
+  // las mismas personas que recibieron el aviso (Alejandro y Piero), según el
+  // servicio elegido (lib/correo-rutas.ts). Direcciones sin codificar, como `to`.
+  const cc = (d.copia ?? [])
+    .map((e) => String(e).trim().replace(/[\s?&#"<>,]/g, ''))
+    .filter((e) => e.includes('@') && e.toLowerCase() !== to.toLowerCase())
+    .join(',');
+  return `mailto:${to}?${cc ? `cc=${cc}&` : ''}subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
 
 // Paleta clara del correo interno: fondo blanco, texto casi negro y el rosado

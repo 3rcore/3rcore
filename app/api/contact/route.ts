@@ -2,7 +2,8 @@ import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
 import { readAttribution } from '@/lib/attribution';
 import { postLeadToPanel } from '@/lib/panel-lead';
-import { guardarEnCrm } from '@/lib/crm-lead';
+import { guardarEnCrm, type CorreoCrm } from '@/lib/crm-lead';
+import { destinatariosContacto } from '@/lib/correo-rutas';
 import { companyLeadEmail, companyLeadLang, companyLeadSubject, leadReplyEmail } from '@/lib/email-templates';
 
 // Registra el lead en el panel (CRM) a través del endpoint público del panel —
@@ -54,12 +55,69 @@ export async function POST(request: Request) {
     // la fila simplemente no sale en el correo.
     const servicioTxt = servicio ? String(servicio).trim() : '';
 
-    // El lead entra al panel/CRM además del correo (antes solo llegaba por email
-    // y el panel nunca veía los leads del formulario del sitio).
+    // 23-nov-2026. A quién va el correo interno según el servicio elegido
+    // (lib/correo-rutas.ts): Web/SEO → Karla, Social/Branding → Mafer; siempre
+    // con copia a Alejandro y Piero.
+    const dest = destinatariosContacto(servicioTxt);
+    const asuntoEquipo = companyLeadSubject({ nombre, locale, mensaje });
+    const asuntoCliente = isEn ? `Hi ${nombre}, thanks for reaching out` : `¡Hola ${nombre}! Qué bueno saludarte`;
+
+    // Envía los dos correos y devuelve qué pasó con cada uno (para el CRM).
+    async function enviarCorreos(): Promise<{ correos: CorreoCrm[]; error?: string; data?: unknown }> {
+      const base = (tipo: CorreoCrm['tipo']): CorreoCrm => tipo === 'equipo'
+        ? { tipo, para: dest.para, copia: dest.copia, asunto: asuntoEquipo, responsable: dest.responsable.nombre, estado: 'enviado' }
+        : { tipo, para: [email], asunto: asuntoCliente, estado: 'enviado' };
+      try {
+        const result = await resend.batch.send([
+          {
+            from: 'Sistema 3RCORE <administracion@3rcore.com>',
+            to: dest.para,
+            cc: dest.copia,
+            subject: asuntoEquipo,
+            // «Responder» de Gmail va directo al lead, no a administracion@.
+            replyTo: email,
+            html: companyLeadEmail({
+              nombre,
+              empresa: apellido,
+              email,
+              telefono,
+              servicio: servicioTxt,
+              mensaje,
+              origen: page ? `${companyLeadLang({ locale, mensaje }) === 'en' ? 'Page' : 'Página'}: ${page}` : undefined,
+              locale,
+              responsable: dest.responsable.nombre,
+              copia: dest.copia,
+            }),
+          },
+          {
+            from: 'Sistema 3RCORE <administracion@3rcore.com>',
+            to: email,
+            subject: asuntoCliente,
+            html: leadReplyEmail({ nombre, locale }),
+          }
+        ]);
+        if (result.error) throw new Error(result.error.message);
+        // Resend devuelve los ids de cada correo en el mismo orden del lote
+        const raw = result.data as unknown;
+        const lista = (Array.isArray(raw) ? raw : (raw as { data?: unknown })?.data) as { id?: string }[] | undefined;
+        const ids = Array.isArray(lista) ? lista.map((x) => x?.id) : [];
+        return {
+          correos: [{ ...base('equipo'), proveedor_id: ids[0] }, { ...base('cliente'), proveedor_id: ids[1] }],
+          data: result.data,
+        };
+      } catch (e) {
+        const msg = e instanceof Error ? e.message : String(e);
+        return {
+          correos: [{ ...base('equipo'), estado: 'error', error: msg.slice(0, 300) }, { ...base('cliente'), estado: 'error', error: msg.slice(0, 300) }],
+          error: msg,
+        };
+      }
+    }
+
+    // El lead entra al panel anterior en paralelo con el envío de correos.
     // El servicio va dentro del mensaje porque el panel recibe campos fijos:
     // mismo formato "Servicio: X" que ya usan las landings.
-    // En paralelo: panel anterior + CRM propio (crm.3rcore.com, MySQL).
-    await Promise.all([
+    const [, envio] = await Promise.all([
       saveLeadToPanel({
         nombre, apellido, email, telefono,
         mensaje: servicioTxt ? `Servicio: ${servicioTxt}\n\n${mensaje}` : mensaje,
@@ -68,43 +126,21 @@ export async function POST(request: Request) {
         // Casilla opcional de comunicaciones por correo: true solo si se marcó.
         consentimiento_publicidad: consentimiento_publicidad === true,
       }),
-      guardarEnCrm(request, 'contacto', {
-        formulario: `Formulario web${page ? ` ${page}` : ''}`,
-        nombre, empresa: apellido, email, telefono,
-        servicio: servicioTxt, mensaje, idioma: locale,
-        consentimiento_publicidad: consentimiento_publicidad === true,
-      }, body),
+      enviarCorreos(),
     ]);
 
-    const result = await resend.batch.send([
-      {
-        from: 'Sistema 3RCORE <administracion@3rcore.com>',
-        to: 'alejandro.roque@3rcore.com',
-        subject: companyLeadSubject({ nombre, locale, mensaje }),
-        // «Responder» de Gmail va directo al lead, no a administracion@.
-        replyTo: email,
-        html: companyLeadEmail({
-          nombre,
-          empresa: apellido,
-          email,
-          telefono,
-          servicio: servicioTxt,
-          mensaje,
-          origen: page ? `${companyLeadLang({ locale, mensaje }) === 'en' ? 'Page' : 'Página'}: ${page}` : undefined,
-          locale,
-        }),
-      },
-      {
-        from: 'Sistema 3RCORE <administracion@3rcore.com>',
-        to: email,
-        subject: isEn ? `Hi ${nombre}, thanks for reaching out` : `¡Hola ${nombre}! Qué bueno saludarte`,
-        html: leadReplyEmail({ nombre, locale }),
-      }
-    ]);
+    // CRM propio (crm.3rcore.com, MySQL): el lead y a quién se le envió el correo
+    // (sección «Enviados»). Se guarda aunque el correo haya fallado.
+    await guardarEnCrm(request, 'contacto', {
+      formulario: `Formulario web${page ? ` ${page}` : ''}`,
+      nombre, empresa: apellido, email, telefono,
+      servicio: servicioTxt, mensaje, idioma: locale,
+      consentimiento_publicidad: consentimiento_publicidad === true,
+    }, body, envio.correos);
 
-    if (result.error) throw new Error(result.error.message);
+    if (envio.error) throw new Error(envio.error);
 
-    return NextResponse.json({ success: true, data: result.data });
+    return NextResponse.json({ success: true, data: envio.data });
 
   } catch (error) {
     console.error('Error en /api/contact:', error);

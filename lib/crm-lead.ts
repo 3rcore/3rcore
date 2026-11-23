@@ -26,6 +26,18 @@ export interface LeadCrm {
   consentimiento_publicidad?: boolean;
 }
 
+/** Un correo que salió por este formulario (queda en «Enviados» del CRM). */
+export interface CorreoCrm {
+  tipo: 'equipo' | 'cliente';
+  para: string[];
+  copia?: string[];
+  asunto: string;
+  responsable?: string;
+  estado: 'enviado' | 'error';
+  proveedor_id?: string;
+  error?: string;
+}
+
 // Campos que nunca se guardan en «datos» (honeypot antibots).
 const OMITIR = new Set(['sitio_web']);
 
@@ -46,6 +58,7 @@ export async function guardarEnCrm(
   tipo: TipoLeadCrm,
   lead: LeadCrm,
   datos: Record<string, unknown> = {},
+  correos: CorreoCrm[] = [],
 ): Promise<boolean> {
   const clave = process.env.CRM_INGEST_KEY;
   if (!clave) {
@@ -77,6 +90,7 @@ export async function guardarEnCrm(
     pagina_url: txt(request.headers.get('referer'), 600),
     atribucion,
     datos: limpiarDatos(datos),
+    correos: correos.slice(0, 5),
   };
 
   const ctl = new AbortController();
